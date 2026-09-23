@@ -18,3 +18,4 @@ __pycache__/
 *.egg-info/
 reports/runs/*/private/
 reports/runs/*/artifacts/
+reports/web_chat_handoffs/
