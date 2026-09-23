@@ -120,7 +120,7 @@
     {
       "requirement": "CHATGPT_REVIEW.md",
       "path": "CHATGPT_REVIEW.md",
-      "sha256": "09435c8bcd223606fda20899a6c206b91574990d7b0986789130996943c7834e"
+      "sha256": "b3303fedaa7ba2130d41e35422c9fa34c12190d802dd4eb89781d2c52ef7e886"
     },
     {
       "requirement": "RUN.json",
