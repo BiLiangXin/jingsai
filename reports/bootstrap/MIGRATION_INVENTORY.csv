@@ -1,0 +1,83 @@
+source,destination,action,reason,risk_flags,sanitized
+.codex/config.toml,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+.git/,,SKIP,Excluded directory; contents not migrated,excluded,n/a
+.gitignore,.gitignore,RECREATE,Rebuilt for the new official workspace and current authority,,yes
+AGENTS.md,AGENTS.md,RECREATE,Rebuilt for the new official workspace and current authority,,yes
+CHATGPT_REVIEW.md,CHATGPT_REVIEW.md,RECREATE,Rebuilt for the new official workspace and current authority,,yes
+DECISIONS.md,DECISIONS.md,RECREATE,Rebuilt for the new official workspace and current authority,,yes
+E题数据/,,SKIP,Excluded directory; contents not migrated,excluded,n/a
+README.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+README_CODEX.md,README_CODEX.md,RECREATE,Rebuilt for the new official workspace and current authority,,yes
+TASK_SPEC.md,TASK_SPEC.md,RECREATE,Rebuilt for the new official workspace and current authority,,yes
+TEST_STATUS.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+configs/automation.json,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+configs/model_plan.json,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+configs/paths.example.json,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+configs/paths.local.example.json,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+configs/paths.local.json,,REVIEW_REQUIRED,Candidate requires review before any migration,forbidden_path,no
+docs/assets/image1.png,,REVIEW_REQUIRED,Candidate requires review before any migration,binary_or_unknown,no
+docs/assets/image2.png,,REVIEW_REQUIRED,Candidate requires review before any migration,binary_or_unknown,no
+docs/codex/ACCEPTANCE.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+docs/codex/COMMANDS.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+docs/codex/OUTPUT_CONTRACT.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+docs/codex/PROJECT_SPEC.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+docs/codex/PUBLISHING.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+docs/codex/SOURCES.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+docs/data-guide.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+docs/problem.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+docs/samples/labels-100.csv,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+docs/samples/labels-feature-first10.csv,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+dog_bike_animation.html,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+experiments/README.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+paper/README.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+prompts/00_audit.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+prompts/01_data_contract.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+prompts/02_baselines.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+prompts/03_q1_alignment.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+prompts/04_clean_model.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+prompts/05_robust_model.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+prompts/06_explanation.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+prompts/07_evaluation_freeze.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+prompts/08_submission.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+prompts/CHATGPT_REVIEW_REQUEST.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+prompts/MASTER.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+prompts/REVIEW_AND_REPAIR.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+pyproject.toml,pyproject.toml,MIGRATE,Useful small engineering source; scan clean,,yes
+reports/,,SKIP,Excluded directory; contents not migrated,excluded,n/a
+requirements-dev.txt,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+schemas/codex_result.schema.json,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+src/mosei/__init__.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+src/mosei/core.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+src/mosei/data/README.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+src/mosei/data/__init__.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+src/mosei/evaluation/README.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+src/mosei/evaluation/__init__.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+src/mosei/explain/README.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+src/mosei/explain/__init__.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+src/mosei/features/README.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+src/mosei/features/__init__.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+src/mosei/models/README.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+src/mosei/models/__init__.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+src/mosei/provenance.py,src/mosei/provenance.py,MIGRATE,Useful small engineering source; scan clean,,yes
+src/mosei/submission/README.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+src/mosei/submission/__init__.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+src/mosei/training/README.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+src/mosei/training/__init__.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+state/BLOCKERS.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+state/DECISIONS.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+state/NEXT_ACTIONS.md,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+state/project_state.json,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+state/task_board.json,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+tests/test_core.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+tests/test_flow.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+tests/test_stage_s00a_bootstrap.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+tools/audit_data.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+tools/flowlib/__init__.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+tools/flowlib/common.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+tools/flowlib/packaging.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+tools/flowlib/publishing.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+tools/gate.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+tools/mosei_flow.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+tools/reassemble.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+tools/test_audit.py,,SKIP,Outside S00A minimal infrastructure or carries prior-stage assumptions,,n/a
+复杂场景下多模态情感识别的数学建模与算法设计.docx,,REVIEW_REQUIRED,Candidate requires review before any migration,binary_or_unknown,no

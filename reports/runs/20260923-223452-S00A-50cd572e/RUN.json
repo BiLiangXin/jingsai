@@ -1,0 +1,49 @@
+{
+  "run_id": "20260923-223452-S00A-50cd572e",
+  "task_id": "S00A_LOCAL_RECOVERY_AND_BOOTSTRAP",
+  "status": "IN_PROGRESS",
+  "started_at": "2026-09-23T14:37:09.451615+00:00",
+  "finished_at": null,
+  "expected_main_sha": "50cd572e47274903b43230dcd3add65f34447c84",
+  "verified_remote_main_sha": "50cd572e47274903b43230dcd3add65f34447c84",
+  "old_source_workspace": "<local_old_E>",
+  "new_official_workspace": "<official_repo>",
+  "source_branch": "main",
+  "working_branch": "codex/mosei-auto",
+  "origin": "https://github.com/BiLiangXin/jingsai.git",
+  "implementation_commit": null,
+  "metadata_commit": null,
+  "commands_executed": [
+    "git ls-remote <origin> refs/heads/main",
+    "git clone <origin> <official_repo>",
+    "git remote -v",
+    "git branch --show-current",
+    "git rev-parse HEAD",
+    "git status --short",
+    "git ls-files",
+    "git log --all --name-only",
+    "git rev-list --objects --all",
+    "python tools/migration_inventory.py <local_old_E>",
+    "python tools/mosei_flow.py doctor",
+    "python -m unittest discover -s tests -p test_stage_s00a*.py -v"
+  ],
+  "tests_executed": [
+    "T01-T16"
+  ],
+  "files_migrated": 2,
+  "files_recreated": 6,
+  "files_skipped": 70,
+  "gate_summary": {
+    "BLOCKED": 0,
+    "SKIPPED": 1,
+    "FAIL": 0,
+    "PASS": 5
+  },
+  "blocking_issues": [],
+  "release_tag": null,
+  "release_url": null,
+  "raw_data_tracked_count": 0,
+  "raw_data_packaged_count": 0,
+  "secret_findings": 0,
+  "private_path_findings": 0
+}

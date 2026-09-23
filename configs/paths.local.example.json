@@ -1,0 +1,4 @@
+{
+  "competition_data_dir": null,
+  "note": "Copy to paths.local.json and set a local path; never commit that file."
+}

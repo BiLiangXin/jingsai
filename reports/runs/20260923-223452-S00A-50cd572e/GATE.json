@@ -1,0 +1,66 @@
+{
+  "items": [
+    {
+      "id": "G01",
+      "name": "remote baseline",
+      "status": "PASS",
+      "evidence": [
+        "RUN.json"
+      ],
+      "details": "50cd572e47274903b43230dcd3add65f34447c84"
+    },
+    {
+      "id": "G02",
+      "name": "fresh clone and history boundary",
+      "status": "PASS",
+      "evidence": [
+        "RUN.json"
+      ],
+      "details": "clean clone, raw paths in index/history/objects = 0"
+    },
+    {
+      "id": "G03",
+      "name": "governance and selective migration",
+      "status": "PASS",
+      "evidence": [
+        "reports/bootstrap/MIGRATION_INVENTORY.csv",
+        "AGENTS.md",
+        "DECISIONS.md",
+        "TASK_SPEC.md"
+      ],
+      "details": "inventory and governance present"
+    },
+    {
+      "id": "G04",
+      "name": "doctor",
+      "status": "PASS",
+      "evidence": [
+        "reports/bootstrap/DOCTOR.json"
+      ],
+      "details": "actual CLI exit 0"
+    },
+    {
+      "id": "G05",
+      "name": "engineering tests",
+      "status": "PASS",
+      "evidence": [
+        "TEST_RESULTS.json"
+      ],
+      "details": "16 actual passes"
+    },
+    {
+      "id": "G06",
+      "name": "review ZIP and publication",
+      "status": "SKIPPED",
+      "evidence": [],
+      "details": "performed after implementation commit"
+    }
+  ],
+  "summary": {
+    "BLOCKED": 0,
+    "SKIPPED": 1,
+    "FAIL": 0,
+    "PASS": 5
+  },
+  "passed": true
+}

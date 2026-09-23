@@ -1,0 +1,23 @@
+{
+  "python": "3.13.5",
+  "repo_root": "<official_repo>",
+  "git_available": true,
+  "origin": "https://github.com/BiLiangXin/jingsai.git",
+  "branch": "codex/mosei-auto",
+  "head": "50cd572e47274903b43230dcd3add65f34447c84",
+  "expected_main_sha": "50cd572e47274903b43230dcd3add65f34447c84",
+  "main_baseline": true,
+  "gh_available": true,
+  "gh_authenticated": true,
+  "release_capable": true,
+  "governance": {
+    "AGENTS.md": true,
+    "DECISIONS.md": true,
+    "TASK_SPEC.md": true,
+    "CHATGPT_REVIEW.md": true
+  },
+  "raw_data_ignored": true,
+  "dangerous_tracked": [],
+  "local_path_config": "absent",
+  "tracked_secret_or_private_path_findings": {}
+}

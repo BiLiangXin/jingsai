@@ -1,0 +1,77 @@
+[
+  {
+    "path": "AGENTS.md",
+    "sha256": "a5665dc6f79cc27b4dccc180c73e10bc98ba71bd5154672e44324937ba014170",
+    "size": 1831
+  },
+  {
+    "path": "DECISIONS.md",
+    "sha256": "5852d4951e42537645b134c6f24aa1a13fee621f52ef3fae15a6c53e70283962",
+    "size": 1249
+  },
+  {
+    "path": "TASK_SPEC.md",
+    "sha256": "509e36d5f1565aaca5fd5935fe543c019871c69b451a24a0fcf1703095334c12",
+    "size": 650
+  },
+  {
+    "path": "CHATGPT_REVIEW.md",
+    "sha256": "1ae1c9580e2b067e6901ba4fe99d24a59117581ab3a72aa8891bbc98f196abca",
+    "size": 196
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "cb4a32521b18c2ab03a2e13752dd4c4090097bfe5cb4d319f3bc48c89ba6df13",
+    "size": 222
+  },
+  {
+    "path": "README_CODEX.md",
+    "sha256": "7c4cc50f4604b7e102205aab699eda908e585f60899b274fd84188eecba158b3",
+    "size": 430
+  },
+  {
+    "path": "pyproject.toml",
+    "sha256": "777235e4c7d2af78d1391cb034f65ea1b295019beeeb538cec3e4ad2ac473299",
+    "size": 322
+  },
+  {
+    "path": "src/mosei/provenance.py",
+    "sha256": "eb7fdb8e1efed6745dc64eaf24f34c1f6fcf5a25cc73308ad8bf77dec39e6bf0",
+    "size": 2474
+  },
+  {
+    "path": "tools/mosei_flow.py",
+    "sha256": "eb85e6f4ab1a4d5fc871b7f32a807629499cad770c3dff3231a2252df281722f",
+    "size": 12022
+  },
+  {
+    "path": "tools/migration_inventory.py",
+    "sha256": "b30d98380105382d3c3021577d04bbed4717ed63aae04a0356102fe85eb6530f",
+    "size": 3427
+  },
+  {
+    "path": "tools/s00a_report.py",
+    "sha256": "8650701c726ee56f4d1d99af89e42bad4f883fabc4db95851a222624843d14fe",
+    "size": 5398
+  },
+  {
+    "path": "tests/test_stage_s00a_bootstrap.py",
+    "sha256": "ffdba07283086d756912d83fcd4535caa49c06f3fc5ec086cd5f6823278968dd",
+    "size": 4814
+  },
+  {
+    "path": "reports/bootstrap/MIGRATION_INVENTORY.csv",
+    "sha256": "a56f2dd1e4dac3935fdf2c58d5ee11bf18b56e86be14f2cb218d463e0b4cb57d",
+    "size": 8796
+  },
+  {
+    "path": "reports/bootstrap/MIGRATION_NOTES.md",
+    "sha256": "927c9c6a7035708ef383d954a89ed3bec8dd9ef39f2486c5399996bb9aa91380",
+    "size": 1039
+  },
+  {
+    "path": "reports/bootstrap/DOCTOR.json",
+    "sha256": "a412c620ac5aa04d33b824bf40b57abcf8de839b3a2e6eb2f75439f8ae5cf989",
+    "size": 686
+  }
+]

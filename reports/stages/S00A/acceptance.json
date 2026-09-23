@@ -1,0 +1,81 @@
+{
+  "stage": "S00A",
+  "data_kind": "none",
+  "evidence": [
+    {
+      "requirement": "AGENTS.md",
+      "path": "AGENTS.md",
+      "sha256": "a5665dc6f79cc27b4dccc180c73e10bc98ba71bd5154672e44324937ba014170"
+    },
+    {
+      "requirement": "DECISIONS.md",
+      "path": "DECISIONS.md",
+      "sha256": "5852d4951e42537645b134c6f24aa1a13fee621f52ef3fae15a6c53e70283962"
+    },
+    {
+      "requirement": "TASK_SPEC.md",
+      "path": "TASK_SPEC.md",
+      "sha256": "509e36d5f1565aaca5fd5935fe543c019871c69b451a24a0fcf1703095334c12"
+    },
+    {
+      "requirement": "CHATGPT_REVIEW.md",
+      "path": "CHATGPT_REVIEW.md",
+      "sha256": "1ae1c9580e2b067e6901ba4fe99d24a59117581ab3a72aa8891bbc98f196abca"
+    },
+    {
+      "requirement": ".gitignore",
+      "path": ".gitignore",
+      "sha256": "cb4a32521b18c2ab03a2e13752dd4c4090097bfe5cb4d319f3bc48c89ba6df13"
+    },
+    {
+      "requirement": "README_CODEX.md",
+      "path": "README_CODEX.md",
+      "sha256": "7c4cc50f4604b7e102205aab699eda908e585f60899b274fd84188eecba158b3"
+    },
+    {
+      "requirement": "pyproject.toml",
+      "path": "pyproject.toml",
+      "sha256": "777235e4c7d2af78d1391cb034f65ea1b295019beeeb538cec3e4ad2ac473299"
+    },
+    {
+      "requirement": "src/mosei/provenance.py",
+      "path": "src/mosei/provenance.py",
+      "sha256": "eb7fdb8e1efed6745dc64eaf24f34c1f6fcf5a25cc73308ad8bf77dec39e6bf0"
+    },
+    {
+      "requirement": "tools/mosei_flow.py",
+      "path": "tools/mosei_flow.py",
+      "sha256": "eb85e6f4ab1a4d5fc871b7f32a807629499cad770c3dff3231a2252df281722f"
+    },
+    {
+      "requirement": "tools/migration_inventory.py",
+      "path": "tools/migration_inventory.py",
+      "sha256": "b30d98380105382d3c3021577d04bbed4717ed63aae04a0356102fe85eb6530f"
+    },
+    {
+      "requirement": "tools/s00a_report.py",
+      "path": "tools/s00a_report.py",
+      "sha256": "8650701c726ee56f4d1d99af89e42bad4f883fabc4db95851a222624843d14fe"
+    },
+    {
+      "requirement": "tests/test_stage_s00a_bootstrap.py",
+      "path": "tests/test_stage_s00a_bootstrap.py",
+      "sha256": "ffdba07283086d756912d83fcd4535caa49c06f3fc5ec086cd5f6823278968dd"
+    },
+    {
+      "requirement": "reports/bootstrap/MIGRATION_INVENTORY.csv",
+      "path": "reports/bootstrap/MIGRATION_INVENTORY.csv",
+      "sha256": "a56f2dd1e4dac3935fdf2c58d5ee11bf18b56e86be14f2cb218d463e0b4cb57d"
+    },
+    {
+      "requirement": "reports/bootstrap/MIGRATION_NOTES.md",
+      "path": "reports/bootstrap/MIGRATION_NOTES.md",
+      "sha256": "927c9c6a7035708ef383d954a89ed3bec8dd9ef39f2486c5399996bb9aa91380"
+    },
+    {
+      "requirement": "reports/bootstrap/DOCTOR.json",
+      "path": "reports/bootstrap/DOCTOR.json",
+      "sha256": "a412c620ac5aa04d33b824bf40b57abcf8de839b3a2e6eb2f75439f8ae5cf989"
+    }
+  ]
+}
