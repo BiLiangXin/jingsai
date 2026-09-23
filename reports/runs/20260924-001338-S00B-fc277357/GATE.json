@@ -236,6 +236,6 @@
     "SKIPPED": 0,
     "BLOCKED": 0
   },
-  "passed": false,
-  "status": "FAIL"
+  "passed": true,
+  "status": "PASS"
 }

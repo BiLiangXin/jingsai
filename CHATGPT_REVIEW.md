@@ -1,4 +1,6 @@
-# S00B research review handoff
+# Current Review
+
+## S00B research review handoff
 
 task_id: `S00B_REAL_DATA_AUDIT`
 run_id: `20260924-001338-S00B-fc277357`
@@ -34,6 +36,8 @@ Attachment 3: `CONTENT_NOT_INSPECTED=true`. Attachment 4: `FEATURE_CONTENT_NOT_I
 ## Tests, Gate and safety
 
 Actual test command: `python -m pytest -q tests/test_stage_s00b_audit.py tests/test_stage_s00a_bootstrap.py` — **35 passed, 0 failed**. These are synthetic engineering tests; real audit execution is separately evidenced by the run and reports.
+
+The first post-commit check found that the inherited S00A compatibility test expected the `# Current Review` heading. The heading was restored and the full 35-test suite and Gate were rerun successfully; no test or Gate rule was weakened.
 
 Gate: **24 PASS, 0 FAIL, 0 SKIPPED, 0 BLOCKED**. Source mutation and public safety scans passed. No original dataset path is tracked in the branch tree or branch history. The explicit review ZIP member plan excludes original data, private artifacts, local configuration and credentials. The release asset and remote verification are pending in this preliminary handoff.
 

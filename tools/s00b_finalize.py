@@ -48,8 +48,10 @@ def tests(run: Path) -> dict:
     command = [sys.executable, "-m", "pytest", "-q", "tests/test_stage_s00b_audit.py", "tests/test_stage_s00a_bootstrap.py"]
     result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, encoding="utf-8", errors="replace")
     output = result.stdout + result.stderr
-    match = re.search(r"(\d+) passed", output)
-    report = {"command": "python -m pytest -q tests/test_stage_s00b_audit.py tests/test_stage_s00a_bootstrap.py", "exit_code": result.returncode, "passed": int(match.group(1)) if match else None, "failed": 0 if result.returncode == 0 else None, "actual_output": output.strip(), "data_kind": "synthetic_engineering_tests"}
+    summary_line = output.strip().splitlines()[-1] if output.strip() else ""
+    passed_match = re.search(r"(\d+) passed", summary_line)
+    failed_match = re.search(r"(\d+) failed", summary_line)
+    report = {"command": "python -m pytest -q tests/test_stage_s00b_audit.py tests/test_stage_s00a_bootstrap.py", "exit_code": result.returncode, "passed": int(passed_match.group(1)) if passed_match else None, "failed": int(failed_match.group(1)) if failed_match else 0 if result.returncode == 0 else None, "actual_output": output.strip(), "data_kind": "synthetic_engineering_tests"}
     write_json(run / "public" / "TEST_RESULTS.json", report)
     write_json(run / "TEST_RESULTS.json", report)
     return report
