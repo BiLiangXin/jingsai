@@ -137,6 +137,13 @@ class HandoffTests(unittest.TestCase):
                 with self.assertRaisesRegex(handoff.HandoffError, "already indexed"):
                     handoff.publish(manifest_path)
 
+    def test_legacy_release_entry_is_disabled(self):
+        spec = importlib.util.spec_from_file_location("mosei_flow_legacy", Path(__file__).resolve().parents[1] / "tools" / "mosei_flow.py")
+        legacy = importlib.util.module_from_spec(spec); spec.loader.exec_module(legacy)
+        with patch.object(sys, "argv", ["mosei_flow.py", "publish"]):
+            with self.assertRaisesRegex(SystemExit, "Legacy publish is disabled"):
+                legacy.main()
+
     def test_current_index_points_to_existing_public_evidence(self):
         root = Path(__file__).resolve().parents[1]
         value = json.loads((root / "state/LATEST_RUN.json").read_text(encoding="utf-8"))

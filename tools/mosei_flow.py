@@ -164,6 +164,8 @@ def main() -> int:
         report = verify_baseline()
         print(json.dumps(report))
         return 0 if report["status"] == "PASS" else 1
+    if args.command == "publish":
+        raise SystemExit("Legacy publish is disabled. Use tools/stage_handoff.py with an authorized HANDOFF_INPUTS.json manifest.")
     if not args.run_id:
         parser.error("--run-id is required")
     run_dir = ROOT / "reports" / "runs" / args.run_id
@@ -185,46 +187,6 @@ def main() -> int:
         path = run_dir / "artifacts" / f"review-{args.run_id}.zip"
         result = make_review_zip(path, [ROOT / name for name in names])
         print(json.dumps(result, ensure_ascii=False))
-        return 0
-    if args.command == "publish":
-        if not args.target or not re.fullmatch(r"[0-9a-f]{40}", args.target):
-            parser.error("publish requires --target with the exact 40-character implementation SHA")
-        tag = f"codex-run-{args.run_id}"
-        path = run_dir / "artifacts" / f"review-{args.run_id}.zip"
-        if not path.is_file():
-            parser.error("review ZIP must exist")
-        before = run("gh", "release", "view", tag, "--json", "tagName,targetCommitish,assets,url,isDraft")
-        if before.returncode:
-            created = run("gh", "release", "create", tag, "--target", args.target, "--draft",
-                          "--title", tag, "--notes", f"S00A engineering review for {args.run_id}")
-            if created.returncode:
-                raise SystemExit("Release creation failed: " + created.stderr)
-        view = run("gh", "release", "view", tag, "--json", "tagName,targetCommitish,assets,url,isDraft")
-        if view.returncode:
-            raise SystemExit("Release lookup failed: " + view.stderr)
-        state = json.loads(view.stdout)
-        if state.get("targetCommitish") != args.target:
-            raise SystemExit("Existing release target does not match implementation SHA")
-        assets = {x["name"]: x for x in state.get("assets", [])}
-        if path.name not in assets:
-            uploaded = run("gh", "release", "upload", tag, str(path))
-            if uploaded.returncode:
-                raise SystemExit("Release upload failed: " + uploaded.stderr)
-        elif assets[path.name].get("size") != path.stat().st_size:
-            raise SystemExit("Existing asset size differs; no clobber performed")
-        verified = run("gh", "release", "view", tag, "--json", "tagName,targetCommitish,assets,url,isDraft")
-        if verified.returncode:
-            raise SystemExit("Release verification failed: " + verified.stderr)
-        state = json.loads(verified.stdout)
-        assets = {x["name"]: x for x in state.get("assets", [])}
-        if path.name not in assets or assets[path.name].get("size") != path.stat().st_size:
-            raise SystemExit("Remote asset missing or size mismatch")
-        if state.get("isDraft"):
-            published = run("gh", "release", "edit", tag, "--draft=false")
-            if published.returncode:
-                raise SystemExit("Release publish failed: " + published.stderr)
-        print(json.dumps({"tag": tag, "url": state.get("url"), "asset": path.name,
-                          "asset_size": assets[path.name]["size"], "local_sha256": sha256(path)}, ensure_ascii=False))
         return 0
     if args.command == "publish-dry-run":
         existing = run("gh", "release", "list", "--json", "tagName", "--limit", "100").stdout

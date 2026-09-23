@@ -8,6 +8,8 @@ Run only from the verified official `BiLiangXin/jingsai` clone on `codex/mosei-a
 python tools/stage_handoff.py --manifest reports/runs/<run_id>/public/HANDOFF_INPUTS.json
 ```
 
+The older `python tools/mosei_flow.py publish` command is disabled. It cannot bypass this entry point's Gate, safety, Git and remote-asset checks.
+
 The official clone has the local-only Git setting `mosei.officialWorkspace=true`. Verify origin, branch, clean stage boundaries and remote HEAD before setting that marker in a new clone. Linked worktrees and parallel desktop projects cannot publish through this entry point.
 
 Do not invoke handoff for S00B again. Its Release and metadata are already published; `state/LATEST_RUN.json` points to its verified result. A later stage needs its own active and explicitly authorized `TASK_SPEC.md`. The S00B `next_stage_authorized: false` remains in force until Main Research Chat changes the research authorization.
