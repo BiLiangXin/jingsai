@@ -1,10 +1,16 @@
 {
+  "NEXT_STAGE_NOT_AUTHORIZED": true,
+  "STOPPED_AFTER_S00B": true,
   "TEST_LABEL_DISTRIBUTION_QUARANTINED": true,
   "attachment3_content_inspected": false,
   "attachment4_feature_content_inspected": false,
   "attachment4_video_content_inspected": false,
   "baseline_sha": "fc277357e9583190d6be786221b8b3407fa957f8",
   "data_kind": "real_official_local",
+  "implementation_commit": "b8f839bb32b8c75827d9cd20dc618885a35cde4f",
+  "next_stage": "PENDING_RESEARCH_REVIEW",
+  "release_asset_sha256": "c2fc911b91db6835d7112586fb88d7c55a1ebf415a6d0590def638f9ff83c7d3",
+  "release_url": "https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260924-001338-S00B-fc277357",
   "run_id": "20260924-001338-S00B-fc277357",
   "source_files": [
     "aligned_50.pkl",
@@ -19,5 +25,6 @@
     "train": "full audit",
     "valid": "full audit"
   },
+  "status": "SUCCESS",
   "task_id": "S00B_REAL_DATA_AUDIT"
 }

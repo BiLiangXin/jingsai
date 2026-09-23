@@ -1,116 +1,121 @@
 {
-  "stage": "S00B_REAL_DATA_AUDIT",
   "data_kind": "real_official_local",
   "evidence": [
     {
-      "requirement": "DATA_AUDIT.md",
       "path": "reports/data_audit/DATA_AUDIT.md",
+      "requirement": "DATA_AUDIT.md",
       "sha256": "9ba59b415cb057a9987c532ecad31ceeda6112b519456a7936bb4613d7bc668a"
     },
     {
-      "requirement": "schema_aligned.json",
       "path": "reports/data_audit/schema_aligned.json",
+      "requirement": "schema_aligned.json",
       "sha256": "4f9728c7c3cf36c097905a2ffc704f147e1e2d85954c0f5ca060951b4d97a7ac"
     },
     {
-      "requirement": "schema_unaligned.json",
       "path": "reports/data_audit/schema_unaligned.json",
+      "requirement": "schema_unaligned.json",
       "sha256": "c59dd988b07d71ab58b54f06faf155e6e7ac292a8adb9baca1d70e28fe0c412c"
     },
     {
-      "requirement": "split_consistency.json",
       "path": "reports/data_audit/split_consistency.json",
+      "requirement": "split_consistency.json",
       "sha256": "4404fa2a8df3dc4666f0a3f64124778eec411a801165052b397ad12622bd2ee7"
     },
     {
-      "requirement": "id_integrity.json",
       "path": "reports/data_audit/id_integrity.json",
+      "requirement": "id_integrity.json",
       "sha256": "c853029149c8923521e81fe0ad3a5a5b8ba4f56b7c90d48c75425c5408b590b7"
     },
     {
-      "requirement": "label_mapping_train_valid.json",
       "path": "reports/data_audit/label_mapping_train_valid.json",
+      "requirement": "label_mapping_train_valid.json",
       "sha256": "921c1caa26b0fe5243e3e9df1bf4420f3544ddd16b787f6b650c6d9087a87c26"
     },
     {
-      "requirement": "version_consistency.json",
       "path": "reports/data_audit/version_consistency.json",
+      "requirement": "version_consistency.json",
       "sha256": "3aa5af9f70fbebf5bb700bf49809ff7b08078ad24f6d591faa2b4869f29febec"
     },
     {
-      "requirement": "zero_run_summary.csv",
       "path": "reports/data_audit/zero_run_summary.csv",
+      "requirement": "zero_run_summary.csv",
       "sha256": "f891e5f5869b61e766a30d3809d5cefbc0db80b9681c3052bfadbc04f160778d"
     },
     {
-      "requirement": "zero_position_summary.csv",
       "path": "reports/data_audit/zero_position_summary.csv",
+      "requirement": "zero_position_summary.csv",
       "sha256": "6d6b3c92950cbc4a511fb00cda0b35458b79772ec0fad580c06a581ac6d1724d"
     },
     {
-      "requirement": "length_consistency_unaligned.json",
       "path": "reports/data_audit/length_consistency_unaligned.json",
+      "requirement": "length_consistency_unaligned.json",
       "sha256": "f16673076a0d3c61373e37192cbbcf3281178c3db6a7bb14c5a82cf31c2f1ddd"
     },
     {
-      "requirement": "aligned_positional_diagnostics.json",
       "path": "reports/data_audit/aligned_positional_diagnostics.json",
+      "requirement": "aligned_positional_diagnostics.json",
       "sha256": "2805d9cc506e7627528bd31cce7c09d6b13938b22c23fa69d295eab988fc9571"
     },
     {
-      "requirement": "finite_value_audit.json",
       "path": "reports/data_audit/finite_value_audit.json",
+      "requirement": "finite_value_audit.json",
       "sha256": "14c1afbb9089f5e6489f0a4ab46a6824fba0eb77cff76d347917f0ec65973999"
     },
     {
-      "requirement": "attachment1_inventory.json",
       "path": "reports/data_audit/attachment1_inventory.json",
+      "requirement": "attachment1_inventory.json",
       "sha256": "4f1c6b1fe8840931268ae9c261ad3a2e5c954ef17133519dfe2b96a259ab95d9"
     },
     {
-      "requirement": "attachment3_inventory.json",
       "path": "reports/data_audit/attachment3_inventory.json",
+      "requirement": "attachment3_inventory.json",
       "sha256": "e92c268ac81f75abdff4959ad6a46aca003815ca4d79270e52ee46a6895175a9"
     },
     {
-      "requirement": "attachment4_inventory.json",
       "path": "reports/data_audit/attachment4_inventory.json",
+      "requirement": "attachment4_inventory.json",
       "sha256": "dd488e4ebf911c7c1f7b662433f8b2a5065289b1e62c2ac646193350cc3b9c8d"
     },
     {
-      "requirement": "source_mutation_check.json",
       "path": "reports/data_audit/source_mutation_check.json",
+      "requirement": "source_mutation_check.json",
       "sha256": "d47e09687b75dac87aef3f43835f32a4056213a5769958c0a7919c1f562471d2"
     },
     {
-      "requirement": "text_bert_diagnostics.json",
       "path": "reports/data_audit/text_bert_diagnostics.json",
+      "requirement": "text_bert_diagnostics.json",
       "sha256": "4f8b0e37fcebba65a0c4c3cad4c4dcfc9ad2249e53e2e211d8a63dd73393377c"
     },
     {
-      "requirement": "zero_count_histograms.json",
       "path": "reports/data_audit/zero_count_histograms.json",
+      "requirement": "zero_count_histograms.json",
       "sha256": "16557ebf8bbd4deeb50f1322d00d876ffdef68c7e50d773ab2a52224b325a8da"
     },
     {
-      "requirement": "DATA_CONTRACT_EVIDENCE.md",
       "path": "docs/DATA_CONTRACT_EVIDENCE.md",
+      "requirement": "DATA_CONTRACT_EVIDENCE.md",
       "sha256": "59a9ce7fd759291134fd8f78786f2fd291534fa2120862ca1a034431faf4a380"
     },
     {
-      "requirement": "RUN.json",
       "path": "reports/runs/20260924-001338-S00B-fc277357/RUN.json",
-      "sha256": "f5fbad512d41330d5dbe83109cb6042cdb72ad559fb10de2158b943aa93fdb65"
+      "requirement": "RUN.json",
+      "sha256": "735a23ef1952d451239993352a1121c60b617c7701dd9969476c6164bcb71544"
     },
     {
-      "requirement": "GATE.json",
       "path": "reports/runs/20260924-001338-S00B-fc277357/GATE.json",
+      "requirement": "GATE.json",
       "sha256": "c5ca7001f962290e6bbb0a556d52d8c6e83ed964db66d4311a8d91d6de1da854"
     },
     {
-      "requirement": "TEST_RESULTS.json",
       "path": "reports/runs/20260924-001338-S00B-fc277357/TEST_RESULTS.json",
+      "requirement": "TEST_RESULTS.json",
       "sha256": "c4b2d19645df44e1e9cced1ee09f90a4228a6880f7e1e68f8489837fb334b006"
+    },
+    {
+      "path": "reports/runs/20260924-001338-S00B-fc277357/PUBLISH_RECEIPT.json",
+      "requirement": "PUBLISH_RECEIPT.json",
+      "sha256": "e6457656b363273d24b1af0da30bc96b795fb25c228f23b78af462131d861ffa"
     }
-  ]
+  ],
+  "stage": "S00B_REAL_DATA_AUDIT"
 }

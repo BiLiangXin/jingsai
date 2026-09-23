@@ -4,15 +4,17 @@
 
 task_id: `S00B_REAL_DATA_AUDIT`
 run_id: `20260924-001338-S00B-fc277357`
-status: `AUDIT_GATE_PASS_PENDING_PUBLICATION`
+status: `SUCCESS`
 repository: `BiLiangXin/jingsai`
 branch: `codex/mosei-auto`
 baseline_sha: `fc277357e9583190d6be786221b8b3407fa957f8`
-implementation_commit: `PENDING`
-metadata_commit: `PENDING`
+implementation_commit: `b8f839bb32b8c75827d9cd20dc618885a35cde4f`
+metadata_commit: `branch HEAD after final metadata push`
 release_tag: `codex-run-20260924-001338-S00B-fc277357`
-release_url: `PENDING`
+release_url: `https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260924-001338-S00B-fc277357`
 review_asset: `review-20260924-001338-S00B-fc277357.zip`
+review_asset_size: `37012 bytes`
+review_asset_sha256: `c2fc911b91db6835d7112586fb88d7c55a1ebf415a6d0590def638f9ff83c7d3`
 
 ## Scope and source protection
 
@@ -39,7 +41,11 @@ Actual test command: `python -m pytest -q tests/test_stage_s00b_audit.py tests/t
 
 The first post-commit check found that the inherited S00A compatibility test expected the `# Current Review` heading. The heading was restored and the full 35-test suite and Gate were rerun successfully; no test or Gate rule was weakened.
 
-Gate: **24 PASS, 0 FAIL, 0 SKIPPED, 0 BLOCKED**. Source mutation and public safety scans passed. No original dataset path is tracked in the branch tree or branch history. The explicit review ZIP member plan excludes original data, private artifacts, local configuration and credentials. The release asset and remote verification are pending in this preliminary handoff.
+Gate: **24 PASS, 0 FAIL, 0 SKIPPED, 0 BLOCKED**. Source mutation and public safety scans passed. No original dataset path is tracked in the branch tree or branch history. The explicit review ZIP member plan excludes original data, private artifacts, local configuration and credentials.
+
+Git: initial audit commit `1107af7d9857186f8bb6cf17007fd747068a4924`; passing implementation commit `b8f839bb32b8c75827d9cd20dc618885a35cde4f`. Both were ordinary commits pushed to `codex/mosei-auto`; no force push or history rewrite was used. The final metadata commit is the branch HEAD after the last push.
+
+Release: `codex-run-20260924-001338-S00B-fc277357` at [GitHub Release](https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260924-001338-S00B-fc277357). GitHub reports target `b8f839bb32b8c75827d9cd20dc618885a35cde4f` and one 37,012-byte review ZIP asset. The local and downloaded asset SHA256 both equal `c2fc911b91db6835d7112586fb88d7c55a1ebf415a6d0590def638f9ff83c7d3`. The Release ZIP is the public review snapshot from the passing implementation commit; this branch review adds publication verification.
 
 ## Failures, blockers and unknowns
 
@@ -61,6 +67,7 @@ Failures: **NONE**. Current blockers: **NONE**. Unknowns: final aligned/unaligne
 - `reports/runs/20260924-001338-S00B-fc277357/GATE.json`
 - `reports/runs/20260924-001338-S00B-fc277357/TEST_RESULTS.json`
 - `reports/runs/20260924-001338-S00B-fc277357/RUN.json`
+- `reports/runs/20260924-001338-S00B-fc277357/PUBLISH_RECEIPT.json`
 - `reports/stages/S00B/acceptance.json`
 
 `PENDING_RESEARCH_REVIEW`
