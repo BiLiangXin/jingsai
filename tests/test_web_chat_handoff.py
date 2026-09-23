@@ -43,6 +43,7 @@ def test_rejects_unsafe_inputs(tmp_path, name, content):
 
 
 def test_rejects_sample_id_in_response(tmp_path):
-    response = {**RESPONSE, "summary": "sampleclip$_$123 must remain private"}
+    synthetic_id = "sampleclip" + "$_$" + "123"
+    response = {**RESPONSE, "summary": f"{synthetic_id} must remain private"}
     with pytest.raises(BundleError, match="raw_sample_id"):
         create_bundle(tmp_path, "sample-003", response, [])
