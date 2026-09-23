@@ -1,0 +1,11 @@
+video_id,clip_id,text,label,annotation,mode
+-3g5yACwYnA,4,"Key brings those types of aspects to a business on new markets, new potentials, and even on our equipment of how things run and operate with a pretty big, long experience with their team.",1.0,Positive,train
+-HwX2H8Z4hY,3,"Federal spending on education soared eightfold in the past twenty years, rising much faster than inflation",0.3333333432674408,Positive,train
+-HwX2H8Z4hY,9,It is a word which the administrator uses when he turns around anything which he doesn't like that the teacher is doing,-0.3333333432674408,Negative,train
+-NFrJFQijFE,0,so all that has to go through aerodynamic analysis etc,0.0,Neutral,train
+-THoVjtIkeU,2,I think social justice is extremely important for young people.,1.3333333730697632,Positive,train
+-UuX1xuaiiE,9,Having at least an awareness and sensitivity to human rights issues is critical in today's world,0.6666666865348816,Positive,train
+-WXXTNIJcVM,0,"""I just have a passion for it",2.0,Positive,train
+-a55Q6RWvTA,3,"And if you clip coupons, if you don't go out for dinner and movies and things of that nature and try to take up things in life that, well, they always say, ""the best things in life are free"". Reading a book, going for a nice walk, and, of course, combining exercise and various things of that nature where you're not spending money per se.",0.6666666865348816,Positive,train
+-aNfi7CP8vM,10,"Did they grow up in a very strict, staunch Republican household and so because of that now they're a very, very liberal Democrat?",0.0,Neutral,train
+-aqamKhZ1Ec,1,"And even after the election and the tribal warfare was going on, tribal people were killing one another, but Equity had branches all over the country.",-0.6666666865348816,Negative,train
