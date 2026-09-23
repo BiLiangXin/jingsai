@@ -1,0 +1,29 @@
+{
+  "FEATURE_CONTENT_NOT_INSPECTED": true,
+  "VIDEO_CONTENT_NOT_INSPECTED": true,
+  "exists": true,
+  "extension_counts": {
+    ".mp4": 40,
+    ".pkl": 40
+  },
+  "feature_file_count": 40,
+  "file_count": 80,
+  "per_version": {
+    "aligned": {
+      "feature_file_count": 20,
+      "feature_video_stem_match_count": 20,
+      "video_file_count": 20
+    },
+    "unaligned": {
+      "feature_file_count": 20,
+      "feature_video_stem_match_count": 20,
+      "video_file_count": 20
+    }
+  },
+  "total_size_bytes": 66546996,
+  "version_filename_or_directory_counts": {
+    "aligned": 40,
+    "unaligned": 40
+  },
+  "video_count": 40
+}

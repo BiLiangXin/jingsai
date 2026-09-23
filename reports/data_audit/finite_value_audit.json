@@ -1,0 +1,100 @@
+{
+  "aligned": {
+    "interpretation": "DATA_QUALITY_EVIDENCE; zero is not classified as missing or padding",
+    "test": {
+      "nonfinite_exists": false,
+      "nonfinite_total_count": 0
+    },
+    "train": {
+      "all_three_modalities_zero_sample_count": 0,
+      "audio": {
+        "nan_count": 0,
+        "neginf_count": 0,
+        "posinf_count": 0,
+        "whole_modality_all_zero_sample_count": 0
+      },
+      "text": {
+        "nan_count": 0,
+        "neginf_count": 0,
+        "posinf_count": 0,
+        "whole_modality_all_zero_sample_count": 0
+      },
+      "vision": {
+        "nan_count": 0,
+        "neginf_count": 0,
+        "posinf_count": 0,
+        "whole_modality_all_zero_sample_count": 110
+      }
+    },
+    "valid": {
+      "all_three_modalities_zero_sample_count": 0,
+      "audio": {
+        "nan_count": 0,
+        "neginf_count": 0,
+        "posinf_count": 0,
+        "whole_modality_all_zero_sample_count": 0
+      },
+      "text": {
+        "nan_count": 0,
+        "neginf_count": 0,
+        "posinf_count": 0,
+        "whole_modality_all_zero_sample_count": 0
+      },
+      "vision": {
+        "nan_count": 0,
+        "neginf_count": 0,
+        "posinf_count": 0,
+        "whole_modality_all_zero_sample_count": 15
+      }
+    }
+  },
+  "unaligned": {
+    "interpretation": "DATA_QUALITY_EVIDENCE; zero is not classified as missing or padding",
+    "test": {
+      "nonfinite_exists": false,
+      "nonfinite_total_count": 0
+    },
+    "train": {
+      "all_three_modalities_zero_sample_count": 0,
+      "audio": {
+        "nan_count": 0,
+        "neginf_count": 0,
+        "posinf_count": 0,
+        "whole_modality_all_zero_sample_count": 0
+      },
+      "text": {
+        "nan_count": 0,
+        "neginf_count": 0,
+        "posinf_count": 0,
+        "whole_modality_all_zero_sample_count": 0
+      },
+      "vision": {
+        "nan_count": 0,
+        "neginf_count": 0,
+        "posinf_count": 0,
+        "whole_modality_all_zero_sample_count": 30
+      }
+    },
+    "valid": {
+      "all_three_modalities_zero_sample_count": 0,
+      "audio": {
+        "nan_count": 0,
+        "neginf_count": 0,
+        "posinf_count": 0,
+        "whole_modality_all_zero_sample_count": 0
+      },
+      "text": {
+        "nan_count": 0,
+        "neginf_count": 0,
+        "posinf_count": 0,
+        "whole_modality_all_zero_sample_count": 0
+      },
+      "vision": {
+        "nan_count": 0,
+        "neginf_count": 0,
+        "posinf_count": 0,
+        "whole_modality_all_zero_sample_count": 0
+      }
+    }
+  }
+}

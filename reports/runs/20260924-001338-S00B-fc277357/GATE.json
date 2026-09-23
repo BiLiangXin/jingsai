@@ -1,0 +1,241 @@
+{
+  "run_id": "20260924-001338-S00B-fc277357",
+  "gate_count": 24,
+  "items": [
+    {
+      "id": "G01",
+      "requirement": "trusted official pickle confirmed",
+      "status": "PASS",
+      "evidence": [
+        "reports/runs/20260924-001338-S00B-fc277357/RUN.json",
+        "reports/data_audit/source_mutation_check.json"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G02",
+      "requirement": "aligned audit completed",
+      "status": "PASS",
+      "evidence": [
+        "reports/data_audit/schema_aligned.json"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G03",
+      "requirement": "unaligned audit completed",
+      "status": "PASS",
+      "evidence": [
+        "reports/data_audit/schema_unaligned.json"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G04",
+      "requirement": "schemas extracted",
+      "status": "PASS",
+      "evidence": [
+        "reports/data_audit/schema_aligned.json",
+        "reports/data_audit/schema_unaligned.json"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G05",
+      "requirement": "split consistency checked",
+      "status": "PASS",
+      "evidence": [
+        "reports/data_audit/split_consistency.json"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G06",
+      "requirement": "ID integrity checked",
+      "status": "PASS",
+      "evidence": [
+        "reports/data_audit/id_integrity.json"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G07",
+      "requirement": "train/valid label mapping verified",
+      "status": "PASS",
+      "evidence": [
+        "reports/data_audit/label_mapping_train_valid.json"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G08",
+      "requirement": "test quarantine respected",
+      "status": "PASS",
+      "evidence": [
+        "reports/data_audit/label_mapping_train_valid.json",
+        "tools/s00b_audit.py",
+        "tests/test_stage_s00b_audit.py"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G09",
+      "requirement": "zero-row diagnostics completed",
+      "status": "PASS",
+      "evidence": [
+        "reports/data_audit/zero_position_summary.csv",
+        "reports/data_audit/zero_count_histograms.json"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G10",
+      "requirement": "zero-run diagnostics completed",
+      "status": "PASS",
+      "evidence": [
+        "reports/data_audit/zero_run_summary.csv"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G11",
+      "requirement": "unaligned lengths diagnostics completed",
+      "status": "PASS",
+      "evidence": [
+        "reports/data_audit/length_consistency_unaligned.json"
+      ],
+      "reason": "Vision nonzero after declared length is reported, not reinterpreted"
+    },
+    {
+      "id": "G12",
+      "requirement": "aligned positional diagnostics completed or evidence-based unknown",
+      "status": "PASS",
+      "evidence": [
+        "reports/data_audit/aligned_positional_diagnostics.json",
+        "reports/data_audit/text_bert_diagnostics.json"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G13",
+      "requirement": "version identity compared",
+      "status": "PASS",
+      "evidence": [
+        "reports/data_audit/version_consistency.json"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G14",
+      "requirement": "NaN/Inf audit completed",
+      "status": "PASS",
+      "evidence": [
+        "reports/data_audit/finite_value_audit.json"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G15",
+      "requirement": "Attachment1 inventory completed",
+      "status": "PASS",
+      "evidence": [
+        "reports/data_audit/attachment1_inventory.json"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G16",
+      "requirement": "Attachment3 inventory without deserialization",
+      "status": "PASS",
+      "evidence": [
+        "reports/data_audit/attachment3_inventory.json",
+        "tests/test_stage_s00b_audit.py"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G17",
+      "requirement": "Attachment4 inventory without deserialization",
+      "status": "PASS",
+      "evidence": [
+        "reports/data_audit/attachment4_inventory.json",
+        "tests/test_stage_s00b_audit.py"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G18",
+      "requirement": "source files unchanged",
+      "status": "PASS",
+      "evidence": [
+        "reports/data_audit/source_mutation_check.json"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G19",
+      "requirement": "public output contains no raw dataset content",
+      "status": "PASS",
+      "evidence": [
+        "reports/runs/20260924-001338-S00B-fc277357/public/SAFETY_SCAN.json"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G20",
+      "requirement": "no original dataset tracked",
+      "status": "PASS",
+      "evidence": [
+        "reports/runs/20260924-001338-S00B-fc277357/public/GIT_RAW_DATA_CHECK.json"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G21",
+      "requirement": "no original dataset packaged",
+      "status": "PASS",
+      "evidence": [
+        "reports/runs/20260924-001338-S00B-fc277357/public/PACKAGE_PLAN.json"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G22",
+      "requirement": "DATA_CONTRACT_EVIDENCE complete",
+      "status": "PASS",
+      "evidence": [
+        "docs/DATA_CONTRACT_EVIDENCE.md"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G23",
+      "requirement": "competition-specified counts checked",
+      "status": "PASS",
+      "evidence": [
+        "reports/data_audit/split_consistency.json",
+        "reports/data_audit/attachment1_inventory.json"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "G24",
+      "requirement": "research restrictions preserved",
+      "status": "PASS",
+      "evidence": [
+        "TASK_SPEC.md",
+        "reports/data_audit/DATA_AUDIT.md",
+        "docs/DATA_CONTRACT_EVIDENCE.md"
+      ],
+      "reason": ""
+    }
+  ],
+  "summary": {
+    "PASS": 24,
+    "FAIL": 0,
+    "SKIPPED": 0,
+    "BLOCKED": 0
+  },
+  "passed": false,
+  "status": "FAIL"
+}

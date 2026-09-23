@@ -1,0 +1,23 @@
+{
+  "TEST_LABEL_DISTRIBUTION_QUARANTINED": true,
+  "attachment3_content_inspected": false,
+  "attachment4_feature_content_inspected": false,
+  "attachment4_video_content_inspected": false,
+  "baseline_sha": "fc277357e9583190d6be786221b8b3407fa957f8",
+  "data_kind": "real_official_local",
+  "run_id": "20260924-001338-S00B-fc277357",
+  "source_files": [
+    "aligned_50.pkl",
+    "unaligned_50.pkl"
+  ],
+  "source_unchanged": {
+    "aligned": true,
+    "unaligned": true
+  },
+  "split_usage": {
+    "test": "quarantined metadata and legal checks only",
+    "train": "full audit",
+    "valid": "full audit"
+  },
+  "task_id": "S00B_REAL_DATA_AUDIT"
+}

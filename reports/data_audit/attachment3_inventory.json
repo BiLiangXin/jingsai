@@ -1,0 +1,13 @@
+{
+  "CONTENT_NOT_INSPECTED": true,
+  "exists": true,
+  "extension_counts": {
+    ".pkl": 60
+  },
+  "file_count": 60,
+  "total_size_bytes": 16371919,
+  "version_filename_or_directory_counts": {
+    "aligned": 30,
+    "unaligned": 30
+  }
+}

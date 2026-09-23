@@ -1,0 +1,44 @@
+{
+  "COMPETITION_SPEC_MISMATCH": false,
+  "actual_totals": {
+    "aligned": 4850,
+    "unaligned": 4850
+  },
+  "expected_total_per_version": 4850,
+  "versions": {
+    "aligned": {
+      "test": {
+        "mismatched_first_dimension_fields": [],
+        "pass": true,
+        "sample_count": 727
+      },
+      "train": {
+        "mismatched_first_dimension_fields": [],
+        "pass": true,
+        "sample_count": 3395
+      },
+      "valid": {
+        "mismatched_first_dimension_fields": [],
+        "pass": true,
+        "sample_count": 728
+      }
+    },
+    "unaligned": {
+      "test": {
+        "mismatched_first_dimension_fields": [],
+        "pass": true,
+        "sample_count": 727
+      },
+      "train": {
+        "mismatched_first_dimension_fields": [],
+        "pass": true,
+        "sample_count": 3395
+      },
+      "valid": {
+        "mismatched_first_dimension_fields": [],
+        "pass": true,
+        "sample_count": 728
+      }
+    }
+  }
+}

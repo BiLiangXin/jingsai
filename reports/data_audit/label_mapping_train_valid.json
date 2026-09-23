@@ -1,0 +1,366 @@
+{
+  "aligned": {
+    "TEST_LABEL_DISTRIBUTION_QUARANTINED": true,
+    "source": "Attachment 2 label.xlsx; only train/valid annotation and label cells accessed",
+    "train": {
+      "annotation_counts": {
+        "Negative": 967,
+        "Neutral": 758,
+        "Positive": 1670
+      },
+      "annotation_x_classification": [
+        {
+          "annotation": "Negative",
+          "classification": "0.0",
+          "count": 967
+        },
+        {
+          "annotation": "Neutral",
+          "classification": "1.0",
+          "count": 758
+        },
+        {
+          "annotation": "Positive",
+          "classification": "2.0",
+          "count": 1670
+        }
+      ],
+      "classification": {
+        "dtype": "float64",
+        "shape": [
+          3395
+        ],
+        "unique_values_and_counts": {
+          "0.0": 967,
+          "1.0": 758,
+          "2.0": 1670
+        }
+      },
+      "negative_annotation_mismatch_count": 0,
+      "neutral_zero_mismatch_count": 0,
+      "positive_annotation_mismatch_count": 0,
+      "regression": {
+        "dtype": "float64",
+        "exact_zero_count": 758,
+        "finite_count": 3395,
+        "finite_values_legal_range": true,
+        "inf_count": 0,
+        "max": 3.0,
+        "min": -3.0,
+        "nan_count": 0,
+        "negative_count": 967,
+        "positive_count": 1670,
+        "shape": [
+          3395
+        ]
+      },
+      "regression_sign_x_annotation": [
+        {
+          "annotation": "Negative",
+          "count": 967,
+          "sign": "negative"
+        },
+        {
+          "annotation": "Positive",
+          "count": 1670,
+          "sign": "positive"
+        },
+        {
+          "annotation": "Neutral",
+          "count": 758,
+          "sign": "zero"
+        }
+      ],
+      "unmatched_annotation_count": 0,
+      "workbook_regression_mismatch_count": 0
+    },
+    "valid": {
+      "annotation_counts": {
+        "Negative": 206,
+        "Neutral": 184,
+        "Positive": 338
+      },
+      "annotation_x_classification": [
+        {
+          "annotation": "Negative",
+          "classification": "0.0",
+          "count": 206
+        },
+        {
+          "annotation": "Neutral",
+          "classification": "1.0",
+          "count": 184
+        },
+        {
+          "annotation": "Positive",
+          "classification": "2.0",
+          "count": 338
+        }
+      ],
+      "classification": {
+        "dtype": "float64",
+        "shape": [
+          728
+        ],
+        "unique_values_and_counts": {
+          "0.0": 206,
+          "1.0": 184,
+          "2.0": 338
+        }
+      },
+      "negative_annotation_mismatch_count": 0,
+      "neutral_zero_mismatch_count": 0,
+      "positive_annotation_mismatch_count": 0,
+      "regression": {
+        "dtype": "float64",
+        "exact_zero_count": 184,
+        "finite_count": 728,
+        "finite_values_legal_range": true,
+        "inf_count": 0,
+        "max": 3.0,
+        "min": -3.0,
+        "nan_count": 0,
+        "negative_count": 206,
+        "positive_count": 338,
+        "shape": [
+          728
+        ]
+      },
+      "regression_sign_x_annotation": [
+        {
+          "annotation": "Negative",
+          "count": 206,
+          "sign": "negative"
+        },
+        {
+          "annotation": "Positive",
+          "count": 338,
+          "sign": "positive"
+        },
+        {
+          "annotation": "Neutral",
+          "count": 184,
+          "sign": "zero"
+        }
+      ],
+      "unmatched_annotation_count": 0,
+      "workbook_regression_mismatch_count": 0
+    }
+  },
+  "test": {
+    "aligned": {
+      "TEST_LABEL_DISTRIBUTION_QUARANTINED": true,
+      "fields": {
+        "annotations": {
+          "exists": false
+        },
+        "classification_labels": {
+          "dtype": "float64",
+          "exists": true,
+          "finite": true,
+          "legal_range": true,
+          "shape": [
+            727
+          ]
+        },
+        "regression_labels": {
+          "dtype": "float64",
+          "exists": true,
+          "finite": true,
+          "legal_range": true,
+          "shape": [
+            727
+          ]
+        }
+      }
+    },
+    "unaligned": {
+      "TEST_LABEL_DISTRIBUTION_QUARANTINED": true,
+      "fields": {
+        "annotations": {
+          "exists": false
+        },
+        "classification_labels": {
+          "dtype": "float64",
+          "exists": true,
+          "finite": true,
+          "legal_range": true,
+          "shape": [
+            727
+          ]
+        },
+        "regression_labels": {
+          "dtype": "float64",
+          "exists": true,
+          "finite": true,
+          "legal_range": true,
+          "shape": [
+            727
+          ]
+        }
+      }
+    }
+  },
+  "unaligned": {
+    "TEST_LABEL_DISTRIBUTION_QUARANTINED": true,
+    "source": "Attachment 2 label.xlsx; only train/valid annotation and label cells accessed",
+    "train": {
+      "annotation_counts": {
+        "Negative": 967,
+        "Neutral": 758,
+        "Positive": 1670
+      },
+      "annotation_x_classification": [
+        {
+          "annotation": "Negative",
+          "classification": "0.0",
+          "count": 967
+        },
+        {
+          "annotation": "Neutral",
+          "classification": "1.0",
+          "count": 758
+        },
+        {
+          "annotation": "Positive",
+          "classification": "2.0",
+          "count": 1670
+        }
+      ],
+      "classification": {
+        "dtype": "float64",
+        "shape": [
+          3395
+        ],
+        "unique_values_and_counts": {
+          "0.0": 967,
+          "1.0": 758,
+          "2.0": 1670
+        }
+      },
+      "negative_annotation_mismatch_count": 0,
+      "neutral_zero_mismatch_count": 0,
+      "positive_annotation_mismatch_count": 0,
+      "regression": {
+        "dtype": "float64",
+        "exact_zero_count": 758,
+        "finite_count": 3395,
+        "finite_values_legal_range": true,
+        "inf_count": 0,
+        "max": 3.0,
+        "min": -3.0,
+        "nan_count": 0,
+        "negative_count": 967,
+        "positive_count": 1670,
+        "shape": [
+          3395
+        ]
+      },
+      "regression_sign_x_annotation": [
+        {
+          "annotation": "Negative",
+          "count": 967,
+          "sign": "negative"
+        },
+        {
+          "annotation": "Positive",
+          "count": 1670,
+          "sign": "positive"
+        },
+        {
+          "annotation": "Neutral",
+          "count": 758,
+          "sign": "zero"
+        }
+      ],
+      "unmatched_annotation_count": 0,
+      "workbook_regression_mismatch_count": 0
+    },
+    "valid": {
+      "annotation_counts": {
+        "Negative": 206,
+        "Neutral": 184,
+        "Positive": 338
+      },
+      "annotation_x_classification": [
+        {
+          "annotation": "Negative",
+          "classification": "0.0",
+          "count": 206
+        },
+        {
+          "annotation": "Neutral",
+          "classification": "1.0",
+          "count": 184
+        },
+        {
+          "annotation": "Positive",
+          "classification": "2.0",
+          "count": 338
+        }
+      ],
+      "classification": {
+        "dtype": "float64",
+        "shape": [
+          728
+        ],
+        "unique_values_and_counts": {
+          "0.0": 206,
+          "1.0": 184,
+          "2.0": 338
+        }
+      },
+      "negative_annotation_mismatch_count": 0,
+      "neutral_zero_mismatch_count": 0,
+      "positive_annotation_mismatch_count": 0,
+      "regression": {
+        "dtype": "float64",
+        "exact_zero_count": 184,
+        "finite_count": 728,
+        "finite_values_legal_range": true,
+        "inf_count": 0,
+        "max": 3.0,
+        "min": -3.0,
+        "nan_count": 0,
+        "negative_count": 206,
+        "positive_count": 338,
+        "shape": [
+          728
+        ]
+      },
+      "regression_sign_x_annotation": [
+        {
+          "annotation": "Negative",
+          "count": 206,
+          "sign": "negative"
+        },
+        {
+          "annotation": "Positive",
+          "count": 338,
+          "sign": "positive"
+        },
+        {
+          "annotation": "Neutral",
+          "count": 184,
+          "sign": "zero"
+        }
+      ],
+      "unmatched_annotation_count": 0,
+      "workbook_regression_mismatch_count": 0
+    }
+  },
+  "workbook": {
+    "field_names": [
+      "video_id",
+      "clip_id",
+      "text",
+      "label",
+      "annotation",
+      "mode"
+    ],
+    "file_name": "label.xlsx",
+    "row_count_excluding_header": 4850,
+    "test_label_cells_accessed": false,
+    "train_valid_matched_count": 4123
+  }
+}

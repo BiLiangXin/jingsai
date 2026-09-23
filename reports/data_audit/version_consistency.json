@@ -1,0 +1,28 @@
+{
+  "test": {
+    "id_order_equal": true,
+    "id_set_equal": true,
+    "labels_equal": true,
+    "sample_count_equal": true
+  },
+  "train": {
+    "id_order_equal": true,
+    "id_set_equal": true,
+    "labels_equal": true,
+    "raw_text_aggregate_sha256_equal": true,
+    "raw_text_equal": true,
+    "sample_count_equal": true,
+    "text_exact_equal": true,
+    "text_max_abs_diff": 0.0
+  },
+  "valid": {
+    "id_order_equal": true,
+    "id_set_equal": true,
+    "labels_equal": true,
+    "raw_text_aggregate_sha256_equal": true,
+    "raw_text_equal": true,
+    "sample_count_equal": true,
+    "text_exact_equal": true,
+    "text_max_abs_diff": 0.0
+  }
+}

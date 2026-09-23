@@ -1,0 +1,55 @@
+{
+  "interpretation": "Candidate mask and structural zero evidence only; no final padding or missing definition",
+  "train": {
+    "audio": {
+      "active_nonzero": 76817,
+      "active_zero": 6855,
+      "inactive_nonzero": 0,
+      "inactive_zero": 86078
+    },
+    "audio_internal_zero_run_positions_overlapping_candidate_active": 0,
+    "candidate_active_position_count": 83672,
+    "candidate_inactive_position_count": 86078,
+    "simultaneous_three_modality_zero_within_candidate_active": 0,
+    "status": "INFERRED",
+    "text": {
+      "active_nonzero": 83672,
+      "active_zero": 0,
+      "inactive_nonzero": 86078,
+      "inactive_zero": 0
+    },
+    "vision": {
+      "active_nonzero": 72633,
+      "active_zero": 11039,
+      "inactive_nonzero": 0,
+      "inactive_zero": 86078
+    },
+    "vision_internal_zero_run_positions_overlapping_candidate_active": 743
+  },
+  "valid": {
+    "audio": {
+      "active_nonzero": 17126,
+      "active_zero": 1502,
+      "inactive_nonzero": 0,
+      "inactive_zero": 17772
+    },
+    "audio_internal_zero_run_positions_overlapping_candidate_active": 0,
+    "candidate_active_position_count": 18628,
+    "candidate_inactive_position_count": 17772,
+    "simultaneous_three_modality_zero_within_candidate_active": 0,
+    "status": "INFERRED",
+    "text": {
+      "active_nonzero": 18628,
+      "active_zero": 0,
+      "inactive_nonzero": 17772,
+      "inactive_zero": 0
+    },
+    "vision": {
+      "active_nonzero": 16192,
+      "active_zero": 2436,
+      "inactive_nonzero": 0,
+      "inactive_zero": 17772
+    },
+    "vision_internal_zero_run_positions_overlapping_candidate_active": 188
+  }
+}

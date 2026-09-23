@@ -1,0 +1,21 @@
+{
+  "duplicate_label_key_count": 0,
+  "duplicate_video_key_count": 0,
+  "excel_row_count_excluding_header": 100,
+  "folder_count_match": true,
+  "label_100_exists": true,
+  "label_without_video_count": 0,
+  "required_columns_present": {
+    "annotation": true,
+    "clip_id": true,
+    "label": true,
+    "text": true,
+    "video_id": true
+  },
+  "specified_video_count": 100,
+  "specified_video_id_folder_count": 37,
+  "video_count_match": true,
+  "video_file_count": 100,
+  "video_id_folder_count": 37,
+  "video_without_label_count": 0
+}

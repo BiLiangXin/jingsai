@@ -1,0 +1,33 @@
+{
+  "member_paths": [
+    "reports/data_audit/DATA_AUDIT.md",
+    "reports/data_audit/schema_aligned.json",
+    "reports/data_audit/schema_unaligned.json",
+    "reports/data_audit/split_consistency.json",
+    "reports/data_audit/id_integrity.json",
+    "reports/data_audit/label_mapping_train_valid.json",
+    "reports/data_audit/version_consistency.json",
+    "reports/data_audit/zero_run_summary.csv",
+    "reports/data_audit/zero_position_summary.csv",
+    "reports/data_audit/length_consistency_unaligned.json",
+    "reports/data_audit/aligned_positional_diagnostics.json",
+    "reports/data_audit/finite_value_audit.json",
+    "reports/data_audit/attachment1_inventory.json",
+    "reports/data_audit/attachment3_inventory.json",
+    "reports/data_audit/attachment4_inventory.json",
+    "reports/data_audit/source_mutation_check.json",
+    "reports/data_audit/text_bert_diagnostics.json",
+    "reports/data_audit/zero_count_histograms.json",
+    "docs/DATA_CONTRACT_EVIDENCE.md",
+    "CHATGPT_REVIEW.md",
+    "state/DECISIONS.md",
+    "state/BLOCKERS.md",
+    "state/NEXT_ACTIONS.md",
+    "reports/runs/20260924-001338-S00B-fc277357/RUN.json",
+    "reports/runs/20260924-001338-S00B-fc277357/public/SOURCE_HASH_BEFORE.json",
+    "reports/runs/20260924-001338-S00B-fc277357/public/SOURCE_HASH_AFTER.json",
+    "reports/runs/20260924-001338-S00B-fc277357/public/TEST_RESULTS.json",
+    "reports/runs/20260924-001338-S00B-fc277357/GATE.json"
+  ],
+  "forbidden_member_count": 0
+}

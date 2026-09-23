@@ -1,0 +1,281 @@
+{
+  "COMPETITION_SPEC_MISMATCH": false,
+  "file_name": "aligned_50.pkl",
+  "mtime_ns": 1788743082000000000,
+  "python_type": "dict",
+  "sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+  "size": 993842861,
+  "specified_expected_total": 4850,
+  "splits": {
+    "test": {
+      "EXTRA_FIELDS": [],
+      "field_names": [
+        "raw_text",
+        "audio",
+        "vision",
+        "id",
+        "text_bert",
+        "classification_labels",
+        "regression_labels",
+        "text"
+      ],
+      "fields": {
+        "audio": {
+          "dtype": "float64",
+          "ndim": 3,
+          "python_type": "ndarray",
+          "shape": [
+            727,
+            50,
+            74
+          ]
+        },
+        "classification_labels": {
+          "dtype": "float64",
+          "ndim": 1,
+          "python_type": "ndarray",
+          "shape": [
+            727
+          ]
+        },
+        "id": {
+          "dtype": "<U16",
+          "ndim": 1,
+          "python_type": "list",
+          "shape": [
+            727
+          ]
+        },
+        "raw_text": {
+          "dtype": "<U1479",
+          "ndim": 1,
+          "python_type": "ndarray",
+          "shape": [
+            727
+          ]
+        },
+        "regression_labels": {
+          "dtype": "float64",
+          "ndim": 1,
+          "python_type": "ndarray",
+          "shape": [
+            727
+          ]
+        },
+        "text": {
+          "dtype": "float32",
+          "ndim": 3,
+          "python_type": "ndarray",
+          "shape": [
+            727,
+            50,
+            768
+          ]
+        },
+        "text_bert": {
+          "dtype": "int64",
+          "ndim": 3,
+          "python_type": "ndarray",
+          "shape": [
+            727,
+            3,
+            50
+          ]
+        },
+        "vision": {
+          "dtype": "float64",
+          "ndim": 3,
+          "python_type": "ndarray",
+          "shape": [
+            727,
+            50,
+            35
+          ]
+        }
+      },
+      "sample_count": 727
+    },
+    "train": {
+      "EXTRA_FIELDS": [],
+      "field_names": [
+        "raw_text",
+        "audio",
+        "vision",
+        "id",
+        "text_bert",
+        "classification_labels",
+        "regression_labels",
+        "text"
+      ],
+      "fields": {
+        "audio": {
+          "dtype": "float64",
+          "ndim": 3,
+          "python_type": "ndarray",
+          "shape": [
+            3395,
+            50,
+            74
+          ]
+        },
+        "classification_labels": {
+          "dtype": "float64",
+          "ndim": 1,
+          "python_type": "ndarray",
+          "shape": [
+            3395
+          ]
+        },
+        "id": {
+          "dtype": "<U16",
+          "ndim": 1,
+          "python_type": "list",
+          "shape": [
+            3395
+          ]
+        },
+        "raw_text": {
+          "dtype": "<U1662",
+          "ndim": 1,
+          "python_type": "ndarray",
+          "shape": [
+            3395
+          ]
+        },
+        "regression_labels": {
+          "dtype": "float64",
+          "ndim": 1,
+          "python_type": "ndarray",
+          "shape": [
+            3395
+          ]
+        },
+        "text": {
+          "dtype": "float32",
+          "ndim": 3,
+          "python_type": "ndarray",
+          "shape": [
+            3395,
+            50,
+            768
+          ]
+        },
+        "text_bert": {
+          "dtype": "int64",
+          "ndim": 3,
+          "python_type": "ndarray",
+          "shape": [
+            3395,
+            3,
+            50
+          ]
+        },
+        "vision": {
+          "dtype": "float64",
+          "ndim": 3,
+          "python_type": "ndarray",
+          "shape": [
+            3395,
+            50,
+            35
+          ]
+        }
+      },
+      "sample_count": 3395
+    },
+    "valid": {
+      "EXTRA_FIELDS": [],
+      "field_names": [
+        "raw_text",
+        "audio",
+        "vision",
+        "id",
+        "text_bert",
+        "classification_labels",
+        "regression_labels",
+        "text"
+      ],
+      "fields": {
+        "audio": {
+          "dtype": "float64",
+          "ndim": 3,
+          "python_type": "ndarray",
+          "shape": [
+            728,
+            50,
+            74
+          ]
+        },
+        "classification_labels": {
+          "dtype": "float64",
+          "ndim": 1,
+          "python_type": "ndarray",
+          "shape": [
+            728
+          ]
+        },
+        "id": {
+          "dtype": "<U16",
+          "ndim": 1,
+          "python_type": "list",
+          "shape": [
+            728
+          ]
+        },
+        "raw_text": {
+          "dtype": "<U1570",
+          "ndim": 1,
+          "python_type": "ndarray",
+          "shape": [
+            728
+          ]
+        },
+        "regression_labels": {
+          "dtype": "float64",
+          "ndim": 1,
+          "python_type": "ndarray",
+          "shape": [
+            728
+          ]
+        },
+        "text": {
+          "dtype": "float32",
+          "ndim": 3,
+          "python_type": "ndarray",
+          "shape": [
+            728,
+            50,
+            768
+          ]
+        },
+        "text_bert": {
+          "dtype": "int64",
+          "ndim": 3,
+          "python_type": "ndarray",
+          "shape": [
+            728,
+            3,
+            50
+          ]
+        },
+        "vision": {
+          "dtype": "float64",
+          "ndim": 3,
+          "python_type": "ndarray",
+          "shape": [
+            728,
+            50,
+            35
+          ]
+        }
+      },
+      "sample_count": 728
+    }
+  },
+  "top_level_keys": [
+    "train",
+    "valid",
+    "test"
+  ],
+  "total_sample_count": 4850
+}
