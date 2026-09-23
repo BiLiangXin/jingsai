@@ -1,0 +1,30 @@
+{
+  "stage": "S00C",
+  "task_id": "S00C_SUPPORT_BOUNDARY_EVIDENCE_AND_REAL_HANDOFF",
+  "run_id": "20260924-014331-S00C-afeafae",
+  "public_files": [
+    "docs/S00C_SUPPORT_EVIDENCE.md",
+    "reports/data_audit/s00c_vision_length_boundary.json",
+    "reports/data_audit/s00c_text_mask_diagnostics.json",
+    "reports/data_audit/s00c_zero_mechanism_matrix.json",
+    "reports/data_audit/s00c_s00b_reconciliation.json",
+    "reports/data_audit/s00c_source_mutation_check.json",
+    "tools/s00c_run.py",
+    "tools/s00c_vision.py",
+    "tools/s00c_text_zero.py",
+    "tools/s00c_finalize.py",
+    "tools/stage_handoff.py",
+    "tests/test_stage_s00c_run.py",
+    "tests/test_s00c_vision.py",
+    "tests/test_s00c_text_zero.py",
+    "tests/test_stage_s00c_finalize.py",
+    "tests/test_stage_handoff.py",
+    "docs/DATA_CONTRACT_EVIDENCE.md",
+    "reports/data_audit/DATA_AUDIT.md",
+    "reports/data_audit/length_consistency_unaligned.json",
+    "reports/data_audit/aligned_positional_diagnostics.json",
+    "docs/HANDOFF_WORKFLOW.md",
+    "reports/runs/20260924-014331-S00C-afeafae/public/SOURCE_HASH_BEFORE.json",
+    "reports/runs/20260924-014331-S00C-afeafae/public/SOURCE_HASH_AFTER.json"
+  ]
+}

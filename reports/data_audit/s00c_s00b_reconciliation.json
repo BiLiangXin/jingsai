@@ -1,0 +1,87 @@
+{
+  "all_equal": true,
+  "checks": {
+    "aligned_train_candidate_active_position_count": {
+      "equal": true,
+      "s00b": 83672,
+      "s00c": 83672
+    },
+    "aligned_train_sample_count": {
+      "equal": true,
+      "s00b": 3395,
+      "s00c": 3395
+    },
+    "aligned_train_text_inactive_nonzero": {
+      "equal": true,
+      "s00b": 86078,
+      "s00c": 86078
+    },
+    "aligned_valid_candidate_active_position_count": {
+      "equal": true,
+      "s00b": 18628,
+      "s00c": 18628
+    },
+    "aligned_valid_sample_count": {
+      "equal": true,
+      "s00b": 728,
+      "s00c": 728
+    },
+    "aligned_valid_text_inactive_nonzero": {
+      "equal": true,
+      "s00b": 17772,
+      "s00c": 17772
+    },
+    "unaligned_train_audio_nonzero_after_length_count": {
+      "equal": true,
+      "s00b": 0,
+      "s00c": 0
+    },
+    "unaligned_train_audio_zero_inside_declared_length_count": {
+      "equal": true,
+      "s00b": 0,
+      "s00c": 0
+    },
+    "unaligned_train_sample_count": {
+      "equal": true,
+      "s00b": 3395,
+      "s00c": 3395
+    },
+    "unaligned_train_vision_nonzero_after_length_count": {
+      "equal": true,
+      "s00b": 36928,
+      "s00c": 36928
+    },
+    "unaligned_train_vision_zero_inside_declared_length_count": {
+      "equal": true,
+      "s00b": 30,
+      "s00c": 30
+    },
+    "unaligned_valid_audio_nonzero_after_length_count": {
+      "equal": true,
+      "s00b": 0,
+      "s00c": 0
+    },
+    "unaligned_valid_audio_zero_inside_declared_length_count": {
+      "equal": true,
+      "s00b": 0,
+      "s00c": 0
+    },
+    "unaligned_valid_sample_count": {
+      "equal": true,
+      "s00b": 728,
+      "s00c": 728
+    },
+    "unaligned_valid_vision_nonzero_after_length_count": {
+      "equal": true,
+      "s00b": 8455,
+      "s00c": 8455
+    },
+    "unaligned_valid_vision_zero_inside_declared_length_count": {
+      "equal": true,
+      "s00b": 0,
+      "s00c": 0
+    }
+  },
+  "differences": [],
+  "source": "S00B published aggregate reports and independent S00C recomputation"
+}

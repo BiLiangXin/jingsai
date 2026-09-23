@@ -80,6 +80,23 @@ class HandoffTests(unittest.TestCase):
             with patch.object(handoff, "ROOT", root), self.assertRaisesRegex(handoff.HandoffError, "Unsafe acceptance"):
                 handoff.validate_acceptance(a, "S01")
 
+    def test_final_review_update_refreshes_acceptance_hash(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            review = root / "CHATGPT_REVIEW.md"
+            review.write_text("status: `READY`\n", encoding="utf-8")
+            acceptance = root / "reports/stages/S01/acceptance.json"
+            acceptance.parent.mkdir(parents=True)
+            acceptance.write_text(json.dumps({"stage": "S01", "evidence": [{
+                "requirement": "review", "path": "CHATGPT_REVIEW.md",
+                "sha256": hashlib.sha256(review.read_bytes()).hexdigest()}]}), encoding="utf-8")
+            review.write_text("status: `SUCCESS`\n", encoding="utf-8")
+            with patch.object(handoff, "ROOT", root):
+                with self.assertRaisesRegex(handoff.HandoffError, "hash mismatch"):
+                    handoff.validate_acceptance(acceptance, "S01")
+                handoff.refresh_acceptance("S01", "r12345", ["CHATGPT_REVIEW.md"])
+                handoff.validate_acceptance(acceptance, "S01")
+
     def test_authorized_real_run_preflight(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
@@ -119,6 +136,12 @@ class HandoffTests(unittest.TestCase):
             self.assertEqual(handoff.exact_stage(paths, "message"), "a" * 40)
         self.assertIn(("git", "add", "--", *paths), calls)
         self.assertFalse(any("-A" in x or "--all" in x for call in calls for x in call))
+
+    def test_porcelain_leading_status_space_is_preserved(self):
+        raw = " M CHATGPT_REVIEW.md\n?? docs/S00C_SUPPORT_EVIDENCE.md\n"
+        with patch.object(handoff, "command", return_value=SimpleNamespace(stdout=raw)):
+            self.assertEqual(handoff.worktree_changed_paths(),
+                             {"CHATGPT_REVIEW.md", "docs/S00C_SUPPORT_EVIDENCE.md"})
 
     def test_index_records_live_ref_and_exact_metadata(self):
         value = handoff.latest_index("S01", "S01_EXAMPLE", "r12345", "a" * 40, "b" * 40, {"url": "https://example.test"}, ["docs/evidence.md"])

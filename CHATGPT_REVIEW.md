@@ -1,75 +1,52 @@
-# Current Review
+# Current Review — S00C support boundary evidence
 
-## S00B research review handoff
-
-task_id: `S00B_REAL_DATA_AUDIT`
-run_id: `20260924-001338-S00B-fc277357`
-status: `SUCCESS`
+task_id: `S00C_SUPPORT_BOUNDARY_EVIDENCE_AND_REAL_HANDOFF`
+run_id: `20260924-014331-S00C-afeafae`
+status: `READY_FOR_AUTOMATED_HANDOFF`
 repository: `BiLiangXin/jingsai`
 branch: `codex/mosei-auto`
-baseline_sha: `fc277357e9583190d6be786221b8b3407fa957f8`
-implementation_commit: `b8f839bb32b8c75827d9cd20dc618885a35cde4f`
-metadata_commit: `branch HEAD after final metadata push`
-release_tag: `codex-run-20260924-001338-S00B-fc277357`
-release_url: `https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260924-001338-S00B-fc277357`
-review_asset: `review-20260924-001338-S00B-fc277357.zip`
-review_asset_size: `37012 bytes`
-review_asset_sha256: `c2fc911b91db6835d7112586fb88d7c55a1ebf415a6d0590def638f9ff83c7d3`
+baseline_commit: `afeafaebd2d5a158ee1e5ce28c3e1233159e82ed`
+previous_stage_implementation_commit: `b8f839bb32b8c75827d9cd20dc618885a35cde4f`
+implementation_commit: `PENDING_PUBLICATION`
+metadata_commit: `PENDING_PUBLICATION`
+release_url: `PENDING_PUBLICATION`
+release_tag: `PENDING_PUBLICATION`
+review_asset: `PENDING_PUBLICATION`
 
-## Scope and source protection
+## Real run and source integrity
 
-VERIFIED: The only deserialized official files were Attachment 2 `aligned_50.pkl` and `unaligned_50.pkl`, from the user-confirmed local official data root. Local trust was explicit in gitignored `configs/paths.local.json`. Source sizes, mtimes and SHA256 match before and after. No source mutation occurred.
+VERIFIED: The S00C run read the two trusted official Attachment 2 feature PKLs sequentially and calculated only train/valid numerical diagnostics. Both before/after source fingerprints match; the current fingerprints also match the S00B published source records. No original file was modified. Test was not indexed for new diagnostics. Attachment 3/4 content was not opened. See `reports/runs/20260924-014331-S00C-afeafae/RUN.json`, public source hash records and `reports/data_audit/s00c_source_mutation_check.json`.
 
-Attachment 3: `CONTENT_NOT_INSPECTED=true`. Attachment 4: `FEATURE_CONTENT_NOT_INSPECTED=true`; `VIDEO_CONTENT_NOT_INSPECTED=true`. Their inventories used filesystem metadata only. No model was trained, and no Q1 feature extraction, video analysis, final version selection, padding definition or missing definition was performed.
+An earlier local attempt with a different run ID stopped at a report-layer lookup error after source integrity verification. Its evidence remains in its ignored private directory; it was never published. The corrected run `20260924-014331-S00C-afeafae` completed and independently reconciled 16 S00B facts.
 
-## Verified data facts
+The first automatic handoff invocation stopped in pre-Git validation because its porcelain status parser dropped a significant leading space. No Git write or Release occurred in that attempt. The parser and synthetic regression test were corrected before retrying; the failed attempt record remains in this run's ignored private directory.
 
-- **Schema and count:** Both PKLs contain train/valid/test with 3395/728/727 samples, 4850 total per version. Shapes and dtypes are in the two schema files. Aligned `text/audio/vision` are `(N,50,768)/(N,50,74)/(N,50,35)`; unaligned `audio/vision` use 500 positions. `text_bert` is `(N,3,50)`. Both PKLs lack `annotations`; unaligned has `audio_lengths` and `vision_lengths`. All field first dimensions agree.
-- **Competition count comparison:** Observed 4850 per version matches the separately specified 4850. Attachment 1 observed 100 videos and 37 folders matches the specified 100/37. There is no `COMPETITION_SPEC_MISMATCH` for these counts.
-- **IDs:** Zero empty, malformed or duplicate IDs; zero exact ID or video_id cross-split overlap. Version ID sets and order agree for all splits.
-- **Labels:** Attachment 2 `label.xlsx` matched all 4123 train/valid IDs. Negative/Neutral/Positive map to 0/1/2. Regression, classification and annotation agree with zero mismatches; strict regression zero matches Neutral. Train/valid values are finite and in `[-3,3]`. Test label existence, shape and legal range were checked, and version label equality is true without publishing values.
-- **Test quarantine:** `TEST_LABEL_DISTRIBUTION_QUARANTINED=true`. Test cells in the workbook were not accessed; no test detailed distribution, sample-level label or test research selection was produced.
-- **Text and zeros:** Channel 1 of `text_bert` is an inferred attention-mask candidate, not a final padding rule. No train/valid `text` feature rows are exactly zero, including candidate-inactive positions. Zero-row/run summaries and aligned candidate-active contingencies are published as aggregate structural evidence only.
-- **Unaligned lengths:** Both length fields are integer-like and in range. Audio has zero nonzero rows after declared length. Vision has 36,928 train and 8,455 valid nonzero rows after declared length; this discrepancy needs research review before any support rule is frozen.
-- **Version consistency:** IDs and labels agree across versions; train/valid raw_text and text features agree. Test identity and label equality are booleans only.
-- **Finite values:** No NaN or Inf in text/audio/vision. Whole-vision-zero samples and internal zero runs were retained.
-- **Attachments:** Attachment 1 has 100 videos, 37 folders, 100 `label-100.xlsx` rows, required columns and zero key mismatches. Attachment 3 has 60 PKLs, 30 per version. Attachment 4 has 40 PKLs and 40 MP4s, with 20 matched feature/video names per version.
+## S00B baseline reproduction
 
-## Tests, Gate and safety
+VERIFIED: Both feature versions again have train/valid 3,395/728 samples. Unaligned audio has zero nonzero rows after declared length; vision has 36,928/8,455. Train vision has 30 zero rows inside declared length, all from 30 whole-zero sequences with declared length 1. Aligned candidate-active positions and inactive-nonzero continuous text counts also match. All 16 reconciliation checks are equal. See `reports/data_audit/s00c_s00b_reconciliation.json`.
 
-Actual test command: `python -m pytest -q tests/test_stage_s00b_audit.py tests/test_stage_s00a_bootstrap.py` — **35 passed, 0 failed**. These are synthetic engineering tests; real audit execution is separately evidenced by the run and reports.
+## Targeted boundary results
 
-The first post-commit check found that the inherited S00A compatibility test expected the `# Current Review` heading. The heading was restored and the full 35-test suite and Gate were rerun successfully; no test or Gate rule was weakened.
+VERIFIED: After-boundary vision nonzero rows occur in 618/3,395 train samples and 141/728 valid samples. No affected sample has a single nonzero row immediately at the declared boundary. The first nonzero offsets and extension lengths are heterogeneous, and median nonzero-row norms inside versus after are of similar magnitude. Audio supplies a contrasting zero-after-length pattern. The complete aggregate distributions and length bins are in `reports/data_audit/s00c_vision_length_boundary.json`.
 
-Gate: **24 PASS, 0 FAIL, 0 SKIPPED, 0 BLOCKED**. Source mutation and public safety scans passed. No original dataset path is tracked in the branch tree or branch history. The explicit review ZIP member plan excludes original data, private artifacts, local configuration and credentials.
+INFERRED: The observed vision pattern does not fit a universal off-by-one or single fixed offset. UNKNOWN: whether post-length vision values are genuine observations, extraction artifacts or unusable values. A producer definition or independently verified feature-to-source alignment is needed. Official lengths were not replaced or reinterpreted as a final support rule.
 
-Git: initial audit commit `1107af7d9857186f8bb6cf17007fd747068a4924`; passing implementation commit `b8f839bb32b8c75827d9cd20dc618885a35cde4f`. Both were ordinary commits pushed to `codex/mosei-auto`; no force push or history rewrite was used. The final metadata commit is the branch HEAD after the last push.
+## Aligned text and structural zeros
 
-Release: `codex-run-20260924-001338-S00B-fc277357` at [GitHub Release](https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260924-001338-S00B-fc277357). GitHub reports target `b8f839bb32b8c75827d9cd20dc618885a35cde4f` and one 37,012-byte review ZIP asset. The local and downloaded asset SHA256 both equal `c2fc911b91db6835d7112586fb88d7c55a1ebf415a6d0590def638f9ff83c7d3`. The Release ZIP is the public review snapshot from the passing implementation commit; this branch review adds publication verification.
+VERIFIED: Channel 1 of aligned `text_bert` is binary and continuous-prefix in every train/valid sample. Candidate-inactive continuous `text` has 86,078/17,772 nonzero rows. Tail repetition and row-norm distributions are in `reports/data_audit/s00c_text_mask_diagnostics.json`. INFERRED: channel 1 remains an attention-mask candidate only; it does not define final padding for continuous text.
 
-## Failures, blockers and unknowns
+VERIFIED: Exact-zero runs differ by modality and interface. Aligned vision has 110/15 whole-zero samples; unaligned vision has 30/0. Prefix, suffix, internal, multiple internal, candidate-active overlap and official-length boundary cross-statistics are in `reports/data_audit/s00c_zero_mechanism_matrix.json`. UNKNOWN: these zero structures do not establish padding, missingness or invalid observation.
 
-Failures: **NONE**. Current blockers: **NONE**. Unknowns: final aligned/unaligned selection, support and observed mask semantics, whether any structural zero is missing or padding, interpretation of unaligned vision values after declared length, and genuine feature-to-time mapping. No research semantic change was adopted.
+## Tests, Gate and publication
 
-`PROPOSED_RESEARCH_CHANGE: NONE`. D-S00B-01 through D-S00B-04 remain unchanged. Main Research Chat must review the vision-length discrepancy and aligned candidate-mask evidence before freezing subsequent research definitions.
+Actual engineering test command: `python -m pytest -q tests` — 80 passed, 0 failed, exit code 0. Synthetic tests are separate from the real-data run. S00C Gate: 12/12 PASS, with no FAIL, SKIPPED or BLOCKED; see `reports/runs/20260924-014331-S00C-afeafae/GATE.json`. The public-file safety scan and Git raw-data protection check are recorded by the Gate. Release fields above are populated only after remote target, asset size and downloaded SHA256 verification.
 
-## Key files
+## Research review boundary
 
-- `reports/data_audit/DATA_AUDIT.md`
-- `docs/DATA_CONTRACT_EVIDENCE.md`
-- `reports/data_audit/schema_aligned.json` and `schema_unaligned.json`
-- `reports/data_audit/label_mapping_train_valid.json`
-- `reports/data_audit/zero_run_summary.csv` and `zero_position_summary.csv`
-- `reports/data_audit/length_consistency_unaligned.json`
-- `reports/data_audit/aligned_positional_diagnostics.json`
-- `reports/data_audit/attachment1_inventory.json`, `attachment3_inventory.json`, `attachment4_inventory.json`
-- `reports/data_audit/source_mutation_check.json`
-- `reports/runs/20260924-001338-S00B-fc277357/GATE.json`
-- `reports/runs/20260924-001338-S00B-fc277357/TEST_RESULTS.json`
-- `reports/runs/20260924-001338-S00B-fc277357/RUN.json`
-- `reports/runs/20260924-001338-S00B-fc277357/PUBLISH_RECEIPT.json`
-- `reports/stages/S00B/acceptance.json`
+Candidate data-contract meanings, alternatives, limits and independent evidence requirements are in `docs/S00C_SUPPORT_EVIDENCE.md`. Main Research Chat must decide whether and how to interpret vision lengths, text candidate mask and structural zeros. The existing `DECISIONS.md` remains unchanged. No aligned/unaligned final choice, missing/padding rule, model or S01 stage is approved.
+
+`PROPOSED_RESEARCH_CHANGE: NONE`.
 
 `PENDING_RESEARCH_REVIEW`
 `NEXT_STAGE_NOT_AUTHORIZED`
-`STOPPED_AFTER_S00B`
+`STOPPED_AFTER_S00C`

@@ -42,7 +42,7 @@ Before Git writes, it verifies the active task ID and `research_authorized: true
 2. Scan explicit public files, run `git status --short`, stage exact pathspecs, inspect `git diff --cached --name-status` and staged content, and make an ordinary implementation commit/push.
 3. Build the Review ZIP from the approved files. Create a Release whose target is the exact implementation SHA. Verify tag target and asset size; download the asset to the ignored run/private directory and compare SHA256.
 4. Write `PUBLISH_RECEIPT.json`, update the root review and acceptance hashes, then make and push an ordinary metadata commit.
-5. Write `state/LATEST_RUN.json` with the exact implementation and metadata SHAs, Review/Release paths and core public evidence. Make and push a final index commit; verify remote HEAD and Release again.
+5. Refresh and verify stage acceptance hashes after the final Review status and metadata update. Write `state/LATEST_RUN.json` with the exact implementation and metadata SHAs, Review/Release paths and core public evidence. Make and push a final index commit; verify remote HEAD and Release again.
 
 `branch_head.ref` in the index is a live Git ref. `branch_head.verified_stage_completion_sha` records the exact metadata commit at stage completion. The index commit cannot contain its own SHA, so consumers resolve `branch_head.ref` to get the newest branch HEAD. The index never authorizes the next research stage by itself.
 

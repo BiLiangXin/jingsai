@@ -260,6 +260,12 @@ def load_release(tag: str) -> dict:
     return json.loads(command("gh", "release", "view", tag, "--repo", "BiLiangXin/jingsai", "--json", "tagName,targetCommitish,assets,url,isDraft").stdout)
 
 
+def worktree_changed_paths() -> set[str]:
+    # Porcelain's leading status column is significant; git() strips stdout.
+    lines = command("git", "status", "--porcelain", "--untracked-files=all").stdout.splitlines()
+    return {line[3:].replace("\\", "/") for line in lines if line}
+
+
 def set_review_field(text: str, key: str, value: str) -> str:
     pattern = re.compile(rf"(?m)^{re.escape(key)}:\s*.*$")
     replacement = f"{key}: `{value}`"
@@ -313,9 +319,8 @@ def publish(manifest_path: Path) -> dict:
     if "not found" not in release_probe.stderr.lower():
         raise HandoffError("Cannot confirm Release tag availability")
     files, run_dir = validate_run(manifest)
-    existing_changes = set(git("status", "--porcelain", "--untracked-files=all").splitlines())
-    for line in existing_changes:
-        if line and line[3:].replace("\\", "/") not in files:
+    for changed in worktree_changed_paths():
+        if changed not in files:
             raise HandoffError("Unrelated workspace changes present; review them before publication")
     manifest_rows = [{"path": x, "size": (ROOT / x).stat().st_size, "sha256": sha256(ROOT / x)} for x in files]
     manifest_relative = f"reports/runs/{run_id}/MANIFEST.json"
@@ -351,6 +356,8 @@ def publish(manifest_path: Path) -> dict:
     review = set_review_field(review_path.read_text(encoding="utf-8"), "status", "SUCCESS")
     review = set_review_field(review, "metadata_commit", metadata)
     review_path.write_text(review, encoding="utf-8")
+    refresh_acceptance(stage, run_id, ["CHATGPT_REVIEW.md"])
+    validate_acceptance(ROOT / "reports" / "stages" / stage / "acceptance.json", stage)
     evidence = [x for x in files if x.startswith("docs/") or x.startswith("reports/data_audit/") or x.startswith(f"reports/stages/{stage}/")]
     evidence += [f"reports/runs/{run_id}/RUN.json", f"reports/runs/{run_id}/GATE.json", f"reports/runs/{run_id}/TEST_RESULTS.json", f"reports/runs/{run_id}/MANIFEST.json", receipt_relative]
     index = latest_index(stage, task_id, run_id, implementation, metadata, release, list(dict.fromkeys(evidence)))
