@@ -1,3 +1,3 @@
 # S00A summary
 
-Run: `20260923-223452-S00A-50cd572e`. The specified remote main SHA was verified, a clean sibling clone was established, and the development branch was created. Doctor and 16 synthetic engineering tests passed. No original competition data was read beyond directory names, copied, tracked, or packaged. Research stage S00B was not started. Publication metadata is finalized after remote verification.
+Remote main 50cd572e47274903b43230dcd3add65f34447c84 was verified. A clean official sibling clone was established. Two engineering files were selectively migrated; governance and the S00A flow were rebuilt. Doctor and 16 synthetic engineering tests passed. The implementation was committed and pushed to codex/mosei-auto. The review Release was published and its downloaded asset matched the local SHA256. No competition data entered Git or the ZIP. S00B was not started.

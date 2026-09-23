@@ -1,4 +1,6 @@
 {
-  "review_zip": null,
-  "release": null
+  "review_zip": "review-20260923-223452-S00A-50cd572e.zip",
+  "release": "https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260923-223452-S00A-50cd572e",
+  "sha256": "4bc5c2ff2e1aa179d5e35b27513cc7614a825b5e34fda4a98f04b0956b954bfb",
+  "size": 9982
 }

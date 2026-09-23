@@ -1,9 +1,9 @@
 {
   "run_id": "20260923-223452-S00A-50cd572e",
   "task_id": "S00A_LOCAL_RECOVERY_AND_BOOTSTRAP",
-  "status": "IN_PROGRESS",
+  "status": "SUCCESS",
   "started_at": "2026-09-23T14:37:09.451615+00:00",
-  "finished_at": null,
+  "finished_at": "2026-09-23T14:40:34.470394+00:00",
   "expected_main_sha": "50cd572e47274903b43230dcd3add65f34447c84",
   "verified_remote_main_sha": "50cd572e47274903b43230dcd3add65f34447c84",
   "old_source_workspace": "<local_old_E>",
@@ -11,8 +11,8 @@
   "source_branch": "main",
   "working_branch": "codex/mosei-auto",
   "origin": "https://github.com/BiLiangXin/jingsai.git",
-  "implementation_commit": null,
-  "metadata_commit": null,
+  "implementation_commit": "048d7f5a512bc7f48e0c9bef3a98039f6bae13c0",
+  "metadata_commit": "codex/mosei-auto HEAD",
   "commands_executed": [
     "git ls-remote <origin> refs/heads/main",
     "git clone <origin> <official_repo>",
@@ -25,7 +25,14 @@
     "git rev-list --objects --all",
     "python tools/migration_inventory.py <local_old_E>",
     "python tools/mosei_flow.py doctor",
-    "python -m unittest discover -s tests -p test_stage_s00a*.py -v"
+    "python -m unittest discover -s tests -p test_stage_s00a*.py -v",
+    "git commit <implementation>",
+    "git push -u origin codex/mosei-auto",
+    "python tools/mosei_flow.py package --run-id <run_id>",
+    "python tools/mosei_flow.py publish --run-id <run_id> --target <implementation_sha>",
+    "gh release view <tag> --json tagName,targetCommitish,assets,url,isDraft",
+    "gh release download <tag> --pattern <review_zip> --dir <run_private>",
+    "python -m unittest discover -s tests -p test_stage_s00a*.py -q"
   ],
   "tests_executed": [
     "T01-T16"
@@ -34,14 +41,14 @@
   "files_recreated": 6,
   "files_skipped": 70,
   "gate_summary": {
-    "BLOCKED": 0,
-    "SKIPPED": 1,
     "FAIL": 0,
-    "PASS": 5
+    "PASS": 6,
+    "SKIPPED": 0,
+    "BLOCKED": 0
   },
   "blocking_issues": [],
-  "release_tag": null,
-  "release_url": null,
+  "release_tag": "codex-run-20260923-223452-S00A-50cd572e",
+  "release_url": "https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260923-223452-S00A-50cd572e",
   "raw_data_tracked_count": 0,
   "raw_data_packaged_count": 0,
   "secret_findings": 0,

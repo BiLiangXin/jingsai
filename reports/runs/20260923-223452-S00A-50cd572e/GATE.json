@@ -51,16 +51,18 @@
     {
       "id": "G06",
       "name": "review ZIP and publication",
-      "status": "SKIPPED",
-      "evidence": [],
-      "details": "performed after implementation commit"
+      "status": "PASS",
+      "evidence": [
+        "PUBLISH_RECEIPT.json"
+      ],
+      "details": "Published; remote target, asset size, and downloaded SHA256 verified"
     }
   ],
   "summary": {
-    "BLOCKED": 0,
-    "SKIPPED": 1,
     "FAIL": 0,
-    "PASS": 5
+    "PASS": 6,
+    "SKIPPED": 0,
+    "BLOCKED": 0
   },
   "passed": true
 }
