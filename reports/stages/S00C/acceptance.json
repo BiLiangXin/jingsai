@@ -120,12 +120,12 @@
     {
       "requirement": "CHATGPT_REVIEW.md",
       "path": "CHATGPT_REVIEW.md",
-      "sha256": "9a0fac7fd75423d487307d041bbec42386aacf9e64bdf3c0f69a038b67360d65"
+      "sha256": "09435c8bcd223606fda20899a6c206b91574990d7b0986789130996943c7834e"
     },
     {
       "requirement": "RUN.json",
       "path": "reports/runs/20260924-014331-S00C-afeafae/RUN.json",
-      "sha256": "1fa7b87dd4fb78208e37a897f2dcffce09dc945e5d12bdcfe3b8e35ad285f181"
+      "sha256": "5f292f6a21dea9716b317d9786c8d512f5a7bbd45935e4a8e57e45818f1e3ab4"
     },
     {
       "requirement": "TEST_RESULTS.json",
@@ -136,6 +136,11 @@
       "requirement": "HANDOFF_INPUTS.json",
       "path": "reports/runs/20260924-014331-S00C-afeafae/public/HANDOFF_INPUTS.json",
       "sha256": "28a396e3d987b6ecb6cb24dd0a4879842a5a37222681e7272be0f8df68b07a81"
+    },
+    {
+      "requirement": "PUBLISH_RECEIPT.json",
+      "path": "reports/runs/20260924-014331-S00C-afeafae/PUBLISH_RECEIPT.json",
+      "sha256": "7cc180ece327e509770c23de9891d4f931a4532b27daf96bdf52edead044bd3b"
     }
   ]
 }

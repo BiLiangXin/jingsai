@@ -2,16 +2,16 @@
 
 task_id: `S00C_SUPPORT_BOUNDARY_EVIDENCE_AND_REAL_HANDOFF`
 run_id: `20260924-014331-S00C-afeafae`
-status: `READY_FOR_AUTOMATED_HANDOFF`
+status: `PUBLICATION_VERIFIED_PENDING_INDEX`
 repository: `BiLiangXin/jingsai`
 branch: `codex/mosei-auto`
 baseline_commit: `afeafaebd2d5a158ee1e5ce28c3e1233159e82ed`
 previous_stage_implementation_commit: `b8f839bb32b8c75827d9cd20dc618885a35cde4f`
-implementation_commit: `PENDING_PUBLICATION`
+implementation_commit: `98f70db69f750c3f1b27b17f3c7fab25a0493d77`
 metadata_commit: `PENDING_PUBLICATION`
-release_url: `PENDING_PUBLICATION`
-release_tag: `PENDING_PUBLICATION`
-review_asset: `PENDING_PUBLICATION`
+release_url: `https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260924-014331-S00C-afeafae`
+release_tag: `codex-run-20260924-014331-S00C-afeafae`
+review_asset: `review-20260924-014331-S00C-afeafae.zip`
 
 ## Real run and source integrity
 
@@ -50,3 +50,7 @@ Candidate data-contract meanings, alternatives, limits and independent evidence 
 `PENDING_RESEARCH_REVIEW`
 `NEXT_STAGE_NOT_AUTHORIZED`
 `STOPPED_AFTER_S00C`
+
+## Verified automatic handoff
+
+Release target: `98f70db69f750c3f1b27b17f3c7fab25a0493d77`. Asset SHA256: `6de70cee0d776361e07acb68d1eed94044f7590498941a6f92c516bd2982dfe0`. Downloaded SHA256 matches. Stage remains `PENDING_RESEARCH_REVIEW`; `NEXT_STAGE_NOT_AUTHORIZED`.

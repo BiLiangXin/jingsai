@@ -37,6 +37,8 @@
     "valid": "targeted numeric diagnostics"
   },
   "stage_activation_commit": "afeafaebd2d5a158ee1e5ce28c3e1233159e82ed",
-  "status": "SUCCESS",
-  "task_id": "S00C_SUPPORT_BOUNDARY_EVIDENCE_AND_REAL_HANDOFF"
+  "status": "PUBLICATION_VERIFIED_PENDING_INDEX",
+  "task_id": "S00C_SUPPORT_BOUNDARY_EVIDENCE_AND_REAL_HANDOFF",
+  "implementation_commit": "98f70db69f750c3f1b27b17f3c7fab25a0493d77",
+  "release_url": "https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260924-014331-S00C-afeafae"
 }
