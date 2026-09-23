@@ -1,0 +1,15 @@
+{
+  "task": "OFFICIAL_WORKSPACE_AND_AUTOMATIC_HANDOFF",
+  "data_kind": "engineering_only",
+  "status": "PASS",
+  "passed": true,
+  "checks": [
+    {"id": "W01", "status": "PASS", "requirement": "Official clone, origin and branch verified; safely fast-forwarded to S00B remote HEAD", "evidence": "reports/workflow/HANDOFF_ENGINEERING_VALIDATION.md"},
+    {"id": "W02", "status": "PASS", "requirement": "Existing E-S00B has no nonignored uncommitted files and shares the verified S00B HEAD", "evidence": "reports/workflow/HANDOFF_ENGINEERING_VALIDATION.md"},
+    {"id": "W03", "status": "PASS", "requirement": "S00B research decisions preserved; S01 remains unauthorized", "evidence": "state/NEXT_ACTIONS.md"},
+    {"id": "W04", "status": "PASS", "requirement": "Engineering tests actually run", "evidence": "47 passed, 0 failed: python -m pytest -q tests/test_stage_handoff.py tests/test_stage_s00b_audit.py tests/test_stage_s00a_bootstrap.py"},
+    {"id": "W05", "status": "PASS", "requirement": "New and updated public text files passed safety scanning", "evidence": "reports/workflow/HANDOFF_ENGINEERING_VALIDATION.md"},
+    {"id": "W06", "status": "PASS", "requirement": "No raw dataset paths are tracked", "evidence": "git ls-files E题数据/** returned zero paths"},
+    {"id": "W07", "status": "PASS", "requirement": "Stable index resolves to existing S00B evidence and verified Release", "evidence": "state/LATEST_RUN.json"}
+  ]
+}

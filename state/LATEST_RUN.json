@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "latest_completed_stage": "S00B",
+  "task_id": "S00B_REAL_DATA_AUDIT",
+  "run_id": "20260924-001338-S00B-fc277357",
+  "repository": "BiLiangXin/jingsai",
+  "branch": "codex/mosei-auto",
+  "branch_head": {
+    "ref": "refs/heads/codex/mosei-auto",
+    "verified_stage_completion_sha": "4b0aa79b059db150f74c10cfe284781a211cda53"
+  },
+  "implementation_commit": "b8f839bb32b8c75827d9cd20dc618885a35cde4f",
+  "metadata_commit": "4b0aa79b059db150f74c10cfe284781a211cda53",
+  "release": {
+    "tag": "codex-run-20260924-001338-S00B-fc277357",
+    "url": "https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260924-001338-S00B-fc277357",
+    "target": "b8f839bb32b8c75827d9cd20dc618885a35cde4f",
+    "asset_name": "review-20260924-001338-S00B-fc277357.zip",
+    "asset_size_bytes": 37012,
+    "local_sha256": "c2fc911b91db6835d7112586fb88d7c55a1ebf415a6d0590def638f9ff83c7d3",
+    "downloaded_sha256": "c2fc911b91db6835d7112586fb88d7c55a1ebf415a6d0590def638f9ff83c7d3"
+  },
+  "review_path": "CHATGPT_REVIEW.md",
+  "core_public_evidence_paths": [
+    "docs/DATA_CONTRACT_EVIDENCE.md",
+    "reports/data_audit/DATA_AUDIT.md",
+    "reports/data_audit/schema_aligned.json",
+    "reports/data_audit/schema_unaligned.json",
+    "reports/data_audit/length_consistency_unaligned.json",
+    "reports/data_audit/aligned_positional_diagnostics.json",
+    "reports/data_audit/source_mutation_check.json",
+    "reports/runs/20260924-001338-S00B-fc277357/RUN.json",
+    "reports/runs/20260924-001338-S00B-fc277357/GATE.json",
+    "reports/runs/20260924-001338-S00B-fc277357/TEST_RESULTS.json",
+    "reports/runs/20260924-001338-S00B-fc277357/PUBLISH_RECEIPT.json",
+    "reports/stages/S00B/acceptance.json"
+  ],
+  "next_stage_authorized": false,
+  "handoff_status": "PENDING_RESEARCH_REVIEW"
+}
