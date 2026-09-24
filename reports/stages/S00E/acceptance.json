@@ -13,7 +13,7 @@
     {
       "requirement": "CHATGPT_REVIEW.md",
       "path": "CHATGPT_REVIEW.md",
-      "sha256": "1eb9e350fe1239a96be10b5f2a22607afdec07c244330361519aee571f2ae2cf"
+      "sha256": "dce598ff91d16b8e97d157cee6fd702aeba908612742f6ee6a03018ea502d544"
     },
     {
       "requirement": "DECISIONS.md",
@@ -118,7 +118,7 @@
     {
       "requirement": "RUN.json",
       "path": "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/RUN.json",
-      "sha256": "6a306cbc495ef5151775ab8aef102cd4fa21c9e7461ecc33a94482ab2412dd03"
+      "sha256": "b8e7f4755b5e6f8530e50a9a16ffc0b40d778e06ab1a7758d5dac13d859396ba"
     },
     {
       "requirement": "TEST_RESULTS.json",
@@ -254,6 +254,11 @@
       "requirement": "web_chat_handoff.py",
       "path": "tools/web_chat_handoff.py",
       "sha256": "2ba02d137c3c7e7c68a19d7c51c467eac8389622843b719c06d1a0671097654a"
+    },
+    {
+      "requirement": "PUBLISH_RECEIPT.json",
+      "path": "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/PUBLISH_RECEIPT.json",
+      "sha256": "f877033495f71eee4c2bde4c9c1d83699a725d22bfa2a1725aa66fa7b9bb8d3d"
     }
   ]
 }

@@ -1,15 +1,17 @@
 # Current Review — S00E engineering hardening
+review_asset: `review-20260925-020000-S00E-ASTRA-d9e4edb.zip`
+release_tag: `codex-run-20260925-020000-S00E-ASTRA-d9e4edb`
 
 task_id: `S00E_S01_PRESTART_ENGINEERING_HARDENING`
 run_id: `20260925-020000-S00E-ASTRA-d9e4edb`
-status: `ALL_GATES_PASS_PUBLICATION_PENDING`
+status: `PUBLICATION_VERIFIED_PENDING_INDEX`
 repository: `BiLiangXin/jingsai`
 branch: `codex/mosei-auto`
 safety_governance_precommit: `078028f022cc175361cb8bf908f760087f35f709`
 workflow_governance_commit: `d9e4edb11b710a92ef33c256bfca6684162911d7`
-implementation_commit: `PENDING`
+implementation_commit: `6480bfc77ce63edca92e6a57237772cddca0c3d0`
 metadata_commit: `PENDING`
-release_url: `PENDING`
+release_url: `https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260925-020000-S00E-ASTRA-d9e4edb`
 
 ## Verified engineering evidence
 
@@ -22,3 +24,7 @@ CPU and CUDA official aligned TRAIN batch-two bridge, masked pooling and disposa
 E19 passed with independently reviewed hashes and verified exact-version native owner confirmation; E21 passed by actual read-only prepublication preflight; all 21 mandatory Gates pass. Release verification follows E21, with no circular prerequisite. Local native confirmation trusts the uncompromised Codex host and OS account and is not cryptographic authentication. Ordinary CSV removal did not erase history. Installed Torch binary origin was not independently authenticated. These limitations are recorded; no unrelated expansion is planned.
 
 S00D remains the latest completed stage until actual publication. S00E engineering result is PENDING_RESEARCH_REVIEW; NEXT_STAGE_NOT_AUTHORIZED; S01_NOT_STARTED. No PROPOSED_RESEARCH_CHANGE. Web Chat ZIP is not required; the formal Review Release asset remains required.
+
+## Verified automatic handoff
+
+Release target: `6480bfc77ce63edca92e6a57237772cddca0c3d0`. Asset SHA256: `e6cd31f0bb9af1ea6e79e5452645fec1afda2a296166db52f1e7fe41041625bf`. Downloaded SHA256 matches. Stage remains `PENDING_RESEARCH_REVIEW`; `NEXT_STAGE_NOT_AUTHORIZED`.
