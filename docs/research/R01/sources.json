@@ -1,0 +1,46 @@
+[
+  {
+    "source_id": "MUL",
+    "url": "https://aclanthology.org/P19-1656/",
+    "title": "Tsai et al. (2019), Multimodal Transformer for Unaligned Multimodal Language Sequences",
+    "locator": "Abstract; directional crossmodal attention motivation only, no formula equivalence or competition efficacy",
+    "sha256": "8755c34637021db61b83fac16681ab457b458b3213da1902439f3b97b1c159d5",
+    "size_bytes": 42768,
+    "accessed_utc": "2026-09-24T18:06:11.671572+00:00",
+    "verification": "PRIMARY_SOURCE_OPENED_AND_RELEVANT_SCOPE_READ",
+    "limitation": "No external performance transferred; no dataset or weights obtained"
+  },
+  {
+    "source_id": "GMU",
+    "url": "https://arxiv.org/abs/1702.01992",
+    "title": "Arevalo et al. (2017), Gated Multimodal Units for Information Fusion",
+    "locator": "Abstract; gating motivation only; R2 shared scalar softmax construction is our proposed variant",
+    "sha256": "694f170f793391fb69064c05a53ca90a484a5375bd9f0fe9d1e6bd439b206ef7",
+    "size_bytes": 40401,
+    "accessed_utc": "2026-09-24T18:06:14.614503+00:00",
+    "verification": "PRIMARY_SOURCE_OPENED_AND_RELEVANT_SCOPE_READ",
+    "limitation": "No external performance transferred; no dataset or weights obtained"
+  },
+  {
+    "source_id": "KD",
+    "url": "https://arxiv.org/pdf/1503.02531",
+    "title": "Hinton, Vinyals, Dean (2015), Distilling the Knowledge in a Neural Network",
+    "locator": "Section 2, PDF pages2-3, temperature probabilities and T squared soft-target scaling",
+    "sha256": "74e6689115c539db499f9d6153edecb364059926fd45402454f8210442444c5a",
+    "size_bytes": 106630,
+    "accessed_utc": "2026-09-24T18:06:15.505443+00:00",
+    "verification": "PRIMARY_SOURCE_OPENED_AND_RELEVANT_SCOPE_READ",
+    "limitation": "No external performance transferred; no dataset or weights obtained"
+  },
+  {
+    "source_id": "SEL",
+    "url": "https://www.jmlr.org/papers/volume11/cawley10a/cawley10a.pdf",
+    "title": "Cawley and Talbot (2010), On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+    "locator": "Abstract and introduction, PDF pages1-3; model selection can overfit its evaluation criterion",
+    "sha256": "db01ac8fabef3064a0297bfcf64fb9791bf35c4d03be7a51f5862260adfca206",
+    "size_bytes": 759286,
+    "accessed_utc": "2026-09-24T18:06:17.410293+00:00",
+    "verification": "PRIMARY_SOURCE_OPENED_AND_RELEVANT_SCOPE_READ",
+    "limitation": "No external performance transferred; no dataset or weights obtained"
+  }
+]

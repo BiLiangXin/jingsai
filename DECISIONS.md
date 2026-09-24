@@ -28,3 +28,8 @@ Valid status values: `UNDECIDED`, `PROVISIONAL`, `FROZEN_FOR_BASELINE`, `FROZEN`
 | ID | Status | Decision | Source |
 | --- | --- | --- | --- |
 | GOV-ASTRA-SERIAL-01 | AUTHORIZED | Astra High serial engineering with one official-tree writer; actual independent read-only Astra review and verified owner approval source; no Sol/Astra switch or mandatory Web Chat ZIP; original safety/Gates/Review Release contract retained; engineering completion precedes research resumption; ongoing project/paper evidence; S01 training remains unauthorized. D-DATA-01 through D-DATA-07 and Q1 are unchanged. | Explicit user S00E_ASTRA_LOCAL_CLOSEOUT instruction, 2026-09-25 |
+
+
+## R01 local research recommendations — 2026-09-25
+
+Source: explicit user R01_ASTRA_LOCAL_RESEARCH_CLOSEOUT. The local research author may settle ordinary design choices and publish safe research artifacts after verified S00E completion. None of these recommendations changes D-DATA-01 through D-DATA-07, authorizes S01/Q3 or approves a model. Full P01..P11 rationale/alternatives/evidence and pending R01-FREEZE-01 scope: docs/research/R01/DECISIONS.md; structured record: docs/research/R01/decisions.json. All eleven have status PROVISIONAL. R01-FREEZE-01 is PENDING_OWNER_CONFIRMATION, not FROZEN.

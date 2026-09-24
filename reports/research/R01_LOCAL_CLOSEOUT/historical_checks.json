@@ -1,0 +1,12 @@
+{
+  "revision01_zip_sha256": "3339d6c805f3d1048dd97004f1d0b083df2205b556bb528f385accd69c6cbd20",
+  "historical_standard_library_tests": 64,
+  "historical_static_checks": 28,
+  "historical_reference_cases_in_one_test": 5456,
+  "historical_results_not_rerun_as_a_whole": true,
+  "reference_source_sha256": "6c37867f97538bf17ea91688b381f311a80c9c46120390d6d01fb893f2f5c7d2",
+  "test_source_sha256": "2ebd083a24fd29b0deb68b2e004c08a7bba1ceb11b026858a04fd6b93059f211",
+  "old_result_sha256": "de78f24c46bdcfdeab6696a103dd57f8a92e54e237112e4034e743b4820bc8e8",
+  "old_static_result_sha256": "de555046d822c4b4196d709e38b6fe864fe9aaa442eb7935d732310cf621aa1b",
+  "scope": "Synthetic standard-library reference only, not NumPy/PyTorch or model performance"
+}

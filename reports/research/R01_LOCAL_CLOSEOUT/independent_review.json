@@ -1,0 +1,54 @@
+{
+  "status": "TARGETED_TECHNICAL_REVIEW_PASS",
+  "reviewer_context": "/root/r01_readonly_review",
+  "requested_model": "gpt-6-astra",
+  "requested_reasoning": "xhigh",
+  "provenance": "Actual separate collaboration agent; report transcribed from its final tool-delivered answer",
+  "scope": "Four substantive findings and gate count; no general certification",
+  "findings_remaining": [],
+  "resolved_findings": [
+    "C0/R0 checkpoint objective confound",
+    "Mean guard not sufficient for final seed17",
+    "CE catastrophic cancellation with equal large logits",
+    "Counts-only pairing accepts different sets"
+  ],
+  "independent_synthetic_probes": 15,
+  "independent_probe_exit_code": 0,
+  "author_tests_inspected_not_rerun": 63,
+  "reviewed_files_sha256": {
+    "docs/research/R01/DESIGN.md": "bb4dfd4e9bfb18fc53b2dc56bdf5fc1a6c34ae4a0ebeb565fa0be600453943ec",
+    "docs/research/R01/protocol.json": "00ae004796381c76abd57fc87da33b0ff26cdda02ab1ef32f8c2f74cdde88432",
+    "docs/research/R01/decisions.json": "a81bf20025c04128faa3412b02e3759210cdb0afd269eb926a647daad40803a7",
+    "docs/research/R01/trials.json": "a138900c5d78b09bac2800dcd9d57e8494e97ede9247b77b53f4d7e4c5f6152a",
+    "docs/research/R01/R01_experiment_matrix.csv": "b20eb777985033c75fc7ac12b72fdb762a40480b18c42c1e54fb5b4734549a0e",
+    "docs/research/R01/R01_ablation_matrix.csv": "6ae0101942255f56448d4627821d2165f139d66bae8d10b9f33fd04368451eda",
+    "research/r01/reference.py": "1cd4b73bb748284b4941625d92be89522771eff8a11e4044547e5f513ea62495",
+    "research/r01/test_reference.py": "aa9746cdecc49ae8beca60ba1fa363a2f1c6cd32825794f1fa3537b377f010df",
+    "research/r01/test_closeout.py": "db83a462aec9081c5110fbe69d202a4516f112f40f48b551d732637b617b7047",
+    "research/r01/run_checks.py": "b11270a509c724e6d4f7f6b49901f6d62063aea0f9affaa35c6d94bc01d98c34",
+    "reports/research/R01_LOCAL_CLOSEOUT/checks.json": "275694a07e3aed9d707d1e88d0679b14ef3fee9d939971c74cb6c99b057309f9"
+  },
+  "read_only": true,
+  "official_data_opened": false,
+  "official_tests_run": false,
+  "model_training": false,
+  "owner_approval": false,
+  "limitations": [
+    "Finite synthetic reference probes only",
+    "No NumPy/PyTorch implementation validation",
+    "No deployment availability-mask evidence",
+    "PROVISIONAL choices remain pending major protocol freeze"
+  ],
+  "probe_environment": {
+    "shell": "Windows PowerShell",
+    "python_distribution": "local Anaconda",
+    "python_version": null,
+    "version_not_collected": true,
+    "working_directory": "OS_TEMP",
+    "actual_command_redacted": "$reviewCode | & <LOCAL_REVIEW_PYTHON> -X utf8 -B -",
+    "path_redaction_only": true
+  },
+  "portable_probe_source": "research/r01/independent_probes.py",
+  "portable_source_status": "Equivalent source with repository-relative root; archived after review, not rerun",
+  "portable_source_sha256": "1d5a789216081a0f8ee15c9cdd7c5a0e787168eeec90a1f824c086954a5f1c74"
+}

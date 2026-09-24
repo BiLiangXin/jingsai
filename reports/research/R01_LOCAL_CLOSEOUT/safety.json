@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "mode": "PRESTAGE_TRACKED_AND_CANDIDATE",
+  "base_commit": "ec228a04e9c6579a3fd95342e4438c20425a34dc",
+  "publication_file_count": 35,
+  "payload_hashes_checked": 33,
+  "tracked_text_files_scanned": 189,
+  "findings": {},
+  "candidate_paths_scanned": 35,
+  "exact_staged_set_verified": false,
+  "index_equals_worktree_verified": false,
+  "latest_run_unchanged": true,
+  "data_contract_unchanged": true,
+  "finite_budget_checks": true,
+  "model_experiments": "NOT_RUN",
+  "exit_code": 0,
+  "limitations": [
+    "Pattern/content scan is not a universal secrecy proof",
+    "Historical Git objects were not republished or inspected for sample contents"
+  ],
+  "command": "python -X utf8 -B research/r01/publication_check.py --manifest reports/research/R01_LOCAL_CLOSEOUT/MANIFEST.json --output <RESULT_JSON>"
+}

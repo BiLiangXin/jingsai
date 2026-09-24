@@ -1,0 +1,25 @@
+{
+  "task_id": "R01_ASTRA_LOCAL_RESEARCH_CLOSEOUT",
+  "parent_task": "R01_Q2_BASELINE_AND_ROBUST_MODEL_RESEARCH_DESIGN",
+  "research_status": "LOCALLY_CONVERGED_PROVISIONAL",
+  "engineering_prerequisite": "S00E_COMPLETED_PUBLISHED_REVERIFIED",
+  "source_base_commit": "ec228a04e9c6579a3fd95342e4438c20425a34dc",
+  "canonical_design": "docs/research/R01/DESIGN.md",
+  "canonical_decisions": "docs/research/R01/decisions.json",
+  "evidence_manifest": "reports/research/R01_LOCAL_CLOSEOUT/MANIFEST.json",
+  "major_freeze": "R01-FREEZE-01 PENDING_OWNER_CONFIRMATION",
+  "approved_research_freeze": false,
+  "official_model_experiments": "NOT_RUN",
+  "metrics": null,
+  "s01_training_authorized": false,
+  "q3_started": false,
+  "web_handoff_zip_required": false,
+  "git_publication": "Resolve current branch HEAD and payload manifest; no self-referential commit hash",
+  "latest_run_unchanged": true,
+  "evidence_file_reuse": {
+    "state/PROJECT_MEMORY.md": "docs/PROJECT_SUMMARY.md",
+    "docs/RESEARCH_LOG.md": "docs/RESEARCH_LOG.md",
+    "reports/experiments/REGISTRY.jsonl": "docs/EXPERIMENT_REGISTER.json",
+    "paper/CLAIM_EVIDENCE.md": "docs/PAPER_CLAIMS.md"
+  }
+}

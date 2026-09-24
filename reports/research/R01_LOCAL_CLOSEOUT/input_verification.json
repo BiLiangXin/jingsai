@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "zip_sha256": "3339d6c805f3d1048dd97004f1d0b083df2205b556bb528f385accd69c6cbd20",
+  "md_sha256": "f841b988dd218e3de7ac0595926b5e333ae3cfaa3dfe8e78bbd96203e5950c2c",
+  "archive_members": 77,
+  "hashed_members": 76,
+  "manifest_excludes_itself": true,
+  "member_set_equal": true,
+  "member_size_sha256_verified": true,
+  "crc_verified": true,
+  "path_safety_verified": true,
+  "standalone_identical": true
+}

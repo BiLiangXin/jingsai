@@ -1,0 +1,68 @@
+{
+  "task": "R01_ASTRA_LOCAL_RESEARCH_CLOSEOUT",
+  "status": "PROVISIONAL",
+  "training_authorized": false,
+  "data_contract": "D-DATA-01..07 FROZEN_FOR_BASELINE unchanged",
+  "interface": "KNOWN_AVAILABILITY",
+  "first_recommended_cap": 39,
+  "fallback_caps": [
+    24,
+    30
+  ],
+  "expanded_cap_if_separately_approved": 66,
+  "enabled_blocks": [
+    "B",
+    "PRIOR",
+    "LATE",
+    "C0",
+    "R0",
+    "CORE"
+  ],
+  "disabled_optional_blocks": [
+    "D",
+    "T",
+    "L"
+  ],
+  "runs_by_block": {
+    "B": 24,
+    "PRIOR": 0,
+    "LATE": 0,
+    "C0": 3,
+    "R0": 3,
+    "CORE": 9,
+    "D": 6,
+    "T": 15,
+    "L": 6
+  },
+  "model_seeds": [
+    17,
+    29,
+    43
+  ],
+  "train_root": 2207,
+  "valid_root": 1103,
+  "nominal_conditions": 96,
+  "views_per_sample_per_seed": 144,
+  "random_replicates": 3,
+  "normalizer_rule": "B-CAT mean clean macroF1 descending/MAE ascending; exact tie Identity; reuse common selection",
+  "B_star_candidates": "B 8 configurations + 2 LATE + deterministic PRIOR; exclude C0",
+  "mechanism_checkpoint_objective": "attempted96 for C0/R0/R1/R2/R1-CAP",
+  "baseline_checkpoint_objective": "clean",
+  "patience": 10,
+  "min_delta_F": 0.0001,
+  "min_delta_MAE": 0.0001,
+  "max_epochs": 100,
+  "clean_guard": {
+    "epsilon_F": 0.01,
+    "epsilon_MAE": 0.05
+  },
+  "final_seed": 17,
+  "ensemble": false,
+  "resource_walltime_cap": null,
+  "retry_training_budget": 0,
+  "predictive_metrics": null,
+  "official_experiments": "NOT_RUN",
+  "selection_optimism": "same valid reused; bootstrap does not remove selection bias",
+  "s01_spec_status": "NOT_ACTIVATED",
+  "final_seed_guard": "Winner seed17 must meet epsilon against B* seed17; else B* seed17, no runner-up search"
+}

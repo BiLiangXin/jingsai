@@ -174,5 +174,33 @@
     "FAIL": 0,
     "BLOCKED": 0,
     "SKIPPED": 0
-  }
+  },
+  "research_entries": [
+    {
+      "research_id": "R01_LOCAL_CLOSEOUT",
+      "kind": "RESEARCH_DESIGN_AND_SYNTHETIC_REFERENCE",
+      "status": "LOCALLY_CONVERGED_PROVISIONAL",
+      "protocol": "docs/research/R01/protocol.json",
+      "trials": "docs/research/R01/trials.json",
+      "checks": "reports/research/R01_LOCAL_CLOSEOUT/checks.json",
+      "manifest": "reports/research/R01_LOCAL_CLOSEOUT/MANIFEST.json",
+      "source_base_commit": "ec228a04e9c6579a3fd95342e4438c20425a34dc",
+      "data_fingerprint_source": "docs/S00D_DATA_CONTRACT.md",
+      "official_data_hash_not_recomputed": true,
+      "model_seeds": [
+        17,
+        29,
+        43
+      ],
+      "mask_roots": {
+        "train": 2207,
+        "valid": 1103
+      },
+      "model_experiments": "NOT_RUN",
+      "metrics": null,
+      "training_authorized": false,
+      "failure_record": "docs/RESEARCH_LOG.md#2026-09-25--r01_astra_local_research_closeout",
+      "future_record_policy": "Record every trial/seed/attempt/config/data/code hash/environment/command/outcome including failure; never best-seed-only"
+    }
+  ]
 }

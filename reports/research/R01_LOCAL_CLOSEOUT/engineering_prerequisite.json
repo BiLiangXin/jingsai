@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "base_commit": "ec228a04e9c6579a3fd95342e4438c20425a34dc",
+  "approval": {
+    "source": "CODEX_NATIVE_USER_EVENT",
+    "thread_id": "01a0cf05-378e-7420-ad1a-e44d9faa57f3",
+    "call_id": "call_BIIRQRGIDfRcrkdPAOP6UCdx",
+    "timestamp": "2026-09-24T17:39:05.747Z",
+    "event_sha256": "a64250739a4a76bd04e3623ef5f177975c1048eb1d852ca80a03399d02164224"
+  },
+  "bound_review_files_checked": 25,
+  "bound_evidence_files_checked": 6,
+  "release_tag": "codex-run-20260925-020000-S00E-ASTRA-d9e4edb",
+  "release_target": "6480bfc77ce63edca92e6a57237772cddca0c3d0",
+  "release_url": "https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260925-020000-S00E-ASTRA-d9e4edb",
+  "release_asset_sha256": "e6cd31f0bb9af1ea6e79e5452645fec1afda2a296166db52f1e7fe41041625bf",
+  "release_asset_size": 188247,
+  "download_reverified": true,
+  "engineering_thread_status": "idle; verified using host list_threads",
+  "gate": {
+    "PASS": 21,
+    "FAIL": 0,
+    "SKIPPED": 0,
+    "BLOCKED": 0
+  }
+}

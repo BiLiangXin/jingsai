@@ -10,3 +10,10 @@ Release: https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260925-0
 Asset SHA256: `e6cd31f0bb9af1ea6e79e5452645fec1afda2a296166db52f1e7fe41041625bf`; actual downloaded SHA256 matches; size 188247 bytes. Receipt: `reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/PUBLISH_RECEIPT.json`.
 
 D-DATA-01 through D-DATA-07, Q1, test quarantine and Attachment 3/4 isolation remain unchanged. Historical CSV access is not erased by ordinary removal; installed Torch binary origin was not independently authenticated. Local native owner confirmation assumes an uncompromised Codex host/OS account and is not cryptographic authentication. These recorded limitations do not change the research contract. Model metrics remain null. No Web Chat ZIP is required.
+
+
+## Current research state — R01 local closeout
+
+R01 design is locally converged and PROVISIONAL; canonical entry docs/research/R01/README.md and independent state/LATEST_RESEARCH.json. S00E is the latest completed engineering run; state/LATEST_RUN.json stays unchanged. No official model experiments or metrics. Ordinary recommendations are recorded; R01-FREEZE-01 protocol/resource confirmation and separate execution authorization remain prerequisites. S01 and Q3 are not started. No web handoff ZIP or additional Release is required.
+
+This file is the existing PROJECT_MEMORY equivalent; docs/RESEARCH_LOG.md, docs/EXPERIMENT_REGISTER.json and docs/PAPER_CLAIMS.md are the canonical log/register/claim ledger. Do not create duplicate state/PROJECT_MEMORY.md, reports/experiments/REGISTRY.jsonl or paper/CLAIM_EVIDENCE.md. Earlier engineering checkpoints in the log are historical; current verified publication supersedes their pending wording.
