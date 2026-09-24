@@ -7,7 +7,7 @@
     {
       "requirement": "CHATGPT_REVIEW.md",
       "path": "CHATGPT_REVIEW.md",
-      "sha256": "58c97c28b0816f1e478349a271dae88ce1c0e5ccafd09cfa3c86dd8eac061b7f"
+      "sha256": "1983e21c7ff469d9eb18035d8a5e9d5366181387e1b2be0bdc48b00f81e23fbd"
     },
     {
       "requirement": "S00D_DATA_CONTRACT.md",
@@ -47,7 +47,7 @@
     {
       "requirement": "RUN.json",
       "path": "reports/runs/20260924-100153-S00D-c26aced/RUN.json",
-      "sha256": "a8a26fb46c901d6a1232a3ef2f75fc68d2eaa5e3eb78ea45fe912e6b469f42a3"
+      "sha256": "de374517ebaa62e45ac8a6de2d2b81dc0b5dde39c2d904e723920e5e06cdfae2"
     },
     {
       "requirement": "GATE.json",
@@ -58,6 +58,11 @@
       "requirement": "TEST_RESULTS.json",
       "path": "reports/runs/20260924-100153-S00D-c26aced/TEST_RESULTS.json",
       "sha256": "4637453499612ed7c8b7bbf3a839890851de80c546171f626bc4b46d63a6ce27"
+    },
+    {
+      "requirement": "PUBLISH_RECEIPT.json",
+      "path": "reports/runs/20260924-100153-S00D-c26aced/PUBLISH_RECEIPT.json",
+      "sha256": "117e94ed4ad89ca2b7774e471dc6f2a062426dd966bd12c86cd34a1a0fb8d0f7"
     }
   ]
 }

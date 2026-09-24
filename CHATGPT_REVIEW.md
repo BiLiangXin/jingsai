@@ -2,14 +2,14 @@
 
 task_id: `S00D_DATA_CONTRACT_FREEZE_AND_BASELINE_READINESS`
 run_id: `20260924-100153-S00D-c26aced`
-status: `READY_FOR_AUTOMATED_HANDOFF`
+status: `PUBLICATION_VERIFIED_PENDING_INDEX`
 repository: `BiLiangXin/jingsai`
 branch: `codex/mosei-auto`
-implementation_commit: `PENDING_PUBLICATION`
+implementation_commit: `ecb7afd14a9db6e16deb38caf393ba92321a237d`
 metadata_commit: `PENDING_PUBLICATION`
-release_url: `PENDING_PUBLICATION`
-release_tag: `PENDING_PUBLICATION`
-review_asset: `PENDING_PUBLICATION`
+release_url: `https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260924-100153-S00D-c26aced`
+release_tag: `codex-run-20260924-100153-S00D-c26aced`
+review_asset: `review-20260924-100153-S00D-c26aced.zip`
 
 ## Real contract audit
 
@@ -26,3 +26,7 @@ The full test command `python -m pytest -q tests` returned 116 passed, 0 failed 
 ## Open research decisions
 
 Unaligned's final role, final normalizer, model architecture and future missing simulation remain undecided. No `PROPOSED_RESEARCH_CHANGE` was needed; the frozen D-DATA-01 through D-DATA-07 contract was implemented without semantic change.
+
+## Verified automatic handoff
+
+Release target: `ecb7afd14a9db6e16deb38caf393ba92321a237d`. Asset SHA256: `38c3b811d3bf711a669d4147b957ad310d013848b39fa9622257dc667dcfe29b`. Downloaded SHA256 matches. Stage remains `PENDING_RESEARCH_REVIEW`; `NEXT_STAGE_NOT_AUTHORIZED`.

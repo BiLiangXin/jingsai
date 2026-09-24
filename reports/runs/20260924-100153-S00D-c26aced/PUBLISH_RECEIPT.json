@@ -1,0 +1,62 @@
+{
+  "run_id": "20260924-100153-S00D-c26aced",
+  "stage": "S00D",
+  "branch": "codex/mosei-auto",
+  "baseline_sha": "c26acedb3ac54b3ecea0a31bfa84db016873ae84",
+  "implementation_commit": "ecb7afd14a9db6e16deb38caf393ba92321a237d",
+  "implementation_staged_files": [
+    "CHATGPT_REVIEW.md",
+    "reports/runs/20260924-100153-S00D-c26aced/RUN.json",
+    "reports/runs/20260924-100153-S00D-c26aced/GATE.json",
+    "reports/runs/20260924-100153-S00D-c26aced/TEST_RESULTS.json",
+    "reports/stages/S00D/acceptance.json",
+    "reports/runs/20260924-100153-S00D-c26aced/public/HANDOFF_INPUTS.json",
+    "docs/S00D_DATA_CONTRACT.md",
+    "reports/data_contract/contract_summary.json",
+    "reports/data_contract/mask_summary.json",
+    "reports/data_contract/label_contract.json",
+    "reports/data_contract/normalization_contract.json",
+    "reports/data_contract/loader_contract.json",
+    "reports/data_contract/source_mutation_check.json",
+    "src/mosei/__init__.py",
+    "src/mosei/data/__init__.py",
+    "src/mosei/data/masks.py",
+    "src/mosei/data/data_contract.py",
+    "src/mosei/data/dataset.py",
+    "src/mosei/data/normalization.py",
+    "src/mosei/data/pooling.py",
+    "tools/s00d_contract_run.py",
+    "tools/s00d_finalize.py",
+    "tools/stage_handoff.py",
+    "tests/test_stage_s00d_contract.py",
+    "tests/test_stage_handoff.py",
+    "docs/S00C_SUPPORT_EVIDENCE.md",
+    "reports/data_audit/s00c_source_mutation_check.json",
+    "reports/runs/20260924-100153-S00D-c26aced/public/SOURCE_HASH_BEFORE.json",
+    "reports/runs/20260924-100153-S00D-c26aced/public/SOURCE_HASH_AFTER.json",
+    "reports/runs/20260924-100153-S00D-c26aced/MANIFEST.json"
+  ],
+  "actual_tests": {
+    "command": "python -m pytest -q tests",
+    "exit_code": 0,
+    "passed": 116,
+    "failed": 0
+  },
+  "gate": {
+    "PASS": 18,
+    "FAIL": 0,
+    "SKIPPED": 0,
+    "BLOCKED": 0
+  },
+  "release": {
+    "tag": "codex-run-20260924-100153-S00D-c26aced",
+    "url": "https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260924-100153-S00D-c26aced",
+    "target": "ecb7afd14a9db6e16deb38caf393ba92321a237d",
+    "asset_name": "review-20260924-100153-S00D-c26aced.zip",
+    "asset_size_bytes": 63317,
+    "local_sha256": "38c3b811d3bf711a669d4147b957ad310d013848b39fa9622257dc667dcfe29b",
+    "downloaded_sha256": "38c3b811d3bf711a669d4147b957ad310d013848b39fa9622257dc667dcfe29b"
+  },
+  "implementation_push_result": "PASS",
+  "remote_asset_verified": true
+}
