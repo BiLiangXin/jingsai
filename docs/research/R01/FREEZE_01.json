@@ -1,0 +1,135 @@
+{
+  "decision_id": "R01-FREEZE-01",
+  "status": "FROZEN_FOR_S01_PROTOCOL",
+  "authority": "MAIN_RESEARCH_OWNER_EXPLICIT_USER_APPROVAL",
+  "approval_source": "Current user message MAIN_RESEARCH_DECISION: R01-FREEZE-01, 2026-09-25",
+  "approved_source_commit": "120a0938c76dd457a3d95c5c2a243f3e451a3f67",
+  "approval_scope": "Research/experiment protocol only; not execution or model-performance approval",
+  "approved_items": [
+    {
+      "number": 1,
+      "protocol": "KNOWN_AVAILABILITY作为首轮人工缺失研究接口"
+    },
+    {
+      "number": 2,
+      "protocol": "96 nominal conditions / 144 views"
+    },
+    {
+      "number": 3,
+      "protocol": "训练mask根2207，验证mask根1103"
+    },
+    {
+      "number": 4,
+      "protocol": "model seeds=17,29,43"
+    },
+    {
+      "number": 5,
+      "protocol": "无合法人工缺失窗口时CLEAN_ONCE；不删除样本，不无限重采样"
+    },
+    {
+      "number": 6,
+      "protocol": "random replicate -> condition -> seed；等条件权重"
+    },
+    {
+      "number": 7,
+      "protocol": "B-CAT比较Identity与train-only z-score后选择公共normalizer"
+    },
+    {
+      "number": 8,
+      "protocol": "baseline clean checkpoint；C0/R0/R1/R2/R1-CAP共同attempted96 mechanism checkpoint"
+    },
+    {
+      "number": 9,
+      "protocol": "macro-F1主、MAE次"
+    },
+    {
+      "number": 10,
+      "protocol": "epsilon_F=0.01，epsilon_MAE=0.05"
+    },
+    {
+      "number": 11,
+      "protocol": "patience=10；min_delta_F=1e-4；min_delta_MAE=1e-4；max_epochs=100"
+    },
+    {
+      "number": 12,
+      "protocol": "最终固定seed17；winner seed17 clean guard失败回退B* seed17，不搜索幸运seed或runner-up"
+    },
+    {
+      "number": 13,
+      "protocol": "首轮core budget=39 fits"
+    },
+    {
+      "number": 14,
+      "protocol": "24/30仅为执行开始前确定的资源降级方案"
+    },
+    {
+      "number": 15,
+      "protocol": "D/T/L、KD、reconstruction、Huber/class-weight、cross-attention、ensemble、unaligned、TAV-local和66-fit扩展不属于首轮协议"
+    },
+    {
+      "number": 16,
+      "protocol": "D-DATA-01至D-DATA-07完全不变"
+    }
+  ],
+  "approved_source_files": [
+    {
+      "path": "docs/research/R01/DECISIONS.md",
+      "sha256": "cf943459e894089a32708ac6bf976fdbe0c340a630e31f6f104f6bb35f20deee",
+      "size_bytes": 3724
+    },
+    {
+      "path": "docs/research/R01/DESIGN.md",
+      "sha256": "bb4dfd4e9bfb18fc53b2dc56bdf5fc1a6c34ae4a0ebeb565fa0be600453943ec",
+      "size_bytes": 26343
+    },
+    {
+      "path": "docs/research/R01/protocol.json",
+      "sha256": "00ae004796381c76abd57fc87da33b0ff26cdda02ab1ef32f8c2f74cdde88432",
+      "size_bytes": 1774
+    },
+    {
+      "path": "docs/research/R01/R01_experiment_matrix.csv",
+      "sha256": "b20eb777985033c75fc7ac12b72fdb762a40480b18c42c1e54fb5b4734549a0e",
+      "size_bytes": 9929
+    },
+    {
+      "path": "docs/research/R01/R01_ablation_matrix.csv",
+      "sha256": "6ae0101942255f56448d4627821d2165f139d66bae8d10b9f33fd04368451eda",
+      "size_bytes": 7307
+    },
+    {
+      "path": "research/r01/reference.py",
+      "sha256": "1cd4b73bb748284b4941625d92be89522771eff8a11e4044547e5f513ea62495",
+      "size_bytes": 15396
+    },
+    {
+      "path": "research/r01/test_reference.py",
+      "sha256": "aa9746cdecc49ae8beca60ba1fa363a2f1c6cd32825794f1fa3537b377f010df",
+      "size_bytes": 10694
+    },
+    {
+      "path": "research/r01/test_closeout.py",
+      "sha256": "db83a462aec9081c5110fbe69d202a4516f112f40f48b551d732637b617b7047",
+      "size_bytes": 3933
+    }
+  ],
+  "core_budget": 39,
+  "resource_walltime_cap": null,
+  "resource_walltime_cap_required_before_execution": true,
+  "resource_walltime_cap_basis": "Actual hardware and non-selection resource measurements; numeric hours required in future execution config before S01 activation",
+  "bulk_training_allowed_when_walltime_cap_null": false,
+  "training_authorized": false,
+  "official_model_experiments": "NOT_RUN",
+  "metrics": null,
+  "test_use_authorized": false,
+  "attachment3_4_research_read_authorized": false,
+  "q3_authorized": false,
+  "unaligned_comparison_authorized": false,
+  "expanded_66_fit_authorized": false,
+  "attachment3_mask_availability": "UNKNOWN",
+  "natural_structural_zero_is_artificial_missing": false,
+  "frozen_data_contract_changed": false,
+  "next_stage": "S01_SPECIFICATION_AND_EXECUTION_AUTHORIZATION",
+  "next_stage_activated": false,
+  "historical_evidence_rule": "Prior manifests/reviews/results bind their original commit, not mutable HEAD. No historical checks rerun or relabelled."
+}

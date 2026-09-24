@@ -1,14 +1,14 @@
 {
-  "task_id": "R01_ASTRA_LOCAL_RESEARCH_CLOSEOUT",
+  "task_id": "R01_FREEZE_01_RECORDING",
   "parent_task": "R01_Q2_BASELINE_AND_ROBUST_MODEL_RESEARCH_DESIGN",
-  "research_status": "LOCALLY_CONVERGED_PROVISIONAL",
+  "research_status": "FROZEN_FOR_S01_PROTOCOL",
   "engineering_prerequisite": "S00E_COMPLETED_PUBLISHED_REVERIFIED",
   "source_base_commit": "ec228a04e9c6579a3fd95342e4438c20425a34dc",
   "canonical_design": "docs/research/R01/DESIGN.md",
-  "canonical_decisions": "docs/research/R01/decisions.json",
-  "evidence_manifest": "reports/research/R01_LOCAL_CLOSEOUT/MANIFEST.json",
-  "major_freeze": "R01-FREEZE-01 PENDING_OWNER_CONFIRMATION",
-  "approved_research_freeze": false,
+  "canonical_decisions": "docs/research/R01/FREEZE_01.json",
+  "evidence_manifest": "reports/research/R01_FREEZE_01/MANIFEST.json",
+  "major_freeze": "R01-FREEZE-01 FROZEN_FOR_S01_PROTOCOL",
+  "approved_research_freeze": true,
   "official_model_experiments": "NOT_RUN",
   "metrics": null,
   "s01_training_authorized": false,
@@ -21,5 +21,15 @@
     "docs/RESEARCH_LOG.md": "docs/RESEARCH_LOG.md",
     "reports/experiments/REGISTRY.jsonl": "docs/EXPERIMENT_REGISTER.json",
     "paper/CLAIM_EVIDENCE.md": "docs/PAPER_CLAIMS.md"
-  }
+  },
+  "approved_source_commit": "120a0938c76dd457a3d95c5c2a243f3e451a3f67",
+  "historical_proposals": "docs/research/R01/decisions.json",
+  "historical_closeout_manifest": "reports/research/R01_LOCAL_CLOSEOUT/MANIFEST.json",
+  "approval_scope": "Only16listed protocol items; no execution authorization",
+  "core_budget": 39,
+  "resource_walltime_cap": null,
+  "resource_walltime_cap_status": "REQUIRED_BEFORE_EXECUTION_NOT_YET_NUMERIC",
+  "attachment3_mask_availability": "UNKNOWN",
+  "next_stage": "S01_SPECIFICATION_AND_EXECUTION_AUTHORIZATION",
+  "next_stage_activated": false
 }

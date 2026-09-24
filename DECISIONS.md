@@ -21,7 +21,7 @@ Fields: `decision_id | status | decision | evidence | reason | date | affected_s
 | Q1-SOURCE-01 | FROZEN | For the 100 Attachment 1 samples, audio source is the actual MP4 soundtrack, text source is the official label-100.xlsx:text field, and vision source is MP4 frames. Retain all 100 by default, including audio/text inconsistencies, silence, non-English audio or text, unclear scenes, and clips without a human face. Record uncertainty states for these cases; do not fabricate forced audio-text alignment. | SPECIFIED user-supplied competition forum expert reply dated 2026-09-24; source not independently reverified here | Preserve the authorized Q1 input and coverage rules without silently dropping atypical samples | 2026-09-24 | Q1 governance |
 | Q1-MISSING-01 | UNDECIDED | Exact Q1 mapping from uncertainty or source anomalies to missingness is not defined. No anomaly is automatically natural missingness. | UNKNOWN; the supplied clarification does not define a missingness mapping | Preserve uncertainty for later research review | 2026-09-24 | Q1 later research |
 
-Valid status values: `UNDECIDED`, `PROVISIONAL`, `FROZEN_FOR_BASELINE`, `FROZEN`, `REOPENED`. `FROZEN_FOR_BASELINE` is an operational S01 interface contract, not `FINAL_MODEL_DECISION`. RES-001 through RES-005 retain their undecided final research scope.
+Valid status values: `UNDECIDED`, `PROVISIONAL`, `FROZEN_FOR_BASELINE`, `FROZEN_FOR_S01_PROTOCOL`, `FROZEN`, `REOPENED`. `FROZEN_FOR_BASELINE` is an operational S01 interface contract, not `FINAL_MODEL_DECISION`. RES-001 through RES-005 retain their undecided final research scope.
 
 ## Engineering workflow authority
 
@@ -33,3 +33,12 @@ Valid status values: `UNDECIDED`, `PROVISIONAL`, `FROZEN_FOR_BASELINE`, `FROZEN`
 ## R01 local research recommendations — 2026-09-25
 
 Source: explicit user R01_ASTRA_LOCAL_RESEARCH_CLOSEOUT. The local research author may settle ordinary design choices and publish safe research artifacts after verified S00E completion. None of these recommendations changes D-DATA-01 through D-DATA-07, authorizes S01/Q3 or approves a model. Full P01..P11 rationale/alternatives/evidence and pending R01-FREEZE-01 scope: docs/research/R01/DECISIONS.md; structured record: docs/research/R01/decisions.json. All eleven have status PROVISIONAL. R01-FREEZE-01 is PENDING_OWNER_CONFIRMATION, not FROZEN.
+
+
+## MAIN_RESEARCH_DECISION — R01-FREEZE-01 — 2026-09-25
+
+| decision_id | status | decision | evidence | reason | date | affected_stages |
+| --- | --- | --- | --- | --- | --- | --- |
+| R01-FREEZE-01 | FROZEN_FOR_S01_PROTOCOL | Freeze only the owner's16listed first-round protocol items, core39fits;24/30fallback chosen before execution. Wall-time cap required but numeric value remainsnull. D/T/L and66fit/deployment/Q3 extensions excluded. | SPECIFIED explicit current owner user instruction; approved source commit120a0938c76dd457a3d95c5c2a243f3e451a3f67 and exact file hashes in docs/research/R01/FREEZE_01.json | Record genuine owner approval without author self-approval or execution authorization | 2026-09-25 | Future S01 specification only |
+
+This supersedes the previous pending R01-FREEZE-01 status only within the listed scope. D-DATA-01..07 remain byte-content unchanged. All official model experiments remainNOT_RUN, metrics=null, training_authorized=false. No test use, Attachment3/4research reads, Q3, unaligned comparison or66-fit expansion is authorized. Attachment3 reliable mask availability remainsUNKNOWN; natural structural-zero is not automatically artificial missing. Numeric wall-time must be entered into future execution config from actual hardware/non-selection resource measurements before S01 activation; null forbids bulk training. Next stage: S01_SPECIFICATION_AND_EXECUTION_AUTHORIZATION, not activated. Prior proposal/technical-review records remain historical evidence, not a substitute for this explicit owner decision.

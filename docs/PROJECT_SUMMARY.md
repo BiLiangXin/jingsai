@@ -17,3 +17,8 @@ D-DATA-01 through D-DATA-07, Q1, test quarantine and Attachment 3/4 isolation re
 R01 design is locally converged and PROVISIONAL; canonical entry docs/research/R01/README.md and independent state/LATEST_RESEARCH.json. S00E is the latest completed engineering run; state/LATEST_RUN.json stays unchanged. No official model experiments or metrics. Ordinary recommendations are recorded; R01-FREEZE-01 protocol/resource confirmation and separate execution authorization remain prerequisites. S01 and Q3 are not started. No web handoff ZIP or additional Release is required.
 
 This file is the existing PROJECT_MEMORY equivalent; docs/RESEARCH_LOG.md, docs/EXPERIMENT_REGISTER.json and docs/PAPER_CLAIMS.md are the canonical log/register/claim ledger. Do not create duplicate state/PROJECT_MEMORY.md, reports/experiments/REGISTRY.jsonl or paper/CLAIM_EVIDENCE.md. Earlier engineering checkpoints in the log are historical; current verified publication supersedes their pending wording.
+
+
+## Current owner freeze — R01-FREEZE-01
+
+Owner explicitly approved16scoped protocol items at source commit120a0938c76dd457a3d95c5c2a243f3e451a3f67. Current research status:FROZEN_FOR_S01_PROTOCOL; this supersedes earlier provisional/pending governance wording only in that scope. Core39fits;24/30resource fallback before execution; no66-fit or D/T/L expansion. Wall-time must be numeric in future execution config before S01 activation; currentlynull forbids bulk training. All model experimentsNOT_RUN, metricsnull; S01 unauthorized. Attachment3 mask availabilityUNKNOWN. Details: docs/research/R01/FREEZE_01.json and state/LATEST_RESEARCH.json. Historical evidence and engineeringLATEST_RUN unchanged.

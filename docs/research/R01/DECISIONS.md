@@ -1,6 +1,6 @@
 # R01 决策收敛登记
 
-[SPECIFIED] 按本轮用户授权，普通设计选择由本地研究作者自主收敛。以下均为PROVISIONAL，不是APPROVED/FROZEN。独立技术审查不是负责人批准。旧修订包保持只读。
+[SPECIFIED] 主研究负责人已明确批准R01-FREEZE-01，当前状态FROZEN_FOR_S01_PROTOCOL。批准对象为commit120a0938c76dd457a3d95c5c2a243f3e451a3f67中的16项限定协议，见FREEZE_01.json。下面保留P01至P11的原建议及备选理由；decisions.json是审批前历史建议记录，不作为当前批准状态。批准来自本轮用户指令，不来自作者自审或独立技术审查。
 
 | 决策 | 处置 | 明确建议 | 备选/否决/推迟 | 理由 |
 |---|---|---|---|---|
@@ -16,10 +16,10 @@
 | R01-P10 | 采用限定范围 | KNOWN_AVAILABILITY模拟研究可继续，专项部署UNKNOWN | U1优先请求可信mask规范；U2无oracle可靠性适配推迟另批 | 不因forward不收C就宣称无oracle；不能用text零行补洞 |
 | R01-P11 | 推迟 | Q3只保留映射/归因provenance接口 | 否决注意力=因果解释或index/50造秒 | 独立Q3授权与真实映射证据未具备 |
 
-## 一次重大冻结确认的具体范围：R01-FREEZE-01（尚未批准）
+## 已批准范围：R01-FREEZE-01（FROZEN_FOR_S01_PROTOCOL）
 
-拟冻结DESIGN、protocol.json、两矩阵和参考实现所描述的研究协议：KNOWN_AVAILABILITY；96/144窗口与回退计权；train根2207、valid根1103、训练seed17/29/43；B*与共同机制选点；macro-F1/MAE优先级与epsilon_F=.01、epsilon_M=.05；patience10/min_delta1e-4/max_epochs100；seed17及失败回B*17；39run核心预算；D/T/L不启用；实际资源时限必须另填后方可执行。协议文件的确切SHA256由研究MANIFEST记录。
+本轮批准冻结以下限定研究协议：KNOWN_AVAILABILITY；96/144窗口与回退计权；train根2207、valid根1103、训练seed17/29/43；B*与共同机制选点；macro-F1/MAE优先级与epsilon_F=.01、epsilon_M=.05；patience10/min_delta1e-4/max_epochs100；seed17及失败回B*17；39run核心预算；D/T/L不启用；实际资源时限必须另填后方可执行。批准版本的文件SHA256由FREEZE_01.json绑定；旧MANIFEST保持原字节并仍指向其历史commit。
 
 这次确认只冻结协议，不启动训练、不激活S01、不允许读取test/专项。若负责人选择24或30档，须同步删去不可支持的机制主张。U2、新TAV局部协议、Q3、unaligned、ensemble、KD/REC、66扩展及任何训练授权均不包含在此范围。
 
-[UNKNOWN] 目前重大冻结批准未取得，training_authorized=false。研究设计本身可以完成并Git发布；未来实验须独立授权，不能把本页当作执行命令。
+[SPECIFIED] 批准已取得，但training_authorized=false。必须设定wall-time上限的原则已冻结；具体小时数未给定，resource_walltime_cap=null，未来S01激活前需实际硬件/非选模资源测量与execution config。为空禁止批量训练。附件3可靠mask availability保持UNKNOWN。下一阶段仅为S01_SPECIFICATION_AND_EXECUTION_AUTHORIZATION，未激活。

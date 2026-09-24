@@ -46,3 +46,14 @@ Publication retained two ordinary failed attempts: intentional two-space Markdow
 | Complete Q2/Q3 solved or any official model score exists | UNKNOWN | No authorized model experiment | Main96 omits TAVlocal; Q3 pending |
 
 Sources opened and scopes verified in docs/research/R01/SOURCES.md and sources.json. External paper scores are not competition evidence. Protocol freeze and owner approval remain pending; independent technical review is not approval. Future registry entries must retain every config/seed/attempt, including failures and nonimprovements, not only successful/best seeds.
+
+
+## Owner protocol freeze — R01-FREEZE-01
+
+| Claim | State | Evidence | Limitation |
+|---|---|---|---|
+| First-round research protocol explicitly frozen by owner | SPECIFIED owner approval; FROZEN_FOR_S01_PROTOCOL | docs/research/R01/FREEZE_01.json, sourcecommit120a0938c76dd457a3d95c5c2a243f3e451a3f67 | No model performance or execution approval |
+| Core39fit budget and required numeric wall-time before execution | SPECIFIED | protocol.json | Actual hoursnull; bulk training blocked until configured and separately authorized |
+| Attachment3 reliable mask availability | UNKNOWN | Explicit owner boundary | Natural structural-zero cannot automatically mean artificial missing |
+
+Earlier provisional/pending text describes the preapproval checkpoint. Owner approval changes governance only, not evidence strength: all model experimentsNOT_RUN and metricsnull, historical tests/reviews unchanged.

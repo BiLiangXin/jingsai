@@ -1,8 +1,10 @@
-# R01 本地研究收敛设计（PROVISIONAL）
+# R01 本地研究设计（FROZEN_FOR_S01_PROTOCOL：限定批准范围）
 
-[SPECIFIED] R01_ASTRA_LOCAL_RESEARCH_CLOSEOUT，接续修订01，不重做初稿。用户已授权本地自主研究、普通设计收敛及安全Git发布。本文件为研究设计工作稿，非比赛提交论文。普通取舍由作者采纳为PROVISIONAL；重大协议冻结及任何正式实验仍须另授权。S00E已实际验收发布并经本轮只读重核；S01未激活，training_authorized=false。
+[SPECIFIED] 主研究负责人通过本轮MAIN_RESEARCH_DECISION: R01-FREEZE-01明确批准，以commit120a0938c76dd457a3d95c5c2a243f3e451a3f67为版本依据。批准的16项研究协议及原始文件SHA256登记于FREEZE_01.json；仅这些范围由PROVISIONAL变为FROZEN_FOR_S01_PROTOCOL。S01训练、official model experiment、test、附件3/4研发读取、Q3、unaligned、66-fit扩展及专项mask结论均未授权。
 
-证据标签：VERIFIED仅实际核验；SPECIFIED为题面/用户/合同；INFERRED为限定推论；HYPOTHESIS为未测效果；UNKNOWN为未知。下文保留修订稿推导并仅修实质问题；历史64项/28项检查不改写为本轮执行。最新检查和独立技术审查见reports/research/R01_LOCAL_CLOSEOUT。来源、差异、决策与有限协议见同目录SOURCES.md、CLOSEOUT.md、DECISIONS.md、protocol.json。所有PROPOSED措辞在本地设计层按PROVISIONAL解读，不代表APPROVED或FROZEN。
+治理状态与证据等级分开：下文保留审批前的完整公式、论证和提案文字，不改写其历史含义。凡落在FREEZE_01.json批准项内的PROPOSED/PROVISIONAL/待审批措辞，其当前治理状态由本冻结记录覆盖；HYPOTHESIS仍只表示效果未实测。后置候选、部署结论和批准范围之外的提案不随之冻结。D-DATA-01至07保持FROZEN_FOR_BASELINE。
+
+首轮39 fits；24/30只能执行前确定。具体resource_walltime_cap仍null，未来S01激活前须依据实际硬件及非选模资源测量填入execution config；为空禁止批量训练。附件3可靠mask availability仍UNKNOWN，natural structural-zero不自动解释为artificial missing。历史63项检查/15项独立探针及更早64/28记录不重跑、不改写；参考代码不变。
 
 ## 1. 研究对象及不变合同
 

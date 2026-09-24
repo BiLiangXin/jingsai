@@ -1,0 +1,114 @@
+{
+  "decision_id": "R01-FREEZE-01",
+  "approved_source_commit": "120a0938c76dd457a3d95c5c2a243f3e451a3f67",
+  "publication_files": [
+    "DECISIONS.md",
+    "state/LATEST_RESEARCH.json",
+    "docs/PROJECT_SUMMARY.md",
+    "docs/RESEARCH_LOG.md",
+    "docs/EXPERIMENT_REGISTER.json",
+    "docs/PAPER_CLAIMS.md",
+    "docs/research/R01/FREEZE_01.json",
+    "docs/research/R01/DESIGN.md",
+    "docs/research/R01/DECISIONS.md",
+    "docs/research/R01/README.md",
+    "docs/research/R01/protocol.json",
+    "docs/research/R01/trials.json",
+    "docs/research/R01/R01_experiment_matrix.csv",
+    "docs/research/R01/R01_ablation_matrix.csv",
+    "reports/research/R01_FREEZE_01/verify_freeze.py",
+    "reports/research/R01_FREEZE_01/result.json",
+    "reports/research/R01_FREEZE_01/verification.json",
+    "reports/research/R01_FREEZE_01/MANIFEST.json"
+  ],
+  "files": [
+    {
+      "path": "DECISIONS.md",
+      "sha256": "868a74c0a4a1aa3ad66a919a05b1980e10f9e89fd83b15bece4fb0f24f1e5b10",
+      "size_bytes": 8130
+    },
+    {
+      "path": "state/LATEST_RESEARCH.json",
+      "sha256": "77ee2967664dd126ef4bcaf5954b4e1bb6061a242e6fe22cf82cd2cda5ab9600",
+      "size_bytes": 1721
+    },
+    {
+      "path": "docs/PROJECT_SUMMARY.md",
+      "sha256": "e768fca52aa7f8ac0d93c6a9ecc9ed8bbe5bdd129ce4580456335b99519b7b9e",
+      "size_bytes": 3494
+    },
+    {
+      "path": "docs/RESEARCH_LOG.md",
+      "sha256": "22fccce4bd6c04569885e47f1f3fcbc1dd2804e383b6d93b09a439dae36f755e",
+      "size_bytes": 12865
+    },
+    {
+      "path": "docs/EXPERIMENT_REGISTER.json",
+      "sha256": "1328e53ab488a48e2cddb41a8b93e58cdb198bd521b386e057aaaf11b30e819e",
+      "size_bytes": 7492
+    },
+    {
+      "path": "docs/PAPER_CLAIMS.md",
+      "sha256": "58a7d6bb21a5f78d6d735231cf4515e09ccf677db6efd0a395832076f4a4be0a",
+      "size_bytes": 7273
+    },
+    {
+      "path": "docs/research/R01/FREEZE_01.json",
+      "sha256": "26bed02ecc0464bec468cf986c1393bb49f50f7f69a96308a6d8a1c716ec8987",
+      "size_bytes": 4613
+    },
+    {
+      "path": "docs/research/R01/DESIGN.md",
+      "sha256": "bb3b349233bb3ca6016fbaca370ac6faac3e7ba777cab0407610d5e2c647400a",
+      "size_bytes": 26674
+    },
+    {
+      "path": "docs/research/R01/DECISIONS.md",
+      "sha256": "8f3091d546badab7a748c0d1d1ecb1362e3c4f45279ec018aa366ea5f27c8a2e",
+      "size_bytes": 4138
+    },
+    {
+      "path": "docs/research/R01/README.md",
+      "sha256": "60e6d0f9a22c36c803cfc296e31471f975982f3cc5660e0ab302b13bf808edf7",
+      "size_bytes": 1887
+    },
+    {
+      "path": "docs/research/R01/protocol.json",
+      "sha256": "5129ee349e8b236edf531ea940c895a6f6e36b70f612aa6515bb3980e33185ba",
+      "size_bytes": 2755
+    },
+    {
+      "path": "docs/research/R01/trials.json",
+      "sha256": "3682ebe05fa29598540de87a2619b8aab5a66ad74e475ca96d41cf1814df4223",
+      "size_bytes": 23700
+    },
+    {
+      "path": "docs/research/R01/R01_experiment_matrix.csv",
+      "sha256": "7f5f1e40b8b1ed9ae4b6a3e5ff09b777fe0f64ed1eb5f611123e33947ff0a4e7",
+      "size_bytes": 10453
+    },
+    {
+      "path": "docs/research/R01/R01_ablation_matrix.csv",
+      "sha256": "3630f1650acc87ed5996a8ecb9e4796e40d572ae398dbec4922241012b85d891",
+      "size_bytes": 7661
+    },
+    {
+      "path": "reports/research/R01_FREEZE_01/verify_freeze.py",
+      "sha256": "3e3513e60336026e3b2502902816c054888ff29c595d45b8bfa27d1aa35a6abf",
+      "size_bytes": 9155
+    },
+    {
+      "path": "reports/research/R01_FREEZE_01/result.json",
+      "sha256": "28fd0eac2072bc96c380ca998dd54e868da7b0783fcffaad024f97591da1599b",
+      "size_bytes": 971
+    }
+  ],
+  "hash_exclusions": [
+    "reports/research/R01_FREEZE_01/MANIFEST.json",
+    "reports/research/R01_FREEZE_01/verification.json"
+  ],
+  "exclusion_reason": "Self manifest and generated check receipt; protected by exact index/commit byte verification",
+  "historical_evidence_unchanged": true,
+  "training_authorized": false,
+  "release_authorized": false
+}
