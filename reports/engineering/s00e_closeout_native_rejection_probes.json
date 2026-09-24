@@ -1,0 +1,21 @@
+{
+  "task_id": "S00E_S01_PRESTART_ENGINEERING_HARDENING",
+  "stage": "S00E",
+  "run_id": "20260925-014500-S00E-ASTRA-d9e4edb",
+  "data_kind": "synthetic",
+  "status": "BLOCKING_DEFECT_REPRODUCED",
+  "results": {
+    "windows_sessions_root_junction_is_symlink": false,
+    "windows_sessions_root_has_reparse_attribute": true,
+    "external_synthetic_journal_accepted": true,
+    "snapshot_files_verified": 58,
+    "snapshot_mismatches": []
+  },
+  "method": "Create two OS temporary directories, use cmd mklink /J to make the synthetic sessions root point to the other directory, place synthetic session_meta plus linked request/accepted/user approval events in target, inject only native_sessions_root and call actual verify_native_host.",
+  "limits": [
+    "No production host journal read or written.",
+    "No official repository or Git mutation.",
+    "No full pytest rerun this iteration; review stopped immediately on confirmed blocker.",
+    "Previous independent 202-test result belongs to the older reviewed version and is not represented as a current 217-test result."
+  ]
+}

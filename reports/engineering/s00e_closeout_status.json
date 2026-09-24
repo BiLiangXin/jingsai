@@ -1,0 +1,48 @@
+{
+  "task_id": "S00E_S01_PRESTART_ENGINEERING_HARDENING",
+  "stage": "S00E",
+  "run_id": "20260925-020000-S00E-ASTRA-d9e4edb",
+  "S00E_STATUS": "PUBLICATION_PENDING",
+  "E19_REVIEW": "PASS",
+  "E21_PREFLIGHT": "PASS",
+  "RELEASE_STATUS": "NOT_PUBLISHED",
+  "LATEST_REMOTE_HEAD": "d9e4edb11b710a92ef33c256bfca6684162911d7",
+  "R01_CAN_START": "NO",
+  "S01_TRAINING_AUTHORIZED": "NO",
+  "WEB_HANDOFF_ZIP_REQUIRED": "NO",
+  "actual_main_tests": 221,
+  "actual_subtests": 25,
+  "independent_main_tests": 221,
+  "independent_subtests": 25,
+  "d2_subset_tests": 28,
+  "subset_counts_are_not_additive": true,
+  "devices": [
+    "cpu",
+    "cuda"
+  ],
+  "official_source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+  "review_sha256": "26c74726eff8c52ad5a08e399c8c1d6f3e9dc577dd4f75ea7340829588e5d6d8",
+  "manifest_sha256": "ce59908ae32ebeee5c60ae1bca5e9bb21da2b49b2a95a8191c34aba931ffec79",
+  "owner_trust_host": "github.com",
+  "registered_owner_signing_keys": 0,
+  "owner_signature_present": false,
+  "implementation_commit": null,
+  "metadata_commit": null,
+  "model_metrics": null,
+  "PROPOSED_RESEARCH_CHANGE": "NONE",
+  "limitations": [
+    "Historical CSV accessibility not erased by ordinary removal.",
+    "Installed Torch binary provenance was not independently authenticated.",
+    "Owner approval is not authenticated by editable JSON or synthetic signature tests."
+  ],
+  "actual_preflight_exit_code": 0,
+  "local_owner_confirmation": "VERIFIED_CURRENT_NATIVE_EVENT",
+  "owner_confirmation_source": "Current user instruction section 4",
+  "owner_approval_provenance": {
+    "source": "CODEX_NATIVE_USER_EVENT",
+    "thread_id": "01a0cf05-378e-7420-ad1a-e44d9faa57f3",
+    "call_id": "call_BIIRQRGIDfRcrkdPAOP6UCdx",
+    "timestamp": "2026-09-24T17:39:05.747Z",
+    "event_sha256": "a64250739a4a76bd04e3623ef5f177975c1048eb1d852ca80a03399d02164224"
+  }
+}

@@ -1,0 +1,436 @@
+{
+  "stage": "S00E",
+  "run_id": "20260925-020000-S00E-ASTRA-d9e4edb",
+  "files": [
+    {
+      "path": "CHATGPT_REVIEW.md",
+      "size": 2220,
+      "sha256": "1eb9e350fe1239a96be10b5f2a22607afdec07c244330361519aee571f2ae2cf"
+    },
+    {
+      "path": "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/RUN.json",
+      "size": 1315,
+      "sha256": "6a306cbc495ef5151775ab8aef102cd4fa21c9e7461ecc33a94482ab2412dd03"
+    },
+    {
+      "path": "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/GATE.json",
+      "size": 5157,
+      "sha256": "eeb1b133bc08c69a71487f62d1348cd31f4b85793ae76321e13934acada35a2e"
+    },
+    {
+      "path": "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/TEST_RESULTS.json",
+      "size": 14476,
+      "sha256": "46d32c7c096c25e225fd1ee0fe68eeb6f7ad14da987dff7ce79fec91ee96329f"
+    },
+    {
+      "path": "reports/stages/S00E/acceptance.json",
+      "size": 10119,
+      "sha256": "123f9243098205c68d97c6bb4df4e801b4b9c8843dcdfd040971186fc742df40"
+    },
+    {
+      "path": "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/public/HANDOFF_INPUTS.json",
+      "size": 4464,
+      "sha256": "ce59908ae32ebeee5c60ae1bca5e9bb21da2b49b2a95a8191c34aba931ffec79"
+    },
+    {
+      "path": "AGENTS.md",
+      "size": 4554,
+      "sha256": "4a9ea177276ccf84d7a37567af79144dad4b2c23a13bbcc6ea28c1e311114954"
+    },
+    {
+      "path": "DECISIONS.md",
+      "size": 5924,
+      "sha256": "cbc034c6605552e458fde0354d93c4ac821d43a2e045cd851a5ed0dfcf566819"
+    },
+    {
+      "path": "TASK_SPEC.md",
+      "size": 15658,
+      "sha256": "8c40f47d50616d873ad1ba3f2ce80898cc758d7462d3f001f3c32c575aec1c62"
+    },
+    {
+      "path": "docs/EXPERIMENT_REGISTER.json",
+      "size": 5079,
+      "sha256": "438087b1fdf761a638fb04b2644123f397aad1da40d964e6b1e0dfdf9fb0f9d2"
+    },
+    {
+      "path": "docs/HANDOFF_WORKFLOW.md",
+      "size": 7510,
+      "sha256": "4d69644932d14bc11a149c7cc0873ebabd20e0f0f513ee51de3cf3d046c3b5ed"
+    },
+    {
+      "path": "docs/PAPER_CLAIMS.md",
+      "size": 2993,
+      "sha256": "9e30ac13e8db4238d402e52f50f29da16578e579a4c83493dcf9f6bab537f673"
+    },
+    {
+      "path": "docs/PROJECT_SUMMARY.md",
+      "size": 1987,
+      "sha256": "afff99c2a86274c9223a9ce80acda13ed1de639673e1ca115fc3e59e4f00a9e3"
+    },
+    {
+      "path": "docs/RESEARCH_LOG.md",
+      "size": 5979,
+      "sha256": "fc5b01a70ee41ece320c7db7f9d5f18acb061690dfe1cb11c6ea836abf67b788"
+    },
+    {
+      "path": "docs/S00D_DATA_CONTRACT.md",
+      "size": 3665,
+      "sha256": "c397a296ad6595375db34b79e93add43fe7888a359976a7c41608ba9c120240c"
+    },
+    {
+      "path": "docs/S00E_ENGINEERING_HARDENING.md",
+      "size": 2584,
+      "sha256": "13dfb69da940f662fc0f99e85e37bb96d8560151ed7e656620098168f2553e20"
+    },
+    {
+      "path": "docs/data-guide.md",
+      "size": 4085,
+      "sha256": "0b04f436e0663b07a58e318202dd482a613bc7ad44ed3cea49e6269d3c98886c"
+    },
+    {
+      "path": "reports/engineering/s00e_closeout_independent_probes.json",
+      "size": 1700,
+      "sha256": "be695aaef732b6151a07929200f851f8f4c3b18814dc0e71105dfdd12cf87053"
+    },
+    {
+      "path": "reports/engineering/s00e_closeout_initial_review.json",
+      "size": 1610,
+      "sha256": "0d725db936f40c8185c6662884e9bc8dd15c241c2d99c7449f98d70f09f4bf89"
+    },
+    {
+      "path": "reports/engineering/s00e_closeout_initial_snapshot.json",
+      "size": 7507,
+      "sha256": "3367f01a56aa7ccacdcf14975f5768918cca1ad22d2bdaecb1c3594eeba2e18b"
+    },
+    {
+      "path": "reports/engineering/s00e_closeout_native_rejection.json",
+      "size": 7348,
+      "sha256": "c72d8622fe8efe2b547625859169ea6803164627a804beb95d035e4bf29c2617"
+    },
+    {
+      "path": "reports/engineering/s00e_closeout_native_rejection_probes.json",
+      "size": 1105,
+      "sha256": "7402987cb1aa0d77e3004541c6c9d68aee71140bb3754616a98c75d9064f52c1"
+    },
+    {
+      "path": "reports/engineering/s00e_closeout_probes_attempt_1.json",
+      "size": 658,
+      "sha256": "5e25d51c3a6345e620d10d2e2095808a55510e31f8e1fe531dee0658749d60cb"
+    },
+    {
+      "path": "reports/engineering/s00e_closeout_review_attempt_1.json",
+      "size": 8575,
+      "sha256": "55876cce9aeb498add0ac486f81a2ae5fb6d160ec1133373952f0d5097f5bac5"
+    },
+    {
+      "path": "reports/engineering/s00e_closeout_review_inputs.json",
+      "size": 6238,
+      "sha256": "b006827108be4725144cdf8f00e71b150f45609d75ee582b92fb7a39ddebe26c"
+    },
+    {
+      "path": "reports/engineering/s00e_closeout_status.json",
+      "size": 1940,
+      "sha256": "5beba57d3a1086da0810cffd4a5d55c272ece5f41285737db17d15a020224807"
+    },
+    {
+      "path": "reports/engineering/s00e_closeout_workspace.json",
+      "size": 13921,
+      "sha256": "d08559a7cf2f39240ce11a89ab8e8d356483c1a8db27f1c8c2449632fe397b48"
+    },
+    {
+      "path": "reports/engineering/s00e_contract_hardening.json",
+      "size": 788,
+      "sha256": "6ad792e6287388b53b165215f636e9ed42e4e9210681677a72c3ac1c6859b244"
+    },
+    {
+      "path": "reports/engineering/s00e_d2_probe_results.json",
+      "size": 448,
+      "sha256": "3a181925cbed1c2d8cdde8a9038656f349ebd8fcc72a650525cc2305c6666e0b"
+    },
+    {
+      "path": "reports/engineering/s00e_d2_repair_matrix.json",
+      "size": 3766,
+      "sha256": "34c2af33b8579c597aee06b68ff36edbef8b6ffc639d9a1bb47d1385fda6ae34"
+    },
+    {
+      "path": "reports/engineering/s00e_d2_review_inputs.json",
+      "size": 2164,
+      "sha256": "c57ba9ab40d5ef55d2b7cad53730ee386111e5a4ff8a8dd81d31c70142f84654"
+    },
+    {
+      "path": "reports/engineering/s00e_phase_d_repair_matrix.json",
+      "size": 1155,
+      "sha256": "042edc3a17ce278e7f3f045ef917f6fbedaa0f7d86dd53c2cfb364b659175aa9"
+    },
+    {
+      "path": "reports/engineering/s00e_phase_d_review.json",
+      "size": 12027,
+      "sha256": "26c74726eff8c52ad5a08e399c8c1d6f3e9dc577dd4f75ea7340829588e5d6d8"
+    },
+    {
+      "path": "reports/engineering/s00e_phase_d_review.md",
+      "size": 5193,
+      "sha256": "2a153c49608666f0773039d6ab465d1a60958973ca565b8cd450be91a34d368a"
+    },
+    {
+      "path": "reports/engineering/s00e_prepublication_preflight.json",
+      "size": 451,
+      "sha256": "33f1f0b675a90ceb9a4ddd49936e937374c34d2174fbb4aebef64a1e6e417b61"
+    },
+    {
+      "path": "reports/engineering/s00e_public_tree_scan.json",
+      "size": 335,
+      "sha256": "58632dc0554833a2afd7dd9729f90a56e3558580ba908bed021ea2ce91dbb243"
+    },
+    {
+      "path": "reports/engineering/s00e_pytorch_runtime.json",
+      "size": 1472,
+      "sha256": "9eeceaced1882b37bf4609e994a2a199bebf8c1949930c05658c73ab94375999"
+    },
+    {
+      "path": "reports/engineering/s00e_repair_matrix.json",
+      "size": 5007,
+      "sha256": "aa53b07a06de10f4cf5834576bf277718225cf8733048590ae6a53bf8688fc76"
+    },
+    {
+      "path": "reports/engineering/s00e_review_inputs.json",
+      "size": 1413,
+      "sha256": "267a4acd3defac6568d0d40b623025ab4fc5c78e895d60a3256bd6470f71e57c"
+    },
+    {
+      "path": "reports/engineering/s00e_security_findings.json",
+      "size": 597,
+      "sha256": "3bbe5748ecce666daa3b853a7ec0cc191c36ce555cbbc1695979112b43462d55"
+    },
+    {
+      "path": "reports/engineering/s00e_source_mutation_check.json",
+      "size": 592,
+      "sha256": "89c33b9d341c153723809e2e997fe290df40251a03e4e9aa907ad739db89a192"
+    },
+    {
+      "path": "reports/runs/20260924-063758-S00E-078028f/GATE.json",
+      "size": 5058,
+      "sha256": "723a50a5bade03f0a99adbf65240a5514d60835bd157d2b83b5251bbfb2657df"
+    },
+    {
+      "path": "reports/runs/20260924-063758-S00E-078028f/RUN.json",
+      "size": 1315,
+      "sha256": "6b31d37ef0d6f3bc6c9048237bb632541e7948596f8e2d311b633ff9f81f937e"
+    },
+    {
+      "path": "reports/runs/20260924-063758-S00E-078028f/TEST_RESULTS.json",
+      "size": 1889,
+      "sha256": "45aa1bb580ebf45db8c5ca275a19e08243e6bf16a24c7921ec1501d81873aaf2"
+    },
+    {
+      "path": "reports/runs/20260924-063758-S00E-078028f/public/HANDOFF_INPUTS.json",
+      "size": 1186,
+      "sha256": "428afe052f50e709762b7d5daa5e252345413c2d20dc956b0e8194d23c9febbe"
+    },
+    {
+      "path": "reports/runs/20260924-233200-S00E-D2-4bd0c6c/GATE.json",
+      "size": 5079,
+      "sha256": "7307370de75198571fc0aa104aa48303206685cf40c6da1f6ed6ca42675acd88"
+    },
+    {
+      "path": "reports/runs/20260924-233200-S00E-D2-4bd0c6c/RUN.json",
+      "size": 1318,
+      "sha256": "8deefe8770fc60c8819c4b227a43eb1ecc91dea7cd5b3d2067ee53a51262c907"
+    },
+    {
+      "path": "reports/runs/20260924-233200-S00E-D2-4bd0c6c/TEST_RESULTS.json",
+      "size": 2825,
+      "sha256": "e781a8cf6ac287d72a13d252819116a6589f8f6ae628e59a7d3205b6e795bd17"
+    },
+    {
+      "path": "reports/runs/20260924-233200-S00E-D2-4bd0c6c/public/HANDOFF_INPUTS.json",
+      "size": 1383,
+      "sha256": "d742dc258b188dd78c1dc966a5132a640b07fecb89ad834c54c5f918a5b84d8c"
+    },
+    {
+      "path": "reports/runs/20260925-005000-S00E-ASTRA-d9e4edb/GATE.json",
+      "size": 5100,
+      "sha256": "05de3da6076610a72fc6bd2dba7088d331c0d0c9c69d787b2d166b2a5a3675d6"
+    },
+    {
+      "path": "reports/runs/20260925-005000-S00E-ASTRA-d9e4edb/RUN.json",
+      "size": 1321,
+      "sha256": "5be822ee8225243fb608a986da1ea1a58c0e264061da602c8e306a7a6d29a45e"
+    },
+    {
+      "path": "reports/runs/20260925-005000-S00E-ASTRA-d9e4edb/TEST_RESULTS.json",
+      "size": 14476,
+      "sha256": "d7b4e76d08b106d7fa0ff984816a99d906442c00198dc023e7f425a89acf250f"
+    },
+    {
+      "path": "reports/runs/20260925-005000-S00E-ASTRA-d9e4edb/public/HANDOFF_INPUTS.json",
+      "size": 3142,
+      "sha256": "b19a66c2fc13c725c1c8bd2c02fef8fe8e70cdeff3420556fb90883254bc0a40"
+    },
+    {
+      "path": "reports/runs/20260925-005500-S00E-ASTRA-d9e4edb/GATE.json",
+      "size": 5185,
+      "sha256": "fb7d0bb3e18ac6616ffba59d0470c526e85978258c0541777866d507b16265f7"
+    },
+    {
+      "path": "reports/runs/20260925-005500-S00E-ASTRA-d9e4edb/RUN.json",
+      "size": 1428,
+      "sha256": "14876091fa1279e08384f04dbd85a9ad1b9f0f6711c74932995b5a9a0fe1bd28"
+    },
+    {
+      "path": "reports/runs/20260925-005500-S00E-ASTRA-d9e4edb/TEST_RESULTS.json",
+      "size": 14476,
+      "sha256": "024ca56144e3e3ec2f9916509bb62cf92388c24c8f6a149c93abb0d7a41b6bc3"
+    },
+    {
+      "path": "reports/runs/20260925-005500-S00E-ASTRA-d9e4edb/public/HANDOFF_INPUTS.json",
+      "size": 3612,
+      "sha256": "895ff82dfb03d8a6e491158ee6371a1cfd0e6c7e6920ef3da7b946bbd7c2f1a3"
+    },
+    {
+      "path": "reports/runs/20260925-014500-S00E-ASTRA-d9e4edb/GATE.json",
+      "size": 5100,
+      "sha256": "1d674e2c06bf149a9bab5f9ac9fa08bba03e30a794708f4720a46fb988cb2d49"
+    },
+    {
+      "path": "reports/runs/20260925-014500-S00E-ASTRA-d9e4edb/RUN.json",
+      "size": 1321,
+      "sha256": "ac064a69d1d59557254a394adb3ed5770fb61172c88730513350d77f1539fd82"
+    },
+    {
+      "path": "reports/runs/20260925-014500-S00E-ASTRA-d9e4edb/TEST_RESULTS.json",
+      "size": 14476,
+      "sha256": "9d05dab65d5572f815eded5e11015c48df6c9d378ea7bba05de6d2b92c276b41"
+    },
+    {
+      "path": "reports/runs/20260925-014500-S00E-ASTRA-d9e4edb/public/HANDOFF_INPUTS.json",
+      "size": 3900,
+      "sha256": "dcf9fa7a019e15c10ea58ca7a5a60b7e68dcada21a2d5a29d390299dd5ea1b96"
+    },
+    {
+      "path": "src/mosei/data/data_contract.py",
+      "size": 7092,
+      "sha256": "79dbb5124e5d90ffb032d4b4a9c6f7c05eafa1c5f997e297726382258926e776"
+    },
+    {
+      "path": "src/mosei/data/dataset.py",
+      "size": 3617,
+      "sha256": "f15b226d7a956563a5b76db6f6c631f6ae7ff0b01d24508513db2cc9d32583c8"
+    },
+    {
+      "path": "src/mosei/data/masks.py",
+      "size": 3639,
+      "sha256": "ce07ea15a7b4e35c7f0e7d39cc3636d6c3ffee7374af4bad833d8a5ebff6e28d"
+    },
+    {
+      "path": "src/mosei/data/normalization.py",
+      "size": 6143,
+      "sha256": "78b9f060ce185fd232ba4a8d16d747ba15e73fd9ea078095e07bb0921a9395f5"
+    },
+    {
+      "path": "src/mosei/data/pooling.py",
+      "size": 1620,
+      "sha256": "8d0892d179ae7cd773f38758cb1151fb92a65fb1eae3d739045ae0d5f300685d"
+    },
+    {
+      "path": "src/mosei/provenance.py",
+      "size": 2474,
+      "sha256": "eb7fdb8e1efed6745dc64eaf24f34c1f6fcf5a25cc73308ad8bf77dec39e6bf0"
+    },
+    {
+      "path": "tests/test_stage_handoff.py",
+      "size": 13803,
+      "sha256": "81d33f219bbe283fc67519255853dfb056b8c267d5607e9a6d6fd405d3698ed4"
+    },
+    {
+      "path": "tests/test_stage_s00d_contract.py",
+      "size": 10014,
+      "sha256": "8cf359dc5d6acb4290b10e2bcc74451d0b94ea8ceadef44569bf63519967d85d"
+    },
+    {
+      "path": "tests/test_stage_s00e_closeout.py",
+      "size": 15586,
+      "sha256": "2d94a18e3c0983805c3fc8c6e4e0ea7fa760a7d7bc79a5a48937bd57689f368f"
+    },
+    {
+      "path": "tests/test_stage_s00e_d2_repair.py",
+      "size": 9398,
+      "sha256": "3135f04f333b9e5e0c062f496e3753db7d339b24e32d78a2ff31249061ef38bb"
+    },
+    {
+      "path": "tests/test_stage_s00e_hardening.py",
+      "size": 20249,
+      "sha256": "5e8ca4dffe13508b9a23992639d4c69e2fab61a8717924f7b06818068a2f5374"
+    },
+    {
+      "path": "tests/test_stage_s00e_phase_d_repair.py",
+      "size": 19650,
+      "sha256": "aaa039da159d3fcf20742ece913c69834cace07f4f41602dd30a1cf150e1d2ca"
+    },
+    {
+      "path": "tests/test_web_chat_handoff.py",
+      "size": 2113,
+      "sha256": "e4f8ac942b4f6d87892d539b891771fa888c62a9d62062bedb727d7616820827"
+    },
+    {
+      "path": "tools/mosei_flow.py",
+      "size": 9583,
+      "sha256": "f0da6fea63ebc6d14ec6b253f0580f9c9c52f7045e02e134a07e3932e8f823ff"
+    },
+    {
+      "path": "tools/s00d_finalize.py",
+      "size": 13105,
+      "sha256": "3fd28796e77373fb1bc120ba2a439baa191c7c4d63bddd32ed88cb406a689b6e"
+    },
+    {
+      "path": "tools/s00e_approval.py",
+      "size": 10467,
+      "sha256": "1a75943f604f186fe9b159aa489ecd624e5714edd7453e83151fbedc750ea247"
+    },
+    {
+      "path": "tools/s00e_d2_probes.py",
+      "size": 3855,
+      "sha256": "ff293a87a698714dca7a5a6f21f6317bd9d7e30f082f0d2f23f98cd89a0b00f4"
+    },
+    {
+      "path": "tools/s00e_evidence.py",
+      "size": 7233,
+      "sha256": "b973ee916d3e98a46af5d997ae595a3dbf79c957f74c936edf0b29071d3878ff"
+    },
+    {
+      "path": "tools/s00e_preflight.py",
+      "size": 2005,
+      "sha256": "d4740e169e223b04b40f46c86b6ede110d0490835dcba0ebee60299bddb84776"
+    },
+    {
+      "path": "tools/s00e_prepare.py",
+      "size": 23883,
+      "sha256": "f4ba0ebca03dbedd35893ef0259440e35be373875887230cf03a1fe0e5550fad"
+    },
+    {
+      "path": "tools/s00e_pytest_probe.py",
+      "size": 1194,
+      "sha256": "c4653ce80087fe3646a0f48fb02e56a0a81c8c2ccb055b86d22c5a36879dac85"
+    },
+    {
+      "path": "tools/s00e_smoke.py",
+      "size": 10249,
+      "sha256": "345d234089f7e36836771df571860aa07e3d17418e55bab130e449edfe4e6cbe"
+    },
+    {
+      "path": "tools/s00e_test_record.py",
+      "size": 6343,
+      "sha256": "837e0190e7eb2fee698eb4cb9e5d5209b3ae77e61f23f5c40f5e0397875e9170"
+    },
+    {
+      "path": "tools/stage_handoff.py",
+      "size": 47341,
+      "sha256": "ba131ab5a455d1acde84c7416f8d2dce1e208ddd53a6a6bb0a2efd0e3ab7a0d7"
+    },
+    {
+      "path": "tools/web_chat_handoff.py",
+      "size": 6405,
+      "sha256": "2ba02d137c3c7e7c68a19d7c51c467eac8389622843b719c06d1a0671097654a"
+    }
+  ]
+}

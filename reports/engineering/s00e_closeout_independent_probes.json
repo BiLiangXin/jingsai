@@ -1,0 +1,43 @@
+{
+  "task_id": "S00E_S01_PRESTART_ENGINEERING_HARDENING",
+  "stage": "S00E",
+  "run_id": "20260925-020000-S00E-ASTRA-d9e4edb",
+  "status": "PASS",
+  "data_kind": "synthetic",
+  "results": {
+    "ack_integer_rejected": true,
+    "duplicate_ack_rejected": true,
+    "boolean_question_index_rejected": true,
+    "wrong_question_type_rejected": true,
+    "prefixed_reply_rejected": true,
+    "stale_run_rejected": true,
+    "native_parser_positive_control": true,
+    "unapproved_new_run_native_source_rejected": true,
+    "current_record_private_node_proofs_valid": true,
+    "recorded_main": 221,
+    "recorded_subtests": 25,
+    "tracked_public_text_scanned": 121,
+    "manifest_files": 80,
+    "manifest_planned_missing": [],
+    "snapshot_files_unchanged": 58,
+    "native_log_mutation": false,
+    "official_tree_mutation": false,
+    "production_approval_granted": false,
+    "production_publisher_called": false,
+    "sessions_root_junction_rejected": true,
+    "sessions_ancestor_junction_rejected": true,
+    "full_pytest": {
+      "command": "python -B -m pytest -q -p no:cacheprovider --basetemp <OS_TEMP>/pytest-temp tests",
+      "main_passed": 221,
+      "subtests_passed": 25,
+      "exit_code": 0,
+      "elapsed_seconds": 29.06,
+      "scope_note": "Started before the user requested narrowed checks and completed; not repeated."
+    }
+  },
+  "limits": [
+    "Synthetic diagnostics are separate from pytest totals.",
+    "Only production native approval reader was exercised read-only for an unapproved new-run question; no user approval granted.",
+    "No official data/local config/native log mutation, real Git write or publication."
+  ]
+}

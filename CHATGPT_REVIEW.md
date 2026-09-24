@@ -1,32 +1,24 @@
-# Current Review — S00D aligned data contract
+# Current Review — S00E engineering hardening
 
-task_id: `S00D_DATA_CONTRACT_FREEZE_AND_BASELINE_READINESS`
-run_id: `20260924-100153-S00D-c26aced`
-status: `SUCCESS`
+task_id: `S00E_S01_PRESTART_ENGINEERING_HARDENING`
+run_id: `20260925-020000-S00E-ASTRA-d9e4edb`
+status: `ALL_GATES_PASS_PUBLICATION_PENDING`
 repository: `BiLiangXin/jingsai`
 branch: `codex/mosei-auto`
-implementation_commit: `ecb7afd14a9db6e16deb38caf393ba92321a237d`
-metadata_commit: `4fa7de5846889036b637a04e082212545573ad56`
-release_url: `https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260924-100153-S00D-c26aced`
-release_tag: `codex-run-20260924-100153-S00D-c26aced`
-review_asset: `review-20260924-100153-S00D-c26aced.zip`
+safety_governance_precommit: `078028f022cc175361cb8bf908f760087f35f709`
+workflow_governance_commit: `d9e4edb11b710a92ef33c256bfca6684162911d7`
+implementation_commit: `PENDING`
+metadata_commit: `PENDING`
+release_url: `PENDING`
 
-## Real contract audit
+## Verified engineering evidence
 
-The official aligned train and valid splits were validated read-only: 3,395 and 728 samples. Text/audio/vision shapes are `(N,50,768)`, `(N,50,74)`, `(N,50,35)`. Support is the continuous, nonempty binary prefix from `text_bert` channel 1. Audio/vision observed masks exclude supported structural zero rows; text observed equals support. Train support covers 83,672 positions and valid covers 18,628. Structural zero is not interpreted as missing. Full aggregate results are in `docs/S00D_DATA_CONTRACT.md` and `reports/data_contract/`.
+B01–B13 and D2-R01–R04/M01 repairs preserve D-DATA-01 through D-DATA-07 and Q1. Actual full collection/execution: 221 main tests and 25 separate subtests PASS, exit 0. The D2 subset contains 28 of those tests. Independent Astra High review also ran 221 main tests and 25 subtests, verified source/evidence hashes, and found no CRITICAL or blocking MAJOR. Bound review: reports/engineering/s00e_phase_d_review.json.
 
-Source SHA256 before/after: `66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd` / `66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd`. Both match S00C. No original file was changed. Test was never indexed for numerical audit; Attachment 3/4 content was not opened.
+CPU and CUDA official aligned TRAIN batch-two bridge, masked pooling and disposable linear backward smoke passed; finite gradients, isolated storage and NumPy invariance checked. Official source SHA256 before/after: 66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd. No optimizer learning, epochs, checkpoint, valid/test predictions or Attachment 3/4 inspection. Predictive metrics: null.
 
-## Engineering and research boundary
+## Publication boundary and limitations
 
-The adapter emits float32 feature batches and explicit boolean support/observed/padding masks. Labels and regression targets are separate from the model input allowlist. The two normalizers are infrastructure only; the final normalizer choice remains undecided. This run fitted z-score statistics on train observed vectors only and checked a valid transform without model fitting or metric comparison. The NumPy adapter and masked pooling were exercised. Optional PyTorch conversion was not runtime exercised because torch is unavailable in this environment.
+E19 passed with independently reviewed hashes and verified exact-version native owner confirmation; E21 passed by actual read-only prepublication preflight; all 21 mandatory Gates pass. Release verification follows E21, with no circular prerequisite. Local native confirmation trusts the uncompromised Codex host and OS account and is not cryptographic authentication. Ordinary CSV removal did not erase history. Installed Torch binary origin was not independently authenticated. These limitations are recorded; no unrelated expansion is planned.
 
-The full test command `python -m pytest -q tests` returned 116 passed, 0 failed (exit 0). The S00D Gate has 18 items. The stage remains `PENDING_RESEARCH_REVIEW`, `NEXT_STAGE_NOT_AUTHORIZED`, `STOPPED_AFTER_S00D`. S01 training is not authorized.
-
-## Open research decisions
-
-Unaligned's final role, final normalizer, model architecture and future missing simulation remain undecided. No `PROPOSED_RESEARCH_CHANGE` was needed; the frozen D-DATA-01 through D-DATA-07 contract was implemented without semantic change.
-
-## Verified automatic handoff
-
-Release target: `ecb7afd14a9db6e16deb38caf393ba92321a237d`. Asset SHA256: `38c3b811d3bf711a669d4147b957ad310d013848b39fa9622257dc667dcfe29b`. Downloaded SHA256 matches. Stage remains `PENDING_RESEARCH_REVIEW`; `NEXT_STAGE_NOT_AUTHORIZED`.
+S00D remains the latest completed stage until actual publication. S00E engineering result is PENDING_RESEARCH_REVIEW; NEXT_STAGE_NOT_AUTHORIZED; S01_NOT_STARTED. No PROPOSED_RESEARCH_CHANGE. Web Chat ZIP is not required; the formal Review Release asset remains required.

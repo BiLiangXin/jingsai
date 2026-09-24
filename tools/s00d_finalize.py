@@ -35,18 +35,37 @@ def public_files(run_id: str) -> list[str]:
 
 
 def full_tests(run_id: str) -> dict:
-    result = subprocess.run([sys.executable, "-m", "pytest", "-q", "tests"], cwd=ROOT,
-                            capture_output=True, text=True, encoding="utf-8", errors="replace")
+    def invoke(*arguments: str) -> subprocess.CompletedProcess[str]:
+        return subprocess.run([sys.executable, "-m", "pytest", *arguments], cwd=ROOT,
+                              capture_output=True, text=True, encoding="utf-8", errors="replace")
+
+    def count(output: str, label: str) -> int:
+        match = re.search(rf"\b(\d+) {label}\b", output)
+        return int(match.group(1)) if match else 0
+
+    full_collection = invoke("--collect-only", "-q", "tests")
+    stage_collection = invoke("--collect-only", "-q", "tests/test_stage_s00d_contract.py")
+    result = invoke("-q", "tests")
+    stage_result = invoke("-q", "tests/test_stage_s00d_contract.py")
     private = ROOT / f"reports/runs/{run_id}/private"
     private.mkdir(exist_ok=True)
-    (private / "TEST_LOG.txt").write_text(result.stdout + result.stderr, encoding="utf-8")
-    passed = re.search(r"\b(\d+) passed\b", result.stdout)
-    failed = re.search(r"\b(\d+) failed\b", result.stdout)
+    (private / "TEST_LOG.txt").write_text(
+        "\n".join(x.stdout + x.stderr for x in (full_collection, stage_collection, result, stage_result)),
+        encoding="utf-8")
+    passed, failed, skipped = (count(result.stdout, key) for key in ("passed", "failed", "skipped"))
+    stage_passed, stage_failed, stage_skipped = (
+        count(stage_result.stdout, key) for key in ("passed", "failed", "skipped"))
     record = {"command": "python -m pytest -q tests", "exit_code": result.returncode,
-              "passed": int(passed.group(1)) if passed else 0,
-              "failed": int(failed.group(1)) if failed else 0,
+              "collection_exit_code": full_collection.returncode,
+              "collected": count(full_collection.stdout, "tests? collected"),
+              "passed": passed, "failed": failed, "skipped": skipped,
+              "executed": passed + failed + skipped,
               "result_summary": result.stdout.strip().splitlines()[-1] if result.stdout.strip() else "no summary",
-              "s00d_contract_test_count": 36}
+              "s00d_stage_collection_exit_code": stage_collection.returncode,
+              "s00d_stage_exit_code": stage_result.returncode,
+              "s00d_stage_collected": count(stage_collection.stdout, "tests? collected"),
+              "s00d_contract_test_count": stage_passed,
+              "s00d_stage_failed": stage_failed, "s00d_stage_skipped": stage_skipped}
     write_json(ROOT / f"reports/runs/{run_id}/TEST_RESULTS.json", record)
     return record
 
@@ -104,13 +123,22 @@ def finalize(run_id: str) -> dict:
         ("D08", "Train-only normalization enforced", normalizer.get("fit_split") == "train" and normalizer.get("valid_transform_finite") is True, [REPORTS[3], CODE[5], TEST_FILES[0]]),
         ("D09", "Model input allowlist excludes targets and private fields", loader.get("model_input_allowed_only") is True and set(loader["model_input_shapes"]) == {"text", "audio", "vision", "text_support_mask", "audio_support_mask", "vision_support_mask", "text_observed_mask", "audio_observed_mask", "vision_observed_mask", "padding_mask"}, [REPORTS[4], CODE[3]]),
         ("D10", "Train/valid dataset and batch shape/dtype validated", loader.get("model_input_shapes", {}).get("text") == [16, 50, 768] and loader.get("target_dtypes", {}).get("classification_target") == "int64", [REPORTS[4], CODE[4]]),
-        ("D11", "Masked pooling nonzero-tail leakage test passed", tests["exit_code"] == 0 and tests["s00d_contract_test_count"] >= 24, [CODE[6], TEST_FILES[0], f"reports/runs/{run_id}/TEST_RESULTS.json"]),
+        ("D11", "Masked pooling nonzero-tail leakage test passed",
+         tests["s00d_stage_collection_exit_code"] == 0 and tests["s00d_stage_exit_code"] == 0 and
+         tests["s00d_stage_collected"] > 0 and
+         tests["s00d_contract_test_count"] == tests["s00d_stage_collected"] and
+         tests["s00d_stage_failed"] == tests["s00d_stage_skipped"] == 0,
+         [CODE[6], TEST_FILES[0], f"reports/runs/{run_id}/TEST_RESULTS.json"]),
         ("D12", "Real aligned train/valid contract audit completed", run.get("sample_counts") == {"train": 3395, "valid": 728} and contract["splits"]["train"]["finite_features"], [REPORTS[0], f"reports/runs/{run_id}/RUN.json"]),
         ("D13", "Official aligned source unchanged", source.get("unchanged") is True and source["before"] == source["after"], [REPORTS[5], f"reports/runs/{run_id}/public/SOURCE_HASH_BEFORE.json", f"reports/runs/{run_id}/public/SOURCE_HASH_AFTER.json"]),
         ("D14", "Test quarantine preserved", run["split_usage"].get("test") == "quarantined; not indexed" and contract.get("test", "").startswith("LOCKED"), [CODE[4], CODE[7], REPORTS[0]]),
         ("D15", "Attachment 3/4 content isolation preserved", run.get("attachment3_content_inspected") is False and run.get("attachment4_content_inspected") is False, [CODE[7], f"reports/runs/{run_id}/RUN.json"]),
         ("D16", "Public safety scan passed", True, ["tools/stage_handoff.py", f"reports/runs/{run_id}/public/HANDOFF_INPUTS.json"]),
-        ("D17", "Complete pytest suite passed", tests["exit_code"] == 0 and tests["failed"] == 0 and tests["passed"] >= 36, [f"reports/runs/{run_id}/TEST_RESULTS.json"]),
+        ("D17", "Complete pytest suite passed",
+         tests["collection_exit_code"] == 0 and tests["exit_code"] == 0 and
+         tests["collected"] > 0 and tests["passed"] == tests["collected"] == tests["executed"] and
+         tests["failed"] == tests["skipped"] == 0,
+         [f"reports/runs/{run_id}/TEST_RESULTS.json"]),
         ("D18", "Documentation and evidence complete", (ROOT / "docs/S00D_DATA_CONTRACT.md").is_file() and all((ROOT / p).is_file() for p in REPORTS), ["docs/S00D_DATA_CONTRACT.md", *REPORTS]),
     ]
     files = public_files(run_id)

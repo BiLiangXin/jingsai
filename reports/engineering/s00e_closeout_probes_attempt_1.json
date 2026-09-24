@@ -1,0 +1,20 @@
+{
+  "csv_bom_direct_accepted": true,
+  "csv_bom_tracked_accepted": true,
+  "csv_bom_unlisted_preflight_accepted": true,
+  "csv_bom_manifest_preflight_accepted": true,
+  "csv_bom_zip_accepted": true,
+  "snapshot_files_verified": 58,
+  "snapshot_mismatches": [],
+  "full_pytest": {
+    "exit_code": 0,
+    "main_passed": 199,
+    "subtests_passed": 25,
+    "failed": 0,
+    "command": "python -B -m pytest -q -p no:cacheprovider --basetemp <OS_TEMP>/pytest-temp tests",
+    "summary": "199 passed, 25 subtests passed in 26.45s"
+  },
+  "official_data_opened": false,
+  "production_publisher_called": false,
+  "e19_approval_granted": false
+}

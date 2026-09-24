@@ -5,12 +5,13 @@ import argparse
 import hashlib
 import json
 import re
+import stat
 import zipfile
 from datetime import datetime, timezone
 from pathlib import Path, PurePosixPath
 
 from mosei_flow import forbidden_path, scan_text
-from stage_handoff import PUBLIC_SUFFIXES, RAW_ID, scan_json, scan_public
+from stage_handoff import PUBLIC_SUFFIXES, RAW_ID, scan_json, scan_public, scan_public_bytes, PROTECTED_DIRS
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = Path("reports/web_chat_handoffs")
@@ -34,7 +35,7 @@ def source_bytes(root: Path, relative: str) -> bytes:
     path = PurePosixPath(relative)
     if (path.is_absolute() or ".." in path.parts or "\\" in relative or
             not path.parts or forbidden_path(relative) or
-            {part.lower() for part in path.parts} & {"private", "artifacts"} or
+            {part.lower() for part in path.parts} & PROTECTED_DIRS or
             path.suffix.lower() not in PUBLIC_SUFFIXES):
         raise BundleError(f"Unsafe source path: {relative}")
     target = root / relative
@@ -84,6 +85,9 @@ def create_bundle(root: Path, bundle_id: str, response: dict, includes: list[str
                 "files": [{"path": name, "sha256": digest(data), "size_bytes": len(data)}
                           for name, data in sorted(members.items())]}
     members["MANIFEST.json"] = json_bytes(manifest)
+    for name, data in members.items():
+        if scan_public_bytes(name, data):
+            raise BundleError(f"Unsafe generated member: {name}")
     output_dir = root / OUTPUT / bundle_id
     if output_dir.exists():
         raise BundleError("Bundle ID already exists; no files were overwritten")
@@ -94,14 +98,23 @@ def create_bundle(root: Path, bundle_id: str, response: dict, includes: list[str
             for name, data in sorted(members.items()):
                 archive.writestr(name, data)
         with zipfile.ZipFile(target) as archive:
-            if sorted(archive.namelist()) != sorted(members):
+            names = archive.namelist()
+            if len(names) != len(set(names)) or sorted(names) != sorted(members):
                 raise BundleError("ZIP member list mismatch")
+            for member in archive.infolist():
+                path = PurePosixPath(member.filename)
+                if (path.is_absolute() or ".." in path.parts or "\\" in member.filename or
+                        stat.S_ISLNK(member.external_attr >> 16)):
+                    raise BundleError("Unsafe ZIP member metadata")
             for entry in manifest["files"]:
                 data = archive.read(entry["path"])
                 if digest(data) != entry["sha256"] or len(data) != entry["size_bytes"]:
                     raise BundleError(f"ZIP integrity failure: {entry['path']}")
             if json.loads(archive.read("MANIFEST.json")) != manifest:
                 raise BundleError("ZIP manifest mismatch")
+            for name in archive.namelist():
+                if scan_public_bytes(name, archive.read(name)):
+                    raise BundleError(f"Unsafe archived member: {name}")
     except Exception:
         target.unlink(missing_ok=True)
         raise

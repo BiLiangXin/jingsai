@@ -1,0 +1,27 @@
+{
+  "task_id": "S00E_S01_PRESTART_ENGINEERING_HARDENING",
+  "stage": "S00E",
+  "run_id": "20260925-020000-S00E-ASTRA-d9e4edb",
+  "safety_governance_precommit": "078028f022cc175361cb8bf908f760087f35f709",
+  "governance_head": "d9e4edb11b710a92ef33c256bfca6684162911d7",
+  "reviewed_files": {
+    "tools/s00e_approval.py": "1a75943f604f186fe9b159aa489ecd624e5714edd7453e83151fbedc750ea247",
+    "tests/test_stage_s00e_closeout.py": "2d94a18e3c0983805c3fc8c6e4e0ea7fa760a7d7bc79a5a48937bd57689f368f",
+    "src/mosei/data/data_contract.py": "79dbb5124e5d90ffb032d4b4a9c6f7c05eafa1c5f997e297726382258926e776",
+    "src/mosei/data/pooling.py": "8d0892d179ae7cd773f38758cb1151fb92a65fb1eae3d739045ae0d5f300685d",
+    "tools/stage_handoff.py": "ba131ab5a455d1acde84c7416f8d2dce1e208ddd53a6a6bb0a2efd0e3ab7a0d7",
+    "tools/s00d_finalize.py": "3fd28796e77373fb1bc120ba2a439baa191c7c4d63bddd32ed88cb406a689b6e",
+    "tools/s00e_smoke.py": "345d234089f7e36836771df571860aa07e3d17418e55bab130e449edfe4e6cbe",
+    "tools/s00e_test_record.py": "837e0190e7eb2fee698eb4cb9e5d5209b3ae77e61f23f5c40f5e0397875e9170",
+    "tools/s00e_prepare.py": "f4ba0ebca03dbedd35893ef0259440e35be373875887230cf03a1fe0e5550fad",
+    "tools/s00e_preflight.py": "d4740e169e223b04b40f46c86b6ede110d0490835dcba0ebee60299bddb84776",
+    "tools/web_chat_handoff.py": "2ba02d137c3c7e7c68a19d7c51c467eac8389622843b719c06d1a0671097654a",
+    "tools/s00e_pytest_probe.py": "c4653ce80087fe3646a0f48fb02e56a0a81c8c2ccb055b86d22c5a36879dac85",
+    "tools/s00e_evidence.py": "b973ee916d3e98a46af5d997ae595a3dbf79c957f74c936edf0b29071d3878ff",
+    "tools/s00e_d2_probes.py": "ff293a87a698714dca7a5a6f21f6317bd9d7e30f082f0d2f23f98cd89a0b00f4",
+    "tests/test_stage_handoff.py": "81d33f219bbe283fc67519255853dfb056b8c267d5607e9a6d6fd405d3698ed4",
+    "tests/test_stage_s00e_hardening.py": "5e8ca4dffe13508b9a23992639d4c69e2fab61a8717924f7b06818068a2f5374",
+    "tests/test_stage_s00e_phase_d_repair.py": "aaa039da159d3fcf20742ece913c69834cace07f4f41602dd30a1cf150e1d2ca",
+    "tests/test_stage_s00e_d2_repair.py": "3135f04f333b9e5e0c062f496e3753db7d339b24e32d78a2ff31249061ef38bb"
+  }
+}

@@ -15,10 +15,14 @@ def masked_sum(values, support_mask):
     """Sum only explicitly supported positions; supports NumPy and optional torch tensors."""
     if type(values).__module__.startswith("torch"):
         _validated(values, support_mask, torch_tensor=True)
-        return (values * support_mask.unsqueeze(-1).to(values.dtype)).sum(dim=1)
+        if not bool(values[support_mask].isfinite().all()):
+            raise ValueError("Supported values must be finite")
+        return values.masked_fill(~support_mask.unsqueeze(-1), 0).sum(dim=1)
     array = np.asarray(values)
     mask = np.asarray(support_mask)
     _validated(array, mask)
+    if not np.all(np.isfinite(array[mask])):
+        raise ValueError("Supported values must be finite")
     return np.sum(np.where(mask[..., None], array, 0), axis=1)
 
 

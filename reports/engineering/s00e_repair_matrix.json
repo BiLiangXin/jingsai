@@ -1,0 +1,147 @@
+{
+  "stage": "S00E",
+  "run_id": "20260925-020000-S00E-ASTRA-d9e4edb",
+  "phase": "C",
+  "status": "READY_FOR_INDEPENDENT_REVIEW",
+  "official_torch_version_listing": "https://pytorch.org/get-started/previous-versions/",
+  "findings": [
+    {
+      "id": "B01",
+      "severity": "CRITICAL",
+      "phase_c_state": "IMPLEMENTED_AND_TESTED",
+      "repair": "Two old CSVs removed by separate verified ordinary precommit; current backlinks removed.",
+      "evidence": [
+        "DECISIONS.md",
+        "docs/data-guide.md",
+        "reports/engineering/s00e_security_findings.json"
+      ]
+    },
+    {
+      "id": "B02",
+      "severity": "MAJOR",
+      "phase_c_state": "IMPLEMENTED_AND_TESTED",
+      "repair": "Every supplied mask dtype, shape, support prefix and frozen equality is validated.",
+      "evidence": [
+        "src/mosei/data/data_contract.py",
+        "tests/test_stage_s00e_hardening.py"
+      ]
+    },
+    {
+      "id": "B03",
+      "severity": "MAJOR",
+      "phase_c_state": "IMPLEMENTED_AND_TESTED",
+      "repair": "Post-float32 finite and strict-zero checks reject overflow and sign collapse.",
+      "evidence": [
+        "src/mosei/data/data_contract.py",
+        "tests/test_stage_s00e_hardening.py"
+      ]
+    },
+    {
+      "id": "B04",
+      "severity": "CRITICAL",
+      "phase_c_state": "IMPLEMENTED_AND_TESTED",
+      "repair": "All 21 S00E IDs, PASS statuses, evidence, identity and summary counts are checked.",
+      "evidence": [
+        "tools/stage_handoff.py",
+        "tests/test_stage_s00e_hardening.py"
+      ]
+    },
+    {
+      "id": "B05",
+      "severity": "MAJOR",
+      "phase_c_state": "IMPLEMENTED_AND_TESTED",
+      "repair": "Entire tracked text index/worktree and pending public files are scanned before publication.",
+      "evidence": [
+        "tools/stage_handoff.py",
+        "reports/engineering/s00e_public_tree_scan.json"
+      ]
+    },
+    {
+      "id": "B06",
+      "severity": "MAJOR",
+      "phase_c_state": "IMPLEMENTED_AND_TESTED",
+      "repair": "birdAL CPU/CUDA runtime and tiny official TRAIN forward/backward actually exercised.",
+      "evidence": [
+        "tools/s00e_smoke.py",
+        "reports/engineering/s00e_pytorch_runtime.json"
+      ]
+    },
+    {
+      "id": "B07",
+      "severity": "MAJOR",
+      "phase_c_state": "IMPLEMENTED_AND_TESTED",
+      "repair": "Batch construction and every Torch bridge tensor own independent storage.",
+      "evidence": [
+        "src/mosei/data/data_contract.py",
+        "tests/test_stage_s00e_hardening.py"
+      ]
+    },
+    {
+      "id": "B08",
+      "severity": "MAJOR",
+      "phase_c_state": "IMPLEMENTED_AND_TESTED",
+      "repair": "Masked NaN/Inf tails are isolated; supported nonfinite values are rejected.",
+      "evidence": [
+        "src/mosei/data/pooling.py",
+        "tests/test_stage_s00e_hardening.py"
+      ]
+    },
+    {
+      "id": "B09",
+      "severity": "MAJOR",
+      "phase_c_state": "IMPLEMENTED_AND_TESTED",
+      "repair": "Actual pytest collection/execution replaces the hardcoded S00D count.",
+      "evidence": [
+        "tools/s00d_finalize.py",
+        "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/TEST_RESULTS.json"
+      ]
+    },
+    {
+      "id": "B10",
+      "severity": "MAJOR",
+      "phase_c_state": "IMPLEMENTED_AND_TESTED",
+      "repair": "Current guide uses verified S00B/C/D facts and removes test-bearing pooled label table.",
+      "evidence": [
+        "docs/data-guide.md",
+        "docs/DATA_CONTRACT_EVIDENCE.md"
+      ]
+    },
+    {
+      "id": "B11",
+      "severity": "MAJOR",
+      "phase_c_state": "IMPLEMENTED_AND_TESTED",
+      "repair": "Q1 supplied source/retention rules recorded as SPECIFIED; missing mapping undecided.",
+      "evidence": [
+        "DECISIONS.md",
+        "docs/data-guide.md"
+      ]
+    },
+    {
+      "id": "B12",
+      "severity": "MAJOR",
+      "phase_c_state": "IMPLEMENTED_AND_TESTED",
+      "repair": "S00E engineering reports are narrowly allowlisted and included in latest index selection.",
+      "evidence": [
+        "tools/stage_handoff.py",
+        "tests/test_stage_handoff.py"
+      ]
+    },
+    {
+      "id": "B13",
+      "severity": "MINOR",
+      "phase_c_state": "IMPLEMENTED_AND_TESTED",
+      "repair": "Live navigation now distinguishes completed S00D from active S00E.",
+      "evidence": [
+        "README_CODEX.md",
+        "state/NEXT_ACTIONS.md",
+        "docs/HANDOFF_WORKFLOW.md"
+      ]
+    }
+  ],
+  "unresolved": [
+    "E19 independent Astra review pending.",
+    "E21 PREPUBLICATION_SAFETY_PREFLIGHT pending E19 and PHASE E; Release verification is post-publication.",
+    "Historical access to deleted sample CSVs requires separate owner assessment.",
+    "Installed Torch package origin was not independently authenticated; the local runtime and the official release-version listing were verified separately."
+  ]
+}

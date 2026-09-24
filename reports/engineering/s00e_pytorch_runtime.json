@@ -1,0 +1,50 @@
+{
+  "stage": "S00E",
+  "run_id": "20260925-020000-S00E-ASTRA-d9e4edb",
+  "task_id": "S00E_S01_PRESTART_ENGINEERING_HARDENING",
+  "status": "PASS",
+  "data_kind": "real_official_local",
+  "source_file": "aligned_50.pkl",
+  "source_unchanged": true,
+  "head_at_smoke": "d9e4edb11b710a92ef33c256bfca6684162911d7",
+  "environment": {
+    "name": "birdAL",
+    "python": "3.11.14",
+    "numpy": "2.2.6",
+    "torch": "2.9.1+cu128",
+    "cuda_runtime": "12.8",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 5070 Ti"
+  },
+  "official_distribution_origin_independently_verified": false,
+  "container_deserialized": true,
+  "split_indexed": "train_only",
+  "smoke": {
+    "batch_size": 2,
+    "split": "train",
+    "test_key_indexed": false,
+    "attachment3_content_opened": false,
+    "attachment4_content_opened": false,
+    "numpy_batch_unchanged": true,
+    "torch_cpu_storage_separate": true,
+    "devices": {
+      "cpu": {
+        "bridge": "PASS",
+        "pooled_modalities": 3,
+        "pooled_shapes_valid": true,
+        "masked_tail_invariant": true,
+        "masked_nan_isolated": true,
+        "linear_backward_finite": true
+      },
+      "cuda": {
+        "bridge": "PASS",
+        "pooled_modalities": 3,
+        "pooled_shapes_valid": true,
+        "masked_tail_invariant": true,
+        "masked_nan_isolated": true,
+        "linear_backward_finite": true
+      }
+    }
+  },
+  "error_type": null
+}

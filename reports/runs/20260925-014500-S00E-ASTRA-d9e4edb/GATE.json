@@ -1,0 +1,200 @@
+{
+  "task_id": "S00E_S01_PRESTART_ENGINEERING_HARDENING",
+  "run_id": "20260925-014500-S00E-ASTRA-d9e4edb",
+  "status": "BLOCKED",
+  "passed": false,
+  "summary": {
+    "PASS": 19,
+    "FAIL": 0,
+    "SKIPPED": 0,
+    "BLOCKED": 2
+  },
+  "items": [
+    {
+      "id": "E01",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "AGENTS.md",
+        "reports/runs/20260925-014500-S00E-ASTRA-d9e4edb/RUN.json"
+      ]
+    },
+    {
+      "id": "E02",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "TASK_SPEC.md",
+        "reports/runs/20260925-014500-S00E-ASTRA-d9e4edb/RUN.json"
+      ]
+    },
+    {
+      "id": "E03",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "docs/S00D_DATA_CONTRACT.md",
+        "reports/engineering/s00e_source_mutation_check.json"
+      ]
+    },
+    {
+      "id": "E04",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "reports/engineering/s00e_security_findings.json"
+      ]
+    },
+    {
+      "id": "E05",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "reports/engineering/s00e_public_tree_scan.json",
+        "tools/stage_handoff.py"
+      ]
+    },
+    {
+      "id": "E06",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "src/mosei/data/data_contract.py",
+        "tests/test_stage_s00e_hardening.py"
+      ]
+    },
+    {
+      "id": "E07",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "src/mosei/data/data_contract.py",
+        "tests/test_stage_s00e_hardening.py"
+      ]
+    },
+    {
+      "id": "E08",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "tools/stage_handoff.py",
+        "tests/test_stage_s00e_hardening.py"
+      ]
+    },
+    {
+      "id": "E09",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "reports/runs/20260925-014500-S00E-ASTRA-d9e4edb/TEST_RESULTS.json",
+        "tools/s00e_test_record.py"
+      ]
+    },
+    {
+      "id": "E10",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "reports/engineering/s00e_pytorch_runtime.json"
+      ]
+    },
+    {
+      "id": "E11",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "reports/engineering/s00e_pytorch_runtime.json",
+        "tools/s00e_smoke.py"
+      ]
+    },
+    {
+      "id": "E12",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "reports/engineering/s00e_pytorch_runtime.json",
+        "src/mosei/data/pooling.py"
+      ]
+    },
+    {
+      "id": "E13",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "reports/engineering/s00e_pytorch_runtime.json"
+      ]
+    },
+    {
+      "id": "E14",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "reports/engineering/s00e_pytorch_runtime.json",
+        "tests/test_stage_s00e_hardening.py"
+      ]
+    },
+    {
+      "id": "E15",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "reports/engineering/s00e_source_mutation_check.json"
+      ]
+    },
+    {
+      "id": "E16",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "src/mosei/data/dataset.py",
+        "tools/s00e_smoke.py"
+      ]
+    },
+    {
+      "id": "E17",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "tools/s00e_smoke.py",
+        "reports/runs/20260925-014500-S00E-ASTRA-d9e4edb/RUN.json"
+      ]
+    },
+    {
+      "id": "E18",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "reports/runs/20260925-014500-S00E-ASTRA-d9e4edb/TEST_RESULTS.json"
+      ]
+    },
+    {
+      "id": "E19",
+      "status": "BLOCKED",
+      "detail": "Pending independent PHASE D review or PHASE E handoff",
+      "evidence": [
+        "reports/engineering/s00e_phase_d_review.json"
+      ]
+    },
+    {
+      "id": "E20",
+      "status": "PASS",
+      "detail": "Verified PHASE C evidence",
+      "evidence": [
+        "DECISIONS.md",
+        "docs/data-guide.md",
+        "docs/HANDOFF_WORKFLOW.md"
+      ]
+    },
+    {
+      "id": "E21",
+      "status": "BLOCKED",
+      "detail": "Pending independent PHASE D review or PHASE E handoff",
+      "evidence": [
+        "reports/engineering/s00e_prepublication_preflight.json",
+        "reports/runs/20260925-014500-S00E-ASTRA-d9e4edb/public/HANDOFF_INPUTS.json",
+        "tools/s00e_preflight.py"
+      ]
+    }
+  ],
+  "phase_c_status": "READY_FOR_INDEPENDENT_REVIEW"
+}

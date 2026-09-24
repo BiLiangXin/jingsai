@@ -1,0 +1,259 @@
+{
+  "task_id": "S00E_S01_PRESTART_ENGINEERING_HARDENING",
+  "stage": "S00E",
+  "run_id": "20260925-020000-S00E-ASTRA-d9e4edb",
+  "status": "ALL_GATES_PASS_PUBLICATION_PENDING",
+  "data_kind": "real_official_local",
+  "evidence": [
+    {
+      "requirement": "AGENTS.md",
+      "path": "AGENTS.md",
+      "sha256": "4a9ea177276ccf84d7a37567af79144dad4b2c23a13bbcc6ea28c1e311114954"
+    },
+    {
+      "requirement": "CHATGPT_REVIEW.md",
+      "path": "CHATGPT_REVIEW.md",
+      "sha256": "1eb9e350fe1239a96be10b5f2a22607afdec07c244330361519aee571f2ae2cf"
+    },
+    {
+      "requirement": "DECISIONS.md",
+      "path": "DECISIONS.md",
+      "sha256": "cbc034c6605552e458fde0354d93c4ac821d43a2e045cd851a5ed0dfcf566819"
+    },
+    {
+      "requirement": "TASK_SPEC.md",
+      "path": "TASK_SPEC.md",
+      "sha256": "8c40f47d50616d873ad1ba3f2ce80898cc758d7462d3f001f3c32c575aec1c62"
+    },
+    {
+      "requirement": "HANDOFF_WORKFLOW.md",
+      "path": "docs/HANDOFF_WORKFLOW.md",
+      "sha256": "4d69644932d14bc11a149c7cc0873ebabd20e0f0f513ee51de3cf3d046c3b5ed"
+    },
+    {
+      "requirement": "S00D_DATA_CONTRACT.md",
+      "path": "docs/S00D_DATA_CONTRACT.md",
+      "sha256": "c397a296ad6595375db34b79e93add43fe7888a359976a7c41608ba9c120240c"
+    },
+    {
+      "requirement": "S00E_ENGINEERING_HARDENING.md",
+      "path": "docs/S00E_ENGINEERING_HARDENING.md",
+      "sha256": "13dfb69da940f662fc0f99e85e37bb96d8560151ed7e656620098168f2553e20"
+    },
+    {
+      "requirement": "data-guide.md",
+      "path": "docs/data-guide.md",
+      "sha256": "0b04f436e0663b07a58e318202dd482a613bc7ad44ed3cea49e6269d3c98886c"
+    },
+    {
+      "requirement": "s00e_closeout_independent_probes.json",
+      "path": "reports/engineering/s00e_closeout_independent_probes.json",
+      "sha256": "be695aaef732b6151a07929200f851f8f4c3b18814dc0e71105dfdd12cf87053"
+    },
+    {
+      "requirement": "s00e_contract_hardening.json",
+      "path": "reports/engineering/s00e_contract_hardening.json",
+      "sha256": "6ad792e6287388b53b165215f636e9ed42e4e9210681677a72c3ac1c6859b244"
+    },
+    {
+      "requirement": "s00e_d2_probe_results.json",
+      "path": "reports/engineering/s00e_d2_probe_results.json",
+      "sha256": "3a181925cbed1c2d8cdde8a9038656f349ebd8fcc72a650525cc2305c6666e0b"
+    },
+    {
+      "requirement": "s00e_d2_repair_matrix.json",
+      "path": "reports/engineering/s00e_d2_repair_matrix.json",
+      "sha256": "34c2af33b8579c597aee06b68ff36edbef8b6ffc639d9a1bb47d1385fda6ae34"
+    },
+    {
+      "requirement": "s00e_d2_review_inputs.json",
+      "path": "reports/engineering/s00e_d2_review_inputs.json",
+      "sha256": "c57ba9ab40d5ef55d2b7cad53730ee386111e5a4ff8a8dd81d31c70142f84654"
+    },
+    {
+      "requirement": "s00e_phase_d_review.json",
+      "path": "reports/engineering/s00e_phase_d_review.json",
+      "sha256": "26c74726eff8c52ad5a08e399c8c1d6f3e9dc577dd4f75ea7340829588e5d6d8"
+    },
+    {
+      "requirement": "s00e_phase_d_review.md",
+      "path": "reports/engineering/s00e_phase_d_review.md",
+      "sha256": "2a153c49608666f0773039d6ab465d1a60958973ca565b8cd450be91a34d368a"
+    },
+    {
+      "requirement": "s00e_prepublication_preflight.json",
+      "path": "reports/engineering/s00e_prepublication_preflight.json",
+      "sha256": "33f1f0b675a90ceb9a4ddd49936e937374c34d2174fbb4aebef64a1e6e417b61"
+    },
+    {
+      "requirement": "s00e_public_tree_scan.json",
+      "path": "reports/engineering/s00e_public_tree_scan.json",
+      "sha256": "58632dc0554833a2afd7dd9729f90a56e3558580ba908bed021ea2ce91dbb243"
+    },
+    {
+      "requirement": "s00e_pytorch_runtime.json",
+      "path": "reports/engineering/s00e_pytorch_runtime.json",
+      "sha256": "9eeceaced1882b37bf4609e994a2a199bebf8c1949930c05658c73ab94375999"
+    },
+    {
+      "requirement": "s00e_repair_matrix.json",
+      "path": "reports/engineering/s00e_repair_matrix.json",
+      "sha256": "aa53b07a06de10f4cf5834576bf277718225cf8733048590ae6a53bf8688fc76"
+    },
+    {
+      "requirement": "s00e_security_findings.json",
+      "path": "reports/engineering/s00e_security_findings.json",
+      "sha256": "3bbe5748ecce666daa3b853a7ec0cc191c36ce555cbbc1695979112b43462d55"
+    },
+    {
+      "requirement": "s00e_source_mutation_check.json",
+      "path": "reports/engineering/s00e_source_mutation_check.json",
+      "sha256": "89c33b9d341c153723809e2e997fe290df40251a03e4e9aa907ad739db89a192"
+    },
+    {
+      "requirement": "GATE.json",
+      "path": "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/GATE.json",
+      "sha256": "eeb1b133bc08c69a71487f62d1348cd31f4b85793ae76321e13934acada35a2e"
+    },
+    {
+      "requirement": "RUN.json",
+      "path": "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/RUN.json",
+      "sha256": "6a306cbc495ef5151775ab8aef102cd4fa21c9e7461ecc33a94482ab2412dd03"
+    },
+    {
+      "requirement": "TEST_RESULTS.json",
+      "path": "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/TEST_RESULTS.json",
+      "sha256": "46d32c7c096c25e225fd1ee0fe68eeb6f7ad14da987dff7ce79fec91ee96329f"
+    },
+    {
+      "requirement": "HANDOFF_INPUTS.json",
+      "path": "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/public/HANDOFF_INPUTS.json",
+      "sha256": "ce59908ae32ebeee5c60ae1bca5e9bb21da2b49b2a95a8191c34aba931ffec79"
+    },
+    {
+      "requirement": "data_contract.py",
+      "path": "src/mosei/data/data_contract.py",
+      "sha256": "79dbb5124e5d90ffb032d4b4a9c6f7c05eafa1c5f997e297726382258926e776"
+    },
+    {
+      "requirement": "dataset.py",
+      "path": "src/mosei/data/dataset.py",
+      "sha256": "f15b226d7a956563a5b76db6f6c631f6ae7ff0b01d24508513db2cc9d32583c8"
+    },
+    {
+      "requirement": "masks.py",
+      "path": "src/mosei/data/masks.py",
+      "sha256": "ce07ea15a7b4e35c7f0e7d39cc3636d6c3ffee7374af4bad833d8a5ebff6e28d"
+    },
+    {
+      "requirement": "normalization.py",
+      "path": "src/mosei/data/normalization.py",
+      "sha256": "78b9f060ce185fd232ba4a8d16d747ba15e73fd9ea078095e07bb0921a9395f5"
+    },
+    {
+      "requirement": "pooling.py",
+      "path": "src/mosei/data/pooling.py",
+      "sha256": "8d0892d179ae7cd773f38758cb1151fb92a65fb1eae3d739045ae0d5f300685d"
+    },
+    {
+      "requirement": "provenance.py",
+      "path": "src/mosei/provenance.py",
+      "sha256": "eb7fdb8e1efed6745dc64eaf24f34c1f6fcf5a25cc73308ad8bf77dec39e6bf0"
+    },
+    {
+      "requirement": "test_stage_handoff.py",
+      "path": "tests/test_stage_handoff.py",
+      "sha256": "81d33f219bbe283fc67519255853dfb056b8c267d5607e9a6d6fd405d3698ed4"
+    },
+    {
+      "requirement": "test_stage_s00d_contract.py",
+      "path": "tests/test_stage_s00d_contract.py",
+      "sha256": "8cf359dc5d6acb4290b10e2bcc74451d0b94ea8ceadef44569bf63519967d85d"
+    },
+    {
+      "requirement": "test_stage_s00e_closeout.py",
+      "path": "tests/test_stage_s00e_closeout.py",
+      "sha256": "2d94a18e3c0983805c3fc8c6e4e0ea7fa760a7d7bc79a5a48937bd57689f368f"
+    },
+    {
+      "requirement": "test_stage_s00e_d2_repair.py",
+      "path": "tests/test_stage_s00e_d2_repair.py",
+      "sha256": "3135f04f333b9e5e0c062f496e3753db7d339b24e32d78a2ff31249061ef38bb"
+    },
+    {
+      "requirement": "test_stage_s00e_hardening.py",
+      "path": "tests/test_stage_s00e_hardening.py",
+      "sha256": "5e8ca4dffe13508b9a23992639d4c69e2fab61a8717924f7b06818068a2f5374"
+    },
+    {
+      "requirement": "test_stage_s00e_phase_d_repair.py",
+      "path": "tests/test_stage_s00e_phase_d_repair.py",
+      "sha256": "aaa039da159d3fcf20742ece913c69834cace07f4f41602dd30a1cf150e1d2ca"
+    },
+    {
+      "requirement": "test_web_chat_handoff.py",
+      "path": "tests/test_web_chat_handoff.py",
+      "sha256": "e4f8ac942b4f6d87892d539b891771fa888c62a9d62062bedb727d7616820827"
+    },
+    {
+      "requirement": "mosei_flow.py",
+      "path": "tools/mosei_flow.py",
+      "sha256": "f0da6fea63ebc6d14ec6b253f0580f9c9c52f7045e02e134a07e3932e8f823ff"
+    },
+    {
+      "requirement": "s00d_finalize.py",
+      "path": "tools/s00d_finalize.py",
+      "sha256": "3fd28796e77373fb1bc120ba2a439baa191c7c4d63bddd32ed88cb406a689b6e"
+    },
+    {
+      "requirement": "s00e_approval.py",
+      "path": "tools/s00e_approval.py",
+      "sha256": "1a75943f604f186fe9b159aa489ecd624e5714edd7453e83151fbedc750ea247"
+    },
+    {
+      "requirement": "s00e_d2_probes.py",
+      "path": "tools/s00e_d2_probes.py",
+      "sha256": "ff293a87a698714dca7a5a6f21f6317bd9d7e30f082f0d2f23f98cd89a0b00f4"
+    },
+    {
+      "requirement": "s00e_evidence.py",
+      "path": "tools/s00e_evidence.py",
+      "sha256": "b973ee916d3e98a46af5d997ae595a3dbf79c957f74c936edf0b29071d3878ff"
+    },
+    {
+      "requirement": "s00e_preflight.py",
+      "path": "tools/s00e_preflight.py",
+      "sha256": "d4740e169e223b04b40f46c86b6ede110d0490835dcba0ebee60299bddb84776"
+    },
+    {
+      "requirement": "s00e_prepare.py",
+      "path": "tools/s00e_prepare.py",
+      "sha256": "f4ba0ebca03dbedd35893ef0259440e35be373875887230cf03a1fe0e5550fad"
+    },
+    {
+      "requirement": "s00e_pytest_probe.py",
+      "path": "tools/s00e_pytest_probe.py",
+      "sha256": "c4653ce80087fe3646a0f48fb02e56a0a81c8c2ccb055b86d22c5a36879dac85"
+    },
+    {
+      "requirement": "s00e_smoke.py",
+      "path": "tools/s00e_smoke.py",
+      "sha256": "345d234089f7e36836771df571860aa07e3d17418e55bab130e449edfe4e6cbe"
+    },
+    {
+      "requirement": "s00e_test_record.py",
+      "path": "tools/s00e_test_record.py",
+      "sha256": "837e0190e7eb2fee698eb4cb9e5d5209b3ae77e61f23f5c40f5e0397875e9170"
+    },
+    {
+      "requirement": "stage_handoff.py",
+      "path": "tools/stage_handoff.py",
+      "sha256": "ba131ab5a455d1acde84c7416f8d2dce1e208ddd53a6a6bb0a2efd0e3ab7a0d7"
+    },
+    {
+      "requirement": "web_chat_handoff.py",
+      "path": "tools/web_chat_handoff.py",
+      "sha256": "2ba02d137c3c7e7c68a19d7c51c467eac8389622843b719c06d1a0671097654a"
+    }
+  ]
+}

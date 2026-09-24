@@ -1,0 +1,90 @@
+{
+  "task_id": "S00E_S01_PRESTART_ENGINEERING_HARDENING",
+  "stage": "S00E",
+  "run_id": "20260925-020000-S00E-ASTRA-d9e4edb",
+  "status": "REPAIRED_PENDING_INDEPENDENT_REVIEW",
+  "probe_report": "reports/engineering/s00e_d2_probe_results.json",
+  "findings": [
+    {
+      "id": "R01",
+      "severity": "MAJOR",
+      "old_behavior": "scalar sample and duplicate structured keys accepted",
+      "repair_state": "SYNTHETIC_REGRESSION_PASS_PENDING_ASTRA",
+      "evidence": [
+        "tools/stage_handoff.py",
+        "tests/test_stage_s00e_d2_repair.py"
+      ],
+      "sha256": {
+        "tools/stage_handoff.py": "ba131ab5a455d1acde84c7416f8d2dce1e208ddd53a6a6bb0a2efd0e3ab7a0d7",
+        "tests/test_stage_s00e_d2_repair.py": "3135f04f333b9e5e0c062f496e3753db7d339b24e32d78a2ff31249061ef38bb"
+      }
+    },
+    {
+      "id": "R02",
+      "severity": "MAJOR",
+      "old_behavior": "review self assertion and foreign acceptance run accepted",
+      "repair_state": "SYNTHETIC_REGRESSION_PASS_PENDING_ASTRA",
+      "evidence": [
+        "tools/stage_handoff.py",
+        "tests/test_stage_s00e_d2_repair.py"
+      ],
+      "sha256": {
+        "tools/stage_handoff.py": "ba131ab5a455d1acde84c7416f8d2dce1e208ddd53a6a6bb0a2efd0e3ab7a0d7",
+        "tests/test_stage_s00e_d2_repair.py": "3135f04f333b9e5e0c062f496e3753db7d339b24e32d78a2ff31249061ef38bb"
+      }
+    },
+    {
+      "id": "R03",
+      "severity": "MAJOR",
+      "old_behavior": "prepare wrote E13 PASS after failed gradient evidence",
+      "repair_state": "SYNTHETIC_REGRESSION_PASS_PENDING_ASTRA",
+      "evidence": [
+        "tools/s00e_prepare.py",
+        "tools/s00e_evidence.py",
+        "tests/test_stage_s00e_d2_repair.py"
+      ],
+      "sha256": {
+        "tools/s00e_prepare.py": "f4ba0ebca03dbedd35893ef0259440e35be373875887230cf03a1fe0e5550fad",
+        "tools/s00e_evidence.py": "b973ee916d3e98a46af5d997ae595a3dbf79c957f74c936edf0b29071d3878ff",
+        "tests/test_stage_s00e_d2_repair.py": "3135f04f333b9e5e0c062f496e3753db7d339b24e32d78a2ff31249061ef38bb"
+      }
+    },
+    {
+      "id": "R04",
+      "severity": "MAJOR",
+      "old_behavior": "contradictory stage counts and different executed nodes accepted",
+      "repair_state": "SYNTHETIC_REGRESSION_PASS_PENDING_ASTRA",
+      "evidence": [
+        "tools/s00e_test_record.py",
+        "tools/s00e_pytest_probe.py",
+        "tools/s00e_evidence.py",
+        "tests/test_stage_s00e_d2_repair.py"
+      ],
+      "sha256": {
+        "tools/s00e_test_record.py": "837e0190e7eb2fee698eb4cb9e5d5209b3ae77e61f23f5c40f5e0397875e9170",
+        "tools/s00e_pytest_probe.py": "c4653ce80087fe3646a0f48fb02e56a0a81c8c2ccb055b86d22c5a36879dac85",
+        "tools/s00e_evidence.py": "b973ee916d3e98a46af5d997ae595a3dbf79c957f74c936edf0b29071d3878ff",
+        "tests/test_stage_s00e_d2_repair.py": "3135f04f333b9e5e0c062f496e3753db7d339b24e32d78a2ff31249061ef38bb"
+      }
+    },
+    {
+      "id": "M01",
+      "severity": "MINOR",
+      "old_behavior": "missing or negative subtest count accepted",
+      "repair_state": "SYNTHETIC_REGRESSION_PASS_PENDING_ASTRA",
+      "evidence": [
+        "tools/s00e_evidence.py",
+        "tests/test_stage_s00e_d2_repair.py"
+      ],
+      "sha256": {
+        "tools/s00e_evidence.py": "b973ee916d3e98a46af5d997ae595a3dbf79c957f74c936edf0b29071d3878ff",
+        "tests/test_stage_s00e_d2_repair.py": "3135f04f333b9e5e0c062f496e3753db7d339b24e32d78a2ff31249061ef38bb"
+      }
+    }
+  ],
+  "unresolved": [
+    "E19 independent review and trustworthy approval source pending",
+    "E21 read-only prepublication preflight pending E19",
+    "Historical sample CSV accessibility requires separate owner decision"
+  ]
+}

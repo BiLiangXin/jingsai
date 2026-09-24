@@ -24,6 +24,14 @@ class HandoffTests(unittest.TestCase):
             for name in ("CHATGPT_REVIEW.md", "docs/evidence.md", "reports/runs/r12345/GATE.json", "src/mosei/model.py", "reports/data_contract/contract_summary.json"):
                 p = root / name; p.parent.mkdir(parents=True, exist_ok=True); p.write_text("safe", encoding="utf-8")
                 self.assertEqual(handoff.public_path(name, "r12345", "S01", root), p)
+            report = root / "reports/engineering/s00e_public_tree_scan.json"
+            report.parent.mkdir(parents=True, exist_ok=True)
+            report.write_text("{}", encoding="utf-8")
+            self.assertEqual(handoff.public_path("reports/engineering/s00e_public_tree_scan.json",
+                                                "r12345", "S00E", root), report)
+            with self.assertRaises(handoff.HandoffError):
+                handoff.public_path("reports/engineering/s00e_public_tree_scan.json",
+                                    "r12345", "S01", root)
 
     def test_public_path_rejects_private_and_escape(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -103,14 +111,20 @@ class HandoffTests(unittest.TestCase):
             (root / "TASK_SPEC.md").write_text("task_id: S01_EXAMPLE\nstatus: ACTIVE\nresearch_authorized: true\n", encoding="utf-8")
             review = root / "CHATGPT_REVIEW.md"; review.write_text("# Current Review\n", encoding="utf-8")
             run = root / "reports/runs/r12345"; (run / "public").mkdir(parents=True)
-            records = {"RUN.json": {"task_id": "S01_EXAMPLE", "data_kind": "official"}, "GATE.json": {"passed": True, "status": "PASS", "summary": {"FAIL": 0, "BLOCKED": 0}}, "TEST_RESULTS.json": {"exit_code": 0, "passed": 3, "failed": 0}}
+            records = {"RUN.json": {"task_id": "S01_EXAMPLE", "data_kind": "official"},
+                       "GATE.json": {"task_id": "S01_EXAMPLE", "run_id": "r12345",
+                                     "passed": True, "status": "PASS",
+                                     "summary": {"PASS": 1, "FAIL": 0, "SKIPPED": 0, "BLOCKED": 0},
+                                     "items": [{"id": "X01", "status": "PASS", "evidence": ["docs/evidence.md"]}]},
+                       "TEST_RESULTS.json": {"exit_code": 0, "passed": 3, "failed": 0}}
             for name, value in records.items():
                 (run / name).write_text(json.dumps(value), encoding="utf-8")
             manifest = {"stage": "S01", "task_id": "S01_EXAMPLE", "run_id": "r12345", "public_files": []}
             (run / "public/HANDOFF_INPUTS.json").write_text(json.dumps(manifest), encoding="utf-8")
             acceptance = root / "reports/stages/S01/acceptance.json"; acceptance.parent.mkdir(parents=True)
             acceptance.write_text(json.dumps({"stage": "S01", "evidence": [{"path": "reports/runs/r12345/RUN.json", "sha256": hashlib.sha256((run / "RUN.json").read_bytes()).hexdigest()}]}), encoding="utf-8")
-            with patch.object(handoff, "ROOT", root):
+            with patch.object(handoff, "ROOT", root), patch.object(
+                    handoff, "scan_tracked_public_tree", return_value={"scanned_text_files": 0, "findings": {}}):
                 files, returned_run = handoff.validate_run(manifest, root)
             self.assertEqual(returned_run, run)
             self.assertIn("CHATGPT_REVIEW.md", files)
@@ -132,13 +146,14 @@ class HandoffTests(unittest.TestCase):
         def fake_command(*args, **kwargs):
             calls.append(args)
             return SimpleNamespace(returncode=0)
-        with patch.object(handoff, "git", side_effect=fake_git), patch.object(handoff, "command", side_effect=fake_command), patch.object(handoff, "public_path", return_value=Path("dummy")), patch.object(handoff, "scan_public", return_value=[]):
-            self.assertEqual(handoff.exact_stage(paths, "message"), "a" * 40)
-        self.assertIn(("git", "add", "--", *paths), calls)
+        with patch.object(handoff, "git", side_effect=fake_git), patch.object(handoff, "command", side_effect=fake_command), patch.object(handoff, "public_path", return_value=Path("dummy")), patch.object(handoff, "scan_public", return_value=[]), patch.object(handoff, "scan_tracked_public_tree", return_value={"scanned_text_files": 0, "findings": {}}):
+            with patch.object(handoff, "verify_staged_bytes"):
+                self.assertEqual(handoff.exact_stage(paths, "message"), "a" * 40)
+        self.assertIn(("git", "-c", "core.autocrlf=false", "add", "--", *paths), calls)
         self.assertFalse(any("-A" in x or "--all" in x for call in calls for x in call))
 
     def test_porcelain_leading_status_space_is_preserved(self):
-        raw = " M CHATGPT_REVIEW.md\n?? docs/S00C_SUPPORT_EVIDENCE.md\n"
+        raw = " M CHATGPT_REVIEW.md\0?? docs/S00C_SUPPORT_EVIDENCE.md\0"
         with patch.object(handoff, "command", return_value=SimpleNamespace(stdout=raw)):
             self.assertEqual(handoff.worktree_changed_paths(),
                              {"CHATGPT_REVIEW.md", "docs/S00C_SUPPORT_EVIDENCE.md"})

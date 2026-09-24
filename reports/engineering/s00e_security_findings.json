@@ -1,0 +1,14 @@
+{
+  "stage": "S00E",
+  "run_id": "20260925-020000-S00E-ASTRA-d9e4edb",
+  "current_tree_csv_removed": true,
+  "current_tree_removal_is_historical_erasure": false,
+  "safety_governance_precommit": "078028f022cc175361cb8bf908f760087f35f709",
+  "safety_precommit_remote_verified": true,
+  "old_csv_paths_absent": [
+    "docs/samples/labels-100.csv",
+    "docs/samples/labels-feature-first10.csv"
+  ],
+  "proposed_security_action": "Repository owner to separately assess historical accessibility; no history rewrite authorized or performed.",
+  "sample_rows_or_labels_published": false
+}

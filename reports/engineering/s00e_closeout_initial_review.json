@@ -1,0 +1,46 @@
+{
+  "task_id": "S00E_S01_PRESTART_ENGINEERING_HARDENING",
+  "stage": "S00E",
+  "scope": "ABBREVIATED_INITIAL_INDEPENDENT_REVIEW",
+  "reviewer_context": "/root/closeout_review",
+  "reviewer_model": "GPT-6 Astra",
+  "reasoning": "High",
+  "status": "REPAIRS_REQUIRED",
+  "source_head": "4bd0c6c9e96924d5fc886da18773e5c4681e8ec7",
+  "critical_issues": 0,
+  "blocking_issues": 3,
+  "findings": [
+    {
+      "id": "L01",
+      "file": "tools/stage_handoff.py",
+      "line_at_review": 127,
+      "finding": "Scalar plural target fields bypassed structured scanner",
+      "probe": "Synthetic id plus regression_labels and clip_id plus labels both returned no findings."
+    },
+    {
+      "id": "L02",
+      "file": "tools/s00e_evidence.py",
+      "line_at_review": 95,
+      "finding": "Duplicate main call miscounted as subtest",
+      "probe": "A duplicate ordinary call and incremented subtest total was accepted."
+    },
+    {
+      "id": "L03",
+      "file": "tools/stage_handoff.py",
+      "line_at_review": 720,
+      "finding": "Final acceptance validation omitted task/run",
+      "probe": "Legitimate synthetic S00E acceptance rejected by final publisher-style call."
+    }
+  ],
+  "additional_checks": [
+    "Before/during/after source fingerprint binding",
+    "Actual reviewed evidence digests immutable",
+    "Trusted E19 approval source required"
+  ],
+  "official_data_opened": false,
+  "git_writes": false,
+  "limitations": [
+    "Abbreviated review; no full-suite rerun by initial reviewer. Final review still required."
+  ],
+  "probe_exit_code": 0
+}

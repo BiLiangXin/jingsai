@@ -1,0 +1,36 @@
+{
+  "task_id": "S00E_S01_PRESTART_ENGINEERING_HARDENING",
+  "run_id": "20260924-063758-S00E-078028f",
+  "stage": "S00E",
+  "status": "PHASE_C_READY_FOR_INDEPENDENT_REVIEW",
+  "data_kind": "real_official_local",
+  "branch": "codex/mosei-auto",
+  "activation_commit": "b98fd8fce558bb80aaa22c1cd2c057eab641d54d",
+  "safety_governance_precommit": "078028f022cc175361cb8bf908f760087f35f709",
+  "implementation_commit": null,
+  "metadata_commit": null,
+  "release_url": null,
+  "environment": {
+    "name": "birdAL",
+    "python": "3.11.14",
+    "numpy": "2.2.6",
+    "torch": "2.9.1+cu128",
+    "cuda_runtime": "12.8",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 5070 Ti"
+  },
+  "source_file": "aligned_50.pkl",
+  "source_sha256_before": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+  "source_sha256_after": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+  "split_usage": {
+    "train": "tiny engineering smoke only",
+    "valid": "not indexed",
+    "test": "quarantined; not indexed"
+  },
+  "trusted_pickle_container_deserialized": true,
+  "attachment3_content_inspected": false,
+  "attachment4_content_inspected": false,
+  "model_training_performed": false,
+  "predictive_metrics": null,
+  "next_stage_authorized": false
+}

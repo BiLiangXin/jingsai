@@ -1,0 +1,163 @@
+{
+  "stage": "S00E",
+  "run_id": "20260925-020000-S00E-ASTRA-d9e4edb",
+  "kind": "engineering_validation",
+  "status": "TECHNICAL_PASS_OWNER_APPROVAL_PENDING",
+  "environment": "birdAL",
+  "commands": [
+    "python -m pytest --collect-only -q tests",
+    "python -m pytest -q tests"
+  ],
+  "predictive_metrics": null,
+  "source_fingerprints": "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/TEST_RESULTS.json",
+  "runtime_evidence": "reports/engineering/s00e_pytorch_runtime.json",
+  "failed_attempts": [
+    {
+      "run_id": "20260925-004100-S00E-ASTRA-d9e4edb",
+      "collected": 198,
+      "passed": 197,
+      "failed": 1,
+      "exit_code": 1
+    }
+  ],
+  "limitations": [
+    "Engineering validation only; no model metrics.",
+    "Real owner approval and E21/publication pending."
+  ],
+  "main_tests": {
+    "collected": 221,
+    "executed": 221,
+    "passed": 221,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "deselected": 0,
+    "collection_exit_code": 0,
+    "exit_code": 0
+  },
+  "subtests_passed": 25,
+  "d2_subset_passed": 28,
+  "runtime_devices": [
+    "cpu",
+    "cuda"
+  ],
+  "official_source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+  "prior_review": {
+    "run_id": "20260925-005000-S00E-ASTRA-d9e4edb",
+    "main_passed": 199,
+    "subtests_passed": 25,
+    "blocking_issues": 2,
+    "status": "REPAIRS_REQUIRED"
+  },
+  "independent_review": "reports/engineering/s00e_phase_d_review.json",
+  "previous_validated_checkpoint": {
+    "stage": "S00E",
+    "run_id": "20260925-014500-S00E-ASTRA-d9e4edb",
+    "kind": "engineering_validation",
+    "status": "PENDING_NEW_INDEPENDENT_REVIEW",
+    "environment": "birdAL",
+    "commands": [
+      "python -m pytest --collect-only -q tests",
+      "python -m pytest -q tests"
+    ],
+    "predictive_metrics": null,
+    "source_fingerprints": "reports/runs/20260925-014500-S00E-ASTRA-d9e4edb/TEST_RESULTS.json",
+    "runtime_evidence": "reports/engineering/s00e_pytorch_runtime.json",
+    "failed_attempts": [
+      {
+        "run_id": "20260925-004100-S00E-ASTRA-d9e4edb",
+        "collected": 198,
+        "passed": 197,
+        "failed": 1,
+        "exit_code": 1
+      }
+    ],
+    "limitations": [
+      "Engineering validation only; no model metrics.",
+      "Real owner approval and E21/publication pending."
+    ],
+    "main_tests": {
+      "collected": 217,
+      "executed": 217,
+      "passed": 217,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "collection_exit_code": 0,
+      "exit_code": 0
+    },
+    "subtests_passed": 25,
+    "d2_subset_passed": 28,
+    "runtime_devices": [
+      "cpu",
+      "cuda"
+    ],
+    "official_source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+    "prior_review": {
+      "run_id": "20260925-005000-S00E-ASTRA-d9e4edb",
+      "main_passed": 199,
+      "subtests_passed": 25,
+      "blocking_issues": 2,
+      "status": "REPAIRS_REQUIRED"
+    },
+    "independent_review": "reports/engineering/s00e_phase_d_review.json",
+    "previous_validated_checkpoint": {
+      "stage": "S00E",
+      "run_id": "20260925-005500-S00E-ASTRA-d9e4edb",
+      "kind": "engineering_validation",
+      "status": "TECHNICAL_REVIEW_PASS_OWNER_APPROVAL_BLOCKED",
+      "environment": "birdAL",
+      "commands": [
+        "python -m pytest --collect-only -q tests",
+        "python -m pytest -q tests"
+      ],
+      "predictive_metrics": null,
+      "source_fingerprints": "reports/runs/20260925-005500-S00E-ASTRA-d9e4edb/TEST_RESULTS.json",
+      "runtime_evidence": "reports/engineering/s00e_pytorch_runtime.json",
+      "failed_attempts": [
+        {
+          "run_id": "20260925-004100-S00E-ASTRA-d9e4edb",
+          "collected": 198,
+          "passed": 197,
+          "failed": 1,
+          "exit_code": 1
+        }
+      ],
+      "limitations": [
+        "Engineering validation only; no model metrics.",
+        "Real owner approval and E21/publication pending."
+      ],
+      "main_tests": {
+        "collected": 202,
+        "executed": 202,
+        "passed": 202,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "deselected": 0,
+        "collection_exit_code": 0,
+        "exit_code": 0
+      },
+      "subtests_passed": 25,
+      "d2_subset_passed": 28,
+      "runtime_devices": [
+        "cpu",
+        "cuda"
+      ],
+      "official_source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "prior_review": {
+        "run_id": "20260925-005000-S00E-ASTRA-d9e4edb",
+        "main_passed": 199,
+        "subtests_passed": 25,
+        "blocking_issues": 2,
+        "status": "REPAIRS_REQUIRED"
+      },
+      "independent_review": "reports/engineering/s00e_phase_d_review.json",
+      "independent_main_passed": 202,
+      "independent_subtests_passed": 25
+    }
+  },
+  "independent_main_passed": 221,
+  "independent_subtests_passed": 25
+}

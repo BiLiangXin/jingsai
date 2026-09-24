@@ -1,0 +1,20 @@
+{
+  "stage": "S00E",
+  "run_id": "20260925-020000-S00E-ASTRA-d9e4edb",
+  "data_kind": "synthetic_regressions_plus_real_train_smoke",
+  "frozen_decisions_unchanged": true,
+  "mask_equalities_checked": [
+    "shared_nonempty_prefix_support",
+    "padding_complement",
+    "text_observed_equals_support",
+    "audio_vision_structural_zero_matches_raw",
+    "audio_vision_observed_equals_supported_nonzero"
+  ],
+  "post_float32_finite_checked": true,
+  "strict_zero_target_preserved": true,
+  "torch_storage_isolated": true,
+  "masked_nan_isolated": true,
+  "normalized_zero_keeps_source_mask": true,
+  "actual_test_results": "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/TEST_RESULTS.json",
+  "real_runtime_evidence": "reports/engineering/s00e_pytorch_runtime.json"
+}

@@ -1,0 +1,14 @@
+{
+  "stage": "S00E",
+  "run_id": "20260925-020000-S00E-ASTRA-d9e4edb",
+  "name": "PREPUBLICATION_SAFETY_PREFLIGHT",
+  "status": "PASS",
+  "read_only": true,
+  "e01_e20_passed": true,
+  "review_e19_checked": true,
+  "manifest_files_checked": 86,
+  "tracked_tree_and_index_checked": true,
+  "manifest_sha256": "ce59908ae32ebeee5c60ae1bca5e9bb21da2b49b2a95a8191c34aba931ffec79",
+  "git_write_performed": false,
+  "release_created": false
+}
