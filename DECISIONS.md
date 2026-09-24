@@ -22,3 +22,9 @@ Fields: `decision_id | status | decision | evidence | reason | date | affected_s
 | Q1-MISSING-01 | UNDECIDED | Exact Q1 mapping from uncertainty or source anomalies to missingness is not defined. No anomaly is automatically natural missingness. | UNKNOWN; the supplied clarification does not define a missingness mapping | Preserve uncertainty for later research review | 2026-09-24 | Q1 later research |
 
 Valid status values: `UNDECIDED`, `PROVISIONAL`, `FROZEN_FOR_BASELINE`, `FROZEN`, `REOPENED`. `FROZEN_FOR_BASELINE` is an operational S01 interface contract, not `FINAL_MODEL_DECISION`. RES-001 through RES-005 retain their undecided final research scope.
+
+## Engineering workflow authority
+
+| ID | Status | Decision | Source |
+| --- | --- | --- | --- |
+| GOV-ASTRA-SERIAL-01 | AUTHORIZED | Astra High serial engineering with one official-tree writer; actual independent read-only Astra review and verified owner approval source; no Sol/Astra switch or mandatory Web Chat ZIP; original safety/Gates/Review Release contract retained; engineering completion precedes research resumption; ongoing project/paper evidence; S01 training remains unauthorized. D-DATA-01 through D-DATA-07 and Q1 are unchanged. | Explicit user S00E_ASTRA_LOCAL_CLOSEOUT instruction, 2026-09-25 |

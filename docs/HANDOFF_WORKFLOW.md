@@ -36,6 +36,8 @@ Replace example names with files from the actual authorized task. The command ad
 
 Before Git writes, it verifies the active task ID and `research_authorized: true`; official data kind in RUN; actual nonzero executed tests with zero failures; every mandatory Gate item PASS; and every acceptance evidence SHA256. It scans the complete tracked public text tree, index changes and selected files for private paths, secrets, raw IDs, sample-level CSV columns, raw-text arrays and test distribution keys. Raw PKL/MP4/Excel, local path config, private/artifact directories and large or binary files are rejected. Failed checks halt publication and are not reported as success.
 
+For S00E, E19 requires an actual passing independent Phase D review bound to the reviewed code, tests and probe evidence by SHA256 and to the same task/stage/run. A model name, editable review JSON, or local `approved=true` field cannot authenticate independent approval. Until a trusted external approval verifier is authorized, the publisher raises `MANUAL_REVIEW_APPROVAL_REQUIRED` and E19 remains blocked. The synthetic tests inject a controlled verifier only to exercise validation logic; that does not grant a real approval. Pytest node IDs and setup/call/teardown records stay in the ignored run/private directory; the public test record contains their hashes and dynamically checked counts. E21 is `PREPUBLICATION_SAFETY_PREFLIGHT`: E01–E20 must pass, then run `python tools/s00e_preflight.py --manifest reports/runs/<run_id>/public/HANDOFF_INPUTS.json`. This command is read-only and checks the current repository, Gate, evidence, test record, official source hash, tracked index/worktree, and explicit publication files. Its receipt can support E21 PASS only after the checks succeed. The final publisher independently repeats the critical checks before staging; it does not trust a saved receipt alone. Commit, push, Release, downloaded asset SHA256, and remote HEAD verification occur after E21 PASS.
+
 ## Publication order
 
 1. Confirm local and remote branch HEAD match; require an empty Git index and no unrelated working changes.
@@ -47,3 +49,9 @@ Before Git writes, it verifies the active task ID and `research_authorized: true
 `branch_head.ref` in the index is a live Git ref. `branch_head.verified_stage_completion_sha` records the exact metadata commit at stage completion. The index commit cannot contain its own SHA, so consumers resolve `branch_head.ref` to get the newest branch HEAD. The index never authorizes the next research stage by itself.
 
 If a push, Release or verification step fails, the command exits nonzero and reports `HANDOFF_FAILED`. It does not force push, clobber an existing asset, erase partial commits or conceal a failed Gate. Inspect the remote branch and Release before retrying a partial publication.
+
+## GOV-ASTRA-SERIAL-01
+
+The user authorized local Astra High serial engineering closeout on 2026-09-25. No manual Sol/Astra switching and no mandatory Web Chat CORE ZIP. Freeze writes during a real independent Astra High review, and repeat review after changes. Keep local hashes, actual run records and safe code differences. The existing formal Review Release ZIP and downloaded SHA256 verification remain required. Only after S00E acceptance and publication are verified may the research line resume; S01 training is still unauthorized.
+
+Update docs/PROJECT_SUMMARY.md, docs/RESEARCH_LOG.md, docs/EXPERIMENT_REGISTER.json and docs/PAPER_CLAIMS.md at significant checkpoints. Model metrics stay null in engineering runs. Missing trustworthy approval provenance is a hard blocker; an editable approval field is never a substitute for the user's actual local confirmation of the specific reviewed digest.
