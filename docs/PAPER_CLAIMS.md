@@ -69,3 +69,6 @@ Earlier provisional/pending text describes the preapproval checkpoint. Owner app
 | Any officialscore, normalizerwinner orspecialmask result exists | UNKNOWN; metricsnull | state/LATEST_RESEARCH.json | No officialdata/modelexperiment this task |
 
 Earliernullcaps describe historicalfreeze; currentnumericcaps are proposals only. No synthetic accuracy/F1/loss is inserted as competitionevidence. Independent technicalreview is distinct from ownerrunapproval.
+
+
+Current S01 activation is SPECIFIED user authority, not empirical evidence. Only actual future VALID results tied to trial/seed/config/code/data/checkpoint hashes become VERIFIED_OFFICIAL_VALID_RESULT. No claims about deferredtemporal/gatingmodels, held-outtest, specialmask orQ3. Samevalidmultiple-selection optimism remains; no significance claim is preapproved.

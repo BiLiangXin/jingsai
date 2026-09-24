@@ -1,19 +1,27 @@
-task_id: S01_SPECIFICATION_AND_EXECUTION_AUTHORIZATION_PREP
-status: SPECIFICATION_COMPLETE_EXECUTION_NOT_ACTIVATED
+task_id: S01_FROZEN_BASELINE_EXECUTION
+status: ACTIVE_AUTHORIZED
 research_authorized: true
-s01_training_authorized: false
+s01_training_authorized: true
 next_stage_authorized: false
-previous_stage: S00E_COMPLETED_PUBLISHED
-stage_type: synthetic_implementation_and_resource_preparation
-research_owner: Main Research Chat
-baseline_verified_head: be2917568434450ddefc54dbafae7c1dee5862dd
+owner_authorization_mode: PREAUTHORIZED_BY_CURRENT_USER_INSTRUCTION
+protocol_freeze: R01-FREEZE-01
+campaign_id: S01-20260924T202319Z-30-1cf4769f
+execution_fit_budget: 30
+resource_walltime_cap_hours: 12
+per_fit_walltime_cap_hours: 2
+latest_compute_finish: 2026-09-25T18:00:00+08:00
+retry_training_budget: 0
+test_authorized: false
+attachment3_4_authorized: false
+q3_authorized: false
+device: cuda
 
-# S01 specification preparation
+# S01 one preauthorized official campaign
 
-Authority: explicit current user request and deadline clarification. Scope: frozen R01 implementation, synthetic tests/optimizer steps, hardware profiling,39fit preregistration, proposed execution caps, documentation and ordinary exact-path commit/push. This replaces the obsolete activeS00E task pointer; its completed run/Gate/Release evidence stays unchanged.
+Source: current explicit user S01_PREAUTHORIZED_OFFICIAL_EXECUTION instruction; docs/S01_EXEC_AUTH_01.json. It supersedes historical preparation/nativeowner-confirmation requirements for this campaign only. No further confirmation or nativejournal event is required. S00E completed publication and R01-FREEZE-01 remain intact. D-DATA-01..07 unchanged.
 
-Canonical specification: docs/S01_EXECUTION_SPEC.md. Config: configs/s01_execution.json. R01-FREEZE-01 remainsFROZEN_FOR_S01_PROTOCOL; data contractsD-DATA-01..07 unchanged. All39futurefitsNOT_RUN, metricsnull, normalizerNOT_YET_SELECTED. Proposed30fit downgrade and numeric caps require owner execution approval before any official experiment.
+Budget selected once before originaldata bytes or optimizer access, using currenttime and the user's12h/4h rule. Selected30fits; no result-dependent downgrade, expansion orretry. TRAIN fits; VALID uses frozencheckpoint/normalizer/config selection. Test and Attachment3/4, Q3, unaligned, optionalblocks andexternal sentiment weights/data remain prohibited.
 
-No officialPKL/history sampleCSV/test/Attachment3/4 content reads, officialsmoke, training, Q3, unaligned, optionalD/T/L or66fits. NoRelease/WebZIP. LATEST_RUN remainsS00E; research status is independent. End atS01_EXECUTION_READY_PENDING_OWNER_AUTHORIZATION and stop.
+Before source access: clean correct Gitbranch/origin andlocal=remoteHEAD, exactcriticalmanifest, frozenfiles, independent0CRITICAL/0blockingMAJOR review, currenttests andpublicsafety; ordinaryactivationcommit/push; freshcompletepreflight; one-shotclaim to a bound newexternalprivate directory. No author self-approval. Runtime permits only the claimed process and concrete24/30plan. No CLIboolean bypass.
 
-Paper deadline:2026-09-27T00:00:00+08:00. Proposed absolute compute stop:2026-09-25T18:00:00+08:00,30hour paper buffer. Future task/config/state and genuine owner authorization must explicitly activate one bound campaign. Currenttraining_authorized=false cannot be overridden byCLI.
+Privatecheckpoint/result logs never enterGit. At anycap/failure preserveexistingatomiccheckpoints andallattempts, no automaticretry. Aftercompletion orstop, publish safeaggregateevidence andordinarycommit/push only; noRelease. Maintain canonicalfourledgers; LATEST_RUN stays the priorengineeringrun until a separate formalstage acceptance, while LATEST_RESEARCH records thisactualcampaign outcome. Paperdeadline2026-09-27 00:00Beijing; absolutecompute stop9/25 18:00 leaves30hours.

@@ -51,3 +51,10 @@ This supersedes the previous pending R01-FREEZE-01 status only within the listed
 | S01-DEADLINE-01 | SPECIFIED deadline; PROVISIONAL allocation | Paper deadline2026-09-27 00:00 Beijing; propose compute stop2026-09-25 18:00 and30h revision buffer.30fit lateststart06:00; if unavailable select24before starting,4h cap andlateststart14:00, with no robust mechanism conclusion. | Explicit user deadline; no outcome-dependent budget switch |
 
 R01-FREEZE-01 remainsFROZEN_FOR_S01_PROTOCOL/core39. These are finite implementation/resource proposals within its allowed24/30fallback, not a new research freeze or training approval. Execution requires one genuine owner event bound to exactcommit/config/freeze/campaign/output/device/budget/cap/deadline. Prior72hourproposal is superseded, not erased. All historical evidence, NOT_RUN and null metrics remain.
+
+
+## S01-EXEC-AUTH-01 — explicit current user preauthorization
+
+Status: USER_PREAUTHORIZED. Source: current user S01_PREAUTHORIZED_OFFICIAL_EXECUTION; instructionSHA2567a7f1835b0f08049453f25227f0faf50ff12f9859ebfe7ccbc3d53f6cb013afd. Currentuser explicitly replaces the historical nativeownerjournal/reconfirmation prerequisite for this onecampaign; all other source/split/protocol/Git/resource/one-shot checks remain.
+
+CampaignS01-20260924T202319Z-30-1cf4769f; decisiontime2026-09-24T20:23:19.007829+00:00; selected30fits, 12hourtotal/2hourperfit,CUDA; retry0; absoluteend2026-09-25T18:00:00+08:00. Both30(12h/2h) and24(4h/1h) were preapproved, selected once bytimebeforeofficialsourceaccess. No selection-based fallback,extra fit orrestart. Core39registry retained; unselectedfitsNOT_RUN. Fullscope/criticalbinding:docs/S01_EXEC_AUTH_01.json andreports/s01_activation/AUTHORIZED_EXECUTION_MANIFEST.json. R01/datafreeze unchanged; test/special/Q3 anddeferredmodels remainexcluded. No modelmetric exists until actualofficialexecution.

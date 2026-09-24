@@ -1,9 +1,12 @@
-"""Train/evaluate primitives. This task exercises only closed synthetic fixtures."""
+"""Train/evaluate primitives with a claimed-campaign gate for official data."""
 from __future__ import annotations
 
 import json
 import math
 import time
+import datetime
+import hashlib
+import os
 from pathlib import Path
 
 import torch
@@ -44,12 +47,14 @@ def optimizer_step(model, optimizer, batch, available=None):
 
 
 @torch.no_grad()
-def predict(model, batch, *, batch_size=32, available=None, indices=None, deadline=None):
+def predict(model, batch, *, batch_size=32, available=None, indices=None, deadline=None, resource_guard=None):
     model.eval()
     device = next(model.parameters(), model.prior).device
     indices = list(range(len(batch.support))) if indices is None else list(indices)
     classes, values = [], []
     for start in range(0, len(indices), batch_size):
+        if resource_guard is not None:
+            resource_guard()
         if deadline is not None:
             require(time.monotonic() < deadline, "Resource wall-time cap reached during validation")
         ix = indices[start:start + batch_size]
@@ -63,8 +68,8 @@ def predict(model, batch, *, batch_size=32, available=None, indices=None, deadli
     return torch.cat(classes), torch.cat(values)
 
 
-def evaluate(model, batch, *, seed, library=None, batch_size=32, deadline=None):
-    clean_c, clean_y = predict(model, batch, batch_size=batch_size, deadline=deadline)
+def evaluate(model, batch, *, seed, library=None, batch_size=32, deadline=None, resource_guard=None):
+    clean_c, clean_y = predict(model, batch, batch_size=batch_size, deadline=deadline, resource_guard=resource_guard)
     result = dict(clean=metric_report(batch, clean_c, clean_y))
     if library is None:
         return result
@@ -77,7 +82,7 @@ def evaluate(model, batch, *, seed, library=None, batch_size=32, deadline=None):
             eligible = view["eligible"]
             indices = [i for i, yes in enumerate(eligible) if yes]
             c, v = predict(model, batch, available=view["available"], indices=indices,
-                           batch_size=batch_size, deadline=deadline)
+                           batch_size=batch_size, deadline=deadline, resource_guard=resource_guard)
             damaged_c, damaged_y = [None] * len(classes), [None] * len(classes)
             for i, pc, py in zip(indices, c.tolist(), v.tolist()):
                 damaged_c[i], damaged_y[i] = pc, py
@@ -94,7 +99,12 @@ def save_checkpoint(path, model, optimizer, normalizer, *, epoch, trace, config,
                    model=model.state_dict(), optimizer=optimizer.state_dict(), normalizer=normalizer.state_dict(),
                    selector_trace=list(trace), config_hash=digest(config), provenance=provenance,
                    torch_rng=torch.get_rng_state(), cuda_rng=torch.cuda.get_rng_state_all() if torch.cuda.is_available() else [])
-    torch.save(payload, path)
+    temporary = Path(path).with_suffix(".pt.tmp")
+    with temporary.open("xb") as stream:
+        torch.save(payload, stream)
+        stream.flush()
+        os.fsync(stream.fileno())
+    temporary.replace(path)
 
 
 def load_checkpoint(path, model, optimizer, *, config, provenance):
@@ -129,12 +139,16 @@ def validate_recipe(config):
 def fit(train, valid, normalizer, config, *, output_dir, provenance, data_kind,
         execution_config=None, device="cpu", synthetic_epochs=1, library=None, resume=None,
         total_deadline=None):
+    fit_started = time.monotonic()
+    started_at = datetime.datetime.now(datetime.timezone.utc).isoformat()
     if data_kind != "SYNTHETIC_ONLY":
         require(data_kind == "OFFICIAL_TRAIN_VALID", "Unknown data origin")
         require_official_authority(execution_config or {}, split="train", optimizer=True,
                                    output_dir=Path(output_dir).parent, device=device)
         require_official_authority(execution_config or {}, split="valid",
                                    output_dir=Path(output_dir).parent, device=device)
+        allowed = ("B-T", "B-A", "B-V", "B-CAT") + (("C0", "R0") if execution_config["execution_fit_budget"] == 30 else ())
+        require(config["architecture"] in allowed and resume is None, "Architecture/resume outside this one-shot campaign")
     validate_recipe(config)
     require(normalizer.method == config["normalizer"], "Normalizer/config mismatch")
     train.validate(); valid.validate()
@@ -168,29 +182,34 @@ def fit(train, valid, normalizer, config, *, output_dir, provenance, data_kind,
             require(reference.choose_checkpoint(selector.trace)["stop_epoch"] is None, "Already early-stopped")
     deadline = total_deadline
     if data_kind == "OFFICIAL_TRAIN_VALID":
-        per_fit = time.monotonic() + execution_config["per_fit_walltime_cap_hours"] * 3600
+        per_fit = fit_started + execution_config["per_fit_walltime_cap_hours"] * 3600
         deadline = min(per_fit, deadline) if deadline is not None else per_fit
+    def guard():
+        if deadline is not None:
+            require(time.monotonic() < deadline, "Resource wall-time cap reached")
+        if data_kind == "OFFICIAL_TRAIN_VALID":
+            free, total = torch.cuda.mem_get_info()
+            require(total - free < total * execution_config["gpu_memory_guard_fraction"], "GPU global memory guard reached")
+    guard()
     timing = dict(train_epoch_seconds=[], checkpoint_validation_seconds=[], final_validation_seconds=None)
     for epoch in range(start_epoch, epochs):
         epoch_started = time.perf_counter()
         order = torch.randperm(len(train.support), generator=torch.Generator().manual_seed(
             stream_seed(config["seed"], f"data-order:{epoch}"))).tolist()
         for start in range(0, len(order), 32):
-            if deadline is not None:
-                require(time.monotonic() < deadline, "Resource wall-time cap reached")
-            if data_kind == "OFFICIAL_TRAIN_VALID" and str(device).startswith("cuda"):
-                free, total = torch.cuda.mem_get_info()
-                require(total - free < total * execution_config["gpu_memory_guard_fraction"],
-                        "GPU global memory guard reached")
+            guard()
             part = train.take(order[start:start + 32]).to(device)
             active = train_availability(part, config["seed"], epoch)[0] if config["architecture"] in ("R0", "R1", "R2", "R1-CAP") else None
+            if epoch == start_epoch and start == 0:
+                (destination / "optimizer_started.json").write_text(json.dumps(dict(data_kind=data_kind,
+                    started_at=datetime.datetime.now(datetime.timezone.utc).isoformat(), architecture=config["architecture"], seed=config["seed"])), encoding="utf-8")
             optimizer_step(model, optimizer, part, active)
         if str(device).startswith("cuda"):
             torch.cuda.synchronize()
         timing["train_epoch_seconds"].append(time.perf_counter() - epoch_started)
         validation_started = time.perf_counter()
         scores = evaluate(model, valid, seed=config["seed"], library=checkpoint_library,
-                          batch_size=32, deadline=deadline)
+                          batch_size=32, deadline=deadline, resource_guard=guard)
         timing["checkpoint_validation_seconds"].append(time.perf_counter() - validation_started)
         objective = scores[config["checkpoint_objective"]]
         decision = selector.update(objective["macro_F1"], objective["MAE"])
@@ -202,13 +221,27 @@ def fit(train, valid, normalizer, config, *, output_dir, provenance, data_kind,
         if data_kind == "OFFICIAL_TRAIN_VALID":
             used = sum(p.stat().st_size for p in destination.parent.rglob("*") if p.is_file())
             require(used < execution_config["storage_cap_gib"] * 2**30, "Storage cap reached")
+        record = dict(epoch=epoch+1, selected_epoch=decision["best_epoch"], early_stop=decision["stop"],
+                      clean=scores["clean"], objective=config["checkpoint_objective"], objective_score=objective,
+                      elapsed_seconds=time.monotonic()-fit_started, data_kind=data_kind)
+        with (destination / "epoch_events.jsonl").open("a", encoding="utf-8") as stream:
+            stream.write(json.dumps(record, allow_nan=False) + "\n")
+            stream.flush()
+            os.fsync(stream.fileno())
+        if data_kind == "OFFICIAL_TRAIN_VALID":
+            print(json.dumps(dict(event="EPOCH_COMPLETED", architecture=config["architecture"], seed=config["seed"],
+                                  normalizer=config["normalizer"], epoch=epoch+1, early_stop=decision["stop"])), flush=True)
         if decision["stop"]:
             break
     require((destination / "best.pt").is_file(), "No selected checkpoint")
     saved = load_checkpoint(destination / "best.pt", model, optimizer, config=config, provenance=provenance)
     validation_started = time.perf_counter()
-    result = evaluate(model, valid, seed=config["seed"], library=library, batch_size=32, deadline=deadline)
+    result = evaluate(model, valid, seed=config["seed"], library=library, batch_size=32, deadline=deadline, resource_guard=guard)
     timing["final_validation_seconds"] = time.perf_counter() - validation_started
     result.update(parameters=parameter_count(model), selected_epoch=saved["epoch"],
-                  evaluated_epochs=len(selector.trace), checkpoint=str(destination / "best.pt"), timing=timing)
+                  evaluated_epochs=len(selector.trace), checkpoint=str(destination / "best.pt"), timing=timing,
+                  checkpoint_sha256=hashlib.sha256((destination / "best.pt").read_bytes()).hexdigest(),
+                  config_hash=digest(config), provenance=provenance, runtime_seconds=time.monotonic()-fit_started,
+                  started_at=started_at, finished_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                  evidence="VERIFIED_OFFICIAL_VALID_RESULT" if data_kind == "OFFICIAL_TRAIN_VALID" else "SYNTHETIC_ONLY")
     return model, result

@@ -1991,5 +1991,16 @@
       "R1-CAP"
     ],
     "execution_authorized": false
+  },
+  "s01_activation": {
+    "campaign_id": "S01-20260924T202319Z-30-1cf4769f",
+    "status": "ACTIVE_AUTHORIZED_NOT_STARTED",
+    "execution_fit_budget": 30,
+    "authorization": "S01-EXEC-AUTH-01",
+    "mode": "PREAUTHORIZED_BY_CURRENT_USER_INSTRUCTION",
+    "registered_fits": 39,
+    "metrics": null,
+    "official_model_experiments": "NOT_RUN",
+    "private_events": "Private append-only events; public aggregate outcomes appended after campaign"
   }
 }

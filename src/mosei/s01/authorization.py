@@ -1,64 +1,116 @@
-"""Fail-closed project authorization, separate from CLI options and editable receipts.
+"""Explicit user-preauthorized, reviewed, published, one-use S01 campaign.
 
-The future owner event is verified on the fixed native Codex host. This trusts
-the uncompromised local host/account, not arbitrary repository JSON. No event is
-created or requested by this module. Test/special access is always rejected.
+No native approval journal or CLI grant. Trusts the local OS account/Git
+publisher, not a security sandbox against hostile same-account code.
 """
 from __future__ import annotations
-
-import importlib.util
+import ctypes
 import datetime
 import hashlib
 import json
 import os
+import stat
 import subprocess
-from pathlib import Path
-
+from pathlib import Path, PurePosixPath
 from .contracts import ROOT, digest, require
 
 TASK = "S01_FROZEN_BASELINE_EXECUTION"
-HOST_THREAD = "01a0d38f-482f-7962-89e3-f26626ae5a01"
+MODE = "PREAUTHORIZED_BY_CURRENT_USER_INSTRUCTION"
+BASE_COMMIT = "71524473e915412ef823d9ad8dcb5928c4eeb2ca"
+INSTRUCTION_SHA256 = "7a7f1835b0f08049453f25227f0faf50ff12f9859ebfe7ccbc3d53f6cb013afd"
+SOURCE_SHA256 = "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd"
+CUTOFF = "2026-09-25T18:00:00+08:00"
+MANIFEST = "reports/s01_activation/AUTHORIZED_EXECUTION_MANIFEST.json"
+AUTH_RECORD = "docs/S01_EXEC_AUTH_01.json"
+REVIEW = "reports/s01_activation/independent_review.json"
+FROZEN_PATHS = ("docs/research/R01", "research/r01", "src/mosei/data")
+CRITICAL = {
+    "configs/s01_execution.json", "TASK_SPEC.md", "DECISIONS.md", "state/LATEST_RESEARCH.json",
+    "docs/research/R01/FREEZE_01.json", "docs/research/R01/protocol.json", "docs/EXPERIMENT_REGISTER.json",
+    AUTH_RECORD, "tools/s01_train.py", "tests/test_s01_preparation.py", "tests/test_s01_activation.py",
+} | {"src/mosei/s01/" + n + ".py" for n in
+     ("__init__", "authorization", "contracts", "models", "normalization", "protocol", "registry", "engine", "execution")}
+_ACTIVE_BINDING = None
 
 
 class AuthorizationError(PermissionError):
     pass
 
 
+def _now():
+    return datetime.datetime.now(datetime.timezone.utc)
+
+
 def _git(root, *args):
-    return subprocess.check_output(["git", "--no-optional-locks", *args], cwd=root).decode().strip()
+    return subprocess.check_output(["git", "--no-optional-locks", *args], cwd=root, timeout=30).decode().strip()
 
 
-def approval_question(binding):
-    return ("批准 S01 首轮有限预算正式执行。绑定内容：" +
-            json.dumps(binding, sort_keys=True, ensure_ascii=False, separators=(",", ":")) +
-            "。本次仅 train 学习、valid 选择；test/附件3/4仍禁止。是否批准上述确切版本？请明确回复“批准”。"
-            "本批准信任本机 Codex 宿主会话记录，不等同于密码学签名。")
+def path_digest(path):
+    return hashlib.sha256(os.path.normcase(str(Path(path).resolve())).encode()).hexdigest()
 
 
-def verify_native_owner(binding):
-    # Reuse the independently reviewed native-event parser and path hardening.
-    spec = importlib.util.spec_from_file_location("s00e_host_trust", ROOT / "tools/s00e_approval.py")
-    host = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(host)
-    root = host.native_sessions_root()
-    host.reject_redirected_path(root)
-    events = []
-    for path in sorted(root.rglob(f"*{HOST_THREAD}*.jsonl")):
-        host.reject_redirected_path(path)
-        require(path.resolve().is_relative_to(root.resolve()), "Unsafe host journal")
-        with path.open(encoding="utf-8") as stream:
-            rows = [json.loads(line) for line in stream if line.strip()]
-        require(rows and rows[0].get("type") == "session_meta" and
-                rows[0].get("payload", {}).get("id") == HOST_THREAD and
-                rows[0]["payload"].get("originator") == "Codex Desktop", "Wrong native host identity")
-        events.extend(rows)
-    evidence = host.validate_host_events(events, approval_question(binding))
-    evidence["thread_id"] = HOST_THREAD
-    return evidence
+def reject_redirected_path(path):
+    for p in (Path(path).absolute(), *Path(path).absolute().parents):
+        if p.exists():
+            require(not p.is_symlink() and not (getattr(p.lstat(), "st_file_attributes", 0) &
+                    getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 1024)), "Redirected path rejected")
 
 
-def require_official_authority(config, *, split, optimizer=False, root=ROOT, output_dir=None, device=None,
-                               launch=False):
+def select_budget(now):
+    require(now.tzinfo is not None, "Timezone-aware selection required")
+    remaining = (datetime.datetime.fromisoformat(CUTOFF) - now).total_seconds()
+    if remaining >= 12 * 3600:
+        return (30, 12, 2)
+    if remaining >= 4 * 3600:
+        return (24, 4, 1)
+    raise AuthorizationError("DEADLINE_BLOCKED: no complete authorized window remains")
+
+
+def verify_manifest(root, campaign):
+    p = root / MANIFEST
+    reject_redirected_path(p)
+    raw = p.read_bytes()
+    value = json.loads(raw)
+    require(value["base_commit"] == BASE_COMMIT and value["campaign_id"] == campaign, "Wrong activation manifest")
+    rows = value["files"]
+    names = [r["path"] for r in rows]
+    require(len(names) == len(set(names)) == len({n.casefold() for n in names}), "Duplicate manifest paths")
+    require(CRITICAL <= set(names) and MANIFEST not in names and REVIEW not in names,
+            "Critical manifest incomplete or self-referential")
+    for r in rows:
+        rel = r["path"]
+        require(not PurePosixPath(rel).is_absolute() and ".." not in PurePosixPath(rel).parts and
+                ":" not in rel and "\\" not in rel, "Unsafe manifest path")
+        p = root / rel
+        reject_redirected_path(p)
+        data = p.read_bytes()
+        require(len(data) == r["size"] and hashlib.sha256(data).hexdigest() == r["sha256"],
+                "Authorized manifest hash/size changed: " + rel)
+    p = root / REVIEW
+    reject_redirected_path(p)
+    review = json.loads(p.read_bytes())
+    mh = hashlib.sha256(raw).hexdigest()
+    require(review["status"] == "TECHNICAL_PASS" and review["blocking_critical"] == 0 and
+            review["blocking_major"] == 0 and review["authorized_manifest_sha256"] == mh,
+            "Independent review does not bind this activation manifest")
+    return mh
+
+
+def _claims_root():
+    require(os.name == "nt", "Fixed Windows campaign ledger required")
+    profile = ctypes.create_unicode_buffer(32768)
+    require(ctypes.windll.shell32.SHGetFolderPathW(None, 0x28, None, 0, profile) == 0, "Native Windows profile unavailable")
+    root = Path(profile.value) / ".codex" / "mosei_campaign_claims"
+    reject_redirected_path(root)
+    root.mkdir(exist_ok=True)
+    return root
+
+
+def claim_path(campaign):
+    return _claims_root() / (digest(["BiLiangXin/jingsai", campaign]) + ".json")
+
+
+def require_official_authority(config, *, split, optimizer=False, root=ROOT, output_dir=None, device=None, launch=False):
     if split not in ("train", "valid"):
         raise AuthorizationError("Test and Attachment3/4 are independently quarantined")
     if optimizer and split != "train":
@@ -67,73 +119,82 @@ def require_official_authority(config, *, split, optimizer=False, root=ROOT, out
         raise AuthorizationError("S01_TRAINING_AUTHORIZED=false; no official data execution")
     try:
         require(config.get("task_id") == TASK and config.get("protocol_freeze") == "R01-FREEZE-01", "Task/freeze mismatch")
-        require(config.get("resource_cap_status") == "OWNER_APPROVED", "Numeric cap is only proposed")
-        for key in ("resource_walltime_cap_hours", "per_fit_walltime_cap_hours", "storage_cap_gib"):
-            v = config.get(key)
-            require(type(v) in (int, float) and 0 < v < float("inf"), "Missing numeric resource limit")
-        require(config.get("execution_fit_budget") in (24, 30, 39) and config.get("core_budget") == 39,
-                "Unapproved fit-budget expansion")
-        require(config.get("retry_training_budget") == 0, "No automatic retry budget")
-        require(device == config.get("device") == "cuda", "Execution device differs from measured CUDA proposal")
-        require(isinstance(config.get("campaign_id"), str) and 1 <= len(config["campaign_id"]) <= 128,
-                "Unique owner-bound campaign required")
-        require(output_dir is not None, "Private campaign directory must be owner-bound")
-        deadline = datetime.datetime.fromisoformat(config["latest_compute_finish"])
-        now = datetime.datetime.now(datetime.timezone.utc)
-        require(deadline.tzinfo is not None and now < deadline, "Absolute compute deadline passed")
+        require(config.get("status") == "ACTIVE_AUTHORIZED" and config.get("owner_authorization_mode") == MODE and
+                config.get("resource_cap_status") == "USER_PREAUTHORIZED", "Explicit campaign preauthorization required")
+        actual = (config["execution_fit_budget"], config["resource_walltime_cap_hours"], config["per_fit_walltime_cap_hours"])
+        require(actual in ((30, 12, 2), (24, 4, 1)), "Wrong budget or resource cap")
+        selected = datetime.datetime.fromisoformat(config["budget_decided_at"])
+        require(select_budget(selected) == actual and selected <= _now(), "Budget differs from once-locked pre-execution selection")
+        require(config.get("core_budget") == 39 and config.get("retry_training_budget") == 0, "No retry/expansion")
+        require(device == config.get("device") == "cuda", "Wrong device; measured CUDA required")
+        require(config.get("storage_cap_gib") == 5.0 and config.get("gpu_memory_guard_fraction") == .8, "Resource guards changed")
+        require(all(config.get(k) is False for k in ("test_authorized", "attachment3_4_authorized", "q3_authorized")), "Forbidden scope enabled")
+        require(config.get("model_seeds") == [17,29,43] and config.get("train_mask_root") == 2207 and
+                config.get("valid_mask_root") == 1103 and config.get("nominal_conditions") == 96 and
+                config.get("views") == 144 and config.get("random_replicates") == 3, "Frozen protocol metadata changed")
+        require(config.get("disabled_blocks") == ["D", "T", "L"], "Optional blocks must stay disabled")
+        require(config.get("official_source_sha256") == SOURCE_SHA256, "Configured source fingerprint changed")
+        require(config.get("latest_compute_finish") == CUTOFF, "Absolute deadline changed")
+        deadline, now = datetime.datetime.fromisoformat(CUTOFF), _now()
+        require(now < deadline, "Absolute compute deadline passed")
         if launch:
-            require(now + datetime.timedelta(hours=config["resource_walltime_cap_hours"]) <= deadline,
-                    "Too late to reserve cap before the paper buffer; obtain a pre-execution reduced plan")
+            require(now + datetime.timedelta(hours=actual[1]) <= deadline, "DEADLINE_BLOCKED: locked window no longer fits")
+        require(output_dir is not None, "Bound private output directory required")
+        output = Path(output_dir).absolute()
+        reject_redirected_path(output)
+        require(not output.resolve().is_relative_to(root.resolve()), "Output must be outside public repository")
+        require(path_digest(output) == config["private_output_sha256"], "Wrong private output directory")
+        campaign = config["campaign_id"]
+        require(isinstance(campaign, str) and 8 <= len(campaign) <= 128, "Unique campaign ID required")
+        if launch:
+            require(not output.exists(), "Use a new private execution directory")
+            require(not claim_path(campaign).exists(), "Campaign already claimed; no replay")
         require(_git(root, "branch", "--show-current") == "codex/mosei-auto", "Wrong branch")
-        require(_git(root, "remote", "get-url", "origin") == "https://github.com/BiLiangXin/jingsai.git", "Wrong repository")
-        require(not _git(root, "status", "--porcelain"), "Execution requires clean reviewed tree")
-        current = json.loads((root / "configs/s01_execution.json").read_text(encoding="utf-8"))
-        require(current == config, "Only committed project execution config is accepted")
-        state = json.loads((root / "state/LATEST_RESEARCH.json").read_text(encoding="utf-8"))
-        require(state.get("s01_training_authorized") is True, "Project authority remains false")
+        require(_git(root, "remote", "get-url", "origin") == "https://github.com/BiLiangXin/jingsai.git", "Wrong origin")
+        require(not _git(root, "status", "--porcelain"), "Dirty tree; reviewed clean state required")
+        head = _git(root, "rev-parse", "HEAD")
+        remote = _git(root, "ls-remote", "origin", "refs/heads/codex/mosei-auto").split()
+        require(len(remote) == 2 and remote[0] == head and remote[1] == "refs/heads/codex/mosei-auto", "Local/remote HEAD mismatch")
+        require(json.loads((root / "configs/s01_execution.json").read_bytes()) == config, "Config differs from committed project config")
+        require(not _git(root, "diff", "--name-only", BASE_COMMIT, "--", *FROZEN_PATHS), "Frozen files changed")
+        contract = lambda text: [s for s in text.splitlines() if s.startswith("| D-DATA-")]
+        require(contract(_git(root, "show", BASE_COMMIT + ":DECISIONS.md")) ==
+                contract((root / "DECISIONS.md").read_text(encoding="utf-8")), "Data contract changed")
+        state = json.loads((root / "state/LATEST_RESEARCH.json").read_bytes())
+        require(state.get("s01_training_authorized") is True and state.get("campaign_id") == campaign, "Project campaign not active")
         task = (root / "TASK_SPEC.md").read_text(encoding="utf-8")
-        require(f"task_id: {TASK}\n" in task and "s01_training_authorized: true\n" in task,
-                "Active project task does not authorize execution")
-        freeze = json.loads((root / "docs/research/R01/FREEZE_01.json").read_text(encoding="utf-8"))
-        require(freeze["status"] == "FROZEN_FOR_S01_PROTOCOL", "Protocol is not frozen")
-        binding = dict(task_id=TASK, protocol_freeze="R01-FREEZE-01", commit=_git(root, "rev-parse", "HEAD"),
-                       execution_config_sha256=digest(config), freeze_sha256=digest(freeze),
-                       resource_walltime_cap_hours=config["resource_walltime_cap_hours"],
-                       per_fit_walltime_cap_hours=config["per_fit_walltime_cap_hours"],
-                       frozen_core_budget=39, execution_fit_budget=config["execution_fit_budget"],
-                       campaign_id=config["campaign_id"], device=device,
-                       private_output_sha256=hashlib.sha256(os.path.normcase(str(Path(output_dir).resolve())).encode()).hexdigest(),
-                       latest_compute_finish=config["latest_compute_finish"], training_authorized=True)
-        return dict(binding=binding, owner_event=verify_native_owner(binding))
+        require(f"task_id: {TASK}\n" in task and "s01_training_authorized: true\n" in task and
+                "status: ACTIVE_AUTHORIZED\n" in task, "Wrong active task")
+        freeze = json.loads((root / "docs/research/R01/FREEZE_01.json").read_bytes())
+        require(freeze["status"] == "FROZEN_FOR_S01_PROTOCOL", "Protocol not frozen")
+        record = json.loads((root / AUTH_RECORD).read_bytes())
+        require(record["authorization_id"] == "S01-EXEC-AUTH-01" and record["source"] == "EXPLICIT_CURRENT_USER_INSTRUCTION" and
+                record["instruction_sha256"] == INSTRUCTION_SHA256 and record["mode"] == MODE and
+                record["campaign_id"] == campaign and record["selected_budget"] == list(actual) and
+                record["budget_decided_at"] == config["budget_decided_at"] and
+                record["private_output_sha256"] == config["private_output_sha256"], "Wrong explicit user authorization record")
+        mh = verify_manifest(root, campaign)
+        binding = dict(task_id=TASK, protocol_freeze="R01-FREEZE-01", commit=head, campaign_id=campaign,
+            execution_config_sha256=digest(config), authorized_manifest_sha256=mh, authorization_mode=MODE,
+            execution_fit_budget=actual[0], resource_walltime_cap_hours=actual[1], per_fit_walltime_cap_hours=actual[2],
+            device=device, private_output_sha256=path_digest(output), latest_compute_finish=CUTOFF)
+        if not launch:
+            require(_ACTIVE_BINDING == binding, "Official source/fit requires this process's claimed campaign")
+            claimed = json.loads(claim_path(campaign).read_bytes())
+            require(claimed["binding"] == binding and claimed["pid"] == os.getpid(), "Wrong claimed process/binding")
+        return dict(binding=binding, owner_authorization=dict(mode=MODE, authorization_id="S01-EXEC-AUTH-01", instruction_sha256=INSTRUCTION_SHA256))
     except (ValueError, OSError, KeyError, TypeError, subprocess.SubprocessError) as exc:
-        raise AuthorizationError("OWNER_EXECUTION_AUTHORIZATION_REQUIRED: " + str(exc)) from exc
-
-
-def _claims_root():
-    spec = importlib.util.spec_from_file_location("s00e_claim_host", ROOT / "tools/s00e_approval.py")
-    host = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(host)
-    parent = host.native_sessions_root().parent
-    host.reject_redirected_path(parent)
-    root = parent / "mosei_campaign_claims"
-    root.mkdir(exist_ok=True)
-    host.reject_redirected_path(root)
-    return root
+        raise AuthorizationError("PREAUTHORIZED_S01_CAMPAIGN_PREFLIGHT_FAILED: " + str(exc)) from exc
 
 
 def claim_campaign(authorization):
-    """A grant permits one launch, including after failure or in another directory.
-
-    This ledger is separate from the native journal; it never creates approval.
-    A crash consumes the launch. Recovery requires separate owner authorization
-    and preserved attempt evidence, never a silent from-scratch retry.
-    """
+    """Atomic one-use launch. Failure/crash never releases the consumed grant."""
+    global _ACTIVE_BINDING
     binding = authorization["binding"]
-    campaign = binding["campaign_id"]
-    path = _claims_root() / (digest(["BiLiangXin/jingsai", campaign]) + ".json")
-    value = dict(campaign_id=campaign, status="LAUNCH_CONSUMED", binding=binding,
-                 owner_event=authorization["owner_event"],
-                 claimed_at=datetime.datetime.now(datetime.timezone.utc).isoformat())
+    require(binding.get("authorization_mode") == MODE, "Preauthorized campaign binding required")
+    path = claim_path(binding["campaign_id"])
+    reject_redirected_path(path)
+    value = dict(status="LAUNCH_CONSUMED", binding=binding, owner_authorization=authorization["owner_authorization"], pid=os.getpid(), claimed_at=_now().isoformat())
     try:
         with path.open("x", encoding="utf-8") as stream:
             stream.write(json.dumps(value, sort_keys=True, allow_nan=False) + "\n")
@@ -141,4 +202,5 @@ def claim_campaign(authorization):
             os.fsync(stream.fileno())
     except FileExistsError as exc:
         raise AuthorizationError("Campaign already launched; no replay, new directory or unapproved retry") from exc
+    _ACTIVE_BINDING = binding
     return path

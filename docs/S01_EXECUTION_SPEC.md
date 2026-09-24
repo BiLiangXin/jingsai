@@ -111,3 +111,12 @@ python -B -X utf8 tools/s01_resource_estimate.py --profile <RESOURCE_REPORT_JSON
 资源外推方法使用完整纯合成3395/728规模、50个全部supported-and-observed位置，实际训练循环及CPU指标/144视图/选中checkpoint复核；25%波动系数之外另加每epoch0.25秒checkpoint余量、每fit60秒IO和全局0.5小时准备。单次合成epoch不是官方数据耗时上界，计划值不保证完成。已测最大安全batch256仅是测试下界，物理上限UNKNOWN；正式batch仍32。
 
 独立首审发现B误走每epoch缺失网格、批准可重复调度、结果落盘失败后误记COMPLETED三个MAJOR，以及CPU默认设备问题。修复与56项回归真实运行记录见tests/review报告；这些负面证据保留。作者没有替独立审查签署通过，也没有获得训练授权。
+
+
+## Current execution amendment — S01-EXEC-AUTH-01
+
+[SPECIFIED] The explicit currentuser preauthorizes one limitedcampaign and replaces the earlier nativejournal/futureapproval requirements. This amendment governs execution; precedingpreparationstatements describe historicalno-training status. Protocolformulas,normalizer/selection,39registration anddataisolation are unchanged.
+
+CampaignS01-20260924T202319Z-30-1cf4769f, budgetselected2026-09-24T20:23:19.007829+00:00 beforeofficialsourcebytes: 30fits/12h/2hperfit. Userauthorized30 or24 underfixedtimerule, no futureconfirmation. Criticalmanifestreports/s01_activation/AUTHORIZED_EXECUTION_MANIFEST.json binds configuration/governance/code/tests; independenttechnicalreview bindsitsdigest; runner verifiescleanpublishedHEAD,frozenfiles,scope,sourcefingerprintconfig,newprivateoutputdigest,unusedclaimanddeadline. Onlyclaimingprocessmayreadsource/fit; no automaticresumeorCLIauthorizationflag. Authenticityrests oncurrentuserinstruction andtrustedlocalpublisher, not a fabricatednativeevent.
+
+Atomiccheckpoint replacement retainslastdurablecheckpoint onwritefailure. Privateepochlogs andcampaign/fitfailures are retained. Addedmemory checks covervalidation as well as training. Ordinarybatch-level deadlinechecks are cooperative; existingcheckpointsremain intactifexternaltermination isneeded. 24neverexecutesC0/R0;30neverexecutesR1/R2/R1-CAP. No modelresultclaim iscreatedbyactivationitself.

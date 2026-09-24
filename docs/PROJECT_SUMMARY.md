@@ -28,3 +28,6 @@ Implementation/specification ready pending independent final technical review an
 
 
 Final preparation evidence:277main tests and25subtests PASS; independent56S01tests and bounded delta probes PASS. ThreeMAJOR findings closed. StatusS01_EXECUTION_READY_PENDING_OWNER_AUTHORIZATION. Deadline-aware30fit/12h proposal remains unapproved; no officialtraining. Canonical result:reports/s01_preparation/RESULT.json.
+
+
+Currentuser preauthorized S01campaignS01-20260924T202319Z-30-1cf4769f; selected30fits/12h beforedataaccess. Activationreview/tests/publication precedeautomaticone-shotrun. No nativeapprovalwait; officialexperimentsstillNOT_RUN untilactualexecution. Source:docs/S01_EXEC_AUTH_01.json.

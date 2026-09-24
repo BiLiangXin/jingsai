@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 import pytest
 import torch
-from mosei.s01.authorization import AuthorizationError, approval_question, require_official_authority
+from mosei.s01.authorization import AuthorizationError, MODE, require_official_authority
 from mosei.s01.contracts import ARCHITECTURES, MODS, SEEDS, digest, synthetic_batch
 from mosei.s01.engine import (evaluate, fit, joint_loss, load_checkpoint, optimizer_step, save_checkpoint,
                               validate_recipe)
@@ -317,8 +317,6 @@ def test_authorization_true_cli_style_boolean_and_fake_receipt_do_not_grant():
         require_official_authority(dict(training_authorized=True, owner_approved=True), split="train")
     with pytest.raises(AuthorizationError):
         require_official_authority(dict(training_authorized=True), split="valid", optimizer=True)
-    binding = dict(task_id="S01_CORE_39_EXECUTION", commit="a"*40, protocol_freeze="R01-FREEZE-01", execution_config_sha256="b"*64)
-    assert approval_question(binding) != approval_question(dict(binding, commit="c"*40))
 
 
 def test_official_loader_rejects_before_source_access(tmp_path):
@@ -351,7 +349,7 @@ def test_baseline_clean_checkpoint_final_grid_once(tmp_path):
 
 def test_one_use_campaign_rejects_new_directory_replay(tmp_path):
     from mosei.s01.authorization import claim_campaign
-    grant = dict(binding=dict(campaign_id="synthetic-test-only", private_output_sha256="a"*64), owner_event={"synthetic": True})
+    grant = dict(binding=dict(campaign_id="synthetic-test-only", private_output_sha256="a"*64, authorization_mode=MODE), owner_authorization={"synthetic": True})
     with patch("mosei.s01.authorization._claims_root", return_value=tmp_path):
         claim_campaign(grant)
         grant["binding"]["private_output_sha256"] = "b"*64
@@ -360,7 +358,7 @@ def test_one_use_campaign_rejects_new_directory_replay(tmp_path):
     assert len(list(tmp_path.iterdir())) == 1
 
 
-@pytest.mark.parametrize("budget", (24, 30, 39))
+@pytest.mark.parametrize("budget", (24, 30))
 def test_finite_scheduler_and_failure_persistence(tmp_path, budget):
     import contextlib
     import mosei.s01.execution as execution
@@ -412,10 +410,12 @@ def test_changed_frozen_mask_roots_rejected():
 
 def test_device_and_absolute_deadline_checked_before_owner_io(tmp_path):
     cfg = json.loads((ROOT / "configs/s01_execution.json").read_text())
-    cfg.update(training_authorized=True, resource_cap_status="OWNER_APPROVED")
+    cfg.update(training_authorized=True, resource_cap_status="USER_PREAUTHORIZED", status="ACTIVE_AUTHORIZED",
+               owner_authorization_mode=MODE, budget_decided_at="2026-09-25T04:00:00+08:00", q3_authorized=False)
     with patch("mosei.s01.authorization._git", side_effect=AssertionError("must fail before git/owner journal")):
         with pytest.raises(AuthorizationError, match="device"):
             require_official_authority(cfg, split="train", device="cpu", output_dir=tmp_path)
-        cfg["latest_compute_finish"] = "2020-01-01T00:00:00+08:00"
-        with pytest.raises(AuthorizationError, match="deadline passed"):
-            require_official_authority(cfg, split="train", device="cuda", output_dir=tmp_path, launch=True)
+        import datetime
+        with patch("mosei.s01.authorization._now", return_value=datetime.datetime.fromisoformat("2026-09-25T19:00:00+08:00")):
+            with pytest.raises(AuthorizationError, match="deadline passed"):
+                require_official_authority(cfg, split="train", device="cuda", output_dir=tmp_path, launch=True)

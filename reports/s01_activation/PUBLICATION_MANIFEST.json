@@ -1,0 +1,154 @@
+{
+  "base_commit": "71524473e915412ef823d9ad8dcb5928c4eeb2ca",
+  "publication_files": [
+    "DECISIONS.md",
+    "TASK_SPEC.md",
+    "configs/s01_execution.json",
+    "docs/EXPERIMENT_REGISTER.json",
+    "docs/PAPER_CLAIMS.md",
+    "docs/PROJECT_SUMMARY.md",
+    "docs/RESEARCH_LOG.md",
+    "docs/S01_EXECUTION_SPEC.md",
+    "docs/S01_EXEC_AUTH_01.json",
+    "src/mosei/s01/authorization.py",
+    "src/mosei/s01/engine.py",
+    "src/mosei/s01/execution.py",
+    "state/BLOCKERS.md",
+    "state/LATEST_RESEARCH.json",
+    "state/NEXT_ACTIONS.md",
+    "tests/test_s01_preparation.py",
+    "tests/test_s01_activation.py",
+    "tools/s01_campaign_publication_check.py",
+    "reports/s01_activation/input_audit.json",
+    "reports/s01_activation/tests.json",
+    "reports/s01_activation/AUTHORIZED_EXECUTION_MANIFEST.json",
+    "reports/s01_activation/independent_review.json",
+    "reports/s01_activation/PUBLICATION_MANIFEST.json",
+    "reports/s01_activation/publication_safety.json",
+    "reports/s01_activation/legacy_asset_validation.json"
+  ],
+  "files": [
+    {
+      "path": "DECISIONS.md",
+      "sha256": "8c21eb4ad55a9350e05a4da2f653f8c599036e14256781f13e5317153751a333",
+      "size_bytes": 10587
+    },
+    {
+      "path": "TASK_SPEC.md",
+      "sha256": "bab9c4fb3505fac957266a21d1e1d16bb926458e6fac0e82172a5180e95e0f98",
+      "size_bytes": 2214
+    },
+    {
+      "path": "configs/s01_execution.json",
+      "sha256": "8ee9c2a4db6c55e562090ee5aae05d0860de537901fa2e8ae045e111be15464b",
+      "size_bytes": 2272
+    },
+    {
+      "path": "docs/EXPERIMENT_REGISTER.json",
+      "sha256": "c92630a24269408a6a54e341f27e02e8b8d78bc0f73d664e240c8ac2d01aa5a3",
+      "size_bytes": 65994
+    },
+    {
+      "path": "docs/PAPER_CLAIMS.md",
+      "sha256": "d9a28f5464ff7cd32937abdef6432d4d05085feef727309a8f9eb2e8fa1f2492",
+      "size_bytes": 9013
+    },
+    {
+      "path": "docs/PROJECT_SUMMARY.md",
+      "sha256": "3d6bced7f19e21808daf17cbfc1dc00b2ad9593bdb05211b1370ea2b9c894792",
+      "size_bytes": 4858
+    },
+    {
+      "path": "docs/RESEARCH_LOG.md",
+      "sha256": "2e58fd61d7d583fee4f6f59166cda4b091df3f1f7b681677a71e973bd06ac913",
+      "size_bytes": 17058
+    },
+    {
+      "path": "docs/S01_EXECUTION_SPEC.md",
+      "sha256": "ebe885b9ca4bf982ddb9929655c2159adb27d21f59efe09b55748dad8b603dba",
+      "size_bytes": 15511
+    },
+    {
+      "path": "docs/S01_EXEC_AUTH_01.json",
+      "sha256": "125582926597822686cd8eb4e8825bc934dc6f1ad8e56a06c4d4f57ffed31f2d",
+      "size_bytes": 2192
+    },
+    {
+      "path": "src/mosei/s01/authorization.py",
+      "sha256": "fff47ee8ca18fb0634a33a80c817446cb517c6138a48742b38926dbfa20e4039",
+      "size_bytes": 12465
+    },
+    {
+      "path": "src/mosei/s01/engine.py",
+      "sha256": "65e5f6e3478aa2bd228839d65f3fef356f5cee412ade20fda55df86c2ab91918",
+      "size_bytes": 14771
+    },
+    {
+      "path": "src/mosei/s01/execution.py",
+      "sha256": "14f30d2211887cf7cae4880a86881e885d6e9cb94278ca4ee5d982cebacc4426",
+      "size_bytes": 12853
+    },
+    {
+      "path": "state/BLOCKERS.md",
+      "sha256": "d782226a655b848107cd88608b57e0651d92ed67f1281968320c37ea89c079d2",
+      "size_bytes": 1205
+    },
+    {
+      "path": "state/LATEST_RESEARCH.json",
+      "sha256": "b86c66e76d74966c7a6f524f3a978d7264266309d50ea2d55b134a9e008c026e",
+      "size_bytes": 2379
+    },
+    {
+      "path": "state/NEXT_ACTIONS.md",
+      "sha256": "ab4e7fac006d92dfaf63c125fcfaf3659f6200e81bc425b3ca5d377e58393bae",
+      "size_bytes": 1604
+    },
+    {
+      "path": "tests/test_s01_preparation.py",
+      "sha256": "b3415499332c17d182f02214d6bb3bd0f197954deb47b6810dd926f97ba09107",
+      "size_bytes": 21552
+    },
+    {
+      "path": "tests/test_s01_activation.py",
+      "sha256": "ba57c0dceb103cf6079b6673900a089a509fb00ac485b27c69eb1607b83bedf4",
+      "size_bytes": 11379
+    },
+    {
+      "path": "tools/s01_campaign_publication_check.py",
+      "sha256": "f2bf7c6aafad469f473ff91d56ec57cb824560b00c041a221d064cb9221b5605",
+      "size_bytes": 26468
+    },
+    {
+      "path": "reports/s01_activation/input_audit.json",
+      "sha256": "e84865a533133b209ff8950a9ff46d0333e02132fb84feb0abf944ea59ec75d1",
+      "size_bytes": 15740
+    },
+    {
+      "path": "reports/s01_activation/tests.json",
+      "sha256": "f0c20f18ad42d94b902f6b68f6611060a372f51a5195c8586449fecf4c76a7b3",
+      "size_bytes": 6692
+    },
+    {
+      "path": "reports/s01_activation/AUTHORIZED_EXECUTION_MANIFEST.json",
+      "sha256": "107f5ead4a0dd6b91f21748ae40d7827af452e3a225de2ec9e01fb387ecf4c1d",
+      "size_bytes": 5308
+    },
+    {
+      "path": "reports/s01_activation/independent_review.json",
+      "sha256": "159aad92fa01b9d10b9f56b0d6bb281aef373f4e4c67e9d04d0ba56b54ffb01b",
+      "size_bytes": 21112
+    },
+    {
+      "path": "reports/s01_activation/legacy_asset_validation.json",
+      "sha256": "3c7351be6e5261630cf32a19030659d0de18c47fa60b1ac9fce4fbfec190665d",
+      "size_bytes": 10528
+    }
+  ],
+  "hash_exclusions": {
+    "paths": [
+      "reports/s01_activation/PUBLICATION_MANIFEST.json",
+      "reports/s01_activation/publication_safety.json"
+    ],
+    "reason": "Avoid self/report cycles. Both exclusions remain scanned and bound by exact staged/committed bytes and independently verified remote HEAD."
+  }
+}

@@ -1,0 +1,447 @@
+{
+  "schema_version": 1,
+  "stage": "S01_PREAUTHORIZED_OFFICIAL_EXECUTION_FINAL_REVIEW",
+  "status": "TECHNICAL_PASS",
+  "blocking_critical": 0,
+  "blocking_major": 0,
+  "minor_count": 1,
+  "authorized_manifest_sha256": "107f5ead4a0dd6b91f21748ae40d7827af452e3a225de2ec9e01fb387ecf4c1d",
+  "base_commit": "71524473e915412ef823d9ad8dcb5928c4eeb2ca",
+  "campaign_id": "S01-20260924T202319Z-30-1cf4769f",
+  "reviewed_at_utc": "2026-09-24T20:41:46.739961+00:00",
+  "role": "INDEPENDENT_READ_ONLY_TECHNICAL_REVIEW_NOT_OWNER_AUTHORIZATION",
+  "authority": {
+    "source": "EXPLICIT_CURRENT_USER_INSTRUCTION",
+    "instruction_sha256": "7a7f1835b0f08049453f25227f0faf50ff12f9859ebfe7ccbc3d53f6cb013afd",
+    "instruction_bytes_independently_hashed": true,
+    "scope": "One previously user-preauthorized campaign; review creates no new authorization."
+  },
+  "model_identity": {
+    "requested_by_user": "GPT-6 Astra / xhigh",
+    "independent_identity_telemetry": "UNKNOWN_NOT_FABRICATED"
+  },
+  "summary": "No CRITICAL or blocking MAJOR found in the exact29-file activation manifest.101 CPU synthetic/unit tests and5 independently written synthetic/mocked fault probes passed. One nonblocking deadline-stop classification finding retained.",
+  "manifest": {
+    "path": "reports/s01_activation/AUTHORIZED_EXECUTION_MANIFEST.json",
+    "member_count": 29,
+    "all_hashes_and_sizes_verified_before_and_after": true,
+    "source_unchanged_during_review": true,
+    "parent_final_tested_files_exactly_match": true,
+    "scope": "Execution-critical files only; publication/review metadata and ancillary harnesses are separate."
+  },
+  "source_file_hashes": [
+    {
+      "path": "DECISIONS.md",
+      "sha256": "8c21eb4ad55a9350e05a4da2f653f8c599036e14256781f13e5317153751a333",
+      "size": 10587
+    },
+    {
+      "path": "TASK_SPEC.md",
+      "sha256": "bab9c4fb3505fac957266a21d1e1d16bb926458e6fac0e82172a5180e95e0f98",
+      "size": 2214
+    },
+    {
+      "path": "configs/s01_execution.json",
+      "sha256": "8ee9c2a4db6c55e562090ee5aae05d0860de537901fa2e8ae045e111be15464b",
+      "size": 2272
+    },
+    {
+      "path": "docs/EXPERIMENT_REGISTER.json",
+      "sha256": "c92630a24269408a6a54e341f27e02e8b8d78bc0f73d664e240c8ac2d01aa5a3",
+      "size": 65994
+    },
+    {
+      "path": "docs/S01_EXEC_AUTH_01.json",
+      "sha256": "125582926597822686cd8eb4e8825bc934dc6f1ad8e56a06c4d4f57ffed31f2d",
+      "size": 2192
+    },
+    {
+      "path": "docs/research/R01/FREEZE_01.json",
+      "sha256": "26bed02ecc0464bec468cf986c1393bb49f50f7f69a96308a6d8a1c716ec8987",
+      "size": 4613
+    },
+    {
+      "path": "docs/research/R01/protocol.json",
+      "sha256": "5129ee349e8b236edf531ea940c895a6f6e36b70f612aa6515bb3980e33185ba",
+      "size": 2755
+    },
+    {
+      "path": "docs/research/R01/trials.json",
+      "sha256": "3682ebe05fa29598540de87a2619b8aab5a66ad74e475ca96d41cf1814df4223",
+      "size": 23700
+    },
+    {
+      "path": "research/r01/reference.py",
+      "sha256": "1cd4b73bb748284b4941625d92be89522771eff8a11e4044547e5f513ea62495",
+      "size": 15396
+    },
+    {
+      "path": "src/mosei/__init__.py",
+      "sha256": "72e3fcf210041bdf645c2004d23ef8cf9e193ad25ce0c64efb9a508392218549",
+      "size": 74
+    },
+    {
+      "path": "src/mosei/data/__init__.py",
+      "sha256": "1e8562996e64ce70eb0aa346eaa235f01e7889c6f7b42c97c35733b9059e727e",
+      "size": 723
+    },
+    {
+      "path": "src/mosei/data/data_contract.py",
+      "sha256": "79dbb5124e5d90ffb032d4b4a9c6f7c05eafa1c5f997e297726382258926e776",
+      "size": 7092
+    },
+    {
+      "path": "src/mosei/data/dataset.py",
+      "sha256": "f15b226d7a956563a5b76db6f6c631f6ae7ff0b01d24508513db2cc9d32583c8",
+      "size": 3617
+    },
+    {
+      "path": "src/mosei/data/masks.py",
+      "sha256": "ce07ea15a7b4e35c7f0e7d39cc3636d6c3ffee7374af4bad833d8a5ebff6e28d",
+      "size": 3639
+    },
+    {
+      "path": "src/mosei/data/normalization.py",
+      "sha256": "78b9f060ce185fd232ba4a8d16d747ba15e73fd9ea078095e07bb0921a9395f5",
+      "size": 6143
+    },
+    {
+      "path": "src/mosei/data/pooling.py",
+      "sha256": "8d0892d179ae7cd773f38758cb1151fb92a65fb1eae3d739045ae0d5f300685d",
+      "size": 1620
+    },
+    {
+      "path": "src/mosei/s01/__init__.py",
+      "sha256": "45e370a9952a0d589a6f50e06fe2ad315af97570b9c6fea83ddf8d218d575e3e",
+      "size": 90
+    },
+    {
+      "path": "src/mosei/s01/authorization.py",
+      "sha256": "fff47ee8ca18fb0634a33a80c817446cb517c6138a48742b38926dbfa20e4039",
+      "size": 12465
+    },
+    {
+      "path": "src/mosei/s01/contracts.py",
+      "sha256": "03040b7725a22dd150bb5215f2a0697eaa6bc936ea32ed6df5d028171fe3d030",
+      "size": 5480
+    },
+    {
+      "path": "src/mosei/s01/engine.py",
+      "sha256": "65e5f6e3478aa2bd228839d65f3fef356f5cee412ade20fda55df86c2ab91918",
+      "size": 14771
+    },
+    {
+      "path": "src/mosei/s01/execution.py",
+      "sha256": "14f30d2211887cf7cae4880a86881e885d6e9cb94278ca4ee5d982cebacc4426",
+      "size": 12853
+    },
+    {
+      "path": "src/mosei/s01/models.py",
+      "sha256": "e0d815c1f97e83e653e326c8df28d519b967b69c185b95b758a2822bef9821f3",
+      "size": 7650
+    },
+    {
+      "path": "src/mosei/s01/normalization.py",
+      "sha256": "4c5bad3c4f26a9c2b8e6aaebdc24d767b327553ba723490f82ff3ac7f3c75c3e",
+      "size": 3498
+    },
+    {
+      "path": "src/mosei/s01/protocol.py",
+      "sha256": "c69c194447c0c220a56e6dddb9c7a3e225f2a949147573d7212d4d0775871b26",
+      "size": 5842
+    },
+    {
+      "path": "src/mosei/s01/registry.py",
+      "sha256": "d4ea70e91aaa2e70792fdb025fa640d090443cb3ae8f41823f78d071df809e73",
+      "size": 4286
+    },
+    {
+      "path": "state/LATEST_RESEARCH.json",
+      "sha256": "b86c66e76d74966c7a6f524f3a978d7264266309d50ea2d55b134a9e008c026e",
+      "size": 2379
+    },
+    {
+      "path": "tests/test_s01_activation.py",
+      "sha256": "ba57c0dceb103cf6079b6673900a089a509fb00ac485b27c69eb1607b83bedf4",
+      "size": 11379
+    },
+    {
+      "path": "tests/test_s01_preparation.py",
+      "sha256": "b3415499332c17d182f02214d6bb3bd0f197954deb47b6810dd926f97ba09107",
+      "size": 21552
+    },
+    {
+      "path": "tools/s01_train.py",
+      "sha256": "64dc2b0d9a890913d3ac6eaa3417b08fed33f93b89f07e6b0f448995072c5f48",
+      "size": 2640
+    }
+  ],
+  "additional_read_file_hashes": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "4a9ea177276ccf84d7a37567af79144dad4b2c23a13bbcc6ea28c1e311114954",
+      "size": 4554
+    },
+    {
+      "path": "README_CODEX.md",
+      "sha256": "92a440bae2b3f0362c75c52e2f657a9e2e2cf068a4cef03e620a889fc8e2e438",
+      "size": 2091
+    },
+    {
+      "path": "CHATGPT_REVIEW.md",
+      "sha256": "4b9199b8715eca17f2539c14e7422501364df296c145c50cb10117d99258d104",
+      "size": 2746
+    },
+    {
+      "path": "state/BLOCKERS.md",
+      "sha256": "d782226a655b848107cd88608b57e0651d92ed67f1281968320c37ea89c079d2",
+      "size": 1205
+    },
+    {
+      "path": "state/NEXT_ACTIONS.md",
+      "sha256": "ab4e7fac006d92dfaf63c125fcfaf3659f6200e81bc425b3ca5d377e58393bae",
+      "size": 1604
+    },
+    {
+      "path": "docs/S01_EXECUTION_SPEC.md",
+      "sha256": "ebe885b9ca4bf982ddb9929655c2159adb27d21f59efe09b55748dad8b603dba",
+      "size": 15511
+    },
+    {
+      "path": "docs/PAPER_CLAIMS.md",
+      "sha256": "d9a28f5464ff7cd32937abdef6432d4d05085feef727309a8f9eb2e8fa1f2492",
+      "size": 9013
+    },
+    {
+      "path": "docs/PROJECT_SUMMARY.md",
+      "sha256": "3d6bced7f19e21808daf17cbfc1dc00b2ad9593bdb05211b1370ea2b9c894792",
+      "size": 4858
+    },
+    {
+      "path": "docs/RESEARCH_LOG.md",
+      "sha256": "2e58fd61d7d583fee4f6f59166cda4b091df3f1f7b681677a71e973bd06ac913",
+      "size": 17058
+    },
+    {
+      "path": "reports/s01_activation/input_audit.json",
+      "sha256": "e84865a533133b209ff8950a9ff46d0333e02132fb84feb0abf944ea59ec75d1",
+      "size": 15740
+    },
+    {
+      "path": "reports/s01_activation/tests.json",
+      "sha256": "f0c20f18ad42d94b902f6b68f6611060a372f51a5195c8586449fecf4c76a7b3",
+      "size": 6692
+    },
+    {
+      "path": "reports/s01_preparation/RESOURCE_ESTIMATE.json",
+      "sha256": "c00deee37bcbead64a565563fe653c02bcd548b5c64b07f49ba2e60a75e9694b",
+      "size": 4727
+    }
+  ],
+  "ancillary_static_reads": [
+    {
+      "path": "s01_campaign_publication_check.py",
+      "sha256": "b431869bcc86506a0f09414572b1e9d0413ce40407ac85c225f63fd9534c3d15",
+      "size": 17424,
+      "scope": "STATIC_READ_ONLY_NOT_EXECUTED_NOT_AN_EXECUTION_MANIFEST_MEMBER"
+    },
+    {
+      "path": "launch_campaign.py",
+      "sha256": "35bcd9f7d00548df055078de3f86396ab933cf1bece518d0eb01c1c8ec58a2da",
+      "size": 2807,
+      "scope": "STATIC_READ_ONLY_NOT_EXECUTED_NOT_AN_EXECUTION_MANIFEST_MEMBER"
+    }
+  ],
+  "findings": [
+    {
+      "id": "S01-ACT-MINOR-01",
+      "severity": "MINOR",
+      "blocking": false,
+      "paths": [
+        {
+          "path": "src/mosei/s01/execution.py",
+          "line": 160
+        },
+        {
+          "path": "src/mosei/s01/execution.py",
+          "line": 188
+        },
+        {
+          "path": "src/mosei/s01/authorization.py",
+          "line": 139
+        }
+      ],
+      "issue": "An AuthorizationError containing Absolute compute deadline passed is classified FAILED rather than RESOURCE_CAP_STOP/PARTIAL_RESOURCE_STOP because classification recognizes only cap reached or guard reached.",
+      "reproduction": "Independent probe injects this exact exception after mocked claim at source-preflight boundary. Original exception escapes, fit_calls=0, durable campaign_status.json status=FAILED; cap reached variant yields PARTIAL_RESOURCE_STOP.",
+      "impact": "Administrative stop category can be inaccurate at a cutoff race. It does not permit continued compute, erase the original reason, relax the deadline, or authorize a replay.",
+      "bounded_recommendation": "Treat this known category as a resource/deadline stop when summarizing results. A future code cleanup can use typed resource-stop exceptions; no activation-blocking protocol or source change is requested."
+    }
+  ],
+  "reviewed_guarantees": [
+    {
+      "area": "Explicit authority and one-use launch",
+      "status": "PASS_WITH_DOCUMENTED_TRUST_BOUNDARY",
+      "evidence": "Current instruction hash matches; config/task/state/auth record and fixed budget/device/cutoff/output digest bind the reviewed manifest and published HEAD. Correct branch/origin/clean tree/live remote are rechecked. Official source/fit require in-process binding plus durable fixed-host claim and PID. Claim is atomic exclusive creation and never released after failure. No native journal, CLI grant, automatic resume or retry path."
+    },
+    {
+      "area": "Source and split isolation",
+      "status": "PASS",
+      "evidence": "Train and valid guards precede source stat/open. Hash is checked before deserializing the same opened trusted file; filename/hash and size/mtime are checked. Only train/valid dataset keys are adapted; test/A3/A4 and valid optimizer gates reject. User explicitly permits opening aligned container; no test entries are selected by the adapter. CLI synthetic factory rejects caller source paths."
+    },
+    {
+      "area": "Frozen modeling and selection",
+      "status": "PASS",
+      "evidence": "Frozen R01/reference/data paths unchanged from base and D-DATA rows equal. Loss CE+MAE/3, active-only masking, strict neutral, support versus observation, train-only statistics, partial-convolution/gate formulas and4352 gate parameters remain. Library preserves96conditions/144views and paired repeat/condition/seed aggregation. B clean checkpoints and one final full grid; C0/R0 attempted96 checkpoints. B-CAT three-seed normalizer choice, B-star excludes C0, mean clean guard and final winner seed17 guard remain."
+    },
+    {
+      "area": "Finite campaign and resource scope",
+      "status": "PASS",
+      "evidence": "All39 preregistered entries retain NOT_RUN/null. Current immutable plan30/12h/2h executes first B24+C0/R0six only;24/4h/1h branch is separately validated before source and never executes mechanisms.39 execution and retry budgets are rejected.30 must launch by06:00 Beijing, absolute cutoff18:00; no result-dependent switch. Tests exercise both scheduler lengths and deadline boundaries."
+    },
+    {
+      "area": "Checkpoint and failure evidence",
+      "status": "PASS",
+      "evidence": "Atomic checkpoint temporary file+fsync+replace retains previous durable bytes on injected write failure; old checkpoint reloads exact model and epoch. Result is persisted before COMPLETED; result-write failure preserves original exception and RUNNING/FAILED. Campaign source failures and cap stops preserve summary; actual synthetic probes show no fit calls. Per-validation-batch resource guard precedes forward."
+    }
+  ],
+  "independent_executions": [
+    {
+      "id": "snapshot-integrity",
+      "command": "python.exe -B -X utf8 - < independent snapshot verifier stdin",
+      "exit_code": 0,
+      "checks": "29 SHA256/size entries, manifest SHA, base HEAD, frozen paths, registry39 unrun, instruction SHA and parent final-tested file equality",
+      "output": "independent_snapshot_before.json"
+    },
+    {
+      "id": "targeted-pytest",
+      "command": "python.exe -B -X utf8 -m pytest -q -p no:cacheprovider tests/test_s01_preparation.py tests/test_s01_activation.py --basetemp=<EXTERNAL_REVIEW>/independent_pytest_tmp --junitxml=<EXTERNAL_REVIEW>/independent_targeted.xml",
+      "exit_code": 0,
+      "passed": 101,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "terminal_seconds": 11.64,
+      "junit_seconds": 11.644,
+      "evidence": "independent_targeted.xml",
+      "environment": {
+        "python": "3.11.14",
+        "torch": "2.9.1+cu128",
+        "os": "Windows",
+        "cuda_visible_devices": "-1",
+        "gpu_used": false,
+        "bytecode_disabled": true
+      }
+    },
+    {
+      "id": "independent-fault-probes",
+      "command": "python.exe -B -X utf8 <EXTERNAL_REVIEW>/independent_activation_probes.py",
+      "exit_code": 0,
+      "passed": 5,
+      "evidence": "independent_activation_probe_results.json",
+      "results": [
+        {
+          "name": "atomic_checkpoint_fault_preserves_original_and_original_remains_loadable",
+          "status": "PASS",
+          "partial_temp_retained": true,
+          "restored_epoch": 1
+        },
+        {
+          "name": "prediction_resource_guard_precedes_forward",
+          "status": "PASS",
+          "forward_calls": 0
+        },
+        {
+          "name": "source_failure_campaign_summary",
+          "status": "PASS",
+          "observed_status": "FAILED",
+          "original_exception_preserved": true,
+          "fit_calls": 0
+        },
+        {
+          "name": "source_resource_stop_campaign_summary",
+          "status": "PASS",
+          "observed_status": "PARTIAL_RESOURCE_STOP",
+          "original_exception_preserved": true,
+          "fit_calls": 0
+        },
+        {
+          "name": "authority_deadline_stop_campaign_summary",
+          "status": "PASS",
+          "observed_status": "FAILED",
+          "original_exception_preserved": true,
+          "fit_calls": 0
+        }
+      ]
+    },
+    {
+      "id": "final-integrity",
+      "command": "python.exe -B -X utf8 - < final report and snapshot verifier stdin",
+      "exit_code": 0,
+      "checks": "All29 current source hashes/sizes and manifest unchanged; frozen paths/data decision rows unchanged; parses actual JUnit101 and5 probe results"
+    }
+  ],
+  "author_test_evidence": {
+    "path": "reports/s01_activation/tests.json",
+    "final_passed": 322,
+    "subtests_passed": 25,
+    "exit_code": 0,
+    "rerun_by_this_reviewer": false,
+    "final_source_hashes_independently_matched": true
+  },
+  "evidence_artifacts": [
+    {
+      "path": "independent_snapshot_before.json",
+      "sha256": "9a467ed30ef1ee84cc0a3b5b227c7df1f8dc0288fc3fad42d337169dc79b39ec",
+      "size": 5191
+    },
+    {
+      "path": "independent_targeted.xml",
+      "sha256": "fb6230d3f2d09c9187d1d8b37fa1be775ddfb582f94e9c68c24e2a59f357cd62",
+      "size": 13420
+    },
+    {
+      "path": "independent_activation_probes.py",
+      "sha256": "5f2a35d0233efd4bba27e36391ed43cb00220c668b9de9aa387d0766f9892840",
+      "size": 4638
+    },
+    {
+      "path": "independent_activation_probe_results.json",
+      "sha256": "7b77674b1d84d7e3bf2b54b71149f1ea5daa73e6bd6a8dc768008f08083ab6de",
+      "size": 1288
+    }
+  ],
+  "scope_limits": [
+    "No original competition source, test or Attachment3/4 contents, history sample CSV, credentials, native journals, real fixed-host campaign ledger or official optimizer path was accessed by the reviewer.",
+    "Official-source fingerprint was checked as configuration/instruction provenance only; reviewer did not rehash original data. Synthetic adapter/hash-order fixtures do not establish original-data predictive results.",
+    "The101 tests include real CPU synthetic optimizer/checkpoint operations and mocked official scheduling. They are engineering tests, not competition model experiments. Actual CUDA execution, resource profiling, the full322-test suite and live remote preflight were not rerun here.",
+    "Review is source-bound technical evidence. Activation publication/safety/clean remote-equal HEAD and fresh unused-campaign preflight must still succeed before the separately preauthorized launch. No campaign was claimed by the reviewer.",
+    "Authorization trusts the local OS account and Git publisher. It is not a security sandbox against malicious same-account Python, monkeypatches or deliberate false data_kind labels in private library calls. The supported CLI has no such grant bypass.",
+    "Inner deadline checks are cooperative between batches/operations. A hung CUDA/filesystem/network operation or forced termination can leave an incomplete final event/summary; last durable checkpoints and one-use claim remain. An optimizer_started marker proves an attempted optimizer path, not successful parameter updates.",
+    "Historical synthetic estimate30=11.487988585835126h is planning evidence, not a guarantee. Activation adds durability/resource checks and was not newly profiled. Current user caps are30/12h/2h or24/4h/1h; historical3h24 proposal is superseded. A cap stop must not be reported as complete30/39.",
+    "External publication checker and launcher were read statically only. They are outside this execution manifest, may be added separately as publication/operational helpers, and do not alter reviewed model/auth files. No claim is made that the publication checker has run or that the launcher establishes a tested exact hard-stop guarantee.",
+    "Repeated valid selection remains optimistic; neither these tests nor this technical PASS proves held-out performance, statistical significance, special-mask availability, or the efficacy of deferred temporal/gating models.",
+    "Historical pending-authorization prose is explicitly superseded by current S01-EXEC-AUTH-01 only within scope. The requested legacy docs/codex/PROJECT_SPEC.md and state/task_board.json do not exist in this official clone; current TASK_SPEC and governance amendment were reviewed instead.",
+    "Updated auxiliary launcher was statically re-read after its timing/receipt-failure handling fix. Process termination timing and OS scheduling are not an exact hard-deadline proof; launcher was not executed and creates no additional campaign authority."
+  ],
+  "boundaries": {
+    "official_tree_modified": false,
+    "git_mutations": false,
+    "original_competition_data_read": false,
+    "native_journals_read": false,
+    "credentials_read": false,
+    "gpu_used": false,
+    "actual_campaign_claimed": false,
+    "official_training_performed": false,
+    "synthetic_optimizer_steps_executed": true,
+    "new_owner_approval_created": false
+  },
+  "publication_note": "This report may be copied unchanged as reports/s01_activation/independent_review.json. Its own hash is intentionally outside the execution manifest; ordinary publication metadata binds the report. Any execution-manifest member change requires a new source-bound technical review.",
+  "reviewer_complete": true,
+  "ancillary_launcher_delta": {
+    "final_read_sha256": "35bcd9f7d00548df055078de3f86396ab933cf1bece518d0eb01c1c8ec58a2da",
+    "status": "STATIC_FINDINGS_ADDRESSED_NOT_EXECUTED",
+    "change": "Outer monotonic end is anchored before child spawn; wait uses remaining time; initial receipt/print failures terminate the live child through BaseException handling.",
+    "execution_manifest_unchanged": true,
+    "initial_version_hash": "NOT_CAPTURED_BEFORE_AUTHOR_UPDATE"
+  }
+}

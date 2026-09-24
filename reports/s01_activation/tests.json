@@ -1,0 +1,203 @@
+{
+  "status": "PASS",
+  "evidence": "VERIFIED",
+  "official_source_opened": false,
+  "official_model_experiments": "NOT_RUN",
+  "runs": [
+    {
+      "record": "targeted-attempt1.xml",
+      "command": "python -B -X utf8 -m pytest -q -p no:cacheprovider tests/test_s01_preparation.py tests/test_s01_activation.py --junitxml=<private-evidence>",
+      "exit_code": 0,
+      "passed": 99,
+      "subtests_passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 10.96,
+      "junit_sha256": "767d5e483d89036a05325a95d1aa4735fac1fd4198dc63467f17752c61829d48",
+      "scope": "SYNTHETIC_AND_UNIT_ONLY",
+      "final_source": false
+    },
+    {
+      "record": "full-attempt1.xml",
+      "command": "python -B -X utf8 -m pytest -q -p no:cacheprovider tests --junitxml=<private-evidence>",
+      "exit_code": 0,
+      "passed": 320,
+      "subtests_passed": 25,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 37.442,
+      "junit_sha256": "a879098b5784185ce613bfa6522f2cfdda44e7fec2196660786018ca1c73924a",
+      "scope": "SYNTHETIC_AND_UNIT_ONLY",
+      "final_source": false
+    },
+    {
+      "record": "full-final.xml",
+      "command": "python -B -X utf8 -m pytest -q -p no:cacheprovider tests --junitxml=<private-evidence>",
+      "exit_code": 0,
+      "passed": 322,
+      "subtests_passed": 25,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 37.512,
+      "junit_sha256": "7e8c19db8654ad63f9fe828d52baa12ed49da8b183dd77a09b715eef60b0ff53",
+      "scope": "SYNTHETIC_AND_UNIT_ONLY",
+      "final_source": true
+    }
+  ],
+  "final_tested_files": [
+    {
+      "path": "DECISIONS.md",
+      "sha256": "8c21eb4ad55a9350e05a4da2f653f8c599036e14256781f13e5317153751a333",
+      "size": 10587
+    },
+    {
+      "path": "TASK_SPEC.md",
+      "sha256": "bab9c4fb3505fac957266a21d1e1d16bb926458e6fac0e82172a5180e95e0f98",
+      "size": 2214
+    },
+    {
+      "path": "configs/s01_execution.json",
+      "sha256": "8ee9c2a4db6c55e562090ee5aae05d0860de537901fa2e8ae045e111be15464b",
+      "size": 2272
+    },
+    {
+      "path": "docs/EXPERIMENT_REGISTER.json",
+      "sha256": "c92630a24269408a6a54e341f27e02e8b8d78bc0f73d664e240c8ac2d01aa5a3",
+      "size": 65994
+    },
+    {
+      "path": "docs/S01_EXEC_AUTH_01.json",
+      "sha256": "125582926597822686cd8eb4e8825bc934dc6f1ad8e56a06c4d4f57ffed31f2d",
+      "size": 2192
+    },
+    {
+      "path": "docs/research/R01/FREEZE_01.json",
+      "sha256": "26bed02ecc0464bec468cf986c1393bb49f50f7f69a96308a6d8a1c716ec8987",
+      "size": 4613
+    },
+    {
+      "path": "docs/research/R01/protocol.json",
+      "sha256": "5129ee349e8b236edf531ea940c895a6f6e36b70f612aa6515bb3980e33185ba",
+      "size": 2755
+    },
+    {
+      "path": "docs/research/R01/trials.json",
+      "sha256": "3682ebe05fa29598540de87a2619b8aab5a66ad74e475ca96d41cf1814df4223",
+      "size": 23700
+    },
+    {
+      "path": "research/r01/reference.py",
+      "sha256": "1cd4b73bb748284b4941625d92be89522771eff8a11e4044547e5f513ea62495",
+      "size": 15396
+    },
+    {
+      "path": "src/mosei/__init__.py",
+      "sha256": "72e3fcf210041bdf645c2004d23ef8cf9e193ad25ce0c64efb9a508392218549",
+      "size": 74
+    },
+    {
+      "path": "src/mosei/data/__init__.py",
+      "sha256": "1e8562996e64ce70eb0aa346eaa235f01e7889c6f7b42c97c35733b9059e727e",
+      "size": 723
+    },
+    {
+      "path": "src/mosei/data/data_contract.py",
+      "sha256": "79dbb5124e5d90ffb032d4b4a9c6f7c05eafa1c5f997e297726382258926e776",
+      "size": 7092
+    },
+    {
+      "path": "src/mosei/data/dataset.py",
+      "sha256": "f15b226d7a956563a5b76db6f6c631f6ae7ff0b01d24508513db2cc9d32583c8",
+      "size": 3617
+    },
+    {
+      "path": "src/mosei/data/masks.py",
+      "sha256": "ce07ea15a7b4e35c7f0e7d39cc3636d6c3ffee7374af4bad833d8a5ebff6e28d",
+      "size": 3639
+    },
+    {
+      "path": "src/mosei/data/normalization.py",
+      "sha256": "78b9f060ce185fd232ba4a8d16d747ba15e73fd9ea078095e07bb0921a9395f5",
+      "size": 6143
+    },
+    {
+      "path": "src/mosei/data/pooling.py",
+      "sha256": "8d0892d179ae7cd773f38758cb1151fb92a65fb1eae3d739045ae0d5f300685d",
+      "size": 1620
+    },
+    {
+      "path": "src/mosei/s01/__init__.py",
+      "sha256": "45e370a9952a0d589a6f50e06fe2ad315af97570b9c6fea83ddf8d218d575e3e",
+      "size": 90
+    },
+    {
+      "path": "src/mosei/s01/authorization.py",
+      "sha256": "fff47ee8ca18fb0634a33a80c817446cb517c6138a48742b38926dbfa20e4039",
+      "size": 12465
+    },
+    {
+      "path": "src/mosei/s01/contracts.py",
+      "sha256": "03040b7725a22dd150bb5215f2a0697eaa6bc936ea32ed6df5d028171fe3d030",
+      "size": 5480
+    },
+    {
+      "path": "src/mosei/s01/engine.py",
+      "sha256": "65e5f6e3478aa2bd228839d65f3fef356f5cee412ade20fda55df86c2ab91918",
+      "size": 14771
+    },
+    {
+      "path": "src/mosei/s01/execution.py",
+      "sha256": "14f30d2211887cf7cae4880a86881e885d6e9cb94278ca4ee5d982cebacc4426",
+      "size": 12853
+    },
+    {
+      "path": "src/mosei/s01/models.py",
+      "sha256": "e0d815c1f97e83e653e326c8df28d519b967b69c185b95b758a2822bef9821f3",
+      "size": 7650
+    },
+    {
+      "path": "src/mosei/s01/normalization.py",
+      "sha256": "4c5bad3c4f26a9c2b8e6aaebdc24d767b327553ba723490f82ff3ac7f3c75c3e",
+      "size": 3498
+    },
+    {
+      "path": "src/mosei/s01/protocol.py",
+      "sha256": "c69c194447c0c220a56e6dddb9c7a3e225f2a949147573d7212d4d0775871b26",
+      "size": 5842
+    },
+    {
+      "path": "src/mosei/s01/registry.py",
+      "sha256": "d4ea70e91aaa2e70792fdb025fa640d090443cb3ae8f41823f78d071df809e73",
+      "size": 4286
+    },
+    {
+      "path": "state/LATEST_RESEARCH.json",
+      "sha256": "b86c66e76d74966c7a6f524f3a978d7264266309d50ea2d55b134a9e008c026e",
+      "size": 2379
+    },
+    {
+      "path": "tests/test_s01_activation.py",
+      "sha256": "ba57c0dceb103cf6079b6673900a089a509fb00ac485b27c69eb1607b83bedf4",
+      "size": 11379
+    },
+    {
+      "path": "tests/test_s01_preparation.py",
+      "sha256": "b3415499332c17d182f02214d6bb3bd0f197954deb47b6810dd926f97ba09107",
+      "size": 21552
+    },
+    {
+      "path": "tools/s01_train.py",
+      "sha256": "64dc2b0d9a890913d3ac6eaa3417b08fed33f93b89f07e6b0f448995072c5f48",
+      "size": 2640
+    }
+  ],
+  "environment": {
+    "python": "3.11.14",
+    "torch": "2.9.1+cu128",
+    "cuda_runtime": "12.8",
+    "cudnn": 91002,
+    "os": "Windows",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "model_setting": "User-confirmed GPT-6 Astra / xhigh; no fabricated identity telemetry"
+  }
+}

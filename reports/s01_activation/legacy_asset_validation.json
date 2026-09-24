@@ -1,0 +1,285 @@
+{
+  "stage": "S01_PUBLICATION_LEGACY_PROBLEM_ASSET_DELTA",
+  "status": "PASS",
+  "exit_code": 0,
+  "checked_at_utc": "2026-09-24T20:49:04.269854+00:00",
+  "environment": {
+    "python": "3.11.14",
+    "pillow": "12.0.0",
+    "platform": "Windows"
+  },
+  "source_sha256": "f2bf7c6aafad469f473ff91d56ec57cb824560b00c041a221d064cb9221b5605",
+  "source_size_bytes": 26468,
+  "probe_script_sha256": "d31fb60117006ff10bf3692d694fdd702ec1ff363e7abe48c4b113a4cfc32089",
+  "actual_existing_asset_count": 3,
+  "legacy_assets": [
+    {
+      "path": "docs/assets/image1.png",
+      "sha256": "f2f2acba7f0d566bd3f77e7f6a8f6cf1effd168eb2f3d675206a951c01e64e7b",
+      "size_bytes": 24529,
+      "baseline_commit": "71524473e915412ef823d9ad8dcb5928c4eeb2ca",
+      "index_equals_worktree_equals_baseline": true,
+      "newly_published": false,
+      "classification": "EXISTING_PUBLIC_PROBLEM_STATEMENT_ASSET",
+      "legacy_problem_statement_illustration_present": false,
+      "contains_authorized_new_sample_export": false,
+      "used_for_model_data_or_selection": false,
+      "verification": {
+        "format": "PNG",
+        "width": 624,
+        "height": 225,
+        "png_chunk_count": 6,
+        "png_crc_verified": true,
+        "pillow_verify_and_decode": true,
+        "textual_metadata_fields_scanned": 0,
+        "illustrative_id_detected_in_metadata": false,
+        "pixel_ocr_performed": false
+      }
+    },
+    {
+      "path": "docs/assets/image2.png",
+      "sha256": "3c512a360a6b0684f00aee5a27af1bdcace957ebc21191556e7f74648cf7287a",
+      "size_bytes": 928272,
+      "baseline_commit": "71524473e915412ef823d9ad8dcb5928c4eeb2ca",
+      "index_equals_worktree_equals_baseline": true,
+      "newly_published": false,
+      "classification": "EXISTING_PUBLIC_PROBLEM_STATEMENT_ASSET",
+      "legacy_problem_statement_illustration_present": true,
+      "contains_authorized_new_sample_export": false,
+      "used_for_model_data_or_selection": false,
+      "verification": {
+        "format": "PNG",
+        "width": 2250,
+        "height": 1803,
+        "png_chunk_count": 19,
+        "png_crc_verified": true,
+        "pillow_verify_and_decode": true,
+        "textual_metadata_fields_scanned": 1,
+        "illustrative_id_detected_in_metadata": false,
+        "pixel_ocr_performed": false
+      }
+    },
+    {
+      "path": "复杂场景下多模态情感识别的数学建模与算法设计.docx",
+      "sha256": "38cec978723bff36ab945fa98f6454558bb9084e2cd01d814dd6e38ab4b4c336",
+      "size_bytes": 1004454,
+      "baseline_commit": "71524473e915412ef823d9ad8dcb5928c4eeb2ca",
+      "index_equals_worktree_equals_baseline": true,
+      "newly_published": false,
+      "classification": "EXISTING_PUBLIC_PROBLEM_STATEMENT_ASSET",
+      "legacy_problem_statement_illustration_present": true,
+      "contains_authorized_new_sample_export": false,
+      "used_for_model_data_or_selection": false,
+      "verification": {
+        "format": "DOCX",
+        "member_count": 23,
+        "xml_and_relationship_parts_scanned": 21,
+        "image_parts_verified": 2,
+        "crc_verified": true,
+        "member_paths_safe": true,
+        "macros_or_executable_embeddings": false,
+        "illustrative_id_detected_in_xml": false,
+        "member_fingerprints": [
+          {
+            "path": "[Content_Types].xml",
+            "size_bytes": 2148,
+            "sha256": "69ae103e8c60abdc3a2a9fc1900361754ee8acf867ea1898b7e07911d6a11974"
+          },
+          {
+            "path": "_rels/.rels",
+            "size_bytes": 737,
+            "sha256": "c30fe099dbcfed4ecc4ae544ccf82f432c8d3bb665e2a301df283738b196d803"
+          },
+          {
+            "path": "word/document.xml",
+            "size_bytes": 200175,
+            "sha256": "5b8be8135b86e9fdda987f37fdaf3c742f34a227045aa9a54626eeee8444f8e1"
+          },
+          {
+            "path": "word/_rels/document.xml.rels",
+            "size_bytes": 1765,
+            "sha256": "8a2c7dbf59c5ba11806dc6fdc7b41c01cbbe1184f675dbdd26060c8ef1609dde"
+          },
+          {
+            "path": "word/footnotes.xml",
+            "size_bytes": 3196,
+            "sha256": "e21aa997972cd00310b086d61acf1478a37c00cb85de81363ee1b3da6351c3cb"
+          },
+          {
+            "path": "word/endnotes.xml",
+            "size_bytes": 3190,
+            "sha256": "5011b89307a6278c4fad0778b962635740abe27fc2dbca94e45078ddebdf1309"
+          },
+          {
+            "path": "word/media/image1.png",
+            "size_bytes": 24529,
+            "sha256": "f2f2acba7f0d566bd3f77e7f6a8f6cf1effd168eb2f3d675206a951c01e64e7b"
+          },
+          {
+            "path": "word/media/image2.png",
+            "size_bytes": 928272,
+            "sha256": "3c512a360a6b0684f00aee5a27af1bdcace957ebc21191556e7f74648cf7287a"
+          },
+          {
+            "path": "word/theme/theme1.xml",
+            "size_bytes": 7655,
+            "sha256": "b7b555b72c07dc4ba3d5bb7b04fe31481b642e2798ec075451d24dc5e53778ce"
+          },
+          {
+            "path": "word/settings.xml",
+            "size_bytes": 13805,
+            "sha256": "c65a712eab50d9d91b216a1e2999dc2cb2c5d50e85f0131c19baf85045624db3"
+          },
+          {
+            "path": "customXml/item1.xml",
+            "size_bytes": 256,
+            "sha256": "de4bae627d5e53f4a6f8dc56d1b470eacf6828665f9a8e34fed5c556f5433bb3"
+          },
+          {
+            "path": "customXml/itemProps1.xml",
+            "size_bytes": 326,
+            "sha256": "3de11f3fbe13f0d9bd87a907cca32683f3e4b08cdcc866e83788a0d112eef810"
+          },
+          {
+            "path": "customXml/item2.xml",
+            "size_bytes": 289,
+            "sha256": "f3b453b1755b133356885f27dfd8d96ac1d03abab49d28b11a2960c34226ed8a"
+          },
+          {
+            "path": "customXml/itemProps2.xml",
+            "size_bytes": 341,
+            "sha256": "51b8d812d1f447764230650c3356574af4a8f3264121c8b9cb8b27142a15c298"
+          },
+          {
+            "path": "word/numbering.xml",
+            "size_bytes": 46887,
+            "sha256": "aa5c0ac6cad2a890b65b4bf22d7c90f41aa66d0c22e5773c506ba123c93a15a6"
+          },
+          {
+            "path": "word/styles.xml",
+            "size_bytes": 327115,
+            "sha256": "86e7d75597940847954cc69b0026caf5cd3aa026e3e75544cf0cc8fcd55ccea4"
+          },
+          {
+            "path": "word/webSettings.xml",
+            "size_bytes": 17861,
+            "sha256": "b3beab20efdc3257d760a9be16d09b21b45b37bdac2d3a71eaf958298f86a5be"
+          },
+          {
+            "path": "word/fontTable.xml",
+            "size_bytes": 4323,
+            "sha256": "2a4d808924e1a5963f270c64069fd4f6b10b001220917ee6951d756e79e9662c"
+          },
+          {
+            "path": "docProps/core.xml",
+            "size_bytes": 706,
+            "sha256": "3e083d49fd41df49fbba499e69bb686d43d76ed63275a43ec0d0536801f77c37"
+          },
+          {
+            "path": "docProps/app.xml",
+            "size_bytes": 718,
+            "sha256": "a57a497258fc61c3bb4e52afddd92e2de4f756f5de8f944adc5e1802b57c45c2"
+          },
+          {
+            "path": "docProps/custom.xml",
+            "size_bytes": 745,
+            "sha256": "3655579b03f3541f51ebba917c2495f7be811dfe57abbe7bcfa48e556d42362d"
+          },
+          {
+            "path": "customXml/_rels/item1.xml.rels",
+            "size_bytes": 296,
+            "sha256": "80482f86e196171d66001e0e74d1900408a3aaf2463e54005d251b5f2db9a0b0"
+          },
+          {
+            "path": "customXml/_rels/item2.xml.rels",
+            "size_bytes": 296,
+            "sha256": "2a6aee4c8a9714223a3568077411a0c82d11b484b1c9ab93a19d50b99c57baa5"
+          }
+        ]
+      }
+    }
+  ],
+  "fixture_rejection_count": 15,
+  "fixture_checks": {
+    "png_bad_crc": {
+      "rejected": true,
+      "exception": "PublicationCheckError"
+    },
+    "png_trailing_payload": {
+      "rejected": true,
+      "exception": "PublicationCheckError"
+    },
+    "png_bad_signature": {
+      "rejected": true,
+      "exception": "PublicationCheckError"
+    },
+    "new_binary_path": {
+      "rejected": true,
+      "exception": "PublicationCheckError"
+    },
+    "changed_worktree_legacy": {
+      "rejected": true,
+      "exception": "PublicationCheckError"
+    },
+    "changed_index_legacy": {
+      "rejected": true,
+      "exception": "PublicationCheckError"
+    },
+    "docx_traversal": {
+      "rejected": true,
+      "exception": "PublicationCheckError"
+    },
+    "docx_macro": {
+      "rejected": true,
+      "exception": "PublicationCheckError"
+    },
+    "docx_embedded_executable": {
+      "rejected": true,
+      "exception": "PublicationCheckError"
+    },
+    "docx_duplicate_members": {
+      "rejected": true,
+      "exception": "PublicationCheckError"
+    },
+    "docx_external_file_relationship": {
+      "rejected": true,
+      "exception": "PublicationCheckError"
+    },
+    "docx_internal_relationship_escape": {
+      "rejected": true,
+      "exception": "PublicationCheckError"
+    },
+    "docx_entity_definition": {
+      "rejected": true,
+      "exception": "PublicationCheckError"
+    },
+    "docx_active_field": {
+      "rejected": true,
+      "exception": "PublicationCheckError"
+    },
+    "docx_bad_crc": {
+      "rejected": true,
+      "exception": "PublicationCheckError"
+    }
+  },
+  "legacy_problem_statement_illustration_present": true,
+  "whole_tracked_tree_claimed_free_of_sample_content": false,
+  "candidate_policy_unchanged": "New/modified binaries and new sample exports remain rejected",
+  "initial_failure_preserved": "activation_safety_1.json remains unchanged; it classified6 index/worktree surfaces of3 exact legacy assets as binary_or_unknown",
+  "delta_first_check_failure": {
+    "exit_code": 1,
+    "reason": "Package root _rels/.rels has empty Path.suffix; strict type allowlist initially rejected it",
+    "repair": "Explicitly recognize the .rels package filename and still parse/scan its XML and relationships"
+  },
+  "command": "python -B -X utf8 EXTERNAL_DIRECTORY/legacy_asset_delta_checks.py (cwd=official repository)",
+  "limits": [
+    "Pixel content was not OCR-scanned by this program; parent inspected the two already tracked public problem figures.",
+    "Known baseline figure2/DOCX illustration includes its own explanatory sample-like content and is not model data.",
+    "No original competition data, authjournals, model fitting or GPU calls used.",
+    "No official tree writes."
+  ],
+  "official_tree_modified": false,
+  "official_data_read": false,
+  "gpu_used": false,
+  "model_metrics": null
+}

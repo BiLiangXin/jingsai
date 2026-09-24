@@ -1,0 +1,66 @@
+{
+  "authorization_id": "S01-EXEC-AUTH-01",
+  "status": "USER_PREAUTHORIZED",
+  "mechanism": "PREAUTHORIZED_S01_CAMPAIGN",
+  "source": "EXPLICIT_CURRENT_USER_INSTRUCTION",
+  "instruction_sha256": "7a7f1835b0f08049453f25227f0faf50ff12f9859ebfe7ccbc3d53f6cb013afd",
+  "mode": "PREAUTHORIZED_BY_CURRENT_USER_INSTRUCTION",
+  "base_commit": "71524473e915412ef823d9ad8dcb5928c4eeb2ca",
+  "protocol_freeze": "R01-FREEZE-01",
+  "allowed_execution_fit_budgets": [
+    30,
+    24
+  ],
+  "preferred_execution_fit_budget": 30,
+  "approved_caps": {
+    "30": {
+      "total_hours": 12,
+      "per_fit_hours": 2
+    },
+    "24": {
+      "total_hours": 4,
+      "per_fit_hours": 1
+    }
+  },
+  "campaign_id": "S01-20260924T202319Z-30-1cf4769f",
+  "selected_budget": [
+    30,
+    12,
+    2
+  ],
+  "budget_decided_at": "2026-09-24T20:23:19.007829+00:00",
+  "private_output_sha256": "9d721c93e707a6586eb58901fb3397f13992c23d2f7ac54e513fd64144ffc042",
+  "device": "cuda",
+  "latest_compute_finish": "2026-09-25T18:00:00+08:00",
+  "retry_training_budget": 0,
+  "test_authorized": false,
+  "attachment3_4_authorized": false,
+  "q3_authorized": false,
+  "official_source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+  "permitted_splits": {
+    "train": "parameter/statistic fitting",
+    "valid": "frozen selection and metrics"
+  },
+  "prohibited": [
+    "test selection",
+    "Attachment3/4 research",
+    "Q3",
+    "unaligned",
+    "66-fit",
+    "D/T/L",
+    "KD",
+    "reconstruction",
+    "Huber/class-weight search",
+    "cross-attention",
+    "ensemble",
+    "TAV-local",
+    "external sentiment data/weights"
+  ],
+  "limits": [
+    "This grants one campaign only, never a replay/retry or extra fits.",
+    "Budget is permanently locked before officialsource access.",
+    "Original user instruction is the authority; no native journal/interactive confirmation required.",
+    "Critical hashes and independent technical review must pass before ordinary activation publication and source access.",
+    "Host account/Git publisher trust, not cryptographic protection against malicious same-account code."
+  ]
+}
