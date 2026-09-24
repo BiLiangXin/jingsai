@@ -1,14 +1,12 @@
 # Unified project summary
 
-Current checkpoint: S00E_ASTRA_LOCAL_CLOSEOUT; run `20260925-020000-S00E-ASTRA-d9e4edb`. S00D remains the latest completed stage until actual S00E publication succeeds. R01 waits; S01 is unauthorized.
+S00E engineering is COMPLETED and published. Run: `20260925-020000-S00E-ASTRA-d9e4edb`. E19 and E21 PASS; all 21 mandatory Gates PASS. R01 may resume under the user's serial workflow authorization; S01 training remains unauthorized. No research work was started during engineering closeout.
 
-Actual full validation: 221 main tests and 25 subtests passed, collection/execution exit 0. The 28 D2 tests are a subset, not extra cases. CPU and CUDA official TRAIN batch-two smoke passed with unchanged source SHA256 66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd. No optimizer, epochs, checkpoints, valid/test predictions or model metrics.
+Actual full tests: 221 main tests and 25 separate subtests PASS, collection/execution exit 0. The 28 D2 tests are a subset. Independent Astra High review also verified 221 main tests and 25 subtests and reported no CRITICAL or blocking MAJOR. CPU/CUDA official TRAIN batch-two smoke passed; source SHA256 before/after 66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd. No model metrics, optimizer learning, epochs or checkpoints.
 
-The prior owner-approved report applied to the prior version only. Native local approval verification was added, independently rejected for a Windows junction bypass, then repaired by checking the original full path chain for reparse points. Its regression tests passed. Fresh independent review and exact-version owner approval are pending; E19 and E21 are BLOCKED and S00E is not published.
+Implementation: `6480bfc77ce63edca92e6a57237772cddca0c3d0`. Release metadata: `27b026051c805f946e66e90a04bff603d7a01caa`. Publication index: `7c1596dbe107d9e7b174b6e959941ddaf7c0f198`. Latest branch HEAD is resolved through state/LATEST_RUN.json branch_head.ref.
 
-GOV-ASTRA-SERIAL-01 governance commit: d9e4edb11b710a92ef33c256bfca6684162911d7. D-DATA-01 through D-DATA-07 and Q1 are unchanged. History and rejected methods are retained in docs/RESEARCH_LOG.md and the engineering reports. Local native approval trusts the uncompromised host/OS account and is not cryptographic authentication. Historical CSV access and unauthenticated installed Torch binary provenance remain recorded limitations. No mandatory Web Chat ZIP.
+Release: https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260925-020000-S00E-ASTRA-d9e4edb
+Asset SHA256: `e6cd31f0bb9af1ea6e79e5452645fec1afda2a296166db52f1e7fe41041625bf`; actual downloaded SHA256 matches; size 188247 bytes. Receipt: `reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/PUBLISH_RECEIPT.json`.
 
-
-## Completed independent technical review
-
-Current run `20260925-020000-S00E-ASTRA-d9e4edb`: independent Astra High review PASS, zero CRITICAL or blocking MAJOR. Reviewer independently ran 221 main tests and 25 subtests (exit 0), verified 58 hashes and replayed the junction rejection. Report SHA256 `26c74726eff8c52ad5a08e399c8c1d6f3e9dc577dd4f75ea7340829588e5d6d8`. User approval of this exact revised digest and E21 publication preflight remain pending. No further review expansion is planned. Model metrics remain null.
+D-DATA-01 through D-DATA-07, Q1, test quarantine and Attachment 3/4 isolation remain unchanged. Historical CSV access is not erased by ordinary removal; installed Torch binary origin was not independently authenticated. Local native owner confirmation assumes an uncompromised Codex host/OS account and is not cryptographic authentication. These recorded limitations do not change the research contract. Model metrics remain null. No Web Chat ZIP is required.

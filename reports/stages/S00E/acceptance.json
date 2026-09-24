@@ -2,7 +2,7 @@
   "task_id": "S00E_S01_PRESTART_ENGINEERING_HARDENING",
   "stage": "S00E",
   "run_id": "20260925-020000-S00E-ASTRA-d9e4edb",
-  "status": "ALL_GATES_PASS_PUBLICATION_PENDING",
+  "status": "COMPLETED",
   "data_kind": "real_official_local",
   "evidence": [
     {
@@ -38,7 +38,7 @@
     {
       "requirement": "S00E_ENGINEERING_HARDENING.md",
       "path": "docs/S00E_ENGINEERING_HARDENING.md",
-      "sha256": "13dfb69da940f662fc0f99e85e37bb96d8560151ed7e656620098168f2553e20"
+      "sha256": "6ca54baca605ea7e146532312cffba2990bb6ea4fb5046d08c6bb0b19461078c"
     },
     {
       "requirement": "data-guide.md",
@@ -118,7 +118,7 @@
     {
       "requirement": "RUN.json",
       "path": "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/RUN.json",
-      "sha256": "b8e7f4755b5e6f8530e50a9a16ffc0b40d778e06ab1a7758d5dac13d859396ba"
+      "sha256": "b7070080be26dbd7e92340e079f7645fc711c814d9fb59ab2eddb2f58bcac457"
     },
     {
       "requirement": "TEST_RESULTS.json",
@@ -259,6 +259,31 @@
       "requirement": "PUBLISH_RECEIPT.json",
       "path": "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/PUBLISH_RECEIPT.json",
       "sha256": "f877033495f71eee4c2bde4c9c1d83699a725d22bfa2a1725aa66fa7b9bb8d3d"
+    },
+    {
+      "requirement": "PROJECT_SUMMARY.md",
+      "path": "docs/PROJECT_SUMMARY.md",
+      "sha256": "b03f0d86dc351ac697d2cc67c2f25861b2bcdd7bc9423f18154d3c2ef5cc4788"
+    },
+    {
+      "requirement": "RESEARCH_LOG.md",
+      "path": "docs/RESEARCH_LOG.md",
+      "sha256": "1c112eea5ed6f12e06a52475b48a65dd379d697ccf721f18d81a501a211efdfc"
+    },
+    {
+      "requirement": "PAPER_CLAIMS.md",
+      "path": "docs/PAPER_CLAIMS.md",
+      "sha256": "d41eb0a092b95e17f13f0c65b700125405fb4834c6ccc878c0e48c9158dcc80c"
+    },
+    {
+      "requirement": "EXPERIMENT_REGISTER.json",
+      "path": "docs/EXPERIMENT_REGISTER.json",
+      "sha256": "8c31441d6131717d87c377a4443ea2938efd1abf557471a40bddd09ed16b6ccf"
+    },
+    {
+      "requirement": "s00e_closeout_status.json",
+      "path": "reports/engineering/s00e_closeout_status.json",
+      "sha256": "975adb8ae1e399b6fdb81b6dd67b014b2e5ecc79a0a12b9f13c692e5da1c8d6c"
     }
   ]
 }

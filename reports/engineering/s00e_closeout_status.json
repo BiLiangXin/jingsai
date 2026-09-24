@@ -2,12 +2,11 @@
   "task_id": "S00E_S01_PRESTART_ENGINEERING_HARDENING",
   "stage": "S00E",
   "run_id": "20260925-020000-S00E-ASTRA-d9e4edb",
-  "S00E_STATUS": "PUBLICATION_PENDING",
+  "S00E_STATUS": "COMPLETED",
   "E19_REVIEW": "PASS",
   "E21_PREFLIGHT": "PASS",
-  "RELEASE_STATUS": "NOT_PUBLISHED",
-  "LATEST_REMOTE_HEAD": "d9e4edb11b710a92ef33c256bfca6684162911d7",
-  "R01_CAN_START": "NO",
+  "RELEASE_STATUS": "PUBLISHED_DOWNLOAD_VERIFIED",
+  "R01_CAN_START": "YES",
   "S01_TRAINING_AUTHORIZED": "NO",
   "WEB_HANDOFF_ZIP_REQUIRED": "NO",
   "actual_main_tests": 221,
@@ -26,8 +25,8 @@
   "owner_trust_host": "github.com",
   "registered_owner_signing_keys": 0,
   "owner_signature_present": false,
-  "implementation_commit": null,
-  "metadata_commit": null,
+  "implementation_commit": "6480bfc77ce63edca92e6a57237772cddca0c3d0",
+  "metadata_commit": "27b026051c805f946e66e90a04bff603d7a01caa",
   "model_metrics": null,
   "PROPOSED_RESEARCH_CHANGE": "NONE",
   "limitations": [
@@ -44,5 +43,16 @@
     "call_id": "call_BIIRQRGIDfRcrkdPAOP6UCdx",
     "timestamp": "2026-09-24T17:39:05.747Z",
     "event_sha256": "a64250739a4a76bd04e3623ef5f177975c1048eb1d852ca80a03399d02164224"
+  },
+  "publication_index_commit": "7c1596dbe107d9e7b174b6e959941ddaf7c0f198",
+  "latest_remote_head_ref": "refs/heads/codex/mosei-auto",
+  "release": {
+    "tag": "codex-run-20260925-020000-S00E-ASTRA-d9e4edb",
+    "url": "https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260925-020000-S00E-ASTRA-d9e4edb",
+    "target": "6480bfc77ce63edca92e6a57237772cddca0c3d0",
+    "asset_name": "review-20260925-020000-S00E-ASTRA-d9e4edb.zip",
+    "asset_size_bytes": 188247,
+    "local_sha256": "e6cd31f0bb9af1ea6e79e5452645fec1afda2a296166db52f1e7fe41041625bf",
+    "downloaded_sha256": "e6cd31f0bb9af1ea6e79e5452645fec1afda2a296166db52f1e7fe41041625bf"
   }
 }
