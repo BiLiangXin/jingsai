@@ -1,358 +1,879 @@
-task_id: S00C_SUPPORT_BOUNDARY_EVIDENCE_AND_REAL_HANDOFF
+task_id: S00D_DATA_CONTRACT_FREEZE_AND_BASELINE_READINESS
 status: ACTIVE
 research_authorized: true
 next_stage_authorized: false
-previous_stage: S00B_REAL_DATA_AUDIT
+previous_stage: S00C_SUPPORT_BOUNDARY_EVIDENCE_AND_REAL_HANDOFF
+stage_type: data_contract
 research_owner: Main Research Chat
 execution_agent: Codex GPT-6 Sol
-stage_type: targeted_data_audit
 task_version: 1.0
-# Codex GPT-6 Sol：执行 S00C 数据边界诊断与真实自动交接验证
+你现在执行新的正式阶段：
 
-## 一、任务身份与权限
+S00D_DATA_CONTRACT_FREEZE_AND_BASELINE_READINESS
 
-你是本项目的工程和实验执行代理。主研究负责人根据已完成的 S00B 真实审计，授权本轮目标明确、范围有限的后续数据诊断任务。
+这是 S00C 通过 Main Research Chat 审核后的正式工程/科研接口冻结阶段。
 
-**本次任务：**
+不得自行启动 S01 模型训练。
 
-`S00C_SUPPORT_BOUNDARY_EVIDENCE_AND_REAL_HANDOFF`
-
-本轮只负责进一步调查真实数据中的有效范围、候选 mask 和零值结构问题，并验证新的自动 GitHub 交接流程可以在真实研究运行后安全完成发布。
-
-本次授权不包含 S01、模型训练、最终特征版本选择、最终 padding/missing 定义或任何问题2/问题3算法设计。
-
-本指令作为主研究负责人发布的 S00C 阶段规格。首先将其准确落实到正式仓库根目录的 `TASK_SPEC.md`，再执行后续工作。
-
-阶段头信息必须为：
-
-```yaml
-task_id: S00C_SUPPORT_BOUNDARY_EVIDENCE_AND_REAL_HANDOFF
-status: ACTIVE
-research_authorized: true
-next_stage_authorized: false
-previous_stage: S00B_REAL_DATA_AUDIT
-research_owner: Main Research Chat
-execution_agent: Codex GPT-6 Sol
-stage_type: targeted_data_audit
-```
-
-本次 S00C 授权仅限本指令所列的研究问题、实现与发布工作。不得自行扩大为模型开发阶段。
-
-## 二、必须首先完成的仓库检查
+==================================================
+1. 启动与仓库状态
+==================================================
 
 正式仓库：
 
-`BiLiangXin/jingsai`
+BiLiangXin/jingsai
 
-正式开发分支：
+正式分支：
 
-`codex/mosei-auto`
+codex/mosei-auto
 
-已核验的本轮参考 HEAD：
+Main Research Chat 已核验的最新远端 HEAD：
 
-`1b0b20901deca9017637bf4974e26ff3529c8ed0`
+10e191a6682d9d8e94097d79db70f7fe7df8737b
 
-首先读取以下正式仓库文件：
+最新已完成阶段：
 
-1. `AGENTS.md`
-2. `DECISIONS.md`
-3. `TASK_SPEC.md`
-4. `CHATGPT_REVIEW.md`
-5. `state/LATEST_RUN.json`
-6. `state/NEXT_ACTIONS.md`
-7. `docs/DATA_CONTRACT_EVIDENCE.md`
-8. `docs/HANDOFF_WORKFLOW.md`
-9. S00B 的真实审计报告、关键 JSON、测试、Gate 和现有实现代码
+S00C_SUPPORT_BOUNDARY_EVIDENCE_AND_REAL_HANDOFF
 
-核对最新 GitHub 分支状态。如果最新 HEAD 与上述参考提交不同，先核实新增提交的实际内容，不能盲目覆盖。
+真实 run：
 
-只能在已经核验的正式开发仓库中执行工作。不得在桌面竞赛目录中创建新的平行 `E-S00C` 或其他 Git 仓库。
+20260924-014331-S00C-afeafae
 
-不要修改、清理、删除旧 `E` 和 `E-S00B` 目录。原始竞赛数据只能通过安全的本地路径配置读取。
+首先读取：
 
-首先检查当前工作区是否有未提交改动。如果存在其他任务的工作，不得覆盖或擅自清理。
+AGENTS.md
+DECISIONS.md
+TASK_SPEC.md
+CHATGPT_REVIEW.md
+state/LATEST_RUN.json
+state/NEXT_ACTIONS.md
+docs/DATA_CONTRACT_EVIDENCE.md
+docs/S00C_SUPPORT_EVIDENCE.md
+docs/HANDOFF_WORKFLOW.md
 
-## 三、阶段激活
+以及 S00B/S00C 所有与 schema、mask、zero、length、
+split、label 和 source integrity 有关的公开证据。
 
-目前 GitHub 根目录 `TASK_SPEC.md` 仍是 S00B 的冻结规格。S00B 已完成，但旧规格不能自动授权 S00C。
+确认：
 
-根据本指令创建新的 S00C 阶段规格，替换当前根目录 `TASK_SPEC.md`，明确本轮目标、数据使用边界、实施要求、输出、测试、Gate、失败条件及停止条件。
+- origin 正确；
+- 当前 branch 正确；
+- local/remote HEAD 合理一致；
+- 工作树没有其他未审核任务的修改；
+- official-workspace marker 正确。
 
-必须保留现有 `AGENTS.md` 的长期治理规则，不得因为切换阶段而重写其研究权限、数据安全或 Git 安全规则。
+不得创建桌面 E-S00D 等平行 Git 项目。
+只在正式仓库内继续。
 
-保持 `DECISIONS.md` 中尚未冻结的科研决定不变。可以记录已经核验的 S00B 数据事实及本轮研究边界，但不得将尚未取得充分证据的假设直接标记为 FROZEN。
+不得删除旧 E、E-S00B 或其他目录。
 
-先完成阶段激活的独立安全检查，再对本次规格使用精确 pathspec 暂存、普通 commit 和普通 push。确认远端根目录的 `TASK_SPEC.md` 已正确激活 S00C，之后才能读取本地官方 PKL 开始真实诊断。
+==================================================
+2. 激活新的 TASK_SPEC
+==================================================
 
-不得把规格激活提交伪装成 S00C 真实数据审计的 implementation commit。
+将根 TASK_SPEC.md 更新为：
 
-## 四、S00B 基线核对
+task_id: S00D_DATA_CONTRACT_FREEZE_AND_BASELINE_READINESS
+status: ACTIVE
+research_authorized: true
+next_stage_authorized: false
+previous_stage: S00C_SUPPORT_BOUNDARY_EVIDENCE_AND_REAL_HANDOFF
+stage_type: data_contract
+research_owner: Main Research Chat
+execution_agent: Codex GPT-6 Sol
 
-本次任务不重复整个 S00B，而是基于已有证据开展针对性调查。
+本阶段不进行模型性能实验。
 
-S00B 的真实 run_id：
+不得训练正式 baseline。
 
-`20260924-001338-S00B-fc277357`
+不得修改以下科研决定的含义。
 
-已报告的 train/valid/test 样本数为：
+==================================================
+3. 本轮正式冻结的数据合同
+==================================================
 
-* train：3395
-* valid：728
-* test：727
+将以下决定正式记录到 DECISIONS.md。
 
-Aligned 和 unaligned 两版各4850条样本。Train/valid 的实际分类编码为 Negative=0、Neutral=1、Positive=2。
+不能自行修改其科研含义。
 
-读取并交叉核对 S00B 原始聚合报告、生成这些报告的程序和测试。检查其记录是否彼此一致。
+------------------------
+D-DATA-01
+------------------------
 
-本轮诊断应能重现以下已报告的关键事实：
+S01 第一阶段 primary baseline interface：
 
-* Unaligned audio 声明长度之后的非零行数为0。
-* Unaligned vision 声明长度之后，train 为36,928个非零行，valid 为8,455个非零行。
-* Unaligned vision 的 train 中，声明长度内部还有30个零值行。
-* `text_bert` 第1号通道是 attention-mask 候选通道，train/valid 均呈连续活跃前缀。
-* Aligned 候选非活跃位置上的 `text` 连续特征仍然非零。
+aligned_50.pkl
 
-如果本轮重新计算的结果与 S00B 不同，先检查数据版本、代码、统计口径、路径及输入顺序，明确记录差异来源。不得静默修改旧报告或调整统计方法使结果看起来一致。
+状态：
 
-## 五、研究问题 A：Unaligned 视觉声明长度诊断
+FROZEN_FOR_BASELINE
 
-本节只对附件2官方 unaligned 数据中的 train 和 valid 进行深入诊断。
+它不是最终 aligned/unaligned 性能胜负结论。
 
-使用已有长度诊断代码作为工程基础，补充以下样本级计算和公开聚合结果：
+unaligned 保留为后续受控 comparator。
 
-1. 每条样本的 `vision_lengths`、存储序列长度、最后一个非零特征行位置，以及声明长度后的非零行数。
-2. 声明长度之后非零行的连续结构、相对位置、距离声明边界的偏移和零值间隔。
-3. 声明长度内部非零与零行的结构，包括前缀、尾缀和内部零值段。
-4. 声明长度前后特征行范数的聚合分布，检查后续非零值的数量级及其与内部非零值的关系。
-5. 检查异常是否集中于少量样本，或分布于大量样本。
-6. 检查不同声明长度区间中的异常频率，以及是否存在可复现的 off-by-one 或固定偏移现象。
-7. 检查整段视觉全零样本与声明长度是否一致。
-8. 对音频重复必要的对照统计，解释音频和视觉的实测结构差异。
+不得写：
 
-允许使用仅包含聚合统计的直方图、分位数表和交叉统计表。不公开原始样本 ID、原始特征、样本级标签或敏感本地路径。必要的样本级诊断留在 gitignored 的私人目录。
+aligned is superior
 
-必须将以下事项严格区分：
+只能表达：
 
-* 官方声明的长度；
-* 数值非零位置；
-* 推断出的候选支持区域；
-* 是否存在真实观测；
-* 是否构成模态缺失。
+aligned is the primary controlled baseline interface.
 
-尤其不能仅因为声明长度之外存在非零值，就断言官方长度一定错误，也不能据此认定后续非零值都是有效原始观测。
+------------------------
+D-DATA-02
+------------------------
 
-本阶段必须保留无法通过现有数据判断的情况，并给出缺少哪类独立证据。
+必须区分：
 
-## 六、研究问题 B：Aligned 文本候选 mask 诊断
+support mask
+observed mask
+corruption/missing mask
 
-本节仍只对 train 和 valid 进行真实诊断。
+不得复用一个 mask 表达三个概念。
 
-检查 `text_bert` 的实际形状、dtype、第1号通道的二值性、连续活跃前缀和各样本候选活跃长度。
+对于 aligned：
 
-对 aligned 连续 `text` 特征，比较候选活跃和非活跃位置的数值结构，包括：
+M_support[t] =
+text_bert[:, 1, t] == 1
 
-* 非零行比例和聚合范数；
-* 同一样本尾部各行是否存在完全相同或高度相似的特征；
-* 尾部非活跃位置是否具有可重复的数值结构；
-* 候选活跃区域与非活跃区域的数值分布差异；
-* 候选 mask 与音频、视觉结构性零行的位置交叉关系。
+这是 S01 operational sequence-support rule。
 
-只进行数值诊断，不使用互联网恢复 token、下载外部 MOSEI 标签或运行未授权的 BERT 重新编码。
+它不声称 continuous text 在 mask 外数值为0。
 
-如果部分关系能得到较强证据，应明确标记 `INFERRED`；如果仍无法解释，应保持 `UNKNOWN`。
+S00C 已 VERIFIED：
+mask 外 continuous text 实际仍非零。
 
-不得把候选 attention mask 直接定义为连续文本特征的最终 padding 规则。
+------------------------
+D-DATA-03
+------------------------
 
-## 七、研究问题 C：结构零值与候选有效范围
+对于 aligned audio/vision：
 
-基于已有的 zero-row 和 zero-run 实现，对 train/valid 进行必要的补充聚合诊断。
+ZERO_ROW(m,t) =
+all(feature dimensions == 0)
 
-必须保留 S00B 已冻结的机械零值检测含义，不得修改原始数组或替换零值。
+定义：
 
-区分并报告：
+M_observed[m,t] =
+M_support[t] AND NOT ZERO_ROW(m,t)
 
-* 全零模态样本；
-* 前缀零值段；
-* 尾缀零值段；
-* 两端零值段；
-* 内部连续零值段；
-* 多个内部零值段；
-* 与候选文本活跃区域重叠的零值段；
-* 与 unaligned 声明长度发生位置冲突的零值段。
+对于 text：
 
-对音频和视觉分别报告，不能简单合并后给出统一解释。
+M_observed[text,t] =
+M_support[t]
 
-报告哪些现象能直接由真实数组验证，哪些仅能提出假设，哪些必须等待后续科研实验。
+当前不根据 continuous text 的数值是否为0决定 support。
 
-不对结构性零值自动赋予 missing、padding 或 invalid observation 的含义，也不修改已有样本集合。
+------------------------
+D-DATA-04
+------------------------
 
-## 八、数据使用和安全边界
+自然出现的 ZERO_ROW 一律称：
 
-本轮只允许对附件2官方 train/valid 开展新增数值诊断。
+STRUCTURAL_ZERO
 
-Test 继续严格隔离。不得重新计算 test 标签分布、数值特征分布、候选 mask 分布，也不得用 test 做任何边界选择或科研判断。S00B 已完成的合法性与一致性检查可作为历史证据引用。
+禁止自动称：
 
-附件3和附件4本轮不读取内容。不得反序列化专项 PKL、分析真实 missing 分布、检查专项特征值、抽帧或分析专项视频。
+MISSING
+PADDING
+INVALID_OBSERVATION
 
-外部 MOSEI 数据、第三方情感数据及互联网标签禁止用于本轮诊断。
+缺失必须是独立的显式状态。
 
-只能从用户本机已经确认可信的官方竞赛源文件读取。不得重新下载未知 pickle，原始文件只读，审计前后记录文件大小、mtime 和 SHA256，发现改变立即停止并报告。
+未来人工 corruption 使用单独：
 
-默认依次加载所需官方特征文件；避免长期同时持有 aligned 和 unaligned 两份完整对象。若现有 S00B 聚合证据足以支持某项结论，无须为形式而重复加载全部数据。
+M_corruption
 
-不得修改已有 S00B 历史结果或 Release。
+不得通过 value == 0 反向推断人工 missing。
 
-## 九、输出数据合同证据
+------------------------
+D-DATA-05
+------------------------
 
-建立独立的 S00C 公开证据文件，不覆盖原有 S00B 审计产物。
+S01 aligned 的 operational padding：
 
-至少产生：
+M_padding = NOT M_support
 
-* `docs/S00C_SUPPORT_EVIDENCE.md`
-* `reports/data_audit/s00c_vision_length_boundary.json`
-* `reports/data_audit/s00c_text_mask_diagnostics.json`
-* `reports/data_audit/s00c_zero_mechanism_matrix.json`
-* `reports/data_audit/s00c_s00b_reconciliation.json`
-* `reports/data_audit/s00c_source_mutation_check.json`
+所有 temporal pooling /
+sequence aggregation /
+attention summary /
+loss-related temporal reduction
 
-具体 JSON 字段可按真实工程需要细化，但不得改变本任务的科研含义或减弱隔离要求。
+必须能够排除 padding positions。
 
-`S00C_SUPPORT_EVIDENCE.md` 必须按 VERIFIED、SPECIFIED、INFERRED、HYPOTHESIS、UNKNOWN 整理。
+注意：
 
-每项主要发现应标明实际来源、计算口径、证据文件、已知限制和需要主研究负责人审核的问题。
+ZERO_ROW != PADDING
 
-单独设置研究决策候选表，列出能够由本轮证据支持的候选含义和仍存在的替代解释；该表不是最终科研决定。
+这是正式合同。
 
-## 十、工程测试与阶段 Gate
+------------------------
+D-DATA-06
+------------------------
 
-补充针对本轮诊断代码的合成工程测试。至少覆盖：
+第一版模型允许输入：
 
-* 长度边界和越界值；
-* 全零样本；
-* 内部连续零值段；
-* 多段零值；
-* 声明长度之后的非零行；
-* 特征行范数及统计汇总；
-* mask 连续性和非活跃位置诊断；
-* 数据审计结果可复现；
-* train/valid 限制；
-* test quarantine；
-* 附件3/4禁止内容读取；
-* 数据不变性；
-* 公开报告脱敏；
-* 交接清单完整性。
+text continuous feature
+audio
+vision
 
-真实运行本轮所需的官方 train/valid 数据诊断，记录命令、环境、实际样本数和真实执行结果。合成测试通过不得代替真实数据证据。
+text_bert channel 1 仅作为 mask metadata。
 
-建立 S00C 阶段 Gate，至少包含：
+不把 text_bert 作为第四模态。
 
-* C01：正式仓库与阶段授权核验。
-* C02：S00B 基线证据读取与一致性核对。
-* C03：官方源文件可信及前后完整性核验。
-* C04：train/valid 使用边界与 test quarantine。
-* C05：unaligned 视觉长度补充诊断完成。
-* C06：音频长度对照诊断完成。
-* C07：aligned 文本候选 mask 诊断完成。
-* C08：结构零值交叉诊断完成。
-* C09：科研事实、推断和未知严格区分。
-* C10：工程测试真实运行通过。
-* C11：公开报告安全及原始数据保护检查。
-* C12：数据合同证据、run 和验收文件完整。
+第一版不重新运行 BERT。
 
-每项必须记录 PASS、FAIL、SKIPPED 或 BLOCKED 及真实证据。
+禁止作为预测特征：
 
-数值异常本身不等于工程失败；但是没有完成要求的统计、发生数据泄漏、违反隔离或伪造结果，不能被标记为成功。
+id
+raw_text
+classification label
+regression label
+split membership
+附件3/4任何统计信息。
 
-## 十一、真实运行与阶段产物
+targets：
 
-为本轮创建唯一 run_id，不覆盖已有运行目录。
+classification_labels
+regression_labels
 
-必须创建：
+------------------------
+D-DATA-07
+------------------------
 
-* `reports/runs/<run_id>/RUN.json`
-* `reports/runs/<run_id>/GATE.json`
-* `reports/runs/<run_id>/TEST_RESULTS.json`
-* `reports/runs/<run_id>/public/HANDOFF_INPUTS.json`
-* `reports/stages/S00C/acceptance.json`
+所有 learned normalization statistics
+只能使用 train 计算。
 
-RUN 必须真实记录本轮读取了哪些官方文件、实际执行的诊断、数据边界、前后哈希核验及运行状态。
+valid/test/附件3/4：
 
-由于本轮执行真实官方数据诊断，RUN 的 `data_kind` 应使用现有发布工具接受的真实官方数据类别，而不是把实际研究运行伪装为纯合成工程任务。
+禁止参与 mean/std/min/max/quantile 等统计估计。
 
-对于仍无法判定的科学含义，应记录 UNKNOWN，不得因为科学解释尚未冻结而伪造工程失败，也不得用 Gate PASS 冒充科研结论成立。
+本阶段只建立 normalization infrastructure，
+不选择最终 scaler。
 
-如真实数据证据与 S00B 已核验的事实冲突，明确列出冲突及代码复核结果，必要时停止发布，交由主研究负责人决定是否需要重开审计。
+至少支持：
 
-## 十二、使用新的自动交接流程
+none
+train-only z-score
 
-完成真实运行、全部必要测试和阶段 Gate 后，使用仓库当前唯一的自动交接入口：
+但具体选择保持 UNDECIDED，
+等待 S01 valid 对比。
 
-```powershell
-python tools/stage_handoff.py --manifest reports/runs/<run_id>/public/HANDOFF_INPUTS.json
-```
+==================================================
+4. DataContract 正式代码化
+==================================================
 
-先根据 `docs/HANDOFF_WORKFLOW.md` 建立精确文件清单。必须包含本轮必要的公开代码、测试、聚合报告和数据合同证据。不得使用目录通配符或整个仓库导出。
+建立清晰的数据合同模块。
 
-该入口必须核验正式工作区、origin、分支、远端 HEAD、当前 TASK_SPEC 授权、真实 RUN、测试、Gate、阶段验收证据及公开文件安全。
+建议位置：
 
-只能执行安全的精确 staging、普通 commit/push 和本轮已授权的 Review Release。禁止使用 force push、filter-repo、destructive clean 或任何旧历史清理流程。
+src/mosei/data/
 
-Release target 必须为实际通过测试和 Gate 的 implementation commit。发布后下载资产，比对 SHA256、资产大小和 tag target，并更新稳定运行索引 `state/LATEST_RUN.json`。
+但可结合现有项目结构合理实现。
 
-这次是该自动流程首次用于新阶段的真实研究发布。遇到普通工程故障可自主诊断、修复和重跑，但不得为了获得成功而削弱 Gate、安全扫描或修改科研协议。
+至少需要：
 
-如发布失败，记录真实的部分提交、远端 Release 状态及失败原因，检查后安全恢复。不得凭已存在的部分资产声称完整成功。
+data_contract.py
+dataset.py
+masks.py
+normalization.py
 
-## 十三、Web Chat 自动交接 ZIP
+名字允许做轻微工程调整，
+但职责必须分离。
 
-遵守最新 `AGENTS.md` 的 Web Chat handoff 规则。
+建立不可含糊的数据结构，例如：
 
-使用现有 `tools/web_chat_handoff.py` 为最终回复生成独立、可上传网页 Chat 的本地 ZIP，包含 `response.json`、`README.md`、`MANIFEST.json` 和理解本轮结果必需的公开文件。
+AlignedSample / AlignedBatch
 
-本地 ZIP 与 GitHub Review Release 是不同的交接产物：二者都必须安全核验，不能相互替代。
+至少显式包含：
 
-最终回复给用户提供该本地 ZIP 的真实绝对路径、SHA256、运行状态、实际测试与 Gate 结果，以及最新 GitHub Review、Release 和稳定索引路径。
+text
+audio
+vision
 
-如果无法生成或核验 ZIP，明确报告失败，不得给出虚构路径。
+text_support_mask
+audio_support_mask
+vision_support_mask
 
-## 十四、主研究审核入口
+text_observed_mask
+audio_observed_mask
+vision_observed_mask
 
-本轮最终 `CHATGPT_REVIEW.md` 必须包含：
+classification_target
+regression_target
 
-* task_id、run_id、状态；
-* 正式仓库和分支；
-* baseline、implementation、metadata 提交；
-* 真实运行和源文件完整性证据；
-* S00B 基线数值重现情况；
-* unaligned 视觉长度诊断；
-* aligned 文本候选 mask 诊断；
-* 结构零值交叉结果；
-* tests 和 Gate；
-* 未解决的科学问题；
-* 对后续数据合同的候选建议及替代解释；
-* 发布记录和 SHA256；
-* `PROPOSED_RESEARCH_CHANGE`，没有则明确 NONE。
+内部调试可有 sample key，
+但模型 forward 默认不得获得 raw id。
 
-最终只将具有证据支持的事实标为 VERIFIED，科研解释按其证据等级标记。
+不要用：
 
-不得自行修改 `DECISIONS.md` 中未获授权的核心科研决定，不得宣布已经选择主特征版本或确定最终 padding/missing 规则。
+mask
 
-如果出现必须变更已冻结科研协议的情况，生成完整 `PROPOSED_RESEARCH_CHANGE`，停止越界执行，等待主研究负责人审核。
+作为无上下文的唯一字段名。
 
-## 十五、完成条件
+必须明确命名语义。
 
-按以下闭环执行：
+==================================================
+5. aligned shared-support 规则实现
+==================================================
 
-阶段激活与远端核验 → 基线审查 → 真实针对性诊断 → 聚合报告 → 测试 → Gate → 数据合同证据 → 公开安全扫描 → 自动 Git/Release 交接 → 远端核验 → Web Chat ZIP → 停止。
+在代码中实现：
 
-最终状态必须明确：
+support = text_bert channel 1 == 1
 
-`PENDING_RESEARCH_REVIEW`
+并验证：
 
-`NEXT_STAGE_NOT_AUTHORIZED`
+dtype 合法；
+shape == (N,50)；
+值仅为 0/1；
+每个样本形成连续 active prefix；
+至少一个 active position；
+长度不超过50。
 
-`STOPPED_AFTER_S00C`
+支持区域外：
 
-不允许自行开始 S01、训练 baseline、实施模型融合、蒸馏或重建，也不允许将新的统计证据直接宣布为最终模型设计。
+continuous text 即使非零，
+默认也不得进入 pooled/aggregated model representation。
 
-将全部真实结果与公开证据交回 Main Research Chat，等待下一次科研审核。
+不要修改原始 text tensor。
+
+只通过 support mask 控制后续有效范围。
+
+audio_support_mask =
+vision_support_mask =
+text_support_mask
+
+因为 aligned 题面定义为共同对应序列位置。
+
+但是：
+
+audio_observed_mask =
+support AND NOT audio_zero_row
+
+vision_observed_mask =
+support AND NOT vision_zero_row
+
+不得据此把 zero row 叫 missing。
+
+==================================================
+6. structural zero contract
+==================================================
+
+实现统一函数：
+
+structural_zero_mask(x)
+
+规则：
+
+每个时间位置所有 feature dimension 精确为0。
+
+输出仅代表：
+
+stored structural zero
+
+不得返回字段名：
+
+missing_mask
+
+建立显式 contract tests 确认：
+
+padding position 可以是非零 text；
+support position可以出现 audio structural zero；
+support position可以出现 vision structural zero；
+zero != padding；
+zero != corruption。
+
+==================================================
+7. artificial corruption interface
+==================================================
+
+本阶段不实施正式 Q2 missing simulation，
+但建立未来安全接口。
+
+设计独立：
+
+CorruptionMask
+
+或等价明确数据结构。
+
+默认所有位置：
+
+false
+
+必须保证：
+
+人工 corruption 只能在允许区域显式产生；
+不能通过 tensor 数值反推 corruption；
+padding 不能被统计为人工 missing；
+自然 structural zero 不能自动加入 corruption mask。
+
+不得在 S00D 决定：
+
+missing ratio
+missing duration distribution
+modality combinations
+simulation schedule
+
+这些仍属于之后的科研决策。
+
+只建立接口。
+
+==================================================
+8. normalization infrastructure
+==================================================
+
+实现：
+
+IdentityNormalizer
+
+以及：
+
+TrainOnlyZScoreNormalizer
+
+要求：
+
+fit() 只接受 train adapter/dataset。
+
+保存：
+
+mean
+std
+count
+feature dimensions
+fit split
+config version
+
+对于时间序列统计，
+必须明确 mask 规则。
+
+S00D 第一版规定：
+
+用于计算统计量的位置 =
+support AND observed
+
+audio/vision：
+M_observed
+
+text：
+M_support
+
+padding 不进入 normalization stats。
+
+结构零行默认不参与 audio/vision scaler fit，
+因为它们不是观测 feature vector。
+
+但不得把这种排除解释成：
+“zero就是missing”。
+
+它只是 normalization 的 observed-vector
+统计规则。
+
+std 为0的 feature 必须安全处理，
+不得产生 NaN/Inf。
+
+本阶段不得根据 valid 指标选择 normalizer。
+
+==================================================
+9. label contract
+==================================================
+
+将已经 VERIFIED 的标签编码写成正式合同：
+
+Negative -> 0
+Neutral -> 1
+Positive -> 2
+
+regression：
+
+[-3,3]
+
+且：
+
+y < 0 => Negative
+y = 0 => Neutral
+y > 0 => Positive
+
+建立 assert / validation。
+
+不得重新编码成：
+
+negative=0
+positive=1
+
+这种二分类形式作为数据底层 contract。
+
+以后模型若需要派生 binary metric，
+应另建派生 target，不覆盖官方三类标签。
+
+==================================================
+10. split / leakage contract
+==================================================
+
+硬编码或统一验证：
+
+train：
+唯一允许 fit model parameters /
+fit normalization statistics 的 split。
+
+valid：
+只用于未来模型结构、超参数、阈值、
+early stopping/model selection。
+
+test：
+LOCKED / QUARANTINED。
+
+S00D 不读取 test 数值统计，
+除非当前 TASK 明确已有的 schema-level 验证需要；
+优先不要重新访问。
+
+Attachment3/4：
+完全不内容读取。
+
+必须建立自动测试防止：
+
+normalizer.fit(valid)
+normalizer.fit(test)
+
+以及 Dataset factory 误把 test
+加入 training loaders。
+
+==================================================
+11. Dataset / DataLoader contract
+==================================================
+
+建立一个可被未来 PyTorch 模型直接使用的
+baseline-ready adapter。
+
+但本阶段不进行真正模型训练。
+
+要求：
+
+train/valid 可以创建 batch。
+
+batch tensor shape 稳定：
+
+text  : B x 50 x 768
+audio : B x 50 x 74
+vision: B x 50 x 35
+
+support mask：
+
+B x 50
+
+observed mask：
+
+每模态 B x 50
+
+targets shape 明确。
+
+dtype 明确。
+
+必须保证：
+
+没有 raw_text；
+没有 sample ID；
+没有 split 字符串；
+没有 test-derived statistics
+
+进入模型输入 dict。
+
+可以为 debug 返回单独 metadata，
+但必须与 model_inputs 明确分离。
+
+==================================================
+12. masked pooling primitive
+==================================================
+
+实现简单、模型无关的：
+
+masked_mean
+masked_sum
+
+以及需要的 mask broadcast helpers。
+
+测试：
+
+padding values 改成任意巨大值时，
+masked pooling 结果不变。
+
+这是非常关键的契约测试。
+
+尤其针对 continuous text：
+
+在 support mask 外随机修改非零尾部，
+masked pooled result 必须保持不变。
+
+这将工程化验证：
+
+非活跃 text 存储值不会意外泄漏进模型表示。
+
+==================================================
+13. 真实数据 contract audit
+==================================================
+
+使用官方 aligned train/valid
+运行一次只读 contract validation。
+
+不得训练。
+
+验证：
+
+样本数；
+shape；
+dtype；
+标签；
+support continuity；
+zero-mask；
+observed-mask；
+normalization fit；
+batch creation；
+finite values。
+
+重新确认源文件前后 SHA256 不变。
+
+生成新的聚合证据：
+
+docs/S00D_DATA_CONTRACT.md
+
+reports/data_contract/
+  contract_summary.json
+  mask_summary.json
+  label_contract.json
+  normalization_contract.json
+  loader_contract.json
+  source_mutation_check.json
+
+不能输出：
+
+raw ID list
+raw_text
+token dump
+sample-level labels
+feature arrays
+私人路径。
+
+==================================================
+14. Tests
+==================================================
+
+补充高质量合成测试。
+
+至少覆盖：
+
+1. support mask 正确提取；
+2. 非二值 channel 拒绝；
+3. non-prefix support 拒绝；
+4. structural zero detection；
+5. zero != padding；
+6. zero != corruption；
+7. observed mask；
+8. padding exclusion；
+9. text 非零尾部不能影响 masked pooling；
+10. audio/vision support 内 zero 行处理；
+11. train-only normalization；
+12. valid fit 被拒绝；
+13. test fit 被拒绝；
+14. std=0；
+15. NaN/Inf 防护；
+16. label contract；
+17. exact neutral zero；
+18. model input 不含 ID/raw_text；
+19. shape/dtype；
+20. source no mutation；
+21. Attachment3/4 guard；
+22. test quarantine；
+23. serialization/reload normalizer consistency；
+24. deterministic batching under fixed seed（如使用 shuffle测试）。
+
+运行：
+
+python -m pytest -q tests
+
+不得只运行新增 tests。
+
+所有现有 S00A/B/C 测试仍必须通过。
+
+==================================================
+15. S00D Gate
+==================================================
+
+建立至少以下 Gate：
+
+D01 official workspace + S00D authorization
+D02 S00C evidence dependency verified
+D03 aligned primary baseline interface encoded
+D04 support / observed / structural-zero separation encoded
+D05 padding contract encoded
+D06 corruption interface separated
+D07 label contract verified
+D08 train-only normalization enforced
+D09 model input allowlist enforced
+D10 dataset/batch contract verified
+D11 masked pooling leakage test passed
+D12 real aligned train/valid contract audit completed
+D13 source files unchanged
+D14 test quarantine preserved
+D15 Attachment3/4 isolation preserved
+D16 public safety scan passed
+D17 complete pytest suite passed
+D18 documentation and evidence complete
+
+每项：
+
+PASS / FAIL / SKIPPED / BLOCKED
+
+并带 evidence。
+
+不得降低 Gate 以获得 SUCCESS。
+
+==================================================
+16. 阶段状态
+==================================================
+
+SUCCESS 需要：
+
+真实 aligned train/valid contract validation 成功；
+所有关键 contract tests 通过；
+所有 Gate 通过；
+源数据未修改；
+数据边界未违反；
+自动 handoff 完成；
+Release 验证完成。
+
+BLOCKED：
+
+如果真实 schema 与合同无法兼容；
+当前证据不能安全构造 baseline adapter；
+数据/权限/环境阻止可靠执行。
+
+FAILED：
+
+数据泄漏；
+修改原始文件；
+读取专项测试内容；
+使用 test fit scaler；
+伪造测试；
+错误 mask 语义仍宣称成功；
+原始数据被 Git/Release 打包。
+
+==================================================
+17. DECISIONS.md
+==================================================
+
+将 Main Research Chat 本轮冻结决定写入 DECISIONS.md。
+
+必须清楚区分：
+
+FROZEN_FOR_BASELINE
+
+和：
+
+FINAL_MODEL_DECISION
+
+不能把 aligned baseline selection
+误写成最终模型优胜方案。
+
+unaligned final role：
+
+保持 UNDECIDED。
+
+normalizer final choice：
+
+保持 UNDECIDED。
+
+missing simulation：
+
+保持 UNDECIDED。
+
+model architecture：
+
+保持 UNDECIDED。
+
+==================================================
+18. 自动发布
+==================================================
+
+真实 contract audit
+→ tests
+→ Gate
+→ acceptance
+→ HANDOFF_INPUTS
+→ stage_handoff.py
+→ commit/push
+→ Release
+→ download SHA256 verification
+→ state/LATEST_RUN.json
+
+使用：
+
+python tools/stage_handoff.py \
+  --manifest reports/runs/<run_id>/public/HANDOFF_INPUTS.json
+
+不得手工绕过 handoff Gate。
+
+==================================================
+19. Web Chat handoff
+==================================================
+
+遵守 AGENTS.md 当前规则。
+
+最终回复前生成新的、
+唯一 bundle-id 的 Web Chat handoff ZIP。
+
+必须包含本轮：
+
+response.json
+MANIFEST.json
+README.md
+CHATGPT_REVIEW.md
+state/LATEST_RUN.json
+DECISIONS.md
+docs/S00D_DATA_CONTRACT.md
+核心 contract JSON
+Gate
+Tests
+PUBLISH_RECEIPT
+
+前提是所有文件通过安全扫描。
+
+不要重复使用旧：
+webchat-20260924-001
+
+生成新的 unique bundle。
+
+==================================================
+20. 严格禁止
+==================================================
+
+S00D 不允许：
+
+训练 baseline；
+比较 Accuracy/F1/MAE/Pearson；
+设计 Transformer/LSTM/MoE；
+设计最终融合网络；
+missing simulation 实验；
+蒸馏；
+重建；
+Q3解释算法；
+读取 Attachment3/4 内容；
+根据 test 调参；
+宣布 aligned 最终胜出；
+宣布 structural zero 就是 missing。
+
+==================================================
+21. 完成后停止
+==================================================
+
+最终：
+
+PENDING_RESEARCH_REVIEW
+NEXT_STAGE_NOT_AUTHORIZED
+STOPPED_AFTER_S00D
+
+不得自行开始 S01。
+
+最终聊天回复按照 AGENTS.md JSON schema，
+并提供新的 Web Chat ZIP 绝对路径。
+
+等待 Main Research Chat 审核。
