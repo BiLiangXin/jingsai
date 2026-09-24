@@ -12,7 +12,7 @@ The older `python tools/mosei_flow.py publish` command is disabled. It cannot by
 
 The official clone has the local-only Git setting `mosei.officialWorkspace=true`. Verify origin, branch, clean stage boundaries and remote HEAD before setting that marker in a new clone. Linked worktrees and parallel desktop projects cannot publish through this entry point.
 
-Do not invoke handoff for S00B again. Its Release and metadata are already published; `state/LATEST_RUN.json` points to its verified result. A later stage needs its own active and explicitly authorized `TASK_SPEC.md`. The S00B `next_stage_authorized: false` remains in force until Main Research Chat changes the research authorization.
+Do not invoke handoff for a completed stage again. `state/LATEST_RUN.json` currently points to S00D's verified result; S00E is active under its own `TASK_SPEC.md`. Invoke the handoff only after the current stage's real run, tests, all mandatory Gates and required independent review pass. S01 remains unauthorized.
 
 ## Required input
 
@@ -34,7 +34,7 @@ The authorized stage writes `reports/runs/<run_id>/public/HANDOFF_INPUTS.json` w
 
 Replace example names with files from the actual authorized task. The command adds `CHATGPT_REVIEW.md`, this run's RUN/GATE/TEST_RESULTS, and the stage acceptance file automatically. The manifest must list every other implementation and public evidence file that should be pushed. Paths are exact files; directories, globs, linked files, absolute paths and `..` are rejected. Reports, documents, safe source and tests must be text files. The tool writes a SHA256 `MANIFEST.json` itself.
 
-Before Git writes, it verifies the active task ID and `research_authorized: true`; official data kind in RUN; nonzero executed tests with zero failures; a passing Gate; and every acceptance evidence SHA256. It scans all selected files for private paths, secrets, raw IDs, sample-level CSV columns, raw-text arrays and test distribution keys. Raw PKL/MP4/Excel, local path config, private/artifact directories and large or binary files are rejected. Failed checks halt publication and are not reported as success.
+Before Git writes, it verifies the active task ID and `research_authorized: true`; official data kind in RUN; actual nonzero executed tests with zero failures; every mandatory Gate item PASS; and every acceptance evidence SHA256. It scans the complete tracked public text tree, index changes and selected files for private paths, secrets, raw IDs, sample-level CSV columns, raw-text arrays and test distribution keys. Raw PKL/MP4/Excel, local path config, private/artifact directories and large or binary files are rejected. Failed checks halt publication and are not reported as success.
 
 ## Publication order
 
