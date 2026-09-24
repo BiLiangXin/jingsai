@@ -1,0 +1,36 @@
+{
+  "kind": "ACTUAL_FROZEN_CHOICES_AUDIT_EXECUTION_RECEIPT",
+  "status": "PASS",
+  "recorded_at_utc": "2026-09-24T22:26:14.504759+00:00",
+  "execution_authorization": "Parent explicitly confirmed campaign exit, PID absent, terminal COMPLETED before this read-only audit.",
+  "actual_command_with_private_paths_substituted": "<PYTHON> -B -X utf8 <EXTERNAL>/verify_frozen_choices.py --main-export <EXTERNAL>/actual_safe_export --campaign <EXITED_CAMPAIGN> --reference <PROJECT>/research/r01/reference.py --output <EXTERNAL>/ACTUAL_FROZEN_CHOICES_AUDIT.json",
+  "actual_working_directory_with_private_path_substituted": "<EXTERNAL>",
+  "private_path_substitution": {
+    "<PYTHON>": "Actual preinstalled birdAL Python executable; private absolute path omitted.",
+    "<EXTERNAL>": "Actual S01 execution external workspace, outside official repository.",
+    "<EXITED_CAMPAIGN>": "Actual private exited campaign directory identified in audit record; only named main-fingerprinted epoch logs read.",
+    "<PROJECT>": "Actual official repository, read-only frozen reference/protocol source access."
+  },
+  "python": "3.11.14",
+  "system": "Windows",
+  "release": "10",
+  "exit_code": 0,
+  "elapsed_seconds": 0.23399999999674037,
+  "stderr_empty": true,
+  "actual_audit_report_sha256": "f106895f5a1eb0cc15114dae6abd7834f02cdfcbfb2a6863128c64fcd9a834aa",
+  "actual_audit_report_bytes": 10746,
+  "verifier_sha256": "26384aaaf3c2eda12b72e3c6601de6ab6e1c00fe369345a4afd09f57ee2b5af7",
+  "main_export_manifest_sha256": "51d30a562282a672c78c15dfbd45585f1036bbe6bc084e328f2456b3c2fb9339",
+  "actual_campaign_audit_performed": true,
+  "official_tree_modified": false,
+  "source_data_read": false,
+  "checkpoint_tensors_read": false,
+  "new_model_computation": false,
+  "gpu_used": false,
+  "selection": {
+    "configuration": "B-CAT-zscore",
+    "seed": 17,
+    "reason": "WINNER_FIXED_SEED_GUARD_PASS"
+  },
+  "selected_epoch": 8
+}

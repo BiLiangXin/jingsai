@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "scope": "PORTABLE_S01_REPORTING_SYNTHETIC_TEST_EVIDENCE",
+  "evidence_level": "VERIFIED",
+  "receipt_recorded_at_utc": "2026-09-24T21:24:20.902549+00:00",
+  "public_receipt_generated_at_utc": "2026-09-24T21:28:30.352491+00:00",
+  "timestamp_scope": "Original receipt timestamp was recorded immediately after all three subprocesses exited. Individual subprocess start/end timestamps were not captured and remain null; runtimes below are actual unittest-reported durations, not inferred wall times.",
+  "python": "3.11.14 | packaged by conda-forge | (main, Oct 22 2025, 22:35:28) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "tests_total": 29,
+  "tests_passed": 29,
+  "tests_failed": 0,
+  "exit_code": 0,
+  "sum_of_unittest_reported_runtime_seconds": 9.914,
+  "actual_invocations": [
+    {
+      "script": "tools/s01_reporting/test_export_campaign.py",
+      "tests": 10,
+      "passed": 10,
+      "failed": 0,
+      "exit_code": 0,
+      "unittest_reported_runtime_seconds": 2.494,
+      "actual_invocation_template": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "-v",
+        "test_export_campaign.py"
+      ],
+      "actual_working_directory_template": "OUTSIDE_PUBLICATION_STAGING_COPY/s01_reporting",
+      "eventual_repository_working_directory": "tools/s01_reporting",
+      "equivalent_repository_root_reproduction_command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "tools/s01_reporting/test_export_campaign.py"
+      ],
+      "execution_started_at_utc": null,
+      "execution_finished_at_utc": null,
+      "private_stdout_whole_file_sha256": "2b8df711b9c25f65dcd4a76baa700206755d77165cb9bf362208719e449debec"
+    },
+    {
+      "script": "tools/s01_reporting/test_export_condition_aggregates.py",
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "exit_code": 0,
+      "unittest_reported_runtime_seconds": 1.236,
+      "actual_invocation_template": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "-v",
+        "test_export_condition_aggregates.py"
+      ],
+      "actual_working_directory_template": "OUTSIDE_PUBLICATION_STAGING_COPY/s01_reporting",
+      "eventual_repository_working_directory": "tools/s01_reporting",
+      "equivalent_repository_root_reproduction_command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "tools/s01_reporting/test_export_condition_aggregates.py"
+      ],
+      "execution_started_at_utc": null,
+      "execution_finished_at_utc": null,
+      "private_stdout_whole_file_sha256": "45b7f9d6b6e12aa7bfc45a16653d8ed0ef7cc558b64e843aa793a14aeab728d0"
+    },
+    {
+      "script": "tools/s01_reporting/test_render_results_report.py",
+      "tests": 15,
+      "passed": 15,
+      "failed": 0,
+      "exit_code": 0,
+      "unittest_reported_runtime_seconds": 6.184,
+      "actual_invocation_template": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "-v",
+        "test_render_results_report.py"
+      ],
+      "actual_working_directory_template": "OUTSIDE_PUBLICATION_STAGING_COPY/s01_reporting",
+      "eventual_repository_working_directory": "tools/s01_reporting",
+      "equivalent_repository_root_reproduction_command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "tools/s01_reporting/test_render_results_report.py"
+      ],
+      "execution_started_at_utc": null,
+      "execution_finished_at_utc": null,
+      "private_stdout_whole_file_sha256": "e4f6e5ebefb5e4420511373ad08698de8baf28bc543d1d55b28ea6f72b1bba27"
+    }
+  ],
+  "private_path_substitutions": {
+    "applied": true,
+    "interpreter": "Original absolute interpreter path replaced by python; original Python version is preserved.",
+    "working_directory": "Original external staging path replaced by OUTSIDE_PUBLICATION_STAGING_COPY/s01_reporting; eventual installation is tools/s01_reporting.",
+    "explicit_environment": {
+      "S01_REPORTING_PROJECT": "PUBLIC_METADATA_CHECKOUT",
+      "S01_REPORTING_TEST_TMP": "EXTERNAL_SYNTHETIC_TMP"
+    },
+    "command_fidelity": "The actual executed form was python -B -X utf8 -m unittest -v test_*.py. Flags, module, order and filenames are retained; only interpreter/working-directory locations are substituted. Direct-script commands under tools/s01_reporting are equivalent reproduction templates, not claims of a second execution.",
+    "environment_dumped": false
+  },
+  "files": [
+    {
+      "path": "tools/s01_reporting/export_campaign.py",
+      "sha256": "b1484fcb0a8135de74a2215c1e5218de632ecbfc520378d43fd830b17943113b",
+      "size_bytes": 32985,
+      "byte_identical_to_prior_source": true,
+      "prior_source_sha256": "b1484fcb0a8135de74a2215c1e5218de632ecbfc520378d43fd830b17943113b",
+      "test_path_only_changes": []
+    },
+    {
+      "path": "tools/s01_reporting/export_condition_aggregates.py",
+      "sha256": "6f289aabb0fd3c175636288e1712a1ac2e6fff43e1c92703e4e0ba67f2b5b88b",
+      "size_bytes": 26029,
+      "byte_identical_to_prior_source": true,
+      "prior_source_sha256": "6f289aabb0fd3c175636288e1712a1ac2e6fff43e1c92703e4e0ba67f2b5b88b",
+      "test_path_only_changes": []
+    },
+    {
+      "path": "tools/s01_reporting/render_results_report.py",
+      "sha256": "801cce84b97acb0f8fea20c12e7cc59f6a7bc67024765b3ccace03bcc8c85d69",
+      "size_bytes": 26140,
+      "byte_identical_to_prior_source": true,
+      "prior_source_sha256": "801cce84b97acb0f8fea20c12e7cc59f6a7bc67024765b3ccace03bcc8c85d69",
+      "test_path_only_changes": []
+    },
+    {
+      "path": "tools/s01_reporting/test_export_campaign.py",
+      "sha256": "df9a58f5a0c0d37a6919240ef1d2af4c9d97bd79aa8c0ef0491f19974eefbd7e",
+      "size_bytes": 11516,
+      "byte_identical_to_prior_source": false,
+      "prior_source_sha256": "7bd0c3bc023696a7919d68baa4d8c22d1b992db65f1fe140b5607a727b9c2106",
+      "test_path_only_changes": [
+        "Import os solely for explicit portable path settings",
+        "Infer eventual repository root with S01_REPORTING_PROJECT override; resolve external test temp root",
+        "Keep synthetic output outside eventual Git checkout"
+      ]
+    },
+    {
+      "path": "tools/s01_reporting/test_export_condition_aggregates.py",
+      "sha256": "363852c518ad567f829218a9cebd13313b8aff8ab4afca336625255e10eb1185",
+      "size_bytes": 7260,
+      "byte_identical_to_prior_source": false,
+      "prior_source_sha256": "c8a57c3b172d60aa6eed118877be9d8f6191ff1e28befd285e5f80b2db5eee3e",
+      "test_path_only_changes": [
+        "Reuse portable public metadata root for frozen reference",
+        "Reuse portable public metadata root for preregistration"
+      ]
+    },
+    {
+      "path": "tools/s01_reporting/test_render_results_report.py",
+      "sha256": "8a63dd811f9b6ced1560dd092fff2c081fa6189d7967784d3125d1041501fe10",
+      "size_bytes": 8135,
+      "byte_identical_to_prior_source": true,
+      "prior_source_sha256": "8a63dd811f9b6ced1560dd092fff2c081fa6189d7967784d3125d1041501fe10",
+      "test_path_only_changes": []
+    }
+  ],
+  "public_metadata_fingerprints": [
+    {
+      "path": "docs/EXPERIMENT_REGISTER.json",
+      "sha256": "c92630a24269408a6a54e341f27e02e8b8d78bc0f73d664e240c8ac2d01aa5a3"
+    },
+    {
+      "path": "research/r01/reference.py",
+      "sha256": "1cd4b73bb748284b4941625d92be89522771eff8a11e4044547e5f513ea62495"
+    }
+  ],
+  "prior_private_receipts_and_logs": [
+    {
+      "kind": "ORIGINAL_EXECUTION_RECEIPT",
+      "sha256": "b68e6e8ea69e21064e7696f4479c790e1de52919683a14eef9a697492c20589d",
+      "size_bytes": 2954
+    },
+    {
+      "kind": "ORIGINAL_COPY_RECEIPT",
+      "sha256": "10c983f4f02ab63984abf35491cc23de41618633a0c8f2f339f57bd1d8a901d6",
+      "size_bytes": 2318
+    },
+    {
+      "kind": "ORIGINAL_PUBLIC_SCAN_RECEIPT",
+      "sha256": "32347986fe946d9ed4da8ed557d3f6a0ecbd4407c6c79657e1f332f2c1515a71",
+      "size_bytes": 1502
+    },
+    {
+      "kind": "ORIGINAL_UNITTEST_STDOUT_TEST_EXPORT_CAMPAIGN",
+      "sha256": "2b8df711b9c25f65dcd4a76baa700206755d77165cb9bf362208719e449debec",
+      "size_bytes": 1306
+    },
+    {
+      "kind": "ORIGINAL_UNITTEST_STDOUT_TEST_EXPORT_CONDITION_AGGREGATES",
+      "sha256": "45b7f9d6b6e12aa7bfc45a16653d8ed0ef7cc558b64e843aa793a14aeab728d0",
+      "size_bytes": 789
+    },
+    {
+      "kind": "ORIGINAL_UNITTEST_STDOUT_TEST_RENDER_RESULTS_REPORT",
+      "sha256": "e4f6e5ebefb5e4420511373ad08698de8baf28bc543d1d55b28ea6f72b1bba27",
+      "size_bytes": 2083
+    }
+  ],
+  "publication_scan": {
+    "scanner": "tools/stage_handoff.py:scan_public_bytes",
+    "candidate_files_checked": 8,
+    "findings": [],
+    "finding_count": 0,
+    "all_candidate_bytes_still_match_scanned_fingerprints": true
+  },
+  "independent_review_binding": {
+    "status": "TECHNICAL_PASS",
+    "blocking_critical": 0,
+    "blocking_major": 0,
+    "review_whole_file_sha256": "17d20e84ca4b7cb413103687a24e4a6bf0099993daed8a0e082b0b1bd99847f4",
+    "exact_main_and_condition_helper_hashes_unchanged": true,
+    "portable_test_path_edits": "Author path-only adaptations verified by the 29 actual portable-copy checks; no separate independent approval is claimed.",
+    "renderer": "Renderer helper and its test remain byte-identical to their prior validation snapshot."
+  },
+  "limits": [
+    "These are standard-library synthetic reporting tests, not model fits, official metric runs or campaign-status claims.",
+    "No tests were rerun for preparation of this public receipt because all six portable helper/test hashes remain unchanged.",
+    "Renderer consumes freshly verified unchanged main-export payloads; it does not independently validate the main manifest."
+  ],
+  "boundaries": {
+    "official_tree_modified": false,
+    "live_campaign_opened": false,
+    "original_data_opened": false,
+    "model_training_performed": false,
+    "new_execution_authority": false
+  }
+}

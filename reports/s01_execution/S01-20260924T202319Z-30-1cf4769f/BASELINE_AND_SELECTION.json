@@ -1,0 +1,1946 @@
+{
+  "baseline": {
+    "B_star": "B-CAT-zscore",
+    "LATE_reuses_the_corresponding_unimodal_models": true,
+    "PRIOR_seed_rows_are_the_same_deterministic_reference": true,
+    "additional_model_fits": 0,
+    "baseline_clean_reports": {
+      "B-A-identity": {
+        "17": {
+          "clean": {
+            "Accuracy": 0.4519230769230769,
+            "MAE": 0.7875848845057419,
+            "Pearson": 0.0979432997214081,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                60,
+                0,
+                146
+              ],
+              [
+                38,
+                0,
+                146
+              ],
+              [
+                69,
+                0,
+                269
+              ]
+            ],
+            "macro_F1": 0.3067195106070592,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.32171581769436997,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.3592814371257485,
+                "recall": 0.2912621359223301,
+                "support": 206
+              },
+              {
+                "F1": 0.0,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.0,
+                "recall": 0.0,
+                "support": 184
+              },
+              {
+                "F1": 0.5984427141268076,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.47950089126559714,
+                "recall": 0.7958579881656804,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.36888337337898514
+          },
+          "parameters": 5060
+        },
+        "29": {
+          "clean": {
+            "Accuracy": 0.46153846153846156,
+            "MAE": 0.8579859431259907,
+            "Pearson": 0.1305496064783814,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                12,
+                30,
+                164
+              ],
+              [
+                7,
+                35,
+                142
+              ],
+              [
+                8,
+                41,
+                289
+              ]
+            ],
+            "macro_F1": 0.32129685632138966,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.10300429184549356,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.4444444444444444,
+                "recall": 0.05825242718446602,
+                "support": 206
+              },
+              {
+                "F1": 0.2413793103448276,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.330188679245283,
+                "recall": 0.19021739130434784,
+                "support": 184
+              },
+              {
+                "F1": 0.6195069667738478,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.4857142857142857,
+                "recall": 0.8550295857988166,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.3777830109796435
+          },
+          "parameters": 5060
+        },
+        "43": {
+          "clean": {
+            "Accuracy": 0.4725274725274725,
+            "MAE": 0.8105619313658451,
+            "Pearson": 0.08548281643471757,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                38,
+                0,
+                168
+              ],
+              [
+                19,
+                0,
+                165
+              ],
+              [
+                32,
+                0,
+                306
+              ]
+            ],
+            "macro_F1": 0.29467816271417746,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.2576271186440678,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.42696629213483145,
+                "recall": 0.18446601941747573,
+                "support": 206
+              },
+              {
+                "F1": 0.0,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.0,
+                "recall": 0.0,
+                "support": 184
+              },
+              {
+                "F1": 0.6264073694984647,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.4788732394366197,
+                "recall": 0.9053254437869822,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.36373197435598764
+          },
+          "parameters": 5060
+        }
+      },
+      "B-A-zscore": {
+        "17": {
+          "clean": {
+            "Accuracy": 0.4519230769230769,
+            "MAE": 0.8443088904307813,
+            "Pearson": 0.11511099610246307,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                52,
+                29,
+                125
+              ],
+              [
+                43,
+                21,
+                120
+              ],
+              [
+                52,
+                30,
+                256
+              ]
+            ],
+            "macro_F1": 0.3546529236013547,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.29461756373937675,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.35374149659863946,
+                "recall": 0.2524271844660194,
+                "support": 206
+              },
+              {
+                "F1": 0.1590909090909091,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.2625,
+                "recall": 0.11413043478260869,
+                "support": 184
+              },
+              {
+                "F1": 0.6102502979737783,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.5109780439121756,
+                "recall": 0.757396449704142,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.406907343568923
+          },
+          "parameters": 5060
+        },
+        "29": {
+          "clean": {
+            "Accuracy": 0.4739010989010989,
+            "MAE": 0.8384772639663745,
+            "Pearson": 0.10477691742279448,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                56,
+                15,
+                135
+              ],
+              [
+                34,
+                22,
+                128
+              ],
+              [
+                54,
+                17,
+                267
+              ]
+            ],
+            "macro_F1": 0.37336044095057375,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.32,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.3888888888888889,
+                "recall": 0.27184466019417475,
+                "support": 206
+              },
+              {
+                "F1": 0.18487394957983194,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.4074074074074074,
+                "recall": 0.11956521739130435,
+                "support": 184
+              },
+              {
+                "F1": 0.6152073732718893,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.5037735849056604,
+                "recall": 0.7899408284023669,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.4229078281436644
+          },
+          "parameters": 5060
+        },
+        "43": {
+          "clean": {
+            "Accuracy": 0.44642857142857145,
+            "MAE": 0.8522815196458275,
+            "Pearson": 0.10772375897006921,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                48,
+                31,
+                127
+              ],
+              [
+                37,
+                34,
+                113
+              ],
+              [
+                64,
+                31,
+                243
+              ]
+            ],
+            "macro_F1": 0.36841356707030654,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.2704225352112676,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.3221476510067114,
+                "recall": 0.23300970873786409,
+                "support": 206
+              },
+              {
+                "F1": 0.24285714285714285,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.3541666666666667,
+                "recall": 0.18478260869565216,
+                "support": 184
+              },
+              {
+                "F1": 0.5919610231425091,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.5031055900621118,
+                "recall": 0.7189349112426036,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.4127411845623674
+          },
+          "parameters": 5060
+        }
+      },
+      "B-CAT-identity": {
+        "17": {
+          "clean": {
+            "Accuracy": 0.6304945054945055,
+            "MAE": 0.6382424112161171,
+            "Pearson": 0.5847269176848603,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                133,
+                41,
+                32
+              ],
+              [
+                32,
+                95,
+                57
+              ],
+              [
+                43,
+                64,
+                231
+              ]
+            ],
+            "macro_F1": 0.6131438011786069,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.642512077294686,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.6394230769230769,
+                "recall": 0.6456310679611651,
+                "support": 206
+              },
+              {
+                "F1": 0.4947916666666667,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.475,
+                "recall": 0.5163043478260869,
+                "support": 184
+              },
+              {
+                "F1": 0.7021276595744681,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.721875,
+                "recall": 0.6834319526627219,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.6328548125350855
+          },
+          "parameters": 56452
+        },
+        "29": {
+          "clean": {
+            "Accuracy": 0.625,
+            "MAE": 0.7046329950687352,
+            "Pearson": 0.5873883915026622,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                137,
+                31,
+                38
+              ],
+              [
+                33,
+                73,
+                78
+              ],
+              [
+                37,
+                56,
+                245
+              ]
+            ],
+            "macro_F1": 0.5962860973083077,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.6634382566585957,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.6618357487922706,
+                "recall": 0.6650485436893204,
+                "support": 206
+              },
+              {
+                "F1": 0.42441860465116277,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.45625,
+                "recall": 0.3967391304347826,
+                "support": 184
+              },
+              {
+                "F1": 0.7010014306151645,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.6786703601108033,
+                "recall": 0.7248520710059172,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.6204667413123768
+          },
+          "parameters": 56452
+        },
+        "43": {
+          "clean": {
+            "Accuracy": 0.6263736263736264,
+            "MAE": 0.679390694229009,
+            "Pearson": 0.5980325131093948,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                155,
+                24,
+                27
+              ],
+              [
+                46,
+                69,
+                69
+              ],
+              [
+                56,
+                50,
+                232
+              ]
+            ],
+            "macro_F1": 0.5960871605352157,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.6695464362850972,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.603112840466926,
+                "recall": 0.7524271844660194,
+                "support": 206
+              },
+              {
+                "F1": 0.42201834862385323,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.4825174825174825,
+                "recall": 0.375,
+                "support": 184
+              },
+              {
+                "F1": 0.6966966966966966,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.7073170731707317,
+                "recall": 0.6863905325443787,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.6195898701991792
+          },
+          "parameters": 56452
+        }
+      },
+      "B-CAT-zscore": {
+        "17": {
+          "clean": {
+            "Accuracy": 0.6318681318681318,
+            "MAE": 0.6783806467575921,
+            "Pearson": 0.5457738264072373,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                129,
+                24,
+                53
+              ],
+              [
+                29,
+                74,
+                81
+              ],
+              [
+                40,
+                41,
+                257
+              ]
+            ],
+            "macro_F1": 0.6006312138558835,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.6386138613861386,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.6515151515151515,
+                "recall": 0.6262135922330098,
+                "support": 206
+              },
+              {
+                "F1": 0.4582043343653251,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.5323741007194245,
+                "recall": 0.40217391304347827,
+                "support": 184
+              },
+              {
+                "F1": 0.7050754458161865,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.6572890025575447,
+                "recall": 0.7603550295857988,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.623873013261862
+          },
+          "parameters": 56452
+        },
+        "29": {
+          "clean": {
+            "Accuracy": 0.6414835164835165,
+            "MAE": 0.6230802539872596,
+            "Pearson": 0.6043001898507985,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                130,
+                25,
+                51
+              ],
+              [
+                28,
+                71,
+                85
+              ],
+              [
+                34,
+                38,
+                266
+              ]
+            ],
+            "macro_F1": 0.6062420436934517,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.6532663316582915,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.6770833333333334,
+                "recall": 0.6310679611650486,
+                "support": 206
+              },
+              {
+                "F1": 0.44654088050314467,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.5298507462686567,
+                "recall": 0.3858695652173913,
+                "support": 184
+              },
+              {
+                "F1": 0.7189189189189189,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.6616915422885572,
+                "recall": 0.7869822485207101,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.6314986001768973
+          },
+          "parameters": 56452
+        },
+        "43": {
+          "clean": {
+            "Accuracy": 0.6304945054945055,
+            "MAE": 0.6264186874324658,
+            "Pearson": 0.5928425034321724,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                130,
+                25,
+                51
+              ],
+              [
+                29,
+                72,
+                83
+              ],
+              [
+                33,
+                48,
+                257
+              ]
+            ],
+            "macro_F1": 0.598677249026447,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.6532663316582915,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.6770833333333334,
+                "recall": 0.6310679611650486,
+                "support": 206
+              },
+              {
+                "F1": 0.4376899696048632,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.496551724137931,
+                "recall": 0.391304347826087,
+                "support": 184
+              },
+              {
+                "F1": 0.7050754458161865,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.6572890025575447,
+                "recall": 0.7603550295857988,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.6228342299653488
+          },
+          "parameters": 56452
+        }
+      },
+      "B-T-identity": {
+        "17": {
+          "clean": {
+            "Accuracy": 0.6304945054945055,
+            "MAE": 0.6184329031512479,
+            "Pearson": 0.6250265895912972,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                128,
+                28,
+                50
+              ],
+              [
+                25,
+                70,
+                89
+              ],
+              [
+                34,
+                43,
+                261
+              ]
+            ],
+            "macro_F1": 0.5964952650113701,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.6513994910941476,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.6844919786096256,
+                "recall": 0.6213592233009708,
+                "support": 206
+              },
+              {
+                "F1": 0.4307692307692308,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.49645390070921985,
+                "recall": 0.3804347826086957,
+                "support": 184
+              },
+              {
+                "F1": 0.7073170731707317,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.6525,
+                "recall": 0.772189349112426,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.6215975334596705
+          },
+          "parameters": 49476
+        },
+        "29": {
+          "clean": {
+            "Accuracy": 0.6304945054945055,
+            "MAE": 0.6130139361817523,
+            "Pearson": 0.6300744030219503,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                140,
+                18,
+                48
+              ],
+              [
+                31,
+                61,
+                92
+              ],
+              [
+                38,
+                42,
+                258
+              ]
+            ],
+            "macro_F1": 0.5919285839008207,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.6746987951807228,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.6698564593301436,
+                "recall": 0.6796116504854369,
+                "support": 206
+              },
+              {
+                "F1": 0.4,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.5041322314049587,
+                "recall": 0.33152173913043476,
+                "support": 184
+              },
+              {
+                "F1": 0.7010869565217391,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.6482412060301508,
+                "recall": 0.7633136094674556,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.6175210757027153
+          },
+          "parameters": 49476
+        },
+        "43": {
+          "clean": {
+            "Accuracy": 0.6304945054945055,
+            "MAE": 0.6103183570480074,
+            "Pearson": 0.6256818633266518,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                161,
+                22,
+                23
+              ],
+              [
+                51,
+                67,
+                66
+              ],
+              [
+                58,
+                49,
+                231
+              ]
+            ],
+            "macro_F1": 0.5982491053775812,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.6764705882352942,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.5962962962962963,
+                "recall": 0.7815533980582524,
+                "support": 206
+              },
+              {
+                "F1": 0.4161490683229814,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.4855072463768116,
+                "recall": 0.3641304347826087,
+                "support": 184
+              },
+              {
+                "F1": 0.7021276595744681,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.721875,
+                "recall": 0.6834319526627219,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.6225872509396557
+          },
+          "parameters": 49476
+        }
+      },
+      "B-T-zscore": {
+        "17": {
+          "clean": {
+            "Accuracy": 0.6222527472527473,
+            "MAE": 0.6565257610332932,
+            "Pearson": 0.5873784679930841,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                128,
+                27,
+                51
+              ],
+              [
+                30,
+                73,
+                81
+              ],
+              [
+                35,
+                51,
+                252
+              ]
+            ],
+            "macro_F1": 0.5918286157919018,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.6416040100250626,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.6632124352331606,
+                "recall": 0.6213592233009708,
+                "support": 206
+              },
+              {
+                "F1": 0.43582089552238806,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.48344370860927155,
+                "recall": 0.3967391304347826,
+                "support": 184
+              },
+              {
+                "F1": 0.6980609418282548,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.65625,
+                "recall": 0.7455621301775148,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.6158050400813633
+          },
+          "parameters": 49476
+        },
+        "29": {
+          "clean": {
+            "Accuracy": 0.6332417582417582,
+            "MAE": 0.6358142077948726,
+            "Pearson": 0.5993044031379384,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                139,
+                19,
+                48
+              ],
+              [
+                33,
+                61,
+                90
+              ],
+              [
+                36,
+                41,
+                261
+              ]
+            ],
+            "macro_F1": 0.5932581274566998,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.6714975845410628,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.6682692307692307,
+                "recall": 0.6747572815533981,
+                "support": 206
+              },
+              {
+                "F1": 0.4,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.5041322314049587,
+                "recall": 0.33152173913043476,
+                "support": 184
+              },
+              {
+                "F1": 0.7082767978290366,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.6541353383458647,
+                "recall": 0.772189349112426,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.6199533792330677
+          },
+          "parameters": 49476
+        },
+        "43": {
+          "clean": {
+            "Accuracy": 0.6538461538461539,
+            "MAE": 0.6346937359832316,
+            "Pearson": 0.5950191865490803,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                137,
+                20,
+                49
+              ],
+              [
+                29,
+                65,
+                90
+              ],
+              [
+                32,
+                32,
+                274
+              ]
+            ],
+            "macro_F1": 0.6132684170558608,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.6782178217821783,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.6919191919191919,
+                "recall": 0.6650485436893204,
+                "support": 206
+              },
+              {
+                "F1": 0.4318936877076412,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.5555555555555556,
+                "recall": 0.3532608695652174,
+                "support": 184
+              },
+              {
+                "F1": 0.729693741677763,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.6634382566585957,
+                "recall": 0.8106508875739645,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.6398596078467289
+          },
+          "parameters": 49476
+        }
+      },
+      "B-V-identity": {
+        "17": {
+          "clean": {
+            "Accuracy": 0.46565934065934067,
+            "MAE": 0.789320988586981,
+            "Pearson": 0.22436421869698747,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                50,
+                24,
+                132
+              ],
+              [
+                33,
+                27,
+                124
+              ],
+              [
+                46,
+                30,
+                262
+              ]
+            ],
+            "macro_F1": 0.37147686010083597,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.29850746268656714,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.3875968992248062,
+                "recall": 0.24271844660194175,
+                "support": 206
+              },
+              {
+                "F1": 0.2037735849056604,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.3333333333333333,
+                "recall": 0.14673913043478262,
+                "support": 184
+              },
+              {
+                "F1": 0.6121495327102804,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.5057915057915058,
+                "recall": 0.7751479289940828,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.4201832678463587
+          },
+          "parameters": 2564
+        },
+        "29": {
+          "clean": {
+            "Accuracy": 0.46703296703296704,
+            "MAE": 0.7920545889051877,
+            "Pearson": 0.14002664985632574,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                71,
+                5,
+                130
+              ],
+              [
+                44,
+                9,
+                131
+              ],
+              [
+                62,
+                16,
+                260
+              ]
+            ],
+            "macro_F1": 0.3534081312391026,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.370757180156658,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.4011299435028249,
+                "recall": 0.3446601941747573,
+                "support": 206
+              },
+              {
+                "F1": 0.08411214953271028,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.3,
+                "recall": 0.04891304347826087,
+                "support": 184
+              },
+              {
+                "F1": 0.6053550640279395,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.4990403071017274,
+                "recall": 0.7692307692307693,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.4072288822358981
+          },
+          "parameters": 2564
+        },
+        "43": {
+          "clean": {
+            "Accuracy": 0.47115384615384615,
+            "MAE": 0.7837403899618068,
+            "Pearson": 0.2107967495529189,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                64,
+                20,
+                122
+              ],
+              [
+                45,
+                19,
+                120
+              ],
+              [
+                54,
+                24,
+                260
+              ]
+            ],
+            "macro_F1": 0.37325908057615376,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.34688346883468835,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.39263803680981596,
+                "recall": 0.3106796116504854,
+                "support": 206
+              },
+              {
+                "F1": 0.15384615384615385,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.30158730158730157,
+                "recall": 0.10326086956521739,
+                "support": 184
+              },
+              {
+                "F1": 0.6190476190476191,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.5179282868525896,
+                "recall": 0.7692307692307693,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.4244557446782051
+          },
+          "parameters": 2564
+        }
+      },
+      "B-V-zscore": {
+        "17": {
+          "clean": {
+            "Accuracy": 0.47527472527472525,
+            "MAE": 0.7826655979572403,
+            "Pearson": 0.27151329280527686,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                72,
+                29,
+                105
+              ],
+              [
+                48,
+                36,
+                100
+              ],
+              [
+                69,
+                31,
+                238
+              ]
+            ],
+            "macro_F1": 0.4103916170594723,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.36455696202531646,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.38095238095238093,
+                "recall": 0.34951456310679613,
+                "support": 206
+              },
+              {
+                "F1": 0.2571428571428571,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.375,
+                "recall": 0.1956521739130435,
+                "support": 184
+              },
+              {
+                "F1": 0.6094750320102432,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.5372460496613995,
+                "recall": 0.7041420118343196,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.4511203031743999
+          },
+          "parameters": 2564
+        },
+        "29": {
+          "clean": {
+            "Accuracy": 0.48626373626373626,
+            "MAE": 0.7712189134030928,
+            "Pearson": 0.2696080608266609,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                82,
+                10,
+                114
+              ],
+              [
+                56,
+                8,
+                120
+              ],
+              [
+                65,
+                9,
+                264
+              ]
+            ],
+            "macro_F1": 0.36946210878823377,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.40097799511002447,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.4039408866995074,
+                "recall": 0.39805825242718446,
+                "support": 206
+              },
+              {
+                "F1": 0.07582938388625593,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.2962962962962963,
+                "recall": 0.043478260869565216,
+                "support": 184
+              },
+              {
+                "F1": 0.631578947368421,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.5301204819277109,
+                "recall": 0.7810650887573964,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.425862304722888
+          },
+          "parameters": 2564
+        },
+        "43": {
+          "clean": {
+            "Accuracy": 0.489010989010989,
+            "MAE": 0.768614875370666,
+            "Pearson": 0.2647880855472397,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                68,
+                6,
+                132
+              ],
+              [
+                42,
+                14,
+                128
+              ],
+              [
+                50,
+                14,
+                274
+              ]
+            ],
+            "macro_F1": 0.37615514446616877,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.37158469945355194,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.425,
+                "recall": 0.3300970873786408,
+                "support": 206
+              },
+              {
+                "F1": 0.12844036697247707,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.4117647058823529,
+                "recall": 0.07608695652173914,
+                "support": 184
+              },
+              {
+                "F1": 0.6284403669724771,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.5131086142322098,
+                "recall": 0.8106508875739645,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.4293850544602537
+          },
+          "parameters": 2564
+        }
+      },
+      "LATE-identity": {
+        "17": {
+          "clean": {
+            "Accuracy": 0.5865384615384616,
+            "MAE": 0.6813151650015613,
+            "Pearson": 0.5899298146676255,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                97,
+                6,
+                103
+              ],
+              [
+                25,
+                22,
+                137
+              ],
+              [
+                20,
+                10,
+                308
+              ]
+            ],
+            "macro_F1": 0.48364301874849086,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.5574712643678161,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.6830985915492958,
+                "recall": 0.470873786407767,
+                "support": 206
+              },
+              {
+                "F1": 0.1981981981981982,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.5789473684210527,
+                "recall": 0.11956521739130435,
+                "support": 184
+              },
+              {
+                "F1": 0.6952595936794582,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.5620437956204379,
+                "recall": 0.9112426035502958,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.5306391368020542
+          },
+          "parameters": 57100
+        },
+        "29": {
+          "clean": {
+            "Accuracy": 0.5837912087912088,
+            "MAE": 0.6833064466648336,
+            "Pearson": 0.5860658429496242,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                96,
+                13,
+                97
+              ],
+              [
+                22,
+                34,
+                128
+              ],
+              [
+                26,
+                17,
+                295
+              ]
+            ],
+            "macro_F1": 0.5034702215347376,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.5485714285714286,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.6666666666666666,
+                "recall": 0.46601941747572817,
+                "support": 206
+              },
+              {
+                "F1": 0.27419354838709675,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.53125,
+                "recall": 0.18478260869565216,
+                "support": 184
+              },
+              {
+                "F1": 0.6876456876456877,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.5673076923076923,
+                "recall": 0.8727810650887574,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.5437933648532727
+          },
+          "parameters": 57100
+        },
+        "43": {
+          "clean": {
+            "Accuracy": 0.6208791208791209,
+            "MAE": 0.6636749871847845,
+            "Pearson": 0.6010980301896096,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                141,
+                4,
+                61
+              ],
+              [
+                44,
+                24,
+                116
+              ],
+              [
+                42,
+                9,
+                287
+              ]
+            ],
+            "macro_F1": 0.5280585003933203,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.651270207852194,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.6211453744493393,
+                "recall": 0.6844660194174758,
+                "support": 206
+              },
+              {
+                "F1": 0.2171945701357466,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.6486486486486487,
+                "recall": 0.13043478260869565,
+                "support": 184
+              },
+              {
+                "F1": 0.71571072319202,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.6185344827586207,
+                "recall": 0.849112426035503,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.5714775936283407
+          },
+          "parameters": 57100
+        }
+      },
+      "LATE-zscore": {
+        "17": {
+          "clean": {
+            "Accuracy": 0.5975274725274725,
+            "MAE": 0.6685488293929905,
+            "Pearson": 0.5486879288853516,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                110,
+                13,
+                83
+              ],
+              [
+                26,
+                38,
+                120
+              ],
+              [
+                28,
+                23,
+                287
+              ]
+            ],
+            "macro_F1": 0.5274683176604309,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.5945945945945946,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.6707317073170732,
+                "recall": 0.5339805825242718,
+                "support": 206
+              },
+              {
+                "F1": 0.29457364341085274,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.5135135135135135,
+                "recall": 0.20652173913043478,
+                "support": 184
+              },
+              {
+                "F1": 0.6932367149758454,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.5857142857142857,
+                "recall": 0.849112426035503,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.5645632507361527
+          },
+          "parameters": 57100
+        },
+        "29": {
+          "clean": {
+            "Accuracy": 0.5947802197802198,
+            "MAE": 0.6698031241731759,
+            "Pearson": 0.5632479316406174,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                105,
+                6,
+                95
+              ],
+              [
+                28,
+                28,
+                128
+              ],
+              [
+                26,
+                12,
+                300
+              ]
+            ],
+            "macro_F1": 0.5052282793737493,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.5753424657534246,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.660377358490566,
+                "recall": 0.5097087378640777,
+                "support": 206
+              },
+              {
+                "F1": 0.24347826086956523,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.6086956521739131,
+                "recall": 0.15217391304347827,
+                "support": 184
+              },
+              {
+                "F1": 0.6968641114982579,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.5736137667304015,
+                "recall": 0.8875739644970414,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.5478854637796932
+          },
+          "parameters": 57100
+        },
+        "43": {
+          "clean": {
+            "Accuracy": 0.5673076923076923,
+            "MAE": 0.6825520733069464,
+            "Pearson": 0.5419671563580687,
+            "Pearson_reason": null,
+            "confusion": [
+              [
+                88,
+                9,
+                109
+              ],
+              [
+                27,
+                22,
+                135
+              ],
+              [
+                23,
+                12,
+                303
+              ]
+            ],
+            "macro_F1": 0.4634020896025171,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.5116279069767442,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.6376811594202898,
+                "recall": 0.42718446601941745,
+                "support": 206
+              },
+              {
+                "F1": 0.19383259911894274,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.5116279069767442,
+                "recall": 0.11956521739130435,
+                "support": 184
+              },
+              {
+                "F1": 0.6847457627118644,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.5539305301645339,
+                "recall": 0.8964497041420119,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.5116821632853089
+          },
+          "parameters": 57100
+        }
+      },
+      "PRIOR": {
+        "17": {
+          "clean": {
+            "Accuracy": 0.4642857142857143,
+            "MAE": 0.7690018362846676,
+            "Pearson": null,
+            "Pearson_reason": "zero_prediction_variance",
+            "confusion": [
+              [
+                0,
+                0,
+                206
+              ],
+              [
+                0,
+                0,
+                184
+              ],
+              [
+                0,
+                0,
+                338
+              ]
+            ],
+            "macro_F1": 0.21138211382113822,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.0,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.0,
+                "recall": 0.0,
+                "support": 206
+              },
+              {
+                "F1": 0.0,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.0,
+                "recall": 0.0,
+                "support": 184
+              },
+              {
+                "F1": 0.6341463414634146,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.4642857142857143,
+                "recall": 1.0,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.29442508710801396
+          },
+          "parameters": 0
+        },
+        "29": {
+          "clean": {
+            "Accuracy": 0.4642857142857143,
+            "MAE": 0.7690018362846676,
+            "Pearson": null,
+            "Pearson_reason": "zero_prediction_variance",
+            "confusion": [
+              [
+                0,
+                0,
+                206
+              ],
+              [
+                0,
+                0,
+                184
+              ],
+              [
+                0,
+                0,
+                338
+              ]
+            ],
+            "macro_F1": 0.21138211382113822,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.0,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.0,
+                "recall": 0.0,
+                "support": 206
+              },
+              {
+                "F1": 0.0,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.0,
+                "recall": 0.0,
+                "support": 184
+              },
+              {
+                "F1": 0.6341463414634146,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.4642857142857143,
+                "recall": 1.0,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.29442508710801396
+          },
+          "parameters": 0
+        },
+        "43": {
+          "clean": {
+            "Accuracy": 0.4642857142857143,
+            "MAE": 0.7690018362846676,
+            "Pearson": null,
+            "Pearson_reason": "zero_prediction_variance",
+            "confusion": [
+              [
+                0,
+                0,
+                206
+              ],
+              [
+                0,
+                0,
+                184
+              ],
+              [
+                0,
+                0,
+                338
+              ]
+            ],
+            "macro_F1": 0.21138211382113822,
+            "n": 728,
+            "per_class": [
+              {
+                "F1": 0.0,
+                "class": 0,
+                "class_name": "Negative",
+                "precision": 0.0,
+                "recall": 0.0,
+                "support": 206
+              },
+              {
+                "F1": 0.0,
+                "class": 1,
+                "class_name": "Neutral",
+                "precision": 0.0,
+                "recall": 0.0,
+                "support": 184
+              },
+              {
+                "F1": 0.6341463414634146,
+                "class": 2,
+                "class_name": "Positive",
+                "precision": 0.4642857142857143,
+                "recall": 1.0,
+                "support": 338
+              }
+            ],
+            "weighted_F1": 0.29442508710801396
+          },
+          "parameters": 0
+        }
+      }
+    },
+    "common_normalizer": "zscore",
+    "ranked": [
+      {
+        "F": 0.6018501688585941,
+        "MAE": 0.6426265293924391,
+        "clean_F": 0.6018501688585941,
+        "clean_MAE": 0.6426265293924391,
+        "id": "B-CAT-zscore",
+        "parameters": 56452
+      },
+      {
+        "F": 0.6018390196740434,
+        "MAE": 0.6740887001712871,
+        "clean_F": 0.6018390196740434,
+        "clean_MAE": 0.6740887001712871,
+        "id": "B-CAT-identity",
+        "parameters": 56452
+      },
+      {
+        "F": 0.5994517201014875,
+        "MAE": 0.6423445682704658,
+        "clean_F": 0.5994517201014875,
+        "clean_MAE": 0.6423445682704658,
+        "id": "B-T-zscore",
+        "parameters": 49476
+      },
+      {
+        "F": 0.595557651429924,
+        "MAE": 0.6139217321270025,
+        "clean_F": 0.595557651429924,
+        "clean_MAE": 0.6139217321270025,
+        "id": "B-T-identity",
+        "parameters": 49476
+      },
+      {
+        "F": 0.5050572468921829,
+        "MAE": 0.6760988662837265,
+        "clean_F": 0.5050572468921829,
+        "clean_MAE": 0.6760988662837265,
+        "id": "LATE-identity",
+        "parameters": 57100
+      },
+      {
+        "F": 0.4986995622122324,
+        "MAE": 0.673634675624371,
+        "clean_F": 0.4986995622122324,
+        "clean_MAE": 0.673634675624371,
+        "id": "LATE-zscore",
+        "parameters": 57100
+      },
+      {
+        "F": 0.38533629010462495,
+        "MAE": 0.7741664622436663,
+        "clean_F": 0.38533629010462495,
+        "clean_MAE": 0.7741664622436663,
+        "id": "B-V-zscore",
+        "parameters": 2564
+      },
+      {
+        "F": 0.36604802397203073,
+        "MAE": 0.7883719891513251,
+        "clean_F": 0.36604802397203073,
+        "clean_MAE": 0.7883719891513251,
+        "id": "B-V-identity",
+        "parameters": 2564
+      },
+      {
+        "F": 0.3654756438740783,
+        "MAE": 0.8450225580143278,
+        "clean_F": 0.3654756438740783,
+        "clean_MAE": 0.8450225580143278,
+        "id": "B-A-zscore",
+        "parameters": 5060
+      },
+      {
+        "F": 0.3075648432142088,
+        "MAE": 0.8187109196658593,
+        "clean_F": 0.3075648432142088,
+        "clean_MAE": 0.8187109196658593,
+        "id": "B-A-identity",
+        "parameters": 5060
+      },
+      {
+        "F": 0.21138211382113822,
+        "MAE": 0.7690018362846676,
+        "clean_F": 0.21138211382113822,
+        "clean_MAE": 0.7690018362846676,
+        "id": "PRIOR",
+        "parameters": 0
+      }
+    ]
+  },
+  "campaign_id": "S01-20260924T202319Z-30-1cf4769f",
+  "schema_version": 1,
+  "selection": {
+    "configuration": "B-CAT-zscore",
+    "reason": "WINNER_FIXED_SEED_GUARD_PASS",
+    "seed": 17,
+    "selection_recomputed_by_exporter": false
+  }
+}

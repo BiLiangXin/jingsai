@@ -1,0 +1,116 @@
+{
+  "stage": "S01_AGGREGATE_EXPORT_INDEPENDENT_REVIEW",
+  "status": "CHANGES_REQUIRED_FOR_AGGREGATE_PUBLICATION",
+  "blocking_critical": 0,
+  "blocking_major": 2,
+  "reviewed_at_utc": "2026-09-24T21:00:40.229318+00:00",
+  "scope": "Outside helpers only; no change or additional authority for the already-running campaign.",
+  "initial_source_sha256": {
+    "export_campaign.py": "ce3b1533a5bc6c9f30a4b474b623e6e85d24687846ce29f3f94634c440864981",
+    "export_condition_aggregates.py": "5706b17169667aee10acde7b28a58a18d2316c010de5573e821c7f396709abd4"
+  },
+  "findings": [
+    {
+      "id": "EXPORT-MAJOR-01",
+      "severity": "MAJOR",
+      "blocking_scope": "AGGREGATE_PUBLICATION_ONLY",
+      "path": "export_campaign.py",
+      "lines": [
+        352,
+        358
+      ],
+      "issue": "Recorded final selection is checked against all architecture IDs instead of executed, fully completed selected-budget configurations. A30-fit completed fixture accepts unrun R2-identity as the final winner although all R2 records are NOT_RUN.",
+      "recommendation": "Validate the recorded selection against the locked B-star or authorized C0/R0 using the common normalizer and all three verified completed seed records. Require complete B24 evidence for the baseline lock and reused PRIOR/LATE reference. Do not choose a replacement winner or run models."
+    },
+    {
+      "id": "EXPORT-MAJOR-02",
+      "severity": "MAJOR",
+      "blocking_scope": "STANDALONE_VERIFIED_CONDITION_EXPORT_PUBLICATION",
+      "path": "export_condition_aggregates.py",
+      "lines": [
+        102,
+        154,
+        225
+      ],
+      "issue": "Condition exporter marks output VERIFIED without terminal campaign evidence, source_verification, or actual checkpoint-byte verification. Existing1-fit synthetic fixture has none of these files but successfully exports96condition scores as official evidence.",
+      "recommendation": "Require a successfully verified main-export manifest bound to the same campaign/events/evaluation bytes and source/counts, terminal status and selected checkpoint bytes. Preserve descriptive-only aggregation and partial-seed null summaries; no source data, extra evaluation or re-selection is needed."
+    }
+  ],
+  "independent_tests": [
+    {
+      "command": "python.exe -B -X utf8 test_export_campaign.py",
+      "exit_code": 0,
+      "passed": 8,
+      "seconds": 1.13
+    },
+    {
+      "command": "python.exe -B -X utf8 test_export_condition_aggregates.py",
+      "exit_code": 0,
+      "passed": 3,
+      "seconds": 0.461
+    },
+    {
+      "command": "python.exe -B -X utf8 aggregate_export_independent_probes.py",
+      "exit_code": 0,
+      "counterexamples_reproduced": 2
+    }
+  ],
+  "probe_results": [
+    {
+      "probe": "unexecuted_R2_is_accepted_as_final_selection",
+      "counterexample_reproduced": true,
+      "export_status": "EXPORTED_AGGREGATE_EVIDENCE",
+      "campaign_completed_fits": 30,
+      "selection": {
+        "configuration": "R2-identity",
+        "reason": "WINNER_FIXED_SEED_GUARD_PASS",
+        "seed": 17,
+        "selection_recomputed_by_exporter": false
+      },
+      "all_R2_fits": "NOT_RUN"
+    },
+    {
+      "probe": "condition_export_without_exit_source_or_checkpoint_evidence",
+      "counterexample_reproduced": true,
+      "export_status": "CONDITION_AGGREGATES_EXPORTED",
+      "evidence_level": "VERIFIED",
+      "missing": [
+        "campaign_status.json",
+        "source_verification.json",
+        "checkpoint bytes"
+      ],
+      "condition_count": 96,
+      "completed_fits": 1
+    }
+  ],
+  "confirmed_correct": [
+    "Clean classification metrics are recomputed from fixed-three-class confusion matrices.",
+    "Condition score arithmetic calls the hash-verified frozen aggregate, with replicate then equal-condition then seed weighting.",
+    "Partial seed sets retain null across-seed aggregates. Failed/uncompleted fits are not promoted to completed metrics.",
+    "Observed output allowlists omit raw paths, sample rows, predictions, labels, masks and pairing digests. Checkpoint files are streamed for hashes only by main exporter.",
+    "No exporter performs model selection or evaluation."
+  ],
+  "limits": [
+    "This is an integrity check of existing aggregate evidence, not proof of predictive performance or raw-source truth.",
+    "Full-grid F1/MAE are already-computed metrics; no raw predictions or labels are read to recompute them.",
+    "These initial findings were passed to the separate exporter author for outside-only fixes; current running model implementation is unaffected."
+  ],
+  "evidence": [
+    {
+      "path": "aggregate_export_independent_probes.py",
+      "sha256": "8df5f055d9f07237dff4fbcfe7f19d0fb3b66f59b6806be0ee35aecf022623cb"
+    },
+    {
+      "path": "aggregate_export_independent_probe_results.json",
+      "sha256": "89fdbedd9034aa0a5cf25cadf7bcea5c21557c0c43d5deb59b782131d1495d7c"
+    }
+  ],
+  "boundaries": {
+    "official_tree_modified": false,
+    "live_campaign_opened": false,
+    "original_data_read": false,
+    "gpu_used": false,
+    "new_model_computation": false,
+    "new_training_authority": false
+  }
+}

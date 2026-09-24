@@ -1,0 +1,263 @@
+{
+  "stage": "S01_AGGREGATE_EXPORT_INDEPENDENT_REVIEW",
+  "status": "TECHNICAL_PASS",
+  "scope": "AGGREGATE_EXPORT_ONLY",
+  "blocking_critical": 0,
+  "blocking_major": 0,
+  "reviewer_complete": true,
+  "reviewed_at_utc": "2026-09-24T21:09:16.163870+00:00",
+  "execution_commit_context": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+  "role": "INDEPENDENT_READ_ONLY_TECHNICAL_REVIEW_NOT_AUTHOR_OR_OWNER_APPROVAL",
+  "model_identity": {
+    "user_requested": "GPT-6 Astra / xhigh",
+    "telemetry": "UNKNOWN_NOT_INVENTED"
+  },
+  "summary": "Two publication-blocking evidence gaps were reproduced, repaired outside the official repository and independently rechecked. Final10+4 stdlib synthetic fixtures and4 independent delta probes pass; no model computation, live campaign access or official-tree mutation.",
+  "helper_hashes": [
+    {
+      "path": "export_campaign.py",
+      "sha256": "b1484fcb0a8135de74a2215c1e5218de632ecbfc520378d43fd830b17943113b",
+      "size": 32985
+    },
+    {
+      "path": "export_condition_aggregates.py",
+      "sha256": "6f289aabb0fd3c175636288e1712a1ac2e6fff43e1c92703e4e0ba67f2b5b88b",
+      "size": 26029
+    },
+    {
+      "path": "test_export_campaign.py",
+      "sha256": "7bd0c3bc023696a7919d68baa4d8c22d1b992db65f1fe140b5607a727b9c2106",
+      "size": 11324
+    },
+    {
+      "path": "test_export_condition_aggregates.py",
+      "sha256": "c8a57c3b172d60aa6eed118877be9d8f6191ff1e28befd285e5f80b2db5eee3e",
+      "size": 7264
+    }
+  ],
+  "reference_and_format_source_hashes": [
+    {
+      "path": "research/r01/reference.py",
+      "sha256": "1cd4b73bb748284b4941625d92be89522771eff8a11e4044547e5f513ea62495",
+      "size": 15396
+    },
+    {
+      "path": "src/mosei/s01/engine.py",
+      "sha256": "65e5f6e3478aa2bd228839d65f3fef356f5cee412ade20fda55df86c2ab91918",
+      "size": 14771
+    },
+    {
+      "path": "src/mosei/s01/execution.py",
+      "sha256": "14f30d2211887cf7cae4880a86881e885d6e9cb94278ca4ee5d982cebacc4426",
+      "size": 12853
+    },
+    {
+      "path": "src/mosei/s01/protocol.py",
+      "sha256": "c69c194447c0c220a56e6dddb9c7a3e225f2a949147573d7212d4d0775871b26",
+      "size": 5842
+    },
+    {
+      "path": "docs/EXPERIMENT_REGISTER.json",
+      "sha256": "c92630a24269408a6a54e341f27e02e8b8d78bc0f73d664e240c8ac2d01aa5a3",
+      "size": 65994
+    }
+  ],
+  "initial_findings": {
+    "report": "aggregate_export_review_initial.json",
+    "sha256": "64bb6d05ec33b809085e0b6f0ce3e5b6b82163f2956ea1b62b6b115508fca85a",
+    "initial_source_sha256": {
+      "export_campaign.py": "ce3b1533a5bc6c9f30a4b474b623e6e85d24687846ce29f3f94634c440864981",
+      "export_condition_aggregates.py": "5706b17169667aee10acde7b28a58a18d2316c010de5573e821c7f396709abd4"
+    },
+    "counterexamples": "aggregate_export_independent_probe_results.json",
+    "blocking_major": 2
+  },
+  "finding_resolution": [
+    {
+      "id": "EXPORT-MAJOR-01",
+      "status": "CLOSED",
+      "path": "export_campaign.py",
+      "lines": [
+        323,
+        353,
+        354,
+        363,
+        375
+      ],
+      "original": "All30 completed fixture could publish unrun R2-identity as final selection.",
+      "repair": "Baseline lock requires all B24 completed; final recorded configuration is restricted to locked B* or budget30 C0/R0 using common normalizer. Selected learned configuration requires exactly three verified completed authorized seeds and checkpoints; selection requires all chosen-budget fits completed. Clean and baseline n must equal source valid_count.",
+      "evidence": "Independent original R2 counterexample now rejected; final fixtures reject incomplete C0 seed selection. The exporter validates recorded selection and never chooses a replacement winner."
+    },
+    {
+      "id": "EXPORT-MAJOR-02",
+      "status": "CLOSED",
+      "path": "export_condition_aggregates.py",
+      "lines": [
+        121,
+        144,
+        156,
+        182,
+        191,
+        202,
+        212,
+        226,
+        243
+      ],
+      "original": "Condition output was VERIFIED with no terminal/source/checkpoint byte evidence.",
+      "repair": "Requires exact verified main-export payload manifest, same campaign/commit/config/budget and completed fit set, terminal or matching completed watchdog evidence, source/counts, private campaign/events/evaluation hashes, and actual selected checkpoint bytes. Clean/grid populations match verified source valid_count.",
+      "evidence": "Four final condition fixtures reject missing source/checkpoint/status and main manifest mutation. Independent probes reject post-main evaluation mutation and post-main checkpoint mutation; restored original fixture exports with incomplete-seed means null."
+    }
+  ],
+  "checks": [
+    {
+      "area": "Metrics and aggregation",
+      "status": "PASS",
+      "evidence": "Main clean classification metrics validate fixed3-class confusion/support and macro/weighted F1. Condition exporter calls exact frozen reference SHA256 for144views,96conditions and paired fingerprints. It averages random replicates before equal-weight conditions, then prespecified seeds17/29/43. Incomplete sets get null across-seed summaries. Factor outputs are descriptive equal-condition averages; sample SD ddof1 is descriptive."
+    },
+    {
+      "area": "Statuses and selection",
+      "status": "PASS",
+      "evidence": "Only durable COMPLETED records supply published metrics. Failed/uncompleted evaluations do not become completed results.39 registrations and deferred entries persist. Fixed seed17 recorded selection is checked against authorized completed configurations; no re-selection, lucky-seed search, evaluation or fitting occurs."
+    },
+    {
+      "area": "Private-field boundary",
+      "status": "PASS_ON_REVIEWED_ALLOWLISTS_AND_SYNTHETIC_PROBES",
+      "evidence": "Outputs contain aggregated metrics/counts, configuration/seed/trial identities and whole-file hashes. No sample IDs/ordinals, per-sample labels/predictions, masks/pairing digests, normalizer coefficients, weights or private paths are copied. Failure messages are hashed/classified. Checkpoint bytes are streamed for hashes, never deserialized."
+    },
+    {
+      "area": "Current private output format",
+      "status": "PASS_STATIC",
+      "evidence": "Named campaign/source/status/baseline/selection/event/evaluation and best/last checkpoint fields correspond to current engine/execution formats. No live private campaign files were opened to establish this."
+    },
+    {
+      "area": "Payload serialization",
+      "status": "PASS_STATIC_AND_AUTHOR_MEASUREMENT_REVIEWED",
+      "evidence": "Final condition JSON uses compact separators only; reviewed semantic schema unchanged. Author revision03 measured full synthetic30-fit/10-config condition JSON527443 bytes and every export member below1MiB. Reviewer reran final4 semantic fixtures, not the full size measurement."
+    }
+  ],
+  "actual_independent_commands": [
+    {
+      "revision": "initial",
+      "command": "python.exe -B -X utf8 test_export_campaign.py",
+      "exit_code": 0,
+      "passed": 8,
+      "seconds": 1.13
+    },
+    {
+      "revision": "initial",
+      "command": "python.exe -B -X utf8 test_export_condition_aggregates.py",
+      "exit_code": 0,
+      "passed": 3,
+      "seconds": 0.461
+    },
+    {
+      "revision": "initial",
+      "command": "python.exe -B -X utf8 aggregate_export_independent_probes.py",
+      "exit_code": 0,
+      "counterexamples_reproduced": 2
+    },
+    {
+      "revision": "final",
+      "command": "python.exe -B -X utf8 test_export_campaign.py",
+      "exit_code": 0,
+      "passed": 10,
+      "seconds": 2.615
+    },
+    {
+      "revision": "final",
+      "command": "python.exe -B -X utf8 test_export_condition_aggregates.py",
+      "exit_code": 0,
+      "passed": 4,
+      "seconds": 1.259
+    },
+    {
+      "revision": "final",
+      "command": "python.exe -B -X utf8 aggregate_export_delta_probes.py",
+      "exit_code": 0,
+      "passed": 4,
+      "results": [
+        {
+          "probe": "previous_unrun_R2_counterexample_now_rejected",
+          "status": "PASS"
+        },
+        {
+          "probe": "evaluation_changed_after_main_export_rejected",
+          "status": "PASS"
+        },
+        {
+          "probe": "checkpoint_changed_after_main_export_rejected",
+          "status": "PASS"
+        },
+        {
+          "probe": "restored_evidence_exports_without_promoting_incomplete_seed_set",
+          "status": "PASS"
+        }
+      ]
+    }
+  ],
+  "environment": {
+    "python": "3.11.14",
+    "os": "Windows",
+    "dependencies": "Python standard library only; hash-verified frozen standard-library reference",
+    "bytecode_disabled": true,
+    "gpu_used": false
+  },
+  "evidence_files": [
+    {
+      "path": "aggregate_export_review_initial.json",
+      "sha256": "64bb6d05ec33b809085e0b6f0ce3e5b6b82163f2956ea1b62b6b115508fca85a",
+      "size": 5250
+    },
+    {
+      "path": "aggregate_export_independent_probes.py",
+      "sha256": "8df5f055d9f07237dff4fbcfe7f19d0fb3b66f59b6806be0ee35aecf022623cb",
+      "size": 2574
+    },
+    {
+      "path": "aggregate_export_independent_probe_results.json",
+      "sha256": "89fdbedd9034aa0a5cf25cadf7bcea5c21557c0c43d5deb59b782131d1495d7c",
+      "size": 1283
+    },
+    {
+      "path": "aggregate_export_delta_probes.py",
+      "sha256": "28e48564354938871866357cc610916b4bce1b7236c1e1e711ca255a23d72148",
+      "size": 3008
+    },
+    {
+      "path": "aggregate_export_delta_probe_results.json",
+      "sha256": "43ef3feed8ab18df9723b6b91ebadb9ff9aa28a8f7da2cae833201b2920844cd",
+      "size": 829
+    },
+    {
+      "path": "EXPORTER_REPAIR_REVISION_02_TESTS.json",
+      "sha256": "a71e972ff42befc7f26fde17ae42eb5d6ce4fe95f5d203e1c951ead397e9bbce",
+      "size": 3140
+    },
+    {
+      "path": "EXPORTER_REVISION_03_FINAL_CHECKS.json",
+      "sha256": "fca2320548079e9b209a0b086c5a3c153a94ee5e8a07ffc11041644e3b9b99d5",
+      "size": 1762
+    }
+  ],
+  "limits": [
+    "This PASS applies only to these exact outside helper/test hashes and aggregate-export integrity. It does not amend the running model, authorization, frozen research or compute budget, and creates no training/retry authority.",
+    "No real campaign metrics or results were inspected. Actual export after process exit must pass the same checks; this review is not a claim that the running campaign has completed or obtained any predictive score.",
+    "Evidence integrity trusts the reviewed producer and local account. Hash-consistent fabricated input trees are not cryptographically authenticated by these helpers. A current matching main export is required for condition publication.",
+    "Exporter validates/copies recorded selection; it does not rerun the model-ranking search or independently derive F1/MAE from raw sample labels/predictions. Full-grid formulas are checked using stored condition metrics and frozen aggregate implementation.",
+    "Optimizer-entry markers alone do not prove a successful step; exported successful_optimizer_step_proven and completed epoch records distinguish this. Failed or missing-terminal runs must not be summarized as completed.",
+    "Malformed/torn JSONL or missing necessary terminal/checkpoint evidence is rejected. Recovering aggregate evidence after an abrupt crash may need a separate bounded evidence-handling review; no retries or fabricated events are authorized.",
+    "Synthetic payload sizes are not universal upper bounds; actual generated public artifacts still require the publication safety/size gate.",
+    "Repeated VALID selection optimism remains. Three-seed SD is descriptive and does not establish significance, held-out TEST performance or special-set generalization."
+  ],
+  "boundaries": {
+    "official_tree_modified": false,
+    "live_campaign_opened": false,
+    "original_PKL_read": false,
+    "test_or_special_data_read": false,
+    "credentials_or_native_journals_read": false,
+    "gpu_used": false,
+    "new_model_computation": false,
+    "new_training_authority": false
+  },
+  "completion": "All bounded requested aggregate-export review work complete. Only outside report/probe files were written; the official tree and active campaign remain untouched."
+}

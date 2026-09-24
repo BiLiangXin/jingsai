@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "stage": "S01_PUBLICATION_LITERAL_FILTER_INDEPENDENT_DELTA_REVIEW",
+  "status": "PASS",
+  "critical_findings": 0,
+  "blocking_major_findings": 0,
+  "review_role": "Independent technical delta review; not owner approval or new execution authority",
+  "reviewed_at_utc": "2026-09-24T22:41:35.676135+00:00",
+  "files": [
+    {
+      "path": "assemble_publication.py",
+      "sha256": "d2ca16561ce96a7d4e1ea521d7fb91483d89428f0e6987c96f5d2c30bd72ec02",
+      "size_bytes": 16400
+    },
+    {
+      "path": "assemble_publication.pre_scan_literal_fix.py",
+      "sha256": "acde38f476ddb69de3da2e3af3ec0e8dd005512741d1eaab061fe8c42775599e",
+      "size_bytes": 15895
+    },
+    {
+      "path": "tools/s01_reporting/render_results_report.py",
+      "sha256": "801cce84b97acb0f8fea20c12e7cc59f6a7bc67024765b3ccace03bcc8c85d69",
+      "size_bytes": 26140
+    }
+  ],
+  "delta_scope": [
+    "Exact renderer path/SHA literal-filter exception and explanatory comments",
+    "Added this independent review filename to publication evidence map"
+  ],
+  "false_positive": {
+    "source_line": 353,
+    "explanation": "The exact reviewed renderer source contains literal home-directory prefixes inside its own output-rejection regex. The generic publisher regex recognizes those code literals as path prefixes. Inspection found the single matching source line to be the rejection expression, not an account-specific file or directory path.",
+    "actual_account_private_path_found": false,
+    "old_guard_rejection_independently_reproduced": true,
+    "old_rejection_line": 245,
+    "old_first_official_mutation_line": 254
+  },
+  "repair": {
+    "exception_requires_exact_path": "tools/s01_reporting/render_results_report.py",
+    "exception_requires_exact_sha256": "801cce84b97acb0f8fea20c12e7cc59f6a7bc67024765b3ccace03bcc8c85d69",
+    "changed_bytes_or_another_nonfixture_path_rejected": true,
+    "independent_public_byte_scan_remains_unconditional": true,
+    "existing_test_fixture_exception_unchanged": true,
+    "exact_ten_governance_and_closed_authority_checks_unchanged": true,
+    "prior_source_reconstructed_by_reversing_only_two_delta_regions": true,
+    "prior_source_hash_matches_prior_independent_review": true
+  },
+  "preserved_failure_history": {
+    "evidence_level": "ROOT_OBSERVED_TOOL_RESULT_WITH_INDEPENDENT_STATIC_REPRODUCTION",
+    "saved_standalone_failure_log_available": false,
+    "original_executed_source_sha256": "acde38f476ddb69de3da2e3af3ec0e8dd005512741d1eaab061fe8c42775599e",
+    "root_observed_command_result": {
+      "tool_chunk": "d1a14b",
+      "exit_code": 1,
+      "tool_wall_seconds": 2.9850964,
+      "exception_type": "ValueError",
+      "message": "Private path in public candidate",
+      "traceback_source_line": 245
+    },
+    "root_observed_followup": {
+      "tool_chunk": "aa6bb4",
+      "finding": "Literal source rejection-regex match at renderer line353; git status --short empty"
+    },
+    "independently_verified": "Original guard rejection precedes the first official mutation; exact prior source bytes have been reconstructed and preserved. No nonexistent raw failure log or log hash is invented."
+  },
+  "actual_checks": {
+    "kind": "BOUNDED_STDLIB_AST_AND_PREDICATE_PROBES",
+    "python": "3.11.14 | packaged by conda-forge | (main, Oct 22 2025, 22:35:28) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "probe_execution_tool_chunk": "8ee564",
+    "exit_code": 0,
+    "total_predicate_probes": 6,
+    "probes": [
+      {
+        "probe": "exact_reviewed_renderer",
+        "qualifies_for_new_exception": true,
+        "guard_accepts": true,
+        "status": "PASS"
+      },
+      {
+        "probe": "changed_renderer_bytes",
+        "qualifies_for_new_exception": false,
+        "guard_accepts": false,
+        "status": "PASS"
+      },
+      {
+        "probe": "renamed_renderer_path",
+        "qualifies_for_new_exception": false,
+        "guard_accepts": false,
+        "status": "PASS"
+      },
+      {
+        "probe": "different_directory_same_bytes",
+        "qualifies_for_new_exception": false,
+        "guard_accepts": false,
+        "status": "PASS"
+      },
+      {
+        "probe": "changed_renderer_with_artificial_account_path",
+        "qualifies_for_new_exception": false,
+        "guard_accepts": false,
+        "status": "PASS"
+      },
+      {
+        "probe": "ordinary_document_with_artificial_account_path",
+        "qualifies_for_new_exception": false,
+        "guard_accepts": false,
+        "status": "PASS"
+      }
+    ],
+    "independent_public_byte_scanner": "tools/stage_handoff.py:scan_public_bytes",
+    "independent_byte_scanner_findings": [],
+    "current_private_guard_line": 250,
+    "unconditional_scanner_line": 253,
+    "first_official_mutation_line": 260,
+    "production_main_invoked": false,
+    "full_prior_23_test_suite_rerun": false
+  },
+  "evidence": [
+    {
+      "path": "publisher_scan_literal_probes.json",
+      "sha256": "6ee7c15d330b18c52392ebf3e5281c8e4a0c98a41040630036afe4e09ea5fae8",
+      "size_bytes": 1860
+    },
+    {
+      "path": "closeout_helpers_review_recovery.json",
+      "sha256": "b72e19be747ab41e5d07faad76bbae5e672e3677a190fbc846b8e54671c21118",
+      "size_bytes": 9010
+    }
+  ],
+  "boundaries": {
+    "official_repository_modified": false,
+    "actual_publisher_executed": false,
+    "actual_model_results_read": false,
+    "original_data_or_model_weights_read": false,
+    "model_producer_or_metrics_modified": false,
+    "new_model_computation": false,
+    "new_training_authority": false
+  },
+  "limits": [
+    "PASS applies only to the exact assembler and renderer hashes listed here. Altering renderer bytes invalidates the exception.",
+    "Only the two stated publication-helper regions differ from the exact prior reviewed source; existing fixture exceptions and all other publication boundaries are unchanged.",
+    "The actual earlier command failure and clean Git status are reported by root tool evidence; this reviewer independently reproduced the old predicate rejection and checked prewrite ordering without invoking publication main.",
+    "This review does not claim that assembly, commit or push has occurred. No additional user permission or model execution is introduced."
+  ]
+}

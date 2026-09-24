@@ -1,0 +1,3652 @@
+{
+  "campaign_id": "S01-20260924T202319Z-30-1cf4769f",
+  "fits": [
+    {
+      "architecture": "B-T",
+      "checkpoint_sha256": "68585fee24dc43bd1d10b9029c5d7548bf01b0d3bfeae7e38ece39417f1094e1",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 14,
+      "evaluated_epochs": 14,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "ad9b5ba7f36192d6b4874cbc7663a1303544aab707eeb9033859c09e377e8ef3",
+          "size": 122
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "84720db975036bb6e555d80f02556c33562ee523bc084b2d52874d2c4ed81ce8",
+          "size": 19837
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "25146146641f567bff46836ef9b429a2841e9872a9dd6e24ebc8607acfc538f1",
+          "size": 447087
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T20:54:33.705203+00:00",
+      "fit_finished_at": "2026-09-24T20:54:33.664290+00:00",
+      "fit_runtime_seconds": 59.51600000000326,
+      "fit_started_at": "2026-09-24T20:53:34.154354+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.6280586231450082,
+          "macro_F1": 0.5891681978693415
+        },
+        "clean": {
+          "Accuracy": 0.6304945054945055,
+          "MAE": 0.6184329031512479,
+          "Pearson": 0.6250265895912972,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              128,
+              28,
+              50
+            ],
+            [
+              25,
+              70,
+              89
+            ],
+            [
+              34,
+              43,
+              261
+            ]
+          ],
+          "macro_F1": 0.5964952650113701,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.6513994910941476,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.6844919786096256,
+              "recall": 0.6213592233009708,
+              "support": 206
+            },
+            {
+              "F1": 0.4307692307692308,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.49645390070921985,
+              "recall": 0.3804347826086957,
+              "support": 184
+            },
+            {
+              "F1": 0.7073170731707317,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.6525,
+              "recall": 0.772189349112426,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.6215975334596705
+        }
+      },
+      "normalizer": "identity",
+      "optimizer_entry_marker": true,
+      "parameters": 49476,
+      "preregistered_config_sha256": "2b3c1f849b74795cd113262dcf2c1933b7c351a90f648e006eeb4f1109364fc2",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "68585fee24dc43bd1d10b9029c5d7548bf01b0d3bfeae7e38ece39417f1094e1",
+          "size": 624271
+        },
+        "last": {
+          "sha256": "ac704bde6ec1eb4d098c888699611acf8415900650d014ce30ac0e94a97244ef",
+          "size": 624527
+        }
+      },
+      "registered_normalizer": "identity",
+      "resolved_config_sha256": "2b3c1f849b74795cd113262dcf2c1933b7c351a90f648e006eeb4f1109364fc2",
+      "runtime_seconds": 59.75,
+      "seed": 17,
+      "selected_epoch": 4,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T20:53:33.956175+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-T-identity-T0-s17"
+    },
+    {
+      "architecture": "B-T",
+      "checkpoint_sha256": "4917889a67a698599c4acee7278c68941766433b2b2c54064235270157f75d6b",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 16,
+      "evaluated_epochs": 16,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "fa1a4011ff64ef5b7ebac203f73ed25b859d2a0a4ac186e1cd9c1ba7a917618f",
+          "size": 122
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "4812ff682d5ac5d6293cd49d9065aa5d630fe7a8b74c21ac7ba76a7a3e3744fe",
+          "size": 22592
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "cf98392aaec9be7a2c055b0f564940306f7f6cabf4fdb1397c776f8caa2d4e25",
+          "size": 446535
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T20:55:37.722099+00:00",
+      "fit_finished_at": "2026-09-24T20:55:37.687467+00:00",
+      "fit_runtime_seconds": 63.96900000000096,
+      "fit_started_at": "2026-09-24T20:54:33.708207+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.6245029757726134,
+          "macro_F1": 0.5816930034047499
+        },
+        "clean": {
+          "Accuracy": 0.6304945054945055,
+          "MAE": 0.6130139361817523,
+          "Pearson": 0.6300744030219503,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              140,
+              18,
+              48
+            ],
+            [
+              31,
+              61,
+              92
+            ],
+            [
+              38,
+              42,
+              258
+            ]
+          ],
+          "macro_F1": 0.5919285839008207,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.6746987951807228,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.6698564593301436,
+              "recall": 0.6796116504854369,
+              "support": 206
+            },
+            {
+              "F1": 0.4,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.5041322314049587,
+              "recall": 0.33152173913043476,
+              "support": 184
+            },
+            {
+              "F1": 0.7010869565217391,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.6482412060301508,
+              "recall": 0.7633136094674556,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.6175210757027153
+        }
+      },
+      "normalizer": "identity",
+      "optimizer_entry_marker": true,
+      "parameters": 49476,
+      "preregistered_config_sha256": "9d808b6d7eba1113e03c77e7ca8c8260ba55fbac58698254b1bc9b4ab98fff52",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "4917889a67a698599c4acee7278c68941766433b2b2c54064235270157f75d6b",
+          "size": 624335
+        },
+        "last": {
+          "sha256": "404c8093a6cf72fee2b3df5ea301152320dae21a5ce849a339b1301887290ff6",
+          "size": 624591
+        }
+      },
+      "registered_normalizer": "identity",
+      "resolved_config_sha256": "9d808b6d7eba1113e03c77e7ca8c8260ba55fbac58698254b1bc9b4ab98fff52",
+      "runtime_seconds": 64.01599999999962,
+      "seed": 29,
+      "selected_epoch": 6,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T20:54:33.706203+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-T-identity-T0-s29"
+    },
+    {
+      "architecture": "B-T",
+      "checkpoint_sha256": "91a02d22c93a01a2663aa32c26c0904dc7427414f958bbf5ecbd8aeaad754ffe",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 13,
+      "evaluated_epochs": 13,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "9d376e1aaeef975cdc32975cfbc9f403569aed0d28984cb48d458d70bb5adf21",
+          "size": 122
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "bc68fb74aa98b7f87347b91dc0987a70ce21ef065bd852351cf4fba434a7764d",
+          "size": 18414
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "254361a1edadb517c9d44908389d6fb74cc36718c60cf42042fd17efd87f3afb",
+          "size": 446725
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T20:56:33.170152+00:00",
+      "fit_finished_at": "2026-09-24T20:56:33.130128+00:00",
+      "fit_runtime_seconds": 55.40599999999904,
+      "fit_started_at": "2026-09-24T20:55:37.726102+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.6261575748437372,
+          "macro_F1": 0.5944517144451517
+        },
+        "clean": {
+          "Accuracy": 0.6304945054945055,
+          "MAE": 0.6103183570480074,
+          "Pearson": 0.6256818633266518,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              161,
+              22,
+              23
+            ],
+            [
+              51,
+              67,
+              66
+            ],
+            [
+              58,
+              49,
+              231
+            ]
+          ],
+          "macro_F1": 0.5982491053775812,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.6764705882352942,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.5962962962962963,
+              "recall": 0.7815533980582524,
+              "support": 206
+            },
+            {
+              "F1": 0.4161490683229814,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.4855072463768116,
+              "recall": 0.3641304347826087,
+              "support": 184
+            },
+            {
+              "F1": 0.7021276595744681,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.721875,
+              "recall": 0.6834319526627219,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.6225872509396557
+        }
+      },
+      "normalizer": "identity",
+      "optimizer_entry_marker": true,
+      "parameters": 49476,
+      "preregistered_config_sha256": "a96a37da3833366ec88b218b7c9e9eafa77c4943a76553ce51f49e4f31b83fec",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "91a02d22c93a01a2663aa32c26c0904dc7427414f958bbf5ecbd8aeaad754ffe",
+          "size": 624271
+        },
+        "last": {
+          "sha256": "4b9aa911224d4402d2dc5bb889820c91c91c5771a0478a2029af40d4c882d2a9",
+          "size": 624527
+        }
+      },
+      "registered_normalizer": "identity",
+      "resolved_config_sha256": "a96a37da3833366ec88b218b7c9e9eafa77c4943a76553ce51f49e4f31b83fec",
+      "runtime_seconds": 55.43700000000172,
+      "seed": 43,
+      "selected_epoch": 3,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T20:55:37.723100+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-T-identity-T0-s43"
+    },
+    {
+      "architecture": "B-T",
+      "checkpoint_sha256": "14577592a3a3f3e36c1554a207ae78a7aab72fadcdce0cd6e2cf41411e1e064f",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 16,
+      "evaluated_epochs": 16,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "e7c6ed7c989188a37caa3d67e8252d1e96a448e2c08610404e2966d087163b73",
+          "size": 122
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "b075961abcc7e72e8a969750b77e22680f68fdd8671f2d5402509fbe3397bf05",
+          "size": 22751
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "0d90c0d131fe86d1517af389a9d41ec4eb5fdb2731189ed8efb04291a11b1386",
+          "size": 447254
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T20:57:34.911883+00:00",
+      "fit_finished_at": "2026-09-24T20:57:34.876842+00:00",
+      "fit_runtime_seconds": 61.7029999999977,
+      "fit_started_at": "2026-09-24T20:56:33.175156+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.6723986962588042,
+          "macro_F1": 0.5825726715195313
+        },
+        "clean": {
+          "Accuracy": 0.6222527472527473,
+          "MAE": 0.6565257610332932,
+          "Pearson": 0.5873784679930841,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              128,
+              27,
+              51
+            ],
+            [
+              30,
+              73,
+              81
+            ],
+            [
+              35,
+              51,
+              252
+            ]
+          ],
+          "macro_F1": 0.5918286157919018,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.6416040100250626,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.6632124352331606,
+              "recall": 0.6213592233009708,
+              "support": 206
+            },
+            {
+              "F1": 0.43582089552238806,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.48344370860927155,
+              "recall": 0.3967391304347826,
+              "support": 184
+            },
+            {
+              "F1": 0.6980609418282548,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.65625,
+              "recall": 0.7455621301775148,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.6158050400813633
+        }
+      },
+      "normalizer": "zscore",
+      "optimizer_entry_marker": true,
+      "parameters": 49476,
+      "preregistered_config_sha256": "8a94d3c5669991f4e58fe82e2611cb8664822c03abf54a60e18a52740f15766e",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "14577592a3a3f3e36c1554a207ae78a7aab72fadcdce0cd6e2cf41411e1e064f",
+          "size": 624335
+        },
+        "last": {
+          "sha256": "9de98ae616cbf3642e4a9f3c218bbc5ecba48e4c6677beae9535f1815a49ba93",
+          "size": 624591
+        }
+      },
+      "registered_normalizer": "zscore",
+      "resolved_config_sha256": "8a94d3c5669991f4e58fe82e2611cb8664822c03abf54a60e18a52740f15766e",
+      "runtime_seconds": 61.75,
+      "seed": 17,
+      "selected_epoch": 6,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T20:56:33.171152+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-T-zscore-T0-s17"
+    },
+    {
+      "architecture": "B-T",
+      "checkpoint_sha256": "686eaff01877973b80c2a7e225a546e2ac4a26c7ba301faa4eb375dddd034710",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 14,
+      "evaluated_epochs": 14,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "e8405ff0df799a938ebb78c3d12701dd7e770dfb15928159e256097938723644",
+          "size": 122
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "0d6db6e31a973d5e87391779c995912ab85b1116355dec31c0664b4c11d6a0af",
+          "size": 19841
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "6dc269fb92735ef6624f36b0158a098526f3ef3452cc954fd946434e9dee3650",
+          "size": 446871
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T20:58:32.283422+00:00",
+      "fit_finished_at": "2026-09-24T20:58:32.246388+00:00",
+      "fit_runtime_seconds": 57.3279999999977,
+      "fit_started_at": "2026-09-24T20:57:34.916887+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.6491830874327121,
+          "macro_F1": 0.5827187986766814
+        },
+        "clean": {
+          "Accuracy": 0.6332417582417582,
+          "MAE": 0.6358142077948726,
+          "Pearson": 0.5993044031379384,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              139,
+              19,
+              48
+            ],
+            [
+              33,
+              61,
+              90
+            ],
+            [
+              36,
+              41,
+              261
+            ]
+          ],
+          "macro_F1": 0.5932581274566998,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.6714975845410628,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.6682692307692307,
+              "recall": 0.6747572815533981,
+              "support": 206
+            },
+            {
+              "F1": 0.4,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.5041322314049587,
+              "recall": 0.33152173913043476,
+              "support": 184
+            },
+            {
+              "F1": 0.7082767978290366,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.6541353383458647,
+              "recall": 0.772189349112426,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.6199533792330677
+        }
+      },
+      "normalizer": "zscore",
+      "optimizer_entry_marker": true,
+      "parameters": 49476,
+      "preregistered_config_sha256": "fcb414418ffea1c42392d735fe9ec01e430cfa1006652a0e3d59cddaf442c37c",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "686eaff01877973b80c2a7e225a546e2ac4a26c7ba301faa4eb375dddd034710",
+          "size": 624271
+        },
+        "last": {
+          "sha256": "3960a8f90291f532a349ef0d4f1dc9f959861a423add1db406f5fb078e8df557",
+          "size": 624527
+        }
+      },
+      "registered_normalizer": "zscore",
+      "resolved_config_sha256": "fcb414418ffea1c42392d735fe9ec01e430cfa1006652a0e3d59cddaf442c37c",
+      "runtime_seconds": 57.375,
+      "seed": 29,
+      "selected_epoch": 4,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T20:57:34.912883+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-T-zscore-T0-s29"
+    },
+    {
+      "architecture": "B-T",
+      "checkpoint_sha256": "f7bd65dde10b53aab619fd6f577be7238be3fa8711cb956fe3bf6b7650685d0e",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 12,
+      "evaluated_epochs": 12,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "c44b0e5fc211d2c83cd8225508941c108cca7f801174ba6bc607f00bdc8a9f14",
+          "size": 122
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "177b52cf883da985fc690248289e5dcaf8a5985cd0266e7756244382e5bfd02f",
+          "size": 17017
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "0debe4943a73cc7ba6af75cb87b7fc1b3a7bf005e8c5e34818ed52c0e090ee14",
+          "size": 447897
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T20:59:25.345432+00:00",
+      "fit_finished_at": "2026-09-24T20:59:25.309577+00:00",
+      "fit_runtime_seconds": 53.01599999999962,
+      "fit_started_at": "2026-09-24T20:58:32.289427+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.6488489144322547,
+          "macro_F1": 0.5995082068750671
+        },
+        "clean": {
+          "Accuracy": 0.6538461538461539,
+          "MAE": 0.6346937359832316,
+          "Pearson": 0.5950191865490803,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              137,
+              20,
+              49
+            ],
+            [
+              29,
+              65,
+              90
+            ],
+            [
+              32,
+              32,
+              274
+            ]
+          ],
+          "macro_F1": 0.6132684170558608,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.6782178217821783,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.6919191919191919,
+              "recall": 0.6650485436893204,
+              "support": 206
+            },
+            {
+              "F1": 0.4318936877076412,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.5555555555555556,
+              "recall": 0.3532608695652174,
+              "support": 184
+            },
+            {
+              "F1": 0.729693741677763,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.6634382566585957,
+              "recall": 0.8106508875739645,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.6398596078467289
+        }
+      },
+      "normalizer": "zscore",
+      "optimizer_entry_marker": true,
+      "parameters": 49476,
+      "preregistered_config_sha256": "e4b543b2e4a8a90f83fe27d1d31c2a507520410efcf212fde617aca8fdb30e6e",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "f7bd65dde10b53aab619fd6f577be7238be3fa8711cb956fe3bf6b7650685d0e",
+          "size": 624271
+        },
+        "last": {
+          "sha256": "2bd64b40340129190a60342fbe49e730684637e1e04bbc69289b5654097bd946",
+          "size": 624463
+        }
+      },
+      "registered_normalizer": "zscore",
+      "resolved_config_sha256": "e4b543b2e4a8a90f83fe27d1d31c2a507520410efcf212fde617aca8fdb30e6e",
+      "runtime_seconds": 53.06299999999828,
+      "seed": 43,
+      "selected_epoch": 2,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T20:58:32.284422+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-T-zscore-T0-s43"
+    },
+    {
+      "architecture": "B-A",
+      "checkpoint_sha256": "f29d0d647db001213bbbefaf26e27ad776468a4c366253b31bd6c1f71359c5cc",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 16,
+      "evaluated_epochs": 16,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "c76289d52422d8d07992b15a39a59d6f63d3504aa850169f7bc145e0ea1e039c",
+          "size": 122
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "c94de345e9055771c6293f6638cfb7cafaefb2600f7217aec2460958604c5844",
+          "size": 21323
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "fc13ae115c60e4bbbcef3871aca384cef156ba9a467d8e302dae4e21c42dc7c7",
+          "size": 435935
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:00:25.092306+00:00",
+      "fit_finished_at": "2026-09-24T21:00:25.059067+00:00",
+      "fit_runtime_seconds": 59.70300000000134,
+      "fit_started_at": "2026-09-24T20:59:25.351942+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.78940613290985,
+          "macro_F1": 0.3040184048168983
+        },
+        "clean": {
+          "Accuracy": 0.4519230769230769,
+          "MAE": 0.7875848845057419,
+          "Pearson": 0.0979432997214081,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              60,
+              0,
+              146
+            ],
+            [
+              38,
+              0,
+              146
+            ],
+            [
+              69,
+              0,
+              269
+            ]
+          ],
+          "macro_F1": 0.3067195106070592,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.32171581769436997,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.3592814371257485,
+              "recall": 0.2912621359223301,
+              "support": 206
+            },
+            {
+              "F1": 0.0,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.0,
+              "recall": 0.0,
+              "support": 184
+            },
+            {
+              "F1": 0.5984427141268076,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.47950089126559714,
+              "recall": 0.7958579881656804,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.36888337337898514
+        }
+      },
+      "normalizer": "identity",
+      "optimizer_entry_marker": true,
+      "parameters": 5060,
+      "preregistered_config_sha256": "36cfa5b7a8f154cf5c5b208a2fcdad54448df3a7ba294e115f19bfcbf15a8708",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "f29d0d647db001213bbbefaf26e27ad776468a4c366253b31bd6c1f71359c5cc",
+          "size": 91343
+        },
+        "last": {
+          "sha256": "84d2c8dd21c1159235a7f6970f1a283ae69bfae0faac3dd1bfe6fccf94ede25b",
+          "size": 91599
+        }
+      },
+      "registered_normalizer": "identity",
+      "resolved_config_sha256": "36cfa5b7a8f154cf5c5b208a2fcdad54448df3a7ba294e115f19bfcbf15a8708",
+      "runtime_seconds": 59.73400000000038,
+      "seed": 17,
+      "selected_epoch": 6,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T20:59:25.345942+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-A-identity-T0-s17"
+    },
+    {
+      "architecture": "B-A",
+      "checkpoint_sha256": "96fb651c987a66841765b227cf56e819728d0836c6da1ed6189c9bb048a7d48a",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 28,
+      "evaluated_epochs": 28,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "a9cd4ea585f4243e955faa41705a1e5977f9780ac58a3ef067cdb71d08b3fe72",
+          "size": 122
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "7645c53c00a5bfb63e7bb213ae5850bd56cb0b4457bd40e606a88cf113c5a85a",
+          "size": 38426
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "21bd7315c1a2679b738d2ff1b529b7e221dd59b5bd78a6b1bc7a9e4f1e4b9b40",
+          "size": 449537
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:01:49.429280+00:00",
+      "fit_finished_at": "2026-09-24T21:01:49.388244+00:00",
+      "fit_runtime_seconds": 84.28099999999904,
+      "fit_started_at": "2026-09-24T21:00:25.100313+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.8603109494926914,
+          "macro_F1": 0.3186684782203258
+        },
+        "clean": {
+          "Accuracy": 0.46153846153846156,
+          "MAE": 0.8579859431259907,
+          "Pearson": 0.1305496064783814,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              12,
+              30,
+              164
+            ],
+            [
+              7,
+              35,
+              142
+            ],
+            [
+              8,
+              41,
+              289
+            ]
+          ],
+          "macro_F1": 0.32129685632138966,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.10300429184549356,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.4444444444444444,
+              "recall": 0.05825242718446602,
+              "support": 206
+            },
+            {
+              "F1": 0.2413793103448276,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.330188679245283,
+              "recall": 0.19021739130434784,
+              "support": 184
+            },
+            {
+              "F1": 0.6195069667738478,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.4857142857142857,
+              "recall": 0.8550295857988166,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.3777830109796435
+        }
+      },
+      "normalizer": "identity",
+      "optimizer_entry_marker": true,
+      "parameters": 5060,
+      "preregistered_config_sha256": "d7c99713ffb94eb973c04248e1aea297b949b486918f01a8212204d8f7de81dd",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "96fb651c987a66841765b227cf56e819728d0836c6da1ed6189c9bb048a7d48a",
+          "size": 91663
+        },
+        "last": {
+          "sha256": "e669900d86ad1b94faabfb0e282694c62ae3d4ad87a040330c32cc63eaf25ee9",
+          "size": 91855
+        }
+      },
+      "registered_normalizer": "identity",
+      "resolved_config_sha256": "d7c99713ffb94eb973c04248e1aea297b949b486918f01a8212204d8f7de81dd",
+      "runtime_seconds": 84.34400000000096,
+      "seed": 29,
+      "selected_epoch": 18,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:00:25.093307+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-A-identity-T0-s29"
+    },
+    {
+      "architecture": "B-A",
+      "checkpoint_sha256": "3bc1675899f0325b542f59e8406a5f80fa135cda31845b13455fbd405c0bcd67",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 12,
+      "evaluated_epochs": 12,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "947f346347167036a069a76043f522f50cdd81af9dde3abf27a7943679c804a5",
+          "size": 122
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "e809ce9510602c0fcb969b818566f86b90f9d240a425dc5430efe72dfe8031d2",
+          "size": 15898
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "a71f5ce3100cbbd1dcf7262240a253e6a951f5690493cc6d61523a8c076d5fb1",
+          "size": 435967
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:02:41.552118+00:00",
+      "fit_finished_at": "2026-09-24T21:02:41.518957+00:00",
+      "fit_runtime_seconds": 52.09299999999712,
+      "fit_started_at": "2026-09-24T21:01:49.438290+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.8120489250941058,
+          "macro_F1": 0.2904780581172114
+        },
+        "clean": {
+          "Accuracy": 0.4725274725274725,
+          "MAE": 0.8105619313658451,
+          "Pearson": 0.08548281643471757,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              38,
+              0,
+              168
+            ],
+            [
+              19,
+              0,
+              165
+            ],
+            [
+              32,
+              0,
+              306
+            ]
+          ],
+          "macro_F1": 0.29467816271417746,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.2576271186440678,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.42696629213483145,
+              "recall": 0.18446601941747573,
+              "support": 206
+            },
+            {
+              "F1": 0.0,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.0,
+              "recall": 0.0,
+              "support": 184
+            },
+            {
+              "F1": 0.6264073694984647,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.4788732394366197,
+              "recall": 0.9053254437869822,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.36373197435598764
+        }
+      },
+      "normalizer": "identity",
+      "optimizer_entry_marker": true,
+      "parameters": 5060,
+      "preregistered_config_sha256": "2d001598c12996d66b977d872da10cf52dd768ea3888bec3ce4f09be1f172b19",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "3bc1675899f0325b542f59e8406a5f80fa135cda31845b13455fbd405c0bcd67",
+          "size": 91279
+        },
+        "last": {
+          "sha256": "e1acc653aaa150d2413c8ab42ee5c94a23f87ad41f05ba1c465ae711c2463508",
+          "size": 91471
+        }
+      },
+      "registered_normalizer": "identity",
+      "resolved_config_sha256": "2d001598c12996d66b977d872da10cf52dd768ea3888bec3ce4f09be1f172b19",
+      "runtime_seconds": 52.125,
+      "seed": 43,
+      "selected_epoch": 2,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:01:49.430282+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-A-identity-T0-s43"
+    },
+    {
+      "architecture": "B-A",
+      "checkpoint_sha256": "78c5ee486cdbeb3c538d8be9af95bdd48222b1faf6cd8de8366fa3483d4ba247",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 35,
+      "evaluated_epochs": 35,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "5369a4c671752016b3b5ca668ed2736be20fc0b3cffada278ac4a74aaea48096",
+          "size": 122
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "7b35013795cc070622eb3fa2cf315734e441c20dccc2aceffe37594e427ea744",
+          "size": 49726
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "80a708a67343baccfd3d3290dd778a7c603b05be20819e6c995fd896fa4be9db",
+          "size": 448962
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:04:19.101022+00:00",
+      "fit_finished_at": "2026-09-24T21:04:19.065424+00:00",
+      "fit_runtime_seconds": 97.51499999999942,
+      "fit_started_at": "2026-09-24T21:02:41.561797+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.8586586796786061,
+          "macro_F1": 0.3491970278992089
+        },
+        "clean": {
+          "Accuracy": 0.4519230769230769,
+          "MAE": 0.8443088904307813,
+          "Pearson": 0.11511099610246307,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              52,
+              29,
+              125
+            ],
+            [
+              43,
+              21,
+              120
+            ],
+            [
+              52,
+              30,
+              256
+            ]
+          ],
+          "macro_F1": 0.3546529236013547,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.29461756373937675,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.35374149659863946,
+              "recall": 0.2524271844660194,
+              "support": 206
+            },
+            {
+              "F1": 0.1590909090909091,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.2625,
+              "recall": 0.11413043478260869,
+              "support": 184
+            },
+            {
+              "F1": 0.6102502979737783,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.5109780439121756,
+              "recall": 0.757396449704142,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.406907343568923
+        }
+      },
+      "normalizer": "zscore",
+      "optimizer_entry_marker": true,
+      "parameters": 5060,
+      "preregistered_config_sha256": "c6fc17011cb56724778369bb8e848dd062b42b84e019f9b027cca0e03b73d0f5",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "78c5ee486cdbeb3c538d8be9af95bdd48222b1faf6cd8de8366fa3483d4ba247",
+          "size": 91791
+        },
+        "last": {
+          "sha256": "bee7882ca4b6a2df796f16844a27d86d149f6f0577ffa97bc7824cb372b442b9",
+          "size": 92047
+        }
+      },
+      "registered_normalizer": "zscore",
+      "resolved_config_sha256": "c6fc17011cb56724778369bb8e848dd062b42b84e019f9b027cca0e03b73d0f5",
+      "runtime_seconds": 97.54699999999866,
+      "seed": 17,
+      "selected_epoch": 25,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:02:41.553119+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-A-zscore-T0-s17"
+    },
+    {
+      "architecture": "B-A",
+      "checkpoint_sha256": "08629de0430c90e6e29de7d7898e58f3a7bd49d6a28e870129fcd43dc8d54b23",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 24,
+      "evaluated_epochs": 24,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "f8b2bff8f30bdf6f60ba8e73bf4784395bbb6c73ef03f5cf64aa9f3e44d8ce22",
+          "size": 122
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "3af3bd33a5f524a48f8332aeb33f845f787f8db447155a6afeea08ddaa2db040",
+          "size": 33913
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "74968eeb1a1f5f6921874586970c9ecb5f916b1fc0ab8f6be47689fc1b01fda2",
+          "size": 448732
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:05:36.519075+00:00",
+      "fit_finished_at": "2026-09-24T21:05:36.484148+00:00",
+      "fit_runtime_seconds": 77.36000000000058,
+      "fit_started_at": "2026-09-24T21:04:19.110992+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.8475839253245838,
+          "macro_F1": 0.3611755711656514
+        },
+        "clean": {
+          "Accuracy": 0.4739010989010989,
+          "MAE": 0.8384772639663745,
+          "Pearson": 0.10477691742279448,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              56,
+              15,
+              135
+            ],
+            [
+              34,
+              22,
+              128
+            ],
+            [
+              54,
+              17,
+              267
+            ]
+          ],
+          "macro_F1": 0.37336044095057375,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.32,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.3888888888888889,
+              "recall": 0.27184466019417475,
+              "support": 206
+            },
+            {
+              "F1": 0.18487394957983194,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.4074074074074074,
+              "recall": 0.11956521739130435,
+              "support": 184
+            },
+            {
+              "F1": 0.6152073732718893,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.5037735849056604,
+              "recall": 0.7899408284023669,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.4229078281436644
+        }
+      },
+      "normalizer": "zscore",
+      "optimizer_entry_marker": true,
+      "parameters": 5060,
+      "preregistered_config_sha256": "a8c5e1a9b56833ee2a656ce48610ba6a93fec3eedecfc0691fa2e36cec9833a2",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "08629de0430c90e6e29de7d7898e58f3a7bd49d6a28e870129fcd43dc8d54b23",
+          "size": 91535
+        },
+        "last": {
+          "sha256": "ae1df05f068c8c1a67c4b4db4c1d493bc1ce32bfdfa26c0bd08b2d07bfa90c1d",
+          "size": 91791
+        }
+      },
+      "registered_normalizer": "zscore",
+      "resolved_config_sha256": "a8c5e1a9b56833ee2a656ce48610ba6a93fec3eedecfc0691fa2e36cec9833a2",
+      "runtime_seconds": 77.42099999999846,
+      "seed": 29,
+      "selected_epoch": 14,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:04:19.101984+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-A-zscore-T0-s29"
+    },
+    {
+      "architecture": "B-A",
+      "checkpoint_sha256": "5897e8cf206ab7552663234048337c0ad1f7f1f8a659e3cb30773dce4ef56683",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 45,
+      "evaluated_epochs": 45,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "2724cf20eaa520afafd11abbc5a0fc9f0a67870e72b3a04451e9e64d329cc9b3",
+          "size": 122
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "270b95efb1adb61a14330ed6336d3bd45fc423ce2b639307d9eabb5b0b74e8f1",
+          "size": 63998
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "61c62379354479d00c9a414dd398879993eb0eb106d575d3c7f2b9dc15bf6c83",
+          "size": 451564
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:07:33.953211+00:00",
+      "fit_finished_at": "2026-09-24T21:07:33.913167+00:00",
+      "fit_runtime_seconds": 117.39100000000326,
+      "fit_started_at": "2026-09-24T21:05:36.530096+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.8682415662598899,
+          "macro_F1": 0.36317171467655657
+        },
+        "clean": {
+          "Accuracy": 0.44642857142857145,
+          "MAE": 0.8522815196458275,
+          "Pearson": 0.10772375897006921,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              48,
+              31,
+              127
+            ],
+            [
+              37,
+              34,
+              113
+            ],
+            [
+              64,
+              31,
+              243
+            ]
+          ],
+          "macro_F1": 0.36841356707030654,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.2704225352112676,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.3221476510067114,
+              "recall": 0.23300970873786409,
+              "support": 206
+            },
+            {
+              "F1": 0.24285714285714285,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.3541666666666667,
+              "recall": 0.18478260869565216,
+              "support": 184
+            },
+            {
+              "F1": 0.5919610231425091,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.5031055900621118,
+              "recall": 0.7189349112426036,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.4127411845623674
+        }
+      },
+      "normalizer": "zscore",
+      "optimizer_entry_marker": true,
+      "parameters": 5060,
+      "preregistered_config_sha256": "7b875b25b7f8e0977757fb2135e95c0ff6fbe8759e5a3b9acefbab3c1a79189e",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "5897e8cf206ab7552663234048337c0ad1f7f1f8a659e3cb30773dce4ef56683",
+          "size": 92047
+        },
+        "last": {
+          "sha256": "262c7ba9f8a968a065eab3342a7bc07800c25df5d22e5e2efd72e9664ed3754a",
+          "size": 92303
+        }
+      },
+      "registered_normalizer": "zscore",
+      "resolved_config_sha256": "7b875b25b7f8e0977757fb2135e95c0ff6fbe8759e5a3b9acefbab3c1a79189e",
+      "runtime_seconds": 117.4220000000023,
+      "seed": 43,
+      "selected_epoch": 35,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:05:36.519075+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-A-zscore-T0-s43"
+    },
+    {
+      "architecture": "B-V",
+      "checkpoint_sha256": "5bd75b0e2869575e8521e5fae0c57b2d2f2cc44418a735ab9ce19d5e7513e1af",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 40,
+      "evaluated_epochs": 40,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "9349b8ab7083dc45dcb2cb9f905528415e3ee3f336fbbd53e46fd3904eeded46",
+          "size": 122
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "f7d0214ee8f43b9590e383fd3ad9ff0429581cf807b8130f72b80a9aef5df47c",
+          "size": 57057
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "7303889dca807f95d3036fd43a934a1fd21c606a34323c1ca98a2e68b6b5a7b1",
+          "size": 450353
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:09:20.930589+00:00",
+      "fit_finished_at": "2026-09-24T21:09:20.896539+00:00",
+      "fit_runtime_seconds": 106.93699999999808,
+      "fit_started_at": "2026-09-24T21:07:33.965413+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.7932377780201292,
+          "macro_F1": 0.36589857720072055
+        },
+        "clean": {
+          "Accuracy": 0.46565934065934067,
+          "MAE": 0.789320988586981,
+          "Pearson": 0.22436421869698747,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              50,
+              24,
+              132
+            ],
+            [
+              33,
+              27,
+              124
+            ],
+            [
+              46,
+              30,
+              262
+            ]
+          ],
+          "macro_F1": 0.37147686010083597,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.29850746268656714,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.3875968992248062,
+              "recall": 0.24271844660194175,
+              "support": 206
+            },
+            {
+              "F1": 0.2037735849056604,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.3333333333333333,
+              "recall": 0.14673913043478262,
+              "support": 184
+            },
+            {
+              "F1": 0.6121495327102804,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.5057915057915058,
+              "recall": 0.7751479289940828,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.4201832678463587
+        }
+      },
+      "normalizer": "identity",
+      "optimizer_entry_marker": true,
+      "parameters": 2564,
+      "preregistered_config_sha256": "e13ad87d9f77bb33dbcbbf73a44fddde0eaf7d9c8fef7386336c1ba417a3be4e",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "5bd75b0e2869575e8521e5fae0c57b2d2f2cc44418a735ab9ce19d5e7513e1af",
+          "size": 61967
+        },
+        "last": {
+          "sha256": "a0d08af445e582bac6e795cba8acfc587867ac3182df8a2f518ad1924c3c11a0",
+          "size": 62223
+        }
+      },
+      "registered_normalizer": "identity",
+      "resolved_config_sha256": "e13ad87d9f77bb33dbcbbf73a44fddde0eaf7d9c8fef7386336c1ba417a3be4e",
+      "runtime_seconds": 106.96900000000096,
+      "seed": 17,
+      "selected_epoch": 30,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:07:33.954561+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-V-identity-T0-s17"
+    },
+    {
+      "architecture": "B-V",
+      "checkpoint_sha256": "63c28d5b6172c4d3b30d9791f8757b0a662da555ba059ad15f1f0751681151f9",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 13,
+      "evaluated_epochs": 13,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "707b16993a6d131cfa453838cbb08fcb2a0a39eb1850c23c1330f93bbd04b63b",
+          "size": 122
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "82aae9d80da34af9ba6f955e5f76f3e40484eeddacc09c5c12ec52f9d54be7ab",
+          "size": 18426
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "4280c234dd898926a7a57ce8c256a078c973d309e71efa82bf150fcfe3c6e1d2",
+          "size": 446086
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:10:15.607679+00:00",
+      "fit_finished_at": "2026-09-24T21:10:15.571793+00:00",
+      "fit_runtime_seconds": 54.625,
+      "fit_started_at": "2026-09-24T21:09:20.942597+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.7932123546680293,
+          "macro_F1": 0.35476017288551426
+        },
+        "clean": {
+          "Accuracy": 0.46703296703296704,
+          "MAE": 0.7920545889051877,
+          "Pearson": 0.14002664985632574,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              71,
+              5,
+              130
+            ],
+            [
+              44,
+              9,
+              131
+            ],
+            [
+              62,
+              16,
+              260
+            ]
+          ],
+          "macro_F1": 0.3534081312391026,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.370757180156658,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.4011299435028249,
+              "recall": 0.3446601941747573,
+              "support": 206
+            },
+            {
+              "F1": 0.08411214953271028,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.3,
+              "recall": 0.04891304347826087,
+              "support": 184
+            },
+            {
+              "F1": 0.6053550640279395,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.4990403071017274,
+              "recall": 0.7692307692307693,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.4072288822358981
+        }
+      },
+      "normalizer": "identity",
+      "optimizer_entry_marker": true,
+      "parameters": 2564,
+      "preregistered_config_sha256": "c269d3f056256fd03118004814b54fea4568c93f427bfa44410e5c1fa045aeb9",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "63c28d5b6172c4d3b30d9791f8757b0a662da555ba059ad15f1f0751681151f9",
+          "size": 61327
+        },
+        "last": {
+          "sha256": "f4b1942aaf08b4061ed29bb32fc51f83e6ebcea3e036f305e8bb71f0cbe7d494",
+          "size": 61583
+        }
+      },
+      "registered_normalizer": "identity",
+      "resolved_config_sha256": "c269d3f056256fd03118004814b54fea4568c93f427bfa44410e5c1fa045aeb9",
+      "runtime_seconds": 54.67199999999866,
+      "seed": 29,
+      "selected_epoch": 3,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:09:20.931583+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-V-identity-T0-s29"
+    },
+    {
+      "architecture": "B-V",
+      "checkpoint_sha256": "661df852642d420c218660377e002f3831830223aafa21972235b231cb5ac59e",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 36,
+      "evaluated_epochs": 36,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "8c7663218892fade96f16c1071cbf6de4ca05cd1db6158eb601f920d4d045a47",
+          "size": 122
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "bfc9c6d00f5c07199db37f62277da850c43a9a83dd6bb8c986db320cbafbd75a",
+          "size": 51315
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "3bd5c016c0264a056e703fb9d44a1b731f18f3adbe434f52965290fb02beb494",
+          "size": 450987
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:11:55.259355+00:00",
+      "fit_finished_at": "2026-09-24T21:11:55.223815+00:00",
+      "fit_runtime_seconds": 99.61000000000058,
+      "fit_started_at": "2026-09-24T21:10:15.620528+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.7868802641896758,
+          "macro_F1": 0.372720683325394
+        },
+        "clean": {
+          "Accuracy": 0.47115384615384615,
+          "MAE": 0.7837403899618068,
+          "Pearson": 0.2107967495529189,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              64,
+              20,
+              122
+            ],
+            [
+              45,
+              19,
+              120
+            ],
+            [
+              54,
+              24,
+              260
+            ]
+          ],
+          "macro_F1": 0.37325908057615376,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.34688346883468835,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.39263803680981596,
+              "recall": 0.3106796116504854,
+              "support": 206
+            },
+            {
+              "F1": 0.15384615384615385,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.30158730158730157,
+              "recall": 0.10326086956521739,
+              "support": 184
+            },
+            {
+              "F1": 0.6190476190476191,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.5179282868525896,
+              "recall": 0.7692307692307693,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.4244557446782051
+        }
+      },
+      "normalizer": "identity",
+      "optimizer_entry_marker": true,
+      "parameters": 2564,
+      "preregistered_config_sha256": "854d494f46ce71da08f09fbd5816c7db5d77c5e58e939f83906819aca7379b39",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "661df852642d420c218660377e002f3831830223aafa21972235b231cb5ac59e",
+          "size": 61903
+        },
+        "last": {
+          "sha256": "1e1d1d580f7ed59f1e0c3c0b477b9944b45ab99e0e9bea4f861ac1410f652458",
+          "size": 62095
+        }
+      },
+      "registered_normalizer": "identity",
+      "resolved_config_sha256": "854d494f46ce71da08f09fbd5816c7db5d77c5e58e939f83906819aca7379b39",
+      "runtime_seconds": 99.65599999999904,
+      "seed": 43,
+      "selected_epoch": 26,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:10:15.607679+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-V-identity-T0-s43"
+    },
+    {
+      "architecture": "B-V",
+      "checkpoint_sha256": "b817f42b13ea953d3273c4f61f73db09eeef15f9b9235ca4e62cf3b08e57ec5b",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 50,
+      "evaluated_epochs": 50,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "57a95f372782c391db8b50842e825fdc94a9f44355de534ffcf315e92c26e591",
+          "size": 122
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "afd83069eb0211fb29e4baa3fa3dba786da27b863665f229448a997785634490",
+          "size": 71454
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "99cdc2bd2b410328035a21969e4a32423721474d420e6257f6a181d0a8000aed",
+          "size": 450434
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:14:01.165176+00:00",
+      "fit_finished_at": "2026-09-24T21:14:01.124138+00:00",
+      "fit_runtime_seconds": 125.84400000000096,
+      "fit_started_at": "2026-09-24T21:11:55.273636+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.7863726756797879,
+          "macro_F1": 0.4034527516645594
+        },
+        "clean": {
+          "Accuracy": 0.47527472527472525,
+          "MAE": 0.7826655979572403,
+          "Pearson": 0.27151329280527686,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              72,
+              29,
+              105
+            ],
+            [
+              48,
+              36,
+              100
+            ],
+            [
+              69,
+              31,
+              238
+            ]
+          ],
+          "macro_F1": 0.4103916170594723,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.36455696202531646,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.38095238095238093,
+              "recall": 0.34951456310679613,
+              "support": 206
+            },
+            {
+              "F1": 0.2571428571428571,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.375,
+              "recall": 0.1956521739130435,
+              "support": 184
+            },
+            {
+              "F1": 0.6094750320102432,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.5372460496613995,
+              "recall": 0.7041420118343196,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.4511203031743999
+        }
+      },
+      "normalizer": "zscore",
+      "optimizer_entry_marker": true,
+      "parameters": 2564,
+      "preregistered_config_sha256": "180747333a3cea5bd4bf8033e656bdfdc9aeba9929391c624878064920df6526",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "b817f42b13ea953d3273c4f61f73db09eeef15f9b9235ca4e62cf3b08e57ec5b",
+          "size": 62223
+        },
+        "last": {
+          "sha256": "ba79064578101b16e605846f3be2fa78008ca06de792730f0358ca04adfaeb94",
+          "size": 62479
+        }
+      },
+      "registered_normalizer": "zscore",
+      "resolved_config_sha256": "180747333a3cea5bd4bf8033e656bdfdc9aeba9929391c624878064920df6526",
+      "runtime_seconds": 125.90600000000268,
+      "seed": 17,
+      "selected_epoch": 40,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:11:55.260356+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-V-zscore-T0-s17"
+    },
+    {
+      "architecture": "B-V",
+      "checkpoint_sha256": "f50d892c56efd9e783185b717be0f0ab5b562cc7b4d41144a76a026a195bb18c",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 26,
+      "evaluated_epochs": 26,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "1f1f770388931107927f51a97ff296be91f6d113f7c61701a2a1deb26d4b70c1",
+          "size": 122
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "4aea20914fb41b60db0746949912ad9ec01d1b15407599c79ec0ec1499f4883f",
+          "size": 36569
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "42155547a2371ad3419c1535c1170b462ee95dac273e95c9ba86ab6a02aa0112",
+          "size": 449635
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:15:22.228737+00:00",
+      "fit_finished_at": "2026-09-24T21:15:22.185698+00:00",
+      "fit_runtime_seconds": 81.0,
+      "fit_started_at": "2026-09-24T21:14:01.181190+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.7741816172992985,
+          "macro_F1": 0.37039610415083657
+        },
+        "clean": {
+          "Accuracy": 0.48626373626373626,
+          "MAE": 0.7712189134030928,
+          "Pearson": 0.2696080608266609,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              82,
+              10,
+              114
+            ],
+            [
+              56,
+              8,
+              120
+            ],
+            [
+              65,
+              9,
+              264
+            ]
+          ],
+          "macro_F1": 0.36946210878823377,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.40097799511002447,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.4039408866995074,
+              "recall": 0.39805825242718446,
+              "support": 206
+            },
+            {
+              "F1": 0.07582938388625593,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.2962962962962963,
+              "recall": 0.043478260869565216,
+              "support": 184
+            },
+            {
+              "F1": 0.631578947368421,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.5301204819277109,
+              "recall": 0.7810650887573964,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.425862304722888
+        }
+      },
+      "normalizer": "zscore",
+      "optimizer_entry_marker": true,
+      "parameters": 2564,
+      "preregistered_config_sha256": "517a6fc515b4b3254067c0593a9d075df97641b40e391c75886d9223edc1416c",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "f50d892c56efd9e783185b717be0f0ab5b562cc7b4d41144a76a026a195bb18c",
+          "size": 61647
+        },
+        "last": {
+          "sha256": "7fb52da985535b6c011b4488ff11dd17bf62fc83444c859c544059f474b87984",
+          "size": 61903
+        }
+      },
+      "registered_normalizer": "zscore",
+      "resolved_config_sha256": "517a6fc515b4b3254067c0593a9d075df97641b40e391c75886d9223edc1416c",
+      "runtime_seconds": 81.06299999999828,
+      "seed": 29,
+      "selected_epoch": 16,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:14:01.166176+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-V-zscore-T0-s29"
+    },
+    {
+      "architecture": "B-V",
+      "checkpoint_sha256": "905e108e71a0c2bf237334f99e7ecf426b2d22fce46266b61f35b36258e98337",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 23,
+      "evaluated_epochs": 23,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "1d24996d0c450a43239c18233f7956828c9f2543879eea81ef4394049761ddba",
+          "size": 122
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "78a165e3c49d472fe5609650e8ac2a6b8a4f95a5f05622e49d37c4d6a8f10e6a",
+          "size": 32323
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "a4ed609b3323dc5ab2385b91c0ecc00708acf7aefc41e62da5133484404d9dbb",
+          "size": 447187
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:16:36.832716+00:00",
+      "fit_finished_at": "2026-09-24T21:16:36.798103+00:00",
+      "fit_runtime_seconds": 74.56300000000192,
+      "fit_started_at": "2026-09-24T21:15:22.244751+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.771919424970128,
+          "macro_F1": 0.36969048451918796
+        },
+        "clean": {
+          "Accuracy": 0.489010989010989,
+          "MAE": 0.768614875370666,
+          "Pearson": 0.2647880855472397,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              68,
+              6,
+              132
+            ],
+            [
+              42,
+              14,
+              128
+            ],
+            [
+              50,
+              14,
+              274
+            ]
+          ],
+          "macro_F1": 0.37615514446616877,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.37158469945355194,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.425,
+              "recall": 0.3300970873786408,
+              "support": 206
+            },
+            {
+              "F1": 0.12844036697247707,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.4117647058823529,
+              "recall": 0.07608695652173914,
+              "support": 184
+            },
+            {
+              "F1": 0.6284403669724771,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.5131086142322098,
+              "recall": 0.8106508875739645,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.4293850544602537
+        }
+      },
+      "normalizer": "zscore",
+      "optimizer_entry_marker": true,
+      "parameters": 2564,
+      "preregistered_config_sha256": "e8b19dc8c6ff948785232de901c2a4631e709aa31ac1cd2db24bc960c20b7c16",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "905e108e71a0c2bf237334f99e7ecf426b2d22fce46266b61f35b36258e98337",
+          "size": 61583
+        },
+        "last": {
+          "sha256": "1ef98bd88f664554c27d25b73b8de9835120581761e0517ff1992db99c84cb8e",
+          "size": 61775
+        }
+      },
+      "registered_normalizer": "zscore",
+      "resolved_config_sha256": "e8b19dc8c6ff948785232de901c2a4631e709aa31ac1cd2db24bc960c20b7c16",
+      "runtime_seconds": 74.60900000000038,
+      "seed": 43,
+      "selected_epoch": 13,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:15:22.229738+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-V-zscore-T0-s43"
+    },
+    {
+      "architecture": "B-CAT",
+      "checkpoint_sha256": "6dd02641e76fafb9f0b320a0b48e057da234c97e81d0f8d2771d8e4e1a24018d",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 15,
+      "evaluated_epochs": 15,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "ccba7971247d5ff55808c038fe5e292b1f1e5e3632f7c09362c2ef16f379e48d",
+          "size": 124
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "ed1c7750916be67cee0d7d0d5e1400f5d23da95c93b3f96f6e182723c9be5073",
+          "size": 21217
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "49973b171f9eafa69881e19d1cd57243d4488c24b717e3019ca89a892e5a3b94",
+          "size": 447103
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:17:42.329930+00:00",
+      "fit_finished_at": "2026-09-24T21:17:42.292987+00:00",
+      "fit_runtime_seconds": 65.43700000000172,
+      "fit_started_at": "2026-09-24T21:16:36.849733+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.6468099838984233,
+          "macro_F1": 0.6010377375694876
+        },
+        "clean": {
+          "Accuracy": 0.6304945054945055,
+          "MAE": 0.6382424112161171,
+          "Pearson": 0.5847269176848603,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              133,
+              41,
+              32
+            ],
+            [
+              32,
+              95,
+              57
+            ],
+            [
+              43,
+              64,
+              231
+            ]
+          ],
+          "macro_F1": 0.6131438011786069,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.642512077294686,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.6394230769230769,
+              "recall": 0.6456310679611651,
+              "support": 206
+            },
+            {
+              "F1": 0.4947916666666667,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.475,
+              "recall": 0.5163043478260869,
+              "support": 184
+            },
+            {
+              "F1": 0.7021276595744681,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.721875,
+              "recall": 0.6834319526627219,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.6328548125350855
+        }
+      },
+      "normalizer": "identity",
+      "optimizer_entry_marker": true,
+      "parameters": 56452,
+      "preregistered_config_sha256": "b2ed4d6e36a649f9557041d6e7688a856efaebff68548ff97e7704bbeb1b58b6",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "6dd02641e76fafb9f0b320a0b48e057da234c97e81d0f8d2771d8e4e1a24018d",
+          "size": 708047
+        },
+        "last": {
+          "sha256": "87d67107f59e74e08ee9a69242f9ae456de541797b1681b91c45272a0116ffcf",
+          "size": 708303
+        }
+      },
+      "registered_normalizer": "identity",
+      "resolved_config_sha256": "b2ed4d6e36a649f9557041d6e7688a856efaebff68548ff97e7704bbeb1b58b6",
+      "runtime_seconds": 65.5,
+      "seed": 17,
+      "selected_epoch": 5,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:16:36.833716+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-CAT-identity-T0-s17"
+    },
+    {
+      "architecture": "B-CAT",
+      "checkpoint_sha256": "afc11b130b5621a0b1077d411b93aa439fe6256e41cf62ae517fb79b46ce1f8e",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 22,
+      "evaluated_epochs": 22,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "4cd7c19c6c94c05fb0eda2cd83077de771670fefdd54d3aa732b4e222582840b",
+          "size": 124
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "4a6348f98e6100f7f84cbb661273ea565e7e0aae5c4c9277605705b2f5714e64",
+          "size": 31340
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "e4c63ff1a33577de0357577e2d1a34b323aa053e5b2e4044936cbd5583e31194",
+          "size": 448071
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:19:01.678502+00:00",
+      "fit_finished_at": "2026-09-24T21:19:01.639100+00:00",
+      "fit_runtime_seconds": 79.28099999999904,
+      "fit_started_at": "2026-09-24T21:17:42.346946+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.7088758908833995,
+          "macro_F1": 0.583436683572374
+        },
+        "clean": {
+          "Accuracy": 0.625,
+          "MAE": 0.7046329950687352,
+          "Pearson": 0.5873883915026622,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              137,
+              31,
+              38
+            ],
+            [
+              33,
+              73,
+              78
+            ],
+            [
+              37,
+              56,
+              245
+            ]
+          ],
+          "macro_F1": 0.5962860973083077,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.6634382566585957,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.6618357487922706,
+              "recall": 0.6650485436893204,
+              "support": 206
+            },
+            {
+              "F1": 0.42441860465116277,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.45625,
+              "recall": 0.3967391304347826,
+              "support": 184
+            },
+            {
+              "F1": 0.7010014306151645,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.6786703601108033,
+              "recall": 0.7248520710059172,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.6204667413123768
+        }
+      },
+      "normalizer": "identity",
+      "optimizer_entry_marker": true,
+      "parameters": 56452,
+      "preregistered_config_sha256": "21d6cf3f8748713528a7cca77975c5ee03262d9479fee71326bf768a6dc36c72",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "afc11b130b5621a0b1077d411b93aa439fe6256e41cf62ae517fb79b46ce1f8e",
+          "size": 708175
+        },
+        "last": {
+          "sha256": "4a2924d9d95de41a89b7a39942759b9e233e942ed30eaacbf21773267faad670",
+          "size": 708431
+        }
+      },
+      "registered_normalizer": "identity",
+      "resolved_config_sha256": "21d6cf3f8748713528a7cca77975c5ee03262d9479fee71326bf768a6dc36c72",
+      "runtime_seconds": 79.34400000000096,
+      "seed": 29,
+      "selected_epoch": 12,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:17:42.330932+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-CAT-identity-T0-s29"
+    },
+    {
+      "architecture": "B-CAT",
+      "checkpoint_sha256": "daf9f54e1571f5a457c7aba71e6f57c560231326afb2d045c1397d611acd8d54",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 16,
+      "evaluated_epochs": 16,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "624c9426cb16255917596bf3d55df43c935b80a2ae3b607f47d19cc164795528",
+          "size": 124
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "ace3346e3b4dced84e317d765f8ed7ccc0ed951a22ba37d7cc2802ff688c1dcf",
+          "size": 22687
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "612e049f33c3e5e2806d76a34addc8fc8f88b6f552473e669f610889f1212a3b",
+          "size": 446615
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:20:09.193652+00:00",
+      "fit_finished_at": "2026-09-24T21:20:09.145685+00:00",
+      "fit_runtime_seconds": 67.4529999999977,
+      "fit_started_at": "2026-09-24T21:19:01.696130+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.694665660200251,
+          "macro_F1": 0.592703815691588
+        },
+        "clean": {
+          "Accuracy": 0.6263736263736264,
+          "MAE": 0.679390694229009,
+          "Pearson": 0.5980325131093948,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              155,
+              24,
+              27
+            ],
+            [
+              46,
+              69,
+              69
+            ],
+            [
+              56,
+              50,
+              232
+            ]
+          ],
+          "macro_F1": 0.5960871605352157,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.6695464362850972,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.603112840466926,
+              "recall": 0.7524271844660194,
+              "support": 206
+            },
+            {
+              "F1": 0.42201834862385323,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.4825174825174825,
+              "recall": 0.375,
+              "support": 184
+            },
+            {
+              "F1": 0.6966966966966966,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.7073170731707317,
+              "recall": 0.6863905325443787,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.6195898701991792
+        }
+      },
+      "normalizer": "identity",
+      "optimizer_entry_marker": true,
+      "parameters": 56452,
+      "preregistered_config_sha256": "45934611e320223d2c9a479870a1a646b0c3e7a391406994d6e174c1419b5993",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "daf9f54e1571f5a457c7aba71e6f57c560231326afb2d045c1397d611acd8d54",
+          "size": 708047
+        },
+        "last": {
+          "sha256": "3dbc609a840d568240559c27147eaded8bdf027d661f2013da867b5d73e5c7b4",
+          "size": 708303
+        }
+      },
+      "registered_normalizer": "identity",
+      "resolved_config_sha256": "45934611e320223d2c9a479870a1a646b0c3e7a391406994d6e174c1419b5993",
+      "runtime_seconds": 67.51499999999942,
+      "seed": 43,
+      "selected_epoch": 6,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:19:01.679503+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-CAT-identity-T0-s43"
+    },
+    {
+      "architecture": "B-CAT",
+      "checkpoint_sha256": "f34dc27a35be1c149907852094ba9f69a759fb312e65fbc6e50981a41b24fee1",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 18,
+      "evaluated_epochs": 18,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "da81dc2dea6cc998bcf67f81b51950a7006b5300849baa29a6e7c360fdeff897",
+          "size": 124
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "e31ba450a05b156544c3d4443069f13661cceacdcc70f5c5995b881c63fdabae",
+          "size": 25572
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "a12abe0ed9d25dba25d3be453bce5f7188771616c8b91b6e729dd537fc82e1af",
+          "size": 447479
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:21:23.175499+00:00",
+      "fit_finished_at": "2026-09-24T21:21:23.140101+00:00",
+      "fit_runtime_seconds": 73.92199999999866,
+      "fit_started_at": "2026-09-24T21:20:09.212668+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.6892729794954393,
+          "macro_F1": 0.5786508552282047
+        },
+        "clean": {
+          "Accuracy": 0.6318681318681318,
+          "MAE": 0.6783806467575921,
+          "Pearson": 0.5457738264072373,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              129,
+              24,
+              53
+            ],
+            [
+              29,
+              74,
+              81
+            ],
+            [
+              40,
+              41,
+              257
+            ]
+          ],
+          "macro_F1": 0.6006312138558835,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.6386138613861386,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.6515151515151515,
+              "recall": 0.6262135922330098,
+              "support": 206
+            },
+            {
+              "F1": 0.4582043343653251,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.5323741007194245,
+              "recall": 0.40217391304347827,
+              "support": 184
+            },
+            {
+              "F1": 0.7050754458161865,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.6572890025575447,
+              "recall": 0.7603550295857988,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.623873013261862
+        }
+      },
+      "normalizer": "zscore",
+      "optimizer_entry_marker": true,
+      "parameters": 56452,
+      "preregistered_config_sha256": "53d302ef80270dd1cc4d2816066ddf98cc32e7fbf84c01aedc0914ecb013688b",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "f34dc27a35be1c149907852094ba9f69a759fb312e65fbc6e50981a41b24fee1",
+          "size": 708111
+        },
+        "last": {
+          "sha256": "4691d6ac0138fa8d022a4648ef469d144e7fc064244f6ff123cd36ac0a288b0e",
+          "size": 708367
+        }
+      },
+      "registered_normalizer": "zscore",
+      "resolved_config_sha256": "53d302ef80270dd1cc4d2816066ddf98cc32e7fbf84c01aedc0914ecb013688b",
+      "runtime_seconds": 73.98500000000058,
+      "seed": 17,
+      "selected_epoch": 8,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:20:09.194653+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-CAT-zscore-T0-s17"
+    },
+    {
+      "architecture": "B-CAT",
+      "checkpoint_sha256": "f2a0f4bc2038e5006ca3874fbb3fb04b3c188f2035c45b5d3cb6c706e6b555b9",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 12,
+      "evaluated_epochs": 12,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "878f61da25914145fc1845b14facec492771ce3c3565474094ee2133f62b112c",
+          "size": 124
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "b91e438a52e650edaf8c44978a9b5f6b32e8d6c06aa053ed723283a30e4151d0",
+          "size": 17102
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "f10254502c6dec4499cbbf14220121b981fa4d42995402897ee30bd52aefd5bf",
+          "size": 447092
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:22:23.913816+00:00",
+      "fit_finished_at": "2026-09-24T21:22:23.867652+00:00",
+      "fit_runtime_seconds": 60.67199999999866,
+      "fit_started_at": "2026-09-24T21:21:23.196525+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.638439761431768,
+          "macro_F1": 0.5919970597355567
+        },
+        "clean": {
+          "Accuracy": 0.6414835164835165,
+          "MAE": 0.6230802539872596,
+          "Pearson": 0.6043001898507985,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              130,
+              25,
+              51
+            ],
+            [
+              28,
+              71,
+              85
+            ],
+            [
+              34,
+              38,
+              266
+            ]
+          ],
+          "macro_F1": 0.6062420436934517,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.6532663316582915,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.6770833333333334,
+              "recall": 0.6310679611650486,
+              "support": 206
+            },
+            {
+              "F1": 0.44654088050314467,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.5298507462686567,
+              "recall": 0.3858695652173913,
+              "support": 184
+            },
+            {
+              "F1": 0.7189189189189189,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.6616915422885572,
+              "recall": 0.7869822485207101,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.6314986001768973
+        }
+      },
+      "normalizer": "zscore",
+      "optimizer_entry_marker": true,
+      "parameters": 56452,
+      "preregistered_config_sha256": "4dd6eefab3e331334c2a6e6583b0ab1ca1feae02a99e61763527d1e4ccb651ac",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "f2a0f4bc2038e5006ca3874fbb3fb04b3c188f2035c45b5d3cb6c706e6b555b9",
+          "size": 707983
+        },
+        "last": {
+          "sha256": "a14ddf3bde59dddce915f198b04a919f9b35a61fdb8db96fcc4ab1b176f353fb",
+          "size": 708175
+        }
+      },
+      "registered_normalizer": "zscore",
+      "resolved_config_sha256": "4dd6eefab3e331334c2a6e6583b0ab1ca1feae02a99e61763527d1e4ccb651ac",
+      "runtime_seconds": 60.73400000000038,
+      "seed": 29,
+      "selected_epoch": 2,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:21:23.176490+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-CAT-zscore-T0-s29"
+    },
+    {
+      "architecture": "B-CAT",
+      "checkpoint_sha256": "56287f233ef9c5b4cc9fc52526e8e1d4c3daea24dc1ac093da16c6b4c5e94576",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 12,
+      "evaluated_epochs": 12,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "8b768482464ad163f9c370a6eb67f3ed035e95a279916490f1a29350fb13e96c",
+          "size": 124
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "ed372ad89c3e3bfe32a665a3f251f125b258a9ec21a6c260b5af10d97c63e9c3",
+          "size": 17061
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "f3ab62bcb189931652e3ebe09410ff3d395042886692542e8db158f1d4913d4c",
+          "size": 447204
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:23:25.595914+00:00",
+      "fit_finished_at": "2026-09-24T21:23:25.560378+00:00",
+      "fit_runtime_seconds": 61.625,
+      "fit_started_at": "2026-09-24T21:22:23.937837+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.6359037398412591,
+          "macro_F1": 0.5880074376517035
+        },
+        "clean": {
+          "Accuracy": 0.6304945054945055,
+          "MAE": 0.6264186874324658,
+          "Pearson": 0.5928425034321724,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              130,
+              25,
+              51
+            ],
+            [
+              29,
+              72,
+              83
+            ],
+            [
+              33,
+              48,
+              257
+            ]
+          ],
+          "macro_F1": 0.598677249026447,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.6532663316582915,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.6770833333333334,
+              "recall": 0.6310679611650486,
+              "support": 206
+            },
+            {
+              "F1": 0.4376899696048632,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.496551724137931,
+              "recall": 0.391304347826087,
+              "support": 184
+            },
+            {
+              "F1": 0.7050754458161865,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.6572890025575447,
+              "recall": 0.7603550295857988,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.6228342299653488
+        }
+      },
+      "normalizer": "zscore",
+      "optimizer_entry_marker": true,
+      "parameters": 56452,
+      "preregistered_config_sha256": "f390f4c84900966fed38d8cbb26236ea756dc9d5d850bf5158937cb14553c9c6",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "56287f233ef9c5b4cc9fc52526e8e1d4c3daea24dc1ac093da16c6b4c5e94576",
+          "size": 707983
+        },
+        "last": {
+          "sha256": "a260f084d35039cb3929c356682c900d8a93ca1876a028df4efc30ea6979e118",
+          "size": 708175
+        }
+      },
+      "registered_normalizer": "zscore",
+      "resolved_config_sha256": "f390f4c84900966fed38d8cbb26236ea756dc9d5d850bf5158937cb14553c9c6",
+      "runtime_seconds": 61.68799999999828,
+      "seed": 43,
+      "selected_epoch": 2,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:22:23.914816+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "B-CAT-zscore-T0-s43"
+    },
+    {
+      "architecture": "C0",
+      "checkpoint_sha256": "e703bc368b7b968ed84b61db26a0325c8baaf7b63a07f4da8dc887a4df2802ed",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 13,
+      "evaluated_epochs": 13,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "6af0531ea82ddaed995feb4f5c1a69db35181d50d0c89e48ef4cf6539b32c9ce",
+          "size": 121
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "863a53e19846c309ac4308657ab3ed9d21d3e52a1e4318747004bcb22891013a",
+          "size": 11289
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "e38a34a522b77a30bed6a74a64af3f2b95158c74814c927681b9319511b7fa01",
+          "size": 447340
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:32:35.881755+00:00",
+      "fit_finished_at": "2026-09-24T21:32:35.838985+00:00",
+      "fit_runtime_seconds": 543.875,
+      "fit_started_at": "2026-09-24T21:23:31.965190+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.6335938382848331,
+          "macro_F1": 0.5804277822930405
+        },
+        "clean": {
+          "Accuracy": 0.6236263736263736,
+          "MAE": 0.623661880371171,
+          "Pearson": 0.6266980283087237,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              133,
+              22,
+              51
+            ],
+            [
+              36,
+              55,
+              93
+            ],
+            [
+              41,
+              31,
+              266
+            ]
+          ],
+          "macro_F1": 0.575788450738088,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.6394230769230769,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.6333333333333333,
+              "recall": 0.6456310679611651,
+              "support": 206
+            },
+            {
+              "F1": 0.3767123287671233,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.5092592592592593,
+              "recall": 0.29891304347826086,
+              "support": 184
+            },
+            {
+              "F1": 0.7112299465240641,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.6487804878048781,
+              "recall": 0.7869822485207101,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.6063625608027997
+        }
+      },
+      "normalizer": "zscore",
+      "optimizer_entry_marker": true,
+      "parameters": 56604,
+      "preregistered_config_sha256": "bf17b036815c1b4a950ade8ac1892b26132e59563529e9edad0f4677e35a69d8",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "e703bc368b7b968ed84b61db26a0325c8baaf7b63a07f4da8dc887a4df2802ed",
+          "size": 714207
+        },
+        "last": {
+          "sha256": "630966face804602174446ab329c88cb86f31795498956634ad82097e8134320",
+          "size": 714463
+        }
+      },
+      "registered_normalizer": "common_preselected",
+      "resolved_config_sha256": "22c758dd7083ed5fb05efb966460ac349560326a211f4a3aac04a5761e8aeb67",
+      "runtime_seconds": 543.9379999999983,
+      "seed": 17,
+      "selected_epoch": 3,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:23:31.943166+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "C0-common-T0-s17"
+    },
+    {
+      "architecture": "C0",
+      "checkpoint_sha256": "41ecb4b0c3d6b141bc0d8ad9ffee00ce9dce02dd31149cd6ff26e3494ecdcaae",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 16,
+      "evaluated_epochs": 16,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "89d3a64e76d4e95d97a78453f41e74008ea06f376750bd92cd84240c09f09458",
+          "size": 121
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "8a9bbd0e0a9c692380f98b9d4f7bbb834d1c21ad8be802d46dd290e88867db57",
+          "size": 13873
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "99df9af855f47afefe1c5e69436f974995a3686af361e34c795cf693f1d0f0d6",
+          "size": 447252
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:43:33.349005+00:00",
+      "fit_finished_at": "2026-09-24T21:43:33.312974+00:00",
+      "fit_runtime_seconds": 657.4070000000029,
+      "fit_started_at": "2026-09-24T21:32:35.905776+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.652189469059297,
+          "macro_F1": 0.5877535573326921
+        },
+        "clean": {
+          "Accuracy": 0.625,
+          "MAE": 0.6405267061225579,
+          "Pearson": 0.6044271144222597,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              131,
+              25,
+              50
+            ],
+            [
+              26,
+              74,
+              84
+            ],
+            [
+              36,
+              52,
+              250
+            ]
+          ],
+          "macro_F1": 0.5969844748031378,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.656641604010025,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.6787564766839378,
+              "recall": 0.6359223300970874,
+              "support": 206
+            },
+            {
+              "F1": 0.4417910447761194,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.4900662251655629,
+              "recall": 0.40217391304347827,
+              "support": 184
+            },
+            {
+              "F1": 0.6925207756232687,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.6510416666666666,
+              "recall": 0.7396449704142012,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.618996902232879
+        }
+      },
+      "normalizer": "zscore",
+      "optimizer_entry_marker": true,
+      "parameters": 56604,
+      "preregistered_config_sha256": "ea54d33b68a42bea036d328b02af600ec34bc29f598e8de742ee8d9437216bb8",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "41ecb4b0c3d6b141bc0d8ad9ffee00ce9dce02dd31149cd6ff26e3494ecdcaae",
+          "size": 714271
+        },
+        "last": {
+          "sha256": "c2e9692c977cd29d10e9c3b1cd39fa13455645f0db6899b99e9894b3d08da2f4",
+          "size": 714527
+        }
+      },
+      "registered_normalizer": "common_preselected",
+      "resolved_config_sha256": "2f68b159f802eae9e416b804fb6977e09de4bcb824e13dd4e642fdd0118a6aa8",
+      "runtime_seconds": 657.469000000001,
+      "seed": 29,
+      "selected_epoch": 6,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:32:35.881755+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "C0-common-T0-s29"
+    },
+    {
+      "architecture": "C0",
+      "checkpoint_sha256": "bdbd4d220d9426ec3704f3a735e6d25eaf7c5f7d27dfac0938e0174f2e093aab",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 14,
+      "evaluated_epochs": 14,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "58338d125d3540e4af124df0ac53df7fe91c8e19826891759ea3364a3f3cc94b",
+          "size": 121
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "92a59a9fddb5de18202978e5a95a19533bbd48635836909bcd7384290efb4f55",
+          "size": 12136
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "398147cb5e159096e2c9d8f2e9d899fba52f3161573dc453f5547e4acb8e9992",
+          "size": 447007
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T21:53:17.107062+00:00",
+      "fit_finished_at": "2026-09-24T21:53:17.066025+00:00",
+      "fit_runtime_seconds": 583.7030000000013,
+      "fit_started_at": "2026-09-24T21:43:33.372122+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.6407860608313745,
+          "macro_F1": 0.5845303983811764
+        },
+        "clean": {
+          "Accuracy": 0.6291208791208791,
+          "MAE": 0.6158121233080976,
+          "Pearson": 0.6301750213735955,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              131,
+              25,
+              50
+            ],
+            [
+              32,
+              68,
+              84
+            ],
+            [
+              38,
+              41,
+              259
+            ]
+          ],
+          "macro_F1": 0.593341976920946,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.6437346437346437,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.6517412935323383,
+              "recall": 0.6359223300970874,
+              "support": 206
+            },
+            {
+              "F1": 0.4276729559748428,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.5074626865671642,
+              "recall": 0.3695652173913043,
+              "support": 184
+            },
+            {
+              "F1": 0.7086183310533516,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.6590330788804071,
+              "recall": 0.7662721893491125,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.6192502148416765
+        }
+      },
+      "normalizer": "zscore",
+      "optimizer_entry_marker": true,
+      "parameters": 56604,
+      "preregistered_config_sha256": "cd7a4ca16cf13afe1cb229e97b2f8bbb585d172990eabb449fa37fed8d7c8815",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "bdbd4d220d9426ec3704f3a735e6d25eaf7c5f7d27dfac0938e0174f2e093aab",
+          "size": 714271
+        },
+        "last": {
+          "sha256": "00f3e41110eaa7f15c4af6cc08eea039b2c0585df0461a79f6c52a5e982179a7",
+          "size": 714463
+        }
+      },
+      "registered_normalizer": "common_preselected",
+      "resolved_config_sha256": "d55409e748772778b62960727549c4cfa998ed89afa2dee65336ec3433bf8f11",
+      "runtime_seconds": 583.75,
+      "seed": 43,
+      "selected_epoch": 4,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:43:33.350006+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "C0-common-T0-s43"
+    },
+    {
+      "architecture": "R0",
+      "checkpoint_sha256": "ec2d2abbf9246ce1650c8c9084a783d04e85e2fc4e22d6bdd614a8cd50792a1a",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 13,
+      "evaluated_epochs": 13,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "52d4ffc9ed6c26cd0ecfdedba6d2353a73a31c116c74f6e7b3bd9f542ed5cbaa",
+          "size": 121
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "9dfe7656d66737ac59c028450e56577d16a2e46052c26449e9d4cf5e22378a3d",
+          "size": 11258
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "6faa621d8a49b7f27def60a60e20b46d688eda8a04cb49a7f3281192ac10d3a3",
+          "size": 447598
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T22:02:27.577901+00:00",
+      "fit_finished_at": "2026-09-24T22:02:27.541870+00:00",
+      "fit_runtime_seconds": 550.4059999999954,
+      "fit_started_at": "2026-09-24T21:53:17.132084+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.6376686203635834,
+          "macro_F1": 0.5787453467389643
+        },
+        "clean": {
+          "Accuracy": 0.6304945054945055,
+          "MAE": 0.6311340271845488,
+          "Pearson": 0.625639943726133,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              133,
+              18,
+              55
+            ],
+            [
+              37,
+              54,
+              93
+            ],
+            [
+              40,
+              26,
+              272
+            ]
+          ],
+          "macro_F1": 0.5800266335303949,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.6394230769230769,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.6333333333333333,
+              "recall": 0.6456310679611651,
+              "support": 206
+            },
+            {
+              "F1": 0.3829787234042553,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.5510204081632653,
+              "recall": 0.29347826086956524,
+              "support": 184
+            },
+            {
+              "F1": 0.7176781002638523,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.6476190476190476,
+              "recall": 0.8047337278106509,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.6109401604968666
+        }
+      },
+      "normalizer": "zscore",
+      "optimizer_entry_marker": true,
+      "parameters": 56604,
+      "preregistered_config_sha256": "bd720572096d6d0169fa4e83878d1362cc8837d62eba073bac1a19b7e67b1501",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "ec2d2abbf9246ce1650c8c9084a783d04e85e2fc4e22d6bdd614a8cd50792a1a",
+          "size": 714207
+        },
+        "last": {
+          "sha256": "cb4b02ecebccebc0d8c508b3bb5bc94de6a36423135aaf8410344cd4843777a0",
+          "size": 714463
+        }
+      },
+      "registered_normalizer": "common_preselected",
+      "resolved_config_sha256": "1a4ca62a4364ea21d74fe874a528596db54c294b6054f7196974c18ed55d5500",
+      "runtime_seconds": 550.4680000000008,
+      "seed": 17,
+      "selected_epoch": 3,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T21:53:17.108063+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "R0-common-T0-s17"
+    },
+    {
+      "architecture": "R0",
+      "checkpoint_sha256": "0c991f3488bc799523fda58b91bb523d53607c49dcd7d42fc81d173becabb0c2",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 16,
+      "evaluated_epochs": 16,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "bbf59b0d7bec01d73f918c1a769fa0e47ca68a3213d05197a49fc2eb143f0c1d",
+          "size": 121
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "e7424699d83b3e61cb848cf886568e643888319bc7a95a9be3b549c108ed0d98",
+          "size": 13842
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "80f341564100098eecca4195a4c3b5f7cc6496d94424dba3219f58564ba10edb",
+          "size": 446593
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T22:13:36.085596+00:00",
+      "fit_finished_at": "2026-09-24T22:13:36.050564+00:00",
+      "fit_runtime_seconds": 668.4530000000013,
+      "fit_started_at": "2026-09-24T22:02:27.602687+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.6482314520348265,
+          "macro_F1": 0.5810565890581996
+        },
+        "clean": {
+          "Accuracy": 0.6236263736263736,
+          "MAE": 0.6370924857207113,
+          "Pearson": 0.5987919034057017,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              129,
+              23,
+              54
+            ],
+            [
+              31,
+              66,
+              87
+            ],
+            [
+              33,
+              46,
+              259
+            ]
+          ],
+          "macro_F1": 0.5874355545906164,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.6466165413533834,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.6683937823834197,
+              "recall": 0.6262135922330098,
+              "support": 206
+            },
+            {
+              "F1": 0.41379310344827586,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.4888888888888889,
+              "recall": 0.358695652173913,
+              "support": 184
+            },
+            {
+              "F1": 0.7018970189701897,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.6475,
+              "recall": 0.7662721893491125,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.6134369930840713
+        }
+      },
+      "normalizer": "zscore",
+      "optimizer_entry_marker": true,
+      "parameters": 56604,
+      "preregistered_config_sha256": "7b9580037eb431e7b779685164d4dbc47d86e7d142b335f21fc3a8cc8d70eaa0",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "0c991f3488bc799523fda58b91bb523d53607c49dcd7d42fc81d173becabb0c2",
+          "size": 714271
+        },
+        "last": {
+          "sha256": "33b626b30293372227117a35f13fdd3afe356186462d3fc725a60b6e99ca1511",
+          "size": 714527
+        }
+      },
+      "registered_normalizer": "common_preselected",
+      "resolved_config_sha256": "35f369e1112daf0025b9413cd938f4556b2b570bfa9d07dd9d2e34fc2f24b57c",
+      "runtime_seconds": 668.5,
+      "seed": 29,
+      "selected_epoch": 6,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T22:02:27.579112+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "R0-common-T0-s29"
+    },
+    {
+      "architecture": "R0",
+      "checkpoint_sha256": "ca077563e3fe49ffa26955288d0572cfca7e5d855ef6794aa494c4641c825117",
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "completed_epoch_records": 15,
+      "evaluated_epochs": 15,
+      "evidence": [
+        {
+          "kind": "OPTIMIZER_ENTRY",
+          "sha256": "13e0241103f6431f595d34e08d20e6825955b12ec3e248b6b6a287752cd2eaac",
+          "size": 121
+        },
+        {
+          "kind": "PRIVATE_EPOCH_HISTORY",
+          "sha256": "b571a141070915bd051ccc5ab61de1802e9e78d3367e1fc5fdfd425d58446b48",
+          "size": 12982
+        },
+        {
+          "kind": "PRIVATE_EVALUATION",
+          "sha256": "4a87b129e584e331bfe1756be863e0f632feccdf7db94b911e6a98f6750b68f5",
+          "size": 447901
+        }
+      ],
+      "evidence_level": "VERIFIED",
+      "failure": null,
+      "finished_at": "2026-09-24T22:24:08.671525+00:00",
+      "fit_finished_at": "2026-09-24T22:24:08.635492+00:00",
+      "fit_runtime_seconds": 632.5160000000033,
+      "fit_started_at": "2026-09-24T22:13:36.110619+00:00",
+      "metrics": {
+        "attempted96": {
+          "MAE": 0.6398977927338043,
+          "macro_F1": 0.5851250189902661
+        },
+        "clean": {
+          "Accuracy": 0.6304945054945055,
+          "MAE": 0.6210833013532325,
+          "Pearson": 0.6216093255323727,
+          "Pearson_reason": null,
+          "confusion": [
+            [
+              135,
+              30,
+              41
+            ],
+            [
+              37,
+              77,
+              70
+            ],
+            [
+              35,
+              56,
+              247
+            ]
+          ],
+          "macro_F1": 0.6024423920530145,
+          "n": 728,
+          "per_class": [
+            {
+              "F1": 0.6537530266343826,
+              "class": 0,
+              "class_name": "Negative",
+              "precision": 0.6521739130434783,
+              "recall": 0.6553398058252428,
+              "support": 206
+            },
+            {
+              "F1": 0.4438040345821326,
+              "class": 1,
+              "class_name": "Neutral",
+              "precision": 0.4723926380368098,
+              "recall": 0.41847826086956524,
+              "support": 184
+            },
+            {
+              "F1": 0.7097701149425287,
+              "class": 2,
+              "class_name": "Positive",
+              "precision": 0.6899441340782123,
+              "recall": 0.7307692307692307,
+              "support": 338
+            }
+          ],
+          "weighted_F1": 0.6266969295334752
+        }
+      },
+      "normalizer": "zscore",
+      "optimizer_entry_marker": true,
+      "parameters": 56604,
+      "preregistered_config_sha256": "f5f7c7ee248a24c90a39e61e0d3c63ffdfc70d43240a9a42ba780e22f90697bc",
+      "preserved_checkpoints": {
+        "best": {
+          "sha256": "ca077563e3fe49ffa26955288d0572cfca7e5d855ef6794aa494c4641c825117",
+          "size": 714271
+        },
+        "last": {
+          "sha256": "2df8aebc5e19ba49be33a9f8a568a830fad5d6ece9162acee33fdcf3e1ed95c9",
+          "size": 714527
+        }
+      },
+      "registered_normalizer": "common_preselected",
+      "resolved_config_sha256": "ffa79923974267ec1352bf0d44ceb349cb6256d4e6f85490dcae59e07e23d350",
+      "runtime_seconds": 632.5780000000013,
+      "seed": 43,
+      "selected_epoch": 5,
+      "selected_for_campaign": true,
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "started_at": "2026-09-24T22:13:36.086597+00:00",
+      "status": "COMPLETED",
+      "successful_optimizer_step_proven": "YES",
+      "terminal_event_recorded": true,
+      "trial_id": "R0-common-T0-s43"
+    },
+    {
+      "architecture": "R1",
+      "checkpoint_sha256": null,
+      "code_commit": null,
+      "evaluated_epochs": null,
+      "evidence": [],
+      "failure": null,
+      "finished_at": null,
+      "metrics": null,
+      "normalizer": null,
+      "not_run_reason": "DEFERRED_BY_PRESELECTED_BUDGET",
+      "optimizer_entry_marker": false,
+      "preregistered_config_sha256": "6f2e4582ccf30d21dae7c3d8c10b451c1cbf8e44cfc62aac1bb4096e45afdfb6",
+      "registered_normalizer": "common_preselected",
+      "resolved_config_sha256": null,
+      "runtime_seconds": null,
+      "seed": 17,
+      "selected_epoch": null,
+      "selected_for_campaign": false,
+      "source_sha256": null,
+      "started_at": null,
+      "status": "NOT_RUN",
+      "terminal_event_recorded": false,
+      "trial_id": "R1-common-T0-s17"
+    },
+    {
+      "architecture": "R1",
+      "checkpoint_sha256": null,
+      "code_commit": null,
+      "evaluated_epochs": null,
+      "evidence": [],
+      "failure": null,
+      "finished_at": null,
+      "metrics": null,
+      "normalizer": null,
+      "not_run_reason": "DEFERRED_BY_PRESELECTED_BUDGET",
+      "optimizer_entry_marker": false,
+      "preregistered_config_sha256": "bfe1d39272ac5ddce2bf75db16d9eb9734a1e172fff593618350ec7bf23e8809",
+      "registered_normalizer": "common_preselected",
+      "resolved_config_sha256": null,
+      "runtime_seconds": null,
+      "seed": 29,
+      "selected_epoch": null,
+      "selected_for_campaign": false,
+      "source_sha256": null,
+      "started_at": null,
+      "status": "NOT_RUN",
+      "terminal_event_recorded": false,
+      "trial_id": "R1-common-T0-s29"
+    },
+    {
+      "architecture": "R1",
+      "checkpoint_sha256": null,
+      "code_commit": null,
+      "evaluated_epochs": null,
+      "evidence": [],
+      "failure": null,
+      "finished_at": null,
+      "metrics": null,
+      "normalizer": null,
+      "not_run_reason": "DEFERRED_BY_PRESELECTED_BUDGET",
+      "optimizer_entry_marker": false,
+      "preregistered_config_sha256": "45eebaded01677d750b615b725a5c256c56217f1a3968689caac5170d24a78e0",
+      "registered_normalizer": "common_preselected",
+      "resolved_config_sha256": null,
+      "runtime_seconds": null,
+      "seed": 43,
+      "selected_epoch": null,
+      "selected_for_campaign": false,
+      "source_sha256": null,
+      "started_at": null,
+      "status": "NOT_RUN",
+      "terminal_event_recorded": false,
+      "trial_id": "R1-common-T0-s43"
+    },
+    {
+      "architecture": "R2",
+      "checkpoint_sha256": null,
+      "code_commit": null,
+      "evaluated_epochs": null,
+      "evidence": [],
+      "failure": null,
+      "finished_at": null,
+      "metrics": null,
+      "normalizer": null,
+      "not_run_reason": "DEFERRED_BY_PRESELECTED_BUDGET",
+      "optimizer_entry_marker": false,
+      "preregistered_config_sha256": "4cc00469b3b0e4623f1a5036d56bb05add0698ec53197d82753bbfff9df837f3",
+      "registered_normalizer": "common_preselected",
+      "resolved_config_sha256": null,
+      "runtime_seconds": null,
+      "seed": 17,
+      "selected_epoch": null,
+      "selected_for_campaign": false,
+      "source_sha256": null,
+      "started_at": null,
+      "status": "NOT_RUN",
+      "terminal_event_recorded": false,
+      "trial_id": "R2-common-T0-s17"
+    },
+    {
+      "architecture": "R2",
+      "checkpoint_sha256": null,
+      "code_commit": null,
+      "evaluated_epochs": null,
+      "evidence": [],
+      "failure": null,
+      "finished_at": null,
+      "metrics": null,
+      "normalizer": null,
+      "not_run_reason": "DEFERRED_BY_PRESELECTED_BUDGET",
+      "optimizer_entry_marker": false,
+      "preregistered_config_sha256": "676bdaa7ad7993fc0d46c4249d88fbd6231e6fe3471cac46032fe4f11342c250",
+      "registered_normalizer": "common_preselected",
+      "resolved_config_sha256": null,
+      "runtime_seconds": null,
+      "seed": 29,
+      "selected_epoch": null,
+      "selected_for_campaign": false,
+      "source_sha256": null,
+      "started_at": null,
+      "status": "NOT_RUN",
+      "terminal_event_recorded": false,
+      "trial_id": "R2-common-T0-s29"
+    },
+    {
+      "architecture": "R2",
+      "checkpoint_sha256": null,
+      "code_commit": null,
+      "evaluated_epochs": null,
+      "evidence": [],
+      "failure": null,
+      "finished_at": null,
+      "metrics": null,
+      "normalizer": null,
+      "not_run_reason": "DEFERRED_BY_PRESELECTED_BUDGET",
+      "optimizer_entry_marker": false,
+      "preregistered_config_sha256": "66aee7c16ba56e12faa99f89a673efd74b03b3bda2aa24a7578f8c3655b92e66",
+      "registered_normalizer": "common_preselected",
+      "resolved_config_sha256": null,
+      "runtime_seconds": null,
+      "seed": 43,
+      "selected_epoch": null,
+      "selected_for_campaign": false,
+      "source_sha256": null,
+      "started_at": null,
+      "status": "NOT_RUN",
+      "terminal_event_recorded": false,
+      "trial_id": "R2-common-T0-s43"
+    },
+    {
+      "architecture": "R1-CAP",
+      "checkpoint_sha256": null,
+      "code_commit": null,
+      "evaluated_epochs": null,
+      "evidence": [],
+      "failure": null,
+      "finished_at": null,
+      "metrics": null,
+      "normalizer": null,
+      "not_run_reason": "DEFERRED_BY_PRESELECTED_BUDGET",
+      "optimizer_entry_marker": false,
+      "preregistered_config_sha256": "41931f178c3981b17e9012e2630a821f80c9471e7b35b23782462a846f479bc6",
+      "registered_normalizer": "common_preselected",
+      "resolved_config_sha256": null,
+      "runtime_seconds": null,
+      "seed": 17,
+      "selected_epoch": null,
+      "selected_for_campaign": false,
+      "source_sha256": null,
+      "started_at": null,
+      "status": "NOT_RUN",
+      "terminal_event_recorded": false,
+      "trial_id": "R1-CAP-common-T0-s17"
+    },
+    {
+      "architecture": "R1-CAP",
+      "checkpoint_sha256": null,
+      "code_commit": null,
+      "evaluated_epochs": null,
+      "evidence": [],
+      "failure": null,
+      "finished_at": null,
+      "metrics": null,
+      "normalizer": null,
+      "not_run_reason": "DEFERRED_BY_PRESELECTED_BUDGET",
+      "optimizer_entry_marker": false,
+      "preregistered_config_sha256": "31254677ed65810ae071caaba808800047806513561e1b6e5672ccb8b6ab3cad",
+      "registered_normalizer": "common_preselected",
+      "resolved_config_sha256": null,
+      "runtime_seconds": null,
+      "seed": 29,
+      "selected_epoch": null,
+      "selected_for_campaign": false,
+      "source_sha256": null,
+      "started_at": null,
+      "status": "NOT_RUN",
+      "terminal_event_recorded": false,
+      "trial_id": "R1-CAP-common-T0-s29"
+    },
+    {
+      "architecture": "R1-CAP",
+      "checkpoint_sha256": null,
+      "code_commit": null,
+      "evaluated_epochs": null,
+      "evidence": [],
+      "failure": null,
+      "finished_at": null,
+      "metrics": null,
+      "normalizer": null,
+      "not_run_reason": "DEFERRED_BY_PRESELECTED_BUDGET",
+      "optimizer_entry_marker": false,
+      "preregistered_config_sha256": "c72607461b6b1bbdcbf6781267d4199321a5e02f0dcb9af4a23984fd898d8798",
+      "registered_normalizer": "common_preselected",
+      "resolved_config_sha256": null,
+      "runtime_seconds": null,
+      "seed": 43,
+      "selected_epoch": null,
+      "selected_for_campaign": false,
+      "source_sha256": null,
+      "started_at": null,
+      "status": "NOT_RUN",
+      "terminal_event_recorded": false,
+      "trial_id": "R1-CAP-common-T0-s43"
+    }
+  ],
+  "registered_fits": 39,
+  "schema_version": 1
+}

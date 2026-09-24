@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "stage": "S01_CLOSEOUT_CANONICAL_CONFIGURATION_FINGERPRINT_REPAIR",
+  "status": "SYNTHETIC_VALIDATION_PASS_ACTUAL_RECOVERY_NOT_RUN_BY_AUTHOR",
+  "author_role": "Repair author, not independent reviewer or owner approver",
+  "actual_failed_attempt": {
+    "command_record_status": "FAILED_PRESERVED",
+    "script_sha256": "a132bde8410097157185db038aac0168c353a37f61431f56746d5b66d64a4d18",
+    "exit_code": 1,
+    "output_log_sha256": "f0e29652180a0bde6051ae0790b84cc015fe3b99683679b6126c1a8610bfda74",
+    "output_log_bytes": 159,
+    "error_record": {
+      "status": "CLOSEOUT_PROPOSAL_REJECTED",
+      "exception_type": "ValueError",
+      "detail_sha256": "628f178c75b03075e40a185b7ca34572131c6cd81845c40270e51203d87657c4"
+    },
+    "original_logs_preserved": true
+  },
+  "cause": "The helper compared raw pretty-printed configuration bytes with the canonical JSON digest stored in execution authority. Earlier synthetic fixture used a raw digest and therefore did not reproduce the real authorization contract.",
+  "authority_source": {
+    "authorization_py_line": 178,
+    "contract_digest_lines": [
+      24,
+      25,
+      26
+    ],
+    "canonicalization": {
+      "sort_keys": true,
+      "separators": [
+        ",",
+        ":"
+      ],
+      "ensure_ascii": true,
+      "allow_nan": false,
+      "encoding": "utf-8"
+    }
+  },
+  "repair": "Compare parsed configuration canonical digest with authorization.execution_config_sha256. Preserve raw file SHA256/size separately in executed configuration history and original proposal input fingerprints. Reject semantic mutations while accepting whitespace/key-order/Unicode-escaping changes.",
+  "files": [
+    {
+      "path": "prepare_closeout_governance.py",
+      "sha256": "2c662479a12e877806d48f33676f64dbb3ce5ab01712e4ff58845637d286afe8",
+      "size_bytes": 21525
+    },
+    {
+      "path": "test_prepare_closeout_governance.py",
+      "sha256": "1f3128ce6b90df96afd8493453c638cbb79dee419ed991c2ca9f89789c8e5d77",
+      "size_bytes": 9139
+    },
+    {
+      "path": "prepare_closeout_governance.pre_canonical_fix.py",
+      "sha256": "a132bde8410097157185db038aac0168c353a37f61431f56746d5b66d64a4d18",
+      "size_bytes": 20855
+    },
+    {
+      "path": "test_prepare_closeout_governance.pre_canonical_fix.py",
+      "sha256": "a0059dc946bacdaf6daae4e84d9e71b9c206aa7d67528eecd01ceb72032bdc81",
+      "size_bytes": 7034
+    }
+  ],
+  "checks": {
+    "command": "python -B -X utf8 -m unittest -v test_prepare_closeout_governance.py",
+    "tests_run": 10,
+    "tests_passed": 10,
+    "exit_code": 0,
+    "unittest_seconds": 2.161,
+    "python": "3.13.5",
+    "format_variants_tested": [
+      "Pretty UTF-8 JSON",
+      "Sorted ASCII-escaped CRLF JSON",
+      "Reversed key order compact JSON with trailing newlines"
+    ],
+    "semantic_mutations_rejected": [
+      "Execution budget change",
+      "Other semantic configuration content change"
+    ]
+  },
+  "actual_preparer_rerun": false,
+  "actual_export_rerun": false,
+  "model_training_rerun": false,
+  "official_tree_modified": false,
+  "historical_source_and_tests_preserved": true,
+  "next_action": "Root independently reviews delta, updates orchestration/publication helper pins and performs separately recorded aggregate-only recovery after actual child exit."
+}

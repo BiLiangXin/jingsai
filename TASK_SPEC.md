@@ -1,4 +1,30 @@
 task_id: S01_FROZEN_BASELINE_EXECUTION
+status: CLOSED_COMPLETED
+research_authorized: true
+s01_training_authorized: false
+training_authorized: false
+next_stage_authorized: false
+owner_authorization_mode: PREAUTHORIZED_BY_CURRENT_USER_INSTRUCTION
+authorization_status: CONSUMED
+protocol_freeze: R01-FREEZE-01
+campaign_id: S01-20260924T202319Z-30-1cf4769f
+execution_fit_budget: 30
+retry_training_budget: 0
+test_authorized: false
+attachment3_4_authorized: false
+q3_authorized: false
+
+# S01 terminal closeout
+
+Campaign `S01-20260924T202319Z-30-1cf4769f` ended with **COMPLETED**. Budget 30; started 30, completed 30, failed 0, resource-stop 0, incomplete-without-terminal-event 0. Runtime 5464.000000 seconds. Common normalizer `zscore`; B* `B-CAT-zscore`. Source evidence: `reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/SUMMARY.json`, `reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json`, `reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/BASELINE_AND_SELECTION.json`, `reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/CONFIGURATION_SUMMARY.json`.
+
+The one-shot authorization is CONSUMED for this terminal outcome; training_authorized=false and retry_training_budget=0. This closeout does not activate a new campaign, test, Attachment3/4, Q3 or any deferred model. Historical activation/preparation wording below or above is evidence of earlier states, not current execution permission. The immutable 39 preregistration rows stay NOT_RUN/null; distinct actual campaign rows and all failures are appended to docs/EXPERIMENT_REGISTER.json:s01_campaign_results. LATEST_RUN and frozen R01/data contracts remain unchanged.
+
+## Historical activation TASK_SPEC — preserved, authority consumed
+
+The following is historical content only. Its ACTIVE_AUTHORIZED/true flags cannot authorize a second execution.
+
+task_id: S01_FROZEN_BASELINE_EXECUTION
 status: ACTIVE_AUTHORIZED
 research_authorized: true
 s01_training_authorized: true
@@ -25,3 +51,5 @@ Budget selected once before originaldata bytes or optimizer access, using curren
 Before source access: clean correct Gitbranch/origin andlocal=remoteHEAD, exactcriticalmanifest, frozenfiles, independent0CRITICAL/0blockingMAJOR review, currenttests andpublicsafety; ordinaryactivationcommit/push; freshcompletepreflight; one-shotclaim to a bound newexternalprivate directory. No author self-approval. Runtime permits only the claimed process and concrete24/30plan. No CLIboolean bypass.
 
 Privatecheckpoint/result logs never enterGit. At anycap/failure preserveexistingatomiccheckpoints andallattempts, no automaticretry. Aftercompletion orstop, publish safeaggregateevidence andordinarycommit/push only; noRelease. Maintain canonicalfourledgers; LATEST_RUN stays the priorengineeringrun until a separate formalstage acceptance, while LATEST_RESEARCH records thisactualcampaign outcome. Paperdeadline2026-09-27 00:00Beijing; absolutecompute stop9/25 18:00 leaves30hours.
+
+Actual execution command and environment: `reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/validation/RUN_RECEIPT.json`. The executed activation snapshot is commit `98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7`; its manifest is historical and is intentionally not rewritten to describe the closed authorization.

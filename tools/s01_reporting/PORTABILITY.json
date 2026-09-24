@@ -1,0 +1,111 @@
+{
+  "scope": "REPORTING_PUBLICATION_PORTABILITY",
+  "helper_logic_changed": false,
+  "model_code_changed": false,
+  "official_tree_modified": false,
+  "live_campaign_opened": false,
+  "original_data_opened": false,
+  "files": [
+    {
+      "path": "export_campaign.py",
+      "source_sha256": "b1484fcb0a8135de74a2215c1e5218de632ecbfc520378d43fd830b17943113b",
+      "publication_sha256": "b1484fcb0a8135de74a2215c1e5218de632ecbfc520378d43fd830b17943113b",
+      "byte_identical": true
+    },
+    {
+      "path": "export_condition_aggregates.py",
+      "source_sha256": "6f289aabb0fd3c175636288e1712a1ac2e6fff43e1c92703e4e0ba67f2b5b88b",
+      "publication_sha256": "6f289aabb0fd3c175636288e1712a1ac2e6fff43e1c92703e4e0ba67f2b5b88b",
+      "byte_identical": true
+    },
+    {
+      "path": "render_results_report.py",
+      "source_sha256": "801cce84b97acb0f8fea20c12e7cc59f6a7bc67024765b3ccace03bcc8c85d69",
+      "publication_sha256": "801cce84b97acb0f8fea20c12e7cc59f6a7bc67024765b3ccace03bcc8c85d69",
+      "byte_identical": true
+    },
+    {
+      "path": "test_export_campaign.py",
+      "source_sha256": "7bd0c3bc023696a7919d68baa4d8c22d1b992db65f1fe140b5607a727b9c2106",
+      "publication_sha256": "df9a58f5a0c0d37a6919240ef1d2af4c9d97bd79aa8c0ef0491f19974eefbd7e",
+      "byte_identical": false,
+      "path_only_changes": [
+        "Import os solely for explicit portable path settings",
+        "Infer eventual repository root with S01_REPORTING_PROJECT override; resolve external test temp root",
+        "Keep synthetic output outside eventual Git checkout"
+      ]
+    },
+    {
+      "path": "test_export_condition_aggregates.py",
+      "source_sha256": "c8a57c3b172d60aa6eed118877be9d8f6191ff1e28befd285e5f80b2db5eee3e",
+      "publication_sha256": "363852c518ad567f829218a9cebd13313b8aff8ab4afca336625255e10eb1185",
+      "byte_identical": false,
+      "path_only_changes": [
+        "Reuse portable public metadata root for frozen reference",
+        "Reuse portable public metadata root for preregistration"
+      ]
+    },
+    {
+      "path": "test_render_results_report.py",
+      "source_sha256": "8a63dd811f9b6ced1560dd092fff2c081fa6189d7967784d3125d1041501fe10",
+      "publication_sha256": "8a63dd811f9b6ced1560dd092fff2c081fa6189d7967784d3125d1041501fe10",
+      "byte_identical": true,
+      "path_only_changes": []
+    }
+  ],
+  "actual_portable_copy_checks": {
+    "total_tests": 29,
+    "passed": 29,
+    "exit_code": 0,
+    "python": "3.11.14",
+    "operating_system": "Windows",
+    "cases": [
+      {
+        "script": "test_export_campaign.py",
+        "tests": 10,
+        "passed": 10,
+        "exit_code": 0,
+        "stdout_sha256": "2b8df711b9c25f65dcd4a76baa700206755d77165cb9bf362208719e449debec"
+      },
+      {
+        "script": "test_export_condition_aggregates.py",
+        "tests": 4,
+        "passed": 4,
+        "exit_code": 0,
+        "stdout_sha256": "45b7f9d6b6e12aa7bfc45a16653d8ed0ef7cc558b64e843aa793a14aeab728d0"
+      },
+      {
+        "script": "test_render_results_report.py",
+        "tests": 15,
+        "passed": 15,
+        "exit_code": 0,
+        "stdout_sha256": "e4f6e5ebefb5e4420511373ad08698de8baf28bc543d1d55b28ea6f72b1bba27"
+      }
+    ],
+    "public_metadata": [
+      {
+        "path": "docs/EXPERIMENT_REGISTER.json",
+        "sha256": "c92630a24269408a6a54e341f27e02e8b8d78bc0f73d664e240c8ac2d01aa5a3"
+      },
+      {
+        "path": "research/r01/reference.py",
+        "sha256": "1cd4b73bb748284b4941625d92be89522771eff8a11e4044547e5f513ea62495"
+      }
+    ]
+  },
+  "path_adaptation_scope": [
+    "Test metadata root resolves from eventual tools/s01_reporting placement; S01_REPORTING_PROJECT is an explicit override",
+    "Synthetic temp root uses OS temp or S01_REPORTING_TEST_TMP so tests work after publication inside Git",
+    "Main and condition test imports use sibling portable helpers; renderer test remains byte-identical"
+  ],
+  "review_binding": {
+    "main_and_condition_helpers": "Exact helper SHA256 values match aggregate_export_review.json TECHNICAL_PASS; no helper source change",
+    "portable_tests": "Only path handling changed; 29 actual stdlib tests passed; no independent approval is claimed for the author path adaptations"
+  },
+  "renderer_limits": [
+    "Reads four safe payloads and validates their consistency; does not independently verify the main manifest",
+    "Run against freshly verified unchanged main export after campaign exit",
+    "Uses recorded selection; no reranking or raw-label metric reconstruction",
+    "Reports configuration comparisons; detailed condition/factor outputs are exported separately"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "stage": "S01_OUTSIDE_CLOSEOUT_HELPERS_READ_ONLY_REVIEW",
+  "status": "REPAIRS_REQUIRED",
+  "review_role": "Independent technical helper review; not owner approval or authorization",
+  "scope": "Static read-only review of the three root closeout helpers, CLI/schema compatibility and current safe environment receipt shape",
+  "official_repository_modified": false,
+  "helpers_executed": false,
+  "live_campaign_read": false,
+  "original_data_read": false,
+  "model_or_gpu_computation": false,
+  "critical_findings": 0,
+  "blocking_major_findings": 2,
+  "files": [
+    {
+      "path": "run_closeout_exports.py",
+      "sha256": "b65a25811efb3e6953c16ba0a628acf1575f33a6d9154d5dc7d6c6da98411ab1",
+      "size_bytes": 5384
+    },
+    {
+      "path": "build_public_run_receipt.py",
+      "sha256": "3b2510959852e699015a97d5dce17b14480a2cf5ca41c29c1387903f5edf1fe6",
+      "size_bytes": 3608
+    },
+    {
+      "path": "assemble_publication.py",
+      "sha256": "0b23429490561c2b531ad1d939b3b550d6623a179af3e54cfc66f5b7299565ec",
+      "size_bytes": 8400
+    }
+  ],
+  "findings": [
+    {
+      "id": "CLOSEOUT-PUB-01",
+      "severity": "MAJOR",
+      "blocking": true,
+      "file": "assemble_publication.py",
+      "lines": [69, 70, 71, 72, 74, 97, 136, 137, 138, 139],
+      "issue": "Proposal path set is trusted without exact governance allowlist, containment or redirect rejection.",
+      "consequence": "A self-consistent additional proposal entry can modify LATEST_RUN, a frozen path or a path outside the repository. scan_public_bytes/forbidden_path do not reject parent traversal or enforce the ten-file governance scope.",
+      "required_fix": "Before any file read or write, require exact unique input/output sets matching the ten approved governance files, safe relative paths, target containment and no symlink/reparse ancestors. Reject extra/missing/duplicate paths. Apply the same redirect checks to fixed report/tool input and target paths."
+    },
+    {
+      "id": "CLOSEOUT-PUB-02",
+      "severity": "MAJOR",
+      "blocking": true,
+      "file": "assemble_publication.py",
+      "lines": [66, 67, 73, 75, 98, 102, 103],
+      "issue": "Audited main export is not transitively bound to proposed governance or rendered report bytes.",
+      "consequence": "Campaign/status identity and each proposal's self-declared hashes can pass while stale or modified metrics or permission flags are copied into governance/reports. RESULTS.md/CONFIGURATION_TABLE.csv have no renderer receipt check at application time.",
+      "required_fix": "Check proposal.safe_export_inputs against current audited main file SHA256/size; check top-level closed training/research authority and preserved39 preregistration; bind rendered output hashes to the actual renderer receipt or a fresh fixed-helper outside rerender comparison. Validate condition campaign/main-export provenance as part of the same input chain."
+    }
+  ],
+  "verified_observations": [
+    "CLI arguments match the current exporter/condition exporter/renderer/governance updater definitions.",
+    "Main and condition manifests use size, while governance proposal members use size_bytes, and assembler accesses these correctly.",
+    "Official writes occur after the declared termination, audit, Git branch/origin/local-remote, clean-tree and candidate scanning code paths.",
+    "Run receipt command validates all twelve argv positions and replaces executable/source/private-output positions without exposing them.",
+    "Current static environment receipt keys/types and GPU model/memory/driver query contain no private absolute path or device UUID.",
+    "No helper was executed, no live campaign was read, no code or governance was modified in this review."
+  ],
+  "limits": [
+    "No synthetic execution probes were requested or run for these three helpers in this initial review.",
+    "No actual terminal metrics, process-exit receipt, model files, raw data or Git publication was inspected.",
+    "Technical review does not grant owner approval, authorize training or claim completed publication."
+  ]
+}

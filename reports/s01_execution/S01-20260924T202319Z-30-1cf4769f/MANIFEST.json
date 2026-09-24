@@ -1,0 +1,34 @@
+{
+  "campaign_id": "S01-20260924T202319Z-30-1cf4769f",
+  "exporter_sha256": "b1484fcb0a8135de74a2215c1e5218de632ecbfc520378d43fd830b17943113b",
+  "files": [
+    {
+      "path": "SUMMARY.json",
+      "sha256": "662f21c6de17c6e7bb349c1c13afec2000f420d1dd2352389350ac8ec9378fd4",
+      "size": 4006
+    },
+    {
+      "path": "FITS.json",
+      "sha256": "0081bd341f2c692f629da65afe83aee9d03f9257defbf9a2990c700feb88f628",
+      "size": 118624
+    },
+    {
+      "path": "EVENTS.json",
+      "sha256": "6bb0fbc9c70dfbdc84f99686546482a3544851d3a5b8b74edc4dc4b2db81cbca",
+      "size": 71645
+    },
+    {
+      "path": "CONFIGURATION_SUMMARY.json",
+      "sha256": "fe8428fe6c5beed7bb5b06cb1a5e7fa551543c1f86c4a23534e342d9231ec914",
+      "size": 7846
+    },
+    {
+      "path": "BASELINE_AND_SELECTION.json",
+      "sha256": "96e41a9de70f70aa9d892b357af1ef067335c73a2acde43d200f7f9902e4a318",
+      "size": 53487
+    }
+  ],
+  "private_inputs_exported": false,
+  "schema_version": 1,
+  "self_excluded": "MANIFEST.json"
+}

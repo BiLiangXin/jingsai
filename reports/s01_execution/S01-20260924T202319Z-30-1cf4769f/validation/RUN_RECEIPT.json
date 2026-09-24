@@ -1,0 +1,64 @@
+{
+  "evidence_level": "VERIFIED",
+  "campaign_id": "S01-20260924T202319Z-30-1cf4769f",
+  "source": "Actual durable launcher receipt and read-only runtime environment observation",
+  "command_template": [
+    "python",
+    "-B",
+    "-X",
+    "utf8",
+    "tools/s01_train.py",
+    "official",
+    "--source",
+    "<LOCAL_FROZEN_ALIGNED_50_PKL>",
+    "--output-dir",
+    "<NEW_PRIVATE_CAMPAIGN_DIRECTORY>",
+    "--device",
+    "cuda"
+  ],
+  "command_redaction": "Executable, local source and private output absolute paths were replaced; all other argv retained in order.",
+  "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+  "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+  "execution_config_sha256": "fac22717e5f736dff917de238757c422e97279a52411ccfe344da1e787afbdf1",
+  "started_at": "2026-09-24T20:53:00.007981+00:00",
+  "finished_at": "2026-09-24T22:24:09.487308+00:00",
+  "exit_code": 0,
+  "watchdog_seconds": 43200,
+  "watchdog_fired": false,
+  "automatic_retry": false,
+  "launcher_sha256": "35bcd9f7d00548df055078de3f86396ab933cf1bece518d0eb01c1c8ec58a2da",
+  "original_private_launch_receipt": {
+    "sha256": "9be081ea990eb3dd09c5f0324523296001c65ee0dc874ceb0f65ca14c3a16f34",
+    "size_bytes": 848
+  },
+  "original_environment_receipt": {
+    "sha256": "742fd2aa8ebb8125d27bcd1fc615719c39be60fa64d22c633b699e9af3ef7b12",
+    "size_bytes": 420
+  },
+  "verified_safe_summary": {
+    "sha256": "662f21c6de17c6e7bb349c1c13afec2000f420d1dd2352389350ac8ec9378fd4",
+    "size_bytes": 4006
+  },
+  "environment": {
+    "captured_at": "2026-09-24T21:05:28.752561+00:00",
+    "python": "3.11.14",
+    "torch": "2.9.1+cu128",
+    "cuda_runtime": "12.8",
+    "cudnn": 91002,
+    "os": "Windows-10-10.0.19045-SP0",
+    "gpu_read_only_query": "NVIDIA GeForce RTX 5070 Ti, 16303 MiB, 591.74",
+    "seed_protocol": [
+      17,
+      29,
+      43
+    ],
+    "official_source_opened_by_this_probe": false,
+    "gpu_workload_executed_by_this_probe": false
+  },
+  "official_data_or_model_read_by_this_exporter": false,
+  "private_artifacts_retained_locally": true,
+  "limits": [
+    "This is a redacted account of an already exited campaign, not a command authorizing another run.",
+    "The environment probe performed a read-only GPU query; it did not measure another model experiment."
+  ]
+}

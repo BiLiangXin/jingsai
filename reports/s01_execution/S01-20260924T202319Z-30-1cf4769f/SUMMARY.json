@@ -1,0 +1,110 @@
+{
+  "ATTACHMENT3_4_INSPECTED": "NO",
+  "ATTACHMENT3_MASK_AVAILABILITY": "UNKNOWN",
+  "AUTHORIZATION_MODE": "PREAUTHORIZED_BY_CURRENT_USER_INSTRUCTION",
+  "B_STAR": "B-CAT-zscore",
+  "COMMON_NORMALIZER": "zscore",
+  "COMPLETED_FITS": 30,
+  "EXECUTED_FITS": 30,
+  "EXECUTION_FIT_BUDGET": 30,
+  "FAILED_FITS": 0,
+  "INCOMPLETE_FITS_WITHOUT_TERMINAL_EVENT": 0,
+  "OFFICIAL_DATA_TRAINING_PERFORMED": "YES",
+  "OFFICIAL_MODEL_EXPERIMENTS": "RUN",
+  "REGISTERED_FITS": 39,
+  "RESOURCE_CAP_STOP_FITS": 0,
+  "S01_EXECUTION_STATUS": "COMPLETED",
+  "TEST_USED_FOR_SELECTION": "NO",
+  "USER_CONFIRMATION_REQUIRED": "NO",
+  "VALID_METRICS_AVAILABLE": "YES",
+  "authorization": {
+    "authorization_mode": "PREAUTHORIZED_BY_CURRENT_USER_INSTRUCTION",
+    "authorized_manifest_sha256": "107f5ead4a0dd6b91f21748ae40d7827af452e3a225de2ec9e01fb387ecf4c1d",
+    "campaign_id": "S01-20260924T202319Z-30-1cf4769f",
+    "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+    "execution_config_sha256": "fac22717e5f736dff917de238757c422e97279a52411ccfe344da1e787afbdf1",
+    "execution_fit_budget": 30,
+    "latest_compute_finish": "2026-09-25T18:00:00+08:00",
+    "per_fit_walltime_cap_hours": 2,
+    "resource_walltime_cap_hours": 12
+  },
+  "counts": {
+    "COMPLETED": 30,
+    "FAILED": 0,
+    "INCOMPLETE_WITHOUT_TERMINAL_EVENT": 0,
+    "NOT_RUN": 9,
+    "RESOURCE_CAP_STOP": 0,
+    "RUNNING": 30
+  },
+  "data_kind": "OFFICIAL_TRAIN_VALID",
+  "evidence_level": "VERIFIED",
+  "failure": null,
+  "limitations": [
+    "Only TRAIN learning and VALID selection/evaluation; no TEST or attachment inference.",
+    "The same VALID set is used repeatedly for checkpoint/configuration selection; selection optimism remains.",
+    "Across-seed standard deviations are descriptive; no significance or unbiased-generalization claim.",
+    "Attempted96 aggregates preserve random replicate -> equal-weight nominal condition -> seed order from the executed protocol.",
+    "No sample-level records, labels, IDs, predictions, mask arrays/fingerprints, normalizer coefficients, checkpoint weights, or private paths are exported.",
+    "No additional selection, retries, lucky-seed search, or model fitting is performed by this exporter."
+  ],
+  "optimizer_entry_markers": 30,
+  "private_evidence_fingerprints": [
+    {
+      "kind": "CANONICAL_PREREGISTRATION",
+      "sha256": "c92630a24269408a6a54e341f27e02e8b8d78bc0f73d664e240c8ac2d01aa5a3",
+      "size": 65994
+    },
+    {
+      "kind": "CAMPAIGN",
+      "sha256": "f695514d8c9d0ba0a7d4d437be27b9e423bf9e228474e0eb528291390ce4557b",
+      "size": 58983
+    },
+    {
+      "kind": "CAMPAIGN_STATUS",
+      "sha256": "cf3489e4845c180497339d535919b3e09eb3aa8b7201be758285090f2ba131d8",
+      "size": 1366
+    },
+    {
+      "kind": "SOURCE_VERIFICATION",
+      "sha256": "136cc39045fe4b538d5296e113c04bd0cb3fc42735f6587e8ed3a70c6d8f8c82",
+      "size": 242
+    },
+    {
+      "kind": "BASELINE_LOCK",
+      "sha256": "aaa4ad251c79444f72ce01ba1106ed72754823c02127e4e8d3379d2daa976d6f",
+      "size": 47429
+    },
+    {
+      "kind": "SELECTION",
+      "sha256": "8b72dc9cd05089835853bdddf74f045dfbeeaae1a1fb79f926e641d2dfbb20c4",
+      "size": 535
+    },
+    {
+      "kind": "PRIVATE_EVENTS",
+      "sha256": "648ef05c4c863379a7aab04a0f24fead0055e00f899448273d435b78712732ca",
+      "size": 48418
+    }
+  ],
+  "runtime_seconds": 5464.0,
+  "schema_version": 1,
+  "selection": {
+    "configuration": "B-CAT-zscore",
+    "reason": "WINNER_FIXED_SEED_GUARD_PASS",
+    "seed": 17,
+    "selection_recomputed_by_exporter": false
+  },
+  "source_verification": {
+    "sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+    "special_sets_opened": false,
+    "splits_used": [
+      "train",
+      "valid"
+    ],
+    "test_used": false,
+    "train_count": 3395,
+    "valid_count": 728
+  },
+  "stage": "S01",
+  "training_evidence_basis": "Durable marker immediately before optimizer entry; marker alone does not certify successful step completion.",
+  "warnings": []
+}

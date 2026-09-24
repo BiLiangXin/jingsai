@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "kind": "PORTABLE_VERIFIER_PREPARATION_SYNTHETIC_TESTS_ONLY",
+  "actual_campaign_audit_performed": false,
+  "live_campaign_opened": false,
+  "official_tree_modified": false,
+  "new_model_computation": false,
+  "gpu_used": false,
+  "started_at_utc": "2026-09-24T21:30:28.170667+00:00",
+  "recorded_at_utc": "2026-09-24T21:30:46.480325+00:00",
+  "actual_command_with_private_paths_substituted": "<PYTHON> -B -X utf8 <EXTERNAL_PUBLICATION_TOOLS>/test_verify_frozen_choices.py",
+  "actual_working_directory_with_private_path_substituted": "<EXTERNAL_PUBLICATION_TOOLS>",
+  "private_path_substitution": {
+    "<PYTHON>": "Actual preinstalled birdAL Python executable; absolute user/machine path omitted.",
+    "<EXTERNAL_PUBLICATION_TOOLS>": "Actual external publication_tools/s01_reporting directory, outside the official repository.",
+    "<PROJECT>": "Actual frozen official repository path; read-only static source/registry access.",
+    "<EXTERNAL_TEMP>": "Actual external portable_verifier_test_tmp directory; fixture-owned children removed by unittest cleanup."
+  },
+  "explicit_environment": {
+    "S01_REPORTING_PROJECT": "<PROJECT>",
+    "S01_REPORTING_TEST_TMP": "<EXTERNAL_TEMP>",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "environment": {
+    "python": "3.11.14",
+    "implementation": "CPython",
+    "system": "Windows",
+    "release": "10"
+  },
+  "exit_code": 0,
+  "tests": 14,
+  "passed": 14,
+  "unittest_seconds": 18.078,
+  "elapsed_seconds": 18.312999999998283,
+  "adaptation": "Verifier copied byte-identically. Test REFERENCE path now uses F.PROJECT_ROOT, inherited from the sibling portable test_export_campaign.py S01_REPORTING_PROJECT convention. Fixture temp location/cleanup inherits S01_REPORTING_TEST_TMP from that same sibling. No test assertions or test data changed.",
+  "original_history_preserved": {
+    "record": {
+      "path": "VERIFIER_PREPARATION_TESTS.json",
+      "sha256": "ee8334fcb1ce22586c3249636d389919598666c8bf6291c7b300ffae5dfcc2fd",
+      "size": 1127
+    },
+    "status": "PASS",
+    "tests": 14,
+    "exit_code": 0,
+    "initial_prior_tests": 12
+  },
+  "files": [
+    {
+      "path": "publication_tools/s01_reporting/verify_frozen_choices.py",
+      "sha256": "26384aaaf3c2eda12b72e3c6601de6ab6e1c00fe369345a4afd09f57ee2b5af7",
+      "size": 12828
+    },
+    {
+      "path": "publication_tools/s01_reporting/test_verify_frozen_choices.py",
+      "sha256": "8ddb5bd0e477605f67a7f8b0aa8babfe3586472dea057407ca8ce501a7863b69",
+      "size": 9187
+    },
+    {
+      "path": "publication_tools/s01_reporting/test_export_campaign.py",
+      "sha256": "df9a58f5a0c0d37a6919240ef1d2af4c9d97bd79aa8c0ef0491f19974eefbd7e",
+      "size": 11516
+    },
+    {
+      "path": "publication_tools/s01_reporting/export_campaign.py",
+      "sha256": "b1484fcb0a8135de74a2215c1e5218de632ecbfc520378d43fd830b17943113b",
+      "size": 32985
+    },
+    {
+      "path": "research/r01/reference.py",
+      "sha256": "1cd4b73bb748284b4941625d92be89522771eff8a11e4044547e5f513ea62495",
+      "size": 15396
+    },
+    {
+      "path": "src/mosei/s01/protocol.py",
+      "sha256": "c69c194447c0c220a56e6dddb9c7a3e225f2a949147573d7212d4d0775871b26",
+      "size": 5842
+    },
+    {
+      "path": "docs/EXPERIMENT_REGISTER.json",
+      "sha256": "c92630a24269408a6a54e341f27e02e8b8d78bc0f73d664e240c8ac2d01aa5a3",
+      "size": 65994
+    },
+    {
+      "path": "public_verifier_preparation_tests_output.txt",
+      "sha256": "4c5a827d73d5207fcee5c1f7153bb5bdf7e593e97cab8187087d1386904e8915",
+      "size": 1729
+    }
+  ],
+  "existing_publication_files_unchanged": {
+    "export_campaign.py": "b1484fcb0a8135de74a2215c1e5218de632ecbfc520378d43fd830b17943113b",
+    "export_condition_aggregates.py": "6f289aabb0fd3c175636288e1712a1ac2e6fff43e1c92703e4e0ba67f2b5b88b",
+    "PORTABILITY.json": "3d09d37423a3463e7b19e19d8bbae476aeff5dbe348ae5bfcdedab0b0992e590",
+    "README.md": "10c39e057aa071ae8f350d4d343016a6b85710e0ae664f23a1e8439904e5168a",
+    "render_results_report.py": "801cce84b97acb0f8fea20c12e7cc59f6a7bc67024765b3ccace03bcc8c85d69",
+    "test_export_campaign.py": "df9a58f5a0c0d37a6919240ef1d2af4c9d97bd79aa8c0ef0491f19974eefbd7e",
+    "test_export_condition_aggregates.py": "363852c518ad567f829218a9cebd13313b8aff8ab4afca336625255e10eb1185",
+    "test_render_results_report.py": "8a63dd811f9b6ced1560dd092fff2c081fa6189d7967784d3125d1041501fe10"
+  }
+}

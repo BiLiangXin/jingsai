@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "stage": "S01_POST_EXIT_CLOSEOUT_RECOVERY_INDEPENDENT_REVIEW",
+  "status": "PASS",
+  "review_role": "Independent bounded technical review of a repair authored by another agent; not owner approval or new execution authority",
+  "reviewed_at_utc": "2026-09-24T22:35:53.661765+00:00",
+  "critical_findings": 0,
+  "blocking_major_findings": 0,
+  "files": [
+    {
+      "path": "prepare_closeout_governance.py",
+      "sha256": "2c662479a12e877806d48f33676f64dbb3ce5ab01712e4ff58845637d286afe8",
+      "size_bytes": 21525
+    },
+    {
+      "path": "assemble_publication.py",
+      "sha256": "acde38f476ddb69de3da2e3af3ec0e8dd005512741d1eaab061fe8c42775599e",
+      "size_bytes": 15895
+    },
+    {
+      "path": "recover_closeout_export.py",
+      "sha256": "708842c37662aeb1a6b250ff59dc3a0803b9a7513ae7997b4be9267e1cbf30df",
+      "size_bytes": 4904
+    },
+    {
+      "path": "test_prepare_closeout_governance.py",
+      "sha256": "1f3128ce6b90df96afd8493453c638cbb79dee419ed991c2ca9f89789c8e5d77",
+      "size_bytes": 9139
+    },
+    {
+      "path": "test_closeout_helpers_review.py",
+      "sha256": "aa041add35a60865b71b37e5e84cf052aec229d07e67563f339b0c563d4ae876",
+      "size_bytes": 5597
+    },
+    {
+      "path": "review_closeout_recovery_probes.py",
+      "sha256": "1f87acb0f8a6c6ef1fa0fa9676a0c28da02c0a017784aefd296d38c1a9abfaa0",
+      "size_bytes": 5953
+    }
+  ],
+  "prior_review": {
+    "path": "closeout_helpers_review_final.json",
+    "sha256": "06b78affde087ed4a2e5cf59f4cc3cfc6ad171c41e98022993b9c8d4e8d7188c",
+    "size_bytes": 3566
+  },
+  "repair_author_record": {
+    "path": "closeout_governance_canonical_repair.json",
+    "sha256": "4013a07c152328fc9bfb3936223d3c14e07fd3bfe2b1e5ca32a750e39ccf91c8",
+    "size_bytes": 3397
+  },
+  "deltas": [
+    {
+      "id": "CLOSEOUT-RECOVERY-CANONICAL-01",
+      "status": "PASS",
+      "evidence": "canonical_config_sha256 exactly matches the public contracts.digest function: sorted keys, compact separators, ensure_ascii=True, allow_nan=False and UTF-8. An independently extracted digest function agreed on nested/Unicode/bool/null/numeric cases and key-order/format variants. Nonfinite semantic values are rejected. Raw configuration SHA256 and byte size remain separate from canonical authority hash in closeout and execution history."
+    },
+    {
+      "id": "CLOSEOUT-RECOVERY-HISTORY-02",
+      "status": "PASS",
+      "evidence": "Recovery contains exactly one subprocess invocation, pinned to the repaired governance-only helper. It does not invoke training, main export, condition export or model ranking. Original failed command receipt is copied byte-for-byte with exclusive creation before the governance subprocess; the original failed log is not overwritten. The new repaired stdout uses a distinct exclusive filename. First three successful export-step records are retained; the failed governance step is retained as historical_failed_steps."
+    },
+    {
+      "id": "CLOSEOUT-RECOVERY-ASSEMBLY-03",
+      "status": "PASS",
+      "evidence": "Assembler still requires exact unique ten-file governance input/output sets and twelve proposal members, closed training/next-stage flags, retry budget zero, unchanged39 preregistration rows, matching campaign/count/selection records, and bound main/condition/rendered outputs. The preparer pin is updated to the exact repaired hash. command_result permits only the original or explicit repaired governance log name and verifies recorded stdout SHA256 and size before parsing its member receipt. Old helper digest, traversal log names and changed stdout are rejected."
+    },
+    {
+      "id": "CLOSEOUT-RECOVERY-PATHS-04",
+      "status": "PASS_FOR_CHECKED_LOCAL_FIXED_PATHS",
+      "evidence": "All13 fixed recovery paths and existing ancestors were checked read-only for symlink/reparse redirects. New proposal, preserved-initial receipt and repaired log destinations are absent. Actual initial command receipt remains FAILED_PRESERVED with exit codes0,0,0,1; its original failed stdout SHA256/size matches the receipt. Assembler and preparer retain their existing containment/no-redirect checks. Recovery is a fixed local helper, not a generic path API."
+    }
+  ],
+  "actual_validation": {
+    "python": "3.11.14 | packaged by conda-forge | (main, Oct 22 2025, 22:35:28) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "commands": [
+      {
+        "command_template": [
+          "python",
+          "-B",
+          "-X",
+          "utf8",
+          "-m",
+          "unittest",
+          "-v",
+          "test_prepare_closeout_governance.py"
+        ],
+        "exit_code": 0,
+        "tests": 10,
+        "unittest_seconds": 2.043,
+        "stdout_sha256": "f7b8fbaa183a782a3e2fb0e69a7fef19a92d1d5bb868ed8df41b66eef552517a",
+        "script": "test_prepare_closeout_governance.py"
+      },
+      {
+        "command_template": [
+          "python",
+          "-B",
+          "-X",
+          "utf8",
+          "-m",
+          "unittest",
+          "-v",
+          "test_closeout_helpers_review.py"
+        ],
+        "exit_code": 0,
+        "tests": 9,
+        "unittest_seconds": 0.082,
+        "stdout_sha256": "2149a6941e6ab942b996bc1360ec19da5b2ada635345015b98718b3dae1c417f",
+        "script": "test_closeout_helpers_review.py"
+      },
+      {
+        "command_template": [
+          "python",
+          "-B",
+          "-X",
+          "utf8",
+          "-m",
+          "unittest",
+          "-v",
+          "review_closeout_recovery_probes.py"
+        ],
+        "exit_code": 0,
+        "tests": 4,
+        "unittest_seconds": 0.048,
+        "stdout_sha256": "58bdfdd0fba42a2ccb51ae9ce4baa518f1f2c90611dae4f9b62563dea64d29aa",
+        "script": "review_closeout_recovery_probes.py"
+      }
+    ],
+    "total_tests": 23,
+    "passed": 23,
+    "exit_code": 0,
+    "scope": "Only stdlib synthetic tests, isolated function calls, AST examination and fixed outside path/failed-receipt integrity checks. No production main function invoked."
+  },
+  "recovery_preflight": {
+    "initial_receipt_sha256": "85f5af46197ed322c9b3a6d6d3b4db34a2ccdf38a6dcdcb111f736a90e1c5d05",
+    "original_failed_stdout_sha256": "f0e29652180a0bde6051ae0790b84cc015fe3b99683679b6126c1a8610bfda74",
+    "original_failed_stdout_size_bytes": 159,
+    "fixed_paths_checked": 13,
+    "redirect_findings": 0,
+    "exclusive_recovery_destinations_absent": true,
+    "initial_failed_step_exit_codes": [
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "evidence": [
+    {
+      "path": "independent_closeout_recovery_checks.json",
+      "sha256": "7022159959d2c3d688b99c342b977d7ef61dcb55e345b4e8529b93ce93adf54a",
+      "size_bytes": 1678
+    },
+    {
+      "path": "independent_recovery_path_checks.json",
+      "sha256": "f99ead3a2a292c58e2fff3cf9b9a3b9e4953929eeaa966c30ff94d826e706006",
+      "size_bytes": 2043
+    },
+    {
+      "path": "independent_recovery_test_prepare_closeout_governance.log",
+      "sha256": "f7b8fbaa183a782a3e2fb0e69a7fef19a92d1d5bb868ed8df41b66eef552517a",
+      "size_bytes": 1640
+    },
+    {
+      "path": "independent_recovery_test_closeout_helpers_review.log",
+      "sha256": "2149a6941e6ab942b996bc1360ec19da5b2ada635345015b98718b3dae1c417f",
+      "size_bytes": 1378
+    },
+    {
+      "path": "independent_recovery_review_closeout_recovery_probes.log",
+      "sha256": "58bdfdd0fba42a2ccb51ae9ce4baa518f1f2c90611dae4f9b62563dea64d29aa",
+      "size_bytes": 851
+    }
+  ],
+  "boundaries": {
+    "official_repository_modified": false,
+    "actual_helpers_main_executed": false,
+    "actual_recovery_executed": false,
+    "publication_verified": false,
+    "real_campaign_results_read": false,
+    "original_data_read": false,
+    "model_checkpoint_read": false,
+    "model_or_GPU_computation": false,
+    "new_model_or_training_authority": false
+  },
+  "limits": [
+    "This PASS binds the exact helper hashes listed above and the checked current fixed local paths. Changes require a new delta review; this report is not an authorization to retrain or rerun data/model computation.",
+    "Actual post-exit governance proposal generation and official-tree application remain root operations; no success for those unexecuted operations is claimed here.",
+    "Original failed export receipt and failed stdout must remain available after recovery. The recovery replaces only the current outside aggregate-command receipt after preserving the original failure.",
+    "Recovery relies on fixed trusted local paths; checked no-redirect state is a point-in-time check, not a concurrency or adversarial local-account guarantee. Exclusive creation prevents ordinary overwrite of preservation/log outputs.",
+    "Canonicalization validates the same parsed JSON semantics used by execution authority; raw byte evidence remains necessary and is preserved separately.",
+    "Prior model/metric exporters, renderer and frozen-choice audit are outside this repair scope and were not rerun against actual campaign results."
+  ]
+}

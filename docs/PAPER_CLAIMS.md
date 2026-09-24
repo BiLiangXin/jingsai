@@ -72,3 +72,20 @@ Earliernullcaps describe historicalfreeze; currentnumericcaps are proposals only
 
 
 Current S01 activation is SPECIFIED user authority, not empirical evidence. Only actual future VALID results tied to trial/seed/config/code/data/checkpoint hashes become VERIFIED_OFFICIAL_VALID_RESULT. No claims about deferredtemporal/gatingmodels, held-outtest, specialmask orQ3. Samevalidmultiple-selection optimism remains; no significance claim is preapproved.
+
+
+## S01 current campaign closeout — S01-20260924T202319Z-30-1cf4769f
+
+Campaign `S01-20260924T202319Z-30-1cf4769f` ended with **COMPLETED**. Budget 30; started 30, completed 30, failed 0, resource-stop 0, incomplete-without-terminal-event 0. Runtime 5464.000000 seconds. Common normalizer `zscore`; B* `B-CAT-zscore`. Source evidence: `reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/SUMMARY.json`, `reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json`, `reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/BASELINE_AND_SELECTION.json`, `reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/CONFIGURATION_SUMMARY.json`.
+
+The one-shot authorization is CONSUMED for this terminal outcome; training_authorized=false and retry_training_budget=0. This closeout does not activate a new campaign, test, Attachment3/4, Q3 or any deferred model. Historical activation/preparation wording below or above is evidence of earlier states, not current execution permission. The immutable 39 preregistration rows stay NOT_RUN/null; distinct actual campaign rows and all failures are appended to docs/EXPERIMENT_REGISTER.json:s01_campaign_results. LATEST_RUN and frozen R01/data contracts remain unchanged.
+
+Recorded final model: `B-CAT-zscore`, seed17, reason `WINNER_FIXED_SEED_GUARD_PASS`. Actual clean VALID metrics: `{"Accuracy": 0.6318681318681318, "macro_F1": 0.6006312138558835, "MAE": 0.6783806467575921, "Pearson": 0.5457738264072373, "Pearson_reason": null}`. No new selection was computed by this updater.
+
+Repeated use of VALID for checkpoint, normalizer and configuration selection causes optimistic bias; seed SD is not a confidence interval and no significance is claimed. KNOWN_AVAILABILITY, 96 conditions/144 views, replicate → equal-weight condition → seed aggregation and CLEAN_ONCE are unchanged. Continuous windows use supported-coordinate fractions, not seconds. Attachment3 reliable masks remain UNKNOWN; natural structural-zero is not artificial missing. R1/R2/R1-CAP nine fits remain NOT_RUN; a 24-fit campaign supplies no C0/R0 mechanism evidence.
+
+Evidence level: VERIFIED for the exported completed fit records and recorded selection; SPECIFIED for frozen protocol/authorization; HYPOTHESIS for population robustness mechanism; UNKNOWN for held-out test, deployment masks, deferred temporal/gating models and Q3. Earlier no-score statements describe historical checkpoints and do not replace this scoped empirical evidence.
+
+Descriptive R0−C0 differences (all three prespecified seeds): clean ΔF1=+0.001263, ΔMAE=+0.003103; attempted96 ΔF1=-0.002595, ΔMAE=-0.000257. Negative/no-improvement outcomes are retained without follow-up search.
+
+Actual execution command and environment: `reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/validation/RUN_RECEIPT.json`. The executed activation snapshot is commit `98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7`; its manifest is historical and is intentionally not rewritten to describe the closed authorization.

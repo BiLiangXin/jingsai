@@ -1,20 +1,71 @@
 {
   "task_id": "S01_FROZEN_BASELINE_EXECUTION",
   "parent_task": "R01_Q2_BASELINE_AND_ROBUST_MODEL_RESEARCH_DESIGN",
-  "research_status": "ACTIVE_AUTHORIZED",
+  "research_status": "S01_COMPLETED",
   "engineering_prerequisite": "S00E_COMPLETED_PUBLISHED_REVERIFIED",
   "source_base_commit": "71524473e915412ef823d9ad8dcb5928c4eeb2ca",
   "canonical_design": "docs/research/R01/DESIGN.md",
   "canonical_decisions": "docs/research/R01/FREEZE_01.json",
-  "evidence_manifest": "reports/s01_activation/AUTHORIZED_EXECUTION_MANIFEST.json",
+  "evidence_manifest": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/PUBLICATION_MANIFEST.json",
   "major_freeze": "R01-FREEZE-01 FROZEN_FOR_S01_PROTOCOL",
   "approved_research_freeze": true,
-  "official_model_experiments": "NOT_RUN",
-  "metrics": null,
-  "s01_training_authorized": true,
+  "official_model_experiments": "RUN",
+  "metrics": {
+    "Accuracy": 0.6318681318681318,
+    "MAE": 0.6783806467575921,
+    "Pearson": 0.5457738264072373,
+    "Pearson_reason": null,
+    "confusion": [
+      [
+        129,
+        24,
+        53
+      ],
+      [
+        29,
+        74,
+        81
+      ],
+      [
+        40,
+        41,
+        257
+      ]
+    ],
+    "macro_F1": 0.6006312138558835,
+    "n": 728,
+    "per_class": [
+      {
+        "F1": 0.6386138613861386,
+        "class": 0,
+        "class_name": "Negative",
+        "precision": 0.6515151515151515,
+        "recall": 0.6262135922330098,
+        "support": 206
+      },
+      {
+        "F1": 0.4582043343653251,
+        "class": 1,
+        "class_name": "Neutral",
+        "precision": 0.5323741007194245,
+        "recall": 0.40217391304347827,
+        "support": 184
+      },
+      {
+        "F1": 0.7050754458161865,
+        "class": 2,
+        "class_name": "Positive",
+        "precision": 0.6572890025575447,
+        "recall": 0.7603550295857988,
+        "support": 338
+      }
+    ],
+    "weighted_F1": 0.623873013261862
+  },
+  "s01_training_authorized": false,
   "q3_started": false,
   "web_handoff_zip_required": false,
-  "git_publication": "Resolve current branch HEAD and payload manifest; no self-referential commit hash",
+  "git_publication": "PENDING_ORDINARY_CLOSEOUT_COMMIT_PUSH_VERIFICATION",
   "latest_run_unchanged": true,
   "evidence_file_reuse": {
     "state/PROJECT_MEMORY.md": "docs/PROJECT_SUMMARY.md",
@@ -30,8 +81,8 @@
   "resource_walltime_cap": 12,
   "resource_walltime_cap_status": "USER_PREAUTHORIZED",
   "attachment3_mask_availability": "UNKNOWN",
-  "next_stage": "LIMITED_OFFICIAL_TRAIN_VALID_CAMPAIGN",
-  "next_stage_activated": true,
+  "next_stage": "REVIEW_EXISTING_VALID_EVIDENCE_AND_REVISE_PAPER_NO_NEW_EXECUTION",
+  "next_stage_activated": false,
   "execution_spec": "docs/S01_EXECUTION_SPEC.md",
   "execution_config": "configs/s01_execution.json",
   "proposed_execution_fit_budget": 30,
@@ -39,10 +90,200 @@
   "paper_submission_deadline": "2026-09-27T00:00:00+08:00",
   "latest_compute_finish": "2026-09-25T18:00:00+08:00",
   "reserved_paper_revision_hours": 30,
-  "normalizer_selected": "NOT_YET_SELECTED",
+  "normalizer_selected": "zscore",
   "campaign_id": "S01-20260924T202319Z-30-1cf4769f",
   "owner_authorization_mode": "PREAUTHORIZED_BY_CURRENT_USER_INSTRUCTION",
   "execution_fit_budget": 30,
   "per_fit_cap_hours": 2,
-  "execution_authorization": "S01-EXEC-AUTH-01"
+  "execution_authorization": "S01-EXEC-AUTH-01",
+  "metrics_scope": "RECORDED_SELECTED_SEED17_CLEAN_VALID",
+  "training_authorized": false,
+  "execution_authorization_status": "CONSUMED",
+  "latest_campaign": {
+    "campaign_id": "S01-20260924T202319Z-30-1cf4769f",
+    "status": "COMPLETED",
+    "generated_at": "2026-09-24T22:36:20.299264+00:00",
+    "evidence_level": "VERIFIED",
+    "evidence_scope": "OFFICIAL_TRAIN_VALID",
+    "authorization_status": "CONSUMED",
+    "training_authorized": false,
+    "retry_training_budget": 0,
+    "next_stage_authorized": false,
+    "protocol_freeze": "R01-FREEZE-01",
+    "counts": {
+      "EXECUTION_FIT_BUDGET": 30,
+      "REGISTERED_FITS": 39,
+      "EXECUTED_FITS": 30,
+      "COMPLETED_FITS": 30,
+      "FAILED_FITS": 0,
+      "RESOURCE_CAP_STOP_FITS": 0,
+      "INCOMPLETE_FITS_WITHOUT_TERMINAL_EVENT": 0
+    },
+    "runtime_seconds": 5464.0,
+    "common_normalizer": "zscore",
+    "B_star": "B-CAT-zscore",
+    "recorded_selection": {
+      "configuration": "B-CAT-zscore",
+      "reason": "WINNER_FIXED_SEED_GUARD_PASS",
+      "seed": 17,
+      "selection_recomputed_by_exporter": false
+    },
+    "selected_seed17_clean_metrics": {
+      "Accuracy": 0.6318681318681318,
+      "MAE": 0.6783806467575921,
+      "Pearson": 0.5457738264072373,
+      "Pearson_reason": null,
+      "confusion": [
+        [
+          129,
+          24,
+          53
+        ],
+        [
+          29,
+          74,
+          81
+        ],
+        [
+          40,
+          41,
+          257
+        ]
+      ],
+      "macro_F1": 0.6006312138558835,
+      "n": 728,
+      "per_class": [
+        {
+          "F1": 0.6386138613861386,
+          "class": 0,
+          "class_name": "Negative",
+          "precision": 0.6515151515151515,
+          "recall": 0.6262135922330098,
+          "support": 206
+        },
+        {
+          "F1": 0.4582043343653251,
+          "class": 1,
+          "class_name": "Neutral",
+          "precision": 0.5323741007194245,
+          "recall": 0.40217391304347827,
+          "support": 184
+        },
+        {
+          "F1": 0.7050754458161865,
+          "class": 2,
+          "class_name": "Positive",
+          "precision": 0.6572890025575447,
+          "recall": 0.7603550295857988,
+          "support": 338
+        }
+      ],
+      "weighted_F1": 0.623873013261862
+    },
+    "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+    "executed_config_sha256": "fac22717e5f736dff917de238757c422e97279a52411ccfe344da1e787afbdf1",
+    "executed_config_hash_kind": "CANONICAL_JSON_SORTED_ASCII_COMPACT",
+    "executed_config_file_sha256": "8ee9c2a4db6c55e562090ee5aae05d0860de537901fa2e8ae045e111be15464b",
+    "executed_config_file_size_bytes": 2272,
+    "authorized_execution_manifest_sha256": "107f5ead4a0dd6b91f21748ae40d7827af452e3a225de2ec9e01fb387ecf4c1d",
+    "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+    "model_seeds": [
+      17,
+      29,
+      43
+    ],
+    "train_mask_root": 2207,
+    "valid_mask_root": 1103,
+    "nominal_conditions": 96,
+    "views": 144,
+    "evidence": {
+      "SUMMARY.json": {
+        "path": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/SUMMARY.json",
+        "sha256": "662f21c6de17c6e7bb349c1c13afec2000f420d1dd2352389350ac8ec9378fd4",
+        "size_bytes": 4006
+      },
+      "FITS.json": {
+        "path": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json",
+        "sha256": "0081bd341f2c692f629da65afe83aee9d03f9257defbf9a2990c700feb88f628",
+        "size_bytes": 118624
+      },
+      "CONFIGURATION_SUMMARY.json": {
+        "path": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/CONFIGURATION_SUMMARY.json",
+        "sha256": "fe8428fe6c5beed7bb5b06cb1a5e7fa551543c1f86c4a23534e342d9231ec914",
+        "size_bytes": 7846
+      },
+      "BASELINE_AND_SELECTION.json": {
+        "path": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/BASELINE_AND_SELECTION.json",
+        "sha256": "96e41a9de70f70aa9d892b357af1ef067335c73a2acde43d200f7f9902e4a318",
+        "size_bytes": 53487
+      }
+    },
+    "final_report_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/RESULTS.md",
+    "test_used_for_selection": false,
+    "attachment3_4_inspected": false,
+    "attachment3_mask_availability": "UNKNOWN",
+    "q3_started": false,
+    "historical_preregistration_preserved": true,
+    "execution_commands_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/validation/RUN_RECEIPT.json",
+    "execution_commands_status": "VERIFIED_REDACTED_ACTUAL_COMMAND_AND_ENVIRONMENT",
+    "limitations": [
+      "Repeated VALID selection is optimistic; no significance or unbiased generalization claim.",
+      "Known availability is a simulation condition; deployment availability remains unknown.",
+      "R1/R2/R1-CAP remain NOT_RUN; no temporal/gating evidence.",
+      "No retry, further training, test, special-set inference or next stage authorized."
+    ]
+  },
+  "aggregate_export_manifest": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/MANIFEST.json",
+  "historical_research_states": [
+    {
+      "task_id": "S01_FROZEN_BASELINE_EXECUTION",
+      "parent_task": "R01_Q2_BASELINE_AND_ROBUST_MODEL_RESEARCH_DESIGN",
+      "research_status": "ACTIVE_AUTHORIZED",
+      "engineering_prerequisite": "S00E_COMPLETED_PUBLISHED_REVERIFIED",
+      "source_base_commit": "71524473e915412ef823d9ad8dcb5928c4eeb2ca",
+      "canonical_design": "docs/research/R01/DESIGN.md",
+      "canonical_decisions": "docs/research/R01/FREEZE_01.json",
+      "evidence_manifest": "reports/s01_activation/AUTHORIZED_EXECUTION_MANIFEST.json",
+      "major_freeze": "R01-FREEZE-01 FROZEN_FOR_S01_PROTOCOL",
+      "approved_research_freeze": true,
+      "official_model_experiments": "NOT_RUN",
+      "metrics": null,
+      "s01_training_authorized": true,
+      "q3_started": false,
+      "web_handoff_zip_required": false,
+      "git_publication": "Resolve current branch HEAD and payload manifest; no self-referential commit hash",
+      "latest_run_unchanged": true,
+      "evidence_file_reuse": {
+        "state/PROJECT_MEMORY.md": "docs/PROJECT_SUMMARY.md",
+        "docs/RESEARCH_LOG.md": "docs/RESEARCH_LOG.md",
+        "reports/experiments/REGISTRY.jsonl": "docs/EXPERIMENT_REGISTER.json",
+        "paper/CLAIM_EVIDENCE.md": "docs/PAPER_CLAIMS.md"
+      },
+      "approved_source_commit": "120a0938c76dd457a3d95c5c2a243f3e451a3f67",
+      "historical_proposals": "docs/research/R01/decisions.json",
+      "historical_closeout_manifest": "reports/research/R01_LOCAL_CLOSEOUT/MANIFEST.json",
+      "approval_scope": "One explicit current user preauthorized24/30campaign; frozenprotocol unchanged",
+      "core_budget": 39,
+      "resource_walltime_cap": 12,
+      "resource_walltime_cap_status": "USER_PREAUTHORIZED",
+      "attachment3_mask_availability": "UNKNOWN",
+      "next_stage": "LIMITED_OFFICIAL_TRAIN_VALID_CAMPAIGN",
+      "next_stage_activated": true,
+      "execution_spec": "docs/S01_EXECUTION_SPEC.md",
+      "execution_config": "configs/s01_execution.json",
+      "proposed_execution_fit_budget": 30,
+      "proposed_per_fit_cap_hours": 2,
+      "paper_submission_deadline": "2026-09-27T00:00:00+08:00",
+      "latest_compute_finish": "2026-09-25T18:00:00+08:00",
+      "reserved_paper_revision_hours": 30,
+      "normalizer_selected": "NOT_YET_SELECTED",
+      "campaign_id": "S01-20260924T202319Z-30-1cf4769f",
+      "owner_authorization_mode": "PREAUTHORIZED_BY_CURRENT_USER_INSTRUCTION",
+      "execution_fit_budget": 30,
+      "per_fit_cap_hours": 2,
+      "execution_authorization": "S01-EXEC-AUTH-01"
+    }
+  ],
+  "git_publication_snapshot_phase": "RESULTS_PAYLOAD_BEFORE_COMMIT",
+  "git_publication_verification": "Final commit and remote-HEAD receipt is outside Git to avoid self-reference; verify current branch history and final task response."
 }

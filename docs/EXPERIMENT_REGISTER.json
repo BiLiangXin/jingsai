@@ -2002,5 +2002,2516 @@
     "metrics": null,
     "official_model_experiments": "NOT_RUN",
     "private_events": "Private append-only events; public aggregate outcomes appended after campaign"
-  }
+  },
+  "s01_campaign_results": [
+    {
+      "campaign_id": "S01-20260924T202319Z-30-1cf4769f",
+      "status": "COMPLETED",
+      "generated_at": "2026-09-24T22:36:20.299264+00:00",
+      "evidence_level": "VERIFIED",
+      "evidence_scope": "OFFICIAL_TRAIN_VALID",
+      "authorization_status": "CONSUMED",
+      "training_authorized": false,
+      "retry_training_budget": 0,
+      "next_stage_authorized": false,
+      "protocol_freeze": "R01-FREEZE-01",
+      "counts": {
+        "EXECUTION_FIT_BUDGET": 30,
+        "REGISTERED_FITS": 39,
+        "EXECUTED_FITS": 30,
+        "COMPLETED_FITS": 30,
+        "FAILED_FITS": 0,
+        "RESOURCE_CAP_STOP_FITS": 0,
+        "INCOMPLETE_FITS_WITHOUT_TERMINAL_EVENT": 0
+      },
+      "runtime_seconds": 5464.0,
+      "common_normalizer": "zscore",
+      "B_star": "B-CAT-zscore",
+      "recorded_selection": {
+        "configuration": "B-CAT-zscore",
+        "reason": "WINNER_FIXED_SEED_GUARD_PASS",
+        "seed": 17,
+        "selection_recomputed_by_exporter": false
+      },
+      "selected_seed17_clean_metrics": {
+        "Accuracy": 0.6318681318681318,
+        "MAE": 0.6783806467575921,
+        "Pearson": 0.5457738264072373,
+        "Pearson_reason": null,
+        "confusion": [
+          [
+            129,
+            24,
+            53
+          ],
+          [
+            29,
+            74,
+            81
+          ],
+          [
+            40,
+            41,
+            257
+          ]
+        ],
+        "macro_F1": 0.6006312138558835,
+        "n": 728,
+        "per_class": [
+          {
+            "F1": 0.6386138613861386,
+            "class": 0,
+            "class_name": "Negative",
+            "precision": 0.6515151515151515,
+            "recall": 0.6262135922330098,
+            "support": 206
+          },
+          {
+            "F1": 0.4582043343653251,
+            "class": 1,
+            "class_name": "Neutral",
+            "precision": 0.5323741007194245,
+            "recall": 0.40217391304347827,
+            "support": 184
+          },
+          {
+            "F1": 0.7050754458161865,
+            "class": 2,
+            "class_name": "Positive",
+            "precision": 0.6572890025575447,
+            "recall": 0.7603550295857988,
+            "support": 338
+          }
+        ],
+        "weighted_F1": 0.623873013261862
+      },
+      "code_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+      "executed_config_sha256": "fac22717e5f736dff917de238757c422e97279a52411ccfe344da1e787afbdf1",
+      "executed_config_hash_kind": "CANONICAL_JSON_SORTED_ASCII_COMPACT",
+      "executed_config_file_sha256": "8ee9c2a4db6c55e562090ee5aae05d0860de537901fa2e8ae045e111be15464b",
+      "executed_config_file_size_bytes": 2272,
+      "authorized_execution_manifest_sha256": "107f5ead4a0dd6b91f21748ae40d7827af452e3a225de2ec9e01fb387ecf4c1d",
+      "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+      "model_seeds": [
+        17,
+        29,
+        43
+      ],
+      "train_mask_root": 2207,
+      "valid_mask_root": 1103,
+      "nominal_conditions": 96,
+      "views": 144,
+      "evidence": {
+        "SUMMARY.json": {
+          "path": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/SUMMARY.json",
+          "sha256": "662f21c6de17c6e7bb349c1c13afec2000f420d1dd2352389350ac8ec9378fd4",
+          "size_bytes": 4006
+        },
+        "FITS.json": {
+          "path": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json",
+          "sha256": "0081bd341f2c692f629da65afe83aee9d03f9257defbf9a2990c700feb88f628",
+          "size_bytes": 118624
+        },
+        "CONFIGURATION_SUMMARY.json": {
+          "path": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/CONFIGURATION_SUMMARY.json",
+          "sha256": "fe8428fe6c5beed7bb5b06cb1a5e7fa551543c1f86c4a23534e342d9231ec914",
+          "size_bytes": 7846
+        },
+        "BASELINE_AND_SELECTION.json": {
+          "path": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/BASELINE_AND_SELECTION.json",
+          "sha256": "96e41a9de70f70aa9d892b357af1ef067335c73a2acde43d200f7f9902e4a318",
+          "size_bytes": 53487
+        }
+      },
+      "final_report_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/RESULTS.md",
+      "test_used_for_selection": false,
+      "attachment3_4_inspected": false,
+      "attachment3_mask_availability": "UNKNOWN",
+      "q3_started": false,
+      "historical_preregistration_preserved": true,
+      "execution_commands_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/validation/RUN_RECEIPT.json",
+      "execution_commands_status": "VERIFIED_REDACTED_ACTUAL_COMMAND_AND_ENVIRONMENT",
+      "limitations": [
+        "Repeated VALID selection is optimistic; no significance or unbiased generalization claim.",
+        "Known availability is a simulation condition; deployment availability remains unknown.",
+        "R1/R2/R1-CAP remain NOT_RUN; no temporal/gating evidence.",
+        "No retry, further training, test, special-set inference or next stage authorized."
+      ],
+      "fits": [
+        {
+          "trial_id": "B-T-identity-T0-s17",
+          "architecture": "B-T",
+          "seed": 17,
+          "registered_normalizer": "identity",
+          "normalizer": "identity",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "2b3c1f849b74795cd113262dcf2c1933b7c351a90f648e006eeb4f1109364fc2",
+          "checkpoint_sha256": "68585fee24dc43bd1d10b9029c5d7548bf01b0d3bfeae7e38ece39417f1094e1",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/0",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/0/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.6280586231450082,
+              "macro_F1": 0.5891681978693415
+            },
+            "clean": {
+              "Accuracy": 0.6304945054945055,
+              "MAE": 0.6184329031512479,
+              "Pearson": 0.6250265895912972,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  128,
+                  28,
+                  50
+                ],
+                [
+                  25,
+                  70,
+                  89
+                ],
+                [
+                  34,
+                  43,
+                  261
+                ]
+              ],
+              "macro_F1": 0.5964952650113701,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.6513994910941476,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.6844919786096256,
+                  "recall": 0.6213592233009708,
+                  "support": 206
+                },
+                {
+                  "F1": 0.4307692307692308,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.49645390070921985,
+                  "recall": 0.3804347826086957,
+                  "support": 184
+                },
+                {
+                  "F1": 0.7073170731707317,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.6525,
+                  "recall": 0.772189349112426,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.6215975334596705
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 59.75,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-T-identity-T0-s29",
+          "architecture": "B-T",
+          "seed": 29,
+          "registered_normalizer": "identity",
+          "normalizer": "identity",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "9d808b6d7eba1113e03c77e7ca8c8260ba55fbac58698254b1bc9b4ab98fff52",
+          "checkpoint_sha256": "4917889a67a698599c4acee7278c68941766433b2b2c54064235270157f75d6b",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/1",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/1/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.6245029757726134,
+              "macro_F1": 0.5816930034047499
+            },
+            "clean": {
+              "Accuracy": 0.6304945054945055,
+              "MAE": 0.6130139361817523,
+              "Pearson": 0.6300744030219503,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  140,
+                  18,
+                  48
+                ],
+                [
+                  31,
+                  61,
+                  92
+                ],
+                [
+                  38,
+                  42,
+                  258
+                ]
+              ],
+              "macro_F1": 0.5919285839008207,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.6746987951807228,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.6698564593301436,
+                  "recall": 0.6796116504854369,
+                  "support": 206
+                },
+                {
+                  "F1": 0.4,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.5041322314049587,
+                  "recall": 0.33152173913043476,
+                  "support": 184
+                },
+                {
+                  "F1": 0.7010869565217391,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.6482412060301508,
+                  "recall": 0.7633136094674556,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.6175210757027153
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 64.01599999999962,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-T-identity-T0-s43",
+          "architecture": "B-T",
+          "seed": 43,
+          "registered_normalizer": "identity",
+          "normalizer": "identity",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "a96a37da3833366ec88b218b7c9e9eafa77c4943a76553ce51f49e4f31b83fec",
+          "checkpoint_sha256": "91a02d22c93a01a2663aa32c26c0904dc7427414f958bbf5ecbd8aeaad754ffe",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/2",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/2/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.6261575748437372,
+              "macro_F1": 0.5944517144451517
+            },
+            "clean": {
+              "Accuracy": 0.6304945054945055,
+              "MAE": 0.6103183570480074,
+              "Pearson": 0.6256818633266518,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  161,
+                  22,
+                  23
+                ],
+                [
+                  51,
+                  67,
+                  66
+                ],
+                [
+                  58,
+                  49,
+                  231
+                ]
+              ],
+              "macro_F1": 0.5982491053775812,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.6764705882352942,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.5962962962962963,
+                  "recall": 0.7815533980582524,
+                  "support": 206
+                },
+                {
+                  "F1": 0.4161490683229814,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.4855072463768116,
+                  "recall": 0.3641304347826087,
+                  "support": 184
+                },
+                {
+                  "F1": 0.7021276595744681,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.721875,
+                  "recall": 0.6834319526627219,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.6225872509396557
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 55.43700000000172,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-T-zscore-T0-s17",
+          "architecture": "B-T",
+          "seed": 17,
+          "registered_normalizer": "zscore",
+          "normalizer": "zscore",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "8a94d3c5669991f4e58fe82e2611cb8664822c03abf54a60e18a52740f15766e",
+          "checkpoint_sha256": "14577592a3a3f3e36c1554a207ae78a7aab72fadcdce0cd6e2cf41411e1e064f",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/3",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/3/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.6723986962588042,
+              "macro_F1": 0.5825726715195313
+            },
+            "clean": {
+              "Accuracy": 0.6222527472527473,
+              "MAE": 0.6565257610332932,
+              "Pearson": 0.5873784679930841,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  128,
+                  27,
+                  51
+                ],
+                [
+                  30,
+                  73,
+                  81
+                ],
+                [
+                  35,
+                  51,
+                  252
+                ]
+              ],
+              "macro_F1": 0.5918286157919018,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.6416040100250626,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.6632124352331606,
+                  "recall": 0.6213592233009708,
+                  "support": 206
+                },
+                {
+                  "F1": 0.43582089552238806,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.48344370860927155,
+                  "recall": 0.3967391304347826,
+                  "support": 184
+                },
+                {
+                  "F1": 0.6980609418282548,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.65625,
+                  "recall": 0.7455621301775148,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.6158050400813633
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 61.75,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-T-zscore-T0-s29",
+          "architecture": "B-T",
+          "seed": 29,
+          "registered_normalizer": "zscore",
+          "normalizer": "zscore",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "fcb414418ffea1c42392d735fe9ec01e430cfa1006652a0e3d59cddaf442c37c",
+          "checkpoint_sha256": "686eaff01877973b80c2a7e225a546e2ac4a26c7ba301faa4eb375dddd034710",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/4",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/4/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.6491830874327121,
+              "macro_F1": 0.5827187986766814
+            },
+            "clean": {
+              "Accuracy": 0.6332417582417582,
+              "MAE": 0.6358142077948726,
+              "Pearson": 0.5993044031379384,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  139,
+                  19,
+                  48
+                ],
+                [
+                  33,
+                  61,
+                  90
+                ],
+                [
+                  36,
+                  41,
+                  261
+                ]
+              ],
+              "macro_F1": 0.5932581274566998,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.6714975845410628,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.6682692307692307,
+                  "recall": 0.6747572815533981,
+                  "support": 206
+                },
+                {
+                  "F1": 0.4,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.5041322314049587,
+                  "recall": 0.33152173913043476,
+                  "support": 184
+                },
+                {
+                  "F1": 0.7082767978290366,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.6541353383458647,
+                  "recall": 0.772189349112426,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.6199533792330677
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 57.375,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-T-zscore-T0-s43",
+          "architecture": "B-T",
+          "seed": 43,
+          "registered_normalizer": "zscore",
+          "normalizer": "zscore",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "e4b543b2e4a8a90f83fe27d1d31c2a507520410efcf212fde617aca8fdb30e6e",
+          "checkpoint_sha256": "f7bd65dde10b53aab619fd6f577be7238be3fa8711cb956fe3bf6b7650685d0e",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/5",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/5/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.6488489144322547,
+              "macro_F1": 0.5995082068750671
+            },
+            "clean": {
+              "Accuracy": 0.6538461538461539,
+              "MAE": 0.6346937359832316,
+              "Pearson": 0.5950191865490803,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  137,
+                  20,
+                  49
+                ],
+                [
+                  29,
+                  65,
+                  90
+                ],
+                [
+                  32,
+                  32,
+                  274
+                ]
+              ],
+              "macro_F1": 0.6132684170558608,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.6782178217821783,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.6919191919191919,
+                  "recall": 0.6650485436893204,
+                  "support": 206
+                },
+                {
+                  "F1": 0.4318936877076412,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.5555555555555556,
+                  "recall": 0.3532608695652174,
+                  "support": 184
+                },
+                {
+                  "F1": 0.729693741677763,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.6634382566585957,
+                  "recall": 0.8106508875739645,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.6398596078467289
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 53.06299999999828,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-A-identity-T0-s17",
+          "architecture": "B-A",
+          "seed": 17,
+          "registered_normalizer": "identity",
+          "normalizer": "identity",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "36cfa5b7a8f154cf5c5b208a2fcdad54448df3a7ba294e115f19bfcbf15a8708",
+          "checkpoint_sha256": "f29d0d647db001213bbbefaf26e27ad776468a4c366253b31bd6c1f71359c5cc",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/6",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/6/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.78940613290985,
+              "macro_F1": 0.3040184048168983
+            },
+            "clean": {
+              "Accuracy": 0.4519230769230769,
+              "MAE": 0.7875848845057419,
+              "Pearson": 0.0979432997214081,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  60,
+                  0,
+                  146
+                ],
+                [
+                  38,
+                  0,
+                  146
+                ],
+                [
+                  69,
+                  0,
+                  269
+                ]
+              ],
+              "macro_F1": 0.3067195106070592,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.32171581769436997,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.3592814371257485,
+                  "recall": 0.2912621359223301,
+                  "support": 206
+                },
+                {
+                  "F1": 0.0,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "support": 184
+                },
+                {
+                  "F1": 0.5984427141268076,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.47950089126559714,
+                  "recall": 0.7958579881656804,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.36888337337898514
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 59.73400000000038,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-A-identity-T0-s29",
+          "architecture": "B-A",
+          "seed": 29,
+          "registered_normalizer": "identity",
+          "normalizer": "identity",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "d7c99713ffb94eb973c04248e1aea297b949b486918f01a8212204d8f7de81dd",
+          "checkpoint_sha256": "96fb651c987a66841765b227cf56e819728d0836c6da1ed6189c9bb048a7d48a",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/7",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/7/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.8603109494926914,
+              "macro_F1": 0.3186684782203258
+            },
+            "clean": {
+              "Accuracy": 0.46153846153846156,
+              "MAE": 0.8579859431259907,
+              "Pearson": 0.1305496064783814,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  12,
+                  30,
+                  164
+                ],
+                [
+                  7,
+                  35,
+                  142
+                ],
+                [
+                  8,
+                  41,
+                  289
+                ]
+              ],
+              "macro_F1": 0.32129685632138966,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.10300429184549356,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.4444444444444444,
+                  "recall": 0.05825242718446602,
+                  "support": 206
+                },
+                {
+                  "F1": 0.2413793103448276,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.330188679245283,
+                  "recall": 0.19021739130434784,
+                  "support": 184
+                },
+                {
+                  "F1": 0.6195069667738478,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.4857142857142857,
+                  "recall": 0.8550295857988166,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.3777830109796435
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 84.34400000000096,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-A-identity-T0-s43",
+          "architecture": "B-A",
+          "seed": 43,
+          "registered_normalizer": "identity",
+          "normalizer": "identity",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "2d001598c12996d66b977d872da10cf52dd768ea3888bec3ce4f09be1f172b19",
+          "checkpoint_sha256": "3bc1675899f0325b542f59e8406a5f80fa135cda31845b13455fbd405c0bcd67",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/8",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/8/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.8120489250941058,
+              "macro_F1": 0.2904780581172114
+            },
+            "clean": {
+              "Accuracy": 0.4725274725274725,
+              "MAE": 0.8105619313658451,
+              "Pearson": 0.08548281643471757,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  38,
+                  0,
+                  168
+                ],
+                [
+                  19,
+                  0,
+                  165
+                ],
+                [
+                  32,
+                  0,
+                  306
+                ]
+              ],
+              "macro_F1": 0.29467816271417746,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.2576271186440678,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.42696629213483145,
+                  "recall": 0.18446601941747573,
+                  "support": 206
+                },
+                {
+                  "F1": 0.0,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "support": 184
+                },
+                {
+                  "F1": 0.6264073694984647,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.4788732394366197,
+                  "recall": 0.9053254437869822,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.36373197435598764
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 52.125,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-A-zscore-T0-s17",
+          "architecture": "B-A",
+          "seed": 17,
+          "registered_normalizer": "zscore",
+          "normalizer": "zscore",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "c6fc17011cb56724778369bb8e848dd062b42b84e019f9b027cca0e03b73d0f5",
+          "checkpoint_sha256": "78c5ee486cdbeb3c538d8be9af95bdd48222b1faf6cd8de8366fa3483d4ba247",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/9",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/9/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.8586586796786061,
+              "macro_F1": 0.3491970278992089
+            },
+            "clean": {
+              "Accuracy": 0.4519230769230769,
+              "MAE": 0.8443088904307813,
+              "Pearson": 0.11511099610246307,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  52,
+                  29,
+                  125
+                ],
+                [
+                  43,
+                  21,
+                  120
+                ],
+                [
+                  52,
+                  30,
+                  256
+                ]
+              ],
+              "macro_F1": 0.3546529236013547,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.29461756373937675,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.35374149659863946,
+                  "recall": 0.2524271844660194,
+                  "support": 206
+                },
+                {
+                  "F1": 0.1590909090909091,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.2625,
+                  "recall": 0.11413043478260869,
+                  "support": 184
+                },
+                {
+                  "F1": 0.6102502979737783,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.5109780439121756,
+                  "recall": 0.757396449704142,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.406907343568923
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 97.54699999999866,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-A-zscore-T0-s29",
+          "architecture": "B-A",
+          "seed": 29,
+          "registered_normalizer": "zscore",
+          "normalizer": "zscore",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "a8c5e1a9b56833ee2a656ce48610ba6a93fec3eedecfc0691fa2e36cec9833a2",
+          "checkpoint_sha256": "08629de0430c90e6e29de7d7898e58f3a7bd49d6a28e870129fcd43dc8d54b23",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/10",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/10/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.8475839253245838,
+              "macro_F1": 0.3611755711656514
+            },
+            "clean": {
+              "Accuracy": 0.4739010989010989,
+              "MAE": 0.8384772639663745,
+              "Pearson": 0.10477691742279448,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  56,
+                  15,
+                  135
+                ],
+                [
+                  34,
+                  22,
+                  128
+                ],
+                [
+                  54,
+                  17,
+                  267
+                ]
+              ],
+              "macro_F1": 0.37336044095057375,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.32,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.3888888888888889,
+                  "recall": 0.27184466019417475,
+                  "support": 206
+                },
+                {
+                  "F1": 0.18487394957983194,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.4074074074074074,
+                  "recall": 0.11956521739130435,
+                  "support": 184
+                },
+                {
+                  "F1": 0.6152073732718893,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.5037735849056604,
+                  "recall": 0.7899408284023669,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.4229078281436644
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 77.42099999999846,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-A-zscore-T0-s43",
+          "architecture": "B-A",
+          "seed": 43,
+          "registered_normalizer": "zscore",
+          "normalizer": "zscore",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "7b875b25b7f8e0977757fb2135e95c0ff6fbe8759e5a3b9acefbab3c1a79189e",
+          "checkpoint_sha256": "5897e8cf206ab7552663234048337c0ad1f7f1f8a659e3cb30773dce4ef56683",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/11",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/11/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.8682415662598899,
+              "macro_F1": 0.36317171467655657
+            },
+            "clean": {
+              "Accuracy": 0.44642857142857145,
+              "MAE": 0.8522815196458275,
+              "Pearson": 0.10772375897006921,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  48,
+                  31,
+                  127
+                ],
+                [
+                  37,
+                  34,
+                  113
+                ],
+                [
+                  64,
+                  31,
+                  243
+                ]
+              ],
+              "macro_F1": 0.36841356707030654,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.2704225352112676,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.3221476510067114,
+                  "recall": 0.23300970873786409,
+                  "support": 206
+                },
+                {
+                  "F1": 0.24285714285714285,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.3541666666666667,
+                  "recall": 0.18478260869565216,
+                  "support": 184
+                },
+                {
+                  "F1": 0.5919610231425091,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.5031055900621118,
+                  "recall": 0.7189349112426036,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.4127411845623674
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 117.4220000000023,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-V-identity-T0-s17",
+          "architecture": "B-V",
+          "seed": 17,
+          "registered_normalizer": "identity",
+          "normalizer": "identity",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "e13ad87d9f77bb33dbcbbf73a44fddde0eaf7d9c8fef7386336c1ba417a3be4e",
+          "checkpoint_sha256": "5bd75b0e2869575e8521e5fae0c57b2d2f2cc44418a735ab9ce19d5e7513e1af",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/12",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/12/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.7932377780201292,
+              "macro_F1": 0.36589857720072055
+            },
+            "clean": {
+              "Accuracy": 0.46565934065934067,
+              "MAE": 0.789320988586981,
+              "Pearson": 0.22436421869698747,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  50,
+                  24,
+                  132
+                ],
+                [
+                  33,
+                  27,
+                  124
+                ],
+                [
+                  46,
+                  30,
+                  262
+                ]
+              ],
+              "macro_F1": 0.37147686010083597,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.29850746268656714,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.3875968992248062,
+                  "recall": 0.24271844660194175,
+                  "support": 206
+                },
+                {
+                  "F1": 0.2037735849056604,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.3333333333333333,
+                  "recall": 0.14673913043478262,
+                  "support": 184
+                },
+                {
+                  "F1": 0.6121495327102804,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.5057915057915058,
+                  "recall": 0.7751479289940828,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.4201832678463587
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 106.96900000000096,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-V-identity-T0-s29",
+          "architecture": "B-V",
+          "seed": 29,
+          "registered_normalizer": "identity",
+          "normalizer": "identity",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "c269d3f056256fd03118004814b54fea4568c93f427bfa44410e5c1fa045aeb9",
+          "checkpoint_sha256": "63c28d5b6172c4d3b30d9791f8757b0a662da555ba059ad15f1f0751681151f9",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/13",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/13/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.7932123546680293,
+              "macro_F1": 0.35476017288551426
+            },
+            "clean": {
+              "Accuracy": 0.46703296703296704,
+              "MAE": 0.7920545889051877,
+              "Pearson": 0.14002664985632574,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  71,
+                  5,
+                  130
+                ],
+                [
+                  44,
+                  9,
+                  131
+                ],
+                [
+                  62,
+                  16,
+                  260
+                ]
+              ],
+              "macro_F1": 0.3534081312391026,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.370757180156658,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.4011299435028249,
+                  "recall": 0.3446601941747573,
+                  "support": 206
+                },
+                {
+                  "F1": 0.08411214953271028,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.3,
+                  "recall": 0.04891304347826087,
+                  "support": 184
+                },
+                {
+                  "F1": 0.6053550640279395,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.4990403071017274,
+                  "recall": 0.7692307692307693,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.4072288822358981
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 54.67199999999866,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-V-identity-T0-s43",
+          "architecture": "B-V",
+          "seed": 43,
+          "registered_normalizer": "identity",
+          "normalizer": "identity",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "854d494f46ce71da08f09fbd5816c7db5d77c5e58e939f83906819aca7379b39",
+          "checkpoint_sha256": "661df852642d420c218660377e002f3831830223aafa21972235b231cb5ac59e",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/14",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/14/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.7868802641896758,
+              "macro_F1": 0.372720683325394
+            },
+            "clean": {
+              "Accuracy": 0.47115384615384615,
+              "MAE": 0.7837403899618068,
+              "Pearson": 0.2107967495529189,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  64,
+                  20,
+                  122
+                ],
+                [
+                  45,
+                  19,
+                  120
+                ],
+                [
+                  54,
+                  24,
+                  260
+                ]
+              ],
+              "macro_F1": 0.37325908057615376,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.34688346883468835,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.39263803680981596,
+                  "recall": 0.3106796116504854,
+                  "support": 206
+                },
+                {
+                  "F1": 0.15384615384615385,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.30158730158730157,
+                  "recall": 0.10326086956521739,
+                  "support": 184
+                },
+                {
+                  "F1": 0.6190476190476191,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.5179282868525896,
+                  "recall": 0.7692307692307693,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.4244557446782051
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 99.65599999999904,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-V-zscore-T0-s17",
+          "architecture": "B-V",
+          "seed": 17,
+          "registered_normalizer": "zscore",
+          "normalizer": "zscore",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "180747333a3cea5bd4bf8033e656bdfdc9aeba9929391c624878064920df6526",
+          "checkpoint_sha256": "b817f42b13ea953d3273c4f61f73db09eeef15f9b9235ca4e62cf3b08e57ec5b",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/15",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/15/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.7863726756797879,
+              "macro_F1": 0.4034527516645594
+            },
+            "clean": {
+              "Accuracy": 0.47527472527472525,
+              "MAE": 0.7826655979572403,
+              "Pearson": 0.27151329280527686,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  72,
+                  29,
+                  105
+                ],
+                [
+                  48,
+                  36,
+                  100
+                ],
+                [
+                  69,
+                  31,
+                  238
+                ]
+              ],
+              "macro_F1": 0.4103916170594723,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.36455696202531646,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.38095238095238093,
+                  "recall": 0.34951456310679613,
+                  "support": 206
+                },
+                {
+                  "F1": 0.2571428571428571,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.375,
+                  "recall": 0.1956521739130435,
+                  "support": 184
+                },
+                {
+                  "F1": 0.6094750320102432,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.5372460496613995,
+                  "recall": 0.7041420118343196,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.4511203031743999
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 125.90600000000268,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-V-zscore-T0-s29",
+          "architecture": "B-V",
+          "seed": 29,
+          "registered_normalizer": "zscore",
+          "normalizer": "zscore",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "517a6fc515b4b3254067c0593a9d075df97641b40e391c75886d9223edc1416c",
+          "checkpoint_sha256": "f50d892c56efd9e783185b717be0f0ab5b562cc7b4d41144a76a026a195bb18c",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/16",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/16/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.7741816172992985,
+              "macro_F1": 0.37039610415083657
+            },
+            "clean": {
+              "Accuracy": 0.48626373626373626,
+              "MAE": 0.7712189134030928,
+              "Pearson": 0.2696080608266609,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  82,
+                  10,
+                  114
+                ],
+                [
+                  56,
+                  8,
+                  120
+                ],
+                [
+                  65,
+                  9,
+                  264
+                ]
+              ],
+              "macro_F1": 0.36946210878823377,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.40097799511002447,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.4039408866995074,
+                  "recall": 0.39805825242718446,
+                  "support": 206
+                },
+                {
+                  "F1": 0.07582938388625593,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.2962962962962963,
+                  "recall": 0.043478260869565216,
+                  "support": 184
+                },
+                {
+                  "F1": 0.631578947368421,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.5301204819277109,
+                  "recall": 0.7810650887573964,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.425862304722888
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 81.06299999999828,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-V-zscore-T0-s43",
+          "architecture": "B-V",
+          "seed": 43,
+          "registered_normalizer": "zscore",
+          "normalizer": "zscore",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "e8b19dc8c6ff948785232de901c2a4631e709aa31ac1cd2db24bc960c20b7c16",
+          "checkpoint_sha256": "905e108e71a0c2bf237334f99e7ecf426b2d22fce46266b61f35b36258e98337",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/17",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/17/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.771919424970128,
+              "macro_F1": 0.36969048451918796
+            },
+            "clean": {
+              "Accuracy": 0.489010989010989,
+              "MAE": 0.768614875370666,
+              "Pearson": 0.2647880855472397,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  68,
+                  6,
+                  132
+                ],
+                [
+                  42,
+                  14,
+                  128
+                ],
+                [
+                  50,
+                  14,
+                  274
+                ]
+              ],
+              "macro_F1": 0.37615514446616877,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.37158469945355194,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.425,
+                  "recall": 0.3300970873786408,
+                  "support": 206
+                },
+                {
+                  "F1": 0.12844036697247707,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.4117647058823529,
+                  "recall": 0.07608695652173914,
+                  "support": 184
+                },
+                {
+                  "F1": 0.6284403669724771,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.5131086142322098,
+                  "recall": 0.8106508875739645,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.4293850544602537
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 74.60900000000038,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-CAT-identity-T0-s17",
+          "architecture": "B-CAT",
+          "seed": 17,
+          "registered_normalizer": "identity",
+          "normalizer": "identity",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "b2ed4d6e36a649f9557041d6e7688a856efaebff68548ff97e7704bbeb1b58b6",
+          "checkpoint_sha256": "6dd02641e76fafb9f0b320a0b48e057da234c97e81d0f8d2771d8e4e1a24018d",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/18",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/18/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.6468099838984233,
+              "macro_F1": 0.6010377375694876
+            },
+            "clean": {
+              "Accuracy": 0.6304945054945055,
+              "MAE": 0.6382424112161171,
+              "Pearson": 0.5847269176848603,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  133,
+                  41,
+                  32
+                ],
+                [
+                  32,
+                  95,
+                  57
+                ],
+                [
+                  43,
+                  64,
+                  231
+                ]
+              ],
+              "macro_F1": 0.6131438011786069,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.642512077294686,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.6394230769230769,
+                  "recall": 0.6456310679611651,
+                  "support": 206
+                },
+                {
+                  "F1": 0.4947916666666667,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.475,
+                  "recall": 0.5163043478260869,
+                  "support": 184
+                },
+                {
+                  "F1": 0.7021276595744681,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.721875,
+                  "recall": 0.6834319526627219,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.6328548125350855
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 65.5,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-CAT-identity-T0-s29",
+          "architecture": "B-CAT",
+          "seed": 29,
+          "registered_normalizer": "identity",
+          "normalizer": "identity",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "21d6cf3f8748713528a7cca77975c5ee03262d9479fee71326bf768a6dc36c72",
+          "checkpoint_sha256": "afc11b130b5621a0b1077d411b93aa439fe6256e41cf62ae517fb79b46ce1f8e",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/19",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/19/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.7088758908833995,
+              "macro_F1": 0.583436683572374
+            },
+            "clean": {
+              "Accuracy": 0.625,
+              "MAE": 0.7046329950687352,
+              "Pearson": 0.5873883915026622,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  137,
+                  31,
+                  38
+                ],
+                [
+                  33,
+                  73,
+                  78
+                ],
+                [
+                  37,
+                  56,
+                  245
+                ]
+              ],
+              "macro_F1": 0.5962860973083077,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.6634382566585957,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.6618357487922706,
+                  "recall": 0.6650485436893204,
+                  "support": 206
+                },
+                {
+                  "F1": 0.42441860465116277,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.45625,
+                  "recall": 0.3967391304347826,
+                  "support": 184
+                },
+                {
+                  "F1": 0.7010014306151645,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.6786703601108033,
+                  "recall": 0.7248520710059172,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.6204667413123768
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 79.34400000000096,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-CAT-identity-T0-s43",
+          "architecture": "B-CAT",
+          "seed": 43,
+          "registered_normalizer": "identity",
+          "normalizer": "identity",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "45934611e320223d2c9a479870a1a646b0c3e7a391406994d6e174c1419b5993",
+          "checkpoint_sha256": "daf9f54e1571f5a457c7aba71e6f57c560231326afb2d045c1397d611acd8d54",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/20",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/20/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.694665660200251,
+              "macro_F1": 0.592703815691588
+            },
+            "clean": {
+              "Accuracy": 0.6263736263736264,
+              "MAE": 0.679390694229009,
+              "Pearson": 0.5980325131093948,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  155,
+                  24,
+                  27
+                ],
+                [
+                  46,
+                  69,
+                  69
+                ],
+                [
+                  56,
+                  50,
+                  232
+                ]
+              ],
+              "macro_F1": 0.5960871605352157,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.6695464362850972,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.603112840466926,
+                  "recall": 0.7524271844660194,
+                  "support": 206
+                },
+                {
+                  "F1": 0.42201834862385323,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.4825174825174825,
+                  "recall": 0.375,
+                  "support": 184
+                },
+                {
+                  "F1": 0.6966966966966966,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.7073170731707317,
+                  "recall": 0.6863905325443787,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.6195898701991792
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 67.51499999999942,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-CAT-zscore-T0-s17",
+          "architecture": "B-CAT",
+          "seed": 17,
+          "registered_normalizer": "zscore",
+          "normalizer": "zscore",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "53d302ef80270dd1cc4d2816066ddf98cc32e7fbf84c01aedc0914ecb013688b",
+          "checkpoint_sha256": "f34dc27a35be1c149907852094ba9f69a759fb312e65fbc6e50981a41b24fee1",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/21",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/21/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.6892729794954393,
+              "macro_F1": 0.5786508552282047
+            },
+            "clean": {
+              "Accuracy": 0.6318681318681318,
+              "MAE": 0.6783806467575921,
+              "Pearson": 0.5457738264072373,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  129,
+                  24,
+                  53
+                ],
+                [
+                  29,
+                  74,
+                  81
+                ],
+                [
+                  40,
+                  41,
+                  257
+                ]
+              ],
+              "macro_F1": 0.6006312138558835,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.6386138613861386,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.6515151515151515,
+                  "recall": 0.6262135922330098,
+                  "support": 206
+                },
+                {
+                  "F1": 0.4582043343653251,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.5323741007194245,
+                  "recall": 0.40217391304347827,
+                  "support": 184
+                },
+                {
+                  "F1": 0.7050754458161865,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.6572890025575447,
+                  "recall": 0.7603550295857988,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.623873013261862
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 73.98500000000058,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-CAT-zscore-T0-s29",
+          "architecture": "B-CAT",
+          "seed": 29,
+          "registered_normalizer": "zscore",
+          "normalizer": "zscore",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "4dd6eefab3e331334c2a6e6583b0ab1ca1feae02a99e61763527d1e4ccb651ac",
+          "checkpoint_sha256": "f2a0f4bc2038e5006ca3874fbb3fb04b3c188f2035c45b5d3cb6c706e6b555b9",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/22",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/22/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.638439761431768,
+              "macro_F1": 0.5919970597355567
+            },
+            "clean": {
+              "Accuracy": 0.6414835164835165,
+              "MAE": 0.6230802539872596,
+              "Pearson": 0.6043001898507985,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  130,
+                  25,
+                  51
+                ],
+                [
+                  28,
+                  71,
+                  85
+                ],
+                [
+                  34,
+                  38,
+                  266
+                ]
+              ],
+              "macro_F1": 0.6062420436934517,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.6532663316582915,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.6770833333333334,
+                  "recall": 0.6310679611650486,
+                  "support": 206
+                },
+                {
+                  "F1": 0.44654088050314467,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.5298507462686567,
+                  "recall": 0.3858695652173913,
+                  "support": 184
+                },
+                {
+                  "F1": 0.7189189189189189,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.6616915422885572,
+                  "recall": 0.7869822485207101,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.6314986001768973
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 60.73400000000038,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "B-CAT-zscore-T0-s43",
+          "architecture": "B-CAT",
+          "seed": 43,
+          "registered_normalizer": "zscore",
+          "normalizer": "zscore",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "f390f4c84900966fed38d8cbb26236ea756dc9d5d850bf5158937cb14553c9c6",
+          "checkpoint_sha256": "56287f233ef9c5b4cc9fc52526e8e1d4c3daea24dc1ac093da16c6b4c5e94576",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/23",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/23/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.6359037398412591,
+              "macro_F1": 0.5880074376517035
+            },
+            "clean": {
+              "Accuracy": 0.6304945054945055,
+              "MAE": 0.6264186874324658,
+              "Pearson": 0.5928425034321724,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  130,
+                  25,
+                  51
+                ],
+                [
+                  29,
+                  72,
+                  83
+                ],
+                [
+                  33,
+                  48,
+                  257
+                ]
+              ],
+              "macro_F1": 0.598677249026447,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.6532663316582915,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.6770833333333334,
+                  "recall": 0.6310679611650486,
+                  "support": 206
+                },
+                {
+                  "F1": 0.4376899696048632,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.496551724137931,
+                  "recall": 0.391304347826087,
+                  "support": 184
+                },
+                {
+                  "F1": 0.7050754458161865,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.6572890025575447,
+                  "recall": 0.7603550295857988,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.6228342299653488
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 61.68799999999828,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "C0-common-T0-s17",
+          "architecture": "C0",
+          "seed": 17,
+          "registered_normalizer": "common_preselected",
+          "normalizer": "zscore",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "22c758dd7083ed5fb05efb966460ac349560326a211f4a3aac04a5761e8aeb67",
+          "checkpoint_sha256": "e703bc368b7b968ed84b61db26a0325c8baaf7b63a07f4da8dc887a4df2802ed",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/24",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/24/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.6335938382848331,
+              "macro_F1": 0.5804277822930405
+            },
+            "clean": {
+              "Accuracy": 0.6236263736263736,
+              "MAE": 0.623661880371171,
+              "Pearson": 0.6266980283087237,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  133,
+                  22,
+                  51
+                ],
+                [
+                  36,
+                  55,
+                  93
+                ],
+                [
+                  41,
+                  31,
+                  266
+                ]
+              ],
+              "macro_F1": 0.575788450738088,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.6394230769230769,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.6333333333333333,
+                  "recall": 0.6456310679611651,
+                  "support": 206
+                },
+                {
+                  "F1": 0.3767123287671233,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.5092592592592593,
+                  "recall": 0.29891304347826086,
+                  "support": 184
+                },
+                {
+                  "F1": 0.7112299465240641,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.6487804878048781,
+                  "recall": 0.7869822485207101,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.6063625608027997
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 543.9379999999983,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "C0-common-T0-s29",
+          "architecture": "C0",
+          "seed": 29,
+          "registered_normalizer": "common_preselected",
+          "normalizer": "zscore",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "2f68b159f802eae9e416b804fb6977e09de4bcb824e13dd4e642fdd0118a6aa8",
+          "checkpoint_sha256": "41ecb4b0c3d6b141bc0d8ad9ffee00ce9dce02dd31149cd6ff26e3494ecdcaae",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/25",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/25/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.652189469059297,
+              "macro_F1": 0.5877535573326921
+            },
+            "clean": {
+              "Accuracy": 0.625,
+              "MAE": 0.6405267061225579,
+              "Pearson": 0.6044271144222597,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  131,
+                  25,
+                  50
+                ],
+                [
+                  26,
+                  74,
+                  84
+                ],
+                [
+                  36,
+                  52,
+                  250
+                ]
+              ],
+              "macro_F1": 0.5969844748031378,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.656641604010025,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.6787564766839378,
+                  "recall": 0.6359223300970874,
+                  "support": 206
+                },
+                {
+                  "F1": 0.4417910447761194,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.4900662251655629,
+                  "recall": 0.40217391304347827,
+                  "support": 184
+                },
+                {
+                  "F1": 0.6925207756232687,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.6510416666666666,
+                  "recall": 0.7396449704142012,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.618996902232879
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 657.469000000001,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "C0-common-T0-s43",
+          "architecture": "C0",
+          "seed": 43,
+          "registered_normalizer": "common_preselected",
+          "normalizer": "zscore",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "d55409e748772778b62960727549c4cfa998ed89afa2dee65336ec3433bf8f11",
+          "checkpoint_sha256": "bdbd4d220d9426ec3704f3a735e6d25eaf7c5f7d27dfac0938e0174f2e093aab",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/26",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/26/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.6407860608313745,
+              "macro_F1": 0.5845303983811764
+            },
+            "clean": {
+              "Accuracy": 0.6291208791208791,
+              "MAE": 0.6158121233080976,
+              "Pearson": 0.6301750213735955,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  131,
+                  25,
+                  50
+                ],
+                [
+                  32,
+                  68,
+                  84
+                ],
+                [
+                  38,
+                  41,
+                  259
+                ]
+              ],
+              "macro_F1": 0.593341976920946,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.6437346437346437,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.6517412935323383,
+                  "recall": 0.6359223300970874,
+                  "support": 206
+                },
+                {
+                  "F1": 0.4276729559748428,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.5074626865671642,
+                  "recall": 0.3695652173913043,
+                  "support": 184
+                },
+                {
+                  "F1": 0.7086183310533516,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.6590330788804071,
+                  "recall": 0.7662721893491125,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.6192502148416765
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 583.75,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "R0-common-T0-s17",
+          "architecture": "R0",
+          "seed": 17,
+          "registered_normalizer": "common_preselected",
+          "normalizer": "zscore",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "1a4ca62a4364ea21d74fe874a528596db54c294b6054f7196974c18ed55d5500",
+          "checkpoint_sha256": "ec2d2abbf9246ce1650c8c9084a783d04e85e2fc4e22d6bdd614a8cd50792a1a",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/27",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/27/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.6376686203635834,
+              "macro_F1": 0.5787453467389643
+            },
+            "clean": {
+              "Accuracy": 0.6304945054945055,
+              "MAE": 0.6311340271845488,
+              "Pearson": 0.625639943726133,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  133,
+                  18,
+                  55
+                ],
+                [
+                  37,
+                  54,
+                  93
+                ],
+                [
+                  40,
+                  26,
+                  272
+                ]
+              ],
+              "macro_F1": 0.5800266335303949,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.6394230769230769,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.6333333333333333,
+                  "recall": 0.6456310679611651,
+                  "support": 206
+                },
+                {
+                  "F1": 0.3829787234042553,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.5510204081632653,
+                  "recall": 0.29347826086956524,
+                  "support": 184
+                },
+                {
+                  "F1": 0.7176781002638523,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.6476190476190476,
+                  "recall": 0.8047337278106509,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.6109401604968666
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 550.4680000000008,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "R0-common-T0-s29",
+          "architecture": "R0",
+          "seed": 29,
+          "registered_normalizer": "common_preselected",
+          "normalizer": "zscore",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "35f369e1112daf0025b9413cd938f4556b2b570bfa9d07dd9d2e34fc2f24b57c",
+          "checkpoint_sha256": "0c991f3488bc799523fda58b91bb523d53607c49dcd7d42fc81d173becabb0c2",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/28",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/28/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.6482314520348265,
+              "macro_F1": 0.5810565890581996
+            },
+            "clean": {
+              "Accuracy": 0.6236263736263736,
+              "MAE": 0.6370924857207113,
+              "Pearson": 0.5987919034057017,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  129,
+                  23,
+                  54
+                ],
+                [
+                  31,
+                  66,
+                  87
+                ],
+                [
+                  33,
+                  46,
+                  259
+                ]
+              ],
+              "macro_F1": 0.5874355545906164,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.6466165413533834,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.6683937823834197,
+                  "recall": 0.6262135922330098,
+                  "support": 206
+                },
+                {
+                  "F1": 0.41379310344827586,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.4888888888888889,
+                  "recall": 0.358695652173913,
+                  "support": 184
+                },
+                {
+                  "F1": 0.7018970189701897,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.6475,
+                  "recall": 0.7662721893491125,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.6134369930840713
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 668.5,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "R0-common-T0-s43",
+          "architecture": "R0",
+          "seed": 43,
+          "registered_normalizer": "common_preselected",
+          "normalizer": "zscore",
+          "status": "COMPLETED",
+          "selected_for_campaign": true,
+          "resolved_config_sha256": "ffa79923974267ec1352bf0d44ceb349cb6256d4e6f85490dcae59e07e23d350",
+          "checkpoint_sha256": "ca077563e3fe49ffa26955288d0572cfca7e5d855ef6794aa494c4641c825117",
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/29",
+          "metrics_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/29/metrics",
+          "metrics": {
+            "attempted96": {
+              "MAE": 0.6398977927338043,
+              "macro_F1": 0.5851250189902661
+            },
+            "clean": {
+              "Accuracy": 0.6304945054945055,
+              "MAE": 0.6210833013532325,
+              "Pearson": 0.6216093255323727,
+              "Pearson_reason": null,
+              "confusion": [
+                [
+                  135,
+                  30,
+                  41
+                ],
+                [
+                  37,
+                  77,
+                  70
+                ],
+                [
+                  35,
+                  56,
+                  247
+                ]
+              ],
+              "macro_F1": 0.6024423920530145,
+              "n": 728,
+              "per_class": [
+                {
+                  "F1": 0.6537530266343826,
+                  "class": 0,
+                  "class_name": "Negative",
+                  "precision": 0.6521739130434783,
+                  "recall": 0.6553398058252428,
+                  "support": 206
+                },
+                {
+                  "F1": 0.4438040345821326,
+                  "class": 1,
+                  "class_name": "Neutral",
+                  "precision": 0.4723926380368098,
+                  "recall": 0.41847826086956524,
+                  "support": 184
+                },
+                {
+                  "F1": 0.7097701149425287,
+                  "class": 2,
+                  "class_name": "Positive",
+                  "precision": 0.6899441340782123,
+                  "recall": 0.7307692307692307,
+                  "support": 338
+                }
+              ],
+              "weighted_F1": 0.6266969295334752
+            }
+          },
+          "failure": null,
+          "runtime_seconds": 632.5780000000013,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "R1-common-T0-s17",
+          "architecture": "R1",
+          "seed": 17,
+          "registered_normalizer": "common_preselected",
+          "normalizer": null,
+          "status": "NOT_RUN",
+          "selected_for_campaign": false,
+          "resolved_config_sha256": null,
+          "checkpoint_sha256": null,
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/30",
+          "metrics_reference": null,
+          "metrics": null,
+          "failure": null,
+          "runtime_seconds": null,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "R1-common-T0-s29",
+          "architecture": "R1",
+          "seed": 29,
+          "registered_normalizer": "common_preselected",
+          "normalizer": null,
+          "status": "NOT_RUN",
+          "selected_for_campaign": false,
+          "resolved_config_sha256": null,
+          "checkpoint_sha256": null,
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/31",
+          "metrics_reference": null,
+          "metrics": null,
+          "failure": null,
+          "runtime_seconds": null,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "R1-common-T0-s43",
+          "architecture": "R1",
+          "seed": 43,
+          "registered_normalizer": "common_preselected",
+          "normalizer": null,
+          "status": "NOT_RUN",
+          "selected_for_campaign": false,
+          "resolved_config_sha256": null,
+          "checkpoint_sha256": null,
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/32",
+          "metrics_reference": null,
+          "metrics": null,
+          "failure": null,
+          "runtime_seconds": null,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "R2-common-T0-s17",
+          "architecture": "R2",
+          "seed": 17,
+          "registered_normalizer": "common_preselected",
+          "normalizer": null,
+          "status": "NOT_RUN",
+          "selected_for_campaign": false,
+          "resolved_config_sha256": null,
+          "checkpoint_sha256": null,
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/33",
+          "metrics_reference": null,
+          "metrics": null,
+          "failure": null,
+          "runtime_seconds": null,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "R2-common-T0-s29",
+          "architecture": "R2",
+          "seed": 29,
+          "registered_normalizer": "common_preselected",
+          "normalizer": null,
+          "status": "NOT_RUN",
+          "selected_for_campaign": false,
+          "resolved_config_sha256": null,
+          "checkpoint_sha256": null,
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/34",
+          "metrics_reference": null,
+          "metrics": null,
+          "failure": null,
+          "runtime_seconds": null,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "R2-common-T0-s43",
+          "architecture": "R2",
+          "seed": 43,
+          "registered_normalizer": "common_preselected",
+          "normalizer": null,
+          "status": "NOT_RUN",
+          "selected_for_campaign": false,
+          "resolved_config_sha256": null,
+          "checkpoint_sha256": null,
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/35",
+          "metrics_reference": null,
+          "metrics": null,
+          "failure": null,
+          "runtime_seconds": null,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "R1-CAP-common-T0-s17",
+          "architecture": "R1-CAP",
+          "seed": 17,
+          "registered_normalizer": "common_preselected",
+          "normalizer": null,
+          "status": "NOT_RUN",
+          "selected_for_campaign": false,
+          "resolved_config_sha256": null,
+          "checkpoint_sha256": null,
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/36",
+          "metrics_reference": null,
+          "metrics": null,
+          "failure": null,
+          "runtime_seconds": null,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "R1-CAP-common-T0-s29",
+          "architecture": "R1-CAP",
+          "seed": 29,
+          "registered_normalizer": "common_preselected",
+          "normalizer": null,
+          "status": "NOT_RUN",
+          "selected_for_campaign": false,
+          "resolved_config_sha256": null,
+          "checkpoint_sha256": null,
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/37",
+          "metrics_reference": null,
+          "metrics": null,
+          "failure": null,
+          "runtime_seconds": null,
+          "retry_count": 0
+        },
+        {
+          "trial_id": "R1-CAP-common-T0-s43",
+          "architecture": "R1-CAP",
+          "seed": 43,
+          "registered_normalizer": "common_preselected",
+          "normalizer": null,
+          "status": "NOT_RUN",
+          "selected_for_campaign": false,
+          "resolved_config_sha256": null,
+          "checkpoint_sha256": null,
+          "evidence_reference": "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/FITS.json#/fits/38",
+          "metrics_reference": null,
+          "metrics": null,
+          "failure": null,
+          "runtime_seconds": null,
+          "retry_count": 0
+        }
+      ]
+    }
+  ]
 }

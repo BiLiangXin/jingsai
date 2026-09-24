@@ -1,0 +1,112 @@
+{
+  "evidence_level": "VERIFIED_ACTUAL_AGGREGATE_EXPORT_COMMANDS",
+  "campaign_id": "S01-20260924T202319Z-30-1cf4769f",
+  "original_data_read": false,
+  "model_computation_performed": false,
+  "official_tree_modified": false,
+  "command_redaction": "Only private absolute path tokens and executable location are replaced; argv order/options preserved.",
+  "working_directory": "Official repository root at activation commit 98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+  "environment": {
+    "python": "3.11.14",
+    "dependencies": "standard library plus hash-verified frozen reference"
+  },
+  "steps": [
+    {
+      "script": "export_campaign.py",
+      "script_sha256": "b1484fcb0a8135de74a2215c1e5218de632ecbfc520378d43fd830b17943113b",
+      "actual_command_template": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "export_campaign.py",
+        "--campaign",
+        "<EXITED_PRIVATE_CAMPAIGN_DIRECTORY>",
+        "--destination",
+        "<VERIFIED_SAFE_MAIN_EXPORT>",
+        "--registry",
+        "docs/EXPERIMENT_REGISTER.json",
+        "--watchdog-receipt",
+        "<PRIVATE_FINISHED_LAUNCH_RECEIPT>"
+      ],
+      "started_at_utc": "2026-09-24T22:24:52.901339+00:00",
+      "finished_at_utc": "2026-09-24T22:24:54.478143+00:00",
+      "wall_seconds": 1.5761933000030695,
+      "exit_code": 0,
+      "output_log_sha256": "8e2af2ac1d1342c13a1f962c0459cbc05a653f4a5ab7c9c5f8739740cebf15ec",
+      "output_log_bytes": 236
+    },
+    {
+      "script": "export_condition_aggregates.py",
+      "script_sha256": "6f289aabb0fd3c175636288e1712a1ac2e6fff43e1c92703e4e0ba67f2b5b88b",
+      "actual_command_template": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "export_condition_aggregates.py",
+        "--campaign",
+        "<EXITED_PRIVATE_CAMPAIGN_DIRECTORY>",
+        "--destination",
+        "<SAFE_CONDITION_EXPORT>",
+        "--main-export",
+        "<VERIFIED_SAFE_MAIN_EXPORT>",
+        "--reference",
+        "research/r01/reference.py",
+        "--watchdog-receipt",
+        "<PRIVATE_FINISHED_LAUNCH_RECEIPT>"
+      ],
+      "started_at_utc": "2026-09-24T22:24:54.479144+00:00",
+      "finished_at_utc": "2026-09-24T22:24:55.310197+00:00",
+      "wall_seconds": 0.8307481000010739,
+      "exit_code": 0,
+      "output_log_sha256": "6b23d33c93676a3741602174e5cfda9b9f024f351dfbc6d52e42309f19e7891c",
+      "output_log_bytes": 291
+    },
+    {
+      "script": "render_results_report.py",
+      "script_sha256": "801cce84b97acb0f8fea20c12e7cc59f6a7bc67024765b3ccace03bcc8c85d69",
+      "actual_command_template": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "render_results_report.py",
+        "--input-dir",
+        "<VERIFIED_SAFE_MAIN_EXPORT>",
+        "--output-dir",
+        "<SAFE_RENDERED_REPORTS>"
+      ],
+      "started_at_utc": "2026-09-24T22:24:55.311198+00:00",
+      "finished_at_utc": "2026-09-24T22:24:55.431429+00:00",
+      "wall_seconds": 0.11961190000147326,
+      "exit_code": 0,
+      "output_log_sha256": "6af7518a7b60eea0977fd52f3559076ad6ac43842be0a23895507249bf05c8bd",
+      "output_log_bytes": 403
+    },
+    {
+      "script": "prepare_closeout_governance.py",
+      "script_sha256": "a132bde8410097157185db038aac0168c353a37f61431f56746d5b66d64a4d18",
+      "actual_command_template": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "prepare_closeout_governance.py",
+        "--safe-export",
+        "<VERIFIED_SAFE_MAIN_EXPORT>",
+        "--report-relative-path",
+        "reports/s01_execution/S01-20260924T202319Z-30-1cf4769f",
+        "--output-dir",
+        "<OUTSIDE_GOVERNANCE_PROPOSAL>"
+      ],
+      "started_at_utc": "2026-09-24T22:24:55.432430+00:00",
+      "finished_at_utc": "2026-09-24T22:24:55.598131+00:00",
+      "wall_seconds": 0.16582369999377988,
+      "exit_code": 1,
+      "output_log_sha256": "f0e29652180a0bde6051ae0790b84cc015fe3b99683679b6126c1a8610bfda74",
+      "output_log_bytes": 159
+    }
+  ],
+  "status": "FAILED_PRESERVED"
+}

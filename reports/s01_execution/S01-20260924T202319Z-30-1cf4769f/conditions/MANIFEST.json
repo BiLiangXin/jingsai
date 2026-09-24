@@ -1,0 +1,29 @@
+{
+  "campaign_id": "S01-20260924T202319Z-30-1cf4769f",
+  "exporter_sha256": "6f289aabb0fd3c175636288e1712a1ac2e6fff43e1c92703e4e0ba67f2b5b88b",
+  "files": [
+    {
+      "path": "CONDITION_AGGREGATES.json",
+      "sha256": "2b71712f56a4f15c128846c1db5d9d098d1fa502208ed5d0363fb978e318a6f9",
+      "size": 656876
+    },
+    {
+      "path": "CONDITIONS_PER_SEED.csv",
+      "sha256": "7c6cc70c417492f3e9b10911e9802a93c96db84bc34a818e78d836aee67961aa",
+      "size": 422481
+    },
+    {
+      "path": "CONDITIONS_ACROSS_SEEDS.csv",
+      "sha256": "5e4ee70e313959f728c95cc0307f6d454d592da72d41c8d7e51cff026e9af783",
+      "size": 186812
+    },
+    {
+      "path": "FACTOR_DESCRIPTIVES_PER_SEED.csv",
+      "sha256": "32d791fd66611d99578ca6fc7d3d5bf7339e9ece64792accecebb54abe270045",
+      "size": 58265
+    }
+  ],
+  "pairing_fingerprints_exported": false,
+  "schema_version": 1,
+  "self_excluded": "MANIFEST.json"
+}

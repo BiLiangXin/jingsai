@@ -1,0 +1,318 @@
+{
+  "stage": "S01_FROZEN_CHOICES_INDEPENDENT_AUDIT",
+  "status": "PASS",
+  "data_kind": "RECORDED_OFFICIAL_AGGREGATES",
+  "campaign_id": "S01-20260924T202319Z-30-1cf4769f",
+  "main_export_manifest_sha256": "51d30a562282a672c78c15dfbd45585f1036bbe6bc084e328f2456b3c2fb9339",
+  "reference_sha256": "1cd4b73bb748284b4941625d92be89522771eff8a11e4044547e5f513ea62495",
+  "protocol_source_sha256": "c69c194447c0c220a56e6dddb9c7a3e225f2a949147573d7212d4d0775871b26",
+  "campaign_terminal_status": "COMPLETED",
+  "completed_fits": 30,
+  "registered_fits": 39,
+  "epoch_audits": [
+    {
+      "trial_id": "B-T-identity-T0-s17",
+      "status": "COMPLETED",
+      "epoch_records": 14,
+      "objective": "clean",
+      "rule_best_epoch": 4,
+      "private_epoch_sha256": "84720db975036bb6e555d80f02556c33562ee523bc084b2d52874d2c4ed81ce8"
+    },
+    {
+      "trial_id": "B-T-identity-T0-s29",
+      "status": "COMPLETED",
+      "epoch_records": 16,
+      "objective": "clean",
+      "rule_best_epoch": 6,
+      "private_epoch_sha256": "4812ff682d5ac5d6293cd49d9065aa5d630fe7a8b74c21ac7ba76a7a3e3744fe"
+    },
+    {
+      "trial_id": "B-T-identity-T0-s43",
+      "status": "COMPLETED",
+      "epoch_records": 13,
+      "objective": "clean",
+      "rule_best_epoch": 3,
+      "private_epoch_sha256": "bc68fb74aa98b7f87347b91dc0987a70ce21ef065bd852351cf4fba434a7764d"
+    },
+    {
+      "trial_id": "B-T-zscore-T0-s17",
+      "status": "COMPLETED",
+      "epoch_records": 16,
+      "objective": "clean",
+      "rule_best_epoch": 6,
+      "private_epoch_sha256": "b075961abcc7e72e8a969750b77e22680f68fdd8671f2d5402509fbe3397bf05"
+    },
+    {
+      "trial_id": "B-T-zscore-T0-s29",
+      "status": "COMPLETED",
+      "epoch_records": 14,
+      "objective": "clean",
+      "rule_best_epoch": 4,
+      "private_epoch_sha256": "0d6db6e31a973d5e87391779c995912ab85b1116355dec31c0664b4c11d6a0af"
+    },
+    {
+      "trial_id": "B-T-zscore-T0-s43",
+      "status": "COMPLETED",
+      "epoch_records": 12,
+      "objective": "clean",
+      "rule_best_epoch": 2,
+      "private_epoch_sha256": "177b52cf883da985fc690248289e5dcaf8a5985cd0266e7756244382e5bfd02f"
+    },
+    {
+      "trial_id": "B-A-identity-T0-s17",
+      "status": "COMPLETED",
+      "epoch_records": 16,
+      "objective": "clean",
+      "rule_best_epoch": 6,
+      "private_epoch_sha256": "c94de345e9055771c6293f6638cfb7cafaefb2600f7217aec2460958604c5844"
+    },
+    {
+      "trial_id": "B-A-identity-T0-s29",
+      "status": "COMPLETED",
+      "epoch_records": 28,
+      "objective": "clean",
+      "rule_best_epoch": 18,
+      "private_epoch_sha256": "7645c53c00a5bfb63e7bb213ae5850bd56cb0b4457bd40e606a88cf113c5a85a"
+    },
+    {
+      "trial_id": "B-A-identity-T0-s43",
+      "status": "COMPLETED",
+      "epoch_records": 12,
+      "objective": "clean",
+      "rule_best_epoch": 2,
+      "private_epoch_sha256": "e809ce9510602c0fcb969b818566f86b90f9d240a425dc5430efe72dfe8031d2"
+    },
+    {
+      "trial_id": "B-A-zscore-T0-s17",
+      "status": "COMPLETED",
+      "epoch_records": 35,
+      "objective": "clean",
+      "rule_best_epoch": 25,
+      "private_epoch_sha256": "7b35013795cc070622eb3fa2cf315734e441c20dccc2aceffe37594e427ea744"
+    },
+    {
+      "trial_id": "B-A-zscore-T0-s29",
+      "status": "COMPLETED",
+      "epoch_records": 24,
+      "objective": "clean",
+      "rule_best_epoch": 14,
+      "private_epoch_sha256": "3af3bd33a5f524a48f8332aeb33f845f787f8db447155a6afeea08ddaa2db040"
+    },
+    {
+      "trial_id": "B-A-zscore-T0-s43",
+      "status": "COMPLETED",
+      "epoch_records": 45,
+      "objective": "clean",
+      "rule_best_epoch": 35,
+      "private_epoch_sha256": "270b95efb1adb61a14330ed6336d3bd45fc423ce2b639307d9eabb5b0b74e8f1"
+    },
+    {
+      "trial_id": "B-V-identity-T0-s17",
+      "status": "COMPLETED",
+      "epoch_records": 40,
+      "objective": "clean",
+      "rule_best_epoch": 30,
+      "private_epoch_sha256": "f7d0214ee8f43b9590e383fd3ad9ff0429581cf807b8130f72b80a9aef5df47c"
+    },
+    {
+      "trial_id": "B-V-identity-T0-s29",
+      "status": "COMPLETED",
+      "epoch_records": 13,
+      "objective": "clean",
+      "rule_best_epoch": 3,
+      "private_epoch_sha256": "82aae9d80da34af9ba6f955e5f76f3e40484eeddacc09c5c12ec52f9d54be7ab"
+    },
+    {
+      "trial_id": "B-V-identity-T0-s43",
+      "status": "COMPLETED",
+      "epoch_records": 36,
+      "objective": "clean",
+      "rule_best_epoch": 26,
+      "private_epoch_sha256": "bfc9c6d00f5c07199db37f62277da850c43a9a83dd6bb8c986db320cbafbd75a"
+    },
+    {
+      "trial_id": "B-V-zscore-T0-s17",
+      "status": "COMPLETED",
+      "epoch_records": 50,
+      "objective": "clean",
+      "rule_best_epoch": 40,
+      "private_epoch_sha256": "afd83069eb0211fb29e4baa3fa3dba786da27b863665f229448a997785634490"
+    },
+    {
+      "trial_id": "B-V-zscore-T0-s29",
+      "status": "COMPLETED",
+      "epoch_records": 26,
+      "objective": "clean",
+      "rule_best_epoch": 16,
+      "private_epoch_sha256": "4aea20914fb41b60db0746949912ad9ec01d1b15407599c79ec0ec1499f4883f"
+    },
+    {
+      "trial_id": "B-V-zscore-T0-s43",
+      "status": "COMPLETED",
+      "epoch_records": 23,
+      "objective": "clean",
+      "rule_best_epoch": 13,
+      "private_epoch_sha256": "78a165e3c49d472fe5609650e8ac2a6b8a4f95a5f05622e49d37c4d6a8f10e6a"
+    },
+    {
+      "trial_id": "B-CAT-identity-T0-s17",
+      "status": "COMPLETED",
+      "epoch_records": 15,
+      "objective": "clean",
+      "rule_best_epoch": 5,
+      "private_epoch_sha256": "ed1c7750916be67cee0d7d0d5e1400f5d23da95c93b3f96f6e182723c9be5073"
+    },
+    {
+      "trial_id": "B-CAT-identity-T0-s29",
+      "status": "COMPLETED",
+      "epoch_records": 22,
+      "objective": "clean",
+      "rule_best_epoch": 12,
+      "private_epoch_sha256": "4a6348f98e6100f7f84cbb661273ea565e7e0aae5c4c9277605705b2f5714e64"
+    },
+    {
+      "trial_id": "B-CAT-identity-T0-s43",
+      "status": "COMPLETED",
+      "epoch_records": 16,
+      "objective": "clean",
+      "rule_best_epoch": 6,
+      "private_epoch_sha256": "ace3346e3b4dced84e317d765f8ed7ccc0ed951a22ba37d7cc2802ff688c1dcf"
+    },
+    {
+      "trial_id": "B-CAT-zscore-T0-s17",
+      "status": "COMPLETED",
+      "epoch_records": 18,
+      "objective": "clean",
+      "rule_best_epoch": 8,
+      "private_epoch_sha256": "e31ba450a05b156544c3d4443069f13661cceacdcc70f5c5995b881c63fdabae"
+    },
+    {
+      "trial_id": "B-CAT-zscore-T0-s29",
+      "status": "COMPLETED",
+      "epoch_records": 12,
+      "objective": "clean",
+      "rule_best_epoch": 2,
+      "private_epoch_sha256": "b91e438a52e650edaf8c44978a9b5f6b32e8d6c06aa053ed723283a30e4151d0"
+    },
+    {
+      "trial_id": "B-CAT-zscore-T0-s43",
+      "status": "COMPLETED",
+      "epoch_records": 12,
+      "objective": "clean",
+      "rule_best_epoch": 2,
+      "private_epoch_sha256": "ed372ad89c3e3bfe32a665a3f251f125b258a9ec21a6c260b5af10d97c63e9c3"
+    },
+    {
+      "trial_id": "C0-common-T0-s17",
+      "status": "COMPLETED",
+      "epoch_records": 13,
+      "objective": "attempted96",
+      "rule_best_epoch": 3,
+      "private_epoch_sha256": "863a53e19846c309ac4308657ab3ed9d21d3e52a1e4318747004bcb22891013a"
+    },
+    {
+      "trial_id": "C0-common-T0-s29",
+      "status": "COMPLETED",
+      "epoch_records": 16,
+      "objective": "attempted96",
+      "rule_best_epoch": 6,
+      "private_epoch_sha256": "8a9bbd0e0a9c692380f98b9d4f7bbb834d1c21ad8be802d46dd290e88867db57"
+    },
+    {
+      "trial_id": "C0-common-T0-s43",
+      "status": "COMPLETED",
+      "epoch_records": 14,
+      "objective": "attempted96",
+      "rule_best_epoch": 4,
+      "private_epoch_sha256": "92a59a9fddb5de18202978e5a95a19533bbd48635836909bcd7384290efb4f55"
+    },
+    {
+      "trial_id": "R0-common-T0-s17",
+      "status": "COMPLETED",
+      "epoch_records": 13,
+      "objective": "attempted96",
+      "rule_best_epoch": 3,
+      "private_epoch_sha256": "9dfe7656d66737ac59c028450e56577d16a2e46052c26449e9d4cf5e22378a3d"
+    },
+    {
+      "trial_id": "R0-common-T0-s29",
+      "status": "COMPLETED",
+      "epoch_records": 16,
+      "objective": "attempted96",
+      "rule_best_epoch": 6,
+      "private_epoch_sha256": "e7424699d83b3e61cb848cf886568e643888319bc7a95a9be3b549c108ed0d98"
+    },
+    {
+      "trial_id": "R0-common-T0-s43",
+      "status": "COMPLETED",
+      "epoch_records": 15,
+      "objective": "attempted96",
+      "rule_best_epoch": 5,
+      "private_epoch_sha256": "b571a141070915bd051ccc5ab61de1802e9e78d3367e1fc5fdfd425d58446b48"
+    }
+  ],
+  "common_normalizer": "zscore",
+  "B_star": "B-CAT-zscore",
+  "ranked_winner_before_seed17_guard": "B-CAT-zscore",
+  "verified_recorded_selection": {
+    "configuration": "B-CAT-zscore",
+    "seed": 17,
+    "reason": "WINNER_FIXED_SEED_GUARD_PASS"
+  },
+  "final_choice_verified": true,
+  "incomplete_fits_preserved": [
+    {
+      "trial_id": "R1-common-T0-s17",
+      "status": "NOT_RUN"
+    },
+    {
+      "trial_id": "R1-common-T0-s29",
+      "status": "NOT_RUN"
+    },
+    {
+      "trial_id": "R1-common-T0-s43",
+      "status": "NOT_RUN"
+    },
+    {
+      "trial_id": "R2-common-T0-s17",
+      "status": "NOT_RUN"
+    },
+    {
+      "trial_id": "R2-common-T0-s29",
+      "status": "NOT_RUN"
+    },
+    {
+      "trial_id": "R2-common-T0-s43",
+      "status": "NOT_RUN"
+    },
+    {
+      "trial_id": "R1-CAP-common-T0-s17",
+      "status": "NOT_RUN"
+    },
+    {
+      "trial_id": "R1-CAP-common-T0-s29",
+      "status": "NOT_RUN"
+    },
+    {
+      "trial_id": "R1-CAP-common-T0-s43",
+      "status": "NOT_RUN"
+    }
+  ],
+  "tolerance": {
+    "relative": 1e-10,
+    "absolute": 1e-12
+  },
+  "new_selection_applied": false,
+  "new_model_computation": false,
+  "source_data_read": false,
+  "checkpoint_tensors_read": false,
+  "private_files_read": "Only main-fingerprinted named epoch_events.jsonl",
+  "limits": [
+    "Checks recorded formulas and durable aggregate provenance; does not rerun predictions or derive metrics from sample labels.",
+    "PRIOR/LATE aggregate rows are trusted producer evidence; this verifier recalculates their seed means/rank, not their predictions.",
+    "Partial campaigns preserve completed checkpoints but do not invent missing seed summaries or a final choice.",
+    "This read-only audit creates no training, retry, publication or new owner authority."
+  ],
+  "verifier_sha256": "26384aaaf3c2eda12b72e3c6601de6ab6e1c00fe369345a4afd09f57ee2b5af7",
+  "verified_at_utc": "2026-09-24T22:25:36.951717+00:00"
+}

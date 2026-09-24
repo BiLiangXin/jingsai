@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "stage": "S01_OUTSIDE_CLOSEOUT_HELPERS_READ_ONLY_REVIEW",
+  "status": "PASS",
+  "review_role": "Independent technical helper review; not owner approval or execution authority",
+  "critical_findings": 0,
+  "blocking_major_findings": 0,
+  "files": [
+    {
+      "path": "run_closeout_exports.py",
+      "sha256": "b65a25811efb3e6953c16ba0a628acf1575f33a6d9154d5dc7d6c6da98411ab1",
+      "size_bytes": 5384
+    },
+    {
+      "path": "build_public_run_receipt.py",
+      "sha256": "3b2510959852e699015a97d5dce17b14480a2cf5ca41c29c1387903f5edf1fe6",
+      "size_bytes": 3608
+    },
+    {
+      "path": "assemble_publication.py",
+      "sha256": "46addff3a662fc22498a436b419edce5ad2ae9221a1e7f2c89c033587b4f9743",
+      "size_bytes": 15278
+    }
+  ],
+  "initial_review": {
+    "path": "closeout_helpers_review_initial.json",
+    "sha256": "33785f06bf45565e0bb61adff6daba6d4545690f24d862ca6199505e1559feb3",
+    "preserved_unchanged": true,
+    "status": "REPAIRS_REQUIRED",
+    "blocking_major_findings": 2
+  },
+  "resolved_findings": [
+    {
+      "id": "CLOSEOUT-PUB-01",
+      "status": "CLOSED",
+      "evidence": "Exact ten-file GOVERNANCE sets at lines14-17,64-67,122-123; strict relative containment and no reparse ancestors at33-49; safe_target applied before input reads and final target writes."
+    },
+    {
+      "id": "CLOSEOUT-PUB-02",
+      "status": "CLOSED",
+      "evidence": "Main four-payload path/SHA/size binding at124-129; fixed-helper stdout fingerprint and exact12 proposal/2 rendered outputs at130-142; closed flags and immutable39 at143-158; condition exact set, command manifest and current main-manifest provenance at159-174."
+    }
+  ],
+  "validation": {
+    "command": "python -B -X utf8 -m unittest -v test_closeout_helpers_review.py",
+    "exit_code": 0,
+    "tests_run": 9,
+    "tests_passed": 9,
+    "unittest_seconds": 0.172,
+    "python": "3.13.5",
+    "test_source": {
+      "path": "test_closeout_helpers_review.py",
+      "sha256": "aa041add35a60865b71b37e5e84cf052aec229d07e67563f339b0c563d4ae876",
+      "size_bytes": 5597
+    },
+    "scope": "Only helper functions on new outside synthetic fixtures; no main() call",
+    "checks": [
+      "Relative path escape and malformed components rejected",
+      "Extra/missing/duplicate/governance-scope paths rejected",
+      "Mocked Windows reparse attribute rejected",
+      "Duplicate and nonfinite JSON rejected",
+      "Correct fixed-helper command result bound",
+      "Changed helper output log rejected",
+      "Failed/wrong-digest/duplicate helper receipts rejected",
+      "Export member SHA256/size tampering rejected",
+      "Duplicate/traversal export members rejected"
+    ]
+  },
+  "official_repository_modified": false,
+  "actual_helpers_main_executed": false,
+  "live_campaign_read": false,
+  "original_data_read": false,
+  "model_or_gpu_computation": false,
+  "publication_verified": false,
+  "limits": [
+    "Static review plus bounded synthetic function probes only; actual post-exit data export/application/publication remains root responsibility.",
+    "No live/terminated campaign results, private checkpoint tensors or original data were read.",
+    "The reparse probe mocks the Windows attribute; it does not claim an actual junction integration test.",
+    "Existing run-command redaction and environment-shape observations are unchanged from initial review.",
+    "No new training, retry, test, Attachment3/4, Q3 or owner authority is granted."
+  ]
+}

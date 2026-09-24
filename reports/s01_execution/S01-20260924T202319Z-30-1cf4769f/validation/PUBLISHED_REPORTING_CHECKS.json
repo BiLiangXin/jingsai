@@ -1,0 +1,76 @@
+{
+  "stage": "S01_PUBLISHED_REPORTING_PATH_VALIDATION",
+  "evidence_level": "VERIFIED",
+  "status": "PASS",
+  "tests_run": 43,
+  "tests_passed": 43,
+  "exit_code": 0,
+  "actual_command_template": [
+    "python",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "-v",
+    "test_export_campaign.py",
+    "test_export_condition_aggregates.py",
+    "test_render_results_report.py",
+    "test_verify_frozen_choices.py"
+  ],
+  "working_directory": "tools/s01_reporting",
+  "private_path_substitution": "Only the Python executable absolute location is represented as python.",
+  "started_at_utc": "2026-09-24T22:43:29.331839+00:00",
+  "finished_at_utc": "2026-09-24T22:43:50.563555+00:00",
+  "wall_seconds": 21.22983750000276,
+  "python": "3.11.14",
+  "files": [
+    {
+      "path": "tools/s01_reporting/test_export_campaign.py",
+      "sha256": "df9a58f5a0c0d37a6919240ef1d2af4c9d97bd79aa8c0ef0491f19974eefbd7e",
+      "size_bytes": 11516
+    },
+    {
+      "path": "tools/s01_reporting/test_export_condition_aggregates.py",
+      "sha256": "363852c518ad567f829218a9cebd13313b8aff8ab4afca336625255e10eb1185",
+      "size_bytes": 7260
+    },
+    {
+      "path": "tools/s01_reporting/test_render_results_report.py",
+      "sha256": "8a63dd811f9b6ced1560dd092fff2c081fa6189d7967784d3125d1041501fe10",
+      "size_bytes": 8135
+    },
+    {
+      "path": "tools/s01_reporting/test_verify_frozen_choices.py",
+      "sha256": "8ddb5bd0e477605f67a7f8b0aa8babfe3586472dea057407ca8ce501a7863b69",
+      "size_bytes": 9187
+    },
+    {
+      "path": "tools/s01_reporting/export_campaign.py",
+      "sha256": "b1484fcb0a8135de74a2215c1e5218de632ecbfc520378d43fd830b17943113b",
+      "size_bytes": 32985
+    },
+    {
+      "path": "tools/s01_reporting/export_condition_aggregates.py",
+      "sha256": "6f289aabb0fd3c175636288e1712a1ac2e6fff43e1c92703e4e0ba67f2b5b88b",
+      "size_bytes": 26029
+    },
+    {
+      "path": "tools/s01_reporting/render_results_report.py",
+      "sha256": "801cce84b97acb0f8fea20c12e7cc59f6a7bc67024765b3ccace03bcc8c85d69",
+      "size_bytes": 26140
+    },
+    {
+      "path": "tools/s01_reporting/verify_frozen_choices.py",
+      "sha256": "26384aaaf3c2eda12b72e3c6601de6ab6e1c00fe369345a4afd09f57ee2b5af7",
+      "size_bytes": 12828
+    }
+  ],
+  "stdout_sha256": "dd7877e4981de4b7dd9e236f0d9de9d5200a9e1e02322827bb430fa6f7405a0b",
+  "stdout_bytes": 5848,
+  "model_experiments_performed": false,
+  "original_data_read": false,
+  "actual_campaign_read": false,
+  "fixtures": "Pure synthetic, OS temporary directory outside Git",
+  "purpose": "Verify default repository discovery at the final tools/s01_reporting placement; prior outside tests used an explicit project-root setting."
+}
