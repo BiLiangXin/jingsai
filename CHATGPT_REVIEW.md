@@ -2,11 +2,11 @@
 
 task_id: `S00D_DATA_CONTRACT_FREEZE_AND_BASELINE_READINESS`
 run_id: `20260924-100153-S00D-c26aced`
-status: `PUBLICATION_VERIFIED_PENDING_INDEX`
+status: `SUCCESS`
 repository: `BiLiangXin/jingsai`
 branch: `codex/mosei-auto`
 implementation_commit: `ecb7afd14a9db6e16deb38caf393ba92321a237d`
-metadata_commit: `PENDING_PUBLICATION`
+metadata_commit: `4fa7de5846889036b637a04e082212545573ad56`
 release_url: `https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260924-100153-S00D-c26aced`
 release_tag: `codex-run-20260924-100153-S00D-c26aced`
 review_asset: `review-20260924-100153-S00D-c26aced.zip`
