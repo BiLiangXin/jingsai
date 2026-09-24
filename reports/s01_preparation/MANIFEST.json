@@ -1,0 +1,256 @@
+{
+  "version": 1,
+  "base_commit": "be2917568434450ddefc54dbafae7c1dee5862dd",
+  "publication_files": [
+    "DECISIONS.md",
+    "TASK_SPEC.md",
+    "configs/s01_execution.json",
+    "docs/EXPERIMENT_REGISTER.json",
+    "docs/PAPER_CLAIMS.md",
+    "docs/PROJECT_SUMMARY.md",
+    "docs/RESEARCH_LOG.md",
+    "docs/S01_EXECUTION_SPEC.md",
+    "reports/s01_preparation/MANIFEST.json",
+    "reports/s01_preparation/README.md",
+    "reports/s01_preparation/RESOURCE_ESTIMATE.json",
+    "reports/s01_preparation/RESOURCE_ESTIMATE.md",
+    "reports/s01_preparation/RESULT.json",
+    "reports/s01_preparation/cli_checks.json",
+    "reports/s01_preparation/prerequisites.json",
+    "reports/s01_preparation/resource_estimate_attempt_1.json",
+    "reports/s01_preparation/resource_profile.json",
+    "reports/s01_preparation/resource_profile_attempt_1.json",
+    "reports/s01_preparation/review_delta.json",
+    "reports/s01_preparation/review_initial.json",
+    "reports/s01_preparation/safety_index.json",
+    "reports/s01_preparation/safety_prestage.json",
+    "reports/s01_preparation/scaled_profile.json",
+    "reports/s01_preparation/tests.json",
+    "src/mosei/s01/__init__.py",
+    "src/mosei/s01/authorization.py",
+    "src/mosei/s01/contracts.py",
+    "src/mosei/s01/engine.py",
+    "src/mosei/s01/execution.py",
+    "src/mosei/s01/models.py",
+    "src/mosei/s01/normalization.py",
+    "src/mosei/s01/protocol.py",
+    "src/mosei/s01/registry.py",
+    "state/BLOCKERS.md",
+    "state/LATEST_RESEARCH.json",
+    "state/NEXT_ACTIONS.md",
+    "tests/test_s01_preparation.py",
+    "tools/s01_publication_check.py",
+    "tools/s01_resource_estimate.py",
+    "tools/s01_resource_profile.py",
+    "tools/s01_scaled_profile.py",
+    "tools/s01_train.py"
+  ],
+  "files": [
+    {
+      "path": "DECISIONS.md",
+      "sha256": "dd04cdd1a23062aff4611391f0668778801f3651abc37491e32fce456816a7b3",
+      "size_bytes": 9543
+    },
+    {
+      "path": "TASK_SPEC.md",
+      "sha256": "3a6e02c278035cf3cf441ac5c0f855664410cc1b4d9e80cdd1f0f59ce89183fe",
+      "size_bytes": 1720
+    },
+    {
+      "path": "configs/s01_execution.json",
+      "sha256": "7d4e8d7a0d7995761735a0622250f3a8091aa0c370694640c68ddf73806f3e43",
+      "size_bytes": 1853
+    },
+    {
+      "path": "docs/EXPERIMENT_REGISTER.json",
+      "sha256": "d47ddc14a0af31c2fcd0e4af7901faac28b4a5b30687aa095d5b807f1cf41a65",
+      "size_bytes": 65529
+    },
+    {
+      "path": "docs/PAPER_CLAIMS.md",
+      "sha256": "a81afa0f2a86ca94c05eed5c4921ecb04f41d8dcfd5c658ab0bd1961057efff1",
+      "size_bytes": 8643
+    },
+    {
+      "path": "docs/PROJECT_SUMMARY.md",
+      "sha256": "eb920539d7a260f67d35b79893dec9823ee72d80dfde47a1700cf81bd42cf5fa",
+      "size_bytes": 4569
+    },
+    {
+      "path": "docs/RESEARCH_LOG.md",
+      "sha256": "118a264b0ae8bbd7a0f96989f3845b8a464ec9b2d1af2706db9d95e729fc333e",
+      "size_bytes": 16204
+    },
+    {
+      "path": "docs/S01_EXECUTION_SPEC.md",
+      "sha256": "6e52aea8002b3e1fb77073989f6ab58391d5c927be2be9646ee1c315fdc35529",
+      "size_bytes": 14054
+    },
+    {
+      "path": "reports/s01_preparation/README.md",
+      "sha256": "d71f340a02dd2351792b67acc65c7f5a154d91264107d004172179969df06a42",
+      "size_bytes": 1658
+    },
+    {
+      "path": "reports/s01_preparation/RESOURCE_ESTIMATE.json",
+      "sha256": "c00deee37bcbead64a565563fe653c02bcd548b5c64b07f49ba2e60a75e9694b",
+      "size_bytes": 4727
+    },
+    {
+      "path": "reports/s01_preparation/RESOURCE_ESTIMATE.md",
+      "sha256": "468bd8c719cc903369fa89136d638bfc5ae8da73098618660108c00cbe2f21c6",
+      "size_bytes": 6213
+    },
+    {
+      "path": "reports/s01_preparation/RESULT.json",
+      "sha256": "1507b5e71308e360b39f1134a2c9a3e68213eec8ea63a681770aa92667211534",
+      "size_bytes": 3264
+    },
+    {
+      "path": "reports/s01_preparation/cli_checks.json",
+      "sha256": "ccf82c919146edad5bc0ceeb580563702441944d12f9687fcbf51bd055c984d1",
+      "size_bytes": 927
+    },
+    {
+      "path": "reports/s01_preparation/prerequisites.json",
+      "sha256": "1b57e3430b7c8a80b6b65f415200654f2d2ee4c0cb4da2c7352ee67c0e3b0385",
+      "size_bytes": 9888
+    },
+    {
+      "path": "reports/s01_preparation/resource_estimate_attempt_1.json",
+      "sha256": "c0993c1e38893eb381649b0b2f4e93e7796e29ce93973d3975d995f4b09a7ce1",
+      "size_bytes": 4766
+    },
+    {
+      "path": "reports/s01_preparation/resource_profile.json",
+      "sha256": "f9b1b34fd2c8f5182d720c8c5bbb5377426b47812a50a19abac2a9b03d07a933",
+      "size_bytes": 29282
+    },
+    {
+      "path": "reports/s01_preparation/resource_profile_attempt_1.json",
+      "sha256": "02ba9524ceaa0df0eba149188a9ecca3e4993cac7d69a475b7eb217ed5f706d3",
+      "size_bytes": 27949
+    },
+    {
+      "path": "reports/s01_preparation/review_delta.json",
+      "sha256": "6874c63ca1b7639a02da559bf1934388a405f7d74b49e6bfa6cbe5134f21db5e",
+      "size_bytes": 11839
+    },
+    {
+      "path": "reports/s01_preparation/review_initial.json",
+      "sha256": "904e20d20121a3f8b5a1258975d3f679af7bc33084d40349d2dc8abb9679fd0c",
+      "size_bytes": 11823
+    },
+    {
+      "path": "reports/s01_preparation/scaled_profile.json",
+      "sha256": "26dc7753cf11e9e08cf9304bb77af469e56c25b080da00a9c7afdd0cf96a5d5c",
+      "size_bytes": 5840
+    },
+    {
+      "path": "reports/s01_preparation/tests.json",
+      "sha256": "84defc8fe14cd2f1c89345f3e7a39b3edec83914d31c01b13475d17713fe2058",
+      "size_bytes": 51855
+    },
+    {
+      "path": "src/mosei/s01/__init__.py",
+      "sha256": "45e370a9952a0d589a6f50e06fe2ad315af97570b9c6fea83ddf8d218d575e3e",
+      "size_bytes": 90
+    },
+    {
+      "path": "src/mosei/s01/authorization.py",
+      "sha256": "4acf147067f31974c9b4ac2a334a600788351fb8e6afb6b32eb05de6e01ad7d3",
+      "size_bytes": 8183
+    },
+    {
+      "path": "src/mosei/s01/contracts.py",
+      "sha256": "03040b7725a22dd150bb5215f2a0697eaa6bc936ea32ed6df5d028171fe3d030",
+      "size_bytes": 5480
+    },
+    {
+      "path": "src/mosei/s01/engine.py",
+      "sha256": "45660e2d158da206c8d3464a6ca0395464817ea81873c1b8b8435b63d1be36a5",
+      "size_bytes": 12418
+    },
+    {
+      "path": "src/mosei/s01/execution.py",
+      "sha256": "5bc5a2585d71b322ef718dbd0884727c47ec121829180503dfbc600141cad3f7",
+      "size_bytes": 8541
+    },
+    {
+      "path": "src/mosei/s01/models.py",
+      "sha256": "e0d815c1f97e83e653e326c8df28d519b967b69c185b95b758a2822bef9821f3",
+      "size_bytes": 7650
+    },
+    {
+      "path": "src/mosei/s01/normalization.py",
+      "sha256": "4c5bad3c4f26a9c2b8e6aaebdc24d767b327553ba723490f82ff3ac7f3c75c3e",
+      "size_bytes": 3498
+    },
+    {
+      "path": "src/mosei/s01/protocol.py",
+      "sha256": "c69c194447c0c220a56e6dddb9c7a3e225f2a949147573d7212d4d0775871b26",
+      "size_bytes": 5842
+    },
+    {
+      "path": "src/mosei/s01/registry.py",
+      "sha256": "d4ea70e91aaa2e70792fdb025fa640d090443cb3ae8f41823f78d071df809e73",
+      "size_bytes": 4286
+    },
+    {
+      "path": "state/BLOCKERS.md",
+      "sha256": "66265abf6b38acef71dfb7786538f919971aabae0d944e1348cb3bffb41a2364",
+      "size_bytes": 868
+    },
+    {
+      "path": "state/LATEST_RESEARCH.json",
+      "sha256": "ca898a90a8a450f3626ee6f9c8ce7c2ed32882d3e95a9a0a68be0024af8f4627",
+      "size_bytes": 2158
+    },
+    {
+      "path": "state/NEXT_ACTIONS.md",
+      "sha256": "683fe3636519727138ba462c2418154bf36004704d40bd24c3ff56d4749adcc4",
+      "size_bytes": 1150
+    },
+    {
+      "path": "tests/test_s01_preparation.py",
+      "sha256": "00f9c0e98e897714fb5c71cb4f14d50b3c1b30f99f205120fcd1b5315c326a22",
+      "size_bytes": 21519
+    },
+    {
+      "path": "tools/s01_publication_check.py",
+      "sha256": "12cd2aacdcdee666903187087737417c8d2c62b98b8dc096d1351a4967816bd1",
+      "size_bytes": 5352
+    },
+    {
+      "path": "tools/s01_resource_estimate.py",
+      "sha256": "c5e15d12c3825de8933f2e76c3847376ced0ed45f6e7d4e85ef90520fb5a2138",
+      "size_bytes": 8843
+    },
+    {
+      "path": "tools/s01_resource_profile.py",
+      "sha256": "c0351e0029d18f5f4a0e012b49974de8dd6bac9f23148b0f9871f636c8c5ecb5",
+      "size_bytes": 8170
+    },
+    {
+      "path": "tools/s01_scaled_profile.py",
+      "sha256": "bfbb01cd60c0c89932713b21ad34afbc14c9120211f26248bc0d4befed5fc108",
+      "size_bytes": 4402
+    },
+    {
+      "path": "tools/s01_train.py",
+      "sha256": "64dc2b0d9a890913d3ac6eaa3417b08fed33f93b89f07e6b0f448995072c5f48",
+      "size_bytes": 2640
+    }
+  ],
+  "hash_exclusions": {
+    "paths": [
+      "reports/s01_preparation/MANIFEST.json",
+      "reports/s01_preparation/safety_prestage.json",
+      "reports/s01_preparation/safety_index.json"
+    ],
+    "reason": "Self/mutable-check outputs; still scanned and exact index/worktree byte-verified; finalGit commit binds everyfile."
+  },
+  "data_kind": "SYNTHETIC_ONLY",
+  "official_model_experiments": "NOT_RUN",
+  "metrics": null
+}

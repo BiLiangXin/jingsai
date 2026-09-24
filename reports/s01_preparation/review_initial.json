@@ -1,0 +1,227 @@
+{
+  "task": "S01_PREP_INDEPENDENT_READ_ONLY_REVIEW",
+  "status": "BLOCKED_BY_THREE_MAJOR_FINDINGS",
+  "owner_approval": false,
+  "execution_ready_pending_owner_authorization_supported": false,
+  "reviewer_role": "Independent read-only technical reviewer assigned by parent task",
+  "identity_limit": "Model identity was not queried from runtime telemetry; reviewer assignment is not cryptographic approval",
+  "repository": "REPOSITORY",
+  "base_commit": "be2917568434450ddefc54dbafae7c1dee5862dd",
+  "scope": "Current S01_PREP model/normalization/masks/loss/selection/finite scheduler/authorization/checkpoint/resource paths. No expansion of frozen research.",
+  "critical_findings": [],
+  "major_findings": [
+    {
+      "id": "S01-M01",
+      "title": "Baseline scheduler passes robust validation library while its resource estimate counts clean only",
+      "files": [
+        {
+          "path": "REPOSITORY\\src\\mosei\\s01\\execution.py",
+          "lines": [
+            100,
+            101,
+            102
+          ]
+        },
+        {
+          "path": "REPOSITORY\\src\\mosei\\s01\\engine.py",
+          "lines": [
+            150,
+            151,
+            182,
+            198
+          ]
+        },
+        {
+          "path": "REPOSITORY\\tools\\s01_resource_estimate.py",
+          "lines": [
+            18,
+            20
+          ]
+        }
+      ],
+      "reproduction": "Real one-epoch SYNTHETIC_ONLY B-CAT fit, two dense synthetic valid rows: without supplied library predict() calls=2; with shared library calls=290, and attempted96 appears despite clean checkpoint objective. Counts include epoch validation plus restored-best evaluation.",
+      "impact": "All24 baseline fits inherit144 unnecessary damaged views per evaluation. Proposed estimate uses1 view, so it does not describe the scheduler's actual work and can exhaust a deadline-bound campaign.",
+      "bounded_fix": "Pass no library for B objectives or normalize library=None inside fit when objective=clean. Preserve attempted96 for C0/R0/R1/R2/R1-CAP. Recalculate proposed resource caps on corrected path and preserve source-bound measurement evidence. Existing attempt1 profile lacks source_sha256/command/exit_code and should not be presented as exact-current-source proof."
+    },
+    {
+      "id": "S01-M02",
+      "title": "A single exact-version owner approval can launch repeated39-fit campaigns",
+      "files": [
+        {
+          "path": "REPOSITORY\\src\\mosei\\s01\\authorization.py",
+          "lines": [
+            82,
+            83,
+            84,
+            85,
+            86,
+            87
+          ]
+        },
+        {
+          "path": "REPOSITORY\\src\\mosei\\s01\\execution.py",
+          "lines": [
+            42,
+            43,
+            44,
+            47,
+            48,
+            50,
+            53
+          ]
+        },
+        {
+          "path": "REPOSITORY\\src\\mosei\\s01\\registry.py",
+          "lines": [
+            54,
+            55,
+            57,
+            58,
+            59,
+            65,
+            66
+          ]
+        }
+      ],
+      "reproduction": "Two execute_core invocations with identical config and the same mocked authority, different fresh private output directories, mocked source loader and mocked fit: both completed scheduling, total78 fit calls. No official data, native journals or optimizer steps were involved.",
+      "impact": "The native binding covers commit/config/freeze and core_budget39, but no one-use campaign identity/state. retry_training_budget=0 and finite trial states reset per new directory. Reinvocation after a failed or completed campaign can consume unapproved additional fits.",
+      "bounded_fix": "Bind approval to a unique campaign ID/private output identity and persistent fixed-host one-use claim. Repeated invocation cannot initialize another campaign. Any resume remains within the registered campaign and registered checkpoints, or requires separate explicit resume authority; do not silently restart completed fits."
+    },
+    {
+      "id": "S01-M03",
+      "title": "Result-persistence failure leaves false COMPLETED event and masks the original failure",
+      "files": [
+        {
+          "path": "REPOSITORY\\src\\mosei\\s01\\execution.py",
+          "lines": [
+            106,
+            107,
+            109,
+            110,
+            111,
+            112
+          ]
+        },
+        {
+          "path": "REPOSITORY\\src\\mosei\\s01\\registry.py",
+          "lines": [
+            65,
+            66,
+            67
+          ]
+        }
+      ],
+      "reproduction": "Mocked synthetic scheduler, inject OSError only when evaluation.json is written. Recorded states remain RUNNING,COMPLETED; evaluation.json does not exist; returned error becomes ValueError('Invalid transition or unauthorized retry') instead of the injected persistence failure.",
+      "impact": "The campaign stops with an incorrect durable completion record and loses the actionable failure in its event log.",
+      "bounded_fix": "Persist required evaluation evidence successfully before COMPLETED; on write failure record FAILED while state remains RUNNING and re-raise original exception. Add the focused injected-I/O regression."
+    }
+  ],
+  "minor_findings": [
+    {
+      "id": "S01-m01",
+      "title": "Approved resource envelope is not tied to execution device",
+      "files": [
+        {
+          "path": "REPOSITORY\\tools\\s01_train.py",
+          "lines": [
+            22,
+            33
+          ]
+        },
+        {
+          "path": "REPOSITORY\\configs\\s01_execution.json",
+          "lines": [
+            42,
+            43,
+            44
+          ]
+        }
+      ],
+      "detail": "Resource profile used CUDA, while CLI defaults to CPU and device is outside the native binding. A default official invocation can therefore use a materially different runtime basis.",
+      "recommendation": "For the concrete owner-facing execution command, bind or validate the measured device/runtime in execution config; avoid relying on an easy-to-omit CLI option."
+    }
+  ],
+  "positive_checks": [
+    "49 current synthetic pytest cases independently passed, no warnings reported.",
+    "Independent asymmetric partial-convolution probe with holes and bias produced15.5 exactly, matching the formula.",
+    "Two uninterrupted synthetic epochs and one epoch plus checkpoint resume had equal final model tensors and selector trace.",
+    "39 preregistered unique records match blocks B24/C03/R03/CORE9; all status NOT_RUN and metrics null.",
+    "Current false authorization rejects train/valid before data IO; test/Attachment3/4 and valid optimizer are rejected.",
+    "Reviewed fixed classes, train-only normalization, safe masks,96/144 weighting, cross-seed pairing aggregation and fixed-seed final guard."
+  ],
+  "commands": [
+    {
+      "command": "python -B -X utf8 -m pytest -p no:cacheprovider tests/test_s01_preparation.py --basetemp PRIVATE_PARENT/S01_PREP_REVIEW_20260925/pytest-initial -q",
+      "cwd": "REPOSITORY",
+      "exit_code": 0,
+      "tests": 49,
+      "passed": 49,
+      "warnings_reported": 0,
+      "pytest_elapsed_seconds": 6.17,
+      "output": "PRIVATE_REVIEW_DIRECTORY\\pytest_initial.txt"
+    },
+    {
+      "command": "python -B -X utf8 PRIVATE_PARENT/S01_PREP_REVIEW_20260925/independent_probes.py",
+      "cwd": "PRIVATE_REVIEW_DIRECTORY",
+      "exit_code": 0,
+      "output": "PRIVATE_REVIEW_DIRECTORY\\independent_probes_stdout.txt",
+      "structured_results": "PRIVATE_REVIEW_DIRECTORY\\independent_probe_results.json"
+    }
+  ],
+  "environment": {
+    "python": "3.11.14",
+    "torch": "2.9.1+cu128",
+    "cuda_runtime": "12.8",
+    "platform": "Windows",
+    "actual_probe_device": "cpu",
+    "executable": "python"
+  },
+  "boundaries": {
+    "official_tree_writes": false,
+    "official_data_opened": false,
+    "official_smoke_or_training": false,
+    "native_owner_journals_read": false,
+    "gpu_used_for_probes": false,
+    "official_model_experiments": "NOT_RUN",
+    "predictive_metrics": null,
+    "authorization_test_scope": "Fail-closed current entry and mocked scheduling replay; no real positive owner event read or fabricated.",
+    "test_count_scope": "The49 pytest cases and independent probe groups are separate; no inflated combined test count."
+  },
+  "source_sha256": {
+    "configs/s01_execution.json": "2300d1a19585b25e22deb39c7c9a365b0f9665695c5046782b3df4a97c976a01",
+    "docs/EXPERIMENT_REGISTER.json": "1bb29b3847982ef22cd56381966cf4b997e935a986f83f7541d6e12ac8191677",
+    "docs/research/R01/DESIGN.md": "bb3b349233bb3ca6016fbaca370ac6faac3e7ba777cab0407610d5e2c647400a",
+    "docs/research/R01/FREEZE_01.json": "26bed02ecc0464bec468cf986c1393bb49f50f7f69a96308a6d8a1c716ec8987",
+    "docs/research/R01/protocol.json": "5129ee349e8b236edf531ea940c895a6f6e36b70f612aa6515bb3980e33185ba",
+    "reports/s01_preparation/resource_estimate_attempt_1.json": "c0993c1e38893eb381649b0b2f4e93e7796e29ce93973d3975d995f4b09a7ce1",
+    "reports/s01_preparation/resource_profile_attempt_1.json": "02ba9524ceaa0df0eba149188a9ecca3e4993cac7d69a475b7eb217ed5f706d3",
+    "research/r01/reference.py": "1cd4b73bb748284b4941625d92be89522771eff8a11e4044547e5f513ea62495",
+    "src/mosei/s01/__init__.py": "45e370a9952a0d589a6f50e06fe2ad315af97570b9c6fea83ddf8d218d575e3e",
+    "src/mosei/s01/authorization.py": "78d51a65cc68ca3892b518a5f113517a2008e3c87f81ac67f72a7fd7e9da6b34",
+    "src/mosei/s01/contracts.py": "03040b7725a22dd150bb5215f2a0697eaa6bc936ea32ed6df5d028171fe3d030",
+    "src/mosei/s01/engine.py": "02ae34905e028f18ad3596f0fa2a989bdd4a65a10fe3a0c34a3f60420528ff65",
+    "src/mosei/s01/execution.py": "6f1a0c9df8becee3b89e3bc0ada102688178e1bf9cf7fad83c56b7f0f6b13185",
+    "src/mosei/s01/models.py": "e0d815c1f97e83e653e326c8df28d519b967b69c185b95b758a2822bef9821f3",
+    "src/mosei/s01/normalization.py": "4c5bad3c4f26a9c2b8e6aaebdc24d767b327553ba723490f82ff3ac7f3c75c3e",
+    "src/mosei/s01/protocol.py": "c69c194447c0c220a56e6dddb9c7a3e225f2a949147573d7212d4d0775871b26",
+    "src/mosei/s01/registry.py": "b15db37f6873612cca99c85cd5df72492a5129efb5e622c979c4b83a61b41a4a",
+    "tests/test_s01_preparation.py": "6f742eb1eacf4db33cbe5c8bdefbe695bf61c48045bba3f159dd5b9a6386372f",
+    "tools/s01_resource_estimate.py": "1467c5889f49e9d1a1470767e51a54dbfc3abdecb30e62435401c78615830faa",
+    "tools/s01_resource_profile.py": "c0351e0029d18f5f4a0e012b49974de8dd6bac9f23148b0f9871f636c8c5ecb5",
+    "tools/s01_train.py": "09c9680e15f6b3537167c973d8d24cc0dc00663f0a6df0884916b9fcd14c805c"
+  },
+  "review_evidence_sha256": {
+    "independent_probes.py": "3abbd44856b1de28a57550f3c83d62c38c7cff9b08f2027bcd48182570e0a155",
+    "independent_probe_results.json": "d78a187631a2977d42c15fd6274621746483b1799cc5cf47a624ee36305fb12b",
+    "pytest_initial.txt": "78590d184907b9f728fef0d4f5a87d07e8e0e17a930fd15c5eac3486f1a3ece3",
+    "independent_probes_stdout.txt": "2387b84ed226795efbdf2521c4b28e14f22909f656e875b908b08a2fc0862ef8"
+  },
+  "next_review": "After bounded fixes, review changed hashes and targeted regressions. Resource-cap/campaign30-or39 choice must follow the owner/frozen fallback scope; this review grants no execution permission.",
+  "public_export": {
+    "kind": "PATH_REDACTED_DERIVATIVE",
+    "original_sha256": "cdef34a166b10783dde0eb739adffc792c7853b23b1788738bcfeef939a783b8",
+    "original_unchanged": true,
+    "alterations": "Private absolute paths replaced; reviewer findings/commands/results retained",
+    "current_status": "HISTORICAL_FINDINGS_REPAIRED_PENDING_DELTA_REVIEW"
+  }
+}

@@ -1,0 +1,304 @@
+{
+  "status": "VERIFIED",
+  "base_commit": "be2917568434450ddefc54dbafae7c1dee5862dd",
+  "local_and_realtime_remote_matched": true,
+  "repository": "BiLiangXin/jingsai",
+  "branch": "codex/mosei-auto",
+  "initial_worktree_index_untracked": "CLEAN",
+  "engineering_task_idle": true,
+  "gate": {
+    "task_id": "S00E_S01_PRESTART_ENGINEERING_HARDENING",
+    "run_id": "20260925-020000-S00E-ASTRA-d9e4edb",
+    "status": "PASS",
+    "passed": true,
+    "summary": {
+      "PASS": 21,
+      "FAIL": 0,
+      "SKIPPED": 0,
+      "BLOCKED": 0
+    },
+    "items": [
+      {
+        "id": "E01",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "AGENTS.md",
+          "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/RUN.json"
+        ]
+      },
+      {
+        "id": "E02",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "TASK_SPEC.md",
+          "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/RUN.json"
+        ]
+      },
+      {
+        "id": "E03",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "docs/S00D_DATA_CONTRACT.md",
+          "reports/engineering/s00e_source_mutation_check.json"
+        ]
+      },
+      {
+        "id": "E04",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "reports/engineering/s00e_security_findings.json"
+        ]
+      },
+      {
+        "id": "E05",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "reports/engineering/s00e_public_tree_scan.json",
+          "tools/stage_handoff.py"
+        ]
+      },
+      {
+        "id": "E06",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "src/mosei/data/data_contract.py",
+          "tests/test_stage_s00e_hardening.py"
+        ]
+      },
+      {
+        "id": "E07",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "src/mosei/data/data_contract.py",
+          "tests/test_stage_s00e_hardening.py"
+        ]
+      },
+      {
+        "id": "E08",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "tools/stage_handoff.py",
+          "tests/test_stage_s00e_hardening.py"
+        ]
+      },
+      {
+        "id": "E09",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/TEST_RESULTS.json",
+          "tools/s00e_test_record.py"
+        ]
+      },
+      {
+        "id": "E10",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "reports/engineering/s00e_pytorch_runtime.json"
+        ]
+      },
+      {
+        "id": "E11",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "reports/engineering/s00e_pytorch_runtime.json",
+          "tools/s00e_smoke.py"
+        ]
+      },
+      {
+        "id": "E12",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "reports/engineering/s00e_pytorch_runtime.json",
+          "src/mosei/data/pooling.py"
+        ]
+      },
+      {
+        "id": "E13",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "reports/engineering/s00e_pytorch_runtime.json"
+        ]
+      },
+      {
+        "id": "E14",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "reports/engineering/s00e_pytorch_runtime.json",
+          "tests/test_stage_s00e_hardening.py"
+        ]
+      },
+      {
+        "id": "E15",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "reports/engineering/s00e_source_mutation_check.json"
+        ]
+      },
+      {
+        "id": "E16",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "src/mosei/data/dataset.py",
+          "tools/s00e_smoke.py"
+        ]
+      },
+      {
+        "id": "E17",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "tools/s00e_smoke.py",
+          "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/RUN.json"
+        ]
+      },
+      {
+        "id": "E18",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/TEST_RESULTS.json"
+        ]
+      },
+      {
+        "id": "E19",
+        "status": "PASS",
+        "detail": "Independent technical review passed; exact version owner approval verified directly from native user event",
+        "evidence": [
+          "reports/engineering/s00e_phase_d_review.json"
+        ]
+      },
+      {
+        "id": "E20",
+        "status": "PASS",
+        "detail": "Verified PHASE C evidence",
+        "evidence": [
+          "DECISIONS.md",
+          "docs/data-guide.md",
+          "docs/HANDOFF_WORKFLOW.md"
+        ]
+      },
+      {
+        "id": "E21",
+        "status": "PASS",
+        "detail": "Actual read-only preflight CLI returned exit 0 after E01-E20 passed",
+        "evidence": [
+          "reports/engineering/s00e_prepublication_preflight.json",
+          "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/public/HANDOFF_INPUTS.json",
+          "tools/s00e_preflight.py"
+        ]
+      }
+    ],
+    "phase_c_status": "READY_FOR_INDEPENDENT_REVIEW"
+  },
+  "published_receipt": {
+    "path": "reports/runs/20260925-020000-S00E-ASTRA-d9e4edb/PUBLISH_RECEIPT.json",
+    "sha256": "f877033495f71eee4c2bde4c9c1d83699a725d22bfa2a1725aa66fa7b9bb8d3d"
+  },
+  "source_input_git_blobs": {
+    "AGENTS.md": {
+      "git_blob_sha256": "4a9ea177276ccf84d7a37567af79144dad4b2c23a13bbcc6ea28c1e311114954",
+      "size_bytes": 4554
+    },
+    "TASK_SPEC.md": {
+      "git_blob_sha256": "8c40f47d50616d873ad1ba3f2ce80898cc758d7462d3f001f3c32c575aec1c62",
+      "size_bytes": 15658
+    },
+    "DECISIONS.md": {
+      "git_blob_sha256": "868a74c0a4a1aa3ad66a919a05b1980e10f9e89fd83b15bece4fb0f24f1e5b10",
+      "size_bytes": 8130
+    },
+    "CHATGPT_REVIEW.md": {
+      "git_blob_sha256": "4b9199b8715eca17f2539c14e7422501364df296c145c50cb10117d99258d104",
+      "size_bytes": 2746
+    },
+    "state/LATEST_RUN.json": {
+      "git_blob_sha256": "ff77a2d4eafa00ae842c2a94611f3ae2d161bb4ec92e9cb1f17ac6cb88b5ace0",
+      "size_bytes": 3298
+    },
+    "state/LATEST_RESEARCH.json": {
+      "git_blob_sha256": "77ee2967664dd126ef4bcaf5954b4e1bb6061a242e6fe22cf82cd2cda5ab9600",
+      "size_bytes": 1721
+    },
+    "docs/S00D_DATA_CONTRACT.md": {
+      "git_blob_sha256": "c397a296ad6595375db34b79e93add43fe7888a359976a7c41608ba9c120240c",
+      "size_bytes": 3665
+    },
+    "docs/S00E_ENGINEERING_HARDENING.md": {
+      "git_blob_sha256": "6ca54baca605ea7e146532312cffba2990bb6ea4fb5046d08c6bb0b19461078c",
+      "size_bytes": 3809
+    },
+    "docs/research/R01/CLOSEOUT.md": {
+      "git_blob_sha256": "acdefc76d7b27dc7b476287481d32b89fb7de0b57723538aebe27d48795100e4",
+      "size_bytes": 4705
+    },
+    "docs/research/R01/decisions.json": {
+      "git_blob_sha256": "a81bf20025c04128faa3412b02e3759210cdb0afd269eb926a647daad40803a7",
+      "size_bytes": 10079
+    },
+    "docs/research/R01/DECISIONS.md": {
+      "git_blob_sha256": "8f3091d546badab7a748c0d1d1ecb1362e3c4f45279ec018aa366ea5f27c8a2e",
+      "size_bytes": 4138
+    },
+    "docs/research/R01/DESIGN.md": {
+      "git_blob_sha256": "bb3b349233bb3ca6016fbaca370ac6faac3e7ba777cab0407610d5e2c647400a",
+      "size_bytes": 26674
+    },
+    "docs/research/R01/FREEZE_01.json": {
+      "git_blob_sha256": "26bed02ecc0464bec468cf986c1393bb49f50f7f69a96308a6d8a1c716ec8987",
+      "size_bytes": 4613
+    },
+    "docs/research/R01/protocol.json": {
+      "git_blob_sha256": "5129ee349e8b236edf531ea940c895a6f6e36b70f612aa6515bb3980e33185ba",
+      "size_bytes": 2755
+    },
+    "docs/research/R01/R01_ablation_matrix.csv": {
+      "git_blob_sha256": "3630f1650acc87ed5996a8ecb9e4796e40d572ae398dbec4922241012b85d891",
+      "size_bytes": 7661
+    },
+    "docs/research/R01/R01_experiment_matrix.csv": {
+      "git_blob_sha256": "7f5f1e40b8b1ed9ae4b6a3e5ff09b777fe0f64ed1eb5f611123e33947ff0a4e7",
+      "size_bytes": 10453
+    },
+    "docs/research/R01/README.md": {
+      "git_blob_sha256": "60e6d0f9a22c36c803cfc296e31471f975982f3cc5660e0ab302b13bf808edf7",
+      "size_bytes": 1887
+    },
+    "docs/research/R01/REVISION_TRACE.md": {
+      "git_blob_sha256": "1d01f19e8f1c5410fd0b088340ebe66e474a9fb8022bb051b9ae7c7ef263a8ea",
+      "size_bytes": 971
+    },
+    "docs/research/R01/sources.json": {
+      "git_blob_sha256": "261238bf27fb4f5f0602a9a072489217771278787028a3899953a1e68862712a",
+      "size_bytes": 2500
+    },
+    "docs/research/R01/SOURCES.md": {
+      "git_blob_sha256": "67b8231ec90eadcf88f8eb8089b3215ac80c3bb5fd63e7c3169882d5bb18b701",
+      "size_bytes": 3702
+    },
+    "docs/research/R01/trials.json": {
+      "git_blob_sha256": "3682ebe05fa29598540de87a2619b8aab5a66ad74e475ca96d41cf1814df4223",
+      "size_bytes": 23700
+    }
+  },
+  "latest_run_unchanged": true,
+  "raw_data_read": false,
+  "model_identity_telemetry": "UNKNOWN",
+  "model_selection": "User previously confirmed GPT-6 Astra / xhigh; no fabricated telemetry",
+  "limitation": "Historical S00E execution/smoke was not rerun; its published evidence is retained."
+}

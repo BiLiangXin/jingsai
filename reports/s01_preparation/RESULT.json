@@ -1,0 +1,68 @@
+{
+  "stage": "S01_SPECIFICATION_AND_EXECUTION_AUTHORIZATION_PREP",
+  "status": "READY_FOR_OWNER_EXECUTION_AUTHORIZATION",
+  "summary": "Frozen39fit implementation and synthetic verification complete; deadline-aware30fit proposal awaits owner execution approval.",
+  "changes": [
+    "docs/S01_EXECUTION_SPEC.md",
+    "src/mosei/s01",
+    "configs/s01_execution.json",
+    "docs/EXPERIMENT_REGISTER.json",
+    "state/LATEST_RESEARCH.json"
+  ],
+  "tests": {
+    "main_passed": 277,
+    "subtests_passed": 25,
+    "s01_subset": 56,
+    "exit_code": 0,
+    "resource_profile": "SYNTHETIC_ONLY_COMPLETED",
+    "independent_review": "reports/s01_preparation/review_delta.json",
+    "results": "reports/s01_preparation/tests.json"
+  },
+  "blockers": [
+    "Officialexecution authorization is absent; training_authorized=false.",
+    "12hour30fit plan requires start by2026-09-25 06:00 Beijing; late approval needs pre-execution24fit4h plan or deadline decision."
+  ],
+  "next_actions": [
+    "Main Research Chat reviews exact committed specification/config and chooses execution budget/caps before any experiment.",
+    "Bind separate genuine owner approval to exactcommit/config/freeze/campaign/device/output/deadline; do not auto-start."
+  ],
+  "data_kind": "SYNTHETIC_ONLY",
+  "metrics_file": null,
+  "metrics": null,
+  "engineering_status": "S00E_COMPLETED_PUBLISHED_UNCHANGED",
+  "publication_status": "SAFE_ORDINARY_GIT_PUBLICATION; resolve containingcommit and externalreceipt",
+  "base_commit": "be2917568434450ddefc54dbafae7c1dee5862dd",
+  "S01_SPEC_STATUS": "READY_FOR_OWNER_EXECUTION_AUTHORIZATION",
+  "R01_FREEZE_STATUS": "FROZEN_FOR_S01_PROTOCOL",
+  "CORE_BUDGET": 39,
+  "PROPOSED_EXECUTION_FIT_BUDGET": 30,
+  "NORMALIZER_SELECTED": "NOT_YET_SELECTED",
+  "RESOURCE_PROFILE": "SYNTHETIC_ONLY_COMPLETED",
+  "PROPOSED_RESOURCE_WALLTIME_CAP_HOURS": 12,
+  "PROPOSED_PER_FIT_CAP_HOURS": 2,
+  "REGISTERED_FITS": 39,
+  "OFFICIAL_MODEL_EXPERIMENTS": "NOT_RUN",
+  "OFFICIAL_DATA_TRAINING_PERFORMED": "NO",
+  "TEST_USED_FOR_SELECTION": "NO",
+  "ATTACHMENT3_4_INSPECTED": "NO",
+  "ATTACHMENT3_MASK_AVAILABILITY": "UNKNOWN",
+  "S01_TRAINING_AUTHORIZED": "NO",
+  "PAPER_DEADLINE_BEIJING": "2026-09-27T00:00:00+08:00",
+  "PROPOSED_COMPUTE_CUTOFF_BEIJING": "2026-09-25T18:00:00+08:00",
+  "RESERVED_PAPER_REVISION_HOURS": 30,
+  "NEXT_OWNER": "MAIN_RESEARCH_CHAT",
+  "NEXT_ACTION": "REVIEW_S01_EXECUTION_SPEC_AND_DECIDE_TRAINING_AUTHORIZATION",
+  "STOPPED_BEFORE_OFFICIAL_TRAINING": true,
+  "FROZEN_DATA_CONTRACT_CHANGED": false,
+  "LATEST_RUN_CHANGED": false,
+  "RELEASE_CREATED": false,
+  "WEB_HANDOFF_ZIP_REQUIRED": false,
+  "model_identity_telemetry": "UNKNOWN; user confirmed UI setting, not fabricated telemetry",
+  "limitations": [
+    "Synthetic timings and planner are not a guarantee of officialruntime.",
+    "Deferred9temporal/gatingfits cannot support performance ormechanismclaims.",
+    "Ownerauthorization uses uncompromised nativehost trust, not cryptographicsecurity against same-account hostile code.",
+    "Public safety scan is bounded pattern/path checking; historicalGitobjects not republished.",
+    "No normalizerwinner, officialpredictivemetric, specialmask orQ3 conclusion."
+  ]
+}

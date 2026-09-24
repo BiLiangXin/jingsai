@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "exit_code": 0,
+  "stage": "S01_PREPARATION",
+  "base_commit": "be2917568434450ddefc54dbafae7c1dee5862dd",
+  "mode": "INDEX_AND_WORKTREE",
+  "publication_file_count": 42,
+  "verified_payload_hashes": 39,
+  "tracked_text_files_scanned": 257,
+  "findings": [],
+  "exact_staged_set_verified": true,
+  "index_equals_worktree_verified": true,
+  "data_contract_unchanged": true,
+  "latest_run_unchanged": true,
+  "official_model_experiments": "NOT_RUN",
+  "metrics": null,
+  "limitations": [
+    "Pattern scanning is not a universal secret-detection proof; no original data contents read.",
+    "Self-hash and mutable safety-report exclusions are explicitly listed in MANIFEST."
+  ],
+  "command": "python -B -X utf8 tools/s01_publication_check.py --manifest reports/s01_preparation/MANIFEST.json --index"
+}

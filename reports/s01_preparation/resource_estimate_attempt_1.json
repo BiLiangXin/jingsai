@@ -1,0 +1,123 @@
+{
+  "status": "PROPOSED_NUMERIC_RESOURCE_CAP",
+  "approved": false,
+  "measured_scope": "SYNTHETIC_ONLY; no official data epoch has been timed",
+  "aggregate_count_source": "docs/S00D_DATA_CONTRACT.md (historical public aggregate; not reopened data)",
+  "train_count": 3395,
+  "valid_count": 728,
+  "batch_size": 32,
+  "train_steps_per_epoch": 107,
+  "valid_batches_per_view": 23,
+  "max_epochs": 100,
+  "patience": 10,
+  "conservative_runtime_multiplier": 3.0,
+  "additional_cpu_metrics_transfer_seconds_per_epoch": 10.0,
+  "per_fit_io_checkpoint_allowance_seconds": 600.0,
+  "stage_preprocess_and_reused_baseline_allowance_hours": 1.0,
+  "estimated_valid_library_seconds": 68.21868689992698,
+  "planning_fit_estimates": [
+    {
+      "architecture": "B-T",
+      "fits": 6,
+      "measured_step_max_seconds": 0.014677300001494586,
+      "measured_forward_max_seconds": 0.0046412999981839675,
+      "validation_views": 1,
+      "estimated_epoch_upper_seconds": 15.031663000354456,
+      "estimated_fit_upper_hours": 0.5842128611209572
+    },
+    {
+      "architecture": "B-A",
+      "fits": 6,
+      "measured_step_max_seconds": 0.017223400001967093,
+      "measured_forward_max_seconds": 0.004360499999165768,
+      "validation_views": 1,
+      "estimated_epoch_upper_seconds": 15.829585900573875,
+      "estimated_fit_upper_hours": 0.606377386127052
+    },
+    {
+      "architecture": "B-V",
+      "fits": 6,
+      "measured_step_max_seconds": 0.01780779999899096,
+      "measured_forward_max_seconds": 0.004447999999683816,
+      "validation_views": 1,
+      "estimated_epoch_upper_seconds": 16.02321579965428,
+      "estimated_fit_upper_hours": 0.6117559944348412
+    },
+    {
+      "architecture": "B-CAT",
+      "fits": 6,
+      "measured_step_max_seconds": 0.0158527999992657,
+      "measured_forward_max_seconds": 0.006159999997180421,
+      "validation_views": 1,
+      "estimated_epoch_upper_seconds": 15.513788799569738,
+      "estimated_fit_upper_hours": 0.5976052444324927
+    },
+    {
+      "architecture": "C0",
+      "fits": 3,
+      "measured_step_max_seconds": 0.02207540000017616,
+      "measured_forward_max_seconds": 0.007988299999851733,
+      "validation_views": 145,
+      "estimated_epoch_upper_seconds": 97.00914489857314,
+      "estimated_fit_upper_hours": 2.861365136071476
+    },
+    {
+      "architecture": "R0",
+      "fits": 3,
+      "measured_step_max_seconds": 0.021883899997192202,
+      "measured_forward_max_seconds": 0.008234999997512205,
+      "validation_views": 145,
+      "estimated_epoch_upper_seconds": 103.01113897355026,
+      "estimated_fit_upper_hours": 3.0280871937097293
+    },
+    {
+      "architecture": "R1",
+      "fits": 3,
+      "measured_step_max_seconds": 0.029814299999998184,
+      "measured_forward_max_seconds": 0.010719099998823367,
+      "validation_views": 145,
+      "estimated_epoch_upper_seconds": 130.41021788756916,
+      "estimated_fit_upper_hours": 3.7891727190991435
+    },
+    {
+      "architecture": "R2",
+      "fits": 3,
+      "measured_step_max_seconds": 0.03658240000004298,
+      "measured_forward_max_seconds": 0.010380800002167234,
+      "validation_views": 145,
+      "estimated_epoch_upper_seconds": 129.19808652103893,
+      "estimated_fit_upper_hours": 3.7555024033621924
+    },
+    {
+      "architecture": "R1-CAP",
+      "fits": 3,
+      "measured_step_max_seconds": 0.03297670000029029,
+      "measured_forward_max_seconds": 0.010571899998467416,
+      "validation_views": 145,
+      "estimated_epoch_upper_seconds": 129.95261228410163,
+      "estimated_fit_upper_hours": 3.7764614523361564
+    }
+  ],
+  "estimated_total_39_fit_upper_hours": 67.05042526567813,
+  "resource_walltime_cap_hours": 72,
+  "per_fit_walltime_cap_hours": 4,
+  "total_39_fit_cap_hours": 72,
+  "storage_cap_gib": 5.0,
+  "gpu_memory_guard_fraction": 0.8,
+  "recommended_batch": 32,
+  "max_tested_safe_batch": 256,
+  "physical_max_batch": "UNKNOWN",
+  "official_epoch_seconds": null,
+  "official_fit_hours": null,
+  "oom_boundary": null,
+  "official_model_experiments": "NOT_RUN",
+  "metrics": null,
+  "limits": [
+    "Planning upper estimates are not mathematical or empirical official-runtime bounds.",
+    "Patience may shorten work but no early-stopping discount is used.",
+    "Global cap may stop the campaign before39fits finish; never silently switch to24/30.",
+    "Per-fit cap is a maximum, not expected elapsed time; its39fold sum is not the phase-weighted total estimate.",
+    "Owner must approve numeric caps and training separately. No outcome-based budget change."
+  ],
+  "source_profile_sha256": "02ba9524ceaa0df0eba149188a9ecca3e4993cac7d69a475b7eb217ed5f706d3"
+}

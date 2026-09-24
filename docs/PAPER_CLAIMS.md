@@ -57,3 +57,15 @@ Sources opened and scopes verified in docs/research/R01/SOURCES.md and sources.j
 | Attachment3 reliable mask availability | UNKNOWN | Explicit owner boundary | Natural structural-zero cannot automatically mean artificial missing |
 
 Earlier provisional/pending text describes the preapproval checkpoint. Owner approval changes governance only, not evidence strength: all model experimentsNOT_RUN and metricsnull, historical tests/reviews unchanged.
+## S01 synthetic implementation and deadline resource evidence
+
+| Claim | Evidence level | Source | Scope limit |
+|---|---|---|---|
+| Frozen models/masks/selection implemented and synthetic checks performed | VERIFIED only for listed actual checks | tests/test_s01_preparation.py; reports/s01_preparation/tests.json | No predictive performance conclusion |
+| RealCUDA synthetic runtime/peakmemory measured | VERIFIED | resource_profile.json; scaled_profile.json | Artificial tensors, not officialepoch/runtime |
+| Proposed30fits can fit12h planning envelope | INFERRED, PROVISIONAL | RESOURCE_ESTIMATE.json | No runtime guarantee; owner authorization required |
+| Paper deadline9/27 00:00 Beijing;30h revisionbuffer | SPECIFIED userdeadline; PROVISIONAL computeallocation | DECISIONS.md; configs/s01_execution.json | Paper completion not claimed |
+| Remaining9temporal/gatingfits have modelresults | UNKNOWN; NOT_RUN |39preregisteredfits | No mechanism superiority/ablation claim |
+| Any officialscore, normalizerwinner orspecialmask result exists | UNKNOWN; metricsnull | state/LATEST_RESEARCH.json | No officialdata/modelexperiment this task |
+
+Earliernullcaps describe historicalfreeze; currentnumericcaps are proposals only. No synthetic accuracy/F1/loss is inserted as competitionevidence. Independent technicalreview is distinct from ownerrunapproval.

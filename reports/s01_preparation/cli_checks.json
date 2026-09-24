@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "data_kind": "SYNTHETIC_ONLY",
+  "metrics": null,
+  "commands": [
+    {
+      "command": "python -B -X utf8 tools/s01_train.py synthetic --architecture R2 --device cuda --output-dir PRIVATE_NEW_DIRECTORY/cli-r2-cuda",
+      "exit_code": 0,
+      "status": "PASS",
+      "actual_epochs": 1,
+      "checkpoint_roundtrip": true,
+      "official_data_loaded": false
+    },
+    {
+      "command": "python -B -X utf8 tools/s01_train.py official --output-dir PRIVATE_NEW_DIRECTORY/must-not-exist-official",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "reason": "S01_TRAINING_AUTHORIZED=false; no official data execution",
+      "output_directory_created": false,
+      "source_argument_supplied": false,
+      "official_data_loaded": false
+    }
+  ],
+  "private_argument_redaction": true,
+  "official_model_experiments": "NOT_RUN",
+  "training_authorized": false
+}

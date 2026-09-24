@@ -1,0 +1,246 @@
+{
+  "task": "S01_PREP_INDEPENDENT_DELTA_REVIEW",
+  "status": "TECHNICAL_DELTA_PASS_PENDING_OWNER_AUTHORIZATION",
+  "owner_approval": false,
+  "owner_execution_authorization_granted": false,
+  "technical_readiness_supported": true,
+  "scope": "Bounded delta: three initial MAJOR findings, device/campaign/budget/deadline binding, current30-fit scheduling and resource evidence. No expansion of frozen research.",
+  "repository": "REPOSITORY",
+  "base_commit": "be2917568434450ddefc54dbafae7c1dee5862dd",
+  "reviewer_role": "Independent read-only technical reviewer assigned by parent task",
+  "identity_limit": "No model/runtime telemetry was queried; this is a technical review, not native owner approval or cryptographic attestation.",
+  "critical_findings": [],
+  "blocking_major_findings": [],
+  "resolved_findings": [
+    {
+      "id": "S01-M01",
+      "status": "CLOSED_IN_REVIEWED_DELTA",
+      "source": [
+        {
+          "path": "src/mosei/s01/engine.py",
+          "lines": [
+            153,
+            154,
+            155,
+            192,
+            210
+          ]
+        }
+      ],
+      "evidence": "Actual tiny synthetic B-CAT two-epoch fit with supplied shared library produced147predict calls:2clean checkpoint evaluations plus145calls at the restored selected checkpoint. Full final attempted96 report remains present. Mechanism checkpoint objective is unchanged."
+    },
+    {
+      "id": "S01-M02",
+      "status": "CLOSED_IN_REVIEWED_DELTA",
+      "source": [
+        {
+          "path": "src/mosei/s01/authorization.py",
+          "lines": [
+            74,
+            77,
+            81,
+            85,
+            99,
+            105,
+            124,
+            133,
+            138,
+            141
+          ]
+        },
+        {
+          "path": "src/mosei/s01/execution.py",
+          "lines": [
+            54,
+            65,
+            70,
+            74,
+            112
+          ]
+        }
+      ],
+      "evidence": "Owner-question binding contains commit/config/freeze,campaign,canonical private output digest,CUDA device,actual budget and absolute deadline. Real atomic claim, isolated to synthetic private directory, rejects a second mocked scheduler launch to a new output after first30fits; total scheduled calls stay30 and second directory is not created. Native event verifier/source loader/fits were doubles; no owner approval was fabricated."
+    },
+    {
+      "id": "S01-M03",
+      "status": "CLOSED_IN_REVIEWED_DELTA",
+      "source": [
+        {
+          "path": "src/mosei/s01/execution.py",
+          "lines": [
+            23,
+            28,
+            29,
+            126,
+            127,
+            130,
+            132,
+            135,
+            138
+          ]
+        },
+        {
+          "path": "src/mosei/s01/registry.py",
+          "lines": [
+            71,
+            73,
+            74
+          ]
+        }
+      ],
+      "evidence": "Required evaluation JSON is persisted before COMPLETED. Injected evaluation persistence failure returned original OSError and durable states RUNNING,FAILED, with no false COMPLETED."
+    },
+    {
+      "id": "S01-m01",
+      "status": "CLOSED_IN_REVIEWED_DELTA",
+      "source": [
+        {
+          "path": "tools/s01_train.py",
+          "lines": [
+            26,
+            27,
+            28,
+            35
+          ]
+        },
+        {
+          "path": "src/mosei/s01/authorization.py",
+          "lines": [
+            77,
+            104
+          ]
+        }
+      ],
+      "evidence": "Official CLI uses config.device when omitted; current CUDA proposal is enforced by authorization and bound into the owner question."
+    }
+  ],
+  "deadline_and_budget_checks": {
+    "frozen_core_registry": 39,
+    "proposed_active_fits": 30,
+    "deferred_fits": 9,
+    "all39_currently_not_run_metrics_null": true,
+    "active_architectures": [
+      "B-A",
+      "B-CAT",
+      "B-T",
+      "B-V",
+      "C0",
+      "R0"
+    ],
+    "paper_deadline": "2026-09-27T00:00:00+08:00",
+    "proposed_compute_stop": "2026-09-25T18:00:00+08:00",
+    "proposed_paper_buffer_hours": 30,
+    "proposed_total_cap_hours": 12,
+    "proposed_per_fit_cap_hours": 2,
+    "launch_boundary_probe": "05:59Beijing accepted against isolated mocked owner gate;06:01Beijing refused before startup for12hcap",
+    "fallback24_status": "Separate pre-execution fallback; not activated by this review. Must bind its concrete config/cap and owner approval before any run.",
+    "scope_statement": "The30-fit plan implements the already-frozen permitted pre-execution resource downgrade; it does not claim completed39fits or temporal/gating results."
+  },
+  "resource_checks": {
+    "source_hashes_match_current": true,
+    "micro_and_scaled_links_match": true,
+    "estimator_hash_matches": true,
+    "arithmetic_reproduced": true,
+    "estimated_total_hours": {
+      "24": 2.9885771016679956,
+      "30": 11.487988585835126,
+      "39": 27.868734679747817
+    },
+    "resource_profiles_rerun": false,
+    "interpretation": "30=11.487988585835126h is a source-bound planning estimate under measured synthetic conditions, not a guaranteed official runtime.39comparison is not active."
+  },
+  "actual_independent_commands": [
+    {
+      "command": "python -B -X utf8 -m pytest -p no:cacheprovider tests/test_s01_preparation.py --basetemp PRIVATE_PARENT/S01_PREP_REVIEW_20260925/pytest-delta -q",
+      "cwd": "REPOSITORY",
+      "environment_override": {
+        "CUDA_VISIBLE_DEVICES": "-1"
+      },
+      "exit_code": 0,
+      "passed": 56,
+      "warnings_reported": 0,
+      "pytest_elapsed_seconds": 8.6,
+      "output": "PRIVATE_REVIEW_DIRECTORY\\pytest_delta.txt"
+    },
+    {
+      "command": "python -B -X utf8 PRIVATE_PARENT/S01_PREP_REVIEW_20260925/delta_probes.py",
+      "cwd": "PRIVATE_REVIEW_DIRECTORY",
+      "environment_override": {
+        "CUDA_VISIBLE_DEVICES": "-1"
+      },
+      "exit_code": 0,
+      "source": "PRIVATE_REVIEW_DIRECTORY\\delta_probes.py",
+      "output": "PRIVATE_REVIEW_DIRECTORY\\delta_probes_stdout.txt",
+      "structured_results": "PRIVATE_REVIEW_DIRECTORY\\delta_probe_results.json"
+    }
+  ],
+  "author_recorded_test_command_summaries": [
+    {
+      "command": "python -B -X utf8 -m pytest -q -p no:cacheprovider tests --junitxml=PRIVATE_REPORT_DIRECTORY/pytest-final-2.xml",
+      "exit_code": 0,
+      "status": "PASS"
+    }
+  ],
+  "test_attribution": "Independent execution in this delta is56 S01pytest cases plus the separately recorded targeted probes. Parent full-suite277 and25subtests are recorded parent evidence, not independently rerun here; historical failed run remains retained.",
+  "environment": {
+    "python": "3.11.14",
+    "torch": "2.9.1+cu128",
+    "executable": "python",
+    "platform": "Windows",
+    "probe_device": "cpu",
+    "CUDA_VISIBLE_DEVICES": "-1",
+    "cuda_visible": false
+  },
+  "limits": [
+    "Technical PASS does not activate training. Current training_authorized=false, proposed caps and later exact-version genuine owner event remain required.",
+    "Native journals were not read. Positive owner verification was mocked; fixed-host provenance and same-account trust are documented assumptions, not a security sandbox.",
+    "Runtime estimates use synthetic timing;25%margin and allowances do not guarantee completion. Cap stops must retain partial evidence without claiming a complete seed set.",
+    "Deadline is enforced cooperatively at the implemented checks; this review does not guarantee preemption of a hung OS/GPU/IO operation at an exact wall-clock instant.",
+    "24-fit fallback requires a new concrete pre-start binding; no automatic post-result downgrade or restart is allowed.",
+    "No original PKL, historical sampleCSV, test, Attachment3/4 or official-smoke/training was accessed/executed."
+  ],
+  "source_unchanged_during_independent_probes": true,
+  "source_sha256": {
+    "configs/s01_execution.json": "7d4e8d7a0d7995761735a0622250f3a8091aa0c370694640c68ddf73806f3e43",
+    "docs/EXPERIMENT_REGISTER.json": "d47ddc14a0af31c2fcd0e4af7901faac28b4a5b30687aa095d5b807f1cf41a65",
+    "docs/research/R01/FREEZE_01.json": "26bed02ecc0464bec468cf986c1393bb49f50f7f69a96308a6d8a1c716ec8987",
+    "docs/research/R01/protocol.json": "5129ee349e8b236edf531ea940c895a6f6e36b70f612aa6515bb3980e33185ba",
+    "docs/S01_EXECUTION_SPEC.md": "6e52aea8002b3e1fb77073989f6ab58391d5c927be2be9646ee1c315fdc35529",
+    "reports/s01_preparation/RESOURCE_ESTIMATE.json": "c00deee37bcbead64a565563fe653c02bcd548b5c64b07f49ba2e60a75e9694b",
+    "reports/s01_preparation/RESOURCE_ESTIMATE.md": "468bd8c719cc903369fa89136d638bfc5ae8da73098618660108c00cbe2f21c6",
+    "reports/s01_preparation/resource_profile.json": "f9b1b34fd2c8f5182d720c8c5bbb5377426b47812a50a19abac2a9b03d07a933",
+    "reports/s01_preparation/scaled_profile.json": "26dc7753cf11e9e08cf9304bb77af469e56c25b080da00a9c7afdd0cf96a5d5c",
+    "reports/s01_preparation/tests.json": "84defc8fe14cd2f1c89345f3e7a39b3edec83914d31c01b13475d17713fe2058",
+    "research/r01/reference.py": "1cd4b73bb748284b4941625d92be89522771eff8a11e4044547e5f513ea62495",
+    "src/mosei/s01/__init__.py": "45e370a9952a0d589a6f50e06fe2ad315af97570b9c6fea83ddf8d218d575e3e",
+    "src/mosei/s01/authorization.py": "4acf147067f31974c9b4ac2a334a600788351fb8e6afb6b32eb05de6e01ad7d3",
+    "src/mosei/s01/contracts.py": "03040b7725a22dd150bb5215f2a0697eaa6bc936ea32ed6df5d028171fe3d030",
+    "src/mosei/s01/engine.py": "45660e2d158da206c8d3464a6ca0395464817ea81873c1b8b8435b63d1be36a5",
+    "src/mosei/s01/execution.py": "5bc5a2585d71b322ef718dbd0884727c47ec121829180503dfbc600141cad3f7",
+    "src/mosei/s01/models.py": "e0d815c1f97e83e653e326c8df28d519b967b69c185b95b758a2822bef9821f3",
+    "src/mosei/s01/normalization.py": "4c5bad3c4f26a9c2b8e6aaebdc24d767b327553ba723490f82ff3ac7f3c75c3e",
+    "src/mosei/s01/protocol.py": "c69c194447c0c220a56e6dddb9c7a3e225f2a949147573d7212d4d0775871b26",
+    "src/mosei/s01/registry.py": "d4ea70e91aaa2e70792fdb025fa640d090443cb3ae8f41823f78d071df809e73",
+    "tests/test_s01_preparation.py": "00f9c0e98e897714fb5c71cb4f14d50b3c1b30f99f205120fcd1b5315c326a22",
+    "tools/s01_resource_estimate.py": "c5e15d12c3825de8933f2e76c3847376ced0ed45f6e7d4e85ef90520fb5a2138",
+    "tools/s01_resource_profile.py": "c0351e0029d18f5f4a0e012b49974de8dd6bac9f23148b0f9871f636c8c5ecb5",
+    "tools/s01_scaled_profile.py": "bfbb01cd60c0c89932713b21ad34afbc14c9120211f26248bc0d4befed5fc108",
+    "tools/s01_train.py": "64dc2b0d9a890913d3ac6eaa3417b08fed33f93b89f07e6b0f448995072c5f48"
+  },
+  "review_evidence_sha256": {
+    "delta_probes.py": "a3083153b046d5a8e3c37f0ce03318d7d6f97e80a3a6991e4ab6047d5a1fb450",
+    "delta_probe_results.json": "a563069320e871241d9aaf9e02f2ac05ed34330e12e9a95a2ef8aa80abe182b0",
+    "pytest_delta.txt": "4c0b6811f78140910f2a384c2516abbffc27c6ecf8051b92cd2aabac4fa6af93",
+    "delta_probes_stdout.txt": "62c9103931b33e8b9e7e942dc799533ebb174dd023cddb8d0044407bde095764"
+  },
+  "official_tree_modified_by_reviewer": false,
+  "official_model_experiments": "NOT_RUN",
+  "predictive_metrics": null,
+  "next_action": "Author may finalize preparation evidence against these reviewed hashes. Any changes to reviewed execution code require a focused delta check; actual official execution still requires separate owner authorization.",
+  "public_export": {
+    "kind": "PATH_REDACTED_DERIVATIVE",
+    "original_sha256": "046b6b0098e044f088e569e29e865fe9e701b429193b07037fc2fd577f1e1bac",
+    "original_unchanged": true,
+    "alterations": "Private absolute paths replaced; reviewer findings/commands/results retained."
+  }
+}

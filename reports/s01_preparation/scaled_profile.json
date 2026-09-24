@@ -1,0 +1,162 @@
+{
+  "kind": "SYNTHETIC_ONLY_SCALED_RESOURCE_PROFILE",
+  "classification": "NOT_MODEL_EXPERIMENT",
+  "status": "SYNTHETIC_ONLY_COMPLETED",
+  "official_data_loaded": false,
+  "metrics": null,
+  "environment": {
+    "python": "3.11.14",
+    "pytorch": "2.9.1+cu128",
+    "cuda_runtime": "12.8",
+    "cudnn": 91002,
+    "cuda_available": true,
+    "gpu_count": 1,
+    "platform": "Windows",
+    "torch_num_threads": 4,
+    "gpus": [
+      {
+        "index": 0,
+        "name": "NVIDIA GeForce RTX 5070 Ti",
+        "total_vram_bytes": 17094344704,
+        "compute_capability": [
+          12,
+          0
+        ]
+      }
+    ],
+    "cpu": {
+      "Name": "AMD Ryzen 7 2700X Eight-Core Processor         ",
+      "NumberOfCores": 8,
+      "NumberOfLogicalProcessors": 16
+    },
+    "ram_bytes": 34261053440,
+    "workspace_volume_free_bytes": 25555652608,
+    "deterministic_algorithms": true,
+    "cudnn_benchmark": false,
+    "tf32_matmul": false
+  },
+  "aggregate_count_source": "Historical public docs/S00D_DATA_CONTRACT.md only",
+  "train_count": 3395,
+  "valid_count": 728,
+  "fixture_seeds": [
+    7301,
+    7302
+  ],
+  "model_seed": 17,
+  "geometry": "Every synthetic row has50 supported and observed positions; no actual data values",
+  "batch_size": 32,
+  "actual_epochs_per_architecture": 1,
+  "samples": [
+    {
+      "architecture": "B-T",
+      "elapsed_seconds": 28.536643499999627,
+      "train_epoch_seconds": [
+        1.7344575999995868
+      ],
+      "checkpoint_validation_seconds": [
+        0.15837079999982961
+      ],
+      "final_validation_seconds": 25.13373550000324,
+      "parameters": 49476,
+      "checkpoint_roundtrip": true,
+      "predictive_metrics": null,
+      "unattributed_fixed_seconds": 1.5100795999969705
+    },
+    {
+      "architecture": "B-A",
+      "elapsed_seconds": 29.73484129999997,
+      "train_epoch_seconds": [
+        1.8009999000023527
+      ],
+      "checkpoint_validation_seconds": [
+        0.1635137000012037
+      ],
+      "final_validation_seconds": 26.322999300002266,
+      "parameters": 5060,
+      "checkpoint_roundtrip": true,
+      "predictive_metrics": null,
+      "unattributed_fixed_seconds": 1.4473283999941486
+    },
+    {
+      "architecture": "B-V",
+      "elapsed_seconds": 29.059132800000953,
+      "train_epoch_seconds": [
+        1.7786968000000343
+      ],
+      "checkpoint_validation_seconds": [
+        0.15470600000116974
+      ],
+      "final_validation_seconds": 25.653784900001483,
+      "parameters": 2564,
+      "checkpoint_roundtrip": true,
+      "predictive_metrics": null,
+      "unattributed_fixed_seconds": 1.4719450999982655
+    },
+    {
+      "architecture": "B-CAT",
+      "elapsed_seconds": 33.064710199996625,
+      "train_epoch_seconds": [
+        1.9155946999999287
+      ],
+      "checkpoint_validation_seconds": [
+        0.19387950000236742
+      ],
+      "final_validation_seconds": 29.4580268000027,
+      "parameters": 56452,
+      "checkpoint_roundtrip": true,
+      "predictive_metrics": null,
+      "unattributed_fixed_seconds": 1.4972091999916302
+    },
+    {
+      "architecture": "C0",
+      "elapsed_seconds": 77.2990506999995,
+      "train_epoch_seconds": [
+        2.5447410000015225
+      ],
+      "checkpoint_validation_seconds": [
+        36.42477680000229
+      ],
+      "final_validation_seconds": 36.83267580000029,
+      "parameters": 56604,
+      "checkpoint_roundtrip": true,
+      "predictive_metrics": null,
+      "unattributed_fixed_seconds": 1.4968570999953954
+    },
+    {
+      "architecture": "R0",
+      "elapsed_seconds": 78.70394440000018,
+      "train_epoch_seconds": [
+        3.5985495999993873
+      ],
+      "checkpoint_validation_seconds": [
+        36.799932900001295
+      ],
+      "final_validation_seconds": 36.8247408999996,
+      "parameters": 56604,
+      "checkpoint_roundtrip": true,
+      "predictive_metrics": null,
+      "unattributed_fixed_seconds": 1.4807209999999031
+    }
+  ],
+  "source_sha256": {
+    "research/r01/reference.py": "1cd4b73bb748284b4941625d92be89522771eff8a11e4044547e5f513ea62495",
+    "src/mosei/s01/__init__.py": "45e370a9952a0d589a6f50e06fe2ad315af97570b9c6fea83ddf8d218d575e3e",
+    "src/mosei/s01/authorization.py": "4acf147067f31974c9b4ac2a334a600788351fb8e6afb6b32eb05de6e01ad7d3",
+    "src/mosei/s01/contracts.py": "03040b7725a22dd150bb5215f2a0697eaa6bc936ea32ed6df5d028171fe3d030",
+    "src/mosei/s01/engine.py": "45660e2d158da206c8d3464a6ca0395464817ea81873c1b8b8435b63d1be36a5",
+    "src/mosei/s01/execution.py": "5bc5a2585d71b322ef718dbd0884727c47ec121829180503dfbc600141cad3f7",
+    "src/mosei/s01/models.py": "e0d815c1f97e83e653e326c8df28d519b967b69c185b95b758a2822bef9821f3",
+    "src/mosei/s01/normalization.py": "4c5bad3c4f26a9c2b8e6aaebdc24d767b327553ba723490f82ff3ac7f3c75c3e",
+    "src/mosei/s01/protocol.py": "c69c194447c0c220a56e6dddb9c7a3e225f2a949147573d7212d4d0775871b26",
+    "src/mosei/s01/registry.py": "d4ea70e91aaa2e70792fdb025fa640d090443cb3ae8f41823f78d071df809e73",
+    "tools/s01_resource_profile.py": "c0351e0029d18f5f4a0e012b49974de8dd6bac9f23148b0f9871f636c8c5ecb5",
+    "tools/s01_scaled_profile.py": "bfbb01cd60c0c89932713b21ad34afbc14c9120211f26248bc0d4befed5fc108"
+  },
+  "fixture_creation_seconds": 1.8428305000015825,
+  "normalizer_fit_seconds": 1.438804600002186,
+  "validation_library_seconds": 21.463820699998905,
+  "source_unchanged_during_measurement": true,
+  "exit_code": 0,
+  "command": "python -B -X utf8 tools/s01_scaled_profile.py --private-output-dir PRIVATE_NEW_DIRECTORY --report reports/s01_preparation/scaled_profile.json",
+  "command_note": "PRIVATE_NEW_DIRECTORY redacts the actual external checkpoint destination; all other arguments exact."
+}
