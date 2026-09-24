@@ -1,0 +1,56 @@
+{
+  "train": {
+    "sample_count": 3395,
+    "support_positions": 83672,
+    "padding_positions": 86078,
+    "support_lengths": {
+      "min": 3,
+      "max": 50,
+      "mean": 24.645655375552284
+    },
+    "shared_support_equal": true,
+    "audio": {
+      "structural_zero_positions_total": 92933,
+      "structural_zero_within_support": 6855,
+      "observed_positions": 76817,
+      "observed_equals_support_nonzero": true
+    },
+    "vision": {
+      "structural_zero_positions_total": 97117,
+      "structural_zero_within_support": 11039,
+      "observed_positions": 72633,
+      "observed_equals_support_nonzero": true
+    }
+  },
+  "valid": {
+    "sample_count": 728,
+    "support_positions": 18628,
+    "padding_positions": 17772,
+    "support_lengths": {
+      "min": 3,
+      "max": 50,
+      "mean": 25.587912087912088
+    },
+    "shared_support_equal": true,
+    "audio": {
+      "structural_zero_positions_total": 19274,
+      "structural_zero_within_support": 1502,
+      "observed_positions": 17126,
+      "observed_equals_support_nonzero": true
+    },
+    "vision": {
+      "structural_zero_positions_total": 20208,
+      "structural_zero_within_support": 2436,
+      "observed_positions": 16192,
+      "observed_equals_support_nonzero": true
+    }
+  },
+  "semantics": {
+    "support": "text_bert channel 1 == 1",
+    "observed_text": "support",
+    "observed_audio_vision": "support AND NOT structural_zero",
+    "padding": "NOT support",
+    "corruption": "separate explicit all-false default",
+    "structural_zero": "stored exact all-dimension zero; no missing interpretation"
+  }
+}

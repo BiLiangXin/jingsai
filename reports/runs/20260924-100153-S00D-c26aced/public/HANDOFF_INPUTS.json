@@ -1,0 +1,30 @@
+{
+  "stage": "S00D",
+  "task_id": "S00D_DATA_CONTRACT_FREEZE_AND_BASELINE_READINESS",
+  "run_id": "20260924-100153-S00D-c26aced",
+  "public_files": [
+    "docs/S00D_DATA_CONTRACT.md",
+    "reports/data_contract/contract_summary.json",
+    "reports/data_contract/mask_summary.json",
+    "reports/data_contract/label_contract.json",
+    "reports/data_contract/normalization_contract.json",
+    "reports/data_contract/loader_contract.json",
+    "reports/data_contract/source_mutation_check.json",
+    "src/mosei/__init__.py",
+    "src/mosei/data/__init__.py",
+    "src/mosei/data/masks.py",
+    "src/mosei/data/data_contract.py",
+    "src/mosei/data/dataset.py",
+    "src/mosei/data/normalization.py",
+    "src/mosei/data/pooling.py",
+    "tools/s00d_contract_run.py",
+    "tools/s00d_finalize.py",
+    "tools/stage_handoff.py",
+    "tests/test_stage_s00d_contract.py",
+    "tests/test_stage_handoff.py",
+    "docs/S00C_SUPPORT_EVIDENCE.md",
+    "reports/data_audit/s00c_source_mutation_check.json",
+    "reports/runs/20260924-100153-S00D-c26aced/public/SOURCE_HASH_BEFORE.json",
+    "reports/runs/20260924-100153-S00D-c26aced/public/SOURCE_HASH_AFTER.json"
+  ]
+}

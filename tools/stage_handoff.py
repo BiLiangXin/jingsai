@@ -95,6 +95,7 @@ def public_path(relative: str, run_id: str, stage: str, root: Path = ROOT) -> Pa
         or relative.startswith(f"reports/runs/{run_id}/")
         or relative.startswith(f"reports/stages/{stage}/")
         or relative.startswith("reports/data_audit/")
+        or relative.startswith("reports/data_contract/")
         or relative.startswith("reports/experiments/")
     )
     if not allowed:
@@ -358,7 +359,7 @@ def publish(manifest_path: Path) -> dict:
     review_path.write_text(review, encoding="utf-8")
     refresh_acceptance(stage, run_id, ["CHATGPT_REVIEW.md"])
     validate_acceptance(ROOT / "reports" / "stages" / stage / "acceptance.json", stage)
-    evidence = [x for x in files if x.startswith("docs/") or x.startswith("reports/data_audit/") or x.startswith(f"reports/stages/{stage}/")]
+    evidence = [x for x in files if x.startswith("docs/") or x.startswith("reports/data_audit/") or x.startswith("reports/data_contract/") or x.startswith(f"reports/stages/{stage}/")]
     evidence += [f"reports/runs/{run_id}/RUN.json", f"reports/runs/{run_id}/GATE.json", f"reports/runs/{run_id}/TEST_RESULTS.json", f"reports/runs/{run_id}/MANIFEST.json", receipt_relative]
     index = latest_index(stage, task_id, run_id, implementation, metadata, release, list(dict.fromkeys(evidence)))
     write_json(ROOT / "state" / "LATEST_RUN.json", index)

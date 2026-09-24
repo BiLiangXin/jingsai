@@ -1,0 +1,28 @@
+{
+  "task_id": "S00D_DATA_CONTRACT_FREEZE_AND_BASELINE_READINESS",
+  "run_id": "20260924-100153-S00D-c26aced",
+  "status": "REAL_AUDIT_COMPLETE_PENDING_GATE",
+  "data_kind": "real_official_local",
+  "command": "python tools/s00d_contract_run.py --run-id 20260924-100153-S00D-c26aced",
+  "stage_activation_commit": "c26acedb3ac54b3ecea0a31bfa84db016873ae84",
+  "s00c_dependency_run": "20260924-014331-S00C-afeafae",
+  "source_file": "aligned_50.pkl",
+  "source_unchanged": true,
+  "split_usage": {
+    "train": "contract audit and normalizer fit",
+    "valid": "contract audit and transform only",
+    "test": "quarantined; not indexed"
+  },
+  "attachment3_content_inspected": false,
+  "attachment4_content_inspected": false,
+  "model_training_performed": false,
+  "next_stage_authorized": false,
+  "sample_counts": {
+    "train": 3395,
+    "valid": 728
+  },
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.1.3"
+  }
+}

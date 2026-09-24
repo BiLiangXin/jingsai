@@ -21,7 +21,7 @@ class HandoffTests(unittest.TestCase):
     def test_public_path_allowlist(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
-            for name in ("CHATGPT_REVIEW.md", "docs/evidence.md", "reports/runs/r12345/GATE.json", "src/mosei/model.py"):
+            for name in ("CHATGPT_REVIEW.md", "docs/evidence.md", "reports/runs/r12345/GATE.json", "src/mosei/model.py", "reports/data_contract/contract_summary.json"):
                 p = root / name; p.parent.mkdir(parents=True, exist_ok=True); p.write_text("safe", encoding="utf-8")
                 self.assertEqual(handoff.public_path(name, "r12345", "S01", root), p)
 

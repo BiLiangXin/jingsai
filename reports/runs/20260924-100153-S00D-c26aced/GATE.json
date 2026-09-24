@@ -1,0 +1,184 @@
+{
+  "task_id": "S00D_DATA_CONTRACT_FREEZE_AND_BASELINE_READINESS",
+  "run_id": "20260924-100153-S00D-c26aced",
+  "status": "PASS",
+  "passed": true,
+  "summary": {
+    "PASS": 18,
+    "FAIL": 0,
+    "SKIPPED": 0,
+    "BLOCKED": 0
+  },
+  "items": [
+    {
+      "id": "D01",
+      "status": "PASS",
+      "detail": "Official workspace and active S00D authorization",
+      "evidence": [
+        "TASK_SPEC.md",
+        "reports/runs/20260924-100153-S00D-c26aced/RUN.json"
+      ]
+    },
+    {
+      "id": "D02",
+      "status": "PASS",
+      "detail": "S00C dependency and source baseline verified",
+      "evidence": [
+        "docs/S00C_SUPPORT_EVIDENCE.md",
+        "reports/data_audit/s00c_source_mutation_check.json"
+      ]
+    },
+    {
+      "id": "D03",
+      "status": "PASS",
+      "detail": "Aligned primary baseline interface encoded",
+      "evidence": [
+        "reports/data_contract/contract_summary.json",
+        "DECISIONS.md"
+      ]
+    },
+    {
+      "id": "D04",
+      "status": "PASS",
+      "detail": "Support, observed and structural zero separated",
+      "evidence": [
+        "reports/data_contract/mask_summary.json",
+        "src/mosei/data/masks.py"
+      ]
+    },
+    {
+      "id": "D05",
+      "status": "PASS",
+      "detail": "Padding is support complement; masked reductions implemented",
+      "evidence": [
+        "reports/data_contract/mask_summary.json",
+        "src/mosei/data/pooling.py"
+      ]
+    },
+    {
+      "id": "D06",
+      "status": "PASS",
+      "detail": "Artificial corruption is explicit and separate",
+      "evidence": [
+        "src/mosei/data/masks.py",
+        "tests/test_stage_s00d_contract.py"
+      ]
+    },
+    {
+      "id": "D07",
+      "status": "PASS",
+      "detail": "Three-class strict-zero label contract verified",
+      "evidence": [
+        "reports/data_contract/label_contract.json",
+        "src/mosei/data/data_contract.py"
+      ]
+    },
+    {
+      "id": "D08",
+      "status": "PASS",
+      "detail": "Train-only normalization enforced",
+      "evidence": [
+        "reports/data_contract/normalization_contract.json",
+        "src/mosei/data/normalization.py",
+        "tests/test_stage_s00d_contract.py"
+      ]
+    },
+    {
+      "id": "D09",
+      "status": "PASS",
+      "detail": "Model input allowlist excludes targets and private fields",
+      "evidence": [
+        "reports/data_contract/loader_contract.json",
+        "src/mosei/data/data_contract.py"
+      ]
+    },
+    {
+      "id": "D10",
+      "status": "PASS",
+      "detail": "Train/valid dataset and batch shape/dtype validated",
+      "evidence": [
+        "reports/data_contract/loader_contract.json",
+        "src/mosei/data/dataset.py"
+      ]
+    },
+    {
+      "id": "D11",
+      "status": "PASS",
+      "detail": "Masked pooling nonzero-tail leakage test passed",
+      "evidence": [
+        "src/mosei/data/pooling.py",
+        "tests/test_stage_s00d_contract.py",
+        "reports/runs/20260924-100153-S00D-c26aced/TEST_RESULTS.json"
+      ]
+    },
+    {
+      "id": "D12",
+      "status": "PASS",
+      "detail": "Real aligned train/valid contract audit completed",
+      "evidence": [
+        "reports/data_contract/contract_summary.json",
+        "reports/runs/20260924-100153-S00D-c26aced/RUN.json"
+      ]
+    },
+    {
+      "id": "D13",
+      "status": "PASS",
+      "detail": "Official aligned source unchanged",
+      "evidence": [
+        "reports/data_contract/source_mutation_check.json",
+        "reports/runs/20260924-100153-S00D-c26aced/public/SOURCE_HASH_BEFORE.json",
+        "reports/runs/20260924-100153-S00D-c26aced/public/SOURCE_HASH_AFTER.json"
+      ]
+    },
+    {
+      "id": "D14",
+      "status": "PASS",
+      "detail": "Test quarantine preserved",
+      "evidence": [
+        "src/mosei/data/dataset.py",
+        "tools/s00d_contract_run.py",
+        "reports/data_contract/contract_summary.json"
+      ]
+    },
+    {
+      "id": "D15",
+      "status": "PASS",
+      "detail": "Attachment 3/4 content isolation preserved",
+      "evidence": [
+        "tools/s00d_contract_run.py",
+        "reports/runs/20260924-100153-S00D-c26aced/RUN.json"
+      ]
+    },
+    {
+      "id": "D16",
+      "status": "PASS",
+      "detail": "Public safety scan passed",
+      "evidence": [
+        "tools/stage_handoff.py",
+        "reports/runs/20260924-100153-S00D-c26aced/public/HANDOFF_INPUTS.json"
+      ]
+    },
+    {
+      "id": "D17",
+      "status": "PASS",
+      "detail": "Complete pytest suite passed",
+      "evidence": [
+        "reports/runs/20260924-100153-S00D-c26aced/TEST_RESULTS.json"
+      ]
+    },
+    {
+      "id": "D18",
+      "status": "PASS",
+      "detail": "Documentation and evidence complete",
+      "evidence": [
+        "docs/S00D_DATA_CONTRACT.md",
+        "reports/data_contract/contract_summary.json",
+        "reports/data_contract/mask_summary.json",
+        "reports/data_contract/label_contract.json",
+        "reports/data_contract/normalization_contract.json",
+        "reports/data_contract/loader_contract.json",
+        "reports/data_contract/source_mutation_check.json"
+      ]
+    }
+  ]
+}

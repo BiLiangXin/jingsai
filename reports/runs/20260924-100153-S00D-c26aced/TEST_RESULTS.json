@@ -1,0 +1,8 @@
+{
+  "command": "python -m pytest -q tests",
+  "exit_code": 0,
+  "passed": 116,
+  "failed": 0,
+  "result_summary": "116 passed in 1.39s",
+  "s00d_contract_test_count": 36
+}

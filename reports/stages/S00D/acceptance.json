@@ -1,0 +1,63 @@
+{
+  "stage": "S00D",
+  "data_kind": "real_official_local",
+  "run_id": "20260924-100153-S00D-c26aced",
+  "status": "PASS",
+  "evidence": [
+    {
+      "requirement": "CHATGPT_REVIEW.md",
+      "path": "CHATGPT_REVIEW.md",
+      "sha256": "58c97c28b0816f1e478349a271dae88ce1c0e5ccafd09cfa3c86dd8eac061b7f"
+    },
+    {
+      "requirement": "S00D_DATA_CONTRACT.md",
+      "path": "docs/S00D_DATA_CONTRACT.md",
+      "sha256": "c397a296ad6595375db34b79e93add43fe7888a359976a7c41608ba9c120240c"
+    },
+    {
+      "requirement": "contract_summary.json",
+      "path": "reports/data_contract/contract_summary.json",
+      "sha256": "38ee0986d42ac3f82e1055c09ac53fd09513ee5d22bb1f460daa25fdf51af5f4"
+    },
+    {
+      "requirement": "mask_summary.json",
+      "path": "reports/data_contract/mask_summary.json",
+      "sha256": "2ff9839193408bebac1a8ef2d7b5751f932da5cdaa787f3a8a4ba48111ddec75"
+    },
+    {
+      "requirement": "label_contract.json",
+      "path": "reports/data_contract/label_contract.json",
+      "sha256": "dd51ebdcbcb62ccc0ac2d54477573c22892e7073961f091727d584024f65729e"
+    },
+    {
+      "requirement": "normalization_contract.json",
+      "path": "reports/data_contract/normalization_contract.json",
+      "sha256": "4d0a379d0ecf8e7f2ae7c61dcff492c695decf245b9618683ddc2d4a11c337c4"
+    },
+    {
+      "requirement": "loader_contract.json",
+      "path": "reports/data_contract/loader_contract.json",
+      "sha256": "9357814d0ca61c1d3b5f3787e0cba130d363539d55396a6deb86fc72e387ab44"
+    },
+    {
+      "requirement": "source_mutation_check.json",
+      "path": "reports/data_contract/source_mutation_check.json",
+      "sha256": "7f102d2519e31954f55bad148c7a0149ccba0c09d705da8d3aa8df24c2956870"
+    },
+    {
+      "requirement": "RUN.json",
+      "path": "reports/runs/20260924-100153-S00D-c26aced/RUN.json",
+      "sha256": "a8a26fb46c901d6a1232a3ef2f75fc68d2eaa5e3eb78ea45fe912e6b469f42a3"
+    },
+    {
+      "requirement": "GATE.json",
+      "path": "reports/runs/20260924-100153-S00D-c26aced/GATE.json",
+      "sha256": "f916646fc6fd652001eca034e581a96a5e02da83052ea2576641adb630685055"
+    },
+    {
+      "requirement": "TEST_RESULTS.json",
+      "path": "reports/runs/20260924-100153-S00D-c26aced/TEST_RESULTS.json",
+      "sha256": "4637453499612ed7c8b7bbf3a839890851de80c546171f626bc4b46d63a6ce27"
+    }
+  ]
+}

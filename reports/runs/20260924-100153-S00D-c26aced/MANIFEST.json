@@ -1,0 +1,151 @@
+{
+  "stage": "S00D",
+  "run_id": "20260924-100153-S00D-c26aced",
+  "files": [
+    {
+      "path": "CHATGPT_REVIEW.md",
+      "size": 2436,
+      "sha256": "58c97c28b0816f1e478349a271dae88ce1c0e5ccafd09cfa3c86dd8eac061b7f"
+    },
+    {
+      "path": "reports/runs/20260924-100153-S00D-c26aced/RUN.json",
+      "size": 956,
+      "sha256": "a8a26fb46c901d6a1232a3ef2f75fc68d2eaa5e3eb78ea45fe912e6b469f42a3"
+    },
+    {
+      "path": "reports/runs/20260924-100153-S00D-c26aced/GATE.json",
+      "size": 5289,
+      "sha256": "f916646fc6fd652001eca034e581a96a5e02da83052ea2576641adb630685055"
+    },
+    {
+      "path": "reports/runs/20260924-100153-S00D-c26aced/TEST_RESULTS.json",
+      "size": 180,
+      "sha256": "4637453499612ed7c8b7bbf3a839890851de80c546171f626bc4b46d63a6ce27"
+    },
+    {
+      "path": "reports/stages/S00D/acceptance.json",
+      "size": 2403,
+      "sha256": "92b1a5c61f06184bdeb007873e2c61b30bf79144a684b56a500663869b3186ee"
+    },
+    {
+      "path": "reports/runs/20260924-100153-S00D-c26aced/public/HANDOFF_INPUTS.json",
+      "size": 1191,
+      "sha256": "3f2ed68d5763615784c7bd566adfbe3e1edb192d642bdd5ad1cf79e11da0011a"
+    },
+    {
+      "path": "docs/S00D_DATA_CONTRACT.md",
+      "size": 3665,
+      "sha256": "c397a296ad6595375db34b79e93add43fe7888a359976a7c41608ba9c120240c"
+    },
+    {
+      "path": "reports/data_contract/contract_summary.json",
+      "size": 1417,
+      "sha256": "38ee0986d42ac3f82e1055c09ac53fd09513ee5d22bb1f460daa25fdf51af5f4"
+    },
+    {
+      "path": "reports/data_contract/mask_summary.json",
+      "size": 1659,
+      "sha256": "2ff9839193408bebac1a8ef2d7b5751f932da5cdaa787f3a8a4ba48111ddec75"
+    },
+    {
+      "path": "reports/data_contract/label_contract.json",
+      "size": 281,
+      "sha256": "dd51ebdcbcb62ccc0ac2d54477573c22892e7073961f091727d584024f65729e"
+    },
+    {
+      "path": "reports/data_contract/normalization_contract.json",
+      "size": 57148,
+      "sha256": "4d0a379d0ecf8e7f2ae7c61dcff492c695decf245b9618683ddc2d4a11c337c4"
+    },
+    {
+      "path": "reports/data_contract/loader_contract.json",
+      "size": 1420,
+      "sha256": "9357814d0ca61c1d3b5f3787e0cba130d363539d55396a6deb86fc72e387ab44"
+    },
+    {
+      "path": "reports/data_contract/source_mutation_check.json",
+      "size": 464,
+      "sha256": "7f102d2519e31954f55bad148c7a0149ccba0c09d705da8d3aa8df24c2956870"
+    },
+    {
+      "path": "src/mosei/__init__.py",
+      "size": 74,
+      "sha256": "72e3fcf210041bdf645c2004d23ef8cf9e193ad25ce0c64efb9a508392218549"
+    },
+    {
+      "path": "src/mosei/data/__init__.py",
+      "size": 723,
+      "sha256": "1e8562996e64ce70eb0aa346eaa235f01e7889c6f7b42c97c35733b9059e727e"
+    },
+    {
+      "path": "src/mosei/data/masks.py",
+      "size": 3639,
+      "sha256": "ce07ea15a7b4e35c7f0e7d39cc3636d6c3ffee7374af4bad833d8a5ebff6e28d"
+    },
+    {
+      "path": "src/mosei/data/data_contract.py",
+      "size": 5100,
+      "sha256": "31843dba9645fca2023378eb4a4fd036b71c6e5eedd25a909ce3b7eec80fed22"
+    },
+    {
+      "path": "src/mosei/data/dataset.py",
+      "size": 3617,
+      "sha256": "f15b226d7a956563a5b76db6f6c631f6ae7ff0b01d24508513db2cc9d32583c8"
+    },
+    {
+      "path": "src/mosei/data/normalization.py",
+      "size": 6143,
+      "sha256": "78b9f060ce185fd232ba4a8d16d747ba15e73fd9ea078095e07bb0921a9395f5"
+    },
+    {
+      "path": "src/mosei/data/pooling.py",
+      "size": 1395,
+      "sha256": "0942ac60b4caf4ab36ce3942db85721da4a7d499b90f3dd7f1cf89d5d1ed7313"
+    },
+    {
+      "path": "tools/s00d_contract_run.py",
+      "size": 11107,
+      "sha256": "7692b70e9e79e9ad14ff9760d98eeebeb70f3de976fba60db1fc3214c2c8124c"
+    },
+    {
+      "path": "tools/s00d_finalize.py",
+      "size": 11554,
+      "sha256": "689f7b03297944a1003bf6118ff746662b9814e495f6676345356b3a4083c988"
+    },
+    {
+      "path": "tools/stage_handoff.py",
+      "size": 22297,
+      "sha256": "e12bf86110f6d7f6960c8769c7ae343ec960535343aa8b27370dc077d8d8dd57"
+    },
+    {
+      "path": "tests/test_stage_s00d_contract.py",
+      "size": 10014,
+      "sha256": "8cf359dc5d6acb4290b10e2bcc74451d0b94ea8ceadef44569bf63519967d85d"
+    },
+    {
+      "path": "tests/test_stage_handoff.py",
+      "size": 12396,
+      "sha256": "a1662d80d9a500337062c627d1feaaaec40821e9ead9a23bfcf0bc3bf8b1b9ba"
+    },
+    {
+      "path": "docs/S00C_SUPPORT_EVIDENCE.md",
+      "size": 8012,
+      "sha256": "558a315c1391907016e2a20372ecc695411159ae2691d4051fce10788e9b0ce6"
+    },
+    {
+      "path": "reports/data_audit/s00c_source_mutation_check.json",
+      "size": 1015,
+      "sha256": "66ecdafcdc56295510cf371482383c1b064ae0e79a856ceeed6ad866985653a5"
+    },
+    {
+      "path": "reports/runs/20260924-100153-S00D-c26aced/public/SOURCE_HASH_BEFORE.json",
+      "size": 178,
+      "sha256": "63bf535f283c04f17754e46081c500838fe0f76833a6ab69d3dad4fe31760c06"
+    },
+    {
+      "path": "reports/runs/20260924-100153-S00D-c26aced/public/SOURCE_HASH_AFTER.json",
+      "size": 178,
+      "sha256": "63bf535f283c04f17754e46081c500838fe0f76833a6ab69d3dad4fe31760c06"
+    }
+  ]
+}

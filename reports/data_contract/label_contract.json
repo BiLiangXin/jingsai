@@ -1,0 +1,15 @@
+{
+  "class_map": {
+    "0": "Negative",
+    "1": "Neutral",
+    "2": "Positive"
+  },
+  "regression_range": [
+    -3,
+    3
+  ],
+  "neutral_rule": "exactly zero",
+  "train_valid_mapping_verified": true,
+  "train_valid_finite": true,
+  "test_labels": "not accessed"
+}

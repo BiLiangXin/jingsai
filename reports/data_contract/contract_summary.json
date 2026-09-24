@@ -1,0 +1,65 @@
+{
+  "interface": "aligned_50.pkl",
+  "status": "FROZEN_FOR_BASELINE",
+  "s00c_dependency_run": "20260924-014331-S00C-afeafae",
+  "splits": {
+    "train": {
+      "sample_count": 3395,
+      "source_shapes": {
+        "text": [
+          3395,
+          50,
+          768
+        ],
+        "audio": [
+          3395,
+          50,
+          74
+        ],
+        "vision": [
+          3395,
+          50,
+          35
+        ]
+      },
+      "source_dtypes": {
+        "text": "float32",
+        "audio": "float64",
+        "vision": "float64"
+      },
+      "text_bert_mask_source": "channel 1; metadata only",
+      "finite_features": true,
+      "support_contiguous_positive_prefix": true
+    },
+    "valid": {
+      "sample_count": 728,
+      "source_shapes": {
+        "text": [
+          728,
+          50,
+          768
+        ],
+        "audio": [
+          728,
+          50,
+          74
+        ],
+        "vision": [
+          728,
+          50,
+          35
+        ]
+      },
+      "source_dtypes": {
+        "text": "float32",
+        "audio": "float64",
+        "vision": "float64"
+      },
+      "text_bert_mask_source": "channel 1; metadata only",
+      "finite_features": true,
+      "support_contiguous_positive_prefix": true
+    }
+  },
+  "test": "LOCKED_QUARANTINED; no split indexing",
+  "attachment3_4": "content not opened"
+}

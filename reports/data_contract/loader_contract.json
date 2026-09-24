@@ -1,0 +1,79 @@
+{
+  "train_batch_size": 16,
+  "valid_batch_size": 16,
+  "model_input_shapes": {
+    "text": [
+      16,
+      50,
+      768
+    ],
+    "audio": [
+      16,
+      50,
+      74
+    ],
+    "vision": [
+      16,
+      50,
+      35
+    ],
+    "text_support_mask": [
+      16,
+      50
+    ],
+    "audio_support_mask": [
+      16,
+      50
+    ],
+    "vision_support_mask": [
+      16,
+      50
+    ],
+    "text_observed_mask": [
+      16,
+      50
+    ],
+    "audio_observed_mask": [
+      16,
+      50
+    ],
+    "vision_observed_mask": [
+      16,
+      50
+    ],
+    "padding_mask": [
+      16,
+      50
+    ]
+  },
+  "model_input_dtypes": {
+    "text": "float32",
+    "audio": "float32",
+    "vision": "float32",
+    "text_support_mask": "bool",
+    "audio_support_mask": "bool",
+    "vision_support_mask": "bool",
+    "text_observed_mask": "bool",
+    "audio_observed_mask": "bool",
+    "vision_observed_mask": "bool",
+    "padding_mask": "bool"
+  },
+  "target_shapes": {
+    "classification_target": [
+      16
+    ],
+    "regression_target": [
+      16
+    ]
+  },
+  "target_dtypes": {
+    "classification_target": "int64",
+    "regression_target": "float32"
+  },
+  "model_input_allowed_only": true,
+  "masked_text_pool_shape": [
+    16,
+    768
+  ],
+  "pytorch_bridge": "available in AlignedBatch.to_torch; runtime not required for S00D"
+}
