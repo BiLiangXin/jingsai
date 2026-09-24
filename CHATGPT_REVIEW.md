@@ -4,13 +4,13 @@ release_tag: `codex-run-20260925-020000-S00E-ASTRA-d9e4edb`
 
 task_id: `S00E_S01_PRESTART_ENGINEERING_HARDENING`
 run_id: `20260925-020000-S00E-ASTRA-d9e4edb`
-status: `PUBLICATION_VERIFIED_PENDING_INDEX`
+status: `SUCCESS`
 repository: `BiLiangXin/jingsai`
 branch: `codex/mosei-auto`
 safety_governance_precommit: `078028f022cc175361cb8bf908f760087f35f709`
 workflow_governance_commit: `d9e4edb11b710a92ef33c256bfca6684162911d7`
 implementation_commit: `6480bfc77ce63edca92e6a57237772cddca0c3d0`
-metadata_commit: `PENDING`
+metadata_commit: `27b026051c805f946e66e90a04bff603d7a01caa`
 release_url: `https://github.com/BiLiangXin/jingsai/releases/tag/codex-run-20260925-020000-S00E-ASTRA-d9e4edb`
 
 ## Verified engineering evidence
