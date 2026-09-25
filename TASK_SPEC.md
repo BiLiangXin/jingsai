@@ -1,6 +1,7 @@
 task_id: S04_VISIBLE_UNK_FINAL_INFERENCE
-status: ACTIVE_AUTHORIZED
+status: CLOSED_PARTIAL_DELIVERY
 authorization: S04-DEPLOY-03
+authorization_status: CONSUMED
 model: GPT-6 Sol / High (user requested; no host telemetry)
 predictor_training_fit_budget: 0
 preprocessing_policy: E1_VISIBLE_UNK_M2_V1 only

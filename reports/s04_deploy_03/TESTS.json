@@ -1,0 +1,20 @@
+{
+  "task_id": "S04_VISIBLE_UNK_FINAL_INFERENCE",
+  "environment": {
+    "python": "3.11.14",
+    "torch": "2.9.1+cu128",
+    "transformers": "4.44.2",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti"
+  },
+  "actual_checks": [
+    {"command": "python -m unittest discover -s tests -p test_stage_s04_deploy_03.py -v", "tests": 8, "exit_code": 0},
+    {"command": "python -m unittest discover -s tests -p test_stage_s04_clarified.py -v", "tests": 3, "exit_code": 0},
+    {"command": "tools/s04_e1_visible_unk.py valid [pinned local input paths]", "rows": 728, "exit_code": 0},
+    {"command": "tools/s03_publication_check.py --manifest [private exact candidate inventory] --output [private receipt]", "tracked_index_worktree_scan": "PASS", "candidate_files": 11, "exit_code": 0},
+    {"command": "tools/s04_e1_visible_unk.py infer [pinned local input paths]", "aligned_rows": 30, "csv_readback": "PASS", "exit_code": 0},
+    {"command": "private paper DOCX member/CRC/paragraph validation", "zip_crc": "PASS", "new_paragraph_count": 94, "exit_code": 0}
+  ],
+  "independent_read_only_review": "PASS",
+  "unperformed": ["predictor fit", "TEST evaluation", "special metric calculation", "human source review", "final anonymous submission", "contest upload"]
+}

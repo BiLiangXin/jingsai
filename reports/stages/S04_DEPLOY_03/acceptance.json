@@ -1,0 +1,69 @@
+{
+  "stage": "S04_DEPLOY_03",
+  "status": "A3_COMPLETE_A4_PARTIAL",
+  "data_kind": "synthetic_and_read_only_valid_plus_unlabeled_special_inference",
+  "new_predictor_training_fits": 0,
+  "special_metrics": null,
+  "evidence": [
+    {
+      "requirement": "scope_closed",
+      "path": "TASK_SPEC.md",
+      "sha256": "3d34c17be1d948d818d8c77289c39bb4d641bcefcfb304afdb301c953534008d"
+    },
+    {
+      "requirement": "decision_closeout",
+      "path": "DECISIONS.md",
+      "sha256": "ff1473898b532cac9a52c1f12dac2740bac28e19b6aa091406f56aab195ae38a"
+    },
+    {
+      "requirement": "frozen_execution_protocol",
+      "path": "docs/research/S04/DEPLOY_03_PROTOCOL.md",
+      "sha256": "b75d0b292cbacb6b2d76c947019aba6c6156918e174959cf4b8b8e9002da32c8"
+    },
+    {
+      "requirement": "technical_closeout",
+      "path": "docs/research/S04/DEPLOY_03_CLOSEOUT.md",
+      "sha256": "cb98cfbebbbf8a7cb73afe7d1fb35f2244f0b92bcba6da427b5d53140b739834"
+    },
+    {
+      "requirement": "result_aggregate",
+      "path": "reports/s04_deploy_03/RESULT.json",
+      "sha256": "a72b3d3d684eaa043ea2120cd9c95df6e95a6ccc640d1c7d6012556ed6073cd0"
+    },
+    {
+      "requirement": "actual_checks",
+      "path": "reports/s04_deploy_03/TESTS.json",
+      "sha256": "ca08d8481324550ea4987aae869497f6e604b9d5aaee3d8cdb870cd30f76b14e"
+    },
+    {
+      "requirement": "clean_valid_and_unk_diagnostic",
+      "path": "reports/s04_deploy_03/E1_VALIDATION.json",
+      "sha256": "910e5cba942e2acfb797b262e1ab9560089025b1bdd03b077e25fbd570f80569"
+    },
+    {
+      "requirement": "independent_read_only_review",
+      "path": "reports/s04_deploy_03/INDEPENDENT_REVIEW.json",
+      "sha256": "1fef92eafb1223077ae520404327f3bbbf6d72063037c1e263a2ca76db4ea071"
+    },
+    {
+      "requirement": "attachment4_coverage",
+      "path": "reports/s04_deploy_03/A4_COVERAGE.json",
+      "sha256": "c6bef2619a6fe807f0c82f5e7a2f932a4328d1660ba62a42cc3c160ae9e1257b"
+    },
+    {
+      "requirement": "synthetic_contract_tests",
+      "path": "tests/test_stage_s04_deploy_03.py",
+      "sha256": "4c33a0df33f6e1a8644953c5fe6addfe655b2d9fbf0eb1413dc50f50502a4be1"
+    },
+    {
+      "requirement": "code_entry",
+      "path": "tools/s04_e1_visible_unk.py",
+      "sha256": "6c08cbd5417046da185bf1bc675057fb4cd2f58cd7c46771ab4b1b6edd5c1235"
+    },
+    {
+      "requirement": "paper_claim_boundary",
+      "path": "docs/PAPER_CLAIMS.md",
+      "sha256": "8207ca8c0b34f639da220946c753dfa29ca11d585d084d5058a10f3f4cd6571b"
+    }
+  ]
+}

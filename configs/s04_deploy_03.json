@@ -1,7 +1,7 @@
 {
   "task_id": "S04_VISIBLE_UNK_FINAL_INFERENCE",
   "authorization": "S04-DEPLOY-03",
-  "status": "ACTIVE_AUTHORIZED",
+  "status": "CONSUMED",
   "start_utc": "2026-09-25T09:27:40Z",
   "deadline_utc": "2026-09-25T10:12:40Z",
   "submission_deadline_beijing": "2026-09-27T00:00:00+08:00",

@@ -6558,5 +6558,43 @@
     ],
     "result": "reports/s04_clarify_02/RESULT.json",
     "authorization_status": "CONSUMED"
+  },
+  "s04_deploy_03": {
+    "task_id": "S04_VISIBLE_UNK_FINAL_INFERENCE",
+    "authorization": "S04-DEPLOY-03",
+    "authorization_status": "CONSUMED",
+    "kind": "fixed_visible_unk_preprocessing_and_unlabeled_special_inference",
+    "status": "A3_COMPLETE_A4_PARTIAL",
+    "pipeline_id": "E1_VISIBLE_UNK_M2_V1",
+    "model_seed": 17,
+    "selected_epoch": 2,
+    "profile": "V1",
+    "new_training_fits": 0,
+    "official_model_experiment_metrics": null,
+    "special_metrics": null,
+    "old_strict_replay_failure_retained": true,
+    "clean_valid_rows": 728,
+    "clean_valid_argmax_agreement": 728,
+    "unk_diagnostic_rows": 32,
+    "unk_diagnostic_class_changes": 14,
+    "unk_diagnostic_not_attempted96": true,
+    "attachment3_csv_rows": 30,
+    "attachment3_csv_sha256": "27a62a2a262399a3ecf48e6998fb26703329c0bf2c1f1837ce2f50d225e92adb",
+    "attachment4_old_predictions_unchanged": true,
+    "attachment4_partial_rows": 20,
+    "attachment4_estimated_acoustic_rows": 12,
+    "attachment4_text_only_rows": 8,
+    "human_checked": 0,
+    "negative_results": [
+      "UNK_DIAGNOSTIC_14_CLASS_CHANGES",
+      "ATTACHMENT4_EIGHT_TEXT_ONLY",
+      "AUDIO_VISUAL_FEATURE_TIME_UNVERIFIED",
+      "SPECIAL_PERFORMANCE_UNKNOWN"
+    ],
+    "execution_commit": "72463585b78a1f317d4dc5601f812efe7a494095",
+    "result": "reports/s04_deploy_03/RESULT.json",
+    "tests": "reports/s04_deploy_03/TESTS.json",
+    "independent_review": "reports/s04_deploy_03/INDEPENDENT_REVIEW.json",
+    "competition_upload": false
   }
 }
