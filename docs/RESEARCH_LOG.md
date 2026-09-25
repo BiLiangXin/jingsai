@@ -103,3 +103,8 @@ Question: did the fixed finite baseline/local-missing protocol finish within the
 Descriptive R0−C0 differences (all three prespecified seeds): clean ΔF1=+0.001263, ΔMAE=+0.003103; attempted96 ΔF1=-0.002595, ΔMAE=-0.000257. Negative/no-improvement outcomes are retained without follow-up search.
 
 Actual execution command and environment: `reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/validation/RUN_RECEIPT.json`. The executed activation snapshot is commit `98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7`; its manifest is historical and is intentionally not rewritten to describe the closed authorization.
+
+
+## S02-RES-01 / S02-EXEC-AUTH-01 — 2026-09-25
+
+SPECIFIED and USER_PREAUTHORIZED by the explicit current S02 request: a new finite follow-up after known S01 results, not a change to S01's historical restrictions or R01 freeze. Freeze exactly W0/W1/W2 × five Neutral biases and M1/M2/M3/M4 × seeds17/29/43, bounded4h total/45minfit before9/25 18:00Beijing; retry0. Details/formulas/selection: docs/research/S02/PROTOCOL.md; config: configs/s02_execution.json; table: docs/research/S02/CANDIDATES.json. Same-VALID selection optimism remains; unrun models NOT_RUN/null. Train-only weights, mildcorruption and same-seedTRAINteacherKD are authorized here only. No test/special/Q1/Q3/external sentiment data or weights; no new Release. Initial champion remains original S01 CAT-zscore17 until complete frozen-rule comparison and winner recovery verify. D-DATA01..07 unchanged.

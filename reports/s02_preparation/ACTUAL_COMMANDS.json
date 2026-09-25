@@ -1,0 +1,37 @@
+{
+  "evidence": "VERIFIED",
+  "timestamp": "2026-09-25T02:05:10.877526+00:00",
+  "commands": [
+    {
+      "command": "python -B -X utf8 <private-preparation>/backup_restore.py backup",
+      "exit_code": 0,
+      "script_sha256": "66d1bf33d881854a235946081d023cc30047ac6cf0dba091c767095c11474561"
+    },
+    {
+      "command": "python -B -X utf8 <private-preparation>/backup_restore.py restore",
+      "exit_code": 0,
+      "script_sha256": "66d1bf33d881854a235946081d023cc30047ac6cf0dba091c767095c11474561"
+    },
+    {
+      "command": "python -B -X utf8 <private-preparation>/restore_supervisor.py",
+      "exit_code": 0,
+      "script_sha256": "08fb20e9abee122d5506206dd6010aa16fbef0f1df0b033908bb574de31f7fa6"
+    },
+    {
+      "command": "python -B -X utf8 tools/s02_synthetic_profile.py --output <private-preparation>/resource_profile.json",
+      "exit_code": 0,
+      "script_sha256": "1f0ed03602f7d6e532a93791e8ae01a9323f239dc5c3048f7d4809335d14b046"
+    },
+    {
+      "command": "python -B -X utf8 -m pytest -q -p no:cacheprovider --basetemp <private-preparation>/pytest_temp_01 tests",
+      "exit_code": 0,
+      "passed": 366,
+      "subtests_passed": 68,
+      "seconds": 52.07
+    }
+  ],
+  "resources": "Profile uses closed synthetic tensors, no official model experiment. Restore uses valid and old checkpoints without training.",
+  "private_paths_redacted": true,
+  "full_test_log_sha256": "b9517fff915c24568abb21bddc7d116650162cb9b4ad4c9ea353733fa9cc7c5b",
+  "restored_exact_tensor_values_not_historical_pointwise_predictions": true
+}

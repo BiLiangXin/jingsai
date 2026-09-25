@@ -1,0 +1,302 @@
+{
+  "task": "S02_PRIMARY_LITERATURE_AUDIT",
+  "status": "COMPLETED_WITH_EXPLICIT_SOURCE_ACCESS_LIMITS",
+  "access_date": "2026-09-25",
+  "access_timezone": "Asia/Shanghai",
+  "recorded_at_utc": "2026-09-25T01:45:38.070444+00:00",
+  "prompt": {
+    "name": "S02_SAFE_IMPROVEMENT_CODEX_PROMPT_20260925.md",
+    "sha256": "91d90afc6508633429437eb4680f293f29041398e75330e1b068234e10c7e938",
+    "read_in_full": true
+  },
+  "actual_scope": "七篇原论文的书目信息、相关方法/协议正文，以及可识别的作者仓库README/许可证；不是作者代码完整审计或实验复现。",
+  "official_repo_modified": false,
+  "official_datasets_read": false,
+  "models_downloaded": false,
+  "external_sentiment_data_or_weights_used": false,
+  "experiments_run": false,
+  "author_code_copied": false,
+  "local_user_sota_pdf_read": false,
+  "repository_commit_pinning": "Not performed; no source code adopted/executed. Code access statuses are dated observations, not immutable version certifications.",
+  "global_boundaries": [
+    "train学习参数及统计，valid只作提示词明确允许的有限选择；禁止test/附件3/4拟合、分布估计或伪标签学习。",
+    "可迁移项是S02设计推论，不是原论文对本赛题提升幅度的保证。",
+    "保留三分类macro-F1和单checkpoint统一指标；不得挪用原论文二分类成绩、跨epoch最佳表或SOTA称号。",
+    "原论文、代码、数据和权重的许可各自独立；许可未核实不自动授权代码复制。"
+  ],
+  "papers": [
+    {
+      "id": "S02-LIT-01",
+      "short_name": "SOTA",
+      "title": "SOTA: Self-adaptive Optimal Transport for Zero-Shot Classification with Multiple Foundation Models",
+      "authors": [
+        "Zhanxuan Hu",
+        "Qiyu Xu",
+        "Yu Duan",
+        "Yonghang Tai",
+        "Huafeng Li"
+      ],
+      "version": "arXiv:2506.13723v3",
+      "version_date": "2026-03-12",
+      "venue": "CVPR 2026 (author README and primary CVF indexed record); method read from author arXiv v3",
+      "primary_url": "https://arxiv.org/html/2506.13723v3",
+      "metadata_url": "https://arxiv.org/abs/2506.13723v3",
+      "evidence_locators": [
+        "3.1 Problem Setting",
+        "3.2.1 GMM",
+        "3.2.2 equations7-8",
+        "4.1 transductive and inductive settings",
+        "Appendix7.2"
+      ],
+      "mechanism": "多模型概率以自适应 transport 组合；VFM 分支可联合估计 GMM。",
+      "s02_transfer": "仅作为同 seed 模型互补的动机；W0/W1/W2 是本任务固定组合，不称 SOTA 复现。",
+      "excluded": "拒绝在 test/附件3/4 整体分布上求 transport、GMM、模型权重或伪标签；不下载基础模型。",
+      "important_qualification": "v3 同时含 inductive（训练集拟合后测试）与 transductive（整份待测集参与）设定；training-free 不代表没有分布适配。",
+      "code": {
+        "url": "https://github.com/Afleve/self-adaptive-Optimal-Transport",
+        "official_basis": "论文摘要直接链接；README 自称官方实现",
+        "license": null,
+        "license_status": "NOT_VERIFIED: visible root/README did not identify a repository license",
+        "commit": null,
+        "executed": false
+      },
+      "paper_license": "arXiv perpetual non-exclusive license; not a software license",
+      "publication_pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Hu_SOTA_Self-adaptive_Optimal_Transport_for_Zero-Shot_Classification_with_Multiple_Foundation_CVPR_2026_paper.pdf",
+      "publication_pdf_read": false,
+      "publication_note": "CVF 搜索返回标题/版本线索，但正文抓取失败；未声称作者v3与会议PDF或用户本地PDF逐字相同。"
+    },
+    {
+      "id": "S02-LIT-02",
+      "short_name": "MAG",
+      "title": "Integrating Multimodal Information in Large Pretrained Transformers",
+      "authors": [
+        "Wasifur Rahman",
+        "Md Kamrul Hasan",
+        "Sangwu Lee",
+        "AmirAli Bagher Zadeh",
+        "Chengfeng Mao",
+        "Louis-Philippe Morency",
+        "Ehsan Hoque"
+      ],
+      "version": "ACL 2020 proceedings, pages2359-2369",
+      "version_date": "2020-07",
+      "doi": "10.18653/v1/2020.acl-main.214",
+      "primary_url": "https://aclanthology.org/2020.acl-main.214.pdf",
+      "metadata_url": "https://aclanthology.org/2020.acl-main.214/",
+      "evidence_locators": [
+        "Section4 equations1-5, printedp2362",
+        "Sections4.1-4.2",
+        "printedp2367 code footnote2"
+      ],
+      "mechanism": "语言条件下生成音视频门控位移，并限制其相对语言向量的幅度。",
+      "s02_transfer": "M 的文本主干与受控音视频残差只受该思想启发。",
+      "excluded": "不复现 BERT/XLNet 内部插层与端到端微调；不改为 token 接口或导入外部情感权重。",
+      "important_qualification": "本轮小型连续特征网络不等于 MAG-BERT；论文指标不能直接写成本轮结果。",
+      "code": {
+        "url": "https://github.com/WasifurRahman/BERT_multimodal_transformer",
+        "official_basis": "论文脚注直接给出作者仓库",
+        "license": null,
+        "license_status": "NOT_VERIFIED: visible root/README did not identify a repository license",
+        "commit": null,
+        "executed": false
+      },
+      "paper_license": "CC-BY-4.0 per ACL Anthology post-2016 notice"
+    },
+    {
+      "id": "S02-LIT-03",
+      "short_name": "ALMT",
+      "title": "Learning Language-guided Adaptive Hyper-modality Representation for Multimodal Sentiment Analysis",
+      "authors": [
+        "Haoyu Zhang",
+        "Yu Wang",
+        "Guanghao Yin",
+        "Kejun Liu",
+        "Yuanyuan Liu",
+        "Tianshu Yu"
+      ],
+      "version": "EMNLP 2023 proceedings, pages756-767",
+      "version_date": "2023-12",
+      "doi": "10.18653/v1/2023.emnlp-main.49",
+      "primary_url": "https://aclanthology.org/2023.emnlp-main.49.pdf",
+      "metadata_url": "https://aclanthology.org/2023.emnlp-main.49/",
+      "evidence_locators": [
+        "Section3.4, printedpp758-759",
+        "Section4.2, printedp760",
+        "Author repository README Note4 and same-epoch follow-up sentence"
+      ],
+      "mechanism": "多尺度语言表示引导 AHL，降低音视频中无关或冲突信息的作用。",
+      "s02_transfer": "作为语言主干及可见非语言门控的动机；不实施完整 ALMT。",
+      "excluded": "不导入其情感权重；不采用跨 epoch 拼接最佳指标，保留本轮同一冻结 checkpoint 的全部指标。",
+      "important_qualification": "作者 README 说明 acc2/F1 与 MAE 最佳值可来自不同 epoch，并另报同epoch结果；论文二分类 F1 不等于本题三分类 macro-F1。",
+      "code": {
+        "url": "https://github.com/Haoyu-ha/ALMT",
+        "official_basis": "作者账户下仓库明确链接该论文并提供引用",
+        "license": "MIT",
+        "license_status": "VERIFIED_LICENSE_TEXT",
+        "license_url": "https://github.com/Haoyu-ha/ALMT/blob/master/LICENSE",
+        "commit": null,
+        "executed": false,
+        "version_note": "README 标注2025-03-06更新与整理；不是已核验的2023代码快照。"
+      },
+      "paper_license": "CC-BY-4.0 per ACL Anthology post-2016 notice"
+    },
+    {
+      "id": "S02-LIT-04",
+      "short_name": "P-RMF",
+      "title": "Proxy-Driven Robust Multimodal Sentiment Analysis with Incomplete Data",
+      "authors": [
+        "Aoqiang Zhu",
+        "Min Hu",
+        "Xiaohua Wang",
+        "Jiaoyun Yang",
+        "Yiming Tang",
+        "Ning An"
+      ],
+      "version": "ACL 2025 long papers, pages22123-22138",
+      "version_date": "2025-07",
+      "doi": "10.18653/v1/2025.acl-long.1075",
+      "primary_url": "https://aclanthology.org/2025.acl-long.1075.pdf",
+      "metadata_url": "https://aclanthology.org/2025.acl-long.1075/",
+      "evidence_locators": [
+        "Sections3.2-3.3, printedpp22125-22126",
+        "Abstract",
+        "AppendixC training and AppendixD missingness"
+      ],
+      "mechanism": "高斯潜变量和模态不确定性构造 proxy 表示，再作动态跨模态注入。",
+      "s02_transfer": "仅提醒明确缺失可用性与不确定性，保留小型合规对照。",
+      "excluded": "完整 VAE/proxy/reconstructor 不实施；论文随机擦除与文本[UNK]协议不替代本题连续局部缺失及官方特征接口。",
+      "important_qualification": "原文是训练后在缺失条件评价；不能误写为必然使用 test 拟合。本次没有审计其不可访问代码。",
+      "code": {
+        "url": "https://github.com/aoqzhu/P-RMF",
+        "official_basis": "论文摘要直接链接",
+        "license": null,
+        "license_status": "UNKNOWN_ACCESS_UNAVAILABLE",
+        "commit": null,
+        "executed": false,
+        "access_note": "GitHub根页/README抓取失败；尝试main分支raw README/LICENSE返回404；不能据此断言整个仓库不存在。"
+      },
+      "paper_license": "CC-BY-4.0 per ACL Anthology post-2016 notice"
+    },
+    {
+      "id": "S02-LIT-05",
+      "short_name": "Gradient-Blending",
+      "title": "What Makes Training Multi-Modal Classification Networks Hard?",
+      "authors": [
+        "Weiyao Wang",
+        "Du Tran",
+        "Matt Feiszli"
+      ],
+      "version": "arXiv:1905.12681v5; CVPR 2020",
+      "version_date": "2020-04-03",
+      "primary_url": "https://arxiv.org/html/1905.12681v5",
+      "metadata_url": "https://arxiv.org/abs/1905.12681",
+      "evidence_locators": [
+        "Abstract",
+        "Section2.4 and algorithms1-3",
+        "Section3.2",
+        "Author VMZ README supported models/reference4"
+      ],
+      "mechanism": "不同模态过拟合/泛化速度可能不同；以 OGR 估计辅助损失组合。",
+      "s02_transfer": "保留单模态对照，作为解释多模态未提升的一种待检验机制。",
+      "excluded": "不增加 Gradient-Blending 内部试训或自适应网格；其权重估计使用训练集留出部分，不能换成官方 valid 的梯度训练。",
+      "important_qualification": "论文视频/音频分类现象不能证明本题性能原因；同名方法未在S02实施。",
+      "code": {
+        "url": "https://github.com/facebookresearch/VMZ",
+        "official_basis": "Facebook AI代码库列出Gradient-Blending与论文reference4",
+        "license": "Apache-2.0",
+        "license_status": "VERIFIED_LICENSE_TEXT",
+        "license_url": "https://raw.githubusercontent.com/facebookresearch/VMZ/main/LICENSE",
+        "commit": null,
+        "executed": false,
+        "version_note": "仓库已归档；README标注Gradient-Blending为Caffe2实现。"
+      },
+      "paper_license": "arXiv perpetual non-exclusive license; not a software license"
+    },
+    {
+      "id": "S02-LIT-06",
+      "short_name": "Knowledge distillation",
+      "title": "Distilling the Knowledge in a Neural Network",
+      "authors": [
+        "Geoffrey Hinton",
+        "Oriol Vinyals",
+        "Jeff Dean"
+      ],
+      "version": "arXiv:1503.02531v1",
+      "version_date": "2015-03-09",
+      "primary_url": "https://arxiv.org/html/1503.02531v1",
+      "metadata_url": "https://arxiv.org/abs/1503.02531",
+      "additional_primary_url": "https://research.google/pubs/distilling-the-knowledge-in-a-neural-network/",
+      "evidence_locators": [
+        "Section2, equations1-2 and T-squared paragraph",
+        "arXiv submission history",
+        "Google Research publication metadata"
+      ],
+      "mechanism": "同温度软标签目标结合真实监督；温度平方因子补偿软目标梯度尺度。",
+      "s02_transfer": "M4限于同seed已冻结S01教师在官方train上的stop-gradient软目标；固定0.1、tau=2来自S02提示词，非论文推荐最优值。",
+      "excluded": "不使用valid/test伪标签训练，不把完整teacher输入提供给推理student；不引入外部情感教师。",
+      "important_qualification": "固定teacher时KL(teacher||student)与软标签交叉熵仅差teacher熵，梯度等价。arXiv备注NIPS2014 workshop，Google页标2015；采用可核对的2015 arXiv版本，不猜测会议年。",
+      "code": {
+        "url": null,
+        "official_basis": "所读原文、arXiv与Google作者机构页未识别作者官方实现链接",
+        "license": null,
+        "license_status": "NO_OFFICIAL_CODE_IDENTIFIED",
+        "commit": null,
+        "executed": false
+      },
+      "paper_license": "arXiv perpetual non-exclusive license; not a software license"
+    },
+    {
+      "id": "S02-LIT-07",
+      "short_name": "Temperature scaling",
+      "title": "On Calibration of Modern Neural Networks",
+      "authors": [
+        "Chuan Guo",
+        "Geoff Pleiss",
+        "Yu Sun",
+        "Kilian Q. Weinberger"
+      ],
+      "version": "ICML 2017; PMLR70:1321-1330",
+      "version_date": "2017-08",
+      "primary_url": "https://proceedings.mlr.press/v70/guo17a/guo17a.pdf",
+      "metadata_url": "https://proceedings.mlr.press/v70/guo17a.html",
+      "evidence_locators": [
+        "Section4.2 Temperature scaling, printedp1326",
+        "PMLR citation metadata",
+        "Author repository README and LICENSE"
+      ],
+      "mechanism": "在验证集上选正标量温度以校准置信度，保持类别argmax。",
+      "s02_transfer": "区分校准和分类决策；同一logit向量正温度缩放不提升其argmax Accuracy/F1。",
+      "excluded": "不新增温度搜索；Neutral logit偏置是本任务预定义决策候选，不冒称Guo温度缩放。",
+      "important_qualification": "argmax不变结论针对单一logit向量的正标量缩放；不推广为任意多模型概率组合都不变。",
+      "code": {
+        "url": "https://github.com/gpleiss/temperature_scaling",
+        "official_basis": "合著者Geoff Pleiss仓库直接链接该论文",
+        "license": "MIT",
+        "license_status": "VERIFIED_LICENSE_TEXT",
+        "license_url": "https://raw.githubusercontent.com/gpleiss/temperature_scaling/master/LICENSE",
+        "commit": null,
+        "executed": false,
+        "version_note": "作者README明确标注不再维护、原为PyTorch0.3演示。"
+      },
+      "paper_license": "Not separately established in this bounded audit; no paper text or figures redistributed"
+    }
+  ],
+  "access_limits": [
+    {
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Hu_SOTA_Self-adaptive_Optimal_Transport_for_Zero-Shot_Classification_with_Multiple_Foundation_CVPR_2026_paper.pdf",
+      "result": "CVF primary search indexed title; body retrieval failed. Author v3 read instead."
+    },
+    {
+      "url": "https://github.com/aoqzhu/P-RMF",
+      "result": "Web retrieval failed; official link provenance verified in ACL paper; license/code contents unknown."
+    },
+    {
+      "url": "https://api.github.com/repos/Afleve/self-adaptive-Optimal-Transport/license",
+      "result": "API unavailable through browsing tool; no license inferred."
+    },
+    {
+      "url": "https://api.github.com/repos/WasifurRahman/BERT_multimodal_transformer/license",
+      "result": "API unavailable through browsing tool; no license inferred."
+    }
+  ]
+}

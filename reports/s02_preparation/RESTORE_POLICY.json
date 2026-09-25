@@ -1,0 +1,14 @@
+{
+  "evidence": "SPECIFIED_BEFORE_RESTORE",
+  "metric_abs_tolerance": 1e-07,
+  "classification_confusion_exact": true,
+  "original_vs_backup_prediction_atol": 0.0,
+  "original_vs_backup_prediction_rtol": 0.0,
+  "saved_individual_predictions": "NOT_PRESENT_IN_S01; compare saved clean metrics and original-vs-backup predictions",
+  "scope": "ALL_30_BEST_CHECKPOINTS_CLEAN_AND_ATTEMPTED96_VALID; all60best/last states load validated",
+  "dtype": "float32",
+  "device": "cuda",
+  "batch_size": 32,
+  "mode": "eval/inference_only",
+  "time": "2026-09-25T01:43:27.515585+00:00"
+}

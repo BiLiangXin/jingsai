@@ -1,0 +1,9 @@
+{
+  "phase": "S02_PREPARATION_NO_OFFICIAL_FITS",
+  "command": "python -B -X utf8 -m unittest discover -s tests -p test_s02_models.py -v",
+  "initial_result": {"tests": 16, "failures": 1, "exit_code": 1},
+  "failure": "test_incomplete_seed_set_mean_is_null: old integrated selection draft accepted float seed17.0 as int17 dictionary key",
+  "correction": "Integrated final helper explicit type(seed) is int validation; no model/protocol change",
+  "retry_training_budget_consumed": 0,
+  "official_training_performed": false
+}

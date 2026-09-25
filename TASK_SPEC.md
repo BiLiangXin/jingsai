@@ -1,3 +1,27 @@
+task_id: S02_CHAMPION_CHALLENGER_IMPROVEMENT
+status: ACTIVE_AUTHORIZED
+training_authorized: true
+s01_training_authorized: false
+campaign_id: S02-20260925-BOUNDED-12F15W
+execution_fit_budget: 12
+postprocess_budget: 15
+retry_training_budget: 0
+resource_walltime_cap_hours: 4
+per_fit_walltime_cap_minutes: 45
+latest_compute_finish: 2026-09-25T18:00:00+08:00
+test_authorized: false
+attachment3_4_authorized: false
+q3_authorized: false
+next_stage_authorized: false
+
+# S02 finite champion/challenger task
+
+Explicit current user S02 instruction supersedes prior no-new-task permission only in its new finite scope. S01 remains CLOSED_COMPLETED/CONSUMED. No second owner approval event is required. Before any candidate: complete independent backup and restore checks, frozen protocol/config/15W+12fit table, synthetic checks/resource measurement, independent exact-hash technical review and ordinary safe commit/push. Runtime then requires clean local=remote HEAD, exact manifest, unused S02 claim, four-hour window and private bound output. Never reuse S01 claim or mutate old checkpoints.
+
+Canonical protocol: docs/research/S02/PROTOCOL.md. Scope: train/valid only, fixed seeds17/29/43, no retries/expansion, full96/144 aggregation. Preserve D-DATA01..07, original R01/S01 records, LATEST_RUN and reliable-special-mask UNKNOWN. Strong conservative promotion only after complete comparison and restored fixedseed17 verification; failure/partial resource stop retains original pointer. No Release/WebZIP/Q1/Q3/test/special inference. Only safe aggregate/code/config evidence and canonical four paper ledgers may be committed/pushed by exact paths to codex/mosei-auto.
+
+## Historical S01 TASK_SPEC (closed; not current authority)
+
 task_id: S01_FROZEN_BASELINE_EXECUTION
 status: CLOSED_COMPLETED
 research_authorized: true

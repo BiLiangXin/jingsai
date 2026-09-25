@@ -1,0 +1,208 @@
+{
+  "status": "PRELIMINARY_REVIEW_PENDING_FROZEN_MANIFEST",
+  "reviewer_complete_for_preliminary_scope": true,
+  "created_utc": "2026-09-25T02:11:24.221561+00:00",
+  "blocking_critical": 0,
+  "blocking_major": 0,
+  "final_technical_pass": false,
+  "execution_authorization": false,
+  "scope": "Independent source, protocol, configuration, test-source, backup metadata and stdlib synthetic review only. Official tree remained read-only to this reviewer. Author was integrating ordinary fixes; final exact manifest was not frozen.",
+  "prohibitions_respected": {
+    "official_original_data_read": false,
+    "test_or_special_data_read": false,
+    "checkpoint_tensor_deserialization": false,
+    "model_import": false,
+    "model_forward": false,
+    "optimizer_or_training": false,
+    "gpu_work": false,
+    "official_tree_writes": false,
+    "credentials_or_native_journals_read": false
+  },
+  "reviewer_identity": {
+    "role": "Independent technical reviewer subagent",
+    "runtime_model_telemetry": "NOT_AVAILABLE_NOT_INVENTED"
+  },
+  "backup_closeout": {
+    "companion": "BACKUP_RESTORE_INDEPENDENT_COMPANION.json",
+    "companion_sha256": "ed12b7ea52132170d00e44d96dfe959ff926e31b93e1ff990530d0b9051131f5",
+    "after_snapshot": "source_snapshot_after_restore.json",
+    "after_snapshot_sha256": "e52d005279db9fe820824618e13fb90e654bbb6a562dc1fcdcf369860b3fa5ff",
+    "finding": "All 20 current S01/reference/data Python source bytes match backup, baseline Git and executed Git; 13 also match input-audit records. All 469 backup file hashes independently checked after restore. Restore reports all30 PASS and parent observed process/supervisor exit0. Exact tensor-value equality replaces the legacy bitwise label; historical per-row predictions never existed."
+  },
+  "reviewed_sources": [
+    {
+      "path": "src/mosei/s02/__init__.py",
+      "sha256": "fe671cf5ca1f850297e768e341b70ae0ef05e26aa20fcfc80c961c17b74d62c3",
+      "size": 65
+    },
+    {
+      "path": "src/mosei/s02/authorization.py",
+      "sha256": "9df8b3389f1b517d5a2686081903d57335208c1941a72f2c7bfaf0b09692051c",
+      "size": 7674
+    },
+    {
+      "path": "src/mosei/s02/common.py",
+      "sha256": "88fc5f38abfb84da8a4ccbaa8c2a664f4ebdd40fe8191fe358a2effaed96ab59",
+      "size": 2453
+    },
+    {
+      "path": "src/mosei/s02/engine.py",
+      "sha256": "0e050d7d7ca9bab84eeb26f6085e3cdb013367ae7439cff912a8fd8542369804",
+      "size": 8174
+    },
+    {
+      "path": "src/mosei/s02/evaluation.py",
+      "sha256": "4d47f016ad48db82ecb3a158d7bd413d7877797218e3ee25c4dab1ed1c9cf912",
+      "size": 4977
+    },
+    {
+      "path": "src/mosei/s02/execution.py",
+      "sha256": "79204bb002ee2c57a9593eb0e05076d0ed5dd4e5dc3842d356eccf4c1a01e08a",
+      "size": 14076
+    },
+    {
+      "path": "src/mosei/s02/models.py",
+      "sha256": "b0cfb6915ed70da68b6ebab29af80c1c6e4a9822a2e3ee275564cda4707fcd23",
+      "size": 10821
+    },
+    {
+      "path": "src/mosei/s02/selection.py",
+      "sha256": "e799e1563e1763300648364b25b66743d63c757f0ed618173e158938ebd34db4",
+      "size": 7424
+    },
+    {
+      "path": "tools/s02_run.py",
+      "sha256": "72a9862227c656ebd556e5cfe33b8810fb46525499e5b10c5bee7c87ba03adea",
+      "size": 827
+    },
+    {
+      "path": "tools/s02_synthetic_profile.py",
+      "sha256": "1f0ed03602f7d6e532a93791e8ae01a9323f239dc5c3048f7d4809335d14b046",
+      "size": 3443
+    },
+    {
+      "path": "tools/s02_publication_check.py",
+      "sha256": "2737269b3561a7be3fb30a4bc213e0da311536f780dd437a62c1de68a16346f2",
+      "size": 5541
+    },
+    {
+      "path": "docs/research/S02/PROTOCOL.md",
+      "sha256": "77fa725aada08589c7f743d7dcd8be8db4d32cd4aa22217765fc10e1eb7b8ba4",
+      "size": 9621
+    },
+    {
+      "path": "configs/s02_execution.json",
+      "sha256": "68000338d6fd289b6af6bdfb3c151834d52e22a1203df53236ad9405f78a5deb",
+      "size": 2355
+    },
+    {
+      "path": "tests/test_s02_execution.py",
+      "sha256": "a5cd553affbefeef4daa3467d56d03e81647d4d33e6382f100849a658be8e4f5",
+      "size": 27031
+    },
+    {
+      "path": "tests/test_s02_models.py",
+      "sha256": "99d16afc9c5a3a303b4bcc65a761c2f78258d944ad838b50f3f4effbc46a7fc0",
+      "size": 12647
+    },
+    {
+      "path": "tests/test_s02_cuda_synthetic.py",
+      "sha256": "b4a0e463d0ab66e7b19bf964500f0f2c0f0edfd6bbb09d335a59f121739f2f91",
+      "size": 2622
+    }
+  ],
+  "substantive_findings": [
+    {
+      "id": "S02-RV-MAJOR-01",
+      "severity": "MAJOR",
+      "state": "REPAIRED_IN_CURRENT_DRAFT_FINAL_FROZEN_REVIEW_PENDING",
+      "file": "src/mosei/s02/execution.py",
+      "initial_lines": "141-158",
+      "initial_sha256": "d14a4ef0c0f2045f305931ecab65db70dd01f7903c1fbb1b9dbda1aaccb87dc5",
+      "finding": "Champion pointer was atomically replaced before comparison and terminal-status evidence. An ordinary later report write failure could leave a promoted pointer after an unsuccessful finalization.",
+      "evidence": "Static control-flow finding on initial hash. Author confirmed and repaired before first execution probe; no claim that the original faulty version was executed.",
+      "repair": "Durable comparison and terminal evidence precede pointer commit; pointer is last fallible publication operation. Errors retain original pointer and attempt separate failure receipt. Prepared promoted status is valid only with matching pointer hashes.",
+      "verification": "Six pure selection boundaries pass; repaired execute() AST with mocked completed evaluation reaches winner restore, then one normal commit and three injected write failures behave as intended. Exact probe source hashes are in their records."
+    },
+    {
+      "id": "S02-RV-MINOR-01",
+      "severity": "MINOR",
+      "state": "LIMIT",
+      "file": "tools/s02_synthetic_profile.py",
+      "lines": "35-43",
+      "finding": "12-step synthetic batch cost extrapolation does not separately measure all six restored component full-grid evaluations, epoch aggregate-metric bookkeeping, source hashing, checkpoint serialization or final combination/report CPU cost. The 2x multiplier is planning headroom, not an observed full-campaign upper bound.",
+      "recommendation": "Retain explicit planning-only language, 4h/deadline stopping and honest incomplete results; do not claim guaranteed12fit completion."
+    },
+    {
+      "id": "S02-RV-MINOR-02",
+      "severity": "MINOR",
+      "state": "LIMIT",
+      "file": "src/mosei/s02/authorization.py",
+      "lines": "59-84",
+      "finding": "The full four-hour startup-window check precedes Git/network/backup verification. A preflight started just before14:00 Beijing could finish after14:00 and still claim, although the later Budget continues enforcing18:00 cutoff.",
+      "recommendation": "Recheck the full-window constraint immediately before consuming the one-use claim if startup approaches14:00. This does not enlarge authorization or budget."
+    },
+    {
+      "id": "S02-RV-MINOR-03",
+      "severity": "MINOR",
+      "state": "LIMIT",
+      "file": "src/mosei/s02/execution.py",
+      "lines": "150-181",
+      "finding": "As acknowledged in the new code, a crash between prepared terminal status and atomic pointer commit leaves mismatched evidence, and a disk failure can prevent even failure receipts. Export must reject promotion unless pointer/status/comparison bindings agree.",
+      "recommendation": "Treat pointer as the final transaction marker; preserve failed/crash artifacts and do not infer success from campaign_status alone."
+    }
+  ],
+  "inspected_invariants": [
+    "The four model recipes share the same initialized 77,542-parameter architecture; residual projections are zero-initialized and current A/S alone controls gating. Inactive values are masked before linear operations; all-empty pooling avoids softmax(-inf).",
+    "TRAIN-only zscore, class weights and train prior/median are reused; M4 restores same-seed S01 B-CAT teacher with matching normalizer and computes detached teacher targets only on TRAIN. VALID never reaches optimizer.",
+    "W0/W1/W2 retain component normalizers, use the same population/masks/replicate fingerprints, preserve hidden text masking, and evaluate the fixed15 bias configurations without further search.",
+    "96 nominal conditions are aggregated after replicate averaging; cross-seed reference.aggregate validates pairing. Ineligible rows use clean once. Separate completed three-seed means and fixedseed17 guards are required.",
+    "All15 postprocessing candidates and all12 model fits must finish before a promotion is considered by actual control flow. Incomplete candidates retain null means; errors/resource stops preserve the original champion.",
+    "All M recipes use the same clean-F1/MAE checkpoint selector, patience and exact best-epoch restoration; final144 evaluation occurs once at selected checkpoint. S01 C0/R0 stopping objective differs and protocol discloses this confound.",
+    "Each completed epoch durably records sample-weighted CE/weightedCE/MAE/KD/total, full-clean VALID metrics/loss, LR, sample/corruption counts, timing and selected checkpoint markers. TRAIN metrics are explicitly labeled online pre-update changing-weight diagnostics, not final-checkpoint clean evaluation.",
+    "S02 has an independent fixed-host one-use claim, current user-grant/config/manifest binding, train/valid-only entry and before/after fit source verification. Exact final manifest and clean pushed commit checks remain final-review work."
+  ],
+  "actual_checks": [
+    {
+      "command": "${PYTHON} -B -X utf8 ${REVIEW_DIR}/check_s01_source_snapshots.py --phase after_restore",
+      "exit_code": 0,
+      "scope": "20 source identities plus13 input-audit hashes; no import"
+    },
+    {
+      "command": "${PYTHON} -B -X utf8 ${REVIEW_DIR}/s02_preliminary_probes.py",
+      "exit_code": 0,
+      "selection_checks": 6,
+      "finalization_fault_cases": 2,
+      "evidence": "s02_preliminary_probe_results.json",
+      "sha256": "9e73690057fd863fe00db94f174e7b2b2b0baee6085c38c8936b7f9aa9f32838"
+    },
+    {
+      "command": "${PYTHON} -B -X utf8 ${REVIEW_DIR}/s02_finalization_delta_probes.py",
+      "exit_code": 0,
+      "selection_checks": 6,
+      "finalization_cases": 4,
+      "evidence": "s02_finalization_delta_probe_results.json",
+      "sha256": "498b2fd42ca7c13e9b1fa343be8eefda85895c272d5e2d250c2c11b763028f49"
+    }
+  ],
+  "command_substitutions": {
+    "PYTHON": "Installed Python3.11.14 interpreter; absolute private path omitted",
+    "REVIEW_DIR": "Outside-repository S02 backup_restore_review directory"
+  },
+  "probe_source_hashes": {
+    "s02_preliminary_probes.py": "6ffd2c01034b4d0480251996934c6240d4057515255947c598ebfc7555f6da16",
+    "s02_finalization_delta_probes.py": "8f110474d4caa68f42d3af70c696dcbdd595cffbeaf6a89194a790ccaa32c979"
+  },
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.19045-SP0"
+  },
+  "limits": [
+    "Preliminary review only; author integration continued, so this is not a final authorized-manifest approval.",
+    "Execution source moved from f881140d... exercised by probes to79204bb...; the latter was statically read and only changes final ResourceStop classification. Final frozen tests must bind final bytes.",
+    "Repository model/GPU tests were inspected, not rerun by reviewer; reported integration passes belong to author evidence.",
+    "Synthetic mocked execute() probe isolates finalization with one W candidate and zero recipe loops; this is not an accepted official config or evidence of model fitting.",
+    "Monolithic trusted pickle deserialization necessarily materializes its container; protocol honestly limits field access to train/valid and does not claim unmaterialized test objects.",
+    "No future predictive improvement, significance, reproducibility across platforms, exact OS-hard deadline or guaranteed completion is established."
+  ]
+}

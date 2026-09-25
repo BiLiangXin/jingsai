@@ -1,0 +1,615 @@
+{
+  "status": "TECHNICAL_PASS",
+  "blocking_critical": 0,
+  "blocking_major": 0,
+  "authorized_manifest_sha256": "ffb0747d9eb7b02a07b1ecd01c02d3bc6aaee3de5f61cde9e08a7e76fd745f8d",
+  "reviewer_complete": true,
+  "created_utc": "2026-09-25T02:18:42.934926+00:00",
+  "campaign_id": "S02-20260925-BOUNDED-12F15W",
+  "base_commit": "95342eb58bf0494bcc90934f76958b71becb8687",
+  "scope": "Independent read-only technical review of the frozen S02 bounded execution implementation, its82-member manifest, backup/restore evidence, protocol, authorization, synthetic tests and supervisor. This report is technical evidence under the existing explicit user grant; it is not a new owner approval, a native approval event, or a claim that official S02 fitting has occurred.",
+  "identity": {
+    "role": "Independent technical reviewer subagent",
+    "requested_identity": "User requested Astra review",
+    "runtime_model_and_reasoning_telemetry": "NOT_AVAILABLE_NOT_INVENTED"
+  },
+  "authority_conclusion": "No remaining concrete technical blocker for the specified15 postprocessing candidates and12 fixed fits, conditional on the unchanged existing runtime gates: safe publication, clean correct local=remote commit, exact manifest/review, unused S02 claim, bound private output/backup and resource window. This review itself consumes no claim and starts no execution.",
+  "reviewer_actions": {
+    "official_tree_writes": false,
+    "raw_official_data_or_samples_read": false,
+    "test_or_attachment3_4_read": false,
+    "checkpoint_tensor_deserialization": false,
+    "model_import_or_compute": false,
+    "gpu_work": false,
+    "training_or_official_evaluation": false,
+    "credentials_or_native_journals_read": false
+  },
+  "hash_verification": {
+    "manifest_members_verified": 82,
+    "mismatch_count": 0,
+    "all_source_members": [
+      {
+        "path": ".gitignore",
+        "sha256": "f84b13445fda2f00e5ec28aaa3cb13b04c3b2c261e70ed7eb323edbbbc9d437f",
+        "size": 249
+      },
+      {
+        "path": "AGENTS.md",
+        "sha256": "4a9ea177276ccf84d7a37567af79144dad4b2c23a13bbcc6ea28c1e311114954",
+        "size": 4554
+      },
+      {
+        "path": "DECISIONS.md",
+        "sha256": "940b7312b22f17c6506c60be123f43170651d3e5d3cc7af0f34ba280e84047d9",
+        "size": 13879
+      },
+      {
+        "path": "TASK_SPEC.md",
+        "sha256": "92e46fba2876ed1c41fa4065c4d0276083b65500df01ebd7bc98ff6c17961f4b",
+        "size": 6086
+      },
+      {
+        "path": "configs/s01_execution.json",
+        "sha256": "4884c94349bd09b230bf77b300eb8c49416f3954e1ce78cb93c94505c7a3e677",
+        "size": 10352
+      },
+      {
+        "path": "configs/s02_execution.json",
+        "sha256": "68000338d6fd289b6af6bdfb3c151834d52e22a1203df53236ad9405f78a5deb",
+        "size": 2355
+      },
+      {
+        "path": "docs/EXPERIMENT_REGISTER.json",
+        "sha256": "d488161b9f04d4833394fafe3423e192f8c8e6a1eaf395d17ee06ce678fbd6b1",
+        "size": 160932
+      },
+      {
+        "path": "docs/PAPER_CLAIMS.md",
+        "sha256": "3442a3438251489bedfae66bec873ae6d3fb31d655f4053f844684c7e999c973",
+        "size": 12908
+      },
+      {
+        "path": "docs/PROJECT_SUMMARY.md",
+        "sha256": "bf74b4f57021efb00e42aff28862ac3a93189d762ac46dd20db702c79cbe03ae",
+        "size": 8150
+      },
+      {
+        "path": "docs/RESEARCH_LOG.md",
+        "sha256": "d737ef85a9d0b0ff48e5adaedcace683781899f44ead7b675e17b15ea7d62f21",
+        "size": 21327
+      },
+      {
+        "path": "docs/S02_EXEC_AUTH_01.json",
+        "sha256": "58b8c1fb86db253ce02eec1578ac6a9cabb18df7361246790144b9143fa95634",
+        "size": 604
+      },
+      {
+        "path": "docs/research/R01/CLOSEOUT.md",
+        "sha256": "acdefc76d7b27dc7b476287481d32b89fb7de0b57723538aebe27d48795100e4",
+        "size": 4705
+      },
+      {
+        "path": "docs/research/R01/DECISIONS.md",
+        "sha256": "8f3091d546badab7a748c0d1d1ecb1362e3c4f45279ec018aa366ea5f27c8a2e",
+        "size": 4138
+      },
+      {
+        "path": "docs/research/R01/DESIGN.md",
+        "sha256": "bb3b349233bb3ca6016fbaca370ac6faac3e7ba777cab0407610d5e2c647400a",
+        "size": 26674
+      },
+      {
+        "path": "docs/research/R01/FREEZE_01.json",
+        "sha256": "26bed02ecc0464bec468cf986c1393bb49f50f7f69a96308a6d8a1c716ec8987",
+        "size": 4613
+      },
+      {
+        "path": "docs/research/R01/R01_ablation_matrix.csv",
+        "sha256": "3630f1650acc87ed5996a8ecb9e4796e40d572ae398dbec4922241012b85d891",
+        "size": 7661
+      },
+      {
+        "path": "docs/research/R01/R01_experiment_matrix.csv",
+        "sha256": "7f5f1e40b8b1ed9ae4b6a3e5ff09b777fe0f64ed1eb5f611123e33947ff0a4e7",
+        "size": 10453
+      },
+      {
+        "path": "docs/research/R01/README.md",
+        "sha256": "60e6d0f9a22c36c803cfc296e31471f975982f3cc5660e0ab302b13bf808edf7",
+        "size": 1887
+      },
+      {
+        "path": "docs/research/R01/REVISION_TRACE.md",
+        "sha256": "1d01f19e8f1c5410fd0b088340ebe66e474a9fb8022bb051b9ae7c7ef263a8ea",
+        "size": 971
+      },
+      {
+        "path": "docs/research/R01/SOURCES.md",
+        "sha256": "67b8231ec90eadcf88f8eb8089b3215ac80c3bb5fd63e7c3169882d5bb18b701",
+        "size": 3702
+      },
+      {
+        "path": "docs/research/R01/decisions.json",
+        "sha256": "a81bf20025c04128faa3412b02e3759210cdb0afd269eb926a647daad40803a7",
+        "size": 10079
+      },
+      {
+        "path": "docs/research/R01/protocol.json",
+        "sha256": "5129ee349e8b236edf531ea940c895a6f6e36b70f612aa6515bb3980e33185ba",
+        "size": 2755
+      },
+      {
+        "path": "docs/research/R01/sources.json",
+        "sha256": "261238bf27fb4f5f0602a9a072489217771278787028a3899953a1e68862712a",
+        "size": 2500
+      },
+      {
+        "path": "docs/research/R01/trials.json",
+        "sha256": "3682ebe05fa29598540de87a2619b8aab5a66ad74e475ca96d41cf1814df4223",
+        "size": 23700
+      },
+      {
+        "path": "docs/research/S02/CANDIDATES.json",
+        "sha256": "b2e26d4187222dbfc1242bd397f4cf3b3bc72b3b93faf61fb3a0cf8f62a695a7",
+        "size": 4850
+      },
+      {
+        "path": "docs/research/S02/PROTOCOL.md",
+        "sha256": "77fa725aada08589c7f743d7dcd8be8db4d32cd4aa22217765fc10e1eb7b8ba4",
+        "size": 9621
+      },
+      {
+        "path": "docs/research/S02/SOURCES.md",
+        "sha256": "0073367683b448bb66f7906fafd0be5f62da0e19e69c36c1341219d75319ba3f",
+        "size": 6515
+      },
+      {
+        "path": "docs/research/S02/sources.json",
+        "sha256": "904f0e1593e97a92bed5a99e4c1ef89b6d9c2eefb41eac2d54c7672eb9ff533e",
+        "size": 15519
+      },
+      {
+        "path": "reports/s02_preparation/ACTUAL_COMMANDS.json",
+        "sha256": "0f306cdbcde466d7522f988bd08276405d6cfa6ab5802653e54cb7fcfbcbad76",
+        "size": 1594
+      },
+      {
+        "path": "reports/s02_preparation/BACKUP_MANIFEST.json",
+        "sha256": "3ffb8cdca6f8146b2b2ce456812720aeeef4a3acf1b60720e47e63034d6dddd1",
+        "size": 89999
+      },
+      {
+        "path": "reports/s02_preparation/BACKUP_RESTORE_INDEPENDENT_REVIEW.json",
+        "sha256": "ed12b7ea52132170d00e44d96dfe959ff926e31b93e1ff990530d0b9051131f5",
+        "size": 6415
+      },
+      {
+        "path": "reports/s02_preparation/INDEPENDENT_FINALIZATION_PROBES.json",
+        "sha256": "676baaaa5e74c10df0f5d834d5acfb6c2fc793fc1a11521444e2fc8e42265c46",
+        "size": 2784
+      },
+      {
+        "path": "reports/s02_preparation/INDEPENDENT_PRELIMINARY_REVIEW.json",
+        "sha256": "b8ed9b262a557fe513c26c718f99e9f3d223d026629fb1fd054da43d1db81a84",
+        "size": 12084
+      },
+      {
+        "path": "reports/s02_preparation/RESOURCE_PROFILE.json",
+        "sha256": "e1d6f9ac3a062de1be840506d631dec017e30e6101adf89716288b8ada387009",
+        "size": 1302
+      },
+      {
+        "path": "reports/s02_preparation/RESTORE_POLICY.json",
+        "sha256": "73610f5d7a3774bac992c14964919560755337b8482275bc80ec261b9f758a3d",
+        "size": 587
+      },
+      {
+        "path": "reports/s02_preparation/RESTORE_RECEIPT.json",
+        "sha256": "d4dd9614fdfde6f0afd876b0f552e4077c36a598dfa770b8e03dd277bc5c1165",
+        "size": 51237
+      },
+      {
+        "path": "reports/s02_preparation/TEST_HISTORY.json",
+        "sha256": "ba6bf4688f2e4a192beaf8b9d5266ccc05d459fa3d31ef1cf6ab7c000a4b7f58",
+        "size": 525
+      },
+      {
+        "path": "reports/s02_preparation/TEST_RESULTS.json",
+        "sha256": "e106d89fb0a102998dd5191fbf5639db8155dae50058c51ec6285cabc6691044",
+        "size": 1903
+      },
+      {
+        "path": "research/r01/independent_probes.py",
+        "sha256": "1d5a789216081a0f8ee15c9cdd7c5a0e787168eeec90a1f824c086954a5f1c74",
+        "size": 3350
+      },
+      {
+        "path": "research/r01/publication_check.py",
+        "sha256": "acce3500a0c7bcc97e1c197686ad64e073197667a3837a2091f8f220f35046f2",
+        "size": 5649
+      },
+      {
+        "path": "research/r01/reference.py",
+        "sha256": "1cd4b73bb748284b4941625d92be89522771eff8a11e4044547e5f513ea62495",
+        "size": 15396
+      },
+      {
+        "path": "research/r01/run_checks.py",
+        "sha256": "b11270a509c724e6d4f7f6b49901f6d62063aea0f9affaa35c6d94bc01d98c34",
+        "size": 1776
+      },
+      {
+        "path": "research/r01/test_closeout.py",
+        "sha256": "db83a462aec9081c5110fbe69d202a4516f112f40f48b551d732637b617b7047",
+        "size": 3933
+      },
+      {
+        "path": "research/r01/test_reference.py",
+        "sha256": "aa9746cdecc49ae8beca60ba1fa363a2f1c6cd32825794f1fa3537b377f010df",
+        "size": 10694
+      },
+      {
+        "path": "src/mosei/__init__.py",
+        "sha256": "72e3fcf210041bdf645c2004d23ef8cf9e193ad25ce0c64efb9a508392218549",
+        "size": 74
+      },
+      {
+        "path": "src/mosei/data/__init__.py",
+        "sha256": "1e8562996e64ce70eb0aa346eaa235f01e7889c6f7b42c97c35733b9059e727e",
+        "size": 723
+      },
+      {
+        "path": "src/mosei/data/data_contract.py",
+        "sha256": "79dbb5124e5d90ffb032d4b4a9c6f7c05eafa1c5f997e297726382258926e776",
+        "size": 7092
+      },
+      {
+        "path": "src/mosei/data/dataset.py",
+        "sha256": "f15b226d7a956563a5b76db6f6c631f6ae7ff0b01d24508513db2cc9d32583c8",
+        "size": 3617
+      },
+      {
+        "path": "src/mosei/data/masks.py",
+        "sha256": "ce07ea15a7b4e35c7f0e7d39cc3636d6c3ffee7374af4bad833d8a5ebff6e28d",
+        "size": 3639
+      },
+      {
+        "path": "src/mosei/data/normalization.py",
+        "sha256": "78b9f060ce185fd232ba4a8d16d747ba15e73fd9ea078095e07bb0921a9395f5",
+        "size": 6143
+      },
+      {
+        "path": "src/mosei/data/pooling.py",
+        "sha256": "8d0892d179ae7cd773f38758cb1151fb92a65fb1eae3d739045ae0d5f300685d",
+        "size": 1620
+      },
+      {
+        "path": "src/mosei/s01/__init__.py",
+        "sha256": "45e370a9952a0d589a6f50e06fe2ad315af97570b9c6fea83ddf8d218d575e3e",
+        "size": 90
+      },
+      {
+        "path": "src/mosei/s01/authorization.py",
+        "sha256": "fff47ee8ca18fb0634a33a80c817446cb517c6138a48742b38926dbfa20e4039",
+        "size": 12465
+      },
+      {
+        "path": "src/mosei/s01/contracts.py",
+        "sha256": "03040b7725a22dd150bb5215f2a0697eaa6bc936ea32ed6df5d028171fe3d030",
+        "size": 5480
+      },
+      {
+        "path": "src/mosei/s01/engine.py",
+        "sha256": "65e5f6e3478aa2bd228839d65f3fef356f5cee412ade20fda55df86c2ab91918",
+        "size": 14771
+      },
+      {
+        "path": "src/mosei/s01/execution.py",
+        "sha256": "14f30d2211887cf7cae4880a86881e885d6e9cb94278ca4ee5d982cebacc4426",
+        "size": 12853
+      },
+      {
+        "path": "src/mosei/s01/models.py",
+        "sha256": "e0d815c1f97e83e653e326c8df28d519b967b69c185b95b758a2822bef9821f3",
+        "size": 7650
+      },
+      {
+        "path": "src/mosei/s01/normalization.py",
+        "sha256": "4c5bad3c4f26a9c2b8e6aaebdc24d767b327553ba723490f82ff3ac7f3c75c3e",
+        "size": 3498
+      },
+      {
+        "path": "src/mosei/s01/protocol.py",
+        "sha256": "c69c194447c0c220a56e6dddb9c7a3e225f2a949147573d7212d4d0775871b26",
+        "size": 5842
+      },
+      {
+        "path": "src/mosei/s01/registry.py",
+        "sha256": "d4ea70e91aaa2e70792fdb025fa640d090443cb3ae8f41823f78d071df809e73",
+        "size": 4286
+      },
+      {
+        "path": "src/mosei/s02/__init__.py",
+        "sha256": "fe671cf5ca1f850297e768e341b70ae0ef05e26aa20fcfc80c961c17b74d62c3",
+        "size": 65
+      },
+      {
+        "path": "src/mosei/s02/authorization.py",
+        "sha256": "9df8b3389f1b517d5a2686081903d57335208c1941a72f2c7bfaf0b09692051c",
+        "size": 7674
+      },
+      {
+        "path": "src/mosei/s02/common.py",
+        "sha256": "88fc5f38abfb84da8a4ccbaa8c2a664f4ebdd40fe8191fe358a2effaed96ab59",
+        "size": 2453
+      },
+      {
+        "path": "src/mosei/s02/engine.py",
+        "sha256": "0e050d7d7ca9bab84eeb26f6085e3cdb013367ae7439cff912a8fd8542369804",
+        "size": 8174
+      },
+      {
+        "path": "src/mosei/s02/evaluation.py",
+        "sha256": "4d47f016ad48db82ecb3a158d7bd413d7877797218e3ee25c4dab1ed1c9cf912",
+        "size": 4977
+      },
+      {
+        "path": "src/mosei/s02/execution.py",
+        "sha256": "79204bb002ee2c57a9593eb0e05076d0ed5dd4e5dc3842d356eccf4c1a01e08a",
+        "size": 14076
+      },
+      {
+        "path": "src/mosei/s02/models.py",
+        "sha256": "b0cfb6915ed70da68b6ebab29af80c1c6e4a9822a2e3ee275564cda4707fcd23",
+        "size": 10821
+      },
+      {
+        "path": "src/mosei/s02/selection.py",
+        "sha256": "e799e1563e1763300648364b25b66743d63c757f0ed618173e158938ebd34db4",
+        "size": 7424
+      },
+      {
+        "path": "state/LATEST_RESEARCH.json",
+        "sha256": "dbb75ced8987d21b91de9b957d1a44d7557a09b2537a97919bb6db584d6082e3",
+        "size": 12032
+      },
+      {
+        "path": "state/LATEST_RUN.json",
+        "sha256": "ff77a2d4eafa00ae842c2a94611f3ae2d161bb4ec92e9cb1f17ac6cb88b5ace0",
+        "size": 3298
+      },
+      {
+        "path": "tests/test_s02_cuda_synthetic.py",
+        "sha256": "b4a0e463d0ab66e7b19bf964500f0f2c0f0edfd6bbb09d335a59f121739f2f91",
+        "size": 2622
+      },
+      {
+        "path": "tests/test_s02_execution.py",
+        "sha256": "a5cd553affbefeef4daa3467d56d03e81647d4d33e6382f100849a658be8e4f5",
+        "size": 27031
+      },
+      {
+        "path": "tests/test_s02_finalization.py",
+        "sha256": "e7ab9580f2c70f4f36048c3c89bedbb3f82f4e8813ef70a1298d89fbe034424a",
+        "size": 6852
+      },
+      {
+        "path": "tests/test_s02_models.py",
+        "sha256": "99d16afc9c5a3a303b4bcc65a761c2f78258d944ad838b50f3f4effbc46a7fc0",
+        "size": 12647
+      },
+      {
+        "path": "tests/test_s02_supervisor.py",
+        "sha256": "f2a1e90ba7ad41feb4205aedd5c7da98b6c9d5a053c45ac91c69084ed7fe4683",
+        "size": 2191
+      },
+      {
+        "path": "tools/s01_campaign_publication_check.py",
+        "sha256": "f2bf7c6aafad469f473ff91d56ec57cb824560b00c041a221d064cb9221b5605",
+        "size": 26468
+      },
+      {
+        "path": "tools/s02_backup_restore_reference.py",
+        "sha256": "2397ef46a630231efde05dd113258e085bdb1fb7e671e9ce92e51c1733ce3cc9",
+        "size": 9663
+      },
+      {
+        "path": "tools/s02_publication_check.py",
+        "sha256": "2737269b3561a7be3fb30a4bc213e0da311536f780dd437a62c1de68a16346f2",
+        "size": 5541
+      },
+      {
+        "path": "tools/s02_run.py",
+        "sha256": "72a9862227c656ebd556e5cfe33b8810fb46525499e5b10c5bee7c87ba03adea",
+        "size": 827
+      },
+      {
+        "path": "tools/s02_supervise.py",
+        "sha256": "1b94bf22c3b7bda0b5e58a004efe7d401f847c7bd9854f7f89776a83d94594ac",
+        "size": 2618
+      },
+      {
+        "path": "tools/s02_synthetic_profile.py",
+        "sha256": "1f0ed03602f7d6e532a93791e8ae01a9323f239dc5c3048f7d4809335d14b046",
+        "size": 3443
+      },
+      {
+        "path": "tools/stage_handoff.py",
+        "sha256": "ba131ab5a455d1acde84c7416f8d2dce1e208ddd53a6a6bb0a2efd0e3ab7a0d7",
+        "size": 47341
+      }
+    ],
+    "execution_critical_closure": "PASS",
+    "missing_execution_imports": [],
+    "baseline_publication_helpers": [
+      {
+        "path": "tools/mosei_flow.py",
+        "sha256": "f0da6fea63ebc6d14ec6b253f0580f9c9c52f7045e02e134a07e3932e8f823ff",
+        "binding": "UNCHANGED_BASELINE_GIT_NOT_EXECUTION_IMPORT"
+      },
+      {
+        "path": "tools/s00e_approval.py",
+        "sha256": "1a75943f604f186fe9b159aa489ecd624e5714edd7453e83151fbedc750ea247",
+        "binding": "UNCHANGED_BASELINE_GIT_NOT_EXECUTION_IMPORT"
+      },
+      {
+        "path": "tools/s00e_evidence.py",
+        "sha256": "b973ee916d3e98a46af5d997ae595a3dbf79c957f74c936edf0b29071d3878ff",
+        "binding": "UNCHANGED_BASELINE_GIT_NOT_EXECUTION_IMPORT"
+      }
+    ],
+    "protected_s01_data_reference_r01_latest_run_diff": "EMPTY",
+    "config_authorization_candidate_digest": "32f0001d54944a4775ec786ff00fba1ecabfaed64477c718a10199a3d6d61eec",
+    "candidate_grid": {
+      "fits": 12,
+      "postprocessing": 15,
+      "all_not_run_metrics_null": true
+    },
+    "exclusions": [
+      "reports/s02_preparation/AUTHORIZED_MANIFEST.json",
+      "reports/s02_preparation/independent_review.json",
+      "reports/s02_preparation/PUBLICATION_MANIFEST.json"
+    ],
+    "exclusions_note": "Only self-manifest, this separately hash-bound review and publication metadata are excluded. Publication commit will bind them; no execution member may change after this review."
+  },
+  "reviewed_behavior": [
+    "Predictor uses continuous text/audio/vision, support and current availability only; padding and original observation remain separate, normalization is TRAIN-derived and hidden features are masked before learned operations. All-empty attention and train prior/median fallback are finite.",
+    "M1-M4 share77,542 parameters and recipe-independent initialization. M2 uses globally TRAIN-normalized class weights. M3/M4 use fixed25percent per-row corruption attempts and original legal96-condition generator without resampling ineligible rows. M4 uses only TRAIN clean same-seed frozen teacher targets, detached and normalized identically; inference has no teacher.",
+    "W0/W1/W2 use each original component normalizer and the same actual current view. Fifteen fixed neutral biases do not redefine truth. Population/order, original-mask and corruption fingerprints bind caches. No test/special fields are used for fitting, threshold selection or evaluation.",
+    "Every model recipe selects checkpoints by common clean F1 then MAE and the frozen early-stop helper. Selected best is restored before final96/144 evaluation. Replicates are averaged before96-condition means and then three seeds; cross-seed aggregate pairing is validated. Partial seeds cannot create complete means.",
+    "Champion promotion requires all15W and12fits complete and simultaneous mean/fixedseed17 clean Accuracy/F1/MAE/Pearson plus attempted96 F1/MAE nondegradation within1e-8, with a strict gain above tolerance. Null Pearson rejects automatic promotion. Selected fixedseed17 is restored and full clean/144-view output values compared before preparing promotion.",
+    "Each completed epoch persists sample-weighted train CE/weightedCE/MAE/KD/total, changing-weight online current-view training metrics with explicit scope, full-clean VALID metrics/loss, learning rate, counts, timing, checkpoint and early-stop markers. Online diagnostics are not mislabeled as end-of-epoch checkpoint clean TRAIN evaluation.",
+    "S02 uses a separate persistent fixed-host one-use claim, no S01 reactivation, exact user-grant/config/manifest binding and train/valid-only active authority. Before/after fit source and execution checks remain in place. Existing original S01 checkpoints, metrics and data contract remain unchanged.",
+    "Final comparison/status evidence now precedes the atomic champion pointer. The pointer is the final commit marker. Comparison/status/pointer write failures preserve the original pointer and return failure; downstream promotion validity requires matching status/pointer/comparison hashes.",
+    "Supervisor now charges setup against a monotonic deadline, waits only remaining time and kills/waits its own child on unexpected exit. Internal total4h, per-fit45minute and absolute18:00Beijing checks remain active. No exact OS scheduling guarantee is asserted."
+  ],
+  "resolved_findings": [
+    {
+      "id": "S02-RV-MAJOR-01",
+      "severity": "MAJOR",
+      "state": "RESOLVED",
+      "file": "src/mosei/s02/execution.py",
+      "initial_sha256": "d14a4ef0c0f2045f305931ecab65db70dd01f7903c1fbb1b9dbda1aaccb87dc5",
+      "initial_lines": "141-158",
+      "finding": "Pointer promotion preceded durable final reports, allowing a later disk error to leave a promoted pointer on failed finalization.",
+      "repair": "Pointer is now last fallible commit after terminal evidence, with separate failure receipt and pointer-match semantics.",
+      "final_sha256": "79204bb002ee2c57a9593eb0e05076d0ed5dd4e5dc3842d356eccf4c1a01e08a",
+      "verification": "Independent unchanged execute() AST: one successful final commit and injected comparison/status/pointer failures all passed after reaching mocked winner restore. Faulty original version was inspected statically, not claimed executed."
+    },
+    {
+      "id": "S02-RV-SUPERVISOR-01",
+      "severity": "MINOR",
+      "state": "RESOLVED",
+      "file": "tools/s02_supervise.py",
+      "finding": "Fresh full wait omitted startup elapsed time and exceptional wait could leave owned child alive.",
+      "repair": "Monotonic stop_at set before setup/Popen; remaining-time wait and finally cleanup.",
+      "verification": "Independent direct invocation of three non-process mocked regression functions passed; source hash matches frozen manifest."
+    }
+  ],
+  "remaining_nonblocking_limits": [
+    {
+      "id": "LIMIT-RUNTIME",
+      "text": "The12-step synthetic resource estimate with2x headroom is a planning extrapolation, not measured complete-campaign runtime. It omits separately measured old-component grid passes and some epoch/report/checkpoint/hash overhead. Hard stops and honest incomplete results prevail; completion is not guaranteed."
+    },
+    {
+      "id": "LIMIT-STARTUP-WINDOW",
+      "text": "Core preflight checks a full4h window before Git/backup verification, rather than again immediately at claim. The launcher requires that window before launch and now counts setup/preflight in its4h watchdog, and core cutoff remains enforced; a late-start preflight can leave less useful fit time."
+    },
+    {
+      "id": "LIMIT-TRANSACTION-CRASH",
+      "text": "A crash after prepared status but before atomic pointer can leave a mismatch. Promotion must not be inferred from status alone. Disk failure or forced termination may prevent final failure logs; preserve artifacts and exit evidence rather than invent a graceful terminal receipt."
+    },
+    {
+      "id": "LIMIT-STATISTICS",
+      "text": "S02 is an exploratory follow-up selected repeatedly on the same VALID set. Seed SD and all-metric guards do not establish statistical significance, independent generalization or guaranteed gains. S02 clean checkpoint selection differs from S01 C0/R0 attempted96 stopping, as disclosed."
+    },
+    {
+      "id": "LIMIT-TRUST",
+      "text": "Host account and Git publisher are trusted; this is not an adversarial same-account sandbox. Trusted monolithic pickle deserialization may materialize other internal objects, while accessed fields and computation are restricted to train/valid."
+    },
+    {
+      "id": "LIMIT-EXPORT",
+      "text": "The outside post-run S02 exporter is excluded from this activation review and must receive its separate bounded review on manual wake. No active AI monitoring or automatic extra experiments are authorized by this report."
+    }
+  ],
+  "independent_checks": [
+    {
+      "command": "${PYTHON} -B -X utf8 ${REVIEW_DIR}/check_s01_source_snapshots.py --phase after_restore",
+      "exit_code": 0,
+      "result": "20 current/backup/baselineGit/executedGit source identities match;13 input-audit entries match"
+    },
+    {
+      "command": "${PYTHON} -B -X utf8 ${REVIEW_DIR}/s02_frozen_finalization_probes.py",
+      "exit_code": 0,
+      "selection_boundary_checks_passed": 6,
+      "finalization_cases_passed": 4,
+      "evidence": "s02_frozen_finalization_probe_results.json",
+      "evidence_sha256": "676baaaa5e74c10df0f5d834d5acfb6c2fc793fc1a11521444e2fc8e42265c46",
+      "script_sha256": "32218eef04facbcc345246959a6ab5b3758a58743b5cb278e95e3f52e915c7fb",
+      "limitation": "Stdlib AST execution uses non-model synthetic mocks, one W candidate and zero recipe loops solely to isolate finalization; not an official accepted configuration or model run."
+    },
+    {
+      "command": "${PYTHON} -B -X utf8 ${REVIEW_DIR}/verify_s02_frozen_manifest.py --sha256 ffb0747d9eb7b02a07b1ecd01c02d3bc6aaee3de5f61cde9e08a7e76fd745f8d --output ${REVIEW_DIR}/S02_FINAL_MANIFEST_CHECK.json",
+      "exit_code": 0,
+      "result": "82of82 exact hashes, execution closure, unchanged baseline helpers, config/authority/candidate agreement, frozen S01 paths",
+      "evidence_sha256": "7f08c50ec3cc7f8ac114dc34ac7905b6ada05084b835ba379b73b87bf2d23800",
+      "script_sha256": "c98966d2479d6b684683ce91d14834fa4856ecc867c81df5b1ff48531833da79"
+    },
+    {
+      "command": "${PYTHON} -B -X utf8 ${REVIEW_DIR}/s02_supervisor_independent_check.py",
+      "exit_code": 0,
+      "checks_passed": 3,
+      "processes_launched": false,
+      "evidence_sha256": "65e7b321fc711c665372d8d44e7ee3fbd292dfa320a91b1694a3fd8e09686354",
+      "script_sha256": "b5ace6cf91068ae1e8c3c4691e7b40df88c9e8b4a0258d2b202b750db6441e62"
+    }
+  ],
+  "author_test_evidence": {
+    "source": "reports/s02_preparation/TEST_RESULTS.json",
+    "source_sha256": "e106d89fb0a102998dd5191fbf5639db8155dae50058c51ec6285cabc6691044",
+    "full_suite_earlier": {
+      "passed": 366,
+      "subtests": 68,
+      "exit_code": 0,
+      "seconds": 52.07,
+      "log_sha256": "b9517fff915c24568abb21bddc7d116650162cb9b4ad4c9ea353733fa9cc7c5b"
+    },
+    "targeted_after_execution_repair": {
+      "passed": 44,
+      "subtests": 43,
+      "exit_code": 0,
+      "seconds": 15.86,
+      "log_sha256": "cd31dc283660b9ae2c1c53410ff11e85a1f49da7f0c0dfec672b6413a2929545"
+    },
+    "permanent_finalization_test": {
+      "passed": 1,
+      "exit_code": 0
+    },
+    "supervisor_tests": {
+      "passed": 3,
+      "exit_code": 0
+    },
+    "attribution": "Parent executed repository/CUDA synthetic suites. Reviewer read and hashed named full/targeted logs and source tests; did not independently run model/GPU suites. Full suite predates final bounded repairs; relevant targeted and independent fault tests cover those deltas."
+  },
+  "backup_restore": {
+    "status": "TECHNICAL_PASS_FOR_COMPLETED_BASELINE_BACKUP_AND_RESTORE",
+    "all_backup_files_independently_hashed": 469,
+    "restored_best_models_reported": 30,
+    "loaded_best_last_states_reported": 60,
+    "legacy_bitwise_label_correction": "Original-versus-backup torch.equal establishes exact tensor-value equality, not general raw bitwise/dtype/signed-zero equality. Original legacy field is preserved; companion clarifies.",
+    "historical_validation_tolerance": 1e-07,
+    "historical_per_row_predictions": "NOT_PRESENT; no historical pointwise equality claimed",
+    "restore_exit_attribution": "Parent observed shell and supervisor exit0; reviewer inspected completed receipts and final source/backup snapshots.",
+    "companion_sha256": "ed12b7ea52132170d00e44d96dfe959ff926e31b93e1ff990530d0b9051131f5",
+    "final_source_snapshot_sha256": "e52d005279db9fe820824618e13fb90e654bbb6a562dc1fcdcf369860b3fa5ff"
+  },
+  "command_substitutions": {
+    "PYTHON": "Installed Python3.11.14 interpreter; absolute private path omitted",
+    "REVIEW_DIR": "Outside-repository S02 backup_restore_review directory"
+  },
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.19045-SP0"
+  },
+  "completion": "Review complete. No further source edits, model work or monitoring requested by this reviewer; parent may carry out already-authorized publication and runtime gates on these exact bytes."
+}

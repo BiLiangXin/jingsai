@@ -1,0 +1,12 @@
+{
+  "authorization_id": "S02-EXEC-AUTH-01",
+  "status": "USER_PREAUTHORIZED",
+  "source": "EXPLICIT_CURRENT_USER_INSTRUCTION_ADOPTING_S02_PROMPT",
+  "instruction_sha256": "91d90afc6508633429437eb4680f293f29041398e75330e1b068234e10c7e938",
+  "config_hash": "32f0001d54944a4775ec786ff00fba1ecabfaed64477c718a10199a3d6d61eec",
+  "campaign_id": "S02-20260925-BOUNDED-12F15W",
+  "needs_additional_owner_event": false,
+  "scope": "Only S02 12 fixed fits and15 fixed postprocessing configurations",
+  "preserves_s01_consumed": true,
+  "baseline_commit": "95342eb58bf0494bcc90934f76958b71becb8687"
+}

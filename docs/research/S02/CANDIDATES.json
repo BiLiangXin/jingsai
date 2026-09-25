@@ -1,0 +1,273 @@
+{
+  "task_id": "S02_CHAMPION_CHALLENGER_IMPROVEMENT",
+  "campaign_id": "S02-20260925-BOUNDED-12F15W",
+  "config_hash": "32f0001d54944a4775ec786ff00fba1ecabfaed64477c718a10199a3d6d61eec",
+  "fits": [
+    {
+      "id": "M1-s17",
+      "recipe": "M1",
+      "seed": 17,
+      "status": "NOT_RUN",
+      "metrics": null
+    },
+    {
+      "id": "M1-s29",
+      "recipe": "M1",
+      "seed": 29,
+      "status": "NOT_RUN",
+      "metrics": null
+    },
+    {
+      "id": "M1-s43",
+      "recipe": "M1",
+      "seed": 43,
+      "status": "NOT_RUN",
+      "metrics": null
+    },
+    {
+      "id": "M2-s17",
+      "recipe": "M2",
+      "seed": 17,
+      "status": "NOT_RUN",
+      "metrics": null
+    },
+    {
+      "id": "M2-s29",
+      "recipe": "M2",
+      "seed": 29,
+      "status": "NOT_RUN",
+      "metrics": null
+    },
+    {
+      "id": "M2-s43",
+      "recipe": "M2",
+      "seed": 43,
+      "status": "NOT_RUN",
+      "metrics": null
+    },
+    {
+      "id": "M3-s17",
+      "recipe": "M3",
+      "seed": 17,
+      "status": "NOT_RUN",
+      "metrics": null
+    },
+    {
+      "id": "M3-s29",
+      "recipe": "M3",
+      "seed": 29,
+      "status": "NOT_RUN",
+      "metrics": null
+    },
+    {
+      "id": "M3-s43",
+      "recipe": "M3",
+      "seed": 43,
+      "status": "NOT_RUN",
+      "metrics": null
+    },
+    {
+      "id": "M4-s17",
+      "recipe": "M4",
+      "seed": 17,
+      "status": "NOT_RUN",
+      "metrics": null
+    },
+    {
+      "id": "M4-s29",
+      "recipe": "M4",
+      "seed": 29,
+      "status": "NOT_RUN",
+      "metrics": null
+    },
+    {
+      "id": "M4-s43",
+      "recipe": "M4",
+      "seed": 43,
+      "status": "NOT_RUN",
+      "metrics": null
+    }
+  ],
+  "postprocessing": [
+    {
+      "id": "W0-bN-m04",
+      "variant": "W0",
+      "beta": -0.4,
+      "status": "NOT_RUN",
+      "metrics": null,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "id": "W0-bN-m02",
+      "variant": "W0",
+      "beta": -0.2,
+      "status": "NOT_RUN",
+      "metrics": null,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "id": "W0-bN-zero",
+      "variant": "W0",
+      "beta": 0.0,
+      "status": "NOT_RUN",
+      "metrics": null,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "id": "W0-bN-p02",
+      "variant": "W0",
+      "beta": 0.2,
+      "status": "NOT_RUN",
+      "metrics": null,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "id": "W0-bN-p04",
+      "variant": "W0",
+      "beta": 0.4,
+      "status": "NOT_RUN",
+      "metrics": null,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "id": "W1-bN-m04",
+      "variant": "W1",
+      "beta": -0.4,
+      "status": "NOT_RUN",
+      "metrics": null,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "id": "W1-bN-m02",
+      "variant": "W1",
+      "beta": -0.2,
+      "status": "NOT_RUN",
+      "metrics": null,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "id": "W1-bN-zero",
+      "variant": "W1",
+      "beta": 0.0,
+      "status": "NOT_RUN",
+      "metrics": null,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "id": "W1-bN-p02",
+      "variant": "W1",
+      "beta": 0.2,
+      "status": "NOT_RUN",
+      "metrics": null,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "id": "W1-bN-p04",
+      "variant": "W1",
+      "beta": 0.4,
+      "status": "NOT_RUN",
+      "metrics": null,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "id": "W2-bN-m04",
+      "variant": "W2",
+      "beta": -0.4,
+      "status": "NOT_RUN",
+      "metrics": null,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "id": "W2-bN-m02",
+      "variant": "W2",
+      "beta": -0.2,
+      "status": "NOT_RUN",
+      "metrics": null,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "id": "W2-bN-zero",
+      "variant": "W2",
+      "beta": 0.0,
+      "status": "NOT_RUN",
+      "metrics": null,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "id": "W2-bN-p02",
+      "variant": "W2",
+      "beta": 0.2,
+      "status": "NOT_RUN",
+      "metrics": null,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "id": "W2-bN-p04",
+      "variant": "W2",
+      "beta": 0.4,
+      "status": "NOT_RUN",
+      "metrics": null,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    }
+  ]
+}

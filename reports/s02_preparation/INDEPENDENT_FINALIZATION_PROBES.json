@@ -1,0 +1,87 @@
+{
+  "kind": "INDEPENDENT_STDLIB_SYNTHETIC_SOURCE_PROBES",
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.19045-SP0"
+  },
+  "imports_models": false,
+  "official_data_read": false,
+  "checkpoint_tensors_read": false,
+  "source_hashes": {
+    "src/mosei/s02/selection.py": "e799e1563e1763300648364b25b66743d63c757f0ed618173e158938ebd34db4",
+    "src/mosei/s02/execution.py": "79204bb002ee2c57a9593eb0e05076d0ed5dd4e5dc3842d356eccf4c1a01e08a"
+  },
+  "checks": [
+    {
+      "name": "incomplete_seed_rejected_and_mean_null",
+      "passed": true
+    },
+    {
+      "name": "all_metric_nondegradation_with_gain_proposes_only",
+      "passed": true
+    },
+    {
+      "name": "fixed_seed_degradation_rejected",
+      "passed": true
+    },
+    {
+      "name": "open_comparison_cannot_promote",
+      "passed": true
+    },
+    {
+      "name": "tolerance_not_gain",
+      "passed": true
+    },
+    {
+      "name": "undefined_pearson_rejected",
+      "passed": true
+    }
+  ],
+  "finalization_fault_probes": [
+    {
+      "injected_failed_file": null,
+      "returned_status": "COMPLETED",
+      "escaped_exception": null,
+      "winner_restore_completed": true,
+      "finalization_failure_receipt": false,
+      "pointer": "W0-bN-zero",
+      "terminal_receipt_exists": true,
+      "original_preserved": false
+    },
+    {
+      "injected_failed_file": "comparison.json",
+      "returned_status": "BLOCKED",
+      "escaped_exception": null,
+      "winner_restore_completed": true,
+      "finalization_failure_receipt": true,
+      "pointer": "S01-B-CAT-zscore",
+      "terminal_receipt_exists": true,
+      "original_preserved": true
+    },
+    {
+      "injected_failed_file": "campaign_status.json",
+      "returned_status": "BLOCKED",
+      "escaped_exception": null,
+      "winner_restore_completed": true,
+      "finalization_failure_receipt": true,
+      "pointer": "S01-B-CAT-zscore",
+      "terminal_receipt_exists": false,
+      "original_preserved": true
+    },
+    {
+      "injected_failed_file": "CURRENT_CHAMPION.json",
+      "returned_status": "BLOCKED",
+      "escaped_exception": null,
+      "winner_restore_completed": true,
+      "finalization_failure_receipt": true,
+      "pointer": "S01-B-CAT-zscore",
+      "terminal_receipt_exists": true,
+      "original_preserved": true
+    }
+  ],
+  "script_sha256": "32218eef04facbcc345246959a6ab5b3758a58743b5cb278e95e3f52e915c7fb",
+  "limitations": [
+    "Execution probe uses only unchanged execute() AST with mocked completed selection/restore. It does not test GPU/model computation or authority.",
+    "recipes=[] and one W candidate isolate finalization; they are never accepted official configurations."
+  ]
+}

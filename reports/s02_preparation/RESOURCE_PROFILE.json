@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "data_kind": "SYNTHETIC_ONLY",
+  "official_model_experiment": false,
+  "predictive_metrics": null,
+  "environment": {
+    "python": "3.11.14",
+    "torch": "2.9.1+cu128",
+    "cuda": "12.8",
+    "cudnn": 91002,
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "threads": 4,
+    "tf32": false
+  },
+  "rows": [
+    {
+      "recipe": "M1",
+      "parameters": 77542,
+      "measured_steps": 10,
+      "warmup_steps": 2,
+      "step_mean_seconds": 0.0237541999995301,
+      "forward_mean_seconds": 0.010848869999608723,
+      "peak_allocated_bytes": 88815104
+    },
+    {
+      "recipe": "M4",
+      "parameters": 77542,
+      "measured_steps": 10,
+      "warmup_steps": 2,
+      "step_mean_seconds": 0.03656017999965115,
+      "forward_mean_seconds": 0.011156239999399986,
+      "peak_allocated_bytes": 103007744
+    }
+  ],
+  "planning_only_max100_epoch_12fit_seconds": 5448.712060714635,
+  "planning_overhead_multiplier": 2,
+  "planning_with_double_overhead_seconds": 10897.42412142927,
+  "limitations": [
+    "Synthetic dense inputs and12steps do not guarantee official runtime.",
+    "No official metrics or extrapolated accuracy.",
+    "Four-hour hard cap and partial results prevail."
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "base_commit": "95342eb58bf0494bcc90934f76958b71becb8687",
+  "publication_files": [
+    "DECISIONS.md",
+    "TASK_SPEC.md",
+    "configs/s02_execution.json",
+    "docs/EXPERIMENT_REGISTER.json",
+    "docs/PAPER_CLAIMS.md",
+    "docs/PROJECT_SUMMARY.md",
+    "docs/RESEARCH_LOG.md",
+    "docs/S02_EXEC_AUTH_01.json",
+    "docs/research/S02/CANDIDATES.json",
+    "docs/research/S02/PROTOCOL.md",
+    "docs/research/S02/SOURCES.md",
+    "docs/research/S02/sources.json",
+    "reports/s02_preparation/ACTUAL_COMMANDS.json",
+    "reports/s02_preparation/AUTHORIZED_MANIFEST.json",
+    "reports/s02_preparation/BACKUP_MANIFEST.json",
+    "reports/s02_preparation/BACKUP_RESTORE_INDEPENDENT_REVIEW.json",
+    "reports/s02_preparation/INDEPENDENT_FINALIZATION_PROBES.json",
+    "reports/s02_preparation/INDEPENDENT_PRELIMINARY_REVIEW.json",
+    "reports/s02_preparation/PUBLICATION_MANIFEST.json",
+    "reports/s02_preparation/RESOURCE_PROFILE.json",
+    "reports/s02_preparation/RESTORE_POLICY.json",
+    "reports/s02_preparation/RESTORE_RECEIPT.json",
+    "reports/s02_preparation/TEST_HISTORY.json",
+    "reports/s02_preparation/TEST_RESULTS.json",
+    "reports/s02_preparation/independent_review.json",
+    "reports/s02_preparation/independent_review_substantive.json",
+    "src/mosei/s02/__init__.py",
+    "src/mosei/s02/authorization.py",
+    "src/mosei/s02/common.py",
+    "src/mosei/s02/engine.py",
+    "src/mosei/s02/evaluation.py",
+    "src/mosei/s02/execution.py",
+    "src/mosei/s02/models.py",
+    "src/mosei/s02/selection.py",
+    "state/LATEST_RESEARCH.json",
+    "tests/test_s02_cuda_synthetic.py",
+    "tests/test_s02_execution.py",
+    "tests/test_s02_finalization.py",
+    "tests/test_s02_models.py",
+    "tests/test_s02_supervisor.py",
+    "tools/s02_backup_restore_reference.py",
+    "tools/s02_publication_check.py",
+    "tools/s02_run.py",
+    "tools/s02_supervise.py",
+    "tools/s02_synthetic_profile.py"
+  ],
+  "files": [
+    {
+      "path": "DECISIONS.md",
+      "size": 13879,
+      "sha256": "940b7312b22f17c6506c60be123f43170651d3e5d3cc7af0f34ba280e84047d9"
+    },
+    {
+      "path": "TASK_SPEC.md",
+      "size": 6086,
+      "sha256": "92e46fba2876ed1c41fa4065c4d0276083b65500df01ebd7bc98ff6c17961f4b"
+    },
+    {
+      "path": "configs/s02_execution.json",
+      "size": 2355,
+      "sha256": "68000338d6fd289b6af6bdfb3c151834d52e22a1203df53236ad9405f78a5deb"
+    },
+    {
+      "path": "docs/EXPERIMENT_REGISTER.json",
+      "size": 160932,
+      "sha256": "d488161b9f04d4833394fafe3423e192f8c8e6a1eaf395d17ee06ce678fbd6b1"
+    },
+    {
+      "path": "docs/PAPER_CLAIMS.md",
+      "size": 12908,
+      "sha256": "3442a3438251489bedfae66bec873ae6d3fb31d655f4053f844684c7e999c973"
+    },
+    {
+      "path": "docs/PROJECT_SUMMARY.md",
+      "size": 8150,
+      "sha256": "bf74b4f57021efb00e42aff28862ac3a93189d762ac46dd20db702c79cbe03ae"
+    },
+    {
+      "path": "docs/RESEARCH_LOG.md",
+      "size": 21327,
+      "sha256": "d737ef85a9d0b0ff48e5adaedcace683781899f44ead7b675e17b15ea7d62f21"
+    },
+    {
+      "path": "docs/S02_EXEC_AUTH_01.json",
+      "size": 604,
+      "sha256": "58b8c1fb86db253ce02eec1578ac6a9cabb18df7361246790144b9143fa95634"
+    },
+    {
+      "path": "docs/research/S02/CANDIDATES.json",
+      "size": 4850,
+      "sha256": "b2e26d4187222dbfc1242bd397f4cf3b3bc72b3b93faf61fb3a0cf8f62a695a7"
+    },
+    {
+      "path": "docs/research/S02/PROTOCOL.md",
+      "size": 9621,
+      "sha256": "77fa725aada08589c7f743d7dcd8be8db4d32cd4aa22217765fc10e1eb7b8ba4"
+    },
+    {
+      "path": "docs/research/S02/SOURCES.md",
+      "size": 6515,
+      "sha256": "0073367683b448bb66f7906fafd0be5f62da0e19e69c36c1341219d75319ba3f"
+    },
+    {
+      "path": "docs/research/S02/sources.json",
+      "size": 15519,
+      "sha256": "904f0e1593e97a92bed5a99e4c1ef89b6d9c2eefb41eac2d54c7672eb9ff533e"
+    },
+    {
+      "path": "reports/s02_preparation/ACTUAL_COMMANDS.json",
+      "size": 1594,
+      "sha256": "0f306cdbcde466d7522f988bd08276405d6cfa6ab5802653e54cb7fcfbcbad76"
+    },
+    {
+      "path": "reports/s02_preparation/AUTHORIZED_MANIFEST.json",
+      "size": 14305,
+      "sha256": "7d42a2d9282181375da4f7b099da9e61b2c099c02abe682682f8d7dced9e504d"
+    },
+    {
+      "path": "reports/s02_preparation/BACKUP_MANIFEST.json",
+      "size": 89999,
+      "sha256": "3ffb8cdca6f8146b2b2ce456812720aeeef4a3acf1b60720e47e63034d6dddd1"
+    },
+    {
+      "path": "reports/s02_preparation/BACKUP_RESTORE_INDEPENDENT_REVIEW.json",
+      "size": 6415,
+      "sha256": "ed12b7ea52132170d00e44d96dfe959ff926e31b93e1ff990530d0b9051131f5"
+    },
+    {
+      "path": "reports/s02_preparation/INDEPENDENT_FINALIZATION_PROBES.json",
+      "size": 2784,
+      "sha256": "676baaaa5e74c10df0f5d834d5acfb6c2fc793fc1a11521444e2fc8e42265c46"
+    },
+    {
+      "path": "reports/s02_preparation/INDEPENDENT_PRELIMINARY_REVIEW.json",
+      "size": 12084,
+      "sha256": "b8ed9b262a557fe513c26c718f99e9f3d223d026629fb1fd054da43d1db81a84"
+    },
+    {
+      "path": "reports/s02_preparation/RESOURCE_PROFILE.json",
+      "size": 1302,
+      "sha256": "e1d6f9ac3a062de1be840506d631dec017e30e6101adf89716288b8ada387009"
+    },
+    {
+      "path": "reports/s02_preparation/RESTORE_POLICY.json",
+      "size": 587,
+      "sha256": "73610f5d7a3774bac992c14964919560755337b8482275bc80ec261b9f758a3d"
+    },
+    {
+      "path": "reports/s02_preparation/RESTORE_RECEIPT.json",
+      "size": 51237,
+      "sha256": "d4dd9614fdfde6f0afd876b0f552e4077c36a598dfa770b8e03dd277bc5c1165"
+    },
+    {
+      "path": "reports/s02_preparation/TEST_HISTORY.json",
+      "size": 525,
+      "sha256": "ba6bf4688f2e4a192beaf8b9d5266ccc05d459fa3d31ef1cf6ab7c000a4b7f58"
+    },
+    {
+      "path": "reports/s02_preparation/TEST_RESULTS.json",
+      "size": 1903,
+      "sha256": "e106d89fb0a102998dd5191fbf5639db8155dae50058c51ec6285cabc6691044"
+    },
+    {
+      "path": "reports/s02_preparation/independent_review.json",
+      "size": 2795,
+      "sha256": "55a6656f87af9081aabd68319c763859b9493dfa23c147030e3e9e1e9244c6bd"
+    },
+    {
+      "path": "reports/s02_preparation/independent_review_substantive.json",
+      "size": 28904,
+      "sha256": "9eb52df7929e9751b9b00c4ebe49e0924684a355a9f7732d39113e36adada3be"
+    },
+    {
+      "path": "src/mosei/s02/__init__.py",
+      "size": 65,
+      "sha256": "fe671cf5ca1f850297e768e341b70ae0ef05e26aa20fcfc80c961c17b74d62c3"
+    },
+    {
+      "path": "src/mosei/s02/authorization.py",
+      "size": 7674,
+      "sha256": "9df8b3389f1b517d5a2686081903d57335208c1941a72f2c7bfaf0b09692051c"
+    },
+    {
+      "path": "src/mosei/s02/common.py",
+      "size": 2453,
+      "sha256": "88fc5f38abfb84da8a4ccbaa8c2a664f4ebdd40fe8191fe358a2effaed96ab59"
+    },
+    {
+      "path": "src/mosei/s02/engine.py",
+      "size": 8174,
+      "sha256": "0e050d7d7ca9bab84eeb26f6085e3cdb013367ae7439cff912a8fd8542369804"
+    },
+    {
+      "path": "src/mosei/s02/evaluation.py",
+      "size": 4977,
+      "sha256": "4d47f016ad48db82ecb3a158d7bd413d7877797218e3ee25c4dab1ed1c9cf912"
+    },
+    {
+      "path": "src/mosei/s02/execution.py",
+      "size": 14076,
+      "sha256": "79204bb002ee2c57a9593eb0e05076d0ed5dd4e5dc3842d356eccf4c1a01e08a"
+    },
+    {
+      "path": "src/mosei/s02/models.py",
+      "size": 10821,
+      "sha256": "b0cfb6915ed70da68b6ebab29af80c1c6e4a9822a2e3ee275564cda4707fcd23"
+    },
+    {
+      "path": "src/mosei/s02/selection.py",
+      "size": 7424,
+      "sha256": "e799e1563e1763300648364b25b66743d63c757f0ed618173e158938ebd34db4"
+    },
+    {
+      "path": "state/LATEST_RESEARCH.json",
+      "size": 12032,
+      "sha256": "dbb75ced8987d21b91de9b957d1a44d7557a09b2537a97919bb6db584d6082e3"
+    },
+    {
+      "path": "tests/test_s02_cuda_synthetic.py",
+      "size": 2622,
+      "sha256": "b4a0e463d0ab66e7b19bf964500f0f2c0f0edfd6bbb09d335a59f121739f2f91"
+    },
+    {
+      "path": "tests/test_s02_execution.py",
+      "size": 27031,
+      "sha256": "a5cd553affbefeef4daa3467d56d03e81647d4d33e6382f100849a658be8e4f5"
+    },
+    {
+      "path": "tests/test_s02_finalization.py",
+      "size": 6848,
+      "sha256": "f9158415c7b80ba9ca036324184ce7af1a58e0e80a302a13e03da9bc6959b17d"
+    },
+    {
+      "path": "tests/test_s02_models.py",
+      "size": 12647,
+      "sha256": "99d16afc9c5a3a303b4bcc65a761c2f78258d944ad838b50f3f4effbc46a7fc0"
+    },
+    {
+      "path": "tests/test_s02_supervisor.py",
+      "size": 2191,
+      "sha256": "f2a1e90ba7ad41feb4205aedd5c7da98b6c9d5a053c45ac91c69084ed7fe4683"
+    },
+    {
+      "path": "tools/s02_backup_restore_reference.py",
+      "size": 9663,
+      "sha256": "2397ef46a630231efde05dd113258e085bdb1fb7e671e9ce92e51c1733ce3cc9"
+    },
+    {
+      "path": "tools/s02_publication_check.py",
+      "size": 5541,
+      "sha256": "2737269b3561a7be3fb30a4bc213e0da311536f780dd437a62c1de68a16346f2"
+    },
+    {
+      "path": "tools/s02_run.py",
+      "size": 827,
+      "sha256": "72a9862227c656ebd556e5cfe33b8810fb46525499e5b10c5bee7c87ba03adea"
+    },
+    {
+      "path": "tools/s02_supervise.py",
+      "size": 2618,
+      "sha256": "1b94bf22c3b7bda0b5e58a004efe7d401f847c7bd9854f7f89776a83d94594ac"
+    },
+    {
+      "path": "tools/s02_synthetic_profile.py",
+      "size": 3443,
+      "sha256": "1f0ed03602f7d6e532a93791e8ae01a9323f239dc5c3048f7d4809335d14b046"
+    }
+  ],
+  "hash_exclusions": [
+    "reports/s02_preparation/PUBLICATION_MANIFEST.json"
+  ]
+}

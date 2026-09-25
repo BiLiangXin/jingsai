@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "full_repository_tests": 366,
+  "subtests": 68,
+  "exit_code": 0,
+  "seconds": 52.07,
+  "official_model_experiments": false,
+  "synthetic_one_epoch_roundtrips": [
+    "M1",
+    "M2",
+    "M3",
+    "M4"
+  ],
+  "source_update_after_full_suite": "Only added component provenance receipt; S02 targeted regression rerun recorded separately before binding",
+  "history": "TEST_HISTORY.json",
+  "commands": "ACTUAL_COMMANDS.json",
+  "targeted_final": {
+    "passed": 44,
+    "subtests_passed": 43,
+    "exit_code": 0,
+    "seconds": 15.44,
+    "command": "python -B -X utf8 -m pytest -q -p no:cacheprovider --basetemp <private-preparation>/pytest_temp_02 tests/test_s02_models.py tests/test_s02_execution.py tests/test_s02_cuda_synthetic.py",
+    "log_sha256": "505bdb04d42282ad6f36582546fce5e657790e082aec67b8b9a8d7827d230312"
+  },
+  "targeted_after_finalization_repair": {
+    "passed": 44,
+    "subtests_passed": 43,
+    "exit_code": 0,
+    "seconds": 15.86,
+    "command": "python -B -X utf8 -m pytest -q -p no:cacheprovider --basetemp <private-preparation>/pytest_temp_03 tests/test_s02_models.py tests/test_s02_execution.py tests/test_s02_cuda_synthetic.py",
+    "log_sha256": "cd31dc283660b9ae2c1c53410ff11e85a1f49da7f0c0dfec672b6413a2929545"
+  },
+  "independent_finalization_probes": "INDEPENDENT_FINALIZATION_PROBES.json",
+  "permanent_finalization_regression": {
+    "passed": 1,
+    "exit_code": 0,
+    "seconds": 0.16,
+    "command": "python -B -X utf8 -m pytest -q -p no:cacheprovider --basetemp <private-preparation>/pytest_temp_finalization tests/test_s02_finalization.py"
+  },
+  "supervisor_regressions": {
+    "passed": 3,
+    "exit_code": 0,
+    "seconds": 0.06,
+    "command": "python -B -X utf8 -m pytest -q -p no:cacheprovider --basetemp <private-preparation>/pytest_temp_supervisor tests/test_s02_supervisor.py"
+  }
+}

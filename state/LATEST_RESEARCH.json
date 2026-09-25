@@ -285,5 +285,18 @@
     }
   ],
   "git_publication_snapshot_phase": "RESULTS_PAYLOAD_BEFORE_COMMIT",
-  "git_publication_verification": "Final commit and remote-HEAD receipt is outside Git to avoid self-reference; verify current branch history and final task response."
+  "git_publication_verification": "Final commit and remote-HEAD receipt is outside Git to avoid self-reference; verify current branch history and final task response.",
+  "s02_current": {
+    "task_id": "S02_CHAMPION_CHALLENGER_IMPROVEMENT",
+    "status": "READY_FOR_REVIEWED_PREAUTHORIZED_EXECUTION",
+    "campaign_id": "S02-20260925-BOUNDED-12F15W",
+    "training_authorized": true,
+    "official_experiments": "NOT_RUN",
+    "metrics": null,
+    "protocol": "docs/research/S02/PROTOCOL.md",
+    "config": "configs/s02_execution.json",
+    "baseline_immutable": true,
+    "attachment3_mask_availability": "UNKNOWN"
+  },
+  "current_task_id": "S02_CHAMPION_CHALLENGER_IMPROVEMENT"
 }

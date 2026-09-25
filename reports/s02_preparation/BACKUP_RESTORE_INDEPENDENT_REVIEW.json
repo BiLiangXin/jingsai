@@ -1,0 +1,139 @@
+{
+  "stage": "S02_BACKUP_RESTORE_INDEPENDENT_COMPANION",
+  "status": "TECHNICAL_PASS_FOR_COMPLETED_BASELINE_BACKUP_AND_RESTORE",
+  "recorded_at_utc": "2026-09-25T02:01:33.371344+00:00",
+  "blocking_critical": 0,
+  "blocking_major": 0,
+  "not_s02_execution_approval": true,
+  "scope": "Independent static implementation review, hash/size/provenance recomputation and inspection of completed producer evidence; reviewer did not load official data/checkpoint tensors or execute inference.",
+  "backup": {
+    "listed_files": 469,
+    "campaign_files": 156,
+    "repository_files": 313,
+    "bytes": 46818007,
+    "independent_copy_identity_checked": true,
+    "all_listed_backup_hashes_rechecked_after_restore": true,
+    "all60_checkpoint_hashes_match_previously_verified_safe_FITS": true,
+    "auxiliary_git_archives": "Two supplementary archives hashes/sizes captured in metadata_checks.json; outside original469-file manifest."
+  },
+  "restore": {
+    "producer_status": "PASS",
+    "restored_best_models": 30,
+    "loaded_checkpoint_states": 60,
+    "valid_count": 728,
+    "historical_clean_max_abs_difference_reported": 0.0,
+    "historical_all96_144_reports_match_at_absolute_tolerance": 1e-07,
+    "full_condition_max_numeric_difference_not_recorded": true,
+    "classification_confusion_and_pairing_exact": true,
+    "normalizers_equal": true,
+    "actual_comparator": "torch.equal",
+    "original_vs_backup_exact_tensor_values_equal": true,
+    "raw_tensor_byte_identity_tested": false,
+    "historical_per_row_predictions_existed": false,
+    "new_restore_arrays_are_historical_saved_predictions": false,
+    "legacy_field_correction": "Original restore_receipt.json preserves original_backup_predictions_bitwise_equal=true unchanged. Its actual meaning is exact tensor-value equality under torch.equal; it is not a dtype/raw-byte/signed-zero bit-pattern comparison. Checkpoint files themselves were independently SHA256-identical.",
+    "state_limit": "Loading60 checkpoint payloads/strict model state plus optimizer-state existence and selector trace validation is not a resumed optimizer/RNG training test.",
+    "source_test_objects_deserialized_by_monolithic_pickle": true,
+    "test_arrays_accessed_or_evaluated_by_producer": false,
+    "official_training_performed": false
+  },
+  "runtime_evidence": {
+    "training_or_restore_process_exit_code_reported_by_parent": 0,
+    "supervisor_exit_code_reported_by_parent": 0,
+    "exit_code_basis": "Parent reported actual restore shellsession exit0 and supervisor exit0; reviewer inspected final log/receipt/supervisor finish evidence, did not supervise that shell session.",
+    "supervisor_finished": "2026-09-25T01:58:57.479030+00:00",
+    "guard_limit": "Auxiliary2-second watchdog plus OS termination latency, not exact OS hard-time guarantee."
+  },
+  "source_binding": {
+    "independent_during_restore_snapshot": "PASS",
+    "independent_after_restore_snapshot": "PASS",
+    "files": 20,
+    "all_equal_current_backup_baseline_and_executed_git": true,
+    "baseline_commit": "95342eb58bf0494bcc90934f76958b71becb8687",
+    "executed_commit": "98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7",
+    "limitation": "Snapshots are observed during/after restore, not retroactively labelled an in-memory/preflight attestation. Parent confirms solewriter changed onlynewS02namespace."
+  },
+  "actual_independent_commands": [
+    {
+      "command_with_private_path_substitution": "<PYTHON> -B -X utf8 <EXTERNAL_REVIEW>/check_s01_source_snapshots.py --phase after_restore",
+      "exit_code": 0
+    },
+    {
+      "command_with_private_path_substitution": "<PYTHON> -B -X utf8 -",
+      "stdin_action": "Validate final30 uniquePASS rows, final30logevents/endmarker, all469 backup SHA256/size again and PASS20source aftersnapshot; write newcompanion only.",
+      "exit_code": 0
+    }
+  ],
+  "private_path_substitution": {
+    "<PYTHON>": "Installed birdAL Python3.11.14",
+    "<EXTERNAL_REVIEW>": "External S02 backup_restore_review directory"
+  },
+  "evidence": [
+    {
+      "path": "backup_restore.py",
+      "sha256": "66d1bf33d881854a235946081d023cc30047ac6cf0dba091c767095c11474561",
+      "size": 9146
+    },
+    {
+      "path": "backup_public_manifest.json",
+      "sha256": "3ffb8cdca6f8146b2b2ce456812720aeeef4a3acf1b60720e47e63034d6dddd1",
+      "size": 89999
+    },
+    {
+      "path": "restore_policy.json",
+      "sha256": "73610f5d7a3774bac992c14964919560755337b8482275bc80ec261b9f758a3d",
+      "size": 587
+    },
+    {
+      "path": "restore_receipt.json",
+      "sha256": "d4dd9614fdfde6f0afd876b0f552e4077c36a598dfa770b8e03dd277bc5c1165",
+      "size": 51237
+    },
+    {
+      "path": "restore_execution.log",
+      "sha256": "6e6b5006e30d1ad5adc2368bfebda8ebd13e50ab317c8fa42a3f96119e9ac456",
+      "size": 2661
+    },
+    {
+      "path": "restore_supervisor.py",
+      "sha256": "08fb20e9abee122d5506206dd6010aa16fbef0f1df0b033908bb574de31f7fa6",
+      "size": 1062
+    },
+    {
+      "path": "restore_supervisor_started.json",
+      "sha256": "b650bad9f9074c5f6300308e67daa3dab2a3d3a427f801cc9366e0f4c5a0d8d0",
+      "size": 151
+    },
+    {
+      "path": "restore_supervisor_finished.json",
+      "sha256": "c232f4b907cd55fb1bd4ba400698c44933aa23881bd447f0f7f72cf8065e2b7f",
+      "size": 202
+    },
+    {
+      "path": "backup_restore_review/source_snapshot_during_restore.json",
+      "sha256": "00a5a996f1a5ba0c71245f64cccb16780de9765c814c91d17f1f4ee89af306a6",
+      "size": 15240
+    },
+    {
+      "path": "backup_restore_review/source_snapshot_after_restore.json",
+      "sha256": "e52d005279db9fe820824618e13fb90e654bbb6a562dc1fcdcf369860b3fa5ff",
+      "size": 15238
+    },
+    {
+      "path": "backup_restore_review/metadata_checks.json",
+      "sha256": "0c8bc82b4b48e1354a0f7040ac6dd0c4a9c0aefc5f9557eac6c3aa628eef68c9",
+      "size": 760
+    },
+    {
+      "path": "backup_restore_review/review_initial.json",
+      "sha256": "da09430f57fd3cc041ab144f7cff93ad2e40eacc06c3e656b71698d8fb6d15f0",
+      "size": 7642
+    }
+  ],
+  "official_repo_modified_by_reviewer": false,
+  "original_receipts_modified": false,
+  "official_datasets_read_by_reviewer": false,
+  "checkpoint_tensors_read_by_reviewer": false,
+  "gpu_used_by_reviewer": false,
+  "new_experiments_performed_by_reviewer": false
+}
