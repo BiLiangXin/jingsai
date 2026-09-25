@@ -1,0 +1,13 @@
+{
+  "status": "FAILED_BEFORE_SPECIAL_CONTENT_OPEN",
+  "original_commit": "673f0948f81a41a194d4918e6daf1bfb1d24b203",
+  "failure_sha256": "91ed6bd388592b4f77ffaaa18c626604f7a5f942e2e48adba596365b23d147b4",
+  "claim_receipt_sha256": "495dd9774905641f1fb4e89b29457bf6b9ccc96a7990e0f77b3e52824fb6e681",
+  "failure": "English-only path classifier omitted preexisting Chinese convention",
+  "source_evidence": "tools/s00b_audit.py:attachment_file_inventory",
+  "special_content_opened": false,
+  "predictions_generated": 0,
+  "original_claim_preserved": true,
+  "recovery": "PENDING_NEW_REVIEW_AND_COMMIT",
+  "further_recovery_budget": 1
+}

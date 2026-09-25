@@ -32,8 +32,9 @@ def select_aligned_files(folder):
     for p in paths:
         require(not p.is_symlink() and p.resolve().is_relative_to(folder.resolve()),'Redirected source path')
         name=p.relative_to(folder).as_posix().lower()
-        if re.search(r'(?<![a-z])unaligned(?![a-z])',name):excluded.append(p)
-        elif re.search(r'(?<![a-z])aligned(?![a-z])',name):chosen.append(p)
+        # Reuse the Chinese/English convention already present in the S00B inventory.
+        if '未对齐' in name or re.search(r'(?<![a-z])unaligned(?![a-z])',name):excluded.append(p)
+        elif '对齐' in name or re.search(r'(?<![a-z])aligned(?![a-z])',name):chosen.append(p)
         else:raise ValueError('Feature version not identifiable from existing filename/directory convention')
     require(len(chosen)==30 and len(excluded)==30,'Existing aligned30/unaligned30 inventory changed')
     return chosen
@@ -45,6 +46,24 @@ def claim_once(output):
     with path.open('x',encoding='utf-8') as f:
         json.dump(dict(task=CONFIG['attachment3_claim_id'],time=datetime.datetime.now(datetime.timezone.utc).isoformat()),f);f.flush();os.fsync(f.fileno())
     return path
+
+def recover_precontent_once(output,head):
+    """Append one audited recovery event, never delete/reset the original claim."""
+    require(hashlib.sha256(str(output.resolve()).encode()).hexdigest()==CONFIG['attachment3_output_binding_sha256'],'Unbound recovery output')
+    rule=CONFIG['precontent_recovery_01'];require(rule['max_recoveries']==1,'Invalid recovery budget')
+    require({p.name for p in output.iterdir()}=={'ATTACHMENT3_CLAIM.json','FAILURE_PRIVATE.json'},'Any content/progress/additional output blocks recovery')
+    old=output/'ATTACHMENT3_CLAIM.json';failure=output/'FAILURE_PRIVATE.json'
+    require(sha(old)==rule['original_claim_receipt_sha256'] and sha(failure)==rule['original_failure_sha256'],'Prior failure proof changed')
+    receipt=json.loads(old.read_bytes());error=json.loads(failure.read_bytes())
+    require(receipt['commit']==rule['original_commit'],'Prior commit mismatch')
+    require(error=={'status':'BLOCKED','error_type':'ValueError','error':'Feature version not identifiable from existing filename/directory convention'},'Not the proven precontent path failure')
+    claims=Path.home()/'.codex'/'mosei_execution_claims';original=claims/(CONFIG['attachment3_claim_id']+'.json')
+    require(sha(original)==rule['original_global_claim_sha256']==receipt['claim_sha256'],'Original task claim changed')
+    event=claims/(CONFIG['attachment3_claim_id']+'.RECOVERY01.json')
+    record=dict(status='APPENDED_PRECONTENT_RECOVERY_ONLY',original_claim_sha256=sha(original),prior_failure_sha256=sha(failure),prior_commit=receipt['commit'],execution_commit=head,time=datetime.datetime.now(datetime.timezone.utc).isoformat(),no_more_recoveries=True)
+    with event.open('x',encoding='utf-8') as f:json.dump(record,f);f.flush();os.fsync(f.fileno())
+    save(output/'RECOVERY01.json',record)
+    return event
 
 def validate_special(item):
     require(isinstance(item,dict),'Feature dictionary required')
@@ -105,17 +124,21 @@ def preflight():
     return gate,head
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--source-dir',required=True);p.add_argument('--campaign',required=True);p.add_argument('--output',required=True);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--source-dir',required=True);p.add_argument('--campaign',required=True);p.add_argument('--output',required=True);p.add_argument('--recover-precontent-path-failure',action='store_true');a=p.parse_args()
     configure_runtime();gate,head=preflight();out=Path(a.output);out.mkdir(parents=True,exist_ok=True)
     # Restore and bind every predictor dependency BEFORE any special content is opened.
     campaign=Path(a.campaign);require(sha(campaign/'M2-s17/best.pt')==CHECKPOINT,'Fixed checkpoint mismatch')
     model,norm,ck=restore(campaign,17);before=state_digest(model)
     require(digest(ck['normalizer'])==SCALER,'Fixed scaler mismatch')
-    claim=claim_once(out)
-    save(out/'ATTACHMENT3_CLAIM.json',dict(commit=head,gate_sha256=sha(ROOT/'reports/s03_readiness/Q2_GATE.json'),claim_sha256=sha(claim)))
+    if a.recover_precontent_path_failure:claim=recover_precontent_once(out,head)
+    else:
+        claim=claim_once(out)
+        save(out/'ATTACHMENT3_CLAIM.json',dict(commit=head,gate_sha256=sha(ROOT/'reports/s03_readiness/Q2_GATE.json'),claim_sha256=sha(claim)))
     try:
         folder=Path(a.source_dir);require(folder.name=='附件3-模态缺失特征样本','Wrong special source')
         files=select_aligned_files(folder);rows=[];source_manifest=[];count=0
+        # Persist before any source-content hash/read, so later recovery is impossible.
+        with (out/'CONTENT_OPENED.json').open('x',encoding='utf-8') as f:json.dump(dict(commit=head,about_to_read_content=True,aligned_files=30),f)
         for source in files:
             guard();source_hash=sha(source);rel=source.relative_to(folder).as_posix()
             with source.open('rb') as f:item=pickle.load(f)
@@ -138,5 +161,6 @@ def main():
         report=dict(status='COMPLETED',commit=head,profile=gate['profile'],aligned_files=30,unaligned_files_not_read=30,rows=len(rows),source_manifest_sha256=sha(out/'SOURCE_MANIFEST_PRIVATE.json'),output_sha256=sha(dest),checkpoint_sha256=sha(campaign/'M2-s17/best.pt'),schema_checks='PASS',metrics=None,model_unchanged=True,attachment4_opened=False)
         save(out/'RESULT.json',report);save(ROOT/'reports/s03_readiness/ATTACHMENT3_RESULT.json',report);print(json.dumps(report))
     except Exception as e:
-        save(out/'FAILURE_PRIVATE.json',dict(status='BLOCKED',error_type=type(e).__name__,error=str(e)));raise
+        failure_name='FAILURE_RECOVERY01_PRIVATE.json' if a.recover_precontent_path_failure else 'FAILURE_PRIVATE.json'
+        save(out/failure_name,dict(status='BLOCKED',error_type=type(e).__name__,error=str(e)));raise
 if __name__=='__main__':main()

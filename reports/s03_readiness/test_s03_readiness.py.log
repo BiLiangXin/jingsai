@@ -9,6 +9,6 @@ test_windows_preserve_inactive_and_masks (test_s03_readiness.ReadinessTests.test
 test_zero_effect (test_s03_readiness.ReadinessTests.test_zero_effect) ... ok
 
 ----------------------------------------------------------------------
-Ran 9 tests in 0.083s
+Ran 9 tests in 0.086s
 
 OK

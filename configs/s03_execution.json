@@ -30,6 +30,14 @@
   "attachment3_unaligned_files_not_read": 30,
   "attachment3_output_binding_sha256": "5769f5ff5662256fb4adc36316e663485651801f936c61d7ace16b91d9c5320f",
   "attachment3_claim_id": "S03-EXEC-01-ATTACHMENT3",
+  "precontent_recovery_01": {
+    "scope": "ONLY_PROVEN_VERSION_PATH_FAILURE_BEFORE_ANY_SPECIAL_CONTENT_OPEN",
+    "original_commit": "673f0948f81a41a194d4918e6daf1bfb1d24b203",
+    "original_claim_receipt_sha256": "495dd9774905641f1fb4e89b29457bf6b9ccc96a7990e0f77b3e52824fb6e681",
+    "original_failure_sha256": "91ed6bd388592b4f77ffaaa18c626604f7a5f942e2e48adba596365b23d147b4",
+    "original_global_claim_sha256": "730899748e11dfc27ad6f18d23a9817c2889ee207836dbb7da33f3286b058e87",
+    "max_recoveries": 1
+  },
   "attachment4_gate": "REQUIRED_BEFORE_FIRST_OPEN",
   "release_authorized": false
 }

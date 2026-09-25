@@ -1,7 +1,9 @@
 test_aligned_only_inventory (test_s04_schema.SpecialSchemaTests.test_aligned_only_inventory) ... ok
+test_chinese_version_inventory (test_s04_schema.SpecialSchemaTests.test_chinese_version_inventory) ... ok
 test_duplicate_ids_rejected (test_s04_schema.SpecialSchemaTests.test_duplicate_ids_rejected) ... ok
 test_holes_and_nonfinite_rejected (test_s04_schema.SpecialSchemaTests.test_holes_and_nonfinite_rejected) ... ok
 test_no_labels_or_split (test_s04_schema.SpecialSchemaTests.test_no_labels_or_split) ... ok
+test_precontent_recovery_proof_and_once_only (test_s04_schema.SpecialSchemaTests.test_precontent_recovery_proof_and_once_only) ... ok
 test_review_set_and_digest_binding (test_s04_schema.SpecialSchemaTests.test_review_set_and_digest_binding) ... ok
 test_single_sample_dimensions (test_s04_schema.SpecialSchemaTests.test_single_sample_dimensions) ... ok
 test_task_claim_not_output_scoped (test_s04_schema.SpecialSchemaTests.test_task_claim_not_output_scoped) ... ok
@@ -10,6 +12,6 @@ test_unused_metadata_never_indexed (test_s04_schema.SpecialSchemaTests.test_unus
 test_wrapper_and_tuple_identity (test_s04_schema.SpecialSchemaTests.test_wrapper_and_tuple_identity) ... ok
 
 ----------------------------------------------------------------------
-Ran 10 tests in 0.138s
+Ran 12 tests in 0.233s
 
 OK

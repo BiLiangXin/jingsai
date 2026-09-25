@@ -3,7 +3,7 @@ from unittest.mock import patch
 from pathlib import Path
 import numpy as np
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'tools'))
-from s04_infer import validate_special,select_aligned_files,claim_once,verify_review_binding,CONFIG,ROOT,CHECKPOINT,SCALER
+from s04_infer import validate_special,select_aligned_files,claim_once,recover_precontent_once,verify_review_binding,CONFIG,ROOT,CHECKPOINT,SCALER,sha
 
 class SpecialSchemaTests(unittest.TestCase):
     def fixture(self):
@@ -41,6 +41,27 @@ class SpecialSchemaTests(unittest.TestCase):
             files=select_aligned_files(root);self.assertEqual(len(files),30);self.assertTrue(all(p.parent.name=='aligned' for p in files))
             (root/'unknown.pkl').write_bytes(b'')
             with self.assertRaises(ValueError):select_aligned_files(root)
+    def test_chinese_version_inventory(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            for kind in ['对齐','未对齐']:
+                (root/kind).mkdir()
+                for i in range(30):(root/kind/f'synthetic{i}.pkl').write_bytes(b'not a pickle')
+            files=select_aligned_files(root);self.assertEqual(len(files),30);self.assertTrue(all(p.parent.name=='对齐' for p in files))
+    def test_precontent_recovery_proof_and_once_only(self):
+        import json
+        with tempfile.TemporaryDirectory() as tmp:
+            home=Path(tmp);claims=home/'.codex/mosei_execution_claims';claims.mkdir(parents=True);out=home/'output';out.mkdir()
+            original=claims/'SYNTHETIC_RECOVERY.json';original.write_text('{}')
+            old=out/'ATTACHMENT3_CLAIM.json';old.write_text(json.dumps({'commit':'old','claim_sha256':sha(original)}))
+            failure=out/'FAILURE_PRIVATE.json';failure.write_text(json.dumps({'status':'BLOCKED','error_type':'ValueError','error':'Feature version not identifiable from existing filename/directory convention'}))
+            rule=dict(max_recoveries=1,original_claim_receipt_sha256=sha(old),original_failure_sha256=sha(failure),original_commit='old',original_global_claim_sha256=sha(original))
+            with patch('pathlib.Path.home',return_value=home),patch.dict(CONFIG,{'attachment3_output_binding_sha256':hashlib.sha256(str(out.resolve()).encode()).hexdigest(),'attachment3_claim_id':'SYNTHETIC_RECOVERY','precontent_recovery_01':rule}):
+                (out/'CONTENT_OPENED.json').write_text('{}')
+                with self.assertRaises(ValueError):recover_precontent_once(out,'new')
+                (out/'CONTENT_OPENED.json').unlink()  # Synthetic-only fixture cleanup.
+                event=recover_precontent_once(out,'new');self.assertTrue(event.exists());self.assertEqual(sha(original),rule['original_global_claim_sha256'])
+                with self.assertRaises(ValueError):recover_precontent_once(out,'new')
     def test_task_claim_not_output_scoped(self):
         with tempfile.TemporaryDirectory() as tmp:
             home=Path(tmp);(home/'.codex').mkdir();out=home/'result'

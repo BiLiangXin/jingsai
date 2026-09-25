@@ -1,6 +1,8 @@
 {
-  "status": "FINAL_PROTOCOL_REVIEW_INPUTS",
-  "base_commit": "673f0948f81a41a194d4918e6daf1bfb1d24b203",
+  "status": "PASS",
+  "independent": true,
+  "review_scope": "Narrow pre-content Chinese-path correction and exactly one appended recovery; technical review only",
+  "review_inputs_sha256": "98fc8b8596ce14c6ee53d34250c19c57869530e6218c0d7497bdba5b443d0f87",
   "critical_files": [
     {
       "path": "configs/s03_execution.json",
@@ -288,6 +290,64 @@
       "size": 13372
     }
   ],
-  "no_special_data_opened": true,
-  "new_fits": 0
+  "time_utc": "2026-09-25T05:44:18.465255+00:00",
+  "model_requested": "GPT-6 Astra",
+  "reasoning_effort_requested": "medium",
+  "model_setting_evidence": "User UI attestation and explicit task configuration; no runtime telemetry claimed",
+  "blocking_findings": [],
+  "prior_review_sha256": "cb0f0953377cd862ea2bdca35029a98cf9f4301e8be0e21dce163952a88fcf93",
+  "tests": [
+    {
+      "command": "PYTHONPATH=src C:\\softapp\\anaconda3\\envs\\birdAL\\python.exe -B -m unittest discover -s tests -p test_s03_readiness.py -v",
+      "exit_code": 0,
+      "tests": 9
+    },
+    {
+      "command": "PYTHONPATH=src C:\\softapp\\anaconda3\\envs\\birdAL\\python.exe -B -m unittest discover -s tests -p test_s04_schema.py -v",
+      "exit_code": 0,
+      "tests": 12
+    },
+    {
+      "command": "C:\\softapp\\anaconda3\\envs\\birdAL\\python.exe -B - [independent frozen hash/proof/AST checks via stdin]",
+      "exit_code": 0
+    }
+  ],
+  "verified": {
+    "critical_hash_and_size_count": 57,
+    "original_commit": "673f0948f81a41a194d4918e6daf1bfb1d24b203",
+    "original_claim_receipt_sha256": "495dd9774905641f1fb4e89b29457bf6b9ccc96a7990e0f77b3e52824fb6e681",
+    "original_failure_sha256": "91ed6bd388592b4f77ffaaa18c626604f7a5f942e2e48adba596365b23d147b4",
+    "original_global_claim_sha256": "730899748e11dfc27ad6f18d23a9817c2889ee207836dbb7da33f3286b058e87",
+    "original_output_contains_only_two_receipts": true,
+    "recovery_not_yet_claimed": true,
+    "original_failure_before_source_hash_open_and_pickle": true,
+    "new_content_marker_before_source_bytes": true,
+    "field_schema_ast_unchanged": true,
+    "preflight_ast_unchanged": true,
+    "configuration_unchanged_except_exact_recovery_rule": true,
+    "original_claim_not_written_by_reviewer": true
+  },
+  "recovery_assessment": [
+    "Chinese version tokens existed in S00B source before special access; unaligned exclusion takes priority.",
+    "Recovery checks exact original output path, two file set, failure/claim/globalclaim bytes, old commit and original failure message.",
+    "Exclusive task-level RECOVERY01 event is appended, never deleting/reissuing original claim. Additional output or existing event rejects replay, including a crash between event and private record.",
+    "Content marker precedes any selected source hash/read; post-content or progress evidence rejects recovery. Any recovery failure has a separate receipt and there is no second recovery path.",
+    "Changed code/config requires this new independent binding plus committed gate/manifest/review and fresh runtime deadline/remote checks before continuation."
+  ],
+  "limitations": [
+    "Technical PASS does not claim final special schema compatibility or completed inference.",
+    "Filesystem receipts rely on an uncompromised local host; not cryptographic proof of absence of all external reads. Given the recorded exception and committed code, this program stopped before its first source-content access.",
+    "Q3 source mapping remains UNVERIFIED and Attachment4 BLOCKED. Q1 human timing validation remains0/100.",
+    "No model, profile, scaler, field schema, selection threshold or compute deadline change is authorized by this review.",
+    "Review performs no claim recovery, no source content read and no model computation."
+  ],
+  "boundaries": {
+    "original_pkl_opened": false,
+    "test_opened": false,
+    "attachment3_4_opened": false,
+    "model_executed": false,
+    "new_fits": 0,
+    "official_tree_written": false,
+    "original_claim_modified": false
+  }
 }

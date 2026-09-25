@@ -1,47 +1,22 @@
 {
-  "time": "2026-09-25T05:27:26.443673+00:00",
   "python": "3.11.14",
+  "time": "2026-09-25T05:42:34.037857+00:00",
+  "command": "PYTHON -B -X utf8 -m unittest discover -s tests -p PATTERN -v",
   "environment": {
     "PYTHONPATH": "REPO/src",
     "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
   },
-  "initial_attempt": "First captured S03 discovery omitted PYTHONPATH and failed import; private log retained. Corrected environment, tests not weakened.",
   "runs": [
     {
-      "command": [
-        "PYTHON",
-        "-B",
-        "-X",
-        "utf8",
-        "-m",
-        "unittest",
-        "discover",
-        "-s",
-        "tests",
-        "-p",
-        "test_s03_readiness.py",
-        "-v"
-      ],
+      "pattern": "test_s03_readiness.py",
       "exit_code": 0,
-      "log_sha256": "4615819c017a49360ac33e4ee6e7d21d4cef133ba2e31d2c997bb8880692751f"
+      "log_sha256": "14f117c75ba61c25f7106557ed4ace3f6c4a4394ec5ce597281831d60261d771"
     },
     {
-      "command": [
-        "PYTHON",
-        "-B",
-        "-X",
-        "utf8",
-        "-m",
-        "unittest",
-        "discover",
-        "-s",
-        "tests",
-        "-p",
-        "test_s04_schema.py",
-        "-v"
-      ],
+      "pattern": "test_s04_schema.py",
       "exit_code": 0,
-      "log_sha256": "5c788a2d56d4f1055cf5e3d4e9cf835cad605a2a3411e26db05e64f4ff212313"
+      "log_sha256": "fdf35b25345e1028ebe959c4dddb8132543f0e647968d17b79ec7a856cf42f60"
     }
-  ]
+  ],
+  "initial_import_failure_preserved_privately": true
 }
