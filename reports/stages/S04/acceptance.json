@@ -1,0 +1,69 @@
+{
+  "stage": "S04",
+  "status": "PARTIAL",
+  "data_kind": "official",
+  "passed": false,
+  "evidence": [
+    {
+      "requirement": "Attachment3 structural stop",
+      "path": "reports/s04_io/A3_SCHEMA.json",
+      "sha256": "0a31f5ef9febb00e14f6f325ab8ee2c9af59ce911c32934b945ee5a5d1823174"
+    },
+    {
+      "requirement": "Attachment4 structural and mapping audit",
+      "path": "reports/s04_io/A4_SCHEMA.json",
+      "sha256": "7b8f38bbda992fa00b73ad8758688cecb94e8d3d6652dc4d0ba6358698864a01"
+    },
+    {
+      "requirement": "Fixed model and scaler",
+      "path": "reports/s04_io/MODEL_BINDING.json",
+      "sha256": "7189ec617d8e4e53f094f33ba1cf111640c94d1bd67daefbafe7da700a853f38"
+    },
+    {
+      "requirement": "Synthetic tests",
+      "path": "reports/s04_io/TESTS.json",
+      "sha256": "31f2678c2ed722f18d36f79881d68e9462f973f6a19ae04cfc601d661d60c468"
+    },
+    {
+      "requirement": "Independent preinference review",
+      "path": "reports/s04_io/INDEPENDENT_REVIEW.json",
+      "sha256": "0afe96b10fcaa3d793640993490c25344348e2bd0df04ef93e87ed9f000fee28"
+    },
+    {
+      "requirement": "Committed Gate A",
+      "path": "reports/s04_io/GATE_A.json",
+      "sha256": "e0f56850a8af7c7cd55f6fb23d8cd3c2005cdd4d772c4676a21e13b1ec7a1a95"
+    },
+    {
+      "requirement": "Private A4 partial aggregate receipt",
+      "path": "reports/s04_io/A4_RESULT.json",
+      "sha256": "f850131e338ac97a8637f7475ffc186f7fdeb5714b5ab9bad217902e50ea49d8"
+    },
+    {
+      "requirement": "Runnable partial bundle integrity",
+      "path": "reports/s04_io/BUNDLE_CHECK.json",
+      "sha256": "2909ec1d5bdc56f88a3cbb09b5ee8b571337c69f9fe1baed902164c217da19d3"
+    },
+    {
+      "requirement": "Minimal paper correction",
+      "path": "reports/s04_io/PAPER_CHECK.json",
+      "sha256": "1e903ab574032384c7e53008d1ee318bca9e63df80a68c70ee5badcd78200086"
+    },
+    {
+      "requirement": "Q1 human review status",
+      "path": "reports/s04_io/Q1_REVIEW_STATUS.json",
+      "sha256": "92cbba05adff5898fc0819b609ccb20b19e2cbea7b6ac0227fd8ff833a80089a"
+    },
+    {
+      "requirement": "S04 terminal state",
+      "path": "reports/s04_io/FINAL_STATUS.json",
+      "sha256": "27c6c6f0f17cb9b9afed5db5b3230852d1d7398fb04c960ccace8a7ef5285c15"
+    }
+  ],
+  "blockers": [
+    "ATTACHMENT3_CONTINUOUS_TEXT_OFFICIAL_SCHEMA_CLARIFICATION",
+    "ATTACHMENT4_FEATURE_TO_SOURCE_MAPPING",
+    "Q1_HUMAN_WORD_BOUNDARY_REVIEW",
+    "TEAM_PAPER_REVIEW_AND_MANDATORY_DELIVERABLES"
+  ]
+}

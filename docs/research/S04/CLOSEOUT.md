@@ -1,0 +1,23 @@
+# S04-IO-RECOVERY-01 closeout — 2026-09-25
+
+**PARTIAL, authority consumed.** The frozen M2 seed17 epoch2 checkpoint and TRAIN scaler were rehashed and matched the inference export tensor by tensor; no fit, optimizer, seed, epoch, threshold or profile changed. The user attested GPT-6 Sol / high in the task UI; that is not runtime model telemetry. The original S03 failure and one-shot claim remain historical and untouched.
+
+## Attachment 3
+
+The previous reader had already removed the sole `test` serialization wrapper. Its `KeyError: text` reflected a missing required field, not that wrapper. A bounded structure-only read of all 30 official aligned PKLs found `audio`, `vision`, and `text_bert`, but no continuous `text` (50×768) in any aligned object. The stored `text_bert` is a 3×50 float32 field of unestablished content semantics, so it cannot replace continuous text or establish a legal predictor/support contract. The 30 unaligned versions were not opened for this investigation. No feature values, sample text, IDs, labels, zero rates or predicted distributions were printed or published. Result: `REQUIRES_OFFICIAL_SCHEMA_CLARIFICATION`; zero predictions and no Attachment3 CSV. Exact questions for the organizer are in [OFFICIAL_QUESTIONS.md](OFFICIAL_QUESTIONS.md).
+
+## Attachment 4
+
+The bounded structure audit deserialized the 20 aligned and 20 unaligned official PKLs, checking keys, dimensions and support without printing sample content. Each aligned record has continuous text/audio/vision dimensions 50×768/74/35, an integer 3×50 `text_bert` support container, and a nonempty binary contiguous support prefix. The companion video inventory has matching stems, but no official per-index token/segment/frame/audio-time mapping was found. A filename match alone cannot justify timestamps.
+
+The Gate A code, seven synthetic tests, original/export model binding, source inventory, and 22-file SHA256 manifest received an independent read-only Sol/high technical review. The reviewed 19-file publication passed the tracked/index/worktree safety scan and normal Git push at commit `02df48a4ac3f6da244520e42b924e4c4f925eef5`; local and remote HEAD matched and the worktree was clean before the new claim. The one-shot run then read only the 20 aligned files, verified their source hashes, produced 20 unique private rows, and left model parameters/buffers unchanged. Independent CSV readback matched the complete aligned source set, finite prediction/contribution fields, disjoint feature windows, and null timestamps. Public receipt: `reports/s04_io/A4_RESULT.json`; private row data and claim remain outside Git. This is a **PARTIAL feature-space prediction/explanation**, not a complete Attachment4 result. Gate B is blocked by unverified source-time mapping. No special truth or metrics exist.
+
+## Q1, paper, and materials
+
+Q1 remains 100/100 extracted, 66 programmatically passing word-time checks, 34 unaligned (15 OOV, 13 no segment, 6 sequence mismatch), and **0/100 human-verified**. A private 100-row review sheet and existing playable case are ready for a teammate; no AI sign-off or fabricated word timing. Clip-only fallback retains its limited granularity.
+
+The paper draft was minimally corrected: M3 is M1 plus local corruption and **does not inherit M2 class weights**; M4 is M3 plus TRAIN same-seed classification distillation. The supervised loss and set-difference Shapley formula were checked against actual code and the revised PDF text. The revised Markdown, editable DOCX and six-page PDF are private; team/page review is still pending. The old incomplete S03 ZIP and original paper PDF remain unchanged.
+
+A new **partial draft**, not a contest-final ZIP, includes an inference-only export, all required source modules, a real `python -m mosei.s04.cli` entry, a synthetic NPZ generator, environment/arguments and a README. All 16 archive members passed SHA256/size/CRC/set/path checks. The declared synthetic command passed after unpacking into a new empty directory. No sample data, private paths, original PKL, credentials or weight file entered Git. Public aggregate receipt: `reports/s04_io/BUNDLE_CHECK.json`.
+
+Evidence levels: **VERIFIED** for the actual structure inventory, hashes, reviewed code snapshot, model equivalence, tests, Gate A run, private CSV validation and bundle check; **SPECIFIED** for the frozen M2/V1/Q3 target and S04 gate; **UNKNOWN** for Attachment3's missing continuous-text origin, true special labels/performance, reliable missingness mask and Attachment4 time mapping. Negative outcomes remain recorded. No test split, external sentiment training data/weights, Release or contest upload was used. New training fits: 0.

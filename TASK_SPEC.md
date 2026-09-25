@@ -1,10 +1,11 @@
 task_id: S04_IO_COMPATIBILITY_AND_DELIVERY_RECOVERY
-status: ACTIVE_AUTHORIZED
+status: CLOSED_PARTIAL_BLOCKED
 authorization: S04-IO-RECOVERY-01
 training_authorized: false
 new_fit_budget: 0
 test_authorized: false
-attachment3_4_authorized: CONDITIONAL_FROZEN_REVIEWED_COMMITTED
+attachment3_4_authorized: false
+authorization_status: CONSUMED
 protocol: docs/research/S04/PROTOCOL.md
 config: configs/s04_execution.json
 

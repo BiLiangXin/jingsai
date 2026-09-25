@@ -1,7 +1,7 @@
 {
   "task_id": "S04_IO_COMPATIBILITY_AND_DELIVERY_RECOVERY",
   "authority": "S04-IO-RECOVERY-01",
-  "status": "ACTIVE_AUTHORIZED",
+  "status": "CONSUMED",
   "model_setting": "USER_UI_ATTESTED_GPT6_SOL_HIGH",
   "source_commit": "0783cfc72058b9b7511095997f2815727d4b23b2",
   "task_started_beijing": "2026-09-25T14:59:03+08:00",
@@ -29,5 +29,6 @@
   "attachment4_structure_report_sha256": "91a62da076824404c208c05e9ead01d5318b1f8df6e7f8a12da9914f7d859fc4",
   "retry_training_budget": 0,
   "old_claims_reused": false,
-  "release_authorized": false
+  "release_authorized": false,
+  "authority_consumed_at_beijing": "2026-09-25T15:35:26+08:00"
 }

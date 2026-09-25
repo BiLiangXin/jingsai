@@ -1,0 +1,55 @@
+{
+  "task_id": "S04_IO_COMPATIBILITY_AND_DELIVERY_RECOVERY",
+  "authority": "S04-IO-RECOVERY-01",
+  "status": "CLOSED_PARTIAL_BLOCKED",
+  "model_setting": "USER_UI_ATTESTED_GPT6_SOL_HIGH",
+  "reviewed_execution_commit": "02df48a4ac3f6da244520e42b924e4c4f925eef5",
+  "new_training_fits": 0,
+  "champion": "M2-s17-epoch2",
+  "checkpoint_sha256": "f99426be8d90b8abf196faf9cf92a41c5ab607da661a7a91530f1fe481a0ceb9",
+  "checkpoint_unchanged": true,
+  "attachment3_failure_root_cause": "ALL_30_ALIGNED_OFFICIAL_PKLS_LACK_CONTINUOUS_TEXT_50x768",
+  "attachment3_schema": "REQUIRES_OFFICIAL_SCHEMA_CLARIFICATION",
+  "attachment3_csv": "NOT_GENERATED",
+  "attachment3_rows": null,
+  "attachment4_gate_a": "PASS",
+  "attachment4_gate_b": "BLOCKED",
+  "attachment4_mapping": "UNVERIFIED",
+  "attachment4_csv": "PARTIAL",
+  "attachment4_rows": 20,
+  "attachment4_private_csv_sha256": "6e4cfbb3407d5ccf62ad06aec3907277bf632e65a87ebbc20fa94d707ddb4187",
+  "special_metrics": null,
+  "q1_human_review": "0/100",
+  "paper_status": "DRAFT_REVISED_TEAM_REVIEW_PENDING",
+  "complete_submission": false,
+  "private_partial_bundle_sha256": "1640a68a65a976404d366dab1707b4e3df96dd6a7119f8a8f4b0da75e570c65e",
+  "remaining_blockers": [
+    "ATTACHMENT3_CONTINUOUS_TEXT_OFFICIAL_SCHEMA_CLARIFICATION",
+    "ATTACHMENT4_FEATURE_TO_SOURCE_MAPPING",
+    "Q1_HUMAN_WORD_BOUNDARY_REVIEW",
+    "TEAM_PAPER_REVIEW_AND_MANDATORY_DELIVERABLES"
+  ],
+  "s01_s02_s03_authority": "CONSUMED",
+  "s04_authority": "CONSUMED",
+  "test_used": false,
+  "release_created": false,
+  "contest_upload": false,
+  "evidence_levels": {
+    "verified": [
+      "A3_SCHEMA",
+      "A4_SCHEMA",
+      "MODEL_BINDING",
+      "TESTS",
+      "INDEPENDENT_REVIEW",
+      "A4_RESULT",
+      "BUNDLE_CHECK",
+      "PAPER_CHECK"
+    ],
+    "unknown": [
+      "A3_TEXT_ORIGIN",
+      "A3_RELIABLE_MASK",
+      "A4_TIME_MAPPING",
+      "SPECIAL_TRUTH_METRICS"
+    ]
+  }
+}

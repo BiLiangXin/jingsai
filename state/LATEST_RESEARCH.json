@@ -366,10 +366,10 @@
     "recorded_at": "2026-09-25T03:43:27.277254+00:00",
     "git_publication": "VERIFY_BY_POST_PUSH_RECEIPT"
   },
-  "current_task_id": "S03_Q1_Q3_AND_DEPLOYMENT_READINESS",
-  "current_stage_status": "S03_CLOSED_PARTIAL_BLOCKED",
+  "current_task_id": "S04_IO_COMPATIBILITY_AND_DELIVERY_RECOVERY",
+  "current_stage_status": "S04_CLOSED_PARTIAL_BLOCKED",
   "current_model_registry": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/MODEL_REGISTRY.json",
-  "historical_top_level_scope": "Existing S01 fields retained; s02_current historical completed training; s03_current is the current closed task.",
+  "historical_top_level_scope": "Existing S01 fields and completed s02_current/s03_current records retained as history; s04_current is the current closed task.",
   "s03_current": {
     "task_id": "S03_Q1_Q3_AND_DEPLOYMENT_READINESS",
     "status": "CLOSED_PARTIAL_BLOCKED",
@@ -396,6 +396,25 @@
     "result": "reports/s03_readiness/RESULT.json",
     "all_mandatory_deliverables_present": false,
     "retry_budget": 0,
+    "next_stage_authorized": false
+  },
+  "s04_current": {
+    "task_id": "S04_IO_COMPATIBILITY_AND_DELIVERY_RECOVERY",
+    "status": "CLOSED_PARTIAL_BLOCKED",
+    "authorization_status": "CONSUMED",
+    "training_authorized": false,
+    "new_training_fits": 0,
+    "champion": "M2-s17-epoch2",
+    "reviewed_execution_commit": "02df48a4ac3f6da244520e42b924e4c4f925eef5",
+    "attachment3_schema": "REQUIRES_OFFICIAL_SCHEMA_CLARIFICATION",
+    "attachment3_csv": "NOT_GENERATED",
+    "attachment4_csv": "PARTIAL",
+    "attachment4_rows": 20,
+    "attachment4_mapping": "UNVERIFIED",
+    "q1_human_verified": 0,
+    "paper_status": "DRAFT_REVISED_TEAM_REVIEW_PENDING",
+    "mandatory_deliverables_complete": false,
+    "result": "reports/s04_io/FINAL_STATUS.json",
     "next_stage_authorized": false
   }
 }

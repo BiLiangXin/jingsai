@@ -1,0 +1,13 @@
+{
+  "status": "PASS_PARTIAL_DRAFT_ONLY",
+  "zip_sha256": "1640a68a65a976404d366dab1707b4e3df96dd6a7119f8a8f4b0da75e570c65e",
+  "zip_size": 322436,
+  "member_count": 16,
+  "member_hash_size_crc_set_path_safety": "PASS",
+  "model_export_sha256": "e1de989a8b1f6918c164f668451378911ae344ac980630a6fc38ad10f4da107c",
+  "fresh_empty_directory_synthetic_command_exit_code": 0,
+  "standalone_entry": "python -m mosei.s04.cli",
+  "complete_anonymous_submission": false,
+  "attachment3_csv_included": false,
+  "attachment4_partial_csv_included": false
+}

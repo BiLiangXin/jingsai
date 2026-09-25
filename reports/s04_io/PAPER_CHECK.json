@@ -1,0 +1,14 @@
+{
+  "status": "DRAFT_REVISED_TEAM_REVIEW_PENDING",
+  "markdown_sha256": "73fe1f8e83712a3fea0299087a2297c3023c5895d37915304e348f6faa297e7e",
+  "docx_sha256": "a0edad31ae164a8232736b694c79eeafa6e4f054f75a1bee8c4d3bcf4466f2d5",
+  "pdf_sha256": "063bd469d134fee36b8128241eae740f60951e7369e776b77550b6608512ece6",
+  "pdf_pages": 6,
+  "m3_relation": "M1_PLUS_AUGMENTATION_NO_M2_CLASS_WEIGHTS",
+  "m4_relation": "M3_PLUS_TRAIN_TEACHER_KD_NO_M2_CLASS_WEIGHTS",
+  "loss_formula_code_checked": true,
+  "shapley_set_difference_rendered": true,
+  "q1_66_programmatic_not_human": true,
+  "human_alignment_verified": 0,
+  "complete_final_paper": false
+}

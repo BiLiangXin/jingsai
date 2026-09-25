@@ -1,0 +1,19 @@
+{
+  "status": "PARTIAL",
+  "gate_a": "PASS",
+  "gate_b": "BLOCKED_NO_VERIFIED_OFFICIAL_TIME_MAPPING",
+  "aligned_records": 20,
+  "unaligned_versions_not_opened_during_inference": 20,
+  "prior_structure_audit_deserialized_all_40_versions": true,
+  "source_video_stem_matches": 20,
+  "csv_sha256": "6e4cfbb3407d5ccf62ad06aec3907277bf632e65a87ebbc20fa94d707ddb4187",
+  "csv_rows": 20,
+  "checkpoint_sha256": "f99426be8d90b8abf196faf9cf92a41c5ab607da661a7a91530f1fe481a0ceb9",
+  "scaler_sha256": "83a95b4acd9254fdd20675832ca4d25ed9e5bd62f284e7ec48e3cc6cb996cf2e",
+  "model_state_unchanged": true,
+  "timestamps": "NULL",
+  "special_metrics": null,
+  "new_training_fits": 0,
+  "commit": "02df48a4ac3f6da244520e42b924e4c4f925eef5",
+  "claim_sha256": "31b4ae813f64331b409f2da15f7926c1f0671dfcafd8f93de1dd7e0f839dcbaf"
+}

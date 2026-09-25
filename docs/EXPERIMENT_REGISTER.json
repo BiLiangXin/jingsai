@@ -6507,5 +6507,32 @@
       "precontent A3 path failure",
       "postcontent A3 missing text field"
     ]
+  },
+  "s04_terminal_record": {
+    "task_id": "S04_IO_COMPATIBILITY_AND_DELIVERY_RECOVERY",
+    "kind": "deployment_io_and_feature_explanation",
+    "status": "PARTIAL_BLOCKED",
+    "new_training_fits": 0,
+    "model_experiment_metrics": null,
+    "special_metrics": null,
+    "checkpoint_sha256": "f99426be8d90b8abf196faf9cf92a41c5ab607da661a7a91530f1fe481a0ceb9",
+    "seed": 17,
+    "epoch": 2,
+    "profile": "V1",
+    "reviewed_execution_commit": "02df48a4ac3f6da244520e42b924e4c4f925eef5",
+    "attachment3": "NO_CSV_MISSING_CONTINUOUS_TEXT_ALL_30_ALIGNED",
+    "attachment4": "20_ROW_PRIVATE_PARTIAL_CSV_NO_TIMESTAMPS",
+    "attachment4_csv_sha256": "6e4cfbb3407d5ccf62ad06aec3907277bf632e65a87ebbc20fa94d707ddb4187",
+    "q1_human_verified": 0,
+    "independent_review": "reports/s04_io/INDEPENDENT_REVIEW.json",
+    "actual_test_command": "C:/softapp/anaconda3/envs/birdAL/python.exe -B -X utf8 -m unittest discover -s tests -p test_stage_s04_io.py -v",
+    "synthetic_tests_passed": 7,
+    "result": "reports/s04_io/FINAL_STATUS.json",
+    "negative_results": [
+      "A3_REQUIRED_TEXT_ABSENT",
+      "A4_FEATURE_TO_TIME_MAPPING_UNVERIFIED",
+      "Q1_HUMAN_ALIGNMENT_ZERO"
+    ],
+    "authorization_status": "CONSUMED"
   }
 }

@@ -54,3 +54,7 @@ Paper is a9-page anonymous DRAFT. Private incomplete archive has478 members,12.2
 Evidence levels: VERIFIED for actual saved checks/outputs and byte hashes; SPECIFIED for fixed protocols; HYPOTHESIS for external generalization; UNKNOWN for true special corruption masks, held-out TEST performance and official feature-to-time mapping. Same-VALID selection optimism and within-case top-window selection remain; no causal/significance claim. Monolithic aligned pickle materializes its container including TEST objects, but only allowlisted VALID fields were accessed for these calculations; no TEST metric, prediction or selection.
 
 Authorization is CONSUMED, new fits0, retries0, special execution false. S01/S02/data contracts and LATEST_RUN unchanged. No Release, upload, new training or automatic next stage. Next is owner paper revision and a separately scoped resolution of special schema/mapping; this task stops.
+
+## S04 terminal blockers — 2026-09-25
+
+Attachment3: all 30 aligned official PKLs lack continuous 50×768 text; REQUIRES_OFFICIAL_SCHEMA_CLARIFICATION; no CSV. Attachment4: 20-row private feature-space PARTIAL CSV exists, but official feature-to-source time correspondence is UNVERIFIED, so no complete mapped result. Q1: 0/100 human word-boundary checks; 34 UNALIGNED cases. Team paper/page review and mandatory contest files remain incomplete. No training or model performance claim was added.
