@@ -1,0 +1,30 @@
+{
+  "status": "VERIFIED_PROMOTED",
+  "current_champion": "M2",
+  "fixed_seed": 17,
+  "trial_id": "M2-s17",
+  "campaign_id": "S02-20260925-BOUNDED-12F15W",
+  "code_commit": "2b44b3d660493f3b20a78362cd4ec52bbe49714e",
+  "checkpoint_sha256": "f99426be8d90b8abf196faf9cf92a41c5ab607da661a7a91530f1fe481a0ceb9",
+  "last_checkpoint_sha256": "b9b62e7192a4f4ad64d096c3681b4396115dcac30be4f52d5047979b82feb239",
+  "fit_config_sha256": "b5072365e547b494641dac1bb358cec63670875f1505950c89029c2efc978ded",
+  "selected_epoch": 2,
+  "parameters": 77542,
+  "normalizer": "TRAIN_ONLY_ZSCORE_EMBEDDED_IN_PRIVATE_CHECKPOINT",
+  "artifact_locator": "PRIVATE_CAMPAIGN/M2-s17/best.pt",
+  "weights_public": false,
+  "restore_verified": true,
+  "restore_receipt": "validation/winner_restore.json",
+  "pointer_receipt": "validation/CURRENT_CHAMPION.json",
+  "fallback": {
+    "configuration": "S01-B-CAT-zscore",
+    "seed": 17,
+    "campaign_id": "S01-20260924T202319Z-30-1cf4769f",
+    "checkpoint_sha256": "f34dc27a35be1c149907852094ba9f69a759fb312e65fbc6e50981a41b24fee1",
+    "preserved": true
+  },
+  "inference_interface": "KNOWN_AVAILABILITY",
+  "attachment3_mask_availability": "UNKNOWN",
+  "test_authorized": false,
+  "attachment3_4_authorized": false
+}

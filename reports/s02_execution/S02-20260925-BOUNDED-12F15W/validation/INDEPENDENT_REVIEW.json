@@ -1,0 +1,663 @@
+{
+  "status": "TECHNICAL_PASS",
+  "blocking_critical": 0,
+  "blocking_major": 0,
+  "reviewer_complete": true,
+  "created_utc": "2026-09-25T03:50:46.464652+00:00",
+  "reviewed_snapshot": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/REVIEW_INPUTS.json",
+  "reviewed_snapshot_sha256": "0d8ce79d324242afafc74869b62d3b06b146f69cc6b3a5835d1e841f07913b42",
+  "reviewed_snapshot_members": 65,
+  "aggregate_manifest_sha256": "f17a92169830ed8bf458579ce8196f94c211496084d46dfbfc070efc9e95708c",
+  "scope": "Independent read-only S02 closeout review: exporter/tests/renderer,38 original aggregate members, rendered20-configuration report and CSVs,148epoch curves, model registry, closed authorization, four paper ledgers and research-state/history preservation. This is technical evidence for reporting, not model approval, a new execution grant or model computation.",
+  "sources": [
+    {
+      "path": "tools/s02_reporting/export_results.py",
+      "sha256": "456e5550a707f31ca177c7dafe59c2bdc1d736bcfa953226b1c7bce51836f311",
+      "size": 40590
+    },
+    {
+      "path": "tools/s02_reporting/test_export_results.py",
+      "sha256": "ab9ddd8dfd7b60b4b1c7fe2a498e1344b4ac3c4c7125cfcc5c73a1a868649d30",
+      "size": 18090
+    },
+    {
+      "path": "tools/s02_reporting/render_report.py",
+      "sha256": "6cc957241eb05caa652eba508993d7872e0c01cc9529125a1308ed6a0c1a884f",
+      "size": 10891
+    },
+    {
+      "path": "tools/s02_reporting/README.md",
+      "sha256": "d33dd9df87042aa20098794367235626861dc80087e650b3ee255586695d14c4",
+      "size": 4969
+    }
+  ],
+  "snapshot_all_members": [
+    {
+      "path": "DECISIONS.md",
+      "sha256": "23e488bee081653d7df8074681f3cb7f31cbab1b9ebd464f73cc94eb848ca00d",
+      "size": 16580
+    },
+    {
+      "path": "TASK_SPEC.md",
+      "sha256": "40606c7960312c5d4c869354d715b92f4ff0e17d72b93d96995e9622df9976f2",
+      "size": 6948
+    },
+    {
+      "path": "configs/s02_execution.json",
+      "sha256": "c5f1252900f1edeae0f25338ee9175b806590aa2cc65de404b9ce3b36e95c0ab",
+      "size": 2540
+    },
+    {
+      "path": "docs/EXPERIMENT_REGISTER.json",
+      "sha256": "5f1aadfa2a40dc6609168ecd500fd653286e4bacc619cd3034c43f138bc0090a",
+      "size": 220580
+    },
+    {
+      "path": "docs/PAPER_CLAIMS.md",
+      "sha256": "db558b41882281abaed1e552ee941520e0dcb6aa2c9dcac5feb6c6634ef36fe7",
+      "size": 15609
+    },
+    {
+      "path": "docs/PROJECT_SUMMARY.md",
+      "sha256": "3315f7808c953e0677d5da9ab29c899aa8762289c9c325bcab8f56e342f19386",
+      "size": 10851
+    },
+    {
+      "path": "docs/RESEARCH_LOG.md",
+      "sha256": "2764dec5b442e0bfae1add4eb776321086befe4fb10bd8db5f6a906f1f2d1b0c",
+      "size": 24028
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/CANDIDATE_COMPARISON.csv",
+      "sha256": "827a156948f87c668c2cc00c2981e6bcbd9c57ee4a1d47f9a153ff45d25acbcb",
+      "size": 11469
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/COMPARISON.json",
+      "sha256": "7ec63eff024ce2bcafc5109d0f8226c24d1cae2d4b1e3bad570c5a13c2ebb576",
+      "size": 33455
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/EPOCH_CURVES.csv",
+      "sha256": "4f2963b302ce5149fd3ffb020800fcbe9786594dd7170dedeef9c98acd20a312",
+      "size": 69378
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/EPOCH_CURVES.json",
+      "sha256": "8194ba304264d4ada12d0d78ecb61fe8d86ce0c57bad9750e82c7787d1751fca",
+      "size": 461
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/EXECUTED_CONFIG.json",
+      "sha256": "68000338d6fd289b6af6bdfb3c151834d52e22a1203df53236ad9405f78a5deb",
+      "size": 2355
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/FACTOR_DESCRIPTIVES.csv",
+      "sha256": "1451dbe00b1123d8e11058ab802f475b5b856a4d956e1ea81fc4ce4e06a16522",
+      "size": 100540
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/FITS.json",
+      "sha256": "34715c2f03394c5c36f98e17e0fa07b05b0a5eaf565aad451f6711607b4951c5",
+      "size": 11630
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/MANIFEST.json",
+      "sha256": "f17a92169830ed8bf458579ce8196f94c211496084d46dfbfc070efc9e95708c",
+      "size": 6317
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/MODEL_REGISTRY.json",
+      "sha256": "6d865b20f78b4291d3881873a368f784f0844d8303aa07eba3cfffbf476ed42f",
+      "size": 1269
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/POSTPROCESS.json",
+      "sha256": "c6c838eadbab10829ccd311a53b73ae0a53b18081e471863f32281b97d0aa5e8",
+      "size": 19684
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/README.md",
+      "sha256": "c42f026898f6136d0bb504d3382116e65b4ddd20ee915e123758b52cd9910e74",
+      "size": 465
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/RESULTS.md",
+      "sha256": "c5594ba4da69e0423e806abcf23e9663d7b2413cfe557fa108da07237e191486",
+      "size": 13488
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/RUN_RECEIPT.json",
+      "sha256": "fc9afc1b11b66c7b4fd1d8b2fc8a9fa26812cbc53c5f930f9ffaba67605b73f7",
+      "size": 3342
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/SIGN_DISAGREEMENT.csv",
+      "sha256": "90166c5557abbdd3e35d9cf8a8d046c1109f8deb8c69b26f81b0e5e790788519",
+      "size": 3533
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/SUMMARY.json",
+      "sha256": "1e6a77308242ee405bce2e6166e9f3c98702632b91c7e6d6f271e56bcbe815fc",
+      "size": 30732
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/M1.json",
+      "sha256": "23661ddcf36d17655649ead7c83c377d94410b19a68e90c5942a7fd4144fc394",
+      "size": 53075
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/M2.json",
+      "sha256": "7c66d42f5cc85c68fe9e358eab9650ee5257f3b50cdb4594f3f2b25fa924e8fa",
+      "size": 53089
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/M3.json",
+      "sha256": "a554367260a2bd67b496908df80dc002f7129ed62cccb073ec7267cbb219817e",
+      "size": 53015
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/M4.json",
+      "sha256": "5ff269734ac6aa327c66dcf2b990591400c3a1d5bfa38e5f3594ea8062614117",
+      "size": 53064
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W0-bN-m02.json",
+      "sha256": "225e5012d2d5e24c70789718994caed5c8ef5f5e6951b11e58c111aea9c66b80",
+      "size": 53030
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W0-bN-m04.json",
+      "sha256": "686c2def9b6487b5d966b8da0051a943e497cbe2739a2b76ff5ed5b59865cf01",
+      "size": 53037
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W0-bN-p02.json",
+      "sha256": "f5e99d9141a40d931269e5fd2efff511079a107221eb95e7affdadf1cb78a107",
+      "size": 53007
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W0-bN-p04.json",
+      "sha256": "7990a111be834acacb48beb8cdd47cdcca619c38ff7982bfd5047c77c5c92998",
+      "size": 53015
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W0-bN-zero.json",
+      "sha256": "9eccb42da75c2716dba8cff16b4603cd8a61eecd7dde057eb6fd00f2e5967a1c",
+      "size": 53019
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W1-bN-m02.json",
+      "sha256": "6652a44e8b7ffba8df8eaf9a9c9d67ee23f011e4659fe07966f6cfd0cfcc6788",
+      "size": 53113
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W1-bN-m04.json",
+      "sha256": "96cef50f595d68eb40941ad7831ca8839bdd0f6418bfa4023e0a3fde759a81f8",
+      "size": 53120
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W1-bN-p02.json",
+      "sha256": "d8b66d305070c12a942a8be85bf32952cdeefd4dc4fb72edc299152d1e2d32b0",
+      "size": 53090
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W1-bN-p04.json",
+      "sha256": "14a843cedd61388bb9328aa3ec5ec0e0dcd57d44b6bf6f7bd356c6457c21f224",
+      "size": 53098
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W1-bN-zero.json",
+      "sha256": "542c001638f2343c4743050bcab2baaaba8dda9ecaf9f9ecba907f39d2712937",
+      "size": 53102
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W2-bN-m02.json",
+      "sha256": "1a2f113160889d4a7a629046f2c287d46bdd2696ebd775f57a4dff8145b4d62f",
+      "size": 53072
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W2-bN-m04.json",
+      "sha256": "dfb6a751678b89c3f9a0262327c3514437faa05c4395dcaa414f42e3710f93c4",
+      "size": 53067
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W2-bN-p02.json",
+      "sha256": "f484973d20727e9eaf81050beb8c005ad259b2c3d56ceb366285eedc4cff4a4d",
+      "size": 53064
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W2-bN-p04.json",
+      "sha256": "0c3091c576b3f1c52fff4a9a15bf1af27af326dd09e5d611a9e08c8b417df883",
+      "size": 53063
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W2-bN-zero.json",
+      "sha256": "49bda7ed5e8f4d9f7ac410769d42628d02f8bd020144b4d57f301a84947fc0dc",
+      "size": 53029
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M1-s17.json",
+      "sha256": "b4b67f0017277e64f2c01e93f2293a639a0291e88e3eea40fb886b6e20532d32",
+      "size": 11584
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M1-s29.json",
+      "sha256": "d1cb21d0765465950b82630798e9cf3171ea63e1a18bb4295bdf6bbcb7c4941d",
+      "size": 11565
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M1-s43.json",
+      "sha256": "b4c343f3f60974d51dd45a3042d7ac0e03792c4866780ff77ba226112508b88a",
+      "size": 11588
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M2-s17.json",
+      "sha256": "3019868edacdc0e8d3eca4ee356aa19897846e8ae68ee63ae9cabd16cac5d2bc",
+      "size": 11592
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M2-s29.json",
+      "sha256": "3590eafb83a23673dacbb65083eb41436d9f4a96af55fc116a519fb9faead5c0",
+      "size": 11599
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M2-s43.json",
+      "sha256": "e6c46697c5c026c691402fdd5e2b5beaa6eabea6119c8036a95692def4d533d3",
+      "size": 10609
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M3-s17.json",
+      "sha256": "74ec78fcce96e85038b785315eaeb191cbbd876e4c57bf44af90c1a72d70ee12",
+      "size": 11620
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M3-s29.json",
+      "sha256": "be71b1316f0a2afcb3abb90c074eff045c2bf808cf69394b6bf7648d1832acf9",
+      "size": 15407
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M3-s43.json",
+      "sha256": "c6d2b0b6c571cb5bc29a83ff97cb03c23756a5c545637136c08a5e3801fbe7f5",
+      "size": 11565
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M4-s17.json",
+      "sha256": "83f2ca292347bec0d6e1617efede29a5aa285c97faf9c198978352da49081199",
+      "size": 11788
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M4-s29.json",
+      "sha256": "e39fe79eaf02975b3952e8756e32b1303fecd372b7fcf973ab97b335c3172b19",
+      "size": 12769
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M4-s43.json",
+      "sha256": "38acf3984dd5585771b969d777ad806df1c2797252d62280a0f3303c9ea25c0d",
+      "size": 11821
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/BASELINE_IMMUTABILITY.json",
+      "sha256": "407568bc75fe522bae892d0088139ec7bb76b8c7c8370e26176f1c9ad7e81687",
+      "size": 405
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/CURRENT_CHAMPION.json",
+      "sha256": "f0d0bd18c830277833bb9968cd4bdbf9ad6633f547258cd2011831f9adf1e3e7",
+      "size": 454
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/REPORTING_CHECKS.json",
+      "sha256": "ab09923ee378d255112a2246877bc31fe40a8e79c31868b4795cc0770e6810dc",
+      "size": 2432
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/campaign_status.json",
+      "sha256": "dce3fba0f2e021567b9eb78a762b3f035fb3d7c2a87d2f14e557134048ce7dff",
+      "size": 1119
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/winner_restore.json",
+      "sha256": "3c2cee73af0f6e32ab9c4f0266f267b189dc0a31a5596861069dfbf89c960326",
+      "size": 124
+    },
+    {
+      "path": "state/BLOCKERS.md",
+      "sha256": "165b774ca2a3e530f16b0a727ffe85e2739cc7c2e2e92e8b69774cfb24bf4c99",
+      "size": 6418
+    },
+    {
+      "path": "state/LATEST_RESEARCH.json",
+      "sha256": "e886ff758e26db644bfc269cd03738d21a2d0a8e06c8e57831a27c9dc1e64ad8",
+      "size": 14558
+    },
+    {
+      "path": "state/NEXT_ACTIONS.md",
+      "sha256": "219752292c4244e7cccb99e315eb4caf1a71069acd9dd46f36b5c19c685a7279",
+      "size": 6918
+    },
+    {
+      "path": "tools/s02_reporting/README.md",
+      "sha256": "d33dd9df87042aa20098794367235626861dc80087e650b3ee255586695d14c4",
+      "size": 4969
+    },
+    {
+      "path": "tools/s02_reporting/export_results.py",
+      "sha256": "456e5550a707f31ca177c7dafe59c2bdc1d736bcfa953226b1c7bce51836f311",
+      "size": 40590
+    },
+    {
+      "path": "tools/s02_reporting/render_report.py",
+      "sha256": "6cc957241eb05caa652eba508993d7872e0c01cc9529125a1308ed6a0c1a884f",
+      "size": 10891
+    },
+    {
+      "path": "tools/s02_reporting/test_export_results.py",
+      "sha256": "ab9ddd8dfd7b60b4b1c7fe2a498e1344b4ac3c4c7125cfcc5c73a1a868649d30",
+      "size": 18090
+    }
+  ],
+  "findings": [
+    {
+      "id": "S02-EXPORT-MAJOR-01",
+      "severity": "MAJOR",
+      "state": "RESOLVED",
+      "file": "tools/s02_reporting/export_results.py",
+      "original_lines": "343-347",
+      "initial_exporter_sha256": "3ac8eab4779ac2961730f43ecc5e812d1b4fc36fb0cf47a7b842a377e15d1297",
+      "issue": "Final evaluation selected_epoch was not bound to the full frozen checkpoint selector trace, despite per-epoch selector checks.",
+      "independent_counterexample": "A synthetic two-epoch trace correctly selected epoch2 because MAE improved at equalF1, while evaluation claimed epoch1 and supplied epoch1 clean metrics. The original exporter incorrectly accepted it.",
+      "counterexample_sha256": "b436206e5765de194defb514e9f9d1a6cee1ec87092aa903d03e0c26f8b426fb",
+      "counterexample_source_sha256": "8ffc2e496981d3d83d6f3d5871b5d231214c3d1a42ae059d9320e36dc6996c20",
+      "fix": "Final selected_epoch and evaluated_epochs must match the full frozen chooser result; completed fit must end at its stop epoch or100epoch cap.",
+      "verification": "Independent original-counterexample execution, repaired source inspection,13 final synthetic tests and all12 actual full-trace audits. Real campaign selected checkpoints were already correct; no official metrics or selection were changed."
+    },
+    {
+      "id": "S02-EXPORT-MINOR-01",
+      "severity": "MINOR",
+      "state": "RESOLVED",
+      "file": "tools/s02_reporting/export_results.py",
+      "lines": "420-424",
+      "issue": "M inference_cost had been trusted from its own comparison summary rather than cross-checked with completed fits.",
+      "fix": "Compare with the arithmetic mean of completed fit inference_seconds, or null for no completed fits.",
+      "verification": "Independent actual four-recipe cost check and final13-test suite, including a cost-tamper fixture whose rankings were consistently recomputed but still must reject."
+    },
+    {
+      "id": "S02-EXPORT-DOC-01",
+      "severity": "MINOR",
+      "state": "RESOLVED_FOR_PUBLICATION",
+      "file": "tools/s02_reporting/README.md",
+      "issue": "Original draft described only initial10 synthetic author tests.",
+      "fix": "Publication documentation distinguishes historical initial checks and later closeout/export evidence; final validation receipt records13 tests."
+    }
+  ],
+  "actual_campaign_audit": {
+    "status": "PASS",
+    "campaign_id": "S02-20260925-BOUNDED-12F15W",
+    "executed_commit": "2b44b3d660493f3b20a78362cd4ec52bbe49714e",
+    "executed_authorized_manifest_sha256": "7d42a2d9282181375da4f7b099da9e61b2c099c02abe682682f8d7dced9e504d",
+    "completed_fits": 12,
+    "completed_postprocessing": 15,
+    "failures": 0,
+    "resource_stops": 0,
+    "completed_epoch_rows": 148,
+    "fit_trace_checks": [
+      {
+        "trial": "M1-s17",
+        "selected_epoch": 2,
+        "completed_epochs": 12,
+        "frozen_reference_match": true,
+        "clean_metric_match": true,
+        "selected_and_last_hash_match": true
+      },
+      {
+        "trial": "M1-s29",
+        "selected_epoch": 2,
+        "completed_epochs": 12,
+        "frozen_reference_match": true,
+        "clean_metric_match": true,
+        "selected_and_last_hash_match": true
+      },
+      {
+        "trial": "M1-s43",
+        "selected_epoch": 2,
+        "completed_epochs": 12,
+        "frozen_reference_match": true,
+        "clean_metric_match": true,
+        "selected_and_last_hash_match": true
+      },
+      {
+        "trial": "M2-s17",
+        "selected_epoch": 2,
+        "completed_epochs": 12,
+        "frozen_reference_match": true,
+        "clean_metric_match": true,
+        "selected_and_last_hash_match": true
+      },
+      {
+        "trial": "M2-s29",
+        "selected_epoch": 2,
+        "completed_epochs": 12,
+        "frozen_reference_match": true,
+        "clean_metric_match": true,
+        "selected_and_last_hash_match": true
+      },
+      {
+        "trial": "M2-s43",
+        "selected_epoch": 1,
+        "completed_epochs": 11,
+        "frozen_reference_match": true,
+        "clean_metric_match": true,
+        "selected_and_last_hash_match": true
+      },
+      {
+        "trial": "M3-s17",
+        "selected_epoch": 2,
+        "completed_epochs": 12,
+        "frozen_reference_match": true,
+        "clean_metric_match": true,
+        "selected_and_last_hash_match": true
+      },
+      {
+        "trial": "M3-s29",
+        "selected_epoch": 6,
+        "completed_epochs": 16,
+        "frozen_reference_match": true,
+        "clean_metric_match": true,
+        "selected_and_last_hash_match": true
+      },
+      {
+        "trial": "M3-s43",
+        "selected_epoch": 2,
+        "completed_epochs": 12,
+        "frozen_reference_match": true,
+        "clean_metric_match": true,
+        "selected_and_last_hash_match": true
+      },
+      {
+        "trial": "M4-s17",
+        "selected_epoch": 2,
+        "completed_epochs": 12,
+        "frozen_reference_match": true,
+        "clean_metric_match": true,
+        "selected_and_last_hash_match": true
+      },
+      {
+        "trial": "M4-s29",
+        "selected_epoch": 3,
+        "completed_epochs": 13,
+        "frozen_reference_match": true,
+        "clean_metric_match": true,
+        "selected_and_last_hash_match": true
+      },
+      {
+        "trial": "M4-s43",
+        "selected_epoch": 2,
+        "completed_epochs": 12,
+        "frozen_reference_match": true,
+        "clean_metric_match": true,
+        "selected_and_last_hash_match": true
+      }
+    ],
+    "best_last_file_hashes_checked": 24,
+    "condition_configurations": 19,
+    "model_seeds": [
+      17,
+      29,
+      43
+    ],
+    "nominal_conditions": 96,
+    "paired_views_per_seed": 144,
+    "actual_checkpoint_stop_and_selected_clean_metrics_match": true,
+    "reference_aggregate_and_cross_configuration_pairing_match": true,
+    "recorded_champion": "M2",
+    "fixed_seed": 17,
+    "selected_epoch": 2,
+    "champion_checkpoint_sha256": "f99426be8d90b8abf196faf9cf92a41c5ab607da661a7a91530f1fe481a0ceb9",
+    "promotion_eligible": [
+      "W1-bN-zero",
+      "M2",
+      "M3",
+      "M4"
+    ],
+    "recorded_selection_robust_ranking_and_pareto_equal_frozen_recomputation": true,
+    "baseline_means": {
+      "clean": {
+        "Accuracy": 0.6346153846153846,
+        "macro_F1": 0.6018501688585941,
+        "MAE": 0.6426265293924391,
+        "Pearson": 0.5809721732300693,
+        "Pearson_reason": null
+      },
+      "attempted96": {
+        "macro_F1": 0.5862184508718217,
+        "MAE": 0.6545388269228222
+      }
+    },
+    "champion_means": {
+      "clean": {
+        "Accuracy": 0.6433150183150184,
+        "macro_F1": 0.6213048327589198,
+        "MAE": 0.6022178216656328,
+        "Pearson": 0.641617188803388,
+        "Pearson_reason": null
+      },
+      "attempted96": {
+        "macro_F1": 0.6068921444616672,
+        "MAE": 0.6185338718337393
+      }
+    },
+    "actual_audit_sha256": "5616467403e82a9893aed1ca78013f6577ed388853654f3f2e93e0087ef1c72b",
+    "restore_scope": "Recorded winner restore PASS/full144/exact tensor values verified; reviewer did not run restoration or inference."
+  },
+  "public_reporting_audit": {
+    "status": "PASS",
+    "snapshot_members_verified": 65,
+    "aggregate_members_verified": 38,
+    "aggregate_bytes_unchanged_by_cost_validation_fix": true,
+    "comparison_csv_configurations": 20,
+    "comparison_numeric_values_match_json": true,
+    "sign_disagreement_rows": 57,
+    "epoch_curve_rows": 148,
+    "epoch_files": 12,
+    "condition_files": 19,
+    "rendered_outputs_reproduced_in_external_temp_and_byte_identical": true,
+    "all_negative_tradeoff_candidate_rows_retained": true,
+    "all148_durable_epochs_retained": true,
+    "partial_and_failed_fixture_metrics_not_fabricated": true,
+    "privacy": "Allowed aggregate fields only. Inspected safe outputs exclude raw labels/predictions/features/sample IDs, raw pairing/mask fingerprints, private paths and credentials. Published checkpoint/cache hashes are evidence digests.",
+    "manifest_and_member_hashes_verified": true,
+    "registry_bound_to_actual_M2_seed17_checkpoint_config_epoch": true,
+    "actual_scope_reporting": "Results correctly distinguish TRAIN online changing-weight metrics from full-clean VALID checkpoint metrics, random replicate averaging from equal96-condition averaging, mean/SD from fixedseed17, robust guard from strict promotion, and VALID exploration from unmeasured TEST/special performance.",
+    "source_audit_sha256": "2603d2014f7165b4de80eba6f0aa9c9514a796702d894db793d86fb76f174251"
+  },
+  "governance_audit": {
+    "status": "PASS",
+    "authorization_closed": true,
+    "training_authorized": false,
+    "authorization_status": "CONSUMED",
+    "retry_budget": 0,
+    "next_stage_authorized": false,
+    "executed_config_preserved_separately": true,
+    "original_register_keys_semantically_preserved": true,
+    "old_preregistered_NOT_RUN_rows_preserved": true,
+    "new_actual_campaign_rows_match_fits_and_postprocessing": true,
+    "S01_and_R01_and_data_and_S02_training_sources_unchanged_from_execution": true,
+    "LATEST_RUN_unchanged": true,
+    "old_document_text_preserved": true,
+    "current_research_state_matches_M2_means_and_seed17": true,
+    "paper_ledgers_include_negative_results_and_selection_limitations": true
+  },
+  "independent_checks": [
+    {
+      "command": "${PYTHON} -B -X utf8 ${EVIDENCE_DIR}/probe_nonbest_epoch.py",
+      "exit_code": 0,
+      "result": "Original exporter counterexample confirmed",
+      "scope": "Synthetic aggregates only",
+      "source_sha256": "8ffc2e496981d3d83d6f3d5871b5d231214c3d1a42ae059d9320e36dc6996c20"
+    },
+    {
+      "command": "${PYTHON} -B -X utf8 ${EVIDENCE_DIR}/audit_actual_s02_aggregates.py",
+      "exit_code": 0,
+      "result": "12 traces/24checkpoint hashes/19paired grids/selection PASS",
+      "source_sha256": "2c393ca6c83406ecb2822617869ab514f9f799a3e60c9ffd1157eeacb778eda7"
+    },
+    {
+      "command": "S02_PROJECT_ROOT=${PROJECT}; ${PYTHON} -B -X utf8 ${PREPARATION_DIR}/test_export_results.py",
+      "exit_code": 0,
+      "tests_passed": 12,
+      "unittest_seconds": 11.895,
+      "log_sha256": "c9a587493fe914c2caa4adad097e2a9203e36091a7e3d6b250377a8eb2c2be03",
+      "scope": "Earlier checkpoint-fix synthetic suite; retained historical evidence"
+    },
+    {
+      "command": "S02_PROJECT_ROOT=${PROJECT}; ${PYTHON} -B -X utf8 tools/s02_reporting/test_export_results.py",
+      "exit_code": 0,
+      "tests_passed": 13,
+      "unittest_seconds": 13.235,
+      "log_sha256": "d7d97d2f0ff691a58e2119defdeb4ee0cd81cd3def1ff621a5641fc43288143b",
+      "scope": "Final integrated reporting synthetic suite; no models/data/GPU"
+    },
+    {
+      "command": "${PYTHON} -B -X utf8 ${EVIDENCE_DIR}/audit_final_reporting_snapshot.py",
+      "exit_code": 0,
+      "result": "65member exact snapshot,38 aggregate identities, CSV/render/registry/closed-authority/history PASS",
+      "source_sha256": "c470a4b431bcda11efa7220a42bd98a0b29516fe029adc1629b2eaec76f0c119",
+      "output_sha256": "2603d2014f7165b4de80eba6f0aa9c9514a796702d894db793d86fb76f174251"
+    }
+  ],
+  "command_substitutions": {
+    "PYTHON": "Installed Python3.11.14 interpreter; private absolute path omitted",
+    "PROJECT": "Official repository",
+    "PREPARATION_DIR": "Outside preparation directory",
+    "EVIDENCE_DIR": "Outside reporting_review_evidence directory"
+  },
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.19045-SP0"
+  },
+  "reviewer_actions": {
+    "official_tree_writes": false,
+    "raw_pkl_or_sample_records_read": false,
+    "test_or_special_data_read": false,
+    "checkpoint_deserialization": false,
+    "private_prediction_cache_read": false,
+    "model_import_compute_or_inference": false,
+    "gpu_work": false,
+    "training_or_new_experiments": false,
+    "new_selection_search": false,
+    "credentials_or_native_journals_read": false
+  },
+  "limits": [
+    "This is an audit of existing aggregate evidence and selected checkpoint byte identities, not an independent re-evaluation of model predictions.",
+    "Recorded S01 and winner restoration remain earlier inference evidence; no restoration was repeated during closeout.",
+    "The current renderer contains this completedM2 campaign narrative and was verified only for this exact65-file snapshot; it is not certified as a generic renderer for other outcomes.",
+    "Same-VALID checkpoint/candidate/bias selection remains exploratory and optimistic; seed SD does not prove significance, unbiased generalization or TEST/special performance.",
+    "Source and hash consistency are not an adversarial same-account authentication system.",
+    "Safe commit/push/publication verification follows separately; this review itself performs no Git mutation or external publication."
+  ],
+  "runtime_identity_note": "Independent technical reviewer role; model/reasoning runtime telemetry was unavailable and is not fabricated.",
+  "execution_authorization": false,
+  "completion": "Final bounded review complete. No remaining critical/major reporting blocker for the exact snapshot. No additional training, inference or ongoing monitoring."
+}

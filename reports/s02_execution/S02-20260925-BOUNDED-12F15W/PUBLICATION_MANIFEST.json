@@ -1,0 +1,416 @@
+{
+  "base_commit": "2b44b3d660493f3b20a78362cd4ec52bbe49714e",
+  "campaign_id": "S02-20260925-BOUNDED-12F15W",
+  "publication_files": [
+    "DECISIONS.md",
+    "TASK_SPEC.md",
+    "configs/s02_execution.json",
+    "docs/EXPERIMENT_REGISTER.json",
+    "docs/PAPER_CLAIMS.md",
+    "docs/PROJECT_SUMMARY.md",
+    "docs/RESEARCH_LOG.md",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/CANDIDATE_COMPARISON.csv",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/COMPARISON.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/EPOCH_CURVES.csv",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/EPOCH_CURVES.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/EXECUTED_CONFIG.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/FACTOR_DESCRIPTIVES.csv",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/FITS.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/MANIFEST.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/MODEL_REGISTRY.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/POSTPROCESS.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/PUBLICATION_MANIFEST.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/README.md",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/RESULTS.md",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/RUN_RECEIPT.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/SIGN_DISAGREEMENT.csv",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/SUMMARY.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/M1.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/M2.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/M3.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/M4.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W0-bN-m02.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W0-bN-m04.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W0-bN-p02.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W0-bN-p04.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W0-bN-zero.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W1-bN-m02.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W1-bN-m04.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W1-bN-p02.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W1-bN-p04.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W1-bN-zero.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W2-bN-m02.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W2-bN-m04.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W2-bN-p02.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W2-bN-p04.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W2-bN-zero.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M1-s17.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M1-s29.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M1-s43.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M2-s17.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M2-s29.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M2-s43.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M3-s17.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M3-s29.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M3-s43.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M4-s17.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M4-s29.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M4-s43.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/BASELINE_IMMUTABILITY.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/CURRENT_CHAMPION.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/INDEPENDENT_REVIEW.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/REPORTING_CHECKS.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/REVIEW_INPUTS.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/campaign_status.json",
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/winner_restore.json",
+    "state/BLOCKERS.md",
+    "state/LATEST_RESEARCH.json",
+    "state/NEXT_ACTIONS.md",
+    "tools/s02_reporting/README.md",
+    "tools/s02_reporting/export_results.py",
+    "tools/s02_reporting/render_report.py",
+    "tools/s02_reporting/test_export_results.py"
+  ],
+  "files": [
+    {
+      "path": "DECISIONS.md",
+      "size": 16580,
+      "sha256": "23e488bee081653d7df8074681f3cb7f31cbab1b9ebd464f73cc94eb848ca00d"
+    },
+    {
+      "path": "TASK_SPEC.md",
+      "size": 6948,
+      "sha256": "40606c7960312c5d4c869354d715b92f4ff0e17d72b93d96995e9622df9976f2"
+    },
+    {
+      "path": "configs/s02_execution.json",
+      "size": 2540,
+      "sha256": "c5f1252900f1edeae0f25338ee9175b806590aa2cc65de404b9ce3b36e95c0ab"
+    },
+    {
+      "path": "docs/EXPERIMENT_REGISTER.json",
+      "size": 220580,
+      "sha256": "5f1aadfa2a40dc6609168ecd500fd653286e4bacc619cd3034c43f138bc0090a"
+    },
+    {
+      "path": "docs/PAPER_CLAIMS.md",
+      "size": 15609,
+      "sha256": "db558b41882281abaed1e552ee941520e0dcb6aa2c9dcac5feb6c6634ef36fe7"
+    },
+    {
+      "path": "docs/PROJECT_SUMMARY.md",
+      "size": 10851,
+      "sha256": "3315f7808c953e0677d5da9ab29c899aa8762289c9c325bcab8f56e342f19386"
+    },
+    {
+      "path": "docs/RESEARCH_LOG.md",
+      "size": 24028,
+      "sha256": "2764dec5b442e0bfae1add4eb776321086befe4fb10bd8db5f6a906f1f2d1b0c"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/CANDIDATE_COMPARISON.csv",
+      "size": 11469,
+      "sha256": "827a156948f87c668c2cc00c2981e6bcbd9c57ee4a1d47f9a153ff45d25acbcb"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/COMPARISON.json",
+      "size": 33455,
+      "sha256": "7ec63eff024ce2bcafc5109d0f8226c24d1cae2d4b1e3bad570c5a13c2ebb576"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/EPOCH_CURVES.csv",
+      "size": 69378,
+      "sha256": "4f2963b302ce5149fd3ffb020800fcbe9786594dd7170dedeef9c98acd20a312"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/EPOCH_CURVES.json",
+      "size": 461,
+      "sha256": "8194ba304264d4ada12d0d78ecb61fe8d86ce0c57bad9750e82c7787d1751fca"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/EXECUTED_CONFIG.json",
+      "size": 2355,
+      "sha256": "68000338d6fd289b6af6bdfb3c151834d52e22a1203df53236ad9405f78a5deb"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/FACTOR_DESCRIPTIVES.csv",
+      "size": 100540,
+      "sha256": "1451dbe00b1123d8e11058ab802f475b5b856a4d956e1ea81fc4ce4e06a16522"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/FITS.json",
+      "size": 11630,
+      "sha256": "34715c2f03394c5c36f98e17e0fa07b05b0a5eaf565aad451f6711607b4951c5"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/MANIFEST.json",
+      "size": 6317,
+      "sha256": "f17a92169830ed8bf458579ce8196f94c211496084d46dfbfc070efc9e95708c"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/MODEL_REGISTRY.json",
+      "size": 1269,
+      "sha256": "6d865b20f78b4291d3881873a368f784f0844d8303aa07eba3cfffbf476ed42f"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/POSTPROCESS.json",
+      "size": 19684,
+      "sha256": "c6c838eadbab10829ccd311a53b73ae0a53b18081e471863f32281b97d0aa5e8"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/README.md",
+      "size": 465,
+      "sha256": "c42f026898f6136d0bb504d3382116e65b4ddd20ee915e123758b52cd9910e74"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/RESULTS.md",
+      "size": 13488,
+      "sha256": "c5594ba4da69e0423e806abcf23e9663d7b2413cfe557fa108da07237e191486"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/RUN_RECEIPT.json",
+      "size": 3342,
+      "sha256": "fc9afc1b11b66c7b4fd1d8b2fc8a9fa26812cbc53c5f930f9ffaba67605b73f7"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/SIGN_DISAGREEMENT.csv",
+      "size": 3533,
+      "sha256": "90166c5557abbdd3e35d9cf8a8d046c1109f8deb8c69b26f81b0e5e790788519"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/SUMMARY.json",
+      "size": 30732,
+      "sha256": "1e6a77308242ee405bce2e6166e9f3c98702632b91c7e6d6f271e56bcbe815fc"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/M1.json",
+      "size": 53075,
+      "sha256": "23661ddcf36d17655649ead7c83c377d94410b19a68e90c5942a7fd4144fc394"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/M2.json",
+      "size": 53089,
+      "sha256": "7c66d42f5cc85c68fe9e358eab9650ee5257f3b50cdb4594f3f2b25fa924e8fa"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/M3.json",
+      "size": 53015,
+      "sha256": "a554367260a2bd67b496908df80dc002f7129ed62cccb073ec7267cbb219817e"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/M4.json",
+      "size": 53064,
+      "sha256": "5ff269734ac6aa327c66dcf2b990591400c3a1d5bfa38e5f3594ea8062614117"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W0-bN-m02.json",
+      "size": 53030,
+      "sha256": "225e5012d2d5e24c70789718994caed5c8ef5f5e6951b11e58c111aea9c66b80"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W0-bN-m04.json",
+      "size": 53037,
+      "sha256": "686c2def9b6487b5d966b8da0051a943e497cbe2739a2b76ff5ed5b59865cf01"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W0-bN-p02.json",
+      "size": 53007,
+      "sha256": "f5e99d9141a40d931269e5fd2efff511079a107221eb95e7affdadf1cb78a107"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W0-bN-p04.json",
+      "size": 53015,
+      "sha256": "7990a111be834acacb48beb8cdd47cdcca619c38ff7982bfd5047c77c5c92998"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W0-bN-zero.json",
+      "size": 53019,
+      "sha256": "9eccb42da75c2716dba8cff16b4603cd8a61eecd7dde057eb6fd00f2e5967a1c"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W1-bN-m02.json",
+      "size": 53113,
+      "sha256": "6652a44e8b7ffba8df8eaf9a9c9d67ee23f011e4659fe07966f6cfd0cfcc6788"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W1-bN-m04.json",
+      "size": 53120,
+      "sha256": "96cef50f595d68eb40941ad7831ca8839bdd0f6418bfa4023e0a3fde759a81f8"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W1-bN-p02.json",
+      "size": 53090,
+      "sha256": "d8b66d305070c12a942a8be85bf32952cdeefd4dc4fb72edc299152d1e2d32b0"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W1-bN-p04.json",
+      "size": 53098,
+      "sha256": "14a843cedd61388bb9328aa3ec5ec0e0dcd57d44b6bf6f7bd356c6457c21f224"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W1-bN-zero.json",
+      "size": 53102,
+      "sha256": "542c001638f2343c4743050bcab2baaaba8dda9ecaf9f9ecba907f39d2712937"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W2-bN-m02.json",
+      "size": 53072,
+      "sha256": "1a2f113160889d4a7a629046f2c287d46bdd2696ebd775f57a4dff8145b4d62f"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W2-bN-m04.json",
+      "size": 53067,
+      "sha256": "dfb6a751678b89c3f9a0262327c3514437faa05c4395dcaa414f42e3710f93c4"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W2-bN-p02.json",
+      "size": 53064,
+      "sha256": "f484973d20727e9eaf81050beb8c005ad259b2c3d56ceb366285eedc4cff4a4d"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W2-bN-p04.json",
+      "size": 53063,
+      "sha256": "0c3091c576b3f1c52fff4a9a15bf1af27af326dd09e5d611a9e08c8b417df883"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/conditions/W2-bN-zero.json",
+      "size": 53029,
+      "sha256": "49bda7ed5e8f4d9f7ac410769d42628d02f8bd020144b4d57f301a84947fc0dc"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M1-s17.json",
+      "size": 11584,
+      "sha256": "b4b67f0017277e64f2c01e93f2293a639a0291e88e3eea40fb886b6e20532d32"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M1-s29.json",
+      "size": 11565,
+      "sha256": "d1cb21d0765465950b82630798e9cf3171ea63e1a18bb4295bdf6bbcb7c4941d"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M1-s43.json",
+      "size": 11588,
+      "sha256": "b4c343f3f60974d51dd45a3042d7ac0e03792c4866780ff77ba226112508b88a"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M2-s17.json",
+      "size": 11592,
+      "sha256": "3019868edacdc0e8d3eca4ee356aa19897846e8ae68ee63ae9cabd16cac5d2bc"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M2-s29.json",
+      "size": 11599,
+      "sha256": "3590eafb83a23673dacbb65083eb41436d9f4a96af55fc116a519fb9faead5c0"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M2-s43.json",
+      "size": 10609,
+      "sha256": "e6c46697c5c026c691402fdd5e2b5beaa6eabea6119c8036a95692def4d533d3"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M3-s17.json",
+      "size": 11620,
+      "sha256": "74ec78fcce96e85038b785315eaeb191cbbd876e4c57bf44af90c1a72d70ee12"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M3-s29.json",
+      "size": 15407,
+      "sha256": "be71b1316f0a2afcb3abb90c074eff045c2bf808cf69394b6bf7648d1832acf9"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M3-s43.json",
+      "size": 11565,
+      "sha256": "c6d2b0b6c571cb5bc29a83ff97cb03c23756a5c545637136c08a5e3801fbe7f5"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M4-s17.json",
+      "size": 11788,
+      "sha256": "83f2ca292347bec0d6e1617efede29a5aa285c97faf9c198978352da49081199"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M4-s29.json",
+      "size": 12769,
+      "sha256": "e39fe79eaf02975b3952e8756e32b1303fecd372b7fcf973ab97b335c3172b19"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/epochs/M4-s43.json",
+      "size": 11821,
+      "sha256": "38acf3984dd5585771b969d777ad806df1c2797252d62280a0f3303c9ea25c0d"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/BASELINE_IMMUTABILITY.json",
+      "size": 405,
+      "sha256": "407568bc75fe522bae892d0088139ec7bb76b8c7c8370e26176f1c9ad7e81687"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/CURRENT_CHAMPION.json",
+      "size": 454,
+      "sha256": "f0d0bd18c830277833bb9968cd4bdbf9ad6633f547258cd2011831f9adf1e3e7"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/INDEPENDENT_REVIEW.json",
+      "size": 28167,
+      "sha256": "872f3fb5750d1e6ffbf3c5abcc7de2d172028d03741cf872e6cbf61a5adb39e7"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/REPORTING_CHECKS.json",
+      "size": 2432,
+      "sha256": "ab09923ee378d255112a2246877bc31fe40a8e79c31868b4795cc0770e6810dc"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/REVIEW_INPUTS.json",
+      "size": 13320,
+      "sha256": "0d8ce79d324242afafc74869b62d3b06b146f69cc6b3a5835d1e841f07913b42"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/campaign_status.json",
+      "size": 1119,
+      "sha256": "dce3fba0f2e021567b9eb78a762b3f035fb3d7c2a87d2f14e557134048ce7dff"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/validation/winner_restore.json",
+      "size": 124,
+      "sha256": "3c2cee73af0f6e32ab9c4f0266f267b189dc0a31a5596861069dfbf89c960326"
+    },
+    {
+      "path": "state/BLOCKERS.md",
+      "size": 6418,
+      "sha256": "165b774ca2a3e530f16b0a727ffe85e2739cc7c2e2e92e8b69774cfb24bf4c99"
+    },
+    {
+      "path": "state/LATEST_RESEARCH.json",
+      "size": 14558,
+      "sha256": "e886ff758e26db644bfc269cd03738d21a2d0a8e06c8e57831a27c9dc1e64ad8"
+    },
+    {
+      "path": "state/NEXT_ACTIONS.md",
+      "size": 6918,
+      "sha256": "219752292c4244e7cccb99e315eb4caf1a71069acd9dd46f36b5c19c685a7279"
+    },
+    {
+      "path": "tools/s02_reporting/README.md",
+      "size": 4969,
+      "sha256": "d33dd9df87042aa20098794367235626861dc80087e650b3ee255586695d14c4"
+    },
+    {
+      "path": "tools/s02_reporting/export_results.py",
+      "size": 40590,
+      "sha256": "456e5550a707f31ca177c7dafe59c2bdc1d736bcfa953226b1c7bce51836f311"
+    },
+    {
+      "path": "tools/s02_reporting/render_report.py",
+      "size": 10891,
+      "sha256": "6cc957241eb05caa652eba508993d7872e0c01cc9529125a1308ed6a0c1a884f"
+    },
+    {
+      "path": "tools/s02_reporting/test_export_results.py",
+      "size": 18090,
+      "sha256": "ab9ddd8dfd7b60b4b1c7fe2a498e1344b4ac3c4c7125cfcc5c73a1a868649d30"
+    }
+  ],
+  "hash_exclusions": [
+    "reports/s02_execution/S02-20260925-BOUNDED-12F15W/PUBLICATION_MANIFEST.json"
+  ],
+  "review_inputs_sha256": "0d8ce79d324242afafc74869b62d3b06b146f69cc6b3a5835d1e841f07913b42",
+  "independent_review_sha256": "872f3fb5750d1e6ffbf3c5abcc7de2d172028d03741cf872e6cbf61a5adb39e7"
+}

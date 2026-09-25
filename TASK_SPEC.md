@@ -1,4 +1,24 @@
 task_id: S02_CHAMPION_CHALLENGER_IMPROVEMENT
+status: CLOSED_COMPLETED
+training_authorized: false
+s01_training_authorized: false
+authorization_status: CONSUMED
+campaign_id: S02-20260925-BOUNDED-12F15W
+retry_training_budget: 0
+next_stage_authorized: false
+test_authorized: false
+attachment3_4_authorized: false
+q3_authorized: false
+
+# Current S02 closeout
+
+12fits and15postprocess configurations completed. M2 fixedseed17 promoted after full frozen comparison and restore. Evidence: reports/s02_execution/S02-20260925-BOUNDED-12F15W/RESULTS.md. Only safe reporting/publication remains authorized; no model execution or new Release.
+
+# Historical S02 activation — preserved, authority consumed
+
+The following ACTIVE_AUTHORIZED wording is historical and cannot authorize a second execution.
+
+task_id: S02_CHAMPION_CHALLENGER_IMPROVEMENT
 status: ACTIVE_AUTHORIZED
 training_authorized: true
 s01_training_authorized: false

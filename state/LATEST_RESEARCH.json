@@ -287,16 +287,87 @@
   "git_publication_snapshot_phase": "RESULTS_PAYLOAD_BEFORE_COMMIT",
   "git_publication_verification": "Final commit and remote-HEAD receipt is outside Git to avoid self-reference; verify current branch history and final task response.",
   "s02_current": {
-    "task_id": "S02_CHAMPION_CHALLENGER_IMPROVEMENT",
-    "status": "READY_FOR_REVIEWED_PREAUTHORIZED_EXECUTION",
     "campaign_id": "S02-20260925-BOUNDED-12F15W",
-    "training_authorized": true,
-    "official_experiments": "NOT_RUN",
-    "metrics": null,
-    "protocol": "docs/research/S02/PROTOCOL.md",
-    "config": "configs/s02_execution.json",
-    "baseline_immutable": true,
-    "attachment3_mask_availability": "UNKNOWN"
+    "status": "COMPLETED",
+    "evidence_level": "VERIFIED_OFFICIAL_TRAIN_VALID",
+    "code_commit": "2b44b3d660493f3b20a78362cd4ec52bbe49714e",
+    "execution_config_sha256": "32f0001d54944a4775ec786ff00fba1ecabfaed64477c718a10199a3d6d61eec",
+    "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+    "model_seeds": [
+      17,
+      29,
+      43
+    ],
+    "mask_roots": {
+      "train": 2207,
+      "valid": 1103
+    },
+    "new_fits_completed": 12,
+    "postprocess_completed": 15,
+    "failed": 0,
+    "resource_stopped": 0,
+    "completed_epochs": 148,
+    "supervisor_seconds": 1600.020803,
+    "current_champion": "M2",
+    "fixed_final_seed": 17,
+    "promoted": true,
+    "baseline": {
+      "attempted96": {
+        "MAE": 0.6545388269228222,
+        "macro_F1": 0.5862184508718217
+      },
+      "clean": {
+        "Accuracy": 0.6346153846153846,
+        "MAE": 0.6426265293924391,
+        "Pearson": 0.5809721732300693,
+        "Pearson_reason": null,
+        "macro_F1": 0.6018501688585941
+      }
+    },
+    "champion": {
+      "attempted96": {
+        "MAE": 0.6185338718337393,
+        "macro_F1": 0.6068921444616672
+      },
+      "clean": {
+        "Accuracy": 0.6433150183150184,
+        "MAE": 0.6022178216656328,
+        "Pearson": 0.641617188803388,
+        "Pearson_reason": null,
+        "macro_F1": 0.6213048327589198
+      }
+    },
+    "champion_seed17": {
+      "attempted96": {
+        "MAE": 0.612426662122236,
+        "macro_F1": 0.6075215442999251
+      },
+      "clean": {
+        "Accuracy": 0.646978021978022,
+        "MAE": 0.5994685971997499,
+        "Pearson": 0.6516016638963957,
+        "Pearson_reason": null,
+        "macro_F1": 0.6217975684111576
+      }
+    },
+    "comparison_evidence": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/COMPARISON.json",
+    "curves_evidence": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/EPOCH_CURVES.csv",
+    "run_evidence": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/RUN_RECEIPT.json",
+    "model_registry": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/MODEL_REGISTRY.json",
+    "training_authorized": false,
+    "authorization_status": "CONSUMED",
+    "retry_training_budget": 0,
+    "next_stage_authorized": false,
+    "limitations": [
+      "Repeated VALID selection optimism; SD is not significance",
+      "Attachment3 mask availability UNKNOWN",
+      "S01 history and preregistered NOT_RUN rows retained"
+    ],
+    "recorded_at": "2026-09-25T03:43:27.277254+00:00",
+    "git_publication": "VERIFY_BY_POST_PUSH_RECEIPT"
   },
-  "current_task_id": "S02_CHAMPION_CHALLENGER_IMPROVEMENT"
+  "current_task_id": "S02_CHAMPION_CHALLENGER_IMPROVEMENT",
+  "current_stage_status": "S02_COMPLETED",
+  "current_model_registry": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/MODEL_REGISTRY.json",
+  "historical_top_level_scope": "Existing S01 fields retained as historical snapshot; current S02 outcome is s02_current."
 }

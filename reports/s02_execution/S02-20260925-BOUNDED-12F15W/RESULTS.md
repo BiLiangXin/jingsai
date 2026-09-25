@@ -1,0 +1,140 @@
+# S02 有界改进：完整结果
+
+VERIFIED：12/12 新 fit、15/15 固定后处理配置全部完成，无失败、无资源停止、无重试。这些结果来自官方 TRAIN/VALID，未评价 TEST 或附件3/4。
+
+执行代码：`2b44b3d660493f3b20a78362cd4ec52bbe49714e`；执行配置 SHA256：`32f0001d54944a4775ec786ff00fba1ecabfaed64477c718a10199a3d6d61eec`（规范 JSON）。
+内部 campaign 耗时 1593.594 秒；外部监督器完整耗时见 RUN_RECEIPT.json。各 fit 的训练与最终验证用时见 FITS.json，不能把 campaign 总耗时叫作纯优化时间。
+
+## 冠军与比较范围
+
+**M2，固定 seed17，晋升。** M2 是文本主干残差融合加 TRAIN 类别权重。候选在三 seed 均值和固定 seed17 两个层面相对旧 S01 的六项指标均不劣，并存在严格增益。完整比较后恢复 seed17 的 clean＋144 views，预测张量数值一致，原子指针已更新；旧模型继续保留。
+
+完整三 seed 均值用于排序；最终 seed17 并非按其表现挑选。晋升合格候选为 W1-bN-zero、M2、M3、M4，M2 的 attempted96 平均 macro-F1 在合格者中最高。
+
+## 全部配置的三 seed 均值 ± 样本 SD
+
+|配置|clean Accuracy ↑|clean macro-F1 ↑|clean MAE ↓|clean Pearson ↑|attempted96 F1 ↑|attempted96 MAE ↓|晋升资格|
+|---|---:|---:|---:|---:|---:|---:|---|
+|S01-B-CAT-zscore|0.634615 ± 0.005987|0.601850 ± 0.003927|0.642627 ± 0.031009|0.580972 ± 0.031016|0.586218 ± 0.006851|0.654539 ± 0.030107|NO|
+|W0-bN-m04|0.625916 ± 0.007931|0.569116 ± 0.002819|0.642627 ± 0.031009|0.580972 ± 0.031016|0.564047 ± 0.000077|0.654539 ± 0.030107|NO|
+|W0-bN-m02|0.630495 ± 0.004121|0.586867 ± 0.006310|0.642627 ± 0.031009|0.580972 ± 0.031016|0.576615 ± 0.003986|0.654539 ± 0.030107|NO|
+|W0-bN-zero|0.634615 ± 0.005987|0.601850 ± 0.003927|0.642627 ± 0.031009|0.580972 ± 0.031016|0.586218 ± 0.006851|0.654539 ± 0.030107|NO|
+|W0-bN-p02|0.623626 ± 0.005987|0.599048 ± 0.005736|0.642627 ± 0.031009|0.580972 ± 0.031016|0.587274 ± 0.008167|0.654539 ± 0.030107|NO|
+|W0-bN-p04|0.613095 ± 0.012763|0.594314 ± 0.013890|0.642627 ± 0.031009|0.580972 ± 0.031016|0.584370 ± 0.011176|0.654539 ± 0.030107|NO|
+|W1-bN-m04|0.625916 ± 0.007931|0.569116 ± 0.002819|0.613922 ± 0.004133|0.626928 ± 0.002745|0.564047 ± 0.000077|0.626240 ± 0.001779|NO|
+|W1-bN-m02|0.630495 ± 0.004121|0.586867 ± 0.006310|0.613922 ± 0.004133|0.626928 ± 0.002745|0.576615 ± 0.003986|0.626240 ± 0.001779|NO|
+|W1-bN-zero|0.634615 ± 0.005987|0.601850 ± 0.003927|0.613922 ± 0.004133|0.626928 ± 0.002745|0.586218 ± 0.006851|0.626240 ± 0.001779|YES|
+|W1-bN-p02|0.623626 ± 0.005987|0.599048 ± 0.005736|0.613922 ± 0.004133|0.626928 ± 0.002745|0.587274 ± 0.008167|0.626240 ± 0.001779|NO|
+|W1-bN-p04|0.613095 ± 0.012763|0.594314 ± 0.013890|0.613922 ± 0.004133|0.626928 ± 0.002745|0.584370 ± 0.011176|0.626240 ± 0.001779|NO|
+|W2-bN-m04|0.631410 ± 0.006492|0.567725 ± 0.012090|0.606457 ± 0.012611|0.624581 ± 0.010593|0.562822 ± 0.007447|0.617388 ± 0.009913|NO|
+|W2-bN-m02|0.627289 ± 0.008393|0.578408 ± 0.011185|0.606457 ± 0.012611|0.624581 ± 0.010593|0.576330 ± 0.011197|0.617388 ± 0.009913|NO|
+|W2-bN-zero|0.630952 ± 0.013055|0.596673 ± 0.015295|0.606457 ± 0.012611|0.624581 ± 0.010593|0.588290 ± 0.013976|0.617388 ± 0.009913|NO|
+|W2-bN-p02|0.620879 ± 0.005495|0.596188 ± 0.007722|0.606457 ± 0.012611|0.624581 ± 0.010593|0.591099 ± 0.009145|0.617388 ± 0.009913|NO|
+|W2-bN-p04|0.619505 ± 0.005987|0.603396 ± 0.006587|0.606457 ± 0.012611|0.624581 ± 0.010593|0.593643 ± 0.007301|0.617388 ± 0.009913|NO|
+|M1|0.639652 ± 0.006194|0.600888 ± 0.000968|0.598509 ± 0.006590|0.648416 ± 0.002714|0.590554 ± 0.004307|0.614097 ± 0.004537|NO|
+|M2|0.643315 ± 0.006345|0.621305 ± 0.004502|0.602218 ± 0.005496|0.641617 ± 0.014607|0.606892 ± 0.002863|0.618534 ± 0.007846|YES|
+|M3|0.637363 ± 0.012363|0.602341 ± 0.004444|0.615489 ± 0.028521|0.640312 ± 0.018446|0.588551 ± 0.005912|0.627749 ± 0.029727|YES|
+|M4|0.643315 ± 0.007049|0.602005 ± 0.003291|0.607187 ± 0.012098|0.641424 ± 0.007930|0.589037 ± 0.005537|0.619634 ± 0.011375|YES|
+
+SD 描述三个固定训练 seed 的离散程度，不是置信区间或显著性。推理成本是本机完整144-view测量，W 使用其组件测量之和，不是生产延迟基准。
+
+## 全部配置的固定 seed17
+
+|配置|Accuracy|macro-F1|MAE|Pearson|attempted96 F1|attempted96 MAE|
+|---|---:|---:|---:|---:|---:|---:|
+|S01-B-CAT-zscore|0.631868|0.600631|0.678381|0.545774|0.578651|0.689273|
+|W0-bN-m04|0.616758|0.571433|0.678381|0.545774|0.564103|0.689273|
+|W0-bN-m02|0.626374|0.589634|0.678381|0.545774|0.572838|0.689273|
+|W0-bN-zero|0.631868|0.600631|0.678381|0.545774|0.578651|0.689273|
+|W0-bN-p02|0.620879|0.594968|0.678381|0.545774|0.578900|0.689273|
+|W0-bN-p04|0.607143|0.585242|0.678381|0.545774|0.576077|0.689273|
+|W1-bN-m04|0.616758|0.571433|0.618433|0.625027|0.564103|0.628059|
+|W1-bN-m02|0.626374|0.589634|0.618433|0.625027|0.572838|0.628059|
+|W1-bN-zero|0.631868|0.600631|0.618433|0.625027|0.578651|0.628059|
+|W1-bN-p02|0.620879|0.594968|0.618433|0.625027|0.578900|0.628059|
+|W1-bN-p04|0.607143|0.585242|0.618433|0.625027|0.576077|0.628059|
+|W2-bN-m04|0.629121|0.572412|0.620793|0.613348|0.561489|0.628763|
+|W2-bN-m02|0.618132|0.568575|0.620793|0.613348|0.565978|0.628763|
+|W2-bN-zero|0.618132|0.582521|0.620793|0.613348|0.574975|0.628763|
+|W2-bN-p02|0.615385|0.587274|0.620793|0.613348|0.581504|0.628763|
+|W2-bN-p04|0.615385|0.596080|0.620793|0.613348|0.585335|0.628763|
+|M1|0.645604|0.601898|0.605519|0.649460|0.593260|0.617034|
+|M2|0.646978|0.621798|0.599469|0.651602|0.607522|0.612427|
+|M3|0.649725|0.603269|0.602236|0.654766|0.595281|0.612739|
+|M4|0.651099|0.605736|0.609007|0.650475|0.595313|0.619320|
+
+## Pareto、robust 排序与未采用理由
+
+clean 四指标均值的 Pareto 集：M1、M2。
+
+通过 clean F1/MAE guard 后的 robust 排序（不同于严格晋升资格）：
+
+M2 → W2-bN-p04 → W2-bN-p02 → M1 → M4 → M3 → W2-bN-zero → W1-bN-p02 → W0-bN-p02 → W1-bN-zero → W0-bN-zero → W1-bN-p04 → W0-bN-p04
+
+所有未采用候选的具体退化项如下；NO_STRICT_IMPROVEMENT 表示未产生超过数值容差的严格改善。
+
+- W0-bN-m04：THREE_SEED_MEAN:clean:Accuracy:DEGRADED; THREE_SEED_MEAN:clean:macro_F1:DEGRADED; THREE_SEED_MEAN:attempted96:macro_F1:DEGRADED; FIXED_SEED17:clean:Accuracy:DEGRADED; FIXED_SEED17:clean:macro_F1:DEGRADED; FIXED_SEED17:attempted96:macro_F1:DEGRADED; NO_STRICT_IMPROVEMENT_ABOVE_NUMERIC_TOLERANCE。
+- W0-bN-m02：THREE_SEED_MEAN:clean:Accuracy:DEGRADED; THREE_SEED_MEAN:clean:macro_F1:DEGRADED; THREE_SEED_MEAN:attempted96:macro_F1:DEGRADED; FIXED_SEED17:clean:Accuracy:DEGRADED; FIXED_SEED17:clean:macro_F1:DEGRADED; FIXED_SEED17:attempted96:macro_F1:DEGRADED; NO_STRICT_IMPROVEMENT_ABOVE_NUMERIC_TOLERANCE。
+- W0-bN-zero：NO_STRICT_IMPROVEMENT_ABOVE_NUMERIC_TOLERANCE。
+- W0-bN-p02：THREE_SEED_MEAN:clean:Accuracy:DEGRADED; THREE_SEED_MEAN:clean:macro_F1:DEGRADED; FIXED_SEED17:clean:Accuracy:DEGRADED; FIXED_SEED17:clean:macro_F1:DEGRADED。
+- W0-bN-p04：THREE_SEED_MEAN:clean:Accuracy:DEGRADED; THREE_SEED_MEAN:clean:macro_F1:DEGRADED; THREE_SEED_MEAN:attempted96:macro_F1:DEGRADED; FIXED_SEED17:clean:Accuracy:DEGRADED; FIXED_SEED17:clean:macro_F1:DEGRADED; FIXED_SEED17:attempted96:macro_F1:DEGRADED; NO_STRICT_IMPROVEMENT_ABOVE_NUMERIC_TOLERANCE。
+- W1-bN-m04：THREE_SEED_MEAN:clean:Accuracy:DEGRADED; THREE_SEED_MEAN:clean:macro_F1:DEGRADED; THREE_SEED_MEAN:attempted96:macro_F1:DEGRADED; FIXED_SEED17:clean:Accuracy:DEGRADED; FIXED_SEED17:clean:macro_F1:DEGRADED; FIXED_SEED17:attempted96:macro_F1:DEGRADED。
+- W1-bN-m02：THREE_SEED_MEAN:clean:Accuracy:DEGRADED; THREE_SEED_MEAN:clean:macro_F1:DEGRADED; THREE_SEED_MEAN:attempted96:macro_F1:DEGRADED; FIXED_SEED17:clean:Accuracy:DEGRADED; FIXED_SEED17:clean:macro_F1:DEGRADED; FIXED_SEED17:attempted96:macro_F1:DEGRADED。
+- W1-bN-zero：满足严格资格，但冻结排序落后于 M2。
+- W1-bN-p02：THREE_SEED_MEAN:clean:Accuracy:DEGRADED; THREE_SEED_MEAN:clean:macro_F1:DEGRADED; FIXED_SEED17:clean:Accuracy:DEGRADED; FIXED_SEED17:clean:macro_F1:DEGRADED。
+- W1-bN-p04：THREE_SEED_MEAN:clean:Accuracy:DEGRADED; THREE_SEED_MEAN:clean:macro_F1:DEGRADED; THREE_SEED_MEAN:attempted96:macro_F1:DEGRADED; FIXED_SEED17:clean:Accuracy:DEGRADED; FIXED_SEED17:clean:macro_F1:DEGRADED; FIXED_SEED17:attempted96:macro_F1:DEGRADED。
+- W2-bN-m04：THREE_SEED_MEAN:clean:Accuracy:DEGRADED; THREE_SEED_MEAN:clean:macro_F1:DEGRADED; THREE_SEED_MEAN:attempted96:macro_F1:DEGRADED; FIXED_SEED17:clean:Accuracy:DEGRADED; FIXED_SEED17:clean:macro_F1:DEGRADED; FIXED_SEED17:attempted96:macro_F1:DEGRADED。
+- W2-bN-m02：THREE_SEED_MEAN:clean:Accuracy:DEGRADED; THREE_SEED_MEAN:clean:macro_F1:DEGRADED; THREE_SEED_MEAN:attempted96:macro_F1:DEGRADED; FIXED_SEED17:clean:Accuracy:DEGRADED; FIXED_SEED17:clean:macro_F1:DEGRADED; FIXED_SEED17:attempted96:macro_F1:DEGRADED。
+- W2-bN-zero：THREE_SEED_MEAN:clean:Accuracy:DEGRADED; THREE_SEED_MEAN:clean:macro_F1:DEGRADED; FIXED_SEED17:clean:Accuracy:DEGRADED; FIXED_SEED17:clean:macro_F1:DEGRADED; FIXED_SEED17:attempted96:macro_F1:DEGRADED。
+- W2-bN-p02：THREE_SEED_MEAN:clean:Accuracy:DEGRADED; THREE_SEED_MEAN:clean:macro_F1:DEGRADED; FIXED_SEED17:clean:Accuracy:DEGRADED; FIXED_SEED17:clean:macro_F1:DEGRADED。
+- W2-bN-p04：THREE_SEED_MEAN:clean:Accuracy:DEGRADED; FIXED_SEED17:clean:Accuracy:DEGRADED; FIXED_SEED17:clean:macro_F1:DEGRADED。
+- M1：THREE_SEED_MEAN:clean:macro_F1:DEGRADED。
+- M2：最终晋升。
+- M3：满足严格资格，但冻结排序落后于 M2。
+- M4：满足严格资格，但冻结排序落后于 M2。
+
+### 负结果与机制解释边界
+
+- W1 beta=0 真实恢复验证了 CAT 分类＋T 回归的互补性：分类保持原样，回归改善；但其鲁棒分类得分低于 M2。
+- 非零中性偏置以及 W2 等权组合均未满足全指标严格晋升条件，不能仅展示某一项增益。
+- M1 的三 seed clean macro-F1 低于旧模型，因此即使其他指标改善也不能晋升；其较低 MAE、较高 Pearson 使其仍在 clean Pareto 集。
+- M3 相对 M1 的 attempted96 均值 F1 更低、MAE 更高；本轮没有证据支持该增强改善这两项均值。
+- M4 相对 M3 的 attempted96 均值有小幅改善，但没有超过 M2；KD 并非本轮胜者。
+- M2/M1 的配对设计隔离类别权重差异；这些探索性 VALID 观察不证明普遍因果机制。S02 与 S01 的结构和 checkpoint 协议不同，不能声称跨阶段仅改变一个因素。
+
+## 全部 fit 与逐轮数据
+
+|fit|选中 epoch|完成 epoch|fit 秒|144-view 推理秒|状态|
+|---|---:|---:|---:|---:|---|
+|M1-s17|2|12|93.625|42.561|COMPLETED|
+|M1-s29|2|12|93.968|43.668|COMPLETED|
+|M1-s43|2|12|91.766|41.938|COMPLETED|
+|M2-s17|2|12|93.719|42.268|COMPLETED|
+|M2-s29|2|12|94.125|42.448|COMPLETED|
+|M2-s43|1|11|89.422|42.326|COMPLETED|
+|M3-s17|2|12|100.500|42.383|COMPLETED|
+|M3-s29|6|16|119.765|42.626|COMPLETED|
+|M3-s43|2|12|101.359|43.147|COMPLETED|
+|M4-s17|2|12|111.265|43.104|COMPLETED|
+|M4-s29|3|13|115.390|42.624|COMPLETED|
+|M4-s43|2|12|109.359|42.107|COMPLETED|
+
+共 **148** 条完成 epoch 记录。`EPOCH_CURVES.csv` 及 `epochs/*.json` 保存每个 seed 的全部轮次，不仅是最优轮次。
+
+TRAIN loss 按样本数加权。TRAIN online 指标来自每个 batch 更新前、当前训练 view 上的预测；权重在一轮内变化，因此不能将它标成整轮结束 checkpoint 的 clean TRAIN 评价。VALID 是该轮结束的 clean 验证。曲线包括 CE、加权 CE、MAE、加权 KD、总 loss、学习率、耗时、早停、选点及人工缺失资格计数。
+
+## 连续缺失与符号不一致
+
+`conditions/*.json` 给出19配置各96条件的每 seed、均值和样本SD；`FACTOR_DESCRIPTIVES.csv` 按模态组、位置和支持坐标窗口比例分组。先 random replicate 平均，再条件等权，再 seed 平均，不能把144视图直接等权。条件 coverage 使用单次728条 attempted总体，非独立新样本；无合法窗口 CLEAN_ONCE，未删除样本。
+
+`SIGN_DISAGREEMENT.csv` 保存全部候选和 seed 的分类/回归符号不一致率。严格0为Neutral；不为减少不一致而重定义标签或拟合新阈值。
+
+## 来源、可恢复性与局限
+
+SOURCE SHA256：`66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd`。训练 seeds17/29/43，mask roots2207/1103。设计、公式与公开论文的采用/否决见 `docs/research/S02/PROTOCOL.md` 和 `SOURCES.md`；外部论文效果不是本赛题结果。
+
+`MODEL_REGISTRY.json` 绑定 M2-s17 best checkpoint/config/code 与旧冠军哈希。模型、normalizer、optimizer/RNG、私有预测保留本地，公开仓库只有安全聚合；仅凭公开文件不能重新恢复私有权重。`RUN_RECEIPT.json` 记录实际执行命令的路径替代和环境来源。
+
+S02 是看到 S01 结果后的探索；同一个 VALID 参与选轮次、候选和偏置，存在乐观选择偏差。未做 TEST 或附件3/4评价，无显著性结论、无全局最优结论。KNOWN_AVAILABILITY 仅为仿真接口；附件3可靠mask仍 UNKNOWN，自然结构零不能自动解释为人工缺失。正式专项部署和Q3需另获授权。
+
+本轮12/12、15/15全部完成，失败与资源停止计数实际为0；并非将未运行指标填0。旧R01/S01未运行候选仍保留原NOT_RUN状态。新授权已经消费，retry=0，不继续增加fit。

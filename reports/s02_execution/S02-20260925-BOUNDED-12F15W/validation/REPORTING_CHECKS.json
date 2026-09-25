@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "initial_author_synthetic_tests": 10,
+  "closeout_author_synthetic_tests": 12,
+  "closeout_test_exit_code": 0,
+  "reporting_fix": {
+    "problem": "Exporter did not bind final selected_epoch to full frozen selector trace or enforce completed stop boundary.",
+    "scope": "REPORTING_VALIDATION_ONLY",
+    "change": "Require final best_epoch and evaluated_epochs to equal full chooser result, and stop_epoch==length or max100.",
+    "official_training_code_changed": false,
+    "official_metrics_changed": false,
+    "original_draft_export_preserved_outside": true
+  },
+  "all_completed_epoch_rows": 148,
+  "aggregate_members_verified": 38,
+  "manifest_sha256": "f17a92169830ed8bf458579ce8196f94c211496084d46dfbfc070efc9e95708c",
+  "commands": [
+    {
+      "command": "${PYTHON} -B -X utf8 ${PREP}/test_export_results.py",
+      "exit_code": 0,
+      "tests_passed": 12,
+      "kind": "SYNTHETIC_REPORTING_ONLY",
+      "seconds": 12.026,
+      "log_sha256": "c4b3c618af74e3bc094510917fec8a6ebca65dab672dd140ba44148364f83229"
+    },
+    {
+      "command": "${PYTHON} -B -X utf8 ${PREP}/export_results.py --campaign ${S02_PRIVATE_CAMPAIGN} --output ${PREP}/final_export_verified --project ${OFFICIAL_REPOSITORY}",
+      "exit_code": 0,
+      "kind": "READ_ONLY_REAL_AGGREGATE_EXPORT",
+      "members": 38
+    },
+    {
+      "command": "${PYTHON} -B -X utf8 tools/s02_reporting/render_report.py --folder reports/s02_execution/S02-20260925-BOUNDED-12F15W",
+      "exit_code": 0,
+      "kind": "AGGREGATE_REPORT_RENDER",
+      "configurations": 20,
+      "epoch_rows": 148,
+      "sign_rows": 57
+    }
+  ],
+  "self_review_is_independent_approval": false,
+  "final_reporting_tests": {
+    "command": "${PYTHON} -B -X utf8 tools/s02_reporting/test_export_results.py",
+    "exit_code": 0,
+    "tests_passed": 13,
+    "kind": "SYNTHETIC_REPORTING_ONLY",
+    "seconds": 13.727,
+    "log_sha256": "df9c288cd630ef50cfd1aec871827e0487aebf11e66d6497c8e2920d3ca09af6"
+  },
+  "validation_history": [
+    {
+      "tests": 13,
+      "exit_code": 1,
+      "errors": 1,
+      "reason": "New test fixture decoded JSON seed keys as strings before calling selector; test-only correction converts them to integers.",
+      "log_sha256": "6ae986ebaa531d59273d8e74bfd0bbf508549af39646fa50f55706863ea939e1"
+    }
+  ],
+  "model_inference_cost_bound_to_completed_fits": true
+}

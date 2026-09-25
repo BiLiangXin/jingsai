@@ -1,0 +1,11 @@
+{
+  "current_champion": "M2",
+  "seed": 17,
+  "baseline": {
+    "campaign": "S01-20260924T202319Z-30-1cf4769f",
+    "checkpoint_sha256": "f34dc27a35be1c149907852094ba9f69a759fb312e65fbc6e50981a41b24fee1"
+  },
+  "promotion_restore": "winner_restore.json",
+  "terminal_status_sha256": "dce3fba0f2e021567b9eb78a762b3f035fb3d7c2a87d2f14e557134048ce7dff",
+  "comparison_sha256": "80c4e1fdb29bed2ea8f1415f53701c1a46aae7c098eaace9dcc63065062cb203"
+}

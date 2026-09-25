@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-09-25T03:39:18.878993+00:00",
+  "backup_members": 469,
+  "original_campaign_members": 156,
+  "original_member_set_unchanged": true,
+  "all_sha256_and_size_match": true,
+  "old_best_count": 30,
+  "old_last_count": 30,
+  "model_inference_rerun": false,
+  "private_manifest_sha256": "aef9208be9e927c1fe30a6a6c8e1dd68ee35aeab914340f8d2ccd8ea3b2dc811"
+}

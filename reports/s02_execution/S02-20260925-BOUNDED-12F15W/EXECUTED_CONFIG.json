@@ -1,7 +1,7 @@
 {
   "task_id": "S02_CHAMPION_CHALLENGER_IMPROVEMENT",
-  "status": "CLOSED_COMPLETED",
-  "training_authorized": false,
+  "status": "ACTIVE_AUTHORIZED",
+  "training_authorized": true,
   "authorization_id": "S02-EXEC-AUTH-01",
   "campaign_id": "S02-20260925-BOUNDED-12F15W",
   "execution_fit_budget": 12,
@@ -85,8 +85,5 @@
   "partial_campaign_promotion": false,
   "fit_order": "recipe_then_seed",
   "budget_decided_at": "2026-09-25T01:55:45.056850+00:00",
-  "budget_decision_before_new_candidate_evaluation": true,
-  "authorization_status": "CONSUMED",
-  "completed_campaign": "S02-20260925-BOUNDED-12F15W",
-  "terminal_evidence": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/SUMMARY.json"
+  "budget_decision_before_new_candidate_evaluation": true
 }

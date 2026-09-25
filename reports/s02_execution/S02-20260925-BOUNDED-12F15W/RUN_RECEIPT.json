@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "execution_code_commit": "2b44b3d660493f3b20a78362cd4ec52bbe49714e",
+  "execution_config_raw_sha256": "68000338d6fd289b6af6bdfb3c151834d52e22a1203df53236ad9405f78a5deb",
+  "execution_config_canonical_sha256": "32f0001d54944a4775ec786ff00fba1ecabfaed64477c718a10199a3d6d61eec",
+  "source_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+  "started": "2026-09-25T02:27:53.864712+00:00",
+  "finished": "2026-09-25T02:54:33.885515+00:00",
+  "supervisor_total_seconds": 1600.020803,
+  "campaign_seconds": 1593.5939999999973,
+  "supervisor_exit_code": 0,
+  "forced_resource_stop": false,
+  "environment": {
+    "python": "3.11.14",
+    "torch": "2.9.1+cu128",
+    "cuda": "12.8",
+    "cudnn": 91002,
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "threads": 4,
+    "tf32": false
+  },
+  "environment_evidence_scope": "SAME_LOCAL_EXECUTABLE_AND_PREPARATION_RUNTIME_RECEIPT_NOT_A_PER_FIT_TELEMETRY_CAPTURE",
+  "reporting_environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.19045-SP0"
+  },
+  "commands": [
+    {
+      "command": "${PYTHON} -B -X utf8 tools/s02_supervise.py --source ${LOCAL_ALIGNED_SOURCE} --output-dir ${S02_PRIVATE_CAMPAIGN} --backup ${S01_INDEPENDENT_BACKUP} --receipt-dir ${S02_SUPERVISOR_RECEIPTS}",
+      "exit_code": 0,
+      "kind": "ACTUAL_OFFICIAL_CAMPAIGN"
+    },
+    {
+      "command": "${PYTHON} -B -X utf8 ${PREP}/test_export_results.py",
+      "exit_code": 0,
+      "tests_passed": 12,
+      "kind": "SYNTHETIC_REPORTING_ONLY",
+      "seconds": 12.026,
+      "log_sha256": "c4b3c618af74e3bc094510917fec8a6ebca65dab672dd140ba44148364f83229"
+    },
+    {
+      "command": "${PYTHON} -B -X utf8 ${PREP}/export_results.py --campaign ${S02_PRIVATE_CAMPAIGN} --output ${PREP}/final_export_verified --project ${OFFICIAL_REPOSITORY}",
+      "exit_code": 0,
+      "kind": "READ_ONLY_REAL_AGGREGATE_EXPORT",
+      "members": 38
+    },
+    {
+      "command": "${PYTHON} -B -X utf8 tools/s02_reporting/render_report.py --folder reports/s02_execution/S02-20260925-BOUNDED-12F15W",
+      "exit_code": 0,
+      "kind": "AGGREGATE_REPORT_RENDER",
+      "configurations": 20,
+      "epoch_rows": 148,
+      "sign_rows": 57
+    },
+    {
+      "command": "${PYTHON} -B -X utf8 tools/s02_reporting/test_export_results.py",
+      "exit_code": 0,
+      "tests_passed": 13,
+      "kind": "SYNTHETIC_REPORTING_ONLY",
+      "seconds": 13.727,
+      "log_sha256": "df9c288cd630ef50cfd1aec871827e0487aebf11e66d6497c8e2920d3ca09af6"
+    },
+    {
+      "command": "${PYTHON} -B -X utf8 tools/s02_reporting/export_results.py --campaign ${S02_PRIVATE_CAMPAIGN} --output ${PREP}/final_export_cost_verified --project ${OFFICIAL_REPOSITORY}",
+      "exit_code": 0,
+      "kind": "READ_ONLY_REAL_AGGREGATE_EXPORT",
+      "members": 38,
+      "manifest_sha256": "f17a92169830ed8bf458579ce8196f94c211496084d46dfbfc070efc9e95708c"
+    }
+  ],
+  "private_path_substitutions": true,
+  "supervisor_receipt_sha256": "64c9da62d2342dd754b5377e0af7fdcb2b6b7031e02a6f7bf34628e9118ffce4",
+  "training_rerun_by_closeout": false,
+  "restore_scope": "Actual campaign winner restore clean plus144 views; closeout verifies existing receipt and hashes, does not rerun inference"
+}

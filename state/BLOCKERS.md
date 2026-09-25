@@ -28,3 +28,16 @@ Repeated use of VALID for checkpoint, normalizer and configuration selection cau
 No incomplete-campaign blocker is claimed; paper review and publication verification remain.
 
 Actual execution command and environment: `reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/validation/RUN_RECEIPT.json`. The executed activation snapshot is commit `98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7`; its manifest is historical and is intentionally not rewritten to describe the closed authorization.
+
+
+## S02 completed closeout — S02-20260925-BOUNDED-12F15W
+
+VERIFIED:12/12 new fits and15/15 fixed postprocess configurations completed;0failed,0resource stops, retry0. All148 durable completed epochs retained. Execution commit `2b44b3d660493f3b20a78362cd4ec52bbe49714e`, canonical config `32f0001d54944a4775ec786ff00fba1ecabfaed64477c718a10199a3d6d61eec`, source `66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd`; actual commands/environment/timing in `reports/s02_execution/S02-20260925-BOUNDED-12F15W/RUN_RECEIPT.json`. Seeds17/29/43; train/valid mask roots2207/1103. No model computation was rerun during reporting.
+
+Current champion is **M2 fixed seed17**, restored on clean+144views with exact prediction tensor values and atomically promoted under the preregistered six-metric guard. OldS01 weights/evidence and469backup members rehashed unchanged. Registry: `reports/s02_execution/S02-20260925-BOUNDED-12F15W/MODEL_REGISTRY.json`. S02 authorization is CONSUMED; training_authorized=false, no next stage. The formerS02 NOT_RUN/preregistration statements remain historical, not current result states.
+
+Question: do fixed component combinations or bounded residual-fusion changes improve the knownS01 baseline? M2 mean cleanF1=0.621305 vs0.601850, attempted96F1=0.606892 vs0.586218; full means/SD and fixed17 sixmetrics in `reports/s02_execution/S02-20260925-BOUNDED-12F15W/RESULTS.md`. W1beta0 improves regression with unchangedclassification but ranks belowM2. M1 is in cleanPareto but misses strictmeanF1guard; M3 augmentation does not improve attempted96 means overM1; M4KD does not beatM2. No expanded search or luckyseed selection.
+
+All results/negative tradeoffs,19candidate conditiongrids and57candidate-seed sign-inconsistency records preserved. `reports/s02_execution/S02-20260925-BOUNDED-12F15W/EPOCH_CURVES.csv` contains all148epochs; TRAIN online curves are currentview/preupdate diagnostics, not clean endcheckpoint performance. Technical reviewer found a missing finalcheckpoint binding in the draft exporter; reporting-only fix passed12syntheticchecks and realaggregate verification, no trainingcode/metrics changed.
+
+Evidence: VERIFIED for recorded TRAIN/VALID outcomes and byte hashes; SPECIFIED for protocol/authorization; HYPOTHESIS for generalizable mechanisms; UNKNOWN for TEST/special performance and Attachment3 reliablemasks. RepeatedVALIDselection is optimistic, seedSD is not significance. D-DATA01..07/R01/S01/LATEST_RUN unchanged; no external sentimentdata/weights, TEST/special/Q1/Q3, Release or webpageZIP. Next: paper figures and writing from existing evidence; future official evaluation/deployment requires separate authorization.
