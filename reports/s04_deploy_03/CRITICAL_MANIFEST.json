@@ -1,0 +1,54 @@
+{
+  "task_id": "S04_VISIBLE_UNK_FINAL_INFERENCE",
+  "pipeline_id": "E1_VISIBLE_UNK_M2_V1",
+  "critical_files": [
+    {
+      "path": "tools/s04_e1_visible_unk.py",
+      "sha256": "6c08cbd5417046da185bf1bc675057fb4cd2f58cd7c46771ab4b1b6edd5c1235"
+    },
+    {
+      "path": "configs/s04_deploy_03.json",
+      "sha256": "1bb1d2138cd3de8217c011ecc4ab14df0b723125ae9ad55ef394204f89bcc227"
+    },
+    {
+      "path": "docs/research/S04/DEPLOY_03_PROTOCOL.md",
+      "sha256": "b75d0b292cbacb6b2d76c947019aba6c6156918e174959cf4b8b8e9002da32c8"
+    },
+    {
+      "path": "tests/test_stage_s04_deploy_03.py",
+      "sha256": "4c33a0df33f6e1a8644953c5fe6addfe655b2d9fbf0eb1413dc50f50502a4be1"
+    },
+    {
+      "path": "src/mosei/s04/inference.py",
+      "sha256": "863c74f1cf053e12f3c46a81b6c9bdc8149eb01b438f8431bb6d0b95d38b199c"
+    },
+    {
+      "path": "src/mosei/s03/core.py",
+      "sha256": "8398f4197c016850d929c3979649bca7cde9bee2c7b315b55ec3e34d2015a659"
+    },
+    {
+      "path": "src/mosei/s02/models.py",
+      "sha256": "b0cfb6915ed70da68b6ebab29af80c1c6e4a9822a2e3ee275564cda4707fcd23"
+    },
+    {
+      "path": "src/mosei/s01/contracts.py",
+      "sha256": "03040b7725a22dd150bb5215f2a0697eaa6bc936ea32ed6df5d028171fe3d030"
+    },
+    {
+      "path": "src/mosei/s01/normalization.py",
+      "sha256": "4c5bad3c4f26a9c2b8e6aaebdc24d767b327553ba723490f82ff3ac7f3c75c3e"
+    },
+    {
+      "path": "research/r01/reference.py",
+      "sha256": "1cd4b73bb748284b4941625d92be89522771eff8a11e4044547e5f513ea62495"
+    },
+    {
+      "path": "reports/s04_deploy_03/E1_VALIDATION.json",
+      "sha256": "910e5cba942e2acfb797b262e1ab9560089025b1bdd03b077e25fbd570f80569"
+    },
+    {
+      "path": "reports/s04_deploy_03/A4_COVERAGE.json",
+      "sha256": "c6bef2619a6fe807f0c82f5e7a2f932a4328d1660ba62a42cc3c160ae9e1257b"
+    }
+  ]
+}

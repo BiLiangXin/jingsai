@@ -1,0 +1,18 @@
+{
+  "task_id": "S04_VISIBLE_UNK_FINAL_INFERENCE",
+  "pipeline_id": "E1_VISIBLE_UNK_M2_V1",
+  "status": "PASS",
+  "manifest_sha256": "1ead6cb14028ebe73330538ef26c627063ba627fc750b10aed9c7cef8936ed89",
+  "private_valid_gate_sha256": "910e5cba942e2acfb797b262e1ab9560089025b1bdd03b077e25fbd570f80569",
+  "full_valid_clean_replay": "728/728_PASS",
+  "unk_pressure_rows": 32,
+  "unk_pressure_class_changes": 14,
+  "attachment3_preflight_source_hashes": "30/30_PASS",
+  "synthetic_tests": "8/8_PASS",
+  "synthetic_test_command": "encoder_env/Scripts/python.exe -m unittest discover -s tests -p test_stage_s04_deploy_03.py -v",
+  "synthetic_test_exit_code": 0,
+  "independent_read_only_review": "PASS",
+  "model_training_fits": 0,
+  "special_metrics": null,
+  "post_commit_runtime_checks_required": true
+}

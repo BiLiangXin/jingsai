@@ -1,3 +1,16 @@
+task_id: S04_VISIBLE_UNK_FINAL_INFERENCE
+status: ACTIVE_AUTHORIZED
+authorization: S04-DEPLOY-03
+model: GPT-6 Sol / High (user requested; no host telemetry)
+predictor_training_fit_budget: 0
+preprocessing_policy: E1_VISIBLE_UNK_M2_V1 only
+compute_deadline_utc: 2026-09-25T10:12:40Z
+source: aligned Attachment3 only; Attachment2 VALID for locked replay/diagnostic
+gate: full VALID, fixed UNK diagnostic, synthetic tests, independent read-only review, safe published commit before final inference
+old_authorities: S01/S02/S03/S04/S04-CLARIFY-02 CONSUMED
+
+# Historical S04-CLARIFY-02 — consumed
+
 task_id: S04_CLARIFIED_PREPROCESS_AND_MAPPING
 status: CLOSED_PARTIAL
 authorization: S04-CLARIFY-02

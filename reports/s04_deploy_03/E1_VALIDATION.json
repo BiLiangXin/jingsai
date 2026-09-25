@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "pipeline_id": "E1_VISIBLE_UNK_M2_V1",
+  "token_vocab": {
+    "id100": "[UNK]",
+    "ids": {
+      "unk": 100,
+      "pad": 0,
+      "cls": 101,
+      "sep": 102,
+      "mask": 103
+    },
+    "vocab_size": 30522
+  },
+  "prior_96_replay_verified": true,
+  "initial_strict_replay_failed_preserved": true,
+  "clean_valid": {
+    "rows": 728,
+    "active_positions": 18628,
+    "feature_allclose_fixed_envelope": true,
+    "max_feature_abs": 0.00028514862060546875,
+    "max_logit_abs": 4.5299530029296875e-06,
+    "max_regression_abs": 3.069639205932617e-06,
+    "argmax_agreement": 728
+  },
+  "unk_pressure": {
+    "rows": 32,
+    "condition": [
+      "T",
+      "0.3",
+      "middle"
+    ],
+    "root": 1103,
+    "eligible": 32,
+    "clean_once": 0,
+    "class_changed": 14,
+    "max_abs_logit_delta": 1.9268866181373596,
+    "max_abs_regression_delta": 1.1184226870536804,
+    "not_old_attempted96": true,
+    "not_special_corruption_generator": true
+  },
+  "checkpoint_sha256": "f99426be8d90b8abf196faf9cf92a41c5ab607da661a7a91530f1fe481a0ceb9",
+  "encoder_weights_sha256": "097417381d6c7230bd9e3557456d726de6e83245ec8b24f529f60198a67b203a",
+  "scaler_digest": "83a95b4acd9254fdd20675832ca4d25ed9e5bd62f284e7ec48e3cc6cb996cf2e",
+  "model_state_unchanged": true,
+  "special_metrics": null,
+  "training_fits": 0
+}
