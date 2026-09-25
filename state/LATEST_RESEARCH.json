@@ -470,5 +470,35 @@
       "TEAM_FINAL_PACKAGE_AND_NUMERIC_REPRO_REVIEW_PENDING"
     ],
     "protocol": "docs/research/S05/PROTOCOL.md"
-  }
+  },
+  "s06_autoqc_current": {
+  "task_id": "S06_AUTOMATED_EVIDENCE_QC",
+  "authorization_id": "S06-AUTOQC-01",
+  "status": "COMPLETED_WITH_EVIDENCE_GAPS",
+  "new_training_fits": 0,
+  "new_human_reviews": 0,
+  "q1_processed": 100,
+  "a4_processed": 20,
+  "q1_qc_counts": {
+    "QC0": 59,
+    "QC1": 31,
+    "QC2": 1
+  },
+  "a4_window_acoustic_basis": {
+    "DUAL_CONSISTENT_ESTIMATE": 39,
+    "SINGLE_ASR_ESTIMATE": 34,
+    "ESTIMATOR_CONFLICT": 33,
+    "TEXT_ONLY": 14
+  },
+  "a4_frame_basis": {
+    "NEAR_FRAME": 73,
+    "NO_ACOUSTIC_FRAME_REFERENCE": 47
+  },
+  "natural_alignment_accuracy": "UNKNOWN_NO_TIMING_TRUTH",
+  "official_av_feature_production_timing": "UNKNOWN",
+  "a4_original_predictions_unchanged": true,
+  "candidate_package_sha256": "496358a8c7483eb908be835c3ac940ddec5087c59c914e1a0aea1c0ef7123891",
+  "candidate_package_bytes": 13468472,
+  "fresh_unpack_verify": "PASS"
+}
 }

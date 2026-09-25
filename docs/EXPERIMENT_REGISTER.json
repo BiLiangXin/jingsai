@@ -6620,5 +6620,21 @@
     ],
     "result": "reports/s05_closeout/RESULT.json",
     "tests": "reports/s05_closeout/TESTS.json"
-  }
+  },
+  "s06_autoqc": {
+  "id": "S06-AUTOQC-01",
+  "task": "S06_AUTOMATED_EVIDENCE_QC",
+  "status": "COMPLETED_WITH_EVIDENCE_GAPS",
+  "fits": 0,
+  "human_reviews": 0,
+  "q1": 100,
+  "a4": 20,
+  "metrics": null,
+  "evidence_level": "VERIFIED_AUTOMATED_DIAGNOSTIC",
+  "limitations": [
+    "natural alignment accuracy unknown",
+    "official AV feature production timing unknown"
+  ],
+  "result": "reports/s06_autoqc/Q1_AGGREGATE.json; reports/s06_autoqc/A4_AGGREGATE.json"
+}
 }

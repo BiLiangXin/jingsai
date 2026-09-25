@@ -1,0 +1,40 @@
+{
+  "stage": "S06",
+  "data_kind": "official_source_audio_and_frozen_evidence_only",
+  "evidence": [
+    {
+      "requirement": "Q1 100 rows source/hash/frame audit",
+      "path": "reports/s06_autoqc/Q1_AGGREGATE.json",
+      "file_actual_sha256": "d68ac2119fe62efc3ce6b37907bd40dcfb015bfc735690e89c02346653419020"
+    },
+    {
+      "requirement": "A4 20 rows and 120 windows machine audit",
+      "path": "reports/s06_autoqc/A4_AGGREGATE.json",
+      "file_actual_sha256": "4bde001047639b3900c2827491d722aa427deaf19525bbb1c8a260e4c7199b75"
+    },
+    {
+      "requirement": "Frozen ASR protocol",
+      "path": "docs/research/AUTOQC/PROTOCOL.json",
+      "file_actual_sha256": "RECORDED_IN_MANIFEST"
+    },
+    {
+      "requirement": "Paper layout check",
+      "path": "reports/s06_autoqc/PAPER_AUTO_CHECK.json",
+      "file_actual_sha256": "RECORDED_IN_MANIFEST"
+    },
+    {
+      "requirement": "Fresh-unpack candidate verification",
+      "path": "S06 private SUBMISSION_CANDIDATE_S06.zip",
+      "file_actual_sha256": "496358a8c7483eb908be835c3ac940ddec5087c59c914e1a0aea1c0ef7123891"
+    }
+  ],
+  "tests": {
+    "test_autoqc_core": "4 passed",
+    "test_autoqc_a4": "3 passed",
+    "fresh_unpack_verify": "PASS",
+    "zip_crc_manifest_path_safety": "PASS"
+  },
+  "training_fits": 0,
+  "new_human_reviews": 0,
+  "status": "PACKAGED_WITH_EVIDENCE_GAPS"
+}

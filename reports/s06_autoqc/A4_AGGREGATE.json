@@ -1,0 +1,39 @@
+{
+  "task_id": "S06_AUTOMATED_EVIDENCE_QC",
+  "source_private_audit_sha256": "965197bf5f040de9e5ad3171d37fa9dbc9e52d6b5fa4831c67a1bfe807a25fe9",
+  "source_private_aggregate_sha256": "f90f1f21a28f3a3ee11fd77886f8387961ba988e9c2b4026c2b7ad6dccc869d6",
+  "rows": 20,
+  "key_windows": 120,
+  "source_h_all_rows": true,
+  "original_predictions_and_windows_unchanged": true,
+  "original_mapped_csv_sha256": "ae3698d3df544cf0ec3b0f82f2bdd6d669be86582cfe7a4c862aa17b7b572f7f",
+  "text_basis": {
+    "TEXT_SPAN": 120
+  },
+  "acoustic_basis": {
+    "DUAL_CONSISTENT_ESTIMATE": 39,
+    "ESTIMATOR_CONFLICT": 33,
+    "SINGLE_ASR_ESTIMATE": 34,
+    "TEXT_ONLY": 14
+  },
+  "reference_frame_status": {
+    "NEAR_FRAME": 73,
+    "NO_ACOUSTIC_FRAME_REFERENCE": 47
+  },
+  "reason_codes": {
+    "AMBIGUOUS_OR_UNMATCHED_WORD": 23,
+    "ASR_TIME_MISSING_OR_INVALID": 28,
+    "BOUNDARY_DELTA_EXCEEDS_THRESHOLD": 14,
+    "TRANSCRIPT_DISAGREEMENT": 12
+  },
+  "unmapped_token_reason_counts": {
+    "PUNCTUATION_NO_WORD_SPAN": 32,
+    "SPECIAL_TOKEN_NO_DIRECT_WORD_SPAN": 11
+  },
+  "records_all_key_windows_dual_and_near_frame": 2,
+  "records_with_evidence_gap_or_conflict": 18,
+  "official_av_feature_production_timing": "UNKNOWN",
+  "natural_alignment_accuracy": null,
+  "new_human_reviews": 0,
+  "note": "Machine evidence levels are not ground truth, probability, or AV feature production timing."
+}

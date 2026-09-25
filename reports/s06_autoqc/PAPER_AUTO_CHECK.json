@@ -1,0 +1,18 @@
+{
+  "task_id": "S06_AUTOMATED_EVIDENCE_QC",
+  "source_docx": "S06 private PAPER_S06_AUTOQC_CANDIDATE.docx",
+  "docx_sha256": "39d2e3f8eeacb250cc5b48b4f6d65f9f7bef68e92a7c34afd64e95d558678392",
+  "pdf_sha256": "8f8bab91666b52ba378723b27ee3bad75a210af0f749869e6162e32b582ebdb2",
+  "render_backend": "Microsoft Word COM ExportAsFixedFormat (LibreOffice unavailable)",
+  "rendered_pages": 9,
+  "visual_page_check": "PASS",
+  "checks": {
+    "page_clipping_or_overlap": "PASS",
+    "formula_and_figure_readability": "PASS",
+    "table_overflow": "PASS",
+    "encoding_glyphs": "PASS",
+    "anonymous_metadata_source_preserved": "PASS",
+    "unsupported_claims": "RETAINED_AS_UNKNOWN_OR_LIMITATION"
+  },
+  "note": "The PDF was rendered and each page was visually inspected; this is a layout check, not a scientific truth check."
+}\n

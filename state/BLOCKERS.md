@@ -69,3 +69,9 @@ Attachment3's 30 aligned rows have a private unlabeled prediction CSV under the 
 ## S05 closeout — current
 
 No model execution blocker remains in this consumed task. Submission gate remains open: Q1 team human review 0/100, A4 team human review 0/20; eight A4 records have text positions but no acoustic estimate; official audio/vision feature-production times UNKNOWN. Private candidate package passes file/size/anonymity checks but raw-token numeric reproduction needs the pinned generic BERT resource and official inputs; team final content/contest checklist not signed. See reports/s05_closeout/RESULT.json.
+
+## S06 automated QC — 2026-09-25
+
+- PACKAGED_WITH_EVIDENCE_GAPS: Q1 QC2 supports 1/100 under fixed strict criteria; A4 has 18/20 records with at least one acoustic/frame evidence gap or conflict.
+- Natural alignment accuracy and official audio/vision feature production timing remain UNKNOWN. These are evidence limits, not reasons to delete predictions.
+- No new human review or training fit was performed.

@@ -149,3 +149,9 @@ Attachment4 remains PARTIAL: original20 predictions/contributions unchanged; all
 ## S05-CLOSEOUT-01 — evidence workbench and anonymous candidate, 2026-09-25
 
 Question: can the frozen A4 results be made reviewable without changing predictions? Hypothesis: exact text replay, declared acoustic estimates, measured nearby video PTS and fixed per-modality deletion can supply bounded evidence cards. Method: preserve the 30-row A3 SHA and original 20-row A4 columns; test one fixed width-3 per-modality deletion on 36 locked VALID cases (2340 invariants), then one 20-row supplement; package and inspect the latest paper. Adopted because original joint deletion does not isolate modalities. Rejected index/50 timing, nontext window reselection, AI human-signoff and numerical raw-token reproduction claims without the generic BERT dependency. Actual tests, hashes, environment and negative attempts: reports/s05_closeout/TESTS.json and RESULT.json. Results: 12 estimated acoustic/8 text-only A4 cases, 120 text-located original windows, 39 containing unmapped token positions, 0 human checks, 0 fits, special metrics null. New 8-page paper and 273-member 13,448,656-byte private candidate passed visual/integrity/anonymity checks; official AV feature timing and package end-to-end token reproducibility remain UNKNOWN/DEPENDENCY_REQUIRED. S05 authority consumed; no contest upload.
+
+## S06 claim mapping (2026-09-25T15:03:00Z)
+
+- Automated QC coverage and counts -> reports/s06_autoqc/Q1_AGGREGATE.json and reports/s06_autoqc/A4_AGGREGATE.json (machine evidence; no truth claim).
+- Frozen ASR protocol -> docs/research/AUTOQC/PROTOCOL.json; source revision and hashes recorded there.
+- Natural alignment accuracy -> UNKNOWN because no word-level timing truth exists.
