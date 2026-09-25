@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
-from autoqc_a4 import check_unchanged_card, unmapped_ordinary_or_unknown
+from autoqc_a4 import check_unchanged_card, feature_path, unmapped_ordinary_or_unknown
 
 
 class A4ContractTests(unittest.TestCase):
@@ -39,6 +39,18 @@ class A4ContractTests(unittest.TestCase):
                                                        {"reason": "PUNCTUATION_NO_WORD_SPAN"}]))
         self.assertTrue(unmapped_ordinary_or_unknown([{"reason": "UNMAPPED_ORDINARY"}]))
         self.assertTrue(unmapped_ordinary_or_unknown([{}]))
+
+    def test_relative_feature_binding(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "videos").mkdir()
+            video = root / "videos" / "01.mp4"
+            feature = root / "01.pkl"
+            feature.write_bytes(b"synthetic")
+            self.assertEqual(feature_path({"source_file": "aligned/01.pkl"}, video), feature)
+            with self.assertRaises(ValueError):
+                feature_path({"source_file": "aligned/02.pkl"}, video)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,17 @@
+{
+  "task_id": "S06_AUTOMATED_EVIDENCE_QC",
+  "event": "A4_PREPARATION_RELATIVE_SOURCE_PATH_REPAIR",
+  "first_attempt": "FAILED_BEFORE_ASR_AT_RELATIVE_FEATURE_PATH",
+  "first_attempt_preserved_private": true,
+  "scope": "Resolve feature PKL beside verified video rather than current working directory; no split lookup or predictor change",
+  "independent_read_only_technical_review": "PASS_FOR_A4_GATE",
+  "reviewed_sha256": {
+    "tools/autoqc_a4.py": "7ef4726ec04bbd74652cadf577bca77eec08583d51507ea0c27988065bfdcd47",
+    "tests/test_autoqc_a4.py": "232b54f7bc222c48fda9b021e88789935294b219a1b60390c5f2c853523959ef"
+  },
+  "synthetic_tests": 7,
+  "synthetic_tests_exit_code": 0,
+  "actual_official_feature_source_hashes_read_only_verified": 20,
+  "a4_final_asr_or_qc_at_review_time": "NOT_RUN",
+  "human_truth_certified": false
+}

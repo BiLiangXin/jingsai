@@ -37,6 +37,16 @@ def video_path(card):
     return Path(url2pathname(unquote(url.path)))
 
 
+def feature_path(card, video):
+    # Official aligned A4 organization: sibling feature PKL and videos/<stem>.mp4.
+    if video.parent.name != "videos" or Path(card["source_file"]).name != video.stem + ".pkl":
+        raise ValueError("A4_SOURCE_ORGANIZATION_MISMATCH")
+    feature = video.parent.parent / (video.stem + ".pkl")
+    if not feature.is_file():
+        raise ValueError("A4_FEATURE_MISSING")
+    return feature
+
+
 def prepare(cards_path, prior_dir, output, ffmpeg):
     cards = json.loads(Path(cards_path).read_text(encoding="utf-8"))["cards"]
     if len(cards) != 20:
@@ -48,7 +58,7 @@ def prepare(cards_path, prior_dir, output, ffmpeg):
         video = video_path(card)
         if sha(video) != card["source_video_sha256"] or sha(video) != prior["video_sha256"]:
             raise ValueError("VIDEO_SOURCE_HASH_MISMATCH")
-        if sha(card["source_file"]) != prior["source_sha256"]:
+        if sha(feature_path(card, video)) != prior["source_sha256"]:
             raise ValueError("FEATURE_SOURCE_HASH_MISMATCH")
         folder = output / f"{i:03d}"
         folder.mkdir()
@@ -122,7 +132,7 @@ def audit(cards_path, prior_dir, audio_dir, asr_dir, frozen_csv, output):
         video = video_path(card)
         check_unchanged_card(card, source_row)
         h = {"video_hash_ok": sha(video) == prior["video_sha256"] == binding["video_sha256"],
-             "feature_hash_ok": sha(card["source_file"]) == prior["source_sha256"] == binding["feature_sha256"],
+             "feature_hash_ok": sha(feature_path(card, video)) == prior["source_sha256"] == binding["feature_sha256"],
              "audio_hash_ok": sha(Path(audio_dir) / f"{i:03d}" / "audio.wav") == binding["audio_sha256"] == asr["audio_sha256"],
              "audio_offset_ok": abs(binding["audio_start_pts"] - prior["audio_start_pts"]) <= .002}
         if not all(h.values()):
