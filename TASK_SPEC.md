@@ -1,3 +1,16 @@
+task_id: S07_EVIDENCE_FIRST_PAPER_WRITING_PACKAGE
+status: WRITING_READY_WITH_EXPLICIT_GAPS_AUTHORITY_CONSUMED
+authorization: S07-WRITING-EXPORT-01
+model: GPT-6 Sol / High requested; host telemetry unavailable
+new_training_fits: 0
+new_asr_runs: 0
+new_special_inference_runs: 0
+scope: private evidence-first web writing package and safe aggregate publication only
+source: docs/research/S07/EXPORT_RECEIPT.md; reports/s07_writing/RESULT.json
+no_release_or_contest_upload: true
+
+# Historical S05 and S06 authorities below are consumed; their old status lines do not authorize a restart.
+
 task_id: S05_EVIDENCE_REVIEW_AND_FINAL_PACKAGE
 status: READY_FOR_TEAM_REVIEW_AUTHORITY_CONSUMED
 authorization: S05-CLOSEOUT-01

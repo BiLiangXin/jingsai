@@ -1,0 +1,32 @@
+{
+  "stage": "S07",
+  "data_kind": "AGGREGATE_WRITING_EXPORT",
+  "status": "WRITING_READY_WITH_EXPLICIT_GAPS",
+  "evidence": [
+    {
+      "requirement": "S07_SAFE_EVIDENCE",
+      "path": "docs/research/S07/EXPORT_RECEIPT.md",
+      "sha256": "1b795d85bc3e814828701074c454b7a11978a5dae9daaad6a8c5792fa3b5e038"
+    },
+    {
+      "requirement": "S07_SAFE_EVIDENCE",
+      "path": "reports/s07_writing/RESULT.json",
+      "sha256": "b3d0479f66176df388d1773d2e8dd96ec11d166b76206f0e3452e75dc8295541"
+    },
+    {
+      "requirement": "S07_SAFE_EVIDENCE",
+      "path": "tests/test_stage_s07_writing.py",
+      "sha256": "ff9bb48817bf84ad77d2cb2167c4e783d9d4afb6d549ffd44cf2f7a43932dc80"
+    }
+  ],
+  "actual_tests": [
+    {
+      "command": "python -m pytest -q tests/test_stage_s07_writing.py",
+      "exit_code": 0,
+      "passed": 2,
+      "failed": 0
+    }
+  ],
+  "private_zip_in_git": false,
+  "new_model_fits": 0
+}

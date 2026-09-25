@@ -75,3 +75,7 @@ No model execution blocker remains in this consumed task. Submission gate remain
 - PACKAGED_WITH_EVIDENCE_GAPS: Q1 QC2 supports 1/100 under fixed strict criteria; A4 has 18/20 records with at least one acoustic/frame evidence gap or conflict.
 - Natural alignment accuracy and official audio/vision feature production timing remain UNKNOWN. These are evidence limits, not reasons to delete predictions.
 - No new human review or training fit was performed.
+
+## After S07 writing export — current
+
+The web-writing source package is verified, but the full paper is not yet written. Natural word-timing accuracy, official audio/vision feature-production timestamps, and Attachment3/4 sentiment performance remain UNKNOWN without truth. Only 2/20 A4 cases satisfy the strict all-window dual-acoustic/near-frame condition; the other 18 have at least one evidence gap or conflict. Offline original-token reproduction still needs the pinned generic BERT resource and official input; S07 did not rerun it. The private web-writing ZIP is not the final anonymous competition package. See `docs/research/S07/EXPORT_RECEIPT.md`.

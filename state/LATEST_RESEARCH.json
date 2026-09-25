@@ -435,7 +435,7 @@
     "result": "reports/s04_clarify_02/RESULT.json",
     "next_stage_authorized": false
   },
-  "latest_completed_task_id": "S05_EVIDENCE_REVIEW_AND_FINAL_PACKAGE",
+  "latest_completed_task_id": "S07_EVIDENCE_FIRST_PAPER_WRITING_PACKAGE",
   "s04_deploy_03": {
     "task_id": "S04_VISIBLE_UNK_FINAL_INFERENCE",
     "status": "A3_COMPLETE_A4_PARTIAL",
@@ -500,5 +500,17 @@
   "candidate_package_sha256": "496358a8c7483eb908be835c3ac940ddec5087c59c914e1a0aea1c0ef7123891",
   "candidate_package_bytes": 13468472,
   "fresh_unpack_verify": "PASS"
+},
+"s07_writing_current": {
+  "task_id": "S07_EVIDENCE_FIRST_PAPER_WRITING_PACKAGE",
+  "authorization_id": "S07-WRITING-EXPORT-01",
+  "status": "WRITING_READY_WITH_EXPLICIT_GAPS",
+  "new_training_fits": 0,
+  "new_asr_runs": 0,
+  "new_special_inference_runs": 0,
+  "model_numeric_reproduction": "NOT_RUN",
+  "source_commit": "360550fb083f7d8474040a815f8f26aff16c32d8",
+  "result": "reports/s07_writing/RESULT.json",
+  "final_contest_submission_ready": false
 }
 }

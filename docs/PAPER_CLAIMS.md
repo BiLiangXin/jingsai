@@ -155,3 +155,7 @@ Question: can the frozen A4 results be made reviewable without changing predicti
 - Automated QC coverage and counts -> reports/s06_autoqc/Q1_AGGREGATE.json and reports/s06_autoqc/A4_AGGREGATE.json (machine evidence; no truth claim).
 - Frozen ASR protocol -> docs/research/AUTOQC/PROTOCOL.json; source revision and hashes recorded there.
 - Natural alignment accuracy -> UNKNOWN because no word-level timing truth exists.
+
+## S07 web-writing claim boundary — 2026-09-26 Beijing
+
+Use `reports/s07_writing/RESULT.json` and `docs/research/S07/EXPORT_RECEIPT.md` to identify the private source-bound writing package. The executed AutoQC edit ratio is `ED(R,B)/len(R)` for nonempty R; the older draft's `max(len(R),len(B))` was a paper mistake, not a changed algorithm. Q1 QC0/QC1/QC2=59/31/1; all 12 unchanged diagnostic controls were rejected by QC2; conditional perturbation detection has zero originally accepted denominator and null rate. A4 acoustic window counts 39/34/33/14 are categories among 120, while 2/20 is an all-key-window evidence condition, never prediction accuracy. Do not claim natural timestamp accuracy, official AV feature-production timing, special sentiment performance, significance, causal attribution or completed competition submission. Q1's 128/16/39 feature route is separate from M2's 768/74/35 official aligned route.

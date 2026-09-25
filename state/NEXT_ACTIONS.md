@@ -68,3 +68,7 @@ The team should inspect the new private Attachment3 30-row CSV and the updated a
 ## S05 next owner
 
 The team should open the private S05 review workbench `REVIEW_INDEX.html` and `Q1_REVIEW_ENTRY.html`, actually listen/watch, export completed review forms, then inspect the 8-page anonymous paper and candidate ZIP against the contest platform. S05 permission is consumed; do not rerun A3, train, create Release or auto-upload. Scope and hashes: reports/s05_closeout/RESULT.json.
+
+## After S07 writing export — current
+
+Give the private S07 ZIP, standalone all-in-one Markdown and included writer prompt to web GPT-6 Pro to draft the full paper from verified tables, figures and formulas. Preserve source citations and negative results; use `MISSING_MATERIALS.md` for unsupported claims. Then review the full manuscript against contest requirements and independently check final anonymous submission materials before the Beijing 2026-09-27 00:00 deadline. This handoff is not model numeric reproduction, a new experiment or submission authorization.

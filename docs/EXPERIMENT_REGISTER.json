@@ -6636,5 +6636,27 @@
     "official AV feature production timing unknown"
   ],
   "result": "reports/s06_autoqc/Q1_AGGREGATE.json; reports/s06_autoqc/A4_AGGREGATE.json"
+},
+"s07_writing": {
+  "id": "S07-WRITING-EXPORT-01",
+  "task": "S07_EVIDENCE_FIRST_PAPER_WRITING_PACKAGE",
+  "status": "WRITING_READY_WITH_EXPLICIT_GAPS",
+  "fits": 0,
+  "asr_runs": 0,
+  "special_inference_runs": 0,
+  "metrics": null,
+  "model_numeric_reproduction": "NOT_RUN",
+  "tables": 22,
+  "figures": 16,
+  "facts": 28,
+  "formula_bindings": 19,
+  "source_commit": "360550fb083f7d8474040a815f8f26aff16c32d8",
+  "zip_sha256": "1b01711f5787d0ca2ea410e12ce8843c48226a7cd89cbeae661c3f403e6fcbd1",
+  "negative_results": [
+    "natural timing truth unavailable",
+    "official AV production timing unknown",
+    "18/20 A4 cases have at least one strict window evidence gap"
+  ],
+  "result": "reports/s07_writing/RESULT.json"
 }
 }

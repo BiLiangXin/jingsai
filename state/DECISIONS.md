@@ -27,3 +27,7 @@ Current user plus three visually checked contest replies authorize aligned-only 
 ## S04-DEPLOY-03 closeout — 2026-09-25
 
 The current main-research decision authorized one fixed E1_VISIBLE_UNK preprocessing for aligned Attachment3 after explicit replay/review/publication gates. These gates passed and 30 unlabeled predictions were produced. The original M2 seed17 epoch2, TRAIN scaler, V1 and D-DATA-01..07 remain unchanged; no model fit or special selection occurred. This decision is CONSUMED. Attachment4 mapping stays PARTIAL and Q1 human review remains zero. Full evidence: `reports/s04_deploy_03/RESULT.json`; older failures and claims remain historical.
+
+## S07 writing export — 2026-09-26 Beijing
+
+S07-WRITING-EXPORT-01 is CONSUMED. The private web-writing handoff is `WRITING_READY_WITH_EXPLICIT_GAPS`, not a contest submission or scientific approval. M2/scaler/V1/E1, S01–S06 results, prior claims and D-DATA-01..07 remain unchanged. A new paper copy corrects the AutoQC edit-distance denominator to `len(ref)` per executed code; the algorithm, threshold and historical result were not changed. New fits/ASR/special inference 0. No Release or contest upload. Aggregate evidence: `docs/research/S07/EXPORT_RECEIPT.md` and `reports/s07_writing/RESULT.json`.
