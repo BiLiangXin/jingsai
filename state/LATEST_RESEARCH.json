@@ -366,10 +366,10 @@
     "recorded_at": "2026-09-25T03:43:27.277254+00:00",
     "git_publication": "VERIFY_BY_POST_PUSH_RECEIPT"
   },
-  "current_task_id": "S04_IO_COMPATIBILITY_AND_DELIVERY_RECOVERY",
-  "current_stage_status": "S04_CLOSED_PARTIAL_BLOCKED",
+  "current_task_id": "S05_EVIDENCE_REVIEW_AND_FINAL_PACKAGE",
+  "current_stage_status": "S05_READY_FOR_TEAM_REVIEW",
   "current_model_registry": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/MODEL_REGISTRY.json",
-  "historical_top_level_scope": "Existing S01 fields and completed s02_current/s03_current records retained as history; s04_current is the current closed task.",
+  "historical_top_level_scope": "Existing S01 fields and completed s02_current/s03_current records retained as history; s04_current remains historical; s05_current is the current task.",
   "s03_current": {
     "task_id": "S03_Q1_Q3_AND_DEPLOYMENT_READINESS",
     "status": "CLOSED_PARTIAL_BLOCKED",
@@ -434,5 +434,41 @@
     "mandatory_deliverables_complete": false,
     "result": "reports/s04_clarify_02/RESULT.json",
     "next_stage_authorized": false
+  },
+  "latest_completed_task_id": "S05_EVIDENCE_REVIEW_AND_FINAL_PACKAGE",
+  "s04_deploy_03": {
+    "task_id": "S04_VISIBLE_UNK_FINAL_INFERENCE",
+    "status": "A3_COMPLETE_A4_PARTIAL",
+    "authorization_status": "CONSUMED",
+    "new_training_fits": 0,
+    "execution_commit": "72463585b78a1f317d4dc5601f812efe7a494095",
+    "closeout_commit": "e20f2faf0f1bb3e074fa66b2a0a0a8456871e77f",
+    "attachment3_csv": "COMPLETE_30_ROWS_UNLABELED",
+    "attachment3_csv_sha256": "27a62a2a262399a3ecf48e6998fb26703329c0bf2c1f1837ce2f50d225e92adb",
+    "attachment4_csv": "PARTIAL_20_ROWS",
+    "attachment4_csv_sha256": "9f1846d9ad4a1ab9d8a7d968503b87ff5e7f675b9b721855cc7c7eeccfcde3e0",
+    "attachment4_estimated_acoustic_rows": 12,
+    "attachment4_text_only_rows": 8,
+    "q1_human_verified": 0,
+    "a4_human_verified": 0,
+    "special_metrics": null,
+    "official_av_feature_timing": "UNKNOWN",
+    "paper_status": "DRAFT",
+    "result": "reports/s04_deploy_03/RESULT.json"
+  },
+  "s05_current": {
+    "task_id": "S05_EVIDENCE_REVIEW_AND_FINAL_PACKAGE",
+    "status": "READY_FOR_TEAM_REVIEW",
+    "authorization": "S05-CLOSEOUT-01",
+    "authorization_status": "CONSUMED",
+    "new_training_fits": 0,
+    "a3_inference_repeated": false,
+    "a4_old_predictions_immutable": true,
+    "current_blockers": [
+      "A4_HUMAN_REVIEW_ZERO",
+      "OFFICIAL_AV_FEATURE_TIMING_UNKNOWN",
+      "TEAM_FINAL_PACKAGE_AND_NUMERIC_REPRO_REVIEW_PENDING"
+    ],
+    "protocol": "docs/research/S05/PROTOCOL.md"
   }
 }

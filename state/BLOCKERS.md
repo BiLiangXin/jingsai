@@ -65,3 +65,7 @@ Attachment3 clean encoder replay is numerically compatible, but 131 in-support I
 ## After S04-DEPLOY-03 — current
 
 Attachment3's 30 aligned rows have a private unlabeled prediction CSV under the newly authorized visible-UNK policy, so the prior "no Attachment3 CSV" blocker is historical. The organizer's original corruption-to-feature procedure and special performance remain UNKNOWN. Attachment4 has 20 preserved PARTIAL prediction/explanation rows: 12 estimated acoustic and eight text-only mappings; official audio/vision feature coordinates to source time and human checking remain unresolved. Q1 still has 34 unaligned cases and 0/100 human word-boundary checks. The paper is a synchronized anonymous draft, not team/page approved; the complete anonymous competition package has not been rebuilt or uploaded.
+
+## S05 closeout — current
+
+No model execution blocker remains in this consumed task. Submission gate remains open: Q1 team human review 0/100, A4 team human review 0/20; eight A4 records have text positions but no acoustic estimate; official audio/vision feature-production times UNKNOWN. Private candidate package passes file/size/anonymity checks but raw-token numeric reproduction needs the pinned generic BERT resource and official inputs; team final content/contest checklist not signed. See reports/s05_closeout/RESULT.json.

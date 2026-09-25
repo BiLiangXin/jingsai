@@ -1,0 +1,34 @@
+{
+  "stage": "S05",
+  "data_kind": "official",
+  "status": "READY_FOR_TEAM_REVIEW",
+  "evidence": [
+    {
+      "requirement": "S05 protocol, code or verification",
+      "path": "docs/research/S05/PROTOCOL.md",
+      "sha256": "d755acdf9430bd9e2412e70e07ffebbd0822a998a081b4b71cea77fdb692765d"
+    },
+    {
+      "requirement": "S05 protocol, code or verification",
+      "path": "docs/research/S05/CLOSEOUT.md",
+      "sha256": "9bfe2ab70509092936846a12c470f1d6253d1c310073eb1509ddfc70e4dfaefb"
+    },
+    {
+      "requirement": "S05 bounded evidence and candidate review",
+      "path": "reports/s05_closeout/RESULT.json",
+      "sha256": "47250278389a5a79591592fa54bd2eab718638d4ad30af75671261d8c2808427"
+    },
+    {
+      "requirement": "S05 protocol, code or verification",
+      "path": "reports/s05_closeout/TESTS.json",
+      "sha256": "a54d4bbc667b1d60c93cdbd18c1f95ffc860d934ca7246f794773d37283b21f6"
+    },
+    {
+      "requirement": "S05 protocol, code or verification",
+      "path": "tests/test_stage_s05_local.py",
+      "sha256": "d34581339eb814d69c16c59cbd12a58b2fb5cd08a5208f492cb6cb0a2701715d"
+    }
+  ],
+  "training_fits": 0,
+  "special_metrics": null
+}

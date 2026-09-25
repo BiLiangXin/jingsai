@@ -1,0 +1,67 @@
+{
+  "stage": "S05_EVIDENCE_REVIEW_AND_FINAL_PACKAGE",
+  "status": "PASS_WITH_DECLARED_LIMITS",
+  "environment": "Windows, Python 3.11, torch 2.9.1+cu128, transformers 4.44.2; Word 2024; bundled Python for documents; Poppler for page images",
+  "actual_checks": [
+    {
+      "check": "A3 file/source hash, 30-row readback, key/polarity/range",
+      "result": "PASS",
+      "evidence": "private PRECHECK.json",
+      "exit_code": 0
+    },
+    {
+      "check": "A4 original 20 rows and all original columns cell-identical",
+      "result": "PASS",
+      "evidence": "private A4_SUPPLEMENT_RESULT.json and A4_LOCAL_MAPPED_V1/RESULT.json",
+      "exit_code": 0
+    },
+    {
+      "check": "fixed VALID36 original full targets, 2340 window invariants, model state",
+      "result": "PASS",
+      "evidence": "private VALID36_CHECK_V2/VALID36_CHECK.json",
+      "exit_code": 0
+    },
+    {
+      "check": "python -m pytest -q -p no:cacheprovider tests/test_stage_s05_local.py tests/test_stage_s04_clarified.py with PYTHONPATH=src",
+      "result": "PASS_7",
+      "exit_code": 0
+    },
+    {
+      "check": "fresh unzip + python -B verify_bundle.py; all member SHA256/size, set, CRC, safe paths",
+      "result": "PASS_273_MEMBERS_AND_A3_TEXT_CACHE_HASH_AND_PREDICTION_RANGE",
+      "exit_code": 0
+    },
+    {
+      "check": "PDF rendered 8 pages, page images visually checked, DOCX opened by Word",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "check": "private candidate identity/path/credential pattern and DOCX/PDF metadata scan",
+      "result": "PASS_ZERO_HITS",
+      "exit_code": 0
+    }
+  ],
+  "negative_attempts": [
+    {
+      "check": "first VALID36 runner read an old regression attribution card as a scalar",
+      "result": "FAILED_SCHEMA_MISREAD_RETAINED; fixed against old coalition tensor, then V2 pass"
+    },
+    {
+      "check": "original latest DOCX and a direct edited copy failed Word Open despite parse/CRC success",
+      "result": "PAPER_REBUILT_FROM_REGISTERED_SOURCE_TEXT_TABLES_FOUR_FIGURES; ORIGINAL_RETAINED"
+    },
+    {
+      "check": "first candidate manifest omitted a nested figures/MANIFEST.json",
+      "result": "REJECTED; V4 member-set exact pass"
+    }
+  ],
+  "not_run": [
+    "official model training",
+    "A3 inference rerun",
+    "raw-token end-to-end reproduction from package",
+    "team human review",
+    "contest upload",
+    "cached A3 text plus official audio/vision M2 numeric re-inference under S05 no-rerun boundary"
+  ]
+}

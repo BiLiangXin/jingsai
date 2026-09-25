@@ -1,3 +1,14 @@
+task_id: S05_EVIDENCE_REVIEW_AND_FINAL_PACKAGE
+status: READY_FOR_TEAM_REVIEW_AUTHORITY_CONSUMED
+authorization: S05-CLOSEOUT-01
+model: GPT-6 Sol / High (user requested; no host telemetry)
+new_predictor_training_fit_budget: 0
+compute_deadline_utc: 2026-09-25T11:27:03Z
+scope: preserve A3; A4 evidence/workbench and fixed per-modality local explanation; paper; local anonymous candidate
+old_authorities: S01/S02/S03/S04/S04-CLARIFY-02/S04-DEPLOY-03 CONSUMED
+
+# Historical S04-DEPLOY-03 — consumed
+
 task_id: S04_VISIBLE_UNK_FINAL_INFERENCE
 status: CLOSED_PARTIAL_DELIVERY
 authorization: S04-DEPLOY-03

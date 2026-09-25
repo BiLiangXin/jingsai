@@ -64,3 +64,7 @@ Use `docs/research/S04/OFFICIAL_QUESTIONS.md` to seek the exact ID-100 corruptio
 ## After S04-DEPLOY-03 — current
 
 The team should inspect the new private Attachment3 30-row CSV and the updated anonymous paper draft, then perform actual Q1/Attachment4 media checks and resolve the audio/vision feature-to-time mapping needed for a complete Attachment4 deliverable. Reconcile the organizer's final CSV schema and assemble/check the complete anonymous ≤50 MB competition package before its deadline. Do not calculate Attachment3 performance without truth, present acoustic estimates as official timestamps, use the historical incomplete ZIP as a final package, or revive this consumed inference claim. No new training or Release is authorized.
+
+## S05 next owner
+
+The team should open the private S05 review workbench `REVIEW_INDEX.html` and `Q1_REVIEW_ENTRY.html`, actually listen/watch, export completed review forms, then inspect the 8-page anonymous paper and candidate ZIP against the contest platform. S05 permission is consumed; do not rerun A3, train, create Release or auto-upload. Scope and hashes: reports/s05_closeout/RESULT.json.

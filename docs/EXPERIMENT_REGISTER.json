@@ -6596,5 +6596,29 @@
     "tests": "reports/s04_deploy_03/TESTS.json",
     "independent_review": "reports/s04_deploy_03/INDEPENDENT_REVIEW.json",
     "competition_upload": false
+  },
+  "s05_closeout": {
+    "task_id": "S05_EVIDENCE_REVIEW_AND_FINAL_PACKAGE",
+    "status": "READY_FOR_TEAM_REVIEW",
+    "new_training_fits": 0,
+    "official_model_experiments": "NOT_RUN_THIS_TASK",
+    "a3_original_rows": 30,
+    "a3_original_sha256": "27a62a2a262399a3ecf48e6998fb26703329c0bf2c1f1837ce2f50d225e92adb",
+    "a4_original_rows": 20,
+    "a4_original_columns_unchanged": true,
+    "a4_supplement_rows": 20,
+    "fixed_valid36_verified": 36,
+    "a4_estimated_acoustic": 12,
+    "a4_text_only": 8,
+    "q1_human_checked": 0,
+    "a4_human_checked": 0,
+    "special_metrics": null,
+    "negative_results": [
+      "SOURCE_DOCX_WORD_OPEN_FAILED_REBUILT",
+      "FIRST_VALID36_SCHEMA_MISREAD",
+      "FIRST_PACKAGE_MANIFEST_MEMBER_OMISSION"
+    ],
+    "result": "reports/s05_closeout/RESULT.json",
+    "tests": "reports/s05_closeout/TESTS.json"
   }
 }
