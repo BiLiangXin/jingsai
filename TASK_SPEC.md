@@ -175,3 +175,13 @@ Before source access: clean correct Gitbranch/origin andlocal=remoteHEAD, exactc
 Privatecheckpoint/result logs never enterGit. At anycap/failure preserveexistingatomiccheckpoints andallattempts, no automaticretry. Aftercompletion orstop, publish safeaggregateevidence andordinarycommit/push only; noRelease. Maintain canonicalfourledgers; LATEST_RUN stays the priorengineeringrun until a separate formalstage acceptance, while LATEST_RESEARCH records thisactualcampaign outcome. Paperdeadline2026-09-27 00:00Beijing; absolutecompute stop9/25 18:00 leaves30hours.
 
 Actual execution command and environment: `reports/s01_execution/S01-20260924T202319Z-30-1cf4769f/validation/RUN_RECEIPT.json`. The executed activation snapshot is commit `98c2b20a3ea8b01d99b6500fbf27e91ea59c5cb7`; its manifest is historical and is intentionally not rewritten to describe the closed authorization.
+task_id: S06_AUTOMATED_EVIDENCE_QC
+status: ACTIVE_AUTHORIZED_BOUNDED
+authorization: S06-AUTOQC-01
+governance: GOV-AUTOQC-01
+model: GPT-6 Sol / High requested; host telemetry unavailable
+new_predictor_training_fit_budget: 0
+scope: fixed-ASR and deterministic evidence QC, Q1 diagnostics, A4 sidecar, paper and private candidate; no human review prerequisite
+old_authorities: S01/S02/S03/S04/S05 CONSUMED
+protocol: docs/research/AUTOQC/PROTOCOL.json
+no_release_or_contest_upload: true

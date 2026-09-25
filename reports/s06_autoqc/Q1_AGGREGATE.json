@@ -1,0 +1,139 @@
+{
+  "status": "VERIFIED_AUTOMATED_DIAGNOSTIC",
+  "q1_processed": 100,
+  "asr_complete": 100,
+  "source_h_pass": 100,
+  "q1_original_forced_alignment_pass": 66,
+  "ablation": {
+    "qc0_mechanical": 59,
+    "qc1_asr_lexical": 31,
+    "qc2_time_pts_abstention": 1
+  },
+  "acoustic_basis": {
+    "ESTIMATOR_CONFLICT": 63,
+    "TEXT_ONLY": 32,
+    "DUAL_CONSISTENT_ESTIMATE": 3,
+    "SINGLE_ASR_ESTIMATE": 2
+  },
+  "boundary_max_delta_seconds_median": 0.5,
+  "boundary_max_delta_seconds_max": 2.1500000000000004,
+  "q1_descriptive_delta_sensitivity": {
+    "0.1": 0,
+    "0.25": 1,
+    "0.5": 4
+  },
+  "unchanged_copy": {
+    "qc0": {
+      "count": 12,
+      "rejected": 6
+    },
+    "qc1": {
+      "count": 12,
+      "rejected": 9
+    },
+    "qc2": {
+      "count": 12,
+      "rejected": 12
+    }
+  },
+  "matched_pair_perturbation_contrast": {
+    "adjacent_word_swap": {
+      "qc0": {
+        "pairs": 12,
+        "baseline_accepted": 6,
+        "newly_rejected": 6,
+        "detection_fraction": 1.0
+      },
+      "qc1": {
+        "pairs": 12,
+        "baseline_accepted": 3,
+        "newly_rejected": 3,
+        "detection_fraction": 1.0
+      },
+      "qc2": {
+        "pairs": 12,
+        "baseline_accepted": 0,
+        "newly_rejected": 0,
+        "detection_fraction": null
+      }
+    },
+    "negation_change": {
+      "qc0": {
+        "pairs": 1,
+        "baseline_accepted": 0,
+        "newly_rejected": 0,
+        "detection_fraction": null
+      },
+      "qc1": {
+        "pairs": 1,
+        "baseline_accepted": 0,
+        "newly_rejected": 0,
+        "detection_fraction": null
+      },
+      "qc2": {
+        "pairs": 1,
+        "baseline_accepted": 0,
+        "newly_rejected": 0,
+        "detection_fraction": null
+      }
+    },
+    "sidecar_shift_0.5": {
+      "qc0": {
+        "pairs": 12,
+        "baseline_accepted": 6,
+        "newly_rejected": 2,
+        "detection_fraction": 0.3333333333333333
+      },
+      "qc1": {
+        "pairs": 12,
+        "baseline_accepted": 3,
+        "newly_rejected": 1,
+        "detection_fraction": 0.3333333333333333
+      },
+      "qc2": {
+        "pairs": 12,
+        "baseline_accepted": 0,
+        "newly_rejected": 0,
+        "detection_fraction": null
+      }
+    },
+    "sidecar_shift_1.0": {
+      "qc0": {
+        "pairs": 12,
+        "baseline_accepted": 6,
+        "newly_rejected": 6,
+        "detection_fraction": 1.0
+      },
+      "qc1": {
+        "pairs": 12,
+        "baseline_accepted": 3,
+        "newly_rejected": 3,
+        "detection_fraction": 1.0
+      },
+      "qc2": {
+        "pairs": 12,
+        "baseline_accepted": 0,
+        "newly_rejected": 0,
+        "detection_fraction": null
+      }
+    }
+  },
+  "prefix_one_second_silence": {
+    "attempted": 12,
+    "with_unique_matches": 11,
+    "median_max_shift_error_seconds": 0.23999999999999955,
+    "max_shift_error_seconds": 1.0
+  },
+  "duration_matched_audio_swap": {
+    "attempted": 12,
+    "eligible": 12,
+    "source_hash_detected": 12
+  },
+  "natural_alignment_accuracy": null,
+  "limitations": [
+    "No word-level timing truth; this is not alignment accuracy.",
+    "Source hash detection of swapped audio is a binding check, not ASR recognition.",
+    "Baseline QC2 acceptance is low; report unchanged-copy rejection with perturbation detection.",
+    "The 0.10/0.25/0.50 grid is descriptive, not a tuned threshold or risk guarantee."
+  ]
+}

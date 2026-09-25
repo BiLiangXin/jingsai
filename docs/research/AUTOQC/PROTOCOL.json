@@ -1,0 +1,50 @@
+{
+  "task_id": "S06_AUTOMATED_EVIDENCE_QC",
+  "authorization_id": "S06-AUTOQC-01",
+  "governance_decision": "GOV-AUTOQC-01",
+  "status": "FROZEN_BEFORE_FIRST_ASR_RESULT",
+  "predictor_training_fits": 0,
+  "human_review_required_by_this_pipeline": false,
+  "asr": {
+    "backend": "faster-whisper",
+    "package_version": "1.2.1",
+    "repo_id": "Systran/faster-whisper-small.en",
+    "revision": "d1d751a5f8271d482d14ca55d9e2deeebbae577f",
+    "model_bin_sha256": "62b2a45b05ee59acb4a5341b33ee35e041395d378d418a18acfe4c9e768ee37a",
+    "tokenizer_sha256": "929c5252409436dce1b38a75d1abbcb5e132d170d8e324e4e04ed915fa2d22df",
+    "vocabulary_sha256": "ff77588746d3a2595d32ab5b69ffd7b95ce2441ac57533cb66fc3eb575a115cf",
+    "config_sha256": "666a9605530ac1f61fa8177f3702b4dacec9966749e42610839fcc32661d5fae",
+    "device": "cpu",
+    "compute_type": "int8",
+    "language": "en",
+    "task": "transcribe",
+    "temperature": 0,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false,
+    "initial_prompt": null,
+    "hotwords": null,
+    "vad_filter": false,
+    "audio_only_no_reference_prompt": true
+  },
+  "normalization": "NFKC lowercase; regex [a-z]+(?:'[a-z]+)*|[0-9]+; retain negation, digits, order; no expansion",
+  "matching": "word Levenshtein; exact match reported only if present on every optimal path",
+  "thresholds": {
+    "transcript_disagreement_max": 0.35,
+    "target_unique_exact_fraction": 1.0,
+    "dual_path_target_coverage": 1.0,
+    "max_word_boundary_delta_seconds": 0.25,
+    "video_nearest_frame_gap_seconds": 0.10,
+    "q1_descriptive_boundary_sensitivity_seconds": [0.10, 0.25, 0.50]
+  },
+  "q1_diagnostic": {
+    "seed": 17,
+    "maximum_sources": 12,
+    "video_group": "SHA256(video_id) even=development, odd=holdout",
+    "perturbations": ["unchanged_copy", "prefix_one_second_silence_with_reference_shift", "sidecar_shift_0.5", "sidecar_shift_1.0", "deterministic_audio_swap", "adjacent_word_swap", "negation_change"]
+  },
+  "ablation": ["QC0_mechanical", "QC1_plus_free_ASR", "QC2_plus_time_PTS_abstention"],
+  "a4_policy": "Apply once to all 20 after tests and independent exact-hash review; do not use R1 labels in algorithm",
+  "natural_alignment_accuracy": null,
+  "official_av_feature_production_timing": "UNKNOWN"
+}

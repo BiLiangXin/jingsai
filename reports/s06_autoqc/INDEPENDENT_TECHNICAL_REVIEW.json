@@ -1,0 +1,33 @@
+{
+  "task_id": "S06_AUTOMATED_EVIDENCE_QC",
+  "review_type": "independent_read_only_technical",
+  "status": "PASS_FOR_FIXED_A4_AUDIT",
+  "scope": "Algorithm source, six synthetic tests, Q1 V6 aggregate and leakage boundaries; not human audio/video truth certification",
+  "reviewed_sha256": {
+    "tools/autoqc_q1_audit.py": "504565a98c0ab29c5a59ab66551e814720bc8d9df23efd3192c95eae6408336f",
+    "tools/autoqc_a4.py": "c9e2885644142310a0532107d644f3d75337f88d29431b4ff98c76ee7a676c3a",
+    "tools/autoqc_q1_swap_control.py": "002eafc002f4334209acefd15f273de25ea89a86f238500cd35091c1a4edd22e",
+    "tests/test_autoqc_a4.py": "aca4029eac7bbf2894fb389fa25a241a249d59d87249bcb52128cf7995c486aa",
+    "private_q1_v6_short_aggregate": "a1506e33400b7d3b180c516f0fa8b3bbb1cfe178ce6f0e60054d7789316d8afe",
+    "private_extended_q1_aggregate": "a736fe2644fb20ec4b5d52f0aea6ad131898e8ff4708627a6b39a4510c74ef26",
+    "reports/s06_autoqc/Q1_AGGREGATE.json": "d68ac2119fe62efc3ce6b37907bd40dcfb015bfc735690e89c02346653419020"
+  },
+  "independent_test": {
+    "command": "asr_env/Scripts/python.exe -B -m unittest tests.test_autoqc_core tests.test_autoqc_a4",
+    "cases": 6,
+    "exit_code": 0
+  },
+  "resolved_findings": [
+    "A4 frozen CSV hash and prediction/contribution/window equality",
+    "A4 ordinary-or-unknown unmapped token abstention",
+    "A4 absent ASR word time rejection rather than batch crash",
+    "Q1 cumulative QC0 -> QC1 -> QC2 and target-word PTS check"
+  ],
+  "required_negative_results": [
+    "All 12 unchanged diagnostic copies are rejected by strict QC2",
+    "12/12 audio swaps are detected by source hash, not proven ASR recognition",
+    "Natural alignment accuracy is UNKNOWN without timing truth"
+  ],
+  "human_truth_or_team_approval": false,
+  "public_aggregate_note": "Same JSON values as reviewed extended aggregate; public copy uses LF line endings."
+}
