@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "evaluation_guard",
+      "blocked": true,
+      "reason": "Scope closed"
+    },
+    {
+      "name": "special_preflight",
+      "blocked": true,
+      "reason": "Scope closed"
+    }
+  ],
+  "data_opened": false,
+  "model_executed": false
+}

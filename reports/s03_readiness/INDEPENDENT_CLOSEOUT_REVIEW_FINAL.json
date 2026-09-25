@@ -1,0 +1,229 @@
+{
+  "status": "PASS",
+  "independent": true,
+  "review_scope": "Final technical closeout integrity and explicit incomplete-draft status; not special-inference completion or submission approval",
+  "review_inputs_sha256": "fe41e0b0af3e9c30a45168df8df4f29b51c7e9dedc31b7a60f003d39b6e334ea",
+  "critical_files": [
+    {
+      "path": "TASK_SPEC.md",
+      "sha256": "4634493d1aa09f564532baf9516ca04f1d11db3b48db60bff4f8c46e012703e4",
+      "size": 7979
+    },
+    {
+      "path": "configs/s03_execution.json",
+      "sha256": "b2ce5108b66697f3b418404eed6537b289326e282d1203d8dd0b30d51862f78a",
+      "size": 2917
+    },
+    {
+      "path": "docs/EXPERIMENT_REGISTER.json",
+      "sha256": "a74f49ace9bb0de551c1aa6e6c50cf5667b94b5bf798b62ddbf041ede0d1e3df",
+      "size": 223183
+    },
+    {
+      "path": "docs/PAPER_CLAIMS.md",
+      "sha256": "e98930f1fb87e7c435c4e7f376726d78c58c064ceea5b74fddf0375fdd98385a",
+      "size": 19736
+    },
+    {
+      "path": "docs/PROJECT_SUMMARY.md",
+      "sha256": "c227718b034b6ed9fdd751a472a6eac1b9e485c23809fe93f7fc457189d2915a",
+      "size": 14978
+    },
+    {
+      "path": "docs/RESEARCH_LOG.md",
+      "sha256": "64e141c85a8448eabebdaa834c4cdae7b5f187d9992e31d9b787da5aeaef7611",
+      "size": 28155
+    },
+    {
+      "path": "reports/s03_readiness/ATTACHMENT3_RESULT.json",
+      "sha256": "08548cf1ffc6a41be57f77bacc2394cb4d163f57ce2debb91c14bab00c0b08c5",
+      "size": 1087
+    },
+    {
+      "path": "reports/s03_readiness/CLOSED_AUTHORIZATION_CHECK.json",
+      "sha256": "980b5bc4665a2240d58633a59bd19aa15b223b9ca132a2206e0223176e3495c8",
+      "size": 312
+    },
+    {
+      "path": "reports/s03_readiness/CLOSEOUT_COMMANDS.json",
+      "sha256": "cafceaca5dfeaf43cf715ce476b084d4d67e1adcdd5ec392ababc56f1465b6f7",
+      "size": 1888
+    },
+    {
+      "path": "reports/s03_readiness/CLOSEOUT_TESTS.json",
+      "sha256": "911e875250ddf21e6ab0ab18eaca1adeaa542b31e9700dc32e97a421cb8b8d37",
+      "size": 672
+    },
+    {
+      "path": "reports/s03_readiness/EXPORT_SYNTHETIC_CHECK.json",
+      "sha256": "93fbd023eede74ab7321b8f8623ece4a686262e4f04ee25af10f046657cd0d25",
+      "size": 248
+    },
+    {
+      "path": "reports/s03_readiness/FINAL_BACKUP_CHECK.json",
+      "sha256": "b7e4b3459ea9df45074e28462f5668b51cf296a19a1c4a268682c42cac5965ed",
+      "size": 300
+    },
+    {
+      "path": "reports/s03_readiness/FINAL_STATUS.json",
+      "sha256": "9ca84b17ae208cc3844fce50bde185c6efa919fd33837be574290f621c094775",
+      "size": 1412
+    },
+    {
+      "path": "reports/s03_readiness/INDEPENDENT_CLOSEOUT_REVIEW_ROUND1.json",
+      "sha256": "240c445fb580639e54dda5bae95dcea81f8f18aeb1b2ff7f7d68de75b1d2dbc7",
+      "size": 7822
+    },
+    {
+      "path": "reports/s03_readiness/MATERIALS_CHECK.json",
+      "sha256": "ee186620e71a09d659079bd7c7250675036a0cb20e2d13c526b58feef4e4db80",
+      "size": 553
+    },
+    {
+      "path": "reports/s03_readiness/PAPER_CHECKS.json",
+      "sha256": "7c0eef0852fb840715d1eec42e6ff9ae6e9bca33e32fb5c276af907225078a2f",
+      "size": 912
+    },
+    {
+      "path": "reports/s03_readiness/Q1_CASE_ASSET_CHECK.json",
+      "sha256": "cd26bc73003c4cd7bb72502a61988813e23f2c724528c1ff262178390d611172",
+      "size": 507
+    },
+    {
+      "path": "reports/s03_readiness/Q2_GATE.json",
+      "sha256": "c6b7a78b247d88d47071fd7763930cc4a95313b9fff66603ea7e88812fac57c7",
+      "size": 915
+    },
+    {
+      "path": "reports/s03_readiness/RESULT.json",
+      "sha256": "b2bbcaff7a2efd756863b239fcbaf4e0df5015d6488e27238f592044a880cb0a",
+      "size": 1525
+    },
+    {
+      "path": "reports/stages/S03/acceptance.json",
+      "sha256": "3b482fe066d342039d6be231efc03ffc8b8cffdead2bb7fc439c158fb3acdf6b",
+      "size": 2128
+    },
+    {
+      "path": "state/BLOCKERS.md",
+      "sha256": "8339c44068416256fa9a6c7d6e98c7630fd2ce06404a3f564168856f0e82db35",
+      "size": 8936
+    },
+    {
+      "path": "state/DECISIONS.md",
+      "sha256": "1117afcb26eb2b01fb0d4d9f1e0c358e473b694db6fea7df2c56f37e5abb0f51",
+      "size": 2947
+    },
+    {
+      "path": "state/LATEST_RESEARCH.json",
+      "sha256": "b4e00eb0d7b428f25b5ac679da6c7c53bf300ffde35f6f0b66d94e40e456d906",
+      "size": 15857
+    },
+    {
+      "path": "state/NEXT_ACTIONS.md",
+      "sha256": "88b26a1730d7406e9db25b46262e55244fb32297f053b2b8218f51e7f674e17b",
+      "size": 9439
+    },
+    {
+      "path": "tests/test_stage_s03_closeout.py",
+      "sha256": "d87cf0dbda4213cad44b2cf7ad9a9518d3e7dd19a880d16897f26c51f465d785",
+      "size": 1986
+    },
+    {
+      "path": "tools/s03_materials_check.py",
+      "sha256": "a42f67e1c3d2f07855efd0ee99224393b489406b64bde02c9aa187b34aa0e72c",
+      "size": 3905
+    },
+    {
+      "path": "tools/s03_q1_case_verify.py",
+      "sha256": "2033291792820de3a592c003acf96ff38eb58ea9d4ca8548eb119aa4ce33f10d",
+      "size": 2786
+    }
+  ],
+  "base_commit": "c8d33ed4ef3169e49bce3dcfe628d41545e86bf9",
+  "time_utc": "2026-09-25T06:06:51.721064+00:00",
+  "model_requested": "GPT-6 Astra",
+  "reasoning_effort_requested": "medium",
+  "model_setting_evidence": "Task request and user UI attestation; no runtime telemetry claimed",
+  "findings": [],
+  "tests": [
+    {
+      "command": "BUNDLED_PYTHON -B -X utf8 -m unittest discover -s tests -p test_stage_s03_closeout.py -v",
+      "exit_code": 0,
+      "tests": 3
+    },
+    {
+      "command": "BUNDLED_PYTHON -B -X utf8 - [independent ZIP/anonymous metadata/evidence checks]",
+      "exit_code": 0
+    },
+    {
+      "command": "BUNDLED_PYTHON -B -X utf8 - [356 original plus backup SHA256/size checks]",
+      "exit_code": 0
+    },
+    {
+      "command": "BUNDLED_PYTHON -B -X utf8 - [27-file delta/hash/receipt assertions via stdin]",
+      "exit_code": 0,
+      "scope": "This delta only; previous closeout tests retained as historical independent execution evidence"
+    }
+  ],
+  "verified": {
+    "input_file_hashes": 27,
+    "original_and_backup_files_each": 356,
+    "backup_manifest_sha256": "02a91636b1ffb9cc4ff5af1f0588414aa38f7cc9c3bb9bb1d4ee69f610861263",
+    "closeout_checks_sha256": "962998556cd05dae1085376d2c7678cc84cc4c9ebcd702f1e0485c1bdb3ead3f",
+    "zip_sha256": "b834c1ad09052093ca5c04336588a584c6bf1136dcb6717c8670bb9cab7ff03c",
+    "zip_bytes": 12251028,
+    "zip_members": 478,
+    "payload_hashes": 477,
+    "all_mandatory_deliverables_present": false,
+    "permissions_closed": true,
+    "config_status": "CLOSED_PARTIAL_BLOCKED",
+    "authorization_status": "CONSUMED",
+    "retry_budget": 0,
+    "git_remote_execution_commit": "c8d33ed4ef3169e49bce3dcfe628d41545e86bf9",
+    "historical_execution_manifest_explanation_present": true,
+    "original_case_feature_repair_report_and_source_reviewed": true,
+    "gate_current_opened_status_consistent": true
+  },
+  "limitations": [
+    "Special source contents were not opened by reviewer; missing text and one opened object are assessed from bound failure records and fixed execution control flow.",
+    "Q1 original video and extracted preview were not read or regenerated; descriptor/PTS exactness remains the author execution report, whose hash and source code were reviewed.",
+    "Anonymous package checks cover known identity strings, private paths, DOCX XML/relationships, PDF text/metadata and absent INCLUDEPICTURE, not a complete visual or unknown-identity guarantee.",
+    "Private archive explicitly remains incomplete and cannot be submitted; both final special CSVs and verified Q3 source mapping are absent.",
+    "Final closeout commit/push not yet performed; current remote execution commit verified only.",
+    "Earlier model/21-test evidence is historical and was not rerun here.",
+    "CLOSED_AUTHORIZATION_CHECK is an author execution receipt; reviewer checked consistency with closed config and inspected guard ordering, without rerunning either entry point in this delta."
+  ],
+  "boundaries": {
+    "official_tree_written": false,
+    "original_pkl_opened": false,
+    "special_content_opened_by_reviewer": false,
+    "model_executed": false,
+    "claim_modified": false,
+    "new_fits": 0
+  },
+  "resolved_findings": [
+    {
+      "id": "CLOSEOUT-R1",
+      "status": "RESOLVED",
+      "evidence": "Current special_content_opened true; preexecution false retained only in an explicitly historical field; gate remains consumed/blocked."
+    }
+  ],
+  "prior_review_sha256": "240c445fb580639e54dda5bae95dcea81f8f18aeb1b2ff7f7d68de75b1d2dbc7",
+  "delta_checks": {
+    "hash_and_size_matches": 27,
+    "prior_files_changed": [
+      "reports/s03_readiness/Q2_GATE.json"
+    ],
+    "added_files": [
+      "reports/s03_readiness/CLOSED_AUTHORIZATION_CHECK.json",
+      "reports/s03_readiness/CLOSEOUT_COMMANDS.json",
+      "reports/s03_readiness/INDEPENDENT_CLOSEOUT_REVIEW_ROUND1.json"
+    ],
+    "prior_report_copy_exact": true,
+    "author_guard_rejection_record_reviewed": true,
+    "guard_checks_independently_rerun": false,
+    "actual_command_receipt_reviewed": true,
+    "source_media_or_model_work_rerun": false
+  }
+}

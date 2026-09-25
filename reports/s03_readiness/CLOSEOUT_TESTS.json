@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "data_kind": "synthetic",
+  "command": "BUNDLED_PYTHON -B -X utf8 -m unittest discover -s tests -p test_stage_s03_closeout.py -v",
+  "exit_code": 0,
+  "tests": 3,
+  "prior_s03_tests": 9,
+  "prior_s04_tests": 12,
+  "initial_child_stderr_encoding_issue": "First run returned0 but a reader thread reported decoding failure; subprocess -X utf8 correction rerun without error",
+  "other_checks": [
+    "Real single Q1 frame descriptor/PTS and PNG round-trip",
+    "Synthetic exported model strict load and Shapley efficiency",
+    "Private archive SHA256/size/CRC/exact set/path/identity checks"
+  ],
+  "model_performance_test": false
+}

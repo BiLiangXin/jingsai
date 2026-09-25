@@ -367,18 +367,18 @@
     "git_publication": "VERIFY_BY_POST_PUSH_RECEIPT"
   },
   "current_task_id": "S03_Q1_Q3_AND_DEPLOYMENT_READINESS",
-  "current_stage_status": "S03_READY_Q2_ONLY",
+  "current_stage_status": "S03_CLOSED_PARTIAL_BLOCKED",
   "current_model_registry": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/MODEL_REGISTRY.json",
-  "historical_top_level_scope": "Existing S01 fields retained as historical snapshot; current S02 outcome is s02_current.",
+  "historical_top_level_scope": "Existing S01 fields retained; s02_current historical completed training; s03_current is the current closed task.",
   "s03_current": {
     "task_id": "S03_Q1_Q3_AND_DEPLOYMENT_READINESS",
-    "status": "READY_FOR_CONDITIONAL_S04",
+    "status": "CLOSED_PARTIAL_BLOCKED",
     "new_fit_budget": 0,
     "training_authorized": false,
     "compute_deadline": "2026-09-25T16:40:00+08:00",
     "protocol": "docs/research/S03/PROTOCOL.md",
     "backup": "reports/s03_readiness/BACKUP.json",
-    "checkpoint_restored_this_task": false,
+    "checkpoint_restored_this_task": true,
     "new_training_fits": 0,
     "q1_extracted": 100,
     "q1_computed_word_alignment": 66,
@@ -386,9 +386,16 @@
     "q2_profile": "V1",
     "q3_feature_space": "PASS",
     "q3_mapping": "UNVERIFIED",
-    "attachment3_final_inference": "NOT_RUN",
+    "attachment3_final_inference": "BLOCKED",
     "attachment4_final_inference": "BLOCKED",
-    "independent_review": "reports/s03_readiness/INDEPENDENT_REVIEW_FINAL_DELTA.json",
-    "final_manifest_sha256": "159f9d7c42af76c4f5db5e53cd9048488a5d82d2a36cda3410b00be2385681b1"
+    "independent_review": "reports/s03_readiness/INDEPENDENT_REVIEW_PRECONTENT_FIX.json",
+    "final_manifest_sha256": "98fc8b8596ce14c6ee53d34250c19c57869530e6218c0d7497bdba5b443d0f87",
+    "authorization_status": "CONSUMED",
+    "execution_snapshot_commit": "c8d33ed4ef3169e49bce3dcfe628d41545e86bf9",
+    "manifest_scope": "Historical execution snapshot; intentionally not rewritten for CLOSED config",
+    "result": "reports/s03_readiness/RESULT.json",
+    "all_mandatory_deliverables_present": false,
+    "retry_budget": 0,
+    "next_stage_authorized": false
   }
 }

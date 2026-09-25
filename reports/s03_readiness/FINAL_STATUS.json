@@ -1,0 +1,31 @@
+{
+  "MODEL_USED": "GPT-6 Astra (user UI attestation; no runtime telemetry)",
+  "REASONING_EFFORT": "medium",
+  "SOURCE_REMOTE_HEAD": "d61e399c94719d871aee0bec71210aebf7a11aab",
+  "EXECUTION_COMMIT": "c8d33ed4ef3169e49bce3dcfe628d41545e86bf9",
+  "S02_CHAMPION_PRESERVED": "YES",
+  "CURRENT_CHAMPION": "M2 seed17 epoch2",
+  "NEW_TRAINING_FITS": 0,
+  "Q2_EXISTING_FIGURES": "COMPLETED",
+  "Q1_SAMPLE_COVERAGE": "100/100",
+  "Q1_WORD_ALIGNMENT_VERIFIED": "66/100 computed temporal checks;0/100 human verified",
+  "Q2_NONORACLE_PROFILE": "V1",
+  "Q3_EXPLANATION_VALIDATION": "PARTIAL",
+  "Q3_SOURCE_MAPPING": "UNVERIFIED",
+  "ATTACHMENT3_FINAL_INFERENCE": "BLOCKED",
+  "ATTACHMENT4_FINAL_INFERENCE": "BLOCKED",
+  "TEST_USED_FOR_SELECTION": "NO",
+  "PAPER_STATUS": "DRAFT",
+  "ANONYMOUS_SUBMISSION_SIZE_MB": null,
+  "INCOMPLETE_PRIVATE_DRAFT_ZIP_MB": 12.251028,
+  "ALL_MANDATORY_DELIVERABLES_PRESENT": "NO",
+  "GIT_PUSH_VERIFICATION": "POST_COMMIT_RECEIPT_REQUIRED",
+  "WEB_HANDOFF_ZIP_REQUIRED": "NO",
+  "REMAINING_BLOCKERS": [
+    "Attachment3 required text field absent in first opened object; fixed schema stop; no CSV",
+    "Attachment4 official feature-to-source mapping UNVERIFIED; not opened; no CSV",
+    "Q1 word boundary human validation0/100;34 UNALIGNED cases",
+    "Final team paper review and mandatory deliverables incomplete"
+  ],
+  "authorization_status": "CONSUMED"
+}

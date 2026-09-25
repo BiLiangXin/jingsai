@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "files": 356,
+  "surfaces": [
+    "original",
+    "independent_backup"
+  ],
+  "bytes": 202284794,
+  "all_sha256_size_verified": true,
+  "manifest_sha256": "02a91636b1ffb9cc4ff5af1f0588414aa38f7cc9c3bb9bb1d4ee69f610861263",
+  "original_models_overwritten": false
+}

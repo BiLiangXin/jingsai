@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "data_kind": "synthetic",
+  "samples": 2,
+  "seed": 1701,
+  "shapley_efficiency_max_error": 4.440892098500626e-16,
+  "model_loaded_strictly": true,
+  "official_samples_read": false,
+  "training_performed": false
+}

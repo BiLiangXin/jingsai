@@ -1,0 +1,54 @@
+{
+  "stage": "S03",
+  "status": "PARTIAL",
+  "data_kind": "official",
+  "passed": false,
+  "evidence": [
+    {
+      "requirement": "Q1 coverage and quality",
+      "path": "reports/s03_readiness/Q1_SUMMARY.json",
+      "sha256": "01ab55ca48755478c980b629f56ecc4209284db247df97fc7092d5cf5f44c443"
+    },
+    {
+      "requirement": "Real case asset",
+      "path": "reports/s03_readiness/Q1_CASE_ASSET_CHECK.json",
+      "sha256": "cd26bc73003c4cd7bb72502a61988813e23f2c724528c1ff262178390d611172"
+    },
+    {
+      "requirement": "Fixed predictor restore",
+      "path": "reports/s03_readiness/RESTORE.json",
+      "sha256": "452bd698403983a53b2f3ab344f94bbe43ab542278e28056f21a5727bc2989f9"
+    },
+    {
+      "requirement": "Deployment validation",
+      "path": "reports/s03_readiness/DEPLOYMENT.json",
+      "sha256": "d6efe6e8542425f721817c3122950b7b9160960b89019e1e7e051e370d94bd28"
+    },
+    {
+      "requirement": "Q3 feature validation and mapping limitation",
+      "path": "reports/s03_readiness/Q3_VALIDATION.json",
+      "sha256": "42dbeeb694d73f32f34a83485b7c57fc97b284d44ad764a92b15674795025770"
+    },
+    {
+      "requirement": "Special failure retained",
+      "path": "reports/s03_readiness/ATTACHMENT3_RESULT.json",
+      "sha256": "08548cf1ffc6a41be57f77bacc2394cb4d163f57ce2debb91c14bab00c0b08c5"
+    },
+    {
+      "requirement": "Synthetic tests",
+      "path": "reports/s03_readiness/CLOSEOUT_TESTS.json",
+      "sha256": "911e875250ddf21e6ab0ab18eaca1adeaa542b31e9700dc32e97a421cb8b8d37"
+    },
+    {
+      "requirement": "Material integrity, incomplete",
+      "path": "reports/s03_readiness/MATERIALS_CHECK.json",
+      "sha256": "ee186620e71a09d659079bd7c7250675036a0cb20e2d13c526b58feef4e4db80"
+    }
+  ],
+  "blockers": [
+    "Attachment3 required text field absent in first opened object; fixed schema stop; no CSV",
+    "Attachment4 official feature-to-source mapping UNVERIFIED; not opened; no CSV",
+    "Q1 word boundary human validation0/100;34 UNALIGNED cases",
+    "Final team paper review and mandatory deliverables incomplete"
+  ]
+}

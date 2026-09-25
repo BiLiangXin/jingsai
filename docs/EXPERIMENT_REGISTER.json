@@ -6458,5 +6458,54 @@
     "attachment4_final_inference": "BLOCKED",
     "independent_review": "reports/s03_readiness/INDEPENDENT_REVIEW_FINAL.json",
     "final_manifest_sha256": "f72d6b4420a6299bbee57e9f9aa32cffbb7e35146031d126ab651476c3b562ac"
+  },
+  "s03_terminal_record": {
+    "evidence_level": "VERIFIED",
+    "status": "CLOSED_PARTIAL_BLOCKED",
+    "training_fits": 0,
+    "execution_commit": "c8d33ed4ef3169e49bce3dcfe628d41545e86bf9",
+    "model_seeds": [
+      17,
+      29,
+      43
+    ],
+    "valid_mask_root": 1103,
+    "q3_local_seed": 3103,
+    "special_metrics": null,
+    "reports": [
+      {
+        "path": "reports/s03_readiness/RESULT.json",
+        "sha256": "b2bbcaff7a2efd756863b239fcbaf4e0df5015d6488e27238f592044a880cb0a"
+      },
+      {
+        "path": "reports/s03_readiness/DEPLOYMENT.json",
+        "sha256": "d6efe6e8542425f721817c3122950b7b9160960b89019e1e7e051e370d94bd28"
+      },
+      {
+        "path": "reports/s03_readiness/Q3_VALIDATION.json",
+        "sha256": "42dbeeb694d73f32f34a83485b7c57fc97b284d44ad764a92b15674795025770"
+      },
+      {
+        "path": "reports/s03_readiness/ATTACHMENT3_RESULT.json",
+        "sha256": "08548cf1ffc6a41be57f77bacc2394cb4d163f57ce2debb91c14bab00c0b08c5"
+      },
+      {
+        "path": "reports/s03_readiness/MATERIALS_CHECK.json",
+        "sha256": "ee186620e71a09d659079bd7c7250675036a0cb20e2d13c526b58feef4e4db80"
+      },
+      {
+        "path": "reports/s03_readiness/FINAL_BACKUP_CHECK.json",
+        "sha256": "b7e4b3459ea9df45074e28462f5668b51cf296a19a1c4a268682c42cac5965ed"
+      }
+    ],
+    "failures_retained": [
+      "initial Q1 model Unicode path",
+      "Q1 missing preview asset",
+      "initial test import and subprocess encoding",
+      "initial SVG embedded raster publication rejection",
+      "Word hidden path anonymous rejection",
+      "precontent A3 path failure",
+      "postcontent A3 missing text field"
+    ]
   }
 }

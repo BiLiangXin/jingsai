@@ -1,0 +1,44 @@
+{
+  "status": "RECORDED_ACTUAL_CLOSEOUT_INVOCATIONS",
+  "paths": "Private absolute paths replaced by explicit role placeholders",
+  "commands": [
+    {
+      "command": "ML_PYTHON -B -X utf8 tools/s04_infer.py --source-dir ATTACHMENT3 --campaign S02_CAMPAIGN --output PRIVATE_S04 --recover-precontent-path-failure",
+      "exit_code": 1,
+      "result": "KeyError text; first object validation rejected; no further attempt"
+    },
+    {
+      "command": "Q1_VENV_PYTHON -B -X utf8 tools/s03_q1_case_verify.py --source ATTACHMENT1 --q1 PRIVATE_Q1 --alignment PRIVATE_Q1_ALIGNMENT --report reports/s03_readiness/Q1_CASE_ASSET_CHECK.json",
+      "exit_code": 0
+    },
+    {
+      "command": "ML_PYTHON -B -X utf8 PRIVATE_MATERIALS/code/synthetic_export_check.py",
+      "exit_code": 0,
+      "data_kind": "synthetic"
+    },
+    {
+      "command": "BUNDLED_PYTHON -B -X utf8 tools/s03_materials_check.py --folder PRIVATE_INCOMPLETE_DRAFT --zip PRIVATE_INCOMPLETE_ZIP --report PRIVATE_MATERIALS_CHECK --identity-token KNOWN_IDENTITY --identity-token KNOWN_REPO_DIRECTORY",
+      "exit_code": 0
+    },
+    {
+      "command": "BUNDLED_PYTHON -B -X utf8 -m unittest discover -s tests -p test_stage_s03_closeout.py -v",
+      "exit_code": 0
+    }
+  ],
+  "environment": {
+    "ml_python": "3.11.14",
+    "torch": "2.9.1+cu128",
+    "device": "RTX5070Ti",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "PYTHONPATH": "src;tools"
+  },
+  "new_training_fits": 0,
+  "failures_preserved": [
+    "Initial packaging missing Q1 image",
+    "Anonymous packaging hidden Word absolute path",
+    "First child-stderr decoding failure; corrected with -X utf8",
+    "Special precontent classifier and postcontent schema failures"
+  ],
+  "runtime_seconds": null,
+  "runtime_limitation": "No invented per-command measurements; tool executions carry wall-clock records."
+}

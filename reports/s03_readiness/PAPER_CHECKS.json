@@ -1,0 +1,29 @@
+{
+  "status": "DRAFT_LOCAL_CHECKS_PASS_NOT_SUBMISSION_APPROVAL",
+  "pages": 9,
+  "original_logo_hashes_retained": 4,
+  "identity_fields_blank": true,
+  "metadata_removed": true,
+  "all_mandatory_deliverables_present": false,
+  "checks": [
+    "DOCX_XML_identity_scan",
+    "PDF_text_metadata_scan",
+    "original_four_logo_hashes",
+    "cover_abstract_body_page_order",
+    "rendered_9_pages_visual_layout_check",
+    "body_linked_picture_fields_unlinked_with_cached_images_preserved"
+  ],
+  "files": [
+    {
+      "path": "ANONYMOUS_PAPER_DRAFT_CLEAN.docx",
+      "sha256": "d8d7afd032cfdf81055952e7d89407b2d9f934b0298a237b5a670ed942cc88ba",
+      "size": 1312631
+    },
+    {
+      "path": "ANONYMOUS_PAPER_DRAFT.pdf",
+      "sha256": "a209c273e558dec8df54d463f917dfbdde23282c420bfbb23151d1bd9145139e",
+      "size": 803209
+    }
+  ],
+  "hidden_path_issue_found_and_fixed": true
+}

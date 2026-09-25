@@ -1,5 +1,5 @@
 {
-  "status": "PASS",
+  "status": "CONSUMED_BLOCKED_SCHEMA",
   "scope": "Q2_ALIGNED_ATTACHMENT3_ONLY",
   "profile": "V1",
   "manifest_path": "reports/s03_readiness/FINAL_MANIFEST.json",
@@ -10,5 +10,8 @@
   "normalizer_sha256": "83a95b4acd9254fdd20675832ca4d25ed9e5bd62f284e7ec48e3cc6cb996cf2e",
   "commit_and_remote_preflight_still_required": true,
   "new_training_fits": 0,
-  "special_content_opened": false
+  "special_content_opened": true,
+  "historical_preexecution_status": "PASS",
+  "execution_snapshot_commit": "c8d33ed4ef3169e49bce3dcfe628d41545e86bf9",
+  "historical_preexecution_special_content_opened": false
 }

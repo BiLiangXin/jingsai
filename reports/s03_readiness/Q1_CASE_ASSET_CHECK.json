@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "failure_found": "cv2.imwrite to Unicode path silently returned false; preview asset absent",
+  "repair": "imencode plus pathlib byte write",
+  "case_assets_exist": true,
+  "descriptor_max_abs_error": 0.0,
+  "original_features_unchanged": true,
+  "audio_exists": true,
+  "frame_sha256": "25943753e99bbcd817e135aa2dc9627af1e1565882a6e22af79495d4583ef182",
+  "human_word_alignment_verified": 0,
+  "official_time_mapping": "UNVERIFIED",
+  "special_sources_opened": false
+}

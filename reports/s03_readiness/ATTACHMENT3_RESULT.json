@@ -1,0 +1,24 @@
+{
+  "status": "BLOCKED",
+  "execution_commit": "c8d33ed4ef3169e49bce3dcfe628d41545e86bf9",
+  "profile": "V1",
+  "error_type": "KeyError",
+  "missing_required_field": "text",
+  "source_content_files_opened_before_stop": 1,
+  "prediction_rows_generated": 0,
+  "output_csv_exists": false,
+  "failure_sha256": "1c0187ca36045928e092fbcdd83dc5e2f64df5199752e604828b84f899b52393",
+  "recovery_receipt_sha256": "651e5d223fb36756beae50ad84d07abbf42025df591ab6a9e461534ffb8a7ded",
+  "content_marker_sha256": "94c3a4bf160560f834ea3a54875fae7c0021586bf31ec65afd9e04d6246d6239",
+  "initial_precontent_failure_preserved": true,
+  "original_claim_preserved": true,
+  "recovery_budget_remaining": 0,
+  "field_schema_changed_after_content_read": false,
+  "unaligned_content_opened": false,
+  "attachment4_opened": false,
+  "metrics": null,
+  "limitations": [
+    "First special object materialized, then fixed schema rejected it. No exploratory reread or schema adaptation after this failure.",
+    "No source manifest was emitted because the first file failed validation."
+  ]
+}

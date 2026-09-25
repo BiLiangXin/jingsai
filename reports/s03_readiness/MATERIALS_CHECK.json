@@ -1,0 +1,15 @@
+{
+  "status": "PASS_INCOMPLETE_DRAFT_ONLY",
+  "all_mandatory_deliverables_present": false,
+  "zip_sha256": "b834c1ad09052093ca5c04336588a584c6bf1136dcb6717c8670bb9cab7ff03c",
+  "zip_bytes": 12251028,
+  "zip_decimal_MB": 12.251028,
+  "members": 478,
+  "member_hash_size_checks": 477,
+  "crc": "PASS",
+  "exact_member_set": "PASS",
+  "path_safety": "PASS",
+  "identity_scan": "PASS_KNOWN_TOKENS_METADATA_AND_TEXT",
+  "manifest_sha256": "6bb8fe724703b5c9af753548e1b20edd3ea5c1a8d50d0dcbd7e92fea23fb49bc",
+  "no_submission_performed": true
+}

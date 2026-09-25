@@ -1,0 +1,31 @@
+{
+  "stage": "S03_Q1_Q3_AND_DEPLOYMENT_READINESS/S04_CONDITIONAL",
+  "status": "blocked",
+  "summary": "Q1 extraction, Q2 evidence and nonoracle profiles, Q3 feature-space validation completed. Final special deliverables blocked; local draft only.",
+  "changes": [
+    "100 Q1 features;66 computed alignments;0 human verified",
+    "22 figures;all148 S02 epochs retained",
+    "V1 selected using existing M2 seeds17/29/43;no new fit",
+    "728 exact group explanations and36 local checks",
+    "Incomplete anonymous9page paper and12.251028MB materials draft"
+  ],
+  "tests": [
+    "21 preinference synthetic checks PASS",
+    "3 closeout packaging regressions PASS",
+    "356 original and backup files SHA256/size PASS",
+    "Exact original VALID restore PASS",
+    "478 ZIP members CRC/set/path;477 member hashes/size PASS"
+  ],
+  "blockers": [
+    "Attachment3 required text field absent in first opened object; fixed schema stop; no CSV",
+    "Attachment4 official feature-to-source mapping UNVERIFIED; not opened; no CSV",
+    "Q1 word boundary human validation0/100;34 UNALIGNED cases",
+    "Final team paper review and mandatory deliverables incomplete"
+  ],
+  "next_actions": [
+    "Owner resolves special schema incompatibility and authoritative time mapping under a separate scoped task; no automatic execution",
+    "Revise current paper draft using existing evidence; inspect Q1 alignments"
+  ],
+  "data_kind": "official",
+  "metrics_file": "reports/s03_readiness/DEPLOYMENT.json"
+}
