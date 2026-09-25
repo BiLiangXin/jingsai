@@ -1,0 +1,14 @@
+test_clean_v0_matches_frozen_normalizer (test_s03_readiness.ReadinessTests.test_clean_v0_matches_frozen_normalizer) ... ok
+test_coalition_keeps_masks (test_s03_readiness.ReadinessTests.test_coalition_keeps_masks) ... ok
+test_disjoint_and_equal_length_random (test_s03_readiness.ReadinessTests.test_disjoint_and_equal_length_random) ... ok
+test_exact_additive_and_interaction_shapley (test_s03_readiness.ReadinessTests.test_exact_additive_and_interaction_shapley) ... ok
+test_padding_and_zero_variance (test_s03_readiness.ReadinessTests.test_padding_and_zero_variance) ... ok
+test_proxy_before_normalization_and_no_truth (test_s03_readiness.ReadinessTests.test_proxy_before_normalization_and_no_truth) ... ok
+test_unverified_mapping_never_invents_time (test_s03_readiness.ReadinessTests.test_unverified_mapping_never_invents_time) ... ok
+test_windows_preserve_inactive_and_masks (test_s03_readiness.ReadinessTests.test_windows_preserve_inactive_and_masks) ... ok
+test_zero_effect (test_s03_readiness.ReadinessTests.test_zero_effect) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.083s
+
+OK

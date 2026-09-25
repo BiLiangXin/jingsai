@@ -1,0 +1,19 @@
+{
+  "status": "COMPLETED",
+  "sample_count": 100,
+  "extracted": 100,
+  "computed_temporal_checks_pass": 0,
+  "human_verified_word_alignments": 0,
+  "failures": {
+    "Failed to initialize PocketSphinx": 100
+  },
+  "example_available": false,
+  "official_workbook_sha256": "827334f782b1f242c84ad944a657bc7f7c63643f71ae9c977811a3eecdd3ab33",
+  "trace_sha256": "5d88bc71f424e0bc1ac5942449915505a26ab52fc0880fa171556ac9223507df",
+  "dimensions": {
+    "text": 128,
+    "audio": 16,
+    "vision": 39
+  },
+  "official_Q3_mapping": "UNVERIFIED"
+}

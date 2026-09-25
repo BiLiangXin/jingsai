@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "Q2_ALIGNED_ATTACHMENT3_ONLY",
+  "profile": "V1",
+  "manifest_path": "reports/s03_readiness/FINAL_MANIFEST.json",
+  "manifest_sha256": "159f9d7c42af76c4f5db5e53cd9048488a5d82d2a36cda3410b00be2385681b1",
+  "review_path": "reports/s03_readiness/INDEPENDENT_REVIEW_FINAL_DELTA.json",
+  "review_sha256": "cb0f0953377cd862ea2bdca35029a98cf9f4301e8be0e21dce163952a88fcf93",
+  "checkpoint_sha256": "f99426be8d90b8abf196faf9cf92a41c5ab607da661a7a91530f1fe481a0ceb9",
+  "normalizer_sha256": "83a95b4acd9254fdd20675832ca4d25ed9e5bd62f284e7ec48e3cc6cb996cf2e",
+  "commit_and_remote_preflight_still_required": true,
+  "new_training_fits": 0,
+  "special_content_opened": false
+}

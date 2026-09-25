@@ -1,0 +1,338 @@
+{
+  "status": "CHANGES_REQUIRED",
+  "independent": true,
+  "review_round": 1,
+  "review_scope": "S03 readiness code/evidence plus conditional S04 pre-open protocol; not scientific completion approval",
+  "model_requested": "GPT-6 Astra",
+  "reasoning_effort_requested": "medium",
+  "model_setting_evidence": "User UI attestation and task configuration; no runtime telemetry asserted",
+  "time_utc": "2026-09-25T05:20:07.016221+00:00",
+  "base_commit": "d61e399c94719d871aee0bec71210aebf7a11aab",
+  "review_inputs_sha256": "7f8379dfb090b875454398f749a90d677122f09fa33defe664f9e766aa7ed970",
+  "critical_files": [
+    {
+      "path": "configs/s03_execution.json",
+      "sha256": "fc9ef0b7c397535a3c7d5a25681a232dc9b5d8b1b53c72f67a33cd9e6360eb63",
+      "match": true
+    },
+    {
+      "path": "docs/research/S03/FINAL_INFERENCE_SPEC.md",
+      "sha256": "1bbef3b2e989c8b2286f17e861cbeda84f75ce6c394bd6e580a82c156f8837bb",
+      "match": true
+    },
+    {
+      "path": "docs/research/S03/PROTOCOL.md",
+      "sha256": "e8c82f4ca4a0e552e438b5f6d323db340ee00eb0c4f9f743397a3c2263fe6745",
+      "match": true
+    },
+    {
+      "path": "docs/research/S03/Q1_PROTOCOL.md",
+      "sha256": "25105814fec68d8fd9a4c6923d7f6ff1eac9a10cc065a42f03d5427461388c61",
+      "match": true
+    },
+    {
+      "path": "docs/research/S03/RESULTS.md",
+      "sha256": "29973d123c634fe3a7442a1bbc5050bde0e830daf59fb1609566764585ca6185",
+      "match": true
+    },
+    {
+      "path": "reports/s03_readiness/BACKUP.json",
+      "sha256": "91c12ddae78350e76fa11372f6336c0032ac14d55b572b0b0580c7e0a5f757cc",
+      "match": true
+    },
+    {
+      "path": "reports/s03_readiness/DEPLOYMENT.json",
+      "sha256": "d6efe6e8542425f721817c3122950b7b9160960b89019e1e7e051e370d94bd28",
+      "match": true
+    },
+    {
+      "path": "reports/s03_readiness/Q1_CHECKS.json",
+      "sha256": "d761db0275e3250e31ddab2856f2ec89d8e9c633cf027f6d7d85609446414a3e",
+      "match": true
+    },
+    {
+      "path": "reports/s03_readiness/Q1_INITIAL_ATTEMPT.json",
+      "sha256": "a3d5483ce6f106b65957c50e232aef52101d98c94c5970909bd44a2b79a298ca",
+      "match": true
+    },
+    {
+      "path": "reports/s03_readiness/Q1_SUMMARY.json",
+      "sha256": "01ab55ca48755478c980b629f56ecc4209284db247df97fc7092d5cf5f44c443",
+      "match": true
+    },
+    {
+      "path": "reports/s03_readiness/Q1_TOOLS.json",
+      "sha256": "2c4d3e65c30ad2433d2904b6dc38112218fc13fe87e34c06e64c2def3e4de3ec",
+      "match": true
+    },
+    {
+      "path": "reports/s03_readiness/Q3_VALIDATION.json",
+      "sha256": "42dbeeb694d73f32f34a83485b7c57fc97b284d44ad764a92b15674795025770",
+      "match": true
+    },
+    {
+      "path": "reports/s03_readiness/RESTORE.json",
+      "sha256": "452bd698403983a53b2f3ab344f94bbe43ab542278e28056f21a5727bc2989f9",
+      "match": true
+    },
+    {
+      "path": "reports/s03_readiness/TESTS.json",
+      "sha256": "74938f4dcd45bec6a7e906031bca46a5caf4f6c3a97405f957e8e18d788ead2d",
+      "match": true
+    },
+    {
+      "path": "reports/s03_readiness/V1_KNOWN_SIMULATION_COMPARISON.json",
+      "sha256": "91586b44b8e06da6e5385b219b6dcb74e0cb0dfc460b9c28ce3a7eaa925568cf",
+      "match": true
+    },
+    {
+      "path": "research/r01/reference.py",
+      "sha256": "1cd4b73bb748284b4941625d92be89522771eff8a11e4044547e5f513ea62495",
+      "match": true
+    },
+    {
+      "path": "src/mosei/__init__.py",
+      "sha256": "72e3fcf210041bdf645c2004d23ef8cf9e193ad25ce0c64efb9a508392218549",
+      "match": true
+    },
+    {
+      "path": "src/mosei/data/__init__.py",
+      "sha256": "1e8562996e64ce70eb0aa346eaa235f01e7889c6f7b42c97c35733b9059e727e",
+      "match": true
+    },
+    {
+      "path": "src/mosei/data/data_contract.py",
+      "sha256": "79dbb5124e5d90ffb032d4b4a9c6f7c05eafa1c5f997e297726382258926e776",
+      "match": true
+    },
+    {
+      "path": "src/mosei/data/dataset.py",
+      "sha256": "f15b226d7a956563a5b76db6f6c631f6ae7ff0b01d24508513db2cc9d32583c8",
+      "match": true
+    },
+    {
+      "path": "src/mosei/data/masks.py",
+      "sha256": "ce07ea15a7b4e35c7f0e7d39cc3636d6c3ffee7374af4bad833d8a5ebff6e28d",
+      "match": true
+    },
+    {
+      "path": "src/mosei/data/normalization.py",
+      "sha256": "78b9f060ce185fd232ba4a8d16d747ba15e73fd9ea078095e07bb0921a9395f5",
+      "match": true
+    },
+    {
+      "path": "src/mosei/data/pooling.py",
+      "sha256": "8d0892d179ae7cd773f38758cb1151fb92a65fb1eae3d739045ae0d5f300685d",
+      "match": true
+    },
+    {
+      "path": "src/mosei/provenance.py",
+      "sha256": "eb7fdb8e1efed6745dc64eaf24f34c1f6fcf5a25cc73308ad8bf77dec39e6bf0",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s01/__init__.py",
+      "sha256": "45e370a9952a0d589a6f50e06fe2ad315af97570b9c6fea83ddf8d218d575e3e",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s01/authorization.py",
+      "sha256": "fff47ee8ca18fb0634a33a80c817446cb517c6138a48742b38926dbfa20e4039",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s01/contracts.py",
+      "sha256": "03040b7725a22dd150bb5215f2a0697eaa6bc936ea32ed6df5d028171fe3d030",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s01/engine.py",
+      "sha256": "65e5f6e3478aa2bd228839d65f3fef356f5cee412ade20fda55df86c2ab91918",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s01/execution.py",
+      "sha256": "14f30d2211887cf7cae4880a86881e885d6e9cb94278ca4ee5d982cebacc4426",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s01/models.py",
+      "sha256": "e0d815c1f97e83e653e326c8df28d519b967b69c185b95b758a2822bef9821f3",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s01/normalization.py",
+      "sha256": "4c5bad3c4f26a9c2b8e6aaebdc24d767b327553ba723490f82ff3ac7f3c75c3e",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s01/protocol.py",
+      "sha256": "c69c194447c0c220a56e6dddb9c7a3e225f2a949147573d7212d4d0775871b26",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s01/registry.py",
+      "sha256": "d4ea70e91aaa2e70792fdb025fa640d090443cb3ae8f41823f78d071df809e73",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s02/__init__.py",
+      "sha256": "fe671cf5ca1f850297e768e341b70ae0ef05e26aa20fcfc80c961c17b74d62c3",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s02/authorization.py",
+      "sha256": "9df8b3389f1b517d5a2686081903d57335208c1941a72f2c7bfaf0b09692051c",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s02/common.py",
+      "sha256": "88fc5f38abfb84da8a4ccbaa8c2a664f4ebdd40fe8191fe358a2effaed96ab59",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s02/engine.py",
+      "sha256": "0e050d7d7ca9bab84eeb26f6085e3cdb013367ae7439cff912a8fd8542369804",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s02/evaluation.py",
+      "sha256": "4d47f016ad48db82ecb3a158d7bd413d7877797218e3ee25c4dab1ed1c9cf912",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s02/execution.py",
+      "sha256": "79204bb002ee2c57a9593eb0e05076d0ed5dd4e5dc3842d356eccf4c1a01e08a",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s02/models.py",
+      "sha256": "b0cfb6915ed70da68b6ebab29af80c1c6e4a9822a2e3ee275564cda4707fcd23",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s02/selection.py",
+      "sha256": "e799e1563e1763300648364b25b66743d63c757f0ed618173e158938ebd34db4",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s03/__init__.py",
+      "sha256": "5e55cae89acda60f9aa7bfc7a36d0534c676074e952718e7f82638078b019248",
+      "match": true
+    },
+    {
+      "path": "src/mosei/s03/core.py",
+      "sha256": "8398f4197c016850d929c3979649bca7cde9bee2c7b315b55ec3e34d2015a659",
+      "match": true
+    },
+    {
+      "path": "tests/test_s03_readiness.py",
+      "sha256": "a4dfca6c16fa1e376efe179361eaa0c5d429e3384413f783d3058d4d2f9eb869",
+      "match": true
+    },
+    {
+      "path": "tests/test_s04_schema.py",
+      "sha256": "0c2718ce1e346dbbdf054528951b8a72113dc5cfc51f080a599f7c99414ba91d",
+      "match": true
+    },
+    {
+      "path": "tools/s03_evaluate.py",
+      "sha256": "3b3f78f2f28d2536aebfd2c1a40f05bd1eb9eb83914bd8e4a38130d7147d0835",
+      "match": true
+    },
+    {
+      "path": "tools/s03_figures.py",
+      "sha256": "8b2ccfa4b4fadae7248acd1f9bc84f960d4e9dd5420baf5fb06687b1e4b5dd07",
+      "match": true
+    },
+    {
+      "path": "tools/s03_publication_check.py",
+      "sha256": "4b0c1e2f4337d375a938ee7efb30e520ed358da51ac419fee3e05a39dfdca23e",
+      "match": true
+    },
+    {
+      "path": "tools/s03_q1.py",
+      "sha256": "6302fa734235fafbd97b37bcfbebec8b65d82893dd9a666fcff0e219a1778375",
+      "match": true
+    },
+    {
+      "path": "tools/s03_q1_realign.py",
+      "sha256": "7470c0510b778ce02ed49bd9bef352ced1896db4c5e17a5ae7b8f5b93bf81b3b",
+      "match": true
+    },
+    {
+      "path": "tools/s03_q1_verify.py",
+      "sha256": "1b043a44c41ab1fbc98518d34ba54d9fd4e11ad89cce1b8196f46345843602a1",
+      "match": true
+    },
+    {
+      "path": "tools/s04_infer.py",
+      "sha256": "88128c899df36afe07cdb20414d2ceaafce9b9d48d859e6eee561cc07be40128",
+      "match": true
+    }
+  ],
+  "tests": [
+    {
+      "command": "PYTHONPATH=src C:\\softapp\\anaconda3\\envs\\birdAL\\python.exe -B -m unittest discover -s tests -p test_s03_readiness.py -v",
+      "exit_code": 0,
+      "count": 9
+    },
+    {
+      "command": "PYTHONPATH=src C:\\softapp\\anaconda3\\envs\\birdAL\\python.exe -B -m unittest discover -s tests -p test_s04_schema.py -v",
+      "exit_code": 0,
+      "count": 6
+    },
+    {
+      "command": "C:\\softapp\\anaconda3\\envs\\birdAL\\python.exe -B <PRIVATE_REVIEW>/audit_round1.py",
+      "exit_code": 0,
+      "scope": "Independent existing-artifact hashes/shapes/aggregation/Q3 numerical checks"
+    }
+  ],
+  "blocking_findings": [
+    {
+      "id": "S03-R1",
+      "severity": "blocking_MAJOR",
+      "file": "tools/s04_infer.py",
+      "line": 64,
+      "title": "Frozen one-file schema contradicts existing official inventory",
+      "evidence": "Existing reports/data_audit/attachment3_inventory.json and DATA_AUDIT.md record 30 aligned plus 30 unaligned files. Runner requires exactly one recursively discovered PKL under the entire Attachment3 directory; FINAL_INFERENCE_SPEC repeats that unsupported premise.",
+      "required_fix": "Before any special access freeze a full aligned-only inventory/schema and stable per-file row identity/coverage; exclude unaligned version. Bind the source directory and expected inventory. Schema failures must preserve whole-run failure rather than omit files."
+    },
+    {
+      "id": "S03-R2",
+      "severity": "blocking_MAJOR",
+      "file": "tools/s04_infer.py",
+      "line": 60,
+      "title": "One-shot claim is relocatable with output directory",
+      "evidence": "Exclusive ATTACHMENT3_CLAIM.json is created only under caller-supplied --output. A second invocation with a fresh output path obtains a new claim, including after special schema failure.",
+      "required_fix": "Bind one canonical durable claim location to this task/authorization and source independently of output path. Failed, incomplete and completed claims all consume permission; output relocation cannot rearm. Add synthetic regression without reading special data."
+    },
+    {
+      "id": "S03-R3",
+      "severity": "blocking_MAJOR",
+      "file": "tools/s04_infer.py",
+      "line": 47,
+      "title": "Runtime does not bind the independent reviewed manifest or complete predictor prerequisites",
+      "evidence": "preflight accepts the gate-supplied critical_files list without required-set/nonempty checks; it checks independent review status only, not equality/hash of reviewed paths. restore depends on S02 FITS.json which is absent from the supplied 52-file frozen list. Fixed checkpoint is validated indirectly from that FITS file, not explicitly against the frozen gate. Actual restore/scaler checks occur after pickle.load.",
+      "required_fix": "Require exact nonempty complete manifest with predictor dependencies including FITS/registry, protocol/config/VALID evidence; bind its canonical digest/path hashes to the independent report and committed gate/review. Explicitly compare fixed checkpoint and scaler hashes, and finish restoration/validation before first special content open. Add missing/deleted/changed-manifest and changed-weight synthetic rejection tests."
+    }
+  ],
+  "nonblocking_notes": [
+    "Q1 66 alignments are computed and mechanically checked; human boundary validation remains 0/100, and cannot be called verified human timing.",
+    "Q3 source mapping remains UNVERIFIED and Attachment4 remains BLOCKED.",
+    "Existing S03 adapter, equal-condition aggregation, fixed-class Shapley target, preserved masks and b/rho, model eval/no-grad and negative-result reporting were consistent on inspected code/evidence.",
+    "Gate did not exist and was not yet committed; this review is not a final gate PASS.",
+    "Prior inventory records aligned/unaligned counts only; actual subdirectory spelling must be obtained from existing private inventory or file-level metadata without content access."
+  ],
+  "boundaries": {
+    "original_pkl_opened": false,
+    "attachment3_4_opened": false,
+    "test_opened": false,
+    "model_executed": false,
+    "new_fits": 0,
+    "official_tree_written": false
+  },
+  "checks_receipt_sha256": "45407156b01cb8288e182d0a746db8e13cf721883793d824d0803e8a6e57d473",
+  "checks_script_sha256": "39a61194019785016ac7034f11d4a3df3622ab868a947a926a99bdfad3f67568",
+  "report_generation_note": "Line-number lookup initially used Windows default GBK and failed decoding; repeated with explicit UTF-8, no official file written."
+}

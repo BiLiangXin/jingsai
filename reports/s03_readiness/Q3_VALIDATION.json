@@ -1,0 +1,99 @@
+{
+  "status": "PASS_NUMERICAL_FEATURE_SPACE_ONLY",
+  "n_group": 728,
+  "coalitions": 8,
+  "max_efficiency_error": 8.881784197001252e-16,
+  "full_coalition_reproduced": true,
+  "local_cases": 36,
+  "strata": [
+    {
+      "true_class": 0,
+      "correct": true,
+      "count": 6
+    },
+    {
+      "true_class": 0,
+      "correct": false,
+      "count": 6
+    },
+    {
+      "true_class": 1,
+      "correct": true,
+      "count": 6
+    },
+    {
+      "true_class": 1,
+      "correct": false,
+      "count": 6
+    },
+    {
+      "true_class": 2,
+      "correct": true,
+      "count": 6
+    },
+    {
+      "true_class": 2,
+      "correct": false,
+      "count": 6
+    }
+  ],
+  "local_summary": {
+    "classification": {
+      "full_minus_deleted": {
+        "n": 36,
+        "mean_key_absolute": 0.8272633430444531,
+        "mean_random_absolute": 0.5618755248271756,
+        "mean_paired_absolute_difference": 0.2653878182172775,
+        "negative_or_zero_cases": 6,
+        "interpretation": "DESCRIPTIVE_INTERVENTION_MAGNITUDE_NOT_CAUSAL_OR_SIGNIFICANCE"
+      },
+      "retained_minus_empty": {
+        "n": 36,
+        "mean_key_absolute": 0.7572196566810211,
+        "mean_random_absolute": 0.5211798547663622,
+        "mean_paired_absolute_difference": 0.23603980191465881,
+        "negative_or_zero_cases": 6,
+        "interpretation": "DESCRIPTIVE_INTERVENTION_MAGNITUDE_NOT_CAUSAL_OR_SIGNIFICANCE"
+      }
+    },
+    "regression": {
+      "full_minus_deleted": {
+        "n": 36,
+        "mean_key_absolute": 0.4374848150699917,
+        "mean_random_absolute": 0.2950496236379776,
+        "mean_paired_absolute_difference": 0.1424351914320141,
+        "negative_or_zero_cases": 7,
+        "interpretation": "DESCRIPTIVE_INTERVENTION_MAGNITUDE_NOT_CAUSAL_OR_SIGNIFICANCE"
+      },
+      "retained_minus_empty": {
+        "n": 36,
+        "mean_key_absolute": 0.39004011048624915,
+        "mean_random_absolute": 0.27818828593525624,
+        "mean_paired_absolute_difference": 0.1118518245509929,
+        "negative_or_zero_cases": 9,
+        "interpretation": "DESCRIPTIVE_INTERVENTION_MAGNITUDE_NOT_CAUSAL_OR_SIGNIFICANCE"
+      }
+    }
+  },
+  "mean_absolute_phi": [
+    [
+      1.1412905202982366,
+      0.5230923642494674
+    ],
+    [
+      0.10758556753581205,
+      0.0531652706040704
+    ],
+    [
+      0.17731385829094318,
+      0.09496895582419429
+    ]
+  ],
+  "models_unchanged": true,
+  "mapping": "UNVERIFIED",
+  "timestamp_policy": "null",
+  "attachment4_gate": "BLOCKED",
+  "special_data_opened": false,
+  "private_cards_sha256": "e7e12c372e7676a1d6cf9715bb56482577ed606b002adda9627dc77afd8138c1",
+  "private_local_sha256": "87bf921dfe455bd0ee7aa3a592adeec8d72edeaa02e8a1f8249d4119d48ba059"
+}

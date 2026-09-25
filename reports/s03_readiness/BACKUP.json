@@ -1,0 +1,11 @@
+{
+  "status": "VERIFIED",
+  "file_count": 356,
+  "bytes": 202284794,
+  "campaigns": {
+    "S01": 156,
+    "S02": 200
+  },
+  "manifest_sha256": "02a91636b1ffb9cc4ff5af1f0588414aa38f7cc9c3bb9bb1d4ee69f610861263",
+  "private_backup": true
+}

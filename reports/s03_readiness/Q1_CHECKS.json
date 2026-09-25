@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "samples_checked": 100,
+  "computed_word_alignments_checked": 66,
+  "human_timing_accuracy": "UNKNOWN",
+  "synthetic_checks": [
+    "MFCC_shape_centroid_frequency_response",
+    "deterministic_text_hash",
+    "visual_dimension"
+  ],
+  "features_unchanged": true,
+  "private_manifest_sha256": "733726765bd45a1353845a3579e1a8987e2c9ea6a4b0f0c98c0503d17ef04dca"
+}

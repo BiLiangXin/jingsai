@@ -1,0 +1,74 @@
+{
+  "versions": {
+    "pocketsphinx": "5.1.1",
+    "imageio-ffmpeg": "0.6.0",
+    "numpy": "2.2.6",
+    "scipy": "1.16.3",
+    "opencv-python": "4.12.0.88",
+    "openpyxl": "3.1.5"
+  },
+  "ffmpeg_version": "7.1-essentials_build-www.gyan.dev",
+  "ffmpeg_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+  "model_files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "8248deb5d839ee9eb52e96fbe2b6d501efbb100b7f1dc6ee101ba689568171fe",
+      "size": 88
+    },
+    {
+      "path": "en-us/cmudict-en-us.dict",
+      "sha256": "f25c7729a26d294273c29aa3bbe8882c5c1dd08d8d716624aebd45ab52b542fc",
+      "size": 3410505
+    },
+    {
+      "path": "en-us/en-us/feat.params",
+      "sha256": "d3d506732e1ae0bf1a9cd0ff6e74103aff3fbe5c4f00f7f20655000a8ed560da",
+      "size": 176
+    },
+    {
+      "path": "en-us/en-us/mdef",
+      "sha256": "2360f9a86889c1cfee8bd618a0269387911e5fb2920a594f506b18b8c79683b0",
+      "size": 2959176
+    },
+    {
+      "path": "en-us/en-us/means",
+      "sha256": "832019e32cac12eb318964f96f469034acb12d0348eeddc3831831a100cb4dd4",
+      "size": 838732
+    },
+    {
+      "path": "en-us/en-us/noisedict",
+      "sha256": "1b223ef144429cb6f174bc75b06d11df651de6621d8add1655458d89f0913cff",
+      "size": 61
+    },
+    {
+      "path": "en-us/en-us/README",
+      "sha256": "dc05e4e8e270fc059f9775535a8c59dfcc036fa4d3f8043e7387efe10036698c",
+      "size": 1651
+    },
+    {
+      "path": "en-us/en-us/sendump",
+      "sha256": "8c9564c0d5bef69ca9d9bf1014abe162f071644cf02cf1fa8a483c3dc165a7a8",
+      "size": 1969024
+    },
+    {
+      "path": "en-us/en-us/transition_matrices",
+      "sha256": "c1f7f28ea43177be734be1f88bd7f1b9a853d0e660f8599c67c6eaeca8bb539a",
+      "size": 2080
+    },
+    {
+      "path": "en-us/en-us/variances",
+      "sha256": "b00d696f85e96834fc10f8e5f06428d8c4db6bffdbe5845b6f69bf6efbc48fa5",
+      "size": 838732
+    },
+    {
+      "path": "en-us/en-us-phone.lm.bin",
+      "sha256": "c57e0fa4191b096b1279cfe3a77927f52568fdecfc6624ddb5cec9527c763a54",
+      "size": 857195
+    },
+    {
+      "path": "en-us/en-us.lm.bin",
+      "sha256": "db21d0642286677699e6dbc859d2e5395570222361999387ce60f6e1d01995d6",
+      "size": 27114385
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "COMPLETED",
+  "sample_count": 100,
+  "extracted": 100,
+  "computed_temporal_checks_pass": 66,
+  "human_verified_word_alignments": 0,
+  "failures": {
+    "'NoneType' object is not iterable": 13,
+    "DICTIONARY_OOV": 15,
+    "TOKEN_SEQUENCE_MISMATCH": 6
+  },
+  "example_available": true,
+  "official_workbook_sha256": "827334f782b1f242c84ad944a657bc7f7c63643f71ae9c977811a3eecdd3ab33",
+  "trace_sha256": "6d821ace8bb8851a3f811055c9c6ded1b393b51dc1aecec25190c215eee1c7a8",
+  "dimensions": {
+    "text": 128,
+    "audio": 16,
+    "vision": 39
+  },
+  "official_Q3_mapping": "UNVERIFIED",
+  "initial_attempt_preserved": true,
+  "repair": "Byte-identical acoustic model relocated to ASCII path; features/audio unchanged"
+}

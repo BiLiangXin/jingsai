@@ -1,0 +1,23 @@
+{
+  "records": [
+    {
+      "seed": 17,
+      "clean_plus_views": 145,
+      "max_abs_error": 9.5367431640625e-07,
+      "within_preregistered_tolerance": true
+    },
+    {
+      "seed": 29,
+      "clean_plus_views": 145,
+      "max_abs_error": 9.5367431640625e-07,
+      "within_preregistered_tolerance": true
+    },
+    {
+      "seed": 43,
+      "clean_plus_views": 145,
+      "max_abs_error": 7.152557373046875e-07,
+      "within_preregistered_tolerance": true
+    }
+  ],
+  "interpretation": "Observed agreement on this zeroed artificial-corruption library only; does not establish real-special oracle masks or natural-zero meaning."
+}

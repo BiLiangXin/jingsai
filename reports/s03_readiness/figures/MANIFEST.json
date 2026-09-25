@@ -1,0 +1,143 @@
+{
+  "status": "VERIFIED",
+  "epoch_rows": 148,
+  "fits": 12,
+  "candidates": 20,
+  "new_model_runs": 0,
+  "limitations": [
+    "Repeated VALID selection optimism",
+    "SD is not CI or significance",
+    "144 views are not independent samples",
+    "TRAIN online is not clean checkpoint TRAIN"
+  ],
+  "source_files": [
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/EPOCH_CURVES.csv",
+      "sha256": "4f2963b302ce5149fd3ffb020800fcbe9786594dd7170dedeef9c98acd20a312"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/FITS.json",
+      "sha256": "34715c2f03394c5c36f98e17e0fa07b05b0a5eaf565aad451f6711607b4951c5"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/CANDIDATE_COMPARISON.csv",
+      "sha256": "827a156948f87c668c2cc00c2981e6bcbd9c57ee4a1d47f9a153ff45d25acbcb"
+    },
+    {
+      "path": "reports/s02_execution/S02-20260925-BOUNDED-12F15W/FACTOR_DESCRIPTIVES.csv",
+      "sha256": "1451dbe00b1123d8e11058ab802f475b5b856a4d956e1ea81fc4ce4e06a16522"
+    }
+  ],
+  "figures": [
+    {
+      "path": "reports/s03_readiness/figures/clean_comparison.png",
+      "sha256": "80f86cc00a0d2a0bb783ec941d25946e3815a19c97224c1c857e070206f3e2bc",
+      "size": 119311
+    },
+    {
+      "path": "reports/s03_readiness/figures/clean_comparison.svg",
+      "sha256": "745c3a66df335305b1e779f0682de62e203937079cda4e038fb45e8899a1b7fc",
+      "size": 78253
+    },
+    {
+      "path": "reports/s03_readiness/figures/attempted96_comparison.png",
+      "sha256": "653a2e8a51baeaf449693cf346698e2a7a805c64e9fbacca1e3030c977ebed98",
+      "size": 73365
+    },
+    {
+      "path": "reports/s03_readiness/figures/attempted96_comparison.svg",
+      "sha256": "badf2b31345257582717bc7c9484b82c614b5be29259ad4ca155bfe4e765e343",
+      "size": 53451
+    },
+    {
+      "path": "reports/s03_readiness/figures/M1_all_seed_curves.png",
+      "sha256": "d63e30652e6b40d6ce98780a0bfe620dbbf7c15d117a7f7d545e197af2b9fe48",
+      "size": 335488
+    },
+    {
+      "path": "reports/s03_readiness/figures/M1_all_seed_curves.svg",
+      "sha256": "b790ca57096576c4b0e33ccd2b942f983364ebebaa103c42de761a29fa8dd848",
+      "size": 153860
+    },
+    {
+      "path": "reports/s03_readiness/figures/M2_all_seed_curves.png",
+      "sha256": "8ad9d51670217c6907300eda9739c4c74382d5252bc17e954a6624e546a024a4",
+      "size": 324788
+    },
+    {
+      "path": "reports/s03_readiness/figures/M2_all_seed_curves.svg",
+      "sha256": "54fab5d17ae53da1194506b1c906e8ff582cd562d858e2b5e90a137e48882505",
+      "size": 153456
+    },
+    {
+      "path": "reports/s03_readiness/figures/M3_all_seed_curves.png",
+      "sha256": "94d9f0b5dc0c3b9fad4c1b2b44481ba6fdc067bdf5693926c289620b92f7c184",
+      "size": 355912
+    },
+    {
+      "path": "reports/s03_readiness/figures/M3_all_seed_curves.svg",
+      "sha256": "8524a42f7ff832601f61a8b60295f9fb6bb377afc941647c00885d2e70a903e5",
+      "size": 159335
+    },
+    {
+      "path": "reports/s03_readiness/figures/M4_all_seed_curves.png",
+      "sha256": "48bc5e80225dbe6e3386351fbc018007324b4334d4d08fe5d528331519cf1b05",
+      "size": 338436
+    },
+    {
+      "path": "reports/s03_readiness/figures/M4_all_seed_curves.svg",
+      "sha256": "09d24eb1b2c5dddb97dbd9a2ce9a67cb21d792406199f748d9344dae5613ea5b",
+      "size": 155446
+    },
+    {
+      "path": "reports/s03_readiness/figures/robustness_modality.png",
+      "sha256": "1f4f97af898116ecb3d8e54fabb3aa976f78a4953b2b9b0d3b13fb8d359eee21",
+      "size": 161082
+    },
+    {
+      "path": "reports/s03_readiness/figures/robustness_modality.svg",
+      "sha256": "f6a02fb699df7a327526b76f88df2799f750e593cc8a4077217ac4af9e4ec7e5",
+      "size": 76933
+    },
+    {
+      "path": "reports/s03_readiness/figures/robustness_position.png",
+      "sha256": "3e4c55e4844b51aaaaf0648f23dffbb007d521c800507ff30ae3e56e9c810453",
+      "size": 140188
+    },
+    {
+      "path": "reports/s03_readiness/figures/robustness_position.svg",
+      "sha256": "0a3a16d4df40d695dc16f4e4c888ea7312285aa28f3ff88e6973d3245f7d7388",
+      "size": 73718
+    },
+    {
+      "path": "reports/s03_readiness/figures/robustness_rate.png",
+      "sha256": "3eb8bbdf5175b46d09c42e3a9d18e8ec0b24bf76335a9b0a58bc3426c9c865f6",
+      "size": 148303
+    },
+    {
+      "path": "reports/s03_readiness/figures/robustness_rate.svg",
+      "sha256": "601c05b966008832976513889ee7eddd34bf1b3b96e889da12396e20aab8f502",
+      "size": 69868
+    },
+    {
+      "path": "reports/s03_readiness/figures/M2_confusion_per_class.png",
+      "sha256": "112266b9eca7a2f3fb41fd63f939be8d8065e66ba0d2443714b55ef7ccac2545",
+      "size": 57428
+    },
+    {
+      "path": "reports/s03_readiness/figures/M2_confusion_per_class.svg",
+      "sha256": "d776b028217122562cc8ae65561c5083d2b96befe72e8f9bbd2c3057af26c73e",
+      "size": 40761
+    },
+    {
+      "path": "reports/s03_readiness/figures/all_candidates.png",
+      "sha256": "a961b10d7e1c5f147c9d5af809aa4f619822bdc7d079c477e65c393e4facc313",
+      "size": 132623
+    },
+    {
+      "path": "reports/s03_readiness/figures/all_candidates.svg",
+      "sha256": "cd1b2ae2b86611e4b216de6f0b8a5aebf40b92e10e43a12ef60371743058add4",
+      "size": 97351
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "time": "2026-09-25T05:27:26.443673+00:00",
+  "python": "3.11.14",
+  "environment": {
+    "PYTHONPATH": "REPO/src",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+  },
+  "initial_attempt": "First captured S03 discovery omitted PYTHONPATH and failed import; private log retained. Corrected environment, tests not weakened.",
+  "runs": [
+    {
+      "command": [
+        "PYTHON",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_s03_readiness.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log_sha256": "4615819c017a49360ac33e4ee6e7d21d4cef133ba2e31d2c997bb8880692751f"
+    },
+    {
+      "command": [
+        "PYTHON",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_s04_schema.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log_sha256": "5c788a2d56d4f1055cf5e3d4e9cf835cad605a2a3411e26db05e64f4ff212313"
+    }
+  ]
+}

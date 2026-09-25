@@ -89,3 +89,15 @@ Question: do fixed component combinations or bounded residual-fusion changes imp
 All results/negative tradeoffs,19candidate conditiongrids and57candidate-seed sign-inconsistency records preserved. `reports/s02_execution/S02-20260925-BOUNDED-12F15W/EPOCH_CURVES.csv` contains all148epochs; TRAIN online curves are currentview/preupdate diagnostics, not clean endcheckpoint performance. Technical reviewer found a missing finalcheckpoint binding in the draft exporter; reporting-only fix passed12syntheticchecks and realaggregate verification, no trainingcode/metrics changed.
 
 Evidence: VERIFIED for recorded TRAIN/VALID outcomes and byte hashes; SPECIFIED for protocol/authorization; HYPOTHESIS for generalizable mechanisms; UNKNOWN for TEST/special performance and Attachment3 reliablemasks. RepeatedVALIDselection is optimistic, seedSD is not significance. D-DATA01..07/R01/S01/LATEST_RUN unchanged; no external sentimentdata/weights, TEST/special/Q1/Q3, Release or webpageZIP. Next: paper figures and writing from existing evidence; future official evaluation/deployment requires separate authorization.
+
+
+## GOV-ASTRA-MEDIUM-02 / S03-EXEC-01
+
+Current explicit user request authorizes S03_Q1_Q3_AND_DEPLOYMENT_READINESS, zero new fits, Astra / medium author and independent reviewer. This scoped rule supersedes conflicting historical High/next-stage prohibitions only for this task; no S01/S02 reactivation. Protocol: docs/research/S03/PROTOCOL.md; budget/config: configs/s03_execution.json. Conditional S04 requires independent exact-hash review, VALID gates and committed final specification BEFORE the respective first special open. Ordinary safe exact-path commit/push authorized, no Release. Model setting is user-attested, not runtime telemetry. D-DATA01..07 and historical records unchanged.
+
+
+## S03 readiness and independent review — 2026-09-25
+
+VERIFIED: backup356files; exact M2seed17 clean restore;148epoch/12fit continuity and22figure exports; Q1 extraction100/100,66 computed temporal checks and0 human-verified alignments; two profiles x3seeds complete96/144, V1 wins (mean attempted F1=0.6068921445, MAE=0.6185338719). Q3 all728 group explanations and36 preselected local checks complete; feature-space numericalPASS, official mappingUNVERIFIED. Signed/negative outcomes retained. Same VALID selection and intervention-based explanation selection limit inference; no causal or significance claim.
+
+Independent Astra/medium review identified3MAJOR final-entry issues; repaired before special access using existing inventory only. Final19synthetic checks and exact55file review PASS. Reports: reports/s03_readiness; protocol: docs/research/S03. Q2 readinessPASS still requires actual commit+fresh runtimepreflight before aligned30special inference; unaligned30notread. Q3 finalgateBLOCKED, Attachment4notread. Fixedweights/scaler and task-level onceclaim prevent reselection/replay.0newfits; original S01/S02 consumed, frozencontracts/engineeringindex untouched.

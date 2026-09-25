@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "seed": 17,
+  "epoch": 2,
+  "max_abs_difference": {
+    "logits": 0.0,
+    "regression": 0.0
+  },
+  "exact_equal": true,
+  "atol": 1e-06,
+  "rtol": 1e-05,
+  "n": 728,
+  "model_unchanged": true,
+  "checkpoint_sha256": "f99426be8d90b8abf196faf9cf92a41c5ab607da661a7a91530f1fe481a0ceb9",
+  "normalizer_sha256": "83a95b4acd9254fdd20675832ca4d25ed9e5bd62f284e7ec48e3cc6cb996cf2e"
+}

@@ -1,3 +1,14 @@
+task_id: S03_Q1_Q3_AND_DEPLOYMENT_READINESS
+status: ACTIVE_AUTHORIZED
+training_authorized: false
+new_fit_budget: 0
+test_authorized: false
+attachment3_4_authorized: CONDITIONAL_SEPARATE_COMMITTED_GATES
+protocol: docs/research/S03/PROTOCOL.md
+config: configs/s03_execution.json
+
+# Historical task specifications — authority consumed
+
 task_id: S02_CHAMPION_CHALLENGER_IMPROVEMENT
 status: CLOSED_COMPLETED
 training_authorized: false
