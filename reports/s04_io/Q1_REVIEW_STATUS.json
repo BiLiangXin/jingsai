@@ -1,0 +1,15 @@
+{
+  "status": "PENDING_HUMAN_REVIEW",
+  "rows": 100,
+  "computed_mechanical_pass": 66,
+  "human_verified": 0,
+  "unaligned": 34,
+  "unaligned_groups": {
+    "DICTIONARY_OOV": 15,
+    "NO_SEGMENT": 13,
+    "TOKEN_SEQUENCE_MISMATCH": 6
+  },
+  "example_ordinal": 0,
+  "granularity_fallback": "CLIP_ONLY",
+  "source_label_untouched": true
+}

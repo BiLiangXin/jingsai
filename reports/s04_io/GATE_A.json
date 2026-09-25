@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "ATTACHMENT4_ALIGNED_GATE_A_ONLY",
+  "phase": "PREINFERENCE_CODE_SCHEMA_AND_BINDING",
+  "manifest_path": "reports/s04_io/CRITICAL_MANIFEST.json",
+  "manifest_sha256": "48a69016f5b54913b98f57ff8ad976986b56d1cd836ebee80547f0ef8fc6cdfa",
+  "review_path": "reports/s04_io/INDEPENDENT_REVIEW.json",
+  "review_sha256": "0afe96b10fcaa3d793640993490c25344348e2bd0df04ef93e87ed9f000fee28",
+  "official_inference_completed": false,
+  "gate_b": "BLOCKED",
+  "attachment3": "REQUIRES_OFFICIAL_SCHEMA_CLARIFICATION"
+}

@@ -1,3 +1,15 @@
+task_id: S04_IO_COMPATIBILITY_AND_DELIVERY_RECOVERY
+status: ACTIVE_AUTHORIZED
+authorization: S04-IO-RECOVERY-01
+training_authorized: false
+new_fit_budget: 0
+test_authorized: false
+attachment3_4_authorized: CONDITIONAL_FROZEN_REVIEWED_COMMITTED
+protocol: docs/research/S04/PROTOCOL.md
+config: configs/s04_execution.json
+
+# Historical S03 closeout — consumed
+
 task_id: S03_Q1_Q3_AND_DEPLOYMENT_READINESS
 status: CLOSED_PARTIAL_BLOCKED
 authorization_status: CONSUMED

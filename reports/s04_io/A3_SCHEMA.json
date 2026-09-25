@@ -1,0 +1,25 @@
+{
+  "status": "REQUIRES_OFFICIAL_SCHEMA_CLARIFICATION",
+  "evidence_level": "VERIFIED_STRUCTURE_ONLY",
+  "aligned_files_inspected": 30,
+  "unaligned_files_opened": 0,
+  "field_sets": [
+    {
+      "count": 30,
+      "wrapper": "test",
+      "fields": [
+        "audio",
+        "text_bert",
+        "vision"
+      ]
+    }
+  ],
+  "continuous_text_50x768_files": 0,
+  "prior_failure": "KeyError: 'text' in first aligned object",
+  "current_ambiguity": "All 30 aligned objects lack a continuous text field. The stored text_bert has float32 shape (1,3,50); its contents/support semantics were not established by structure-only inspection and it cannot substitute for continuous 50x768 text.",
+  "prediction_rows": 0,
+  "attachment3_csv": null,
+  "source_structure_report_sha256": "2459fe99bf12548f17ce948ced986be150ee8bec94c98e8d59e7b5d0d800f53c",
+  "frozen_model_unchanged": true,
+  "questions_path": "docs/research/S04/OFFICIAL_QUESTIONS.md"
+}

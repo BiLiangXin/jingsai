@@ -1,0 +1,17 @@
+{
+  "status": "GATE_A_INPUT_SCHEMA_ELIGIBLE_GATE_B_MAPPING_UNVERIFIED",
+  "evidence_level": "VERIFIED_STRUCTURE_ONLY",
+  "aligned_records": 20,
+  "unaligned_versions": 20,
+  "unique_filename_stems": 20,
+  "aligned_continuous_schema_valid": true,
+  "aligned_support_valid": true,
+  "support_validation_scope": "All 40 stored text_bert channel-1 arrays were checked for exact binary values, nonempty support and a contiguous active prefix; no values were printed. The runtime reader rechecks each aligned file.",
+  "unaligned_audio_vision_length": 500,
+  "official_timing_sidecars_found": 0,
+  "source_to_video_stem_association_only": true,
+  "feature_to_time_correspondence": "UNVERIFIED",
+  "timestamp_policy": "NULL",
+  "attachment4_content_prediction_run": false,
+  "structure_report_sha256": "91a62da076824404c208c05e9ead01d5318b1f8df6e7f8a12da9914f7d859fc4"
+}

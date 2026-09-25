@@ -1,5 +1,9 @@
 # Project rules
 
+## GOV-SOL-CLOSEOUT-01 — S04 bounded compatibility and delivery recovery
+
+The current user's S04_IO_COMPATIBILITY_AND_DELIVERY_RECOVERY request authorizes GPT-6 Sol / high (user UI attestation), one official-tree writer, zero training fits, necessary official special-set structural diagnosis, lossless interface repair, frozen-model inference after technical review and safe commit/push. S01/S02/S03 execution authority remains CONSUMED. This scoped rule supersedes historical Astra-only and post-schema-failure prohibitions only within S04-IO-RECOVERY-01. Preserve old claims/failures, D-DATA-01..07, model/checkpoint/scaler/profile, TRAIN/VALID/TEST isolation and the recorded compute deadlines. No Release or contest upload. Protocol: docs/research/S04/PROTOCOL.md; config: configs/s04_execution.json.
+
 ## Data safety
 
 `E题数据/` and other original competition data remain local. Never add them to Git or a Release. Never commit local path configuration, credentials, raw PKL, MP4, or large original spreadsheets.

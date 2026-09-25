@@ -1,0 +1,9 @@
+{
+  "status": "BLOCKED",
+  "scope": "ATTACHMENT4_SOURCE_MAPPING_AND_COMPLETE_DELIVERY",
+  "reason": "No traceable official correspondence from the provided aligned feature indices to MP4/token/audio/frame time coordinates was found in the bounded official source inventory.",
+  "feature_indices_allowed": true,
+  "timestamp_policy": "NULL",
+  "mapping_status": "UNVERIFIED_MAPPING",
+  "complete_attachment4_claim_allowed": false
+}

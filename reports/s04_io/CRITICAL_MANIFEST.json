@@ -1,0 +1,115 @@
+{
+  "scope": "S04_ATTACHMENT4_GATE_A_PREINFERENCE",
+  "critical_files": [
+    {
+      "path": "AGENTS.md",
+      "size": 6063,
+      "sha256": "7ce93c501cc017ba9f9903ace5bd484d7fbd02296b77c8da904be1ac2cc10f84"
+    },
+    {
+      "path": "TASK_SPEC.md",
+      "size": 8338,
+      "sha256": "5fbd9abde6a5d68d2f9bc137027610ce0569365950dad7ee5d5354df01e14f78"
+    },
+    {
+      "path": "configs/s04_execution.json",
+      "size": 1585,
+      "sha256": "d2d545dab960e88dae7cfb5a4bf08b85f8593666ae296b4ff7e78b7cfc75b059"
+    },
+    {
+      "path": "docs/research/S04/PROTOCOL.md",
+      "size": 4649,
+      "sha256": "e4440f6921d2f751d8abd91f7632807360f73482f7f51ac505d946efef9f4bbe"
+    },
+    {
+      "path": "docs/research/S04/OFFICIAL_QUESTIONS.md",
+      "size": 2233,
+      "sha256": "51e5034766bf685e60ac17d52b65ac00c1bfdd953b2b56daa7c60ad4d69aa222"
+    },
+    {
+      "path": "reports/s04_io/A3_SCHEMA.json",
+      "size": 942,
+      "sha256": "0a31f5ef9febb00e14f6f325ab8ee2c9af59ce911c32934b945ee5a5d1823174"
+    },
+    {
+      "path": "reports/s04_io/A4_SCHEMA.json",
+      "size": 879,
+      "sha256": "7b8f38bbda992fa00b73ad8758688cecb94e8d3d6652dc4d0ba6358698864a01"
+    },
+    {
+      "path": "reports/s04_io/Q1_REVIEW_STATUS.json",
+      "size": 352,
+      "sha256": "92cbba05adff5898fc0819b609ccb20b19e2cbea7b6ac0227fd8ff833a80089a"
+    },
+    {
+      "path": "reports/s04_io/MODEL_BINDING.json",
+      "size": 532,
+      "sha256": "7189ec617d8e4e53f094f33ba1cf111640c94d1bd67daefbafe7da700a853f38"
+    },
+    {
+      "path": "reports/s04_io/TESTS.json",
+      "size": 544,
+      "sha256": "31f2678c2ed722f18d36f79881d68e9462f973f6a19ae04cfc601d661d60c468"
+    },
+    {
+      "path": "reports/s04_io/GATE_B.json",
+      "size": 431,
+      "sha256": "f5d650e721bb10ff34b3676a96d328f5968f121d13834a6416e3d4decd40a9aa"
+    },
+    {
+      "path": "src/mosei/s01/contracts.py",
+      "size": 5480,
+      "sha256": "03040b7725a22dd150bb5215f2a0697eaa6bc936ea32ed6df5d028171fe3d030"
+    },
+    {
+      "path": "src/mosei/s01/normalization.py",
+      "size": 3498,
+      "sha256": "4c5bad3c4f26a9c2b8e6aaebdc24d767b327553ba723490f82ff3ac7f3c75c3e"
+    },
+    {
+      "path": "src/mosei/s02/models.py",
+      "size": 10821,
+      "sha256": "b0cfb6915ed70da68b6ebab29af80c1c6e4a9822a2e3ee275564cda4707fcd23"
+    },
+    {
+      "path": "src/mosei/s03/core.py",
+      "size": 3708,
+      "sha256": "8398f4197c016850d929c3979649bca7cde9bee2c7b315b55ec3e34d2015a659"
+    },
+    {
+      "path": "src/mosei/s04/__init__.py",
+      "size": 68,
+      "sha256": "6a991c95ebb8350b6f60dee17c8c64b909688facae41903764a9d7e74a3a4e31"
+    },
+    {
+      "path": "src/mosei/s04/inference.py",
+      "size": 6155,
+      "sha256": "863c74f1cf053e12f3c46a81b6c9bdc8149eb01b438f8431bb6d0b95d38b199c"
+    },
+    {
+      "path": "tests/test_stage_s04_io.py",
+      "size": 4373,
+      "sha256": "11066dbbcfb8a8e4789540dcb53c2d3983b35cf0163c77939f0333cdedcb64b1"
+    },
+    {
+      "path": "tools/s04_io_model_binding.py",
+      "size": 2107,
+      "sha256": "db96caead2a30f9d4448ca7ca49b66c78fbc08295f1142ddbfddc47c92519f16"
+    },
+    {
+      "path": "tools/s04_io_run.py",
+      "size": 9173,
+      "sha256": "8cf82ae6830d41542502000ebf40ca4229d57285936acce2234ca3d7f07bae0c"
+    },
+    {
+      "path": "reports/s03_readiness/DEPLOYMENT.json",
+      "size": 10689,
+      "sha256": "d6efe6e8542425f721817c3122950b7b9160960b89019e1e7e051e370d94bd28"
+    },
+    {
+      "path": "reports/s03_readiness/Q3_VALIDATION.json",
+      "size": 2810,
+      "sha256": "42dbeeb694d73f32f34a83485b7c57fc97b284d44ad764a92b15674795025770"
+    }
+  ]
+}

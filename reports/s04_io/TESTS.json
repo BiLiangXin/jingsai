@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "environment": "Windows; C:/softapp/anaconda3/envs/birdAL/python.exe; Python, NumPy, PyTorch",
+  "command": "C:/softapp/anaconda3/envs/birdAL/python.exe -B -X utf8 -m unittest discover -s tests -p test_stage_s04_io.py -v",
+  "exit_code": 0,
+  "synthetic_tests_run": 7,
+  "synthetic_tests_passed": 7,
+  "official_model_experiments": "NOT_RUN",
+  "new_training_fits": 0,
+  "scope": "A4 parser, source classification, feature explanation and CSV schema; model container binding separately recorded in MODEL_BINDING.json"
+}
