@@ -57,3 +57,7 @@ Authorization is CONSUMED, new fits0, retries0, special execution false. S01/S02
 ## After S04-IO-RECOVERY-01 — 2026-09-25
 
 Ask the organizer the exact Attachment3 continuous-text field/source and legal support schema using docs/research/S04/OFFICIAL_QUESTIONS.md. Obtain verifiable official Attachment4 feature-index to source timing/token/segment mapping; retain current private PARTIAL CSV meanwhile. A teammate should review the prioritized real Q1 case with the existing audio/frame worksheet, then triage all 34 failures at clip granularity. Review the revised draft paper and required submission components before the 2026-09-27 00:00 Beijing deadline. S04 authority is consumed; any new special run or model work requires separate scope. No Release or contest upload occurred.
+
+## After S04-CLARIFY-02 — current
+
+Use `docs/research/S04/OFFICIAL_QUESTIONS.md` to seek the exact ID-100 corruption and BERT extraction order for Attachment3. If unavailable, a separate M2-E1 pipeline/training decision is required; do not attach old M2 metrics to it. A team member should play and annotate a real Attachment4/Q1 acoustic case before claiming verified word accuracy; prioritize the 8 text-only Attachment4 records (4 OOV, 2 no segment, 2 token mismatch). Review the new section-4.3 paper draft in the private work root and complete mandatory competition deliverables before 2026-09-27 00:00 Beijing. This task created no complete submission package or Release and starts no next stage.

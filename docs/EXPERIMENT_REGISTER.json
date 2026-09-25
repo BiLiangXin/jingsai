@@ -6534,5 +6534,29 @@
       "Q1_HUMAN_ALIGNMENT_ZERO"
     ],
     "authorization_status": "CONSUMED"
+  },
+  "s04_clarify_02": {
+    "task_id": "S04_CLARIFIED_PREPROCESS_AND_MAPPING",
+    "authorization": "S04-CLARIFY-02",
+    "status": "PARTIAL",
+    "kind": "preprocessing_and_source_mapping_diagnostic",
+    "new_training_fits": 0,
+    "model_experiment_metrics": null,
+    "special_metrics": null,
+    "attachment3_csv": "NOT_GENERATED",
+    "attachment3_new_pipeline_required": true,
+    "attachment4_old_predictions_unchanged": true,
+    "attachment4_private_partial_rows": 20,
+    "estimated_acoustic_rows": 12,
+    "text_only_rows": 8,
+    "human_checked": 0,
+    "negative_results": [
+      "INITIAL_STRICT_COORDINATE_REPLAY_FAILED",
+      "ATTACHMENT3_CORRUPTED_TEXT_INTERFACE_UNKNOWN",
+      "ATTACHMENT4_EIGHT_ROWS_WITHOUT_ACOUSTIC_ALIGNMENT",
+      "AUDIO_VISION_FEATURE_TIME_SUPPORT_UNKNOWN"
+    ],
+    "result": "reports/s04_clarify_02/RESULT.json",
+    "authorization_status": "CONSUMED"
   }
 }

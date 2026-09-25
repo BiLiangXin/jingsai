@@ -58,3 +58,7 @@ Authorization is CONSUMED, new fits0, retries0, special execution false. S01/S02
 ## S04 terminal blockers — 2026-09-25
 
 Attachment3: all 30 aligned official PKLs lack continuous 50×768 text; REQUIRES_OFFICIAL_SCHEMA_CLARIFICATION; no CSV. Attachment4: 20-row private feature-space PARTIAL CSV exists, but official feature-to-source time correspondence is UNVERIFIED, so no complete mapped result. Q1: 0/100 human word-boundary checks; 34 UNALIGNED cases. Team paper/page review and mandatory contest files remain incomplete. No training or model performance claim was added.
+
+## After S04-CLARIFY-02 — current
+
+Attachment3 clean encoder replay is numerically compatible, but 131 in-support ID-100 positions across 27/30 aligned special records lack verified corruption-to-continuous-feature and observation rules; `NEW_PIPELINE_REQUIRED` or exact organizer extractor clarification. No Attachment3 CSV. Attachment4 retains 20 unchanged predictions with 12 estimated acoustic mappings and 8 text-only; official audio/vision feature time support and human word accuracy remain unknown, so it is PARTIAL. Q1 human checks remain 0/100; draft paper and mandatory competition delivery still need team review. No predictor training was authorized or performed.

@@ -1,0 +1,68 @@
+{
+  "task_id": "S04_CLARIFIED_PREPROCESS_AND_MAPPING",
+  "environment": {
+    "python": "isolated local Python 3.11 environment outside repository",
+    "torch": "2.9.1+cu128",
+    "transformers": "4.44.2",
+    "pocketsphinx": "5.1.1",
+    "ffmpeg": "registered 7.1 binary"
+  },
+  "actual_checks": [
+    {
+      "command": "python -m unittest discover -s tests -p test_stage_s04_clarified.py -v",
+      "kind": "pure_synthetic",
+      "passed": 3,
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -p test_stage_s04_io.py -v",
+      "kind": "existing_frozen_interface_regression",
+      "passed": 7,
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/s03_publication_check.py --manifest <private exact 22-file manifest> --output <private safety receipt>",
+      "kind": "tracked_index_worktree_and_candidate_safety_audit",
+      "status": "PASS",
+      "candidate_count": 22,
+      "tracked_files_scanned": 521,
+      "exit_code": 0,
+      "private_receipt_sha256": "12667af985e689c05f00a230e1b66fad02f778ce7eba47fe3a4cfd2097158c98"
+    },
+    {
+      "command": "python tools/s04_clarified_a3_audit.py --a2 <official aligned Attachment2> --a3 <official Attachment3 root> --encoder <pinned private encoder> --checkpoint <fixed M2> --output <new private result>",
+      "kind": "read_only_train_valid_replay_and_special_token_semantics",
+      "status": "COMPLETED_NO_SPECIAL_PREDICTION",
+      "exit_code": 0,
+      "private_result_sha256": "c22dc790fcdbe88a485d8f8810a39ac674b417f99af564484e455e0f62941cde"
+    },
+    {
+      "command": "python tools/s04_clarified_a4_text_replay.py --source <official Attachment4 root> --encoder <pinned private encoder> --output <new private result>",
+      "kind": "read_only_continuous_text_replay",
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "private_result_sha256": "ccb3ac99a37f1ebf335a0926bcd69f32b78eb42bcce6ec4cd2441ecb24bc56d8"
+    },
+    {
+      "command": "python tools/s04_clarified_map.py --source <official Attachment4 root> --old-csv <old frozen private CSV> --tokenizer <pinned private tokenizer> --model <registered acoustic model> --ffmpeg <registered FFmpeg> --output <new private result>",
+      "kind": "estimated_mapping_diagnostic_no_predictor_fit",
+      "status": "COMPLETED_PARTIAL",
+      "exit_code": 0,
+      "private_summary_sha256": "1389872ec0abca210ad028793a9aa0da1b8ee46cb8f70365c8135bf5f345a1b2"
+    }
+  ],
+  "known_failed_checks": [
+    {
+      "name": "First strict coordinate replay",
+      "status": "FAILED",
+      "reason": "Near-zero floating-point coordinates exceeded fixed atol=1e-5, rtol=1e-4; no silent relabel as exact"
+    },
+    {
+      "name": "Original DOCX skill pack validator",
+      "status": "FAILED_PREEXISTING_REFERENCE_AND_ENCODING",
+      "reason": "The prior draft contains an external image relationship and the validator hit locale decoding; a new private copy was ZIP/XML checked without overwriting the original"
+    }
+  ],
+  "predictor_training_fits": 0,
+  "model_experiment_tests": null
+}

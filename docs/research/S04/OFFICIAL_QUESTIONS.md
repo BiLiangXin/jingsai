@@ -1,5 +1,13 @@
 # Official information needed for special delivery
 
+## S04-CLARIFY-02 update, 2026-09-25
+
+The original questions below are retained as historical evidence. Three user-supplied screenshots of contest replies permit an aligned-only formal submission, Attachment3 text-feature extraction as preprocessing, and a reproducible evidence-backed estimated material mapping. They do not identify the original encoder checkpoint or missing-token treatment and do not provide official word timestamps. Screenshot SHA256 values are recorded in `CLARIFY_02_CLOSEOUT.md`; the original posting URL/date were not independently verified.
+
+The remaining Attachment3 question is precise: do the 131 in-support ID-100 positions among the 30 aligned records denote artificial text corruption, and what exact encoder/checkpoint/layer plus order of corruption and embedding generated the expected continuous 50×768 text? The clean TRAIN/VALID replay matches numerically but does not validate the corrupted-token interface. A new common TRAIN/VALID/special pipeline and independently authorized M2-E1 training would be required if original semantics cannot be established; old M2 metrics would not transfer.
+
+Attachment4 no longer waits exclusively for an official timing sidecar. Exact token-to-text replay and checked acoustic estimates support 12/20 aligned records; eight retain text positions only. The official audio/vision feature extraction-to-PTS correspondence and human word-time accuracy remain unknown. No estimated interval is called official truth.
+
 ## Attachment3
 
 The 30 official aligned PKLs each contain a sole `test` wrapper whose children are `audio`, `vision`, and `text_bert`. No file contains the 50×768 continuous `text` vectors required by the frozen aligned predictor. The previous inference stopped at the first such file before producing predictions.

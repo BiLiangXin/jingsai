@@ -416,5 +416,23 @@
     "mandatory_deliverables_complete": false,
     "result": "reports/s04_io/FINAL_STATUS.json",
     "next_stage_authorized": false
+  },
+  "s04_clarify_02": {
+    "task_id": "S04_CLARIFIED_PREPROCESS_AND_MAPPING",
+    "status": "CLOSED_PARTIAL",
+    "authorization_status": "CONSUMED",
+    "training_authorized": false,
+    "new_training_fits": 0,
+    "champion": "M2-s17-epoch2_UNCHANGED",
+    "attachment3_csv": "NOT_GENERATED",
+    "attachment3_reason": "NEW_PIPELINE_REQUIRED_CORRUPTED_TEXT_SEMANTICS_UNKNOWN",
+    "attachment4_private_csv": "PARTIAL_20_ROWS",
+    "attachment4_estimated_acoustic_rows": 12,
+    "attachment4_text_only_rows": 8,
+    "q1_human_verified": 0,
+    "paper_status": "DRAFT_SECTION_4_3_UPDATED_TEAM_REVIEW_PENDING",
+    "mandatory_deliverables_complete": false,
+    "result": "reports/s04_clarify_02/RESULT.json",
+    "next_stage_authorized": false
   }
 }

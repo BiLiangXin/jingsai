@@ -1,0 +1,73 @@
+{
+  "stage": "S04_CLARIFY_02",
+  "status": "PARTIAL_WITH_A3_BLOCKED",
+  "data_kind": "synthetic_tests_and_private_read_only_diagnostics",
+  "new_predictor_training_fits": 0,
+  "evidence": [
+    {
+      "requirement": "authorized_scope",
+      "path": "TASK_SPEC.md",
+      "sha256": "9d6a4e440dcaca9b1224d774a709dd76be7af5cc08349a3a42d0aa6dc5d67c49"
+    },
+    {
+      "requirement": "decision_closeout",
+      "path": "DECISIONS.md",
+      "sha256": "1b16298528629aee8e7b473de01b502f3b45a10fce391bb1dbcaa555d4c55b2b"
+    },
+    {
+      "requirement": "clarified_protocol",
+      "path": "docs/research/S04/CLARIFIED_PROTOCOL.md",
+      "sha256": "163b62f536fdabab585b2685602ad1cf536a1038d619f05f708543441ec670ba"
+    },
+    {
+      "requirement": "fixed_mapping_method",
+      "path": "docs/research/S04/SOURCE_MAPPING_METHOD.md",
+      "sha256": "d0c6f1658b02616d71e5ce4b21a715404ab6d7d2a07d825670e496da842c66d3"
+    },
+    {
+      "requirement": "technical_closeout",
+      "path": "docs/research/S04/CLARIFY_02_CLOSEOUT.md",
+      "sha256": "823991257bc6caeffe11ad1e158348ad578e049e0d6c246fdeb3b565a8cc35e4"
+    },
+    {
+      "requirement": "aggregate_result",
+      "path": "reports/s04_clarify_02/RESULT.json",
+      "sha256": "8a9f986000eb9fb577eb336e4d2bc8803c710c93ac6738fa299dfb58488806cf"
+    },
+    {
+      "requirement": "actual_checks",
+      "path": "reports/s04_clarify_02/TESTS.json",
+      "sha256": "45fb434c507e014e567eed69c5853f6598f3b85cb59561c9ff79d0abb2745572"
+    },
+    {
+      "requirement": "independent_read_only_review",
+      "path": "reports/s04_clarify_02/INDEPENDENT_REVIEW.json",
+      "sha256": "18019c099e2614afd27ba98a6cfd7adbc0babd35cafea6d41e94c0f3a407e404"
+    },
+    {
+      "requirement": "synthetic_tests",
+      "path": "tests/test_stage_s04_clarified.py",
+      "sha256": "584ddf038556e67017949e66a72a420603ad4fd6865fd37ca14a1aa6f202aad0"
+    },
+    {
+      "requirement": "a3_reader_audit",
+      "path": "tools/s04_clarified_a3_audit.py",
+      "sha256": "26e5ce2a5dc1c3a22e450c0433be82e22048891c1583a83abb44d22afe55bf2b"
+    },
+    {
+      "requirement": "a4_text_replay",
+      "path": "tools/s04_clarified_a4_text_replay.py",
+      "sha256": "ff32b221834a7a7769c7dc9e715201308de88aa22031c26d0571895a1ac17d42"
+    },
+    {
+      "requirement": "a4_estimated_mapping",
+      "path": "tools/s04_clarified_map.py",
+      "sha256": "827f53449086a0d09ada296fedfb78997461e55fedf035652a12928ede5602c6"
+    },
+    {
+      "requirement": "paper_claims",
+      "path": "docs/PAPER_CLAIMS.md",
+      "sha256": "6b499e4ae163a586da412176ca348d4ada7d9df99aebebbb04f57945c15eff92"
+    }
+  ]
+}

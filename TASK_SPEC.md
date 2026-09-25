@@ -1,3 +1,17 @@
+task_id: S04_CLARIFIED_PREPROCESS_AND_MAPPING
+status: CLOSED_PARTIAL
+authorization: S04-CLARIFY-02
+authorization_status: CONSUMED
+model: GPT-6 Sol / High (user requested; no runtime telemetry asserted)
+predictor_training_fit_budget: 0
+test_authorized: false
+attachment3_scope: aligned semantics audit and TRAIN/VALID replay completed; final inference blocked
+attachment4_scope: preserve old 20 predictions; evidence-backed estimated acoustic mapping
+publication: exact-path safe commit/push after independent read-only review
+old_authorities: S01/S02/S03/S04 CONSUMED
+
+# Historical S04-IO-RECOVERY-01 — consumed
+
 task_id: S04_IO_COMPATIBILITY_AND_DELIVERY_RECOVERY
 status: CLOSED_PARTIAL_BLOCKED
 authorization: S04-IO-RECOVERY-01
